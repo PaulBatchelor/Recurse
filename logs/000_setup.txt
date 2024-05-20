@@ -21,7 +21,9 @@ it to the repo.
 I need to import my tools and make sure they can work
 outside of my repo.
 @15:51 Workflow Planning :ink
-@16:16 Break
-Farmers Market order.
+@16:16 blank
 @16:54 setting up evparse
 @17:04 transcribe event log for the day
+@17:10 blank
+@17:22 transcribe dagzet
+Gotta get dagzet utility working.

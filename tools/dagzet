@@ -1,0 +1,7 @@
+if [ "$#" -lt 1 ]
+then
+    echo "Usage $0 dagzet (no dz extension)"
+    exit 1
+fi
+
+./tools/dagzet.lua $1

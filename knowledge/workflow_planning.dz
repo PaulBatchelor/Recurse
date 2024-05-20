@@ -1,0 +1,63 @@
+ns planning/workflow_planning
+gr 2024-05-20. Plotting out ideas for how to organize
+gr myself publicly.
+
+nn ink
+ln ink
+co $ scans
+
+nn text
+ln text
+
+nn html
+ln html
+
+nn schedule
+ln schedule
+
+nn private
+ln private
+co $ schedule
+co $ ink
+
+nn public
+ln public
+co $ schedule
+co $ text
+
+nn TODO
+ln TODO
+co $ text
+
+nn use_zetdo_maybe
+ln Use zetdo (maybe?)
+co $ TODO
+
+nn repo
+ln repo
+co scans $
+co text $
+
+nn scans
+ln scans
+
+nn tasks_with_updates
+ln tasks with updates
+co $ TODO
+
+nn knowledge_graphs
+ln knowledge graphs
+co $ ink
+
+nn outlines
+ln outlines
+co $ knowledge_graphs
+
+nn dagzet
+ln dagzet
+co knowledge_graphs $
+co $ text
+
+nn comments_with_tags_tasks_unique_name
+ln comments with tags. tasks with one unique name?
+co $ tasks_with_updates
