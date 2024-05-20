@@ -27,3 +27,5 @@ outside of my repo.
 @17:10 blank
 @17:22 transcribe dagzet
 Gotta get dagzet utility working.
+@17:41 scan and upload ink for workflow planning
+This involves creating a rotation utility.
