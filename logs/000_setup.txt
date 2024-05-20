@@ -3,10 +3,25 @@ First day of Recurse! Figuring out how to best organize
 myself. I want to use systems I already know, while also
 keep the data out in the open and readable from GH while
 to keep myself accountable.
+@11:00 Initial Welcomes
+@11:10 Staff Introductions
+@11:15 Framework for Learning while at RC
+@11:28 Pillars of RC
+@11:40 Social Rules
+@11:49 Meet and Greets/Breakouts
+@12:32 Walk/Lunch
+@14:00 Advice and Introductions
+@14:55 Break
+@15:01 Ink / Pairing with Dan
+TODO: look at NIH plug for Rust plugins
 @16:49 Writing this initial timestamp log
 I am currently writing this first log, then adding
 it to the repo.
 ---
 I need to import my tools and make sure they can work
 outside of my repo.
+@15:51 Workflow Planning :ink
+@16:16 Break
+Farmers Market order.
 @16:54 setting up evparse
+@17:04 transcribe event log for the day
