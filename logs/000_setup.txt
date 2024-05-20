@@ -1,0 +1,12 @@
+@2024-05-20 First day of recurse. Organize.
+First day of Recurse! Figuring out how to best organize
+myself. I want to use systems I already know, while also
+keep the data out in the open and readable from GH while
+to keep myself accountable.
+@16:49 Writing this initial timestamp log
+I am currently writing this first log, then adding
+it to the repo.
+---
+I need to import my tools and make sure they can work
+outside of my repo.
+@16:54 setting up evparse
