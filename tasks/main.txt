@@ -1,0 +1,4 @@
+@basic-setup Set up basic task system
+Set up a basic task system, and come up with a format
+that will scale well enough for my time here are RC.
+No more, no less.

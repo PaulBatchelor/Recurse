@@ -1,0 +1,32 @@
+@2024-05-21
+Day 2. Still remote.
+@8:35 Task system
+I'm attempting to think up a simplified version of
+my zetdo system for use with RC. zetdo is built on
+top of weewiki/zet, which has too many intermediate parts.
+Ideally, I'd like to build up a simple markup that can
+be parsed and compiled into data for further processing
+later.
+
+Tasks have the following parts: a sentence describing the
+system, an optional description, and then a list of
+timestamped comments that can be arranged as a thread.
+Occasionally I group tasks into lists, but I haven't
+done anything complex enough to warrant a formal dependency
+system.
+
+For now, using my "descript" notation could be enough.
+This would allow me to easily build uniquely named blocks
+where each block could represent a task.
+
+```
+@foo-task this is a foo task
+this is a foo description
+```
+
+My timeline notation can then link to tasks using tags
+
+```
+@2024-05-21
+@08:48 I am writing a test comment for the foo task. #foo-task
+```
