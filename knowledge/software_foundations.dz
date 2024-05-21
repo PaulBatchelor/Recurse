@@ -1,0 +1,26 @@
+ns software_foundations/01_logical_foundations
+gr Software Foundations
+
+nn URL
+hl https://softwarefoundations.cis.upenn.edu/lf-current/index.html
+ln Software Foundations
+
+ns software_foundations/01_logical_foundations/00_preface
+gr Chapter 00: Preface
+nn URL
+hl https://softwarefoundations.cis.upenn.edu/lf-current/Preface.html
+ln URL
+
+ns software_foundations/01_logical_foundations/01_basics
+gr Chapter 01: Functional Programming in Coq (basics)
+
+nn URL
+hl https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html
+ln URL
+
+ns software_foundations/01_logical_foundations/02_induction
+gr Chapter 02: Proof by Induction (Induction)
+
+nn URL
+ln URL
+hl https://softwarefoundations.cis.upenn.edu/lf-current/Induction.html

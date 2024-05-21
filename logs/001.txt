@@ -129,3 +129,7 @@ stackoverflow: find a good book online,
 then find it inthe book)
 
 @13:40 Update boing^3 README for example instructions
+@13:55 Break
+@14:00 Software Foundations
+I made a dagzet for the book at
+"knowledge/software_foundations.dz"
