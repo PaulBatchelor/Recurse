@@ -1,6 +1,6 @@
 @2024-05-21
 Day 2. Still remote.
-@8:35 Task system
+@08:35 Task system
 I'm attempting to think up a simplified version of
 my zetdo system for use with RC. zetdo is built on
 top of weewiki/zet, which has too many intermediate parts.
@@ -19,19 +19,28 @@ For now, using my "descript" notation could be enough.
 This would allow me to easily build uniquely named blocks
 where each block could represent a task.
 
-```
-@foo-task this is a foo task
-this is a foo description
-```
+> @foo-task this is a foo task
+> this is a foo description
 
 My timeline notation can then link to tasks using tags
 
-```
-@2024-05-21
-@08:48 I am writing a test comment for the foo task. #foo-task
-```
+> @2024-05-21
+> @08:48 I am writing a test comment for the foo task. #foo-task
 
 @08:51 Add some initial tasks #task-system-setup
 What to do about tasks that are done? Maybe not think
 too hard about it and move to a done.txt and a nevermind.txt
 for tasks that I won't do.
+
+@09:01 oops update descript #task-system-setup
+There was a bug in my parser that I fixed previously.
+
+@09:03 potential schema idea for tasks? #task-sqlite-gen
+It seems like for groups/states, I'll be putting things
+into files. So, current tasks are in main.txt, done
+tasks are in done.txt, cancelled tasks nevermind.txt,
+rust related things in rust.txt, reading in reading.txt,
+etc. Filename could be a meaningful parameter in the
+schema.
+
+@09:06 Initial rust reading list setup. #setup-rust-reading-list
