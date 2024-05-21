@@ -1,0 +1,25 @@
+ns rust/books/cargo_book
+gr The Cargo Book
+
+nn URL
+hl https://doc.rust-lang.org/cargo/
+ln URL
+
+nn build
+ln build
+hl https://doc.rust-lang.org/cargo/commands/cargo-build.html
+
+nn target_selection
+ln Target Selection
+hl https://doc.rust-lang.org/cargo/commands/cargo-build.html#target-selection
+co $ build
+
+nn build_examples
+ln use --example "name" to build a specific example,
+ln and use --examples to build all example targets.
+hl https://doc.rust-lang.org/cargo/commands/cargo-build.html#target-selection
+
+nn list_examples
+ln Using "--example" with no names seems to list all
+ln the available examples.
+co $ build_examples

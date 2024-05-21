@@ -6,3 +6,8 @@ hl https://stackoverflow.com/questions/10789430/vims-ctrlp-autocomplete-for-iden
 ln How to set up autocomplete for names with dashes in Vim.
 ln 'iskeyword+=\-' was good enough for my needs.
 tg vim
+
+nn update_rust
+ln If you used rustup, just do `rustup update`.
+rm TIL that rustup stays on your system, not just a shell script
+hl https://stackoverflow.com/questions/37928591/is-there-a-command-to-update-cargo-to-the-latest-official-release

@@ -1,0 +1,3 @@
+@rust-project-setup What is the best way to set up my project?
+Currently thinking about my needs for VoxBox, and how I'd
+like to structure this.

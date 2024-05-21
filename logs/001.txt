@@ -103,3 +103,29 @@ are less niche.
 
 I'm hoping I'll be better at getting over myself
 in the next few weeks.
+
+---
+
+Update: languages used in the
+pairing workshop:
+
+Javascript, Java, Scala, C/C++, Clojure, Rust,
+Lisp, Racket, MIT Scheme, OCaml, Ruby, Python,
+SystemVerilog/Hardware, Elixr, Erlang, R, Golang,
+bash, csh, Kotlin, C#, Julia, Swift, SQL, Zig,
+Awk, Elm, Nim. 
+
+@13:24 Update Rust
+Looks like this is just "rustup update"
+
+@13:27 Revisit BoingBoingBoing
+Can I get this to build and run still? Do I
+understand what is happening?
+---
+Do I have examples, and if I do, can I build them
+with Cargo? I think there's a way, and I'd like
+to look it up the slow way (instead of
+stackoverflow: find a good book online,
+then find it inthe book)
+
+@13:40 Update boing^3 README for example instructions
