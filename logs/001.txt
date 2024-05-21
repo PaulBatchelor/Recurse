@@ -133,3 +133,15 @@ then find it inthe book)
 @14:00 Software Foundations
 I made a dagzet for the book at
 "knowledge/software_foundations.dz"
+@14:43 attempt to make initial db generator
+Adapted from my mkdb script.
+---
+Want to group things by top-level namespace, so I want
+to select up to first (nth?) "/",
+https://stackoverflow.com/questions/21328295/sql-with-substring-to-a-special-character-with-sqlite
+---
+Select distinct top-level nodes from dagzet
+
+> select distinct(SUBSTR(name, 1, INSTR(name, "/") -1)) from dz_nodes
+
+Curious if I can get secondary ones.

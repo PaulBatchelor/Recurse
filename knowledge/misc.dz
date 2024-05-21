@@ -11,3 +11,16 @@ nn update_rust
 ln If you used rustup, just do `rustup update`.
 rm TIL that rustup stays on your system, not just a shell script
 hl https://stackoverflow.com/questions/37928591/is-there-a-command-to-update-cargo-to-the-latest-official-release
+tg rust
+
+nn sqlite_substring_special_character
+hl https://stackoverflow.com/questions/21328295/sql-with-substring-to-a-special-character-with-sqlite
+ln How to get substring up to special character:
+ln SUBSTR(col,1,INSTR(col,'#') -1)
+tg sqlite
+
+nn wiki_property_testing
+ln Wikipedia page for Property-Based testing
+hl https://en.wikipedia.org/wiki/Property_testing
+rm S mentioned property-based testing in the software foundations chat
+tg haskell formal_methods
