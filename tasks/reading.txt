@@ -1,3 +1,6 @@
+@rc-jobs-advice Read RC-Jobs advice page
+https://www.recurse.com/jobs/advice
+
 @too-many-linked-lists Learn rust with too many linked lists
 https://rust-unofficial.github.io/too-many-lists/
 

@@ -145,3 +145,10 @@ Select distinct top-level nodes from dagzet
 > select distinct(SUBSTR(name, 1, INSTR(name, "/") -1)) from dz_nodes
 
 Curious if I can get secondary ones.
+
+@15:00 Looking up career info
+Making a "career" knowledge graph.
+
+@15:05 Break
+@15:35 Graphics
+@16:36 Break/Wrap-Up
