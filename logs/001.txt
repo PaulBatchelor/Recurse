@@ -30,3 +30,8 @@ My timeline notation can then link to tasks using tags
 @2024-05-21
 @08:48 I am writing a test comment for the foo task. #foo-task
 ```
+
+@08:51 Add some initial tasks #task-system-setup
+What to do about tasks that are done? Maybe not think
+too hard about it and move to a done.txt and a nevermind.txt
+for tasks that I won't do.
