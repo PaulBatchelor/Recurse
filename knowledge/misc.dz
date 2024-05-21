@@ -1,0 +1,8 @@
+ns misc
+gr miscellaneous tidbits of knowledge
+
+nn vim_dash_autocomplete
+hl https://stackoverflow.com/questions/10789430/vims-ctrlp-autocomplete-for-identifiers-with-dash
+ln How to set up autocomplete for names with dashes in Vim.
+ln 'iskeyword+=\-' was good enough for my needs.
+tg vim

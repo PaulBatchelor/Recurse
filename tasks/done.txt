@@ -1,0 +1,5 @@
+@set-up-rust-reading-list Set up rust reading list
+See: https://pbat.ch/brain/rust_links/
+
+@how-not-to-learn-rust reading: how not to learn rust
+https://dystroy.org/blog/how-not-to-learn-rust/

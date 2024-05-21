@@ -1,0 +1,2 @@
+@study-termimad code study: termimad
+https://github.com/Canop/termimad

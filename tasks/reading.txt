@@ -1,11 +1,11 @@
+@too-many-linked-lists Learn rust with too many linked lists
+https://rust-unofficial.github.io/too-many-lists/
+
 @comprehensive-rust reading: comprehensive rust
 https://google.github.io/comprehensive-rust/
 
 @effective-rust reading: effective rust
 https://www.lurklurk.org/effective-rust/
-
-@how-not-to-learn-rust reading: how not to learn rust
-https://dystroy.org/blog/how-not-to-learn-rust/
 
 @leaving-rust-gamedev reading: leaving rust gamedev after 3 years
 https://loglog.games/blog/leaving-rust-gamedev/

@@ -44,3 +44,22 @@ etc. Filename could be a meaningful parameter in the
 schema.
 
 @09:06 Initial rust reading list setup. #setup-rust-reading-list
+
+@09:16 Reading: how not to learn rust. #how-not-to-learn-rust
+Attempting to take notes while I read.
+---
+Useful for autocomplete tags in Vim
+https://stackoverflow.com/questions/10789430/vims-ctrlp-autocomplete-for-identifiers-with-dash
+
+'iskeyword+=\-' was good enough for my needs.
+---
+I'm realizing that I may want to spend some time getting
+used to how Rust is designed, instead of jumping
+into code (though I already have some boilerplate
+ready for porting DSP). I think overall things will
+be faster if I figure out how to think in Rust, rather
+than trying to apply my pre-existing notions of
+programming towards Rust.
+---
+Seems like some decent wisdom. There are many links
+and follow-ups, which may be worth looking at later.

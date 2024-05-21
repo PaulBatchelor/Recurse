@@ -17,6 +17,3 @@ I want to try
 @task-sqlite-gen generate sqlite for tasks data
 
 @log-sqlite-gen generate sqlite for logs data
-
-@set-up-rust-reading-list Set up rust reading list
-See: https://pbat.ch/brain/rust_links/

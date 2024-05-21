@@ -1,0 +1,111 @@
+ns reading/how_not_to_learn_rust
+gr Reading: How not to learn rust
+
+nn top
+ln top
+
+nn URL
+ln URL
+hl https://dystroy.org/blog/how-not-to-learn-rust/#mistake-1-not-be-prepared-for-the-first-high-step
+
+nn not_prepared_high_step
+ln mistake 1: not prepared for first high step. stop
+ln trying without trying, and put in the time. Lots of
+ln new things to learn.
+
+nn dive_in_without_book
+ln mistake 2: dive in without reading "the book"
+
+nn make_a_graph
+ln mistake 3: start by implementing a graph algorithm.
+ln this is a variation on "don't make a linked list"
+ln the language makes it very hard to do build these
+ln kind of structures.
+
+nn dont_read_compiler_errors
+ln mistake 4: don't read compiler errors. Rust's compiler
+ln is a good teacher and precisely explains problem.
+ln Newbies should use "cargo check".
+
+nn reddit_cargo_check
+ln reddit thread on cargo check
+hl https://www.reddit.com/r/rust/comments/qtn6vg/psa_dont_understand_an_error_in_your_ide_use/
+co $ dont_read_compiler_errors
+cr follow-up on cargo check
+
+nn ignore_compiler_warnings
+ln mistake 5: ignore compiler warnings. Also recommended:
+ln cargo clippy
+
+nn best_practices_other_languages
+ln mistake 6: apply best practices from other languages
+
+nn rust_OOP
+ln try to make rust look OOP
+co $ best_practices_other_languages
+
+nn rust_functional
+co $ best_practices_other_languages
+ln insist to make it functional. Rust solves problems
+ln that functional programming tries to solve in different
+ln ways. Ownership isn't just about memory safety: one
+ln mutable reference means most sources of data
+ln inconsistencies are removed, without going functional.
+
+nn rust_dynamic
+co $ best_practices_other_languages
+ln try to make it dynamic. Instead of writing functions
+ln that take in one trait A and return trait B (uses dyn
+ln box, some overhead), take advantage of generics. Use
+ln dyn sparingly.
+
+nn immutable_structures
+co $ best_practices_other_languages
+ln build immutable structures and collections. Not
+ln needed due to rust ownership model.
+
+nn getters
+co $ best_practices_other_languages
+ln fine-tune privacy and data protection with getters.
+ln Rust fixes this with ownership. Rust most often reaches
+ln this goal by letting your types be essentially
+ln consistent.
+td what do they mean by "letting your types be essentially consistent"?
+
+nn defensive_programming
+co $ best_practices_other_languages
+ln Rust has things like Option and Result.
+
+nn dummy_values
+co $ best_practices_other_languages
+ln Use dummy values.
+
+nn build_lifetime_heavy_API
+ln mistake 7: build lifetime-heavy API. When designing
+ln structs of a new library, prefer to own the data. Don't
+ln prematurely optimize with reference-based structs.
+hl https://github.com/Canop/termimad
+rm author learned lesson hard way with library termimad
+
+nn ignore_non_standard_libs
+ln mistake 8: ignore non-standard libraries. try to find "kind of
+ln standard libraries".
+td put mentioned libraries into rust libs list
+
+nn use_unsafe_abuse_unwrap
+ln mistake 9: use unsafe. abuse unwrap. Intermediate solution:
+ln use expect. Pick one of the error libraries.
+
+nn dont_look_at_sources
+ln mistake 10: don't look at the sources.
+
+nn design_everything_at_start
+ln mistake 11: design everything at start. Rust will
+ln surprise you, and compiler makes it easy to refactor
+ln because it will guide you to consistency.
+
+nn learn_wrong_rust
+ln If you're using these keywords in your program, you
+ln might be learning rust the wrong way: Rc, dyn, unsafe,
+ln Deref
+td visit follow-ups mentioned here
