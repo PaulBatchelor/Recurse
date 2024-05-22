@@ -1,154 +1,32 @@
-@2024-05-21
-Day 2. Still remote.
-@08:35 Task system
-I'm attempting to think up a simplified version of
-my zetdo system for use with RC. zetdo is built on
-top of weewiki/zet, which has too many intermediate parts.
-Ideally, I'd like to build up a simple markup that can
-be parsed and compiled into data for further processing
-later.
-
-Tasks have the following parts: a sentence describing the
-system, an optional description, and then a list of
-timestamped comments that can be arranged as a thread.
-Occasionally I group tasks into lists, but I haven't
-done anything complex enough to warrant a formal dependency
-system.
-
-For now, using my "descript" notation could be enough.
-This would allow me to easily build uniquely named blocks
-where each block could represent a task.
-
-> @foo-task this is a foo task
-> this is a foo description
-
-My timeline notation can then link to tasks using tags
-
-> @2024-05-21
-> @08:48 I am writing a test comment for the foo task. #foo-task
-
-@08:51 Add some initial tasks #task-system-setup
-What to do about tasks that are done? Maybe not think
-too hard about it and move to a done.txt and a nevermind.txt
-for tasks that I won't do.
-
-@09:01 oops update descript #task-system-setup
-There was a bug in my parser that I fixed previously.
-
-@09:03 potential schema idea for tasks? #task-sqlite-gen
-It seems like for groups/states, I'll be putting things
-into files. So, current tasks are in main.txt, done
-tasks are in done.txt, cancelled tasks nevermind.txt,
-rust related things in rust.txt, reading in reading.txt,
-etc. Filename could be a meaningful parameter in the
-schema.
-
-@09:06 Initial rust reading list setup. #setup-rust-reading-list
-
-@09:16 Reading: how not to learn rust. #how-not-to-learn-rust
-Attempting to take notes while I read.
+@2024-05-20 First day of recurse. Organize.
+First day of Recurse! Figuring out how to best organize
+myself. I want to use systems I already know, while also
+keep the data out in the open and readable from GH while
+to keep myself accountable.
+@11:00 Initial Welcomes
+@11:10 Staff Introductions
+@11:15 Framework for Learning while at RC
+@11:28 Pillars of RC
+@11:40 Social Rules
+@11:49 Meet and Greets/Breakouts
+@12:32 Walk/Lunch
+@14:00 Advice and Introductions
+@14:55 Break
+@15:01 Ink / Pairing with Dan
+TODO: look at NIH plug for Rust plugins
+@16:49 Writing this initial timestamp log
+I am currently writing this first log, then adding
+it to the repo.
 ---
-Useful for autocomplete tags in Vim
-https://stackoverflow.com/questions/10789430/vims-ctrlp-autocomplete-for-identifiers-with-dash
-
-'iskeyword+=\-' was good enough for my needs.
----
-I'm realizing that I may want to spend some time getting
-used to how Rust is designed, instead of jumping
-into code (though I already have some boilerplate
-ready for porting DSP). I think overall things will
-be faster if I figure out how to think in Rust, rather
-than trying to apply my pre-existing notions of
-programming towards Rust.
----
-Seems like some decent wisdom. There are many links
-and follow-ups, which may be worth looking at later.
-
-@10:04 Break/Snack
-@10:30 Walk
-@11:00 RC Software
-@11:45 Nap
-@12:35 VoxBox Initial planning
-@13:00 Break
-@13:11 Update Log
-@13:13 Skipped the pairing session
-I'm feeling a little bit bad about this, so
-I thought I'd write a few words on it.
-
-Firstly, I'm exhausted. The time between my last
-job and living situation and the start of my batch
-was too short. I knew this coming in. I'm adjusting
-to what are for me have been some huge life changes
-in the last week.
-
-Secondly, and perhaps more importantly, I think I'm also
-a little intimidated? Imposter syndrome, etc, etc.
-I've taken
-about a six month break from writing code. Lots
-of reading and research around the code. But
-coding itself has been fairly sparse outside
-of a few ad-hoc scripts. I also doubt my skills
-a fair bit. I really only know a modest amount of C,
-along with a handful of scripting languages on top
-of that. DSP and realtime audio puts a limit the kind of
-languages you get to study. Most languages used today
-are simply not suitable for realtime or soft realtime
-applications. As a result, I've never had many
-opportunities to work much with other languages.
-
-It's hard having that feel like the only
-language you feel only sort of comfortable in.
-I guess I wish I had more go-to "modern" languages that
-are less niche.
-
-I'm hoping I'll be better at getting over myself
-in the next few weeks.
-
----
-
-Update: languages used in the
-pairing workshop:
-
-Javascript, Java, Scala, C/C++, Clojure, Rust,
-Lisp, Racket, MIT Scheme, OCaml, Ruby, Python,
-SystemVerilog/Hardware, Elixr, Erlang, R, Golang,
-bash, csh, Kotlin, C#, Julia, Swift, SQL, Zig,
-Awk, Elm, Nim. 
-
-@13:24 Update Rust
-Looks like this is just "rustup update"
-
-@13:27 Revisit BoingBoingBoing
-Can I get this to build and run still? Do I
-understand what is happening?
----
-Do I have examples, and if I do, can I build them
-with Cargo? I think there's a way, and I'd like
-to look it up the slow way (instead of
-stackoverflow: find a good book online,
-then find it inthe book)
-
-@13:40 Update boing^3 README for example instructions
-@13:55 Break
-@14:00 Software Foundations
-I made a dagzet for the book at
-"knowledge/software_foundations.dz"
-@14:43 attempt to make initial db generator
-Adapted from my mkdb script.
----
-Want to group things by top-level namespace, so I want
-to select up to first (nth?) "/",
-https://stackoverflow.com/questions/21328295/sql-with-substring-to-a-special-character-with-sqlite
----
-Select distinct top-level nodes from dagzet
-
-> select distinct(SUBSTR(name, 1, INSTR(name, "/") -1)) from dz_nodes
-
-Curious if I can get secondary ones.
-
-@15:00 Looking up career info
-Making a "career" knowledge graph.
-
-@15:05 Break
-@15:35 Graphics
-@16:36 Break/Wrap-Up
+I need to import my tools and make sure they can work
+outside of my repo.
+@15:51 Workflow Planning :ink
+@16:16 blank
+@16:54 setting up evparse
+@17:04 transcribe event log for the day
+@17:10 blank
+@17:22 transcribe dagzet
+Gotta get dagzet utility working.
+@17:41 scan and upload ink for workflow planning
+This involves creating a rotation utility.
+@18:02 end
