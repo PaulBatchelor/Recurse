@@ -20,3 +20,9 @@ that way it stays with the task.
 @09:25 Created metadata tag parser task :add-meta-parser-tags
 Proof of concept should be to add "@!desc" as a known
 tag for description
+
+@11:15 Laptop screen broke
+looking up how to fix this.
+
+@13:07 Settling down at a space
+@13:25 Walk/Lunch
