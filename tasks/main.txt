@@ -1,7 +1,4 @@
-@task-system-setup Set up basic task system
-Set up a basic task system, and come up with a format
-that will scale well enough for my time here are RC.
-No more, no less.
+@!desc a good initial place to throw tasks
 
 @add-tag-parser add a tag parser #task-system-setup
 Potentially add the ability to parse tags to my proof
@@ -9,11 +6,12 @@ of concept parser
 
 @plan-reading-schedule plan out reading schedule
 
-@project-outline set up a project outline for VoxBox
-
 @brainstorm-web-component-study brainstorm: web component study
 I want to try 
 
 @task-sqlite-gen generate sqlite for tasks data
 
 @log-sqlite-gen generate sqlite for logs data
+
+@add-meta-parser-tasks add meta parser to tasks
+Right now, the syntax is "@!tag"

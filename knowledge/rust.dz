@@ -2,4 +2,7 @@ ns rust
 gr a general place for rust related things. Put rust things
 gr here if they don't have a good home yet.
 
-
+nn unsound_zoo
+hl https://github.com/unsound-zoo/unsound-zoo.github.io
+ln The Unsound Zoo: examples of shooting yourself in the foot with Rust
+tg rust

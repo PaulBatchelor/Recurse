@@ -1,5 +1,18 @@
+@!desc tasks that have been completed
+
 @set-up-rust-reading-list Set up rust reading list
 See: https://pbat.ch/brain/rust_links/
 
 @how-not-to-learn-rust reading: how not to learn rust
 https://dystroy.org/blog/how-not-to-learn-rust/
+
+@task-system-setup Set up basic task system
+Set up a basic task system, and come up with a format
+that will scale well enough for my time here are RC.
+No more, no less.
+
+@rc-jobs-advice Read RC-Jobs advice page
+https://www.recurse.com/jobs/advice
+
+@project-outline set up a project outline for VoxBox
+

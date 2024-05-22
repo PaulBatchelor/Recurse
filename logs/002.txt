@@ -68,7 +68,7 @@ and follow-ups, which may be worth looking at later.
 @10:30 Walk
 @11:00 RC Software
 @11:45 Nap
-@12:35 VoxBox Initial planning
+@12:35 VoxBox Initial planning :project-outline
 @13:00 Break
 @13:11 Update Log
 @13:13 Skipped the pairing session

@@ -2,3 +2,21 @@
 
 @08:40 off-by-one is going to confuse me
 renaming logs so far
+
+@08:47 reading RC jobs advice #rc-jobs-advice
+top 3 skills/attributes that I want to cultivate during
+my time here: Effectiveness, Agency, Conscientiousness
+
+@09:11 Setting up high-priority task list
+
+@09:17 Document task lists
+It's already blowing up. I'm going to lose track.
+---
+I should add a description metadata field to the task lists.
+that way it stays with the task.
+
+@09:22 Metadata to task lists :add-meta-parser-tags
+
+@09:25 Created metadata tag parser task :add-meta-parser-tags
+Proof of concept should be to add "@!desc" as a known
+tag for description
