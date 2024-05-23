@@ -29,3 +29,48 @@ going to write a quick and dirty one in C, then port it to
 rust. Reviewing the spec now.
 
 @10:54 Packing up to leave
+Got side-tracked with Dan during this.
+
+@12:12 Arrival
+
+@12:33 Getting ready to work
+
+@12:34 filling out initial chunks #implement-monowav
+
+@12:44 Okay, poking at the hex data for the header #implement-monowav
+
+@12:56 main chunk done, now data chunk
+hex viewer is nice. I'm assuming it's only going to be
+one data chunk with PCM.
+
+What I'm not sure about is: how does it know to do 16-bit
+and not like 10 or 12 bit?
+
+@13:11 wav written, but afplay doesn't like it
+
+@13:14 Inspect riff data of reference
+I figured there'd be a tool for this. exiftool looks to
+be about right.
+
+@13:16 why is the exif data saying my WAV has duration of 0?
+
+@13:26 Time to generate a smaller reference file
+
+@13:37 now we're only writing zeros
+
+@13:44 why is there weird junk in the reference zeros?
+
+@13:49 Don't know what the junk is, but the header is wrong
+I used sox to convert my generated wav into another wav,
+and it fixed some things. I diffed the xxd'd output and
+saw the header differences.
+
+@13:57 36 byte difference between data payload chunk size and riff chunk size
+4 bytes for RIFF
+16 bytes for fmt
+16 bytes for data in riff?
+
+@14:04 zerod wav works. now add sound.
+
+@14:08 off to lunch. next steps
+next steps: get dynamic file size working.
