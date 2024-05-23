@@ -27,3 +27,5 @@ somewhere in C.
 @10:18 can't find it, guess I'm doing it from scratch
 going to write a quick and dirty one in C, then port it to
 rust. Reviewing the spec now.
+
+@10:54 Packing up to leave
