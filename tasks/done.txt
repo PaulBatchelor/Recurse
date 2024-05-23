@@ -16,3 +16,8 @@ https://www.recurse.com/jobs/advice
 
 @project-outline set up a project outline for VoxBox
 
+@revisit-isorhythms revisit isorhythms demo
+remember how it works, document
+
+@initial-voxbox-repo set up initial voxbox repo #voxbox
+Just some initial scaffolding

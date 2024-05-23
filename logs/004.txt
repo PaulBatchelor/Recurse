@@ -1,0 +1,21 @@
+@2024-05-23
+@09:00 Morning Logging
+Raining today, might go into the hub later.
+@09:48 VoxBox project setup thoughts #rust-proj-setup
+Yesterday I pushed initial code:
+
+https://github.com/paulBatchelor/voxbox
+
+Used cargo to generate a library, with examples, similar
+to my boing^3 library.
+
+@09:51 oops guess I need to add the rest of the files #rust-proj-setup
+Also setting up my adhoc workstation while doing this...
+
+@10:01 Troubleshooting trackpad mouse
+While setting up my adhoc workstation, my trackpad decided
+not to work.
+
+It was a faulty microusb cable. Tossed that in the trash.
+
+@10:07 Back to adding more files to voxbox
