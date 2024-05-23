@@ -4,7 +4,6 @@
 https://www.recurse.com/jobs/advice#resumes
 https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb
 
-
 @initial-voxbox-repo set up initial voxbox repo #voxbox
 Just some initial scaffolding
 

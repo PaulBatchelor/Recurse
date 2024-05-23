@@ -26,3 +26,18 @@ looking up how to fix this.
 
 @13:07 Settling down at a space
 @13:25 Walk/Lunch
+Went to the apple store, which happens to be about a
+15min walk away from the hub.
+@14:31 Course correction
+@15:20 getting ready for isorhythms study
+I want to build and run this locally, and document
+my steps for this. I also would like to take a closer
+look at the JS involved and see if there's any way I can
+improve this.
+@15:22 attempting to clone and recompile
+@15:40 Recalling what the JS code does
+Got into some discussions while this was happening
+@16:42 Initial VoxBox scaffolding
+@16:52 Break
+@17:00 non-programming talks
+@18:00 travel Home

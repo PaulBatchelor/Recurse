@@ -1,0 +1,23 @@
+nn web
+gr things related to web technology.
+
+nn mdn_audioworklet
+ln landing page for audioworklet on MDN
+hl https://developer.mozilla.org/en-US/docs/Web/API/AudioWorklet
+tg webaudio
+
+nn mdn_worklet
+hl https://developer.mozilla.org/en-US/docs/Web/API/Worklet
+ln work MDN page
+co $ mdn_audioworklet
+cr audioworklet inherits from worklet, which had addModule()
+
+nn mdn_worklet_addmodule
+hl https://developer.mozilla.org/en-US/docs/Web/API/Worklet/addModule
+ln addModule worklet method
+rm called by audioworklet to load stuff
+co $ mdn_audioworklet
+
+nn mdn_audioworklet_register_scope
+hl https://developer.mozilla.org/en-US/docs/Web/API/AudioWorkletGlobalScope/registerProcessor
+ln The MDN page for registerProcessor

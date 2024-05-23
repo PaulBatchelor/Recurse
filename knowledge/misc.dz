@@ -24,3 +24,11 @@ ln Wikipedia page for Property-Based testing
 hl https://en.wikipedia.org/wiki/Property_testing
 rm S mentioned property-based testing in the software foundations chat
 tg haskell formal_methods
+
+nn vim_no_autocomments
+ln disable annoying autocomments: set formatoptions-=cro
+tg vim
+
+nn vim_no_autoindent
+ln setl noai nocin nosi inde=
+tg vim

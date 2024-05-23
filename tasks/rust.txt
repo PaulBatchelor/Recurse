@@ -6,3 +6,8 @@ like to structure this.
 
 @revisit-rust-wasm-audioworklet Revisit the wasm audio worklet example
 https://github.com/PaulBatchelor/rust-wasm-audioworklet
+
+@implement-monowav implement monowav writer in boing^3
+It would save a step to be able to have a quick and dirty
+way to write mono WAV files, 32-bit or even 24 bit. It would
+save the extra step involved in getting SoX to work.
