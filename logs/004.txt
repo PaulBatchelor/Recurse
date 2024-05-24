@@ -110,3 +110,29 @@ be ported to voxbox with some sine code to make sure I
 can get WAV files generated.
 
 @15:50 packing up, getting ready to watch presentations
+
+@16:00 Apple 2e MIDI, rest bug, coltrane timing
+
+@16:10 Neural nets as a musical instrument
+DIY auto-encoder, RAVE: realtime auto-encoder, RAVE on
+Daisy (hey I know these guys!) (didn't work), on norns?
+Maybe I can help with the norns stuff?
+
+@16:15 Evlish PL and shell, testing
+
+@16:30 How to never miss a train
+
+@16:40 Everything is an Object
+pharo smalltalk VM
+
+@16:46 Music tracking for the privacy conscious
+Navidrone, clerk (clojure)
+
+@16:52 Debugging and logging in vscode
+"tech demo state"
+
+@16:56 PSAs and how to think about time at RC
+Use checkin stream, show links in zulip. "closed" on
+monday. kind vs nice: try to be kind.
+
+@17:15 head back home
