@@ -46,31 +46,67 @@ one data chunk with PCM.
 What I'm not sure about is: how does it know to do 16-bit
 and not like 10 or 12 bit?
 
-@13:11 wav written, but afplay doesn't like it
+@13:11 wav written, but afplay doesn't like it #implement-monowav
 
 @13:14 Inspect riff data of reference
 I figured there'd be a tool for this. exiftool looks to
 be about right.
 
-@13:16 why is the exif data saying my WAV has duration of 0?
+@13:16 why is the exif data saying my WAV has duration of 0? #implement-monowav
 
-@13:26 Time to generate a smaller reference file
+@13:26 Time to generate a smaller reference file #implement-monowav
 
-@13:37 now we're only writing zeros
+@13:37 now we're only writing zeros #implement-monowav
 
-@13:44 why is there weird junk in the reference zeros?
+@13:44 why is there weird junk in the reference zeros? #implement-monowav
 
-@13:49 Don't know what the junk is, but the header is wrong
+@13:49 Don't know what the junk is, but the header is wrong #implement-monowav
 I used sox to convert my generated wav into another wav,
 and it fixed some things. I diffed the xxd'd output and
 saw the header differences.
 
-@13:57 36 byte difference between data payload chunk size and riff chunk size
+@13:57 36 byte difference between data payload chunk size and riff chunk size #implement-monowav
 4 bytes for RIFF
 16 bytes for fmt
 16 bytes for data in riff?
 
-@14:04 zerod wav works. now add sound.
+@14:04 zerod wav works. now add sound. #implement-monowav
 
-@14:08 off to lunch. next steps
+@14:08 off to lunch. next steps #implement-monowav
 next steps: get dynamic file size working.
+
+@15:07 Return from lunch. settled in. #implement-monowav
+Now, to tackle the file size things. I'm anticipating
+when I port this to Rust, I'll want to be able to write
+the stream of an indefinite size, get the total samples
+written to disk, and then update the header bits.
+
+It would be nice to do that using someo kind of r/w
+mode. Otherwise, just close and re-open.
+@15:24 number of bytes acquired dynamically, now to update WAV
+My Orphium project is updating stuff in-place, which flag
+is it?
+---
+Ah, appears to be "a+".
+
+@15:26 it seems to work without updates? #implement-monowav
+Nevermind, just didn't update everything, and had
+to go back to the beginning of the file. Be kind, and
+rewind().
+
+@15:28 back on track #implement-monowav
+
+@15:43 It works!
+Making it a commandline application to take in input/output
+params.
+
+@15:46 "a+" doesn't actually work like I thought it would
+I just looked up the man pages. "w" is fine.
+
+@15:48 things look good. next steps.
+Next steps are to port a version of this code to rust
+as a mono wav writer to boing^3. After that, it should
+be ported to voxbox with some sine code to make sure I
+can get WAV files generated.
+
+@15:50 packing up, getting ready to watch presentations
