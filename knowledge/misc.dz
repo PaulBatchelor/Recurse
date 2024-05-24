@@ -38,3 +38,9 @@ ln WAV file specification
 rm Found this while trying to implement a WAV writer
 tg wav
 hl https://www.mmsp.ece.mcgill.ca/Documents/AudioFormats/WAVE/WAVE.html
+
+nn flask_tutorial
+ln flask tutorial
+hl https://flask.palletsprojects.com/en/1.1.x/quickstart/
+rm found in zulip chat as a recommendation to someone,
+rm thought I'd save it for later.
