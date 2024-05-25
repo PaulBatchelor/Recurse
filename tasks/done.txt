@@ -21,3 +21,6 @@ remember how it works, document
 
 @initial-voxbox-repo set up initial voxbox repo #voxbox
 Just some initial scaffolding
+
+@voxbox-dsp-tasks set up voxbox DSP tasks #voxbox
+

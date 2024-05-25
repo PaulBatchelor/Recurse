@@ -6,3 +6,7 @@ nn unsound_zoo
 hl https://github.com/unsound-zoo/unsound-zoo.github.io
 ln The Unsound Zoo: examples of shooting yourself in the foot with Rust
 tg rust
+
+nn turn_off_dead_code_warning
+ln #[allow(dead_code)]
+tg rust

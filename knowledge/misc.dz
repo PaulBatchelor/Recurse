@@ -44,3 +44,19 @@ ln flask tutorial
 hl https://flask.palletsprojects.com/en/1.1.x/quickstart/
 rm found in zulip chat as a recommendation to someone,
 rm thought I'd save it for later.
+
+nn descript
+ln descript: State-of-the-art audio codec with 90x compression factor.
+ln Supports 44.1kHz, 24kHz, and 16kHz mono/stereo audio. 
+hl https://github.com/descriptinc/descript-audio-codec
+tg codecs audio
+
+nn perceiver_ar_long_context_music_generation
+ln Autoregressive long-context music generation with Perceiver AR
+hl https://magenta.tensorflow.org/perceiver-ar
+tg codecs musicai
+
+nn high_fidelity_neural_audio_compression
+ln high fidelity neural audio compression
+tg codecs neuralaudio audio
+hl https://arxiv.org/pdf/2210.13438
