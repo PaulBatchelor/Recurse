@@ -1,0 +1,12 @@
+@2024-05-25 Day 6
+Saturday. Not too much work.
+
+@14:50 Add ink from last week to repo
+@15:05 Set up ad-hoc workspace
+This table I'm currently on is just slightly too high.
+@15:36 Update dagzet database
+sidetracked... took a picture of my new setup and posted
+it to mastodon.
+
+@15:44 I need a better way to know which files aren't in the database yet
+Refactoring the script now...
