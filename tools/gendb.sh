@@ -43,11 +43,7 @@ function import_code() {
         $NAMESPACE dagzet/code/$FILENAME | sqlite3 a.db
 }
 
-add_to_dagzet knowledge/cargo_book.dz
-add_to_dagzet knowledge/how_not_to_learn_rust.dz
-add_to_dagzet knowledge/misc.dz
-add_to_dagzet knowledge/rust.dz
-add_to_dagzet knowledge/rust_by_example.dz
-add_to_dagzet knowledge/rust_libs.dz
-add_to_dagzet knowledge/software_foundations.dz
-add_to_dagzet knowledge/workflow_planning.dz
+while read -r line
+do
+    add_to_dagzet $line
+done < knowledge/dzfiles.txt

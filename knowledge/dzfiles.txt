@@ -1,0 +1,10 @@
+knowledge/cargo_book.dz
+knowledge/how_not_to_learn_rust.dz
+knowledge/misc.dz
+knowledge/rust.dz
+knowledge/rust_by_example.dz
+knowledge/rust_libs.dz
+knowledge/software_foundations.dz
+knowledge/workflow_planning.dz
+knowledge/career.dz
+knowledge/web.dz
