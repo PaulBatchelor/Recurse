@@ -76,3 +76,5 @@
 (import tools/genhtml :as genhtml)
 (defn dagzet-page [filepath]
   (genhtml/generate filepath webroot))
+
+(import tools/logparse)

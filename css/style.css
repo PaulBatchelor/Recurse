@@ -50,3 +50,11 @@ table td {
 td img {
     max-width:100%;
 }
+
+span.timestamp {
+    style: bold;
+}
+
+div.comment-block {
+    margin-left: 1em;
+}

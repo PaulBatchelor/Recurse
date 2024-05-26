@@ -92,12 +92,52 @@ for _,blk in pairs(data) do
     end
 end
 
+local logs_table = table.concat({
+    "CREATE TABLE IF NOT EXISTS logs(",
+    "day TEXT, ",
+    "time TEXT, ",
+    "title TEXT, ",
+    "comment TEXT, ",
+    "position INTEGER);",
+}, "\n")
+
+local dayblurbs_table  = table.concat({
+    "CREATE TABLE IF NOT EXISTS dayblurbs(",
+    "day TEXT, ",
+    "title TEXT, ",
+    "blurb TEXT); ",
+}, "\n")
+
+print(logs_table)
+print(dayblurbs_table)
+
+fmt = string.format
+
+function concat_comment(comment)
+    if comment then
+        local lines = {}
+        for _, line in pairs(comment) do
+            if line == "---" then line = "\n" end
+            table.insert(lines, line)
+        end
+        return table.concat(lines, " "):gsub("'", "''")
+    end
+
+    return ""
+end
+
 for d,e in pairs(events) do
-    print("Day: " .. d)
-    if(e.comment) then print(table.concat(e.comment, " ")) end
+    if(e.comment or e.title) then
+        print(fmt("INSERT INTO dayblurbs(day, title, blurb) "..
+            "VALUES ('%s', '%s', '%s');",
+            d, e.title or "", concat_comment(e.comment)))
+    end
 
     for pos,evt in pairs(e.events) do
-        print(string.format("%02d: %s %s", pos, evt.time, evt.title))
-        if(evt.comment) then print(table.concat(evt.comment, " ")) end
+        -- print(string.format("%02d: %s %s", pos, evt.time, evt.title))
+        -- if(evt.comment) then print(table.concat(evt.comment, " ")) end
+        print(fmt("INSERT INTO logs(day, time, title, comment, position) "..
+            "VALUES ('%s', '%s', '%s', '%s', %d);",
+            d, evt.time, evt.title:gsub("'", "''"), concat_comment(evt.comment), pos))
     end
 end

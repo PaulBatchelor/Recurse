@@ -15,6 +15,3 @@ I want to try
 
 @add-meta-parser-tasks add meta parser to tasks
 Right now, the syntax is "@!tag"
-
-@htmlize-logs HTMLize logs #log-sqlite-gen
-Will need 

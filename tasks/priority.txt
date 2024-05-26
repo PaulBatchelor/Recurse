@@ -1,11 +1,7 @@
 @!desc high-priority tasks
 
+@htmlize-logs HTMLize logs #log-sqlite-gen
+
 @resume-setup re-examine resume #career
 https://www.recurse.com/jobs/advice#resumes
 https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb
-
-@implement-monowav implement monowav writer in boing^3
-It would save a step to be able to have a quick and dirty
-way to write mono WAV files, 32-bit or even 24 bit. It would
-save the extra step involved in getting SoX to work.
-

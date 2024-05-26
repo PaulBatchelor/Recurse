@@ -15,10 +15,10 @@ It's already blowing up. I'm going to lose track.
 I should add a description metadata field to the task lists.
 that way it stays with the task.
 
-@09:22 Metadata to task lists :add-meta-parser-tags
+@09:22 Metadata to task lists #add-meta-parser-tags
 
-@09:25 Created metadata tag parser task :add-meta-parser-tags
-Proof of concept should be to add "@!desc" as a known
+@09:25 Created metadata tag parser task #add-meta-parser-tags
+Proof of concept should be to add =@!desc= as a known
 tag for description
 
 @11:15 Laptop screen broke

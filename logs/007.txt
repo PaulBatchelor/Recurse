@@ -10,3 +10,64 @@ I don't actually have a boilerplate script for this.
 @09:24 extract dagzet tools from brain wiki #htmlize-knowledge-tree
 Now that there's a weewiki here, things should be more
 straight forward.
+
+@09:50 Things work #htmlize-knowledge-tree
+
+@09:57 Generate sqlite code from logs #htmlize-logs
+I'm not going to worry about the tag system here, that
+can happen later. I just want to be able to add the
+timestamps and messages.
+
+@10:16 Create log db generator script #htmlize-logs
+
+@10:30 Trying to get line breaks to work in comments #htmlize-logs
+This would be one line.
+This would continue the same line because there isn't an
+empty line.
+
+---
+
+This would be another line.
+
+---
+
+It looks like the parser I wrote ignores the extra line
+breaks. Rather than try to update the parser, I'm going
+to say that a line "---" will insert a line break, which
+makes sense.
+
+@10:41 Create an initial logs page #htmlize-logs
+
+@11:33 Ran into debugging hole related to checking for valid key #htmlize-logs
+I should have been using an "or" operation instead of "and".
+Funny how I keep confusing the two.
+
+---
+
+This whole rabbit hole started because what I was calling
+"comment" in the time events, I called "blurb" in the dayblurb.
+I was accidentally trying to get a comment from a dayblurb
+instead of a blurb. It was returning nil, and it was still
+considering it valid. I had to update the conditional logic.
+
+@11:36 Back to getting a single day printed using weewiki #htmlize-logs
+
+@11:38 Now to render all days on one page programatically
+Get all available dates, and then render each one by day.
+
+@11:48 Okay why is day 3 stopping midway #htmlize-logs
+I'm hoping it's not a weewiki thing because that would
+be tedious.
+
+@11:51 Seeing if static export works #htmlize-logs
+
+@11:52 What is going on with day 3? #htmlize-logs
+
+@11:54 Okay, I think it's string escaping issue in janet #htmlize-logs
+
+@12:00 I have no great way to escape the inline janet syntax. #htmlize-logs
+In weewiki, I use =@!(foo "bar")!@= to do inline janet stuff,
+but in Day 3 I was using that in another context. The workaround
+is to put it in a code block.
+
+@12:03 Is static export broken for dagzet?
