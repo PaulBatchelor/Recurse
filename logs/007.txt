@@ -2,5 +2,11 @@
 Sunday. I'm starting to think maybe just build a recurse
 weewiki? In many ways it's the path of least resistance.
 
-@08:57 Initial weewiki setup
+@08:57 Initial weewiki setup #htmlize-knowledge-tree
 
+@09:07 Create HTML export script #htmlize-knowledge-tree
+I don't actually have a boilerplate script for this.
+
+@09:24 extract dagzet tools from brain wiki #htmlize-knowledge-tree
+Now that there's a weewiki here, things should be more
+straight forward.

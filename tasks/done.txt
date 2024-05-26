@@ -24,3 +24,5 @@ Just some initial scaffolding
 
 @voxbox-dsp-tasks set up voxbox DSP tasks #voxbox
 
+@htmlize-knowledge-tree HTMLize knowledge tree
+Create a self-contained HTML generator

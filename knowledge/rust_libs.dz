@@ -4,5 +4,3 @@ gr a collection of rust libraries
 nn regex
 ln regex
 hl https://lib.rs/crates/regex
-cx $ reading/how_not_to_learn_rust
-cr mentioned in reading
