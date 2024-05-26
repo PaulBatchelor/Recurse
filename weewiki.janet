@@ -59,6 +59,7 @@
           "<link rel=\"stylesheet\" href=\""
           css-path
           "\">")
+        "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />"
         "</head>"
         "<body>"
         "<div id=\"main\">"] "\n")))
