@@ -10,3 +10,4 @@ it to mastodon.
 
 @15:44 I need a better way to know which files aren't in the database yet
 Refactoring the script now...
+@16:00 Done for now
