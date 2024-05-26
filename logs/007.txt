@@ -80,3 +80,12 @@ is to put it in a code block.
 
 @12:13 uh-oh.
 I shouldn't be nested git repos like this
+
+@12:18 upload script works, now to add jump links for each day #htmlize-logs
+Adding for each entry would be cool too!
+
+@12:37 Now to add timestamp links #htmlize-logs
+
+@12:46 Note to self: do not render raw HTML in an org block #htmlize-logs
+
+@12:50 Things seem to work now #htmlize-logs

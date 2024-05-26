@@ -32,13 +32,35 @@
 (defn format-comment [comment]
     (string/replace-all "\n" "\n\n" comment))
 
+
+(defn day-timestamp-html [day]
+  (def id (string/replace-all "-" "_" day))
+  (string 
+    "<a href=\"#" id "\" id=\"" id "\">"
+    day
+    "</a>"
+    ))
+
+(defn day-entry-html [day time]
+  (def id
+    (string
+      (string/replace-all "-" "_" day) "_"
+      (string/replace-all ":" "_" time)))
+
+  (pp id)
+  (string 
+    "<a href=\"#" id "\" id=\"" id "\">"
+    time
+    "</a>"
+    ))
+
 (defn render-day-entry [db day]
   (def day-rows (get-day db day))
   (def dayblurb (get-dayblurb db day))
 
   (org (string
          "** "
-         day
+         (day-timestamp-html day)
          (if (is-valid-key dayblurb "title")
            (string " " (dayblurb "title")))
            "\n"))
@@ -47,12 +69,13 @@
       (org (string (format-comment (dayblurb "blurb")) "\n\n")))
 
   (each row day-rows
-    (org
+    (print
       (string
-        "<span class=\"timestamp\">"(row "time")"</span>"
+        "<p>"
+        (day-entry-html day (row "time"))
         ": "
         (row "title")
-        "\n\n"))
+        "</p>"))
     (if-not (= (row "comment") "")
       (org
         (string
