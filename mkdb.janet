@@ -30,8 +30,7 @@ track of what I do day-to-day. These get parsed and turned
 into SQLite tables, then those tables get presented here
 in HTML.
 
-@!(logparse/render-daily-logs (ww-db))!@
-`)
+@!(logparse/render-daily-logs (ww-db))!@`)
 
 # linked pages
 
