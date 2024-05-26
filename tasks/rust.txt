@@ -1,9 +1,7 @@
 @!desc rust-related tasks
 
-@rust-project-setup What is the best way to set up my project?
-Currently thinking about my needs for VoxBox, and how I'd
-like to structure this.
-
-@revisit-rust-wasm-audioworklet Revisit the wasm audio worklet example
-https://github.com/PaulBatchelor/rust-wasm-audioworklet
-
+@impl-gesture-path implement initial gesture path
+Instead of doing Uxn like Gestvm, just implement some
+structures in Rust. I imagine this will encapsulate a
+rephasor with some kind of Rust array/vector holding
+gesture vertices.

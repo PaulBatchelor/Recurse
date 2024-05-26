@@ -93,3 +93,5 @@ Adding for each entry would be cool too!
 @12:53 dagzet HTML isn't correct on mobile
 
 @13:03 Looks like I accidentally removed the viewport width HTML metadata
+
+@15:37 Planning and wiki-ing

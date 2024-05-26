@@ -1,3 +1,14 @@
 #+TITLE: Paul's Recurse Personal Wiki
 
-Hello. I need to write more words here.
+Hello. Welcome to my Recurse Center Personal Wiki!
+
+I will be using this a place to organize myself.
+
+The @!(ref "logs")!@ are a daily journals I make during
+the day that allow me to remember what I did.
+
+The @!(ref "dz" "DAGzet")!@, short for "DAG-@!(wikiref "zettelkasten")!@" is a sort of
+local knowledge tree I have invented that allows me to structure things
+as
+a [[https://en.wikipedia.org/wiki/Directed_acyclic_graph][Directed Acyclic Graph]].
+

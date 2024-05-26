@@ -1,3 +1,4 @@
+(def personal-wiki-path "/wiki")
 (def ww-dir "_site/recurse")
 (def webroot (if (ww-server?) "/wiki" "/recurse"))
 (def css-path 
@@ -79,3 +80,6 @@
   (genhtml/generate filepath webroot))
 
 (import tools/logparse)
+
+(defn wikiref [name]
+  (org (string "[[" personal-wiki-path "/" name "][" name "]]")))

@@ -1,0 +1,14 @@
+@!desc DSP centered tasks. Mostly ports from C.
+
+@implement-phasor Implement phasor in boing^3
+
+@implement-osc implement table-lookup oscillator in boing^3
+
+@implement-glot implement glot algorithm to voxbox
+
+@implement-tract implement tract algorithm
+
+@implement-DRM implement DRM model for shaping tract
+
+@implement-rephasor implement rephasor
+this is the core thing behind a gesture signal generator.
