@@ -1,0 +1,6 @@
+@2024-05-26 Day 7.
+Sunday. I'm starting to think maybe just build a recurse
+weewiki? In many ways it's the path of least resistance.
+
+@08:57 Initial weewiki setup
+
