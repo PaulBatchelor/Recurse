@@ -1,7 +1,14 @@
 @!desc high-priority tasks
 
-@htmlize-logs HTMLize logs #log-sqlite-gen
-
 @resume-setup re-examine resume #career
 https://www.recurse.com/jobs/advice#resumes
 https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb
+
+@task-sqlite-gen generate sqlite for tasks data
+
+@connect-logs-to-tasks connect log data tags to task names
+
+@htmlize-tasks htmlize tasks somehow #task-sqlite-gen
+
+@add-meta-parser-tasks add meta parser to tasks
+Right now, the syntax is "@!tag"

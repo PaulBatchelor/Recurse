@@ -5,13 +5,3 @@ Potentially add the ability to parse tags to my proof
 of concept parser
 
 @plan-reading-schedule plan out reading schedule
-
-@brainstorm-web-component-study brainstorm: web component study
-I want to try 
-
-@task-sqlite-gen generate sqlite for tasks data
-
-@log-sqlite-gen generate sqlite for logs data
-
-@add-meta-parser-tasks add meta parser to tasks
-Right now, the syntax is "@!tag"

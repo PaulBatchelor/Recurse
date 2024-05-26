@@ -95,3 +95,8 @@ Adding for each entry would be cool too!
 @13:03 Looks like I accidentally removed the viewport width HTML metadata
 
 @15:37 Planning and wiki-ing
+
+@16:02 initial setup stuff for logs to sqlite data #task-sqlite-gen
+Just getting the boilerplate code and parser hooked up.
+
+@16:27 I think I have most of the data being parsed #task-sqlite-gen

@@ -39,3 +39,8 @@ like to structure this.
 @revisit-rust-wasm-audioworklet Revisit the wasm audio worklet example
 https://github.com/PaulBatchelor/rust-wasm-audioworklet
 
+@htmlize-logs HTMLize logs #log-sqlite-gen
+
+@log-sqlite-gen generate sqlite for logs data
+
+
