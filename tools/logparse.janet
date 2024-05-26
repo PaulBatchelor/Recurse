@@ -47,7 +47,6 @@
       (string/replace-all "-" "_" day) "_"
       (string/replace-all ":" "_" time)))
 
-  (pp id)
   (string 
     "<a href=\"#" id "\" id=\"" id "\">"
     time
