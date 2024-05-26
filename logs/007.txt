@@ -75,3 +75,8 @@ is to put it in a code block.
 @12:06 Ah, it seems I wrote a one-liner to generate all directories needed
 
 @12:08 Export script updated. Things work now.
+
+@12:09 Try to upload to website?
+
+@12:13 uh-oh.
+I shouldn't be nested git repos like this
