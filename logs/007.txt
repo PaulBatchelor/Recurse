@@ -71,3 +71,7 @@ but in Day 3 I was using that in another context. The workaround
 is to put it in a code block.
 
 @12:03 Is static export broken for dagzet?
+
+@12:06 Ah, it seems I wrote a one-liner to generate all directories needed
+
+@12:08 Export script updated. Things work now.
