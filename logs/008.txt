@@ -128,3 +128,16 @@ and also to add ordering to the task group lists.
 But hey, this is good enough for now.
 
 @14:54 update site generator script to include new subdirs
+
+@15:21 Getting prepped for phasor-work #implement-phasor
+
+@15:35 Implement phasor example #implement-phasor
+
+@15:45 It works! #implement-phasor
+I have a slow phasor modulating the frequency of an audio
+rate phasor, which is getting filter by an LPF.
+
+@15:50 Logs and example file: #implement-phasor
+Here is the phasor implementation: [[https://github.com/PaulBatchelor/BoingBoingBoing/blob/main/src/phasor.rs]].
+---
+Here is the example:[[https://github.com/PaulBatchelor/BoingBoingBoing/blob/main/examples/phasor.rs]]

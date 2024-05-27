@@ -10,3 +10,14 @@ tg rust
 nn turn_off_dead_code_warning
 ln #[allow(dead_code)]
 tg rust
+
+nn cargo_watch
+ln Cargo Watch: Watches over your Cargo project’s source 
+hl https://crates.io/crates/cargo-watch
+tg rust crates
+rm Useful way to auto-recompile rust project on any changes
+
+nn cargo_watch_command
+ln cargo watch -x build
+co $ cargo_watch
+cr example command
