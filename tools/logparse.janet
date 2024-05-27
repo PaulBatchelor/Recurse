@@ -8,9 +8,20 @@
 (defn get-day [db day]
   (sqlite3/eval db
     (string
-      "SELECT time, title, comment, position "
+      "SELECT day, time, title, comment, position "
       "FROM logs WHERE day is '" day "' "
       "ORDER by position;"
+      )))
+
+(defn get-logs-by-tag [db tag]
+  (sqlite3/eval
+    db
+    (string
+      "SELECT day, time, title, comment from logs "
+      "INNER join logtags ON "
+      "logs.rowid = logtags.logid "
+      "WHERE logtags.tag is '" tag "' "
+      "ORDER BY logs.rowid ASC ;"
       )))
 
 (defn get-dayblurb [db day]
@@ -41,7 +52,8 @@
     "</a>"
     ))
 
-(defn day-entry-html [day time]
+(defn day-entry-html [day time &opt fulldate]
+  (default fulldate false)
   (def id
     (string
       (string/replace-all "-" "_" day) "_"
@@ -49,7 +61,7 @@
 
   (string 
     "<a href=\"#" id "\" id=\"" id "\">"
-    time
+    (if fulldate (string day " " time) time)
     "</a>"
     ))
 
@@ -58,6 +70,18 @@
   (print "<div class=\"comment-block\">")
   (org (string comment "\n\n"))
   (print "</div>"))
+
+(defn print-entry [row &opt fulldate]
+  (default fulldate false)
+  (print
+    (string
+      "<p>"
+      (day-entry-html (row "day") (row "time") fulldate)
+      ": "
+      (row "title")
+      "</p>"))
+  (if-not (= (row "comment") "")
+          (print-org-comment (format-comment (row "comment")))))
 
 (defn render-day-entry [db day]
   (def day-rows (get-day db day))
@@ -68,23 +92,20 @@
          (day-timestamp-html day)
          (if (is-valid-key dayblurb "title")
            (string " " (dayblurb "title")))
-           "\n"))
+         "\n"))
 
   (if (is-valid-key dayblurb "blurb")
-      (org (string (format-comment (dayblurb "blurb")) "\n\n")))
+    (org (string (format-comment (dayblurb "blurb")) "\n\n")))
 
   (each row day-rows
-    (print
-      (string
-        "<p>"
-        (day-entry-html day (row "time"))
-        ": "
-        (row "title")
-        "</p>"))
-    (if-not (= (row "comment") "")
-            (print-org-comment (format-comment (row "comment"))))
-  ))
+    (print-entry row)))
 
 (defn render-daily-logs [db]
   (def days (get-available-days db))
   (each day days (render-day-entry db (day "day"))))
+
+
+(defn render-logs-from-tag [db tag]
+  (org (string "#+TITLE " tag))
+  (def logs (get-logs-by-tag db tag))
+  (each log logs (print-entry log true)))

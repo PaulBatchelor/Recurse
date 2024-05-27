@@ -99,3 +99,12 @@ got filtered out before the SQLite table.
 @12:06 Creating "hist" tool #connect-logs-to-tasks
 This will allow me to view a timeline of logs given a
 task name id.
+
+@12:27 All core ingredients acquired for HTMLized task views #connect-logs-to-tasks
+@12:30 Lunch
+@13:12 Begin generating initial HTML pages for tasks #htmlize-tasks
+This will be similar to what I did for dagzet. Create
+one page for each task, and give it a prefix like
+=tasks/htmlize-tasks=, which then displays a timeline of
+logs.
+@13:49 setting up initial janet code
