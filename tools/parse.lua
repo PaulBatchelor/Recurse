@@ -101,7 +101,7 @@ local logs_table = table.concat({
     "position INTEGER);",
 }, "\n")
 
-local dayblurbs_table  = table.concat({
+local dayblurbs_table = table.concat({
     "CREATE TABLE IF NOT EXISTS dayblurbs(",
     "day TEXT, ",
     "title TEXT, ",
@@ -134,8 +134,6 @@ for d,e in pairs(events) do
     end
 
     for pos,evt in pairs(e.events) do
-        -- print(string.format("%02d: %s %s", pos, evt.time, evt.title))
-        -- if(evt.comment) then print(table.concat(evt.comment, " ")) end
         print(fmt("INSERT INTO logs(day, time, title, comment, position) "..
             "VALUES ('%s', '%s', '%s', '%s', %d);",
             d, evt.time, evt.title:gsub("'", "''"), concat_comment(evt.comment), pos))

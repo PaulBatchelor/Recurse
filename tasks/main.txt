@@ -5,3 +5,8 @@ Potentially add the ability to parse tags to my proof
 of concept parser
 
 @plan-reading-schedule plan out reading schedule
+
+@create-time-log-format Create a time log format
+I'm starting to think that maybe I want to do time
+tracking again in some form to measure how
+many hours a particular task takes.

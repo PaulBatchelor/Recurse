@@ -8,3 +8,17 @@ transferring some code to new VoxBox project.
 @07:47 Morning Triage
 
 @07:53 create generate_all script
+
+@08:19 Is this even actionable? #plan-reading-schedule
+
+@08:34 back to task parsing, where was I here? #task-sqlite-gen
+
+@08:38 Right, time for thinking about SQL schemas #task-sqlite-gen
+
+@08:48 Also trying to make the text files they are in a kind of group #task-sqlite-gen
+
+@09:06 get insert statements for tasks working #task-sqlite-gen
+
+@09:10 hook up to rest of files #task-sqlite-gen
+
+@09:15 Again with the string escaping in SQLite #task-sqlite-gen
