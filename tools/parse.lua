@@ -123,9 +123,30 @@ fmt = string.format
 function concat_comment(comment)
     if comment then
         local lines = {}
+        local preformat = false
+        local preblock = {}
         for _, line in pairs(comment) do
             if line == "---" then line = "\n" end
-            table.insert(lines, line)
+
+            if line == "===" then
+                line = ""
+                if preformat then
+                    preformat = false
+                    line = table.concat(preblock, "\n")
+                    preblock = {}
+                else
+                    preformat = true
+                end
+            end
+
+            if preformat then
+                table.insert(preblock, line)
+                line = ""
+            end
+
+            if line ~= "" then
+                table.insert(lines, line)
+            end
         end
         return table.concat(lines, " "):gsub("'", "''")
     end

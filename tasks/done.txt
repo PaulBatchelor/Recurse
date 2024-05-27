@@ -48,3 +48,5 @@ https://github.com/PaulBatchelor/rust-wasm-audioworklet
 @add-tag-parser add a tag parser #task-system-setup
 Potentially add the ability to parse tags to the
 log event parser.
+
+@codeblocks-logs make codeblocks work in logs

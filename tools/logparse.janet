@@ -53,6 +53,13 @@
     "</a>"
     ))
 
+
+(defn print-org-comment [comment]
+  (print "<div class=\"comment-block\">")
+  (pp comment)
+  (org (string comment "\n\n"))
+  (print "</div>"))
+
 (defn render-day-entry [db day]
   (def day-rows (get-day db day))
   (def dayblurb (get-dayblurb db day))
@@ -76,14 +83,7 @@
         (row "title")
         "</p>"))
     (if-not (= (row "comment") "")
-      (org
-        (string
-          "<div class=\"comment-block\">"
-          # line breaks in comments are doubled to trigger
-          # paragraph breaks in org parser
-          (row "comment")
-          #(pp (string/replace-all "\n" "\n\n" (row "comment")))
-          "</div>\n\n")))
+            (print-org-comment (row "comment")))
   ))
 
 (defn render-daily-logs [db]

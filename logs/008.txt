@@ -47,9 +47,26 @@ and is the largest? This would be much easer.
 
 @10:56 Let's see what works? #add-tag-parser
 It works! 
----
-#+BEGIN_SRC sqlite
-select tag, logs.title from logtags inner join logs on logs.rowid = logtags.logid;
-#+END_SRC
 
-@11:01 I wonder if org can be parsed in my logs?
+---
+
+===
+#+BEGIN_SRC sqlite
+select tag, logs.title from
+logtags inner join logs on logs.rowid = logtags.logid;
+#+END_SRC
+===
+
+@11:01 I wonder if org can be parsed in my logs? #codeblocks-logs
+
+This is some *bold* text.
+
+@11:07 Code blocks don't work as expected yet. #codeblocks-logs
+This is because lines by default get their lines truncated.
+
+@11:10 Going to try using a new divider to preserve line breaks. #codeblocks-logs
+
+@11:39 Code blocks work. That took more time than expected. #codeblocks-logs
+My org parser is very strict about whitespace, and I had
+to be a little more involved about how to extract
+blocks here. It works though.
