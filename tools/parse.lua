@@ -126,7 +126,7 @@ function concat_comment(comment)
         local preformat = false
         local preblock = {}
         for _, line in pairs(comment) do
-            if line == "---" then line = "\n" end
+            -- if line == "---" then line = "\n" end
 
             if line == "===" then
                 line = ""

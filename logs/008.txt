@@ -70,3 +70,32 @@ This is because lines by default get their lines truncated.
 My org parser is very strict about whitespace, and I had
 to be a little more involved about how to extract
 blocks here. It works though.
+
+@11:44 Attempt to aggregate logs of a certain tag #connect-logs-to-tasks
+If the tag belongs to a task, then this is a comment history.
+---
+This seems to work:
+
+===
+#+BEGIN_SRC sqlite
+SELECT day, time, title, comment from logs
+INNER join logtags ON
+logs.rowid = logtags.logid
+WHERE logtags.tag is "add-tag-parser"
+ORDER BY logs.rowid ASC;
+#+END_SRC
+===
+
+@11:53 Shoot, comments aren't breaking up right
+
+@12:02 comments break up okay now I think
+The =- - -= (no spaces) is something I'm using as a divider.
+I reworked the logic so that it's included in the SQLite
+data, and then handled when the HTML is rendered.
+---
+Previously, it was part of a pre-processor that actually
+got filtered out before the SQLite table.
+
+@12:06 Creating "hist" tool #connect-logs-to-tasks
+This will allow me to view a timeline of logs given a
+task name id.

@@ -1,0 +1,26 @@
+if [ "$#" -lt 1 ]
+then
+    echo "usage: $0 tag"
+    exit 1
+fi
+
+function query() {
+TAG=$1
+sqlite3 a.db <<EOM
+.mode tabs
+SELECT day, time, title from logs
+INNER join logtags ON
+logs.rowid = logtags.logid
+WHERE logtags.tag is '$TAG'
+ORDER BY logs.rowid ASC ;
+EOM
+}
+
+function present() {
+awk 'BEGIN{FS="\t"} {
+print $1, $2, $3
+}'
+}
+
+query $1
+

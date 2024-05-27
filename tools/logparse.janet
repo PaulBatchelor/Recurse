@@ -30,7 +30,7 @@
       (nil? (x key)) (= (x key) ""))))
 
 (defn format-comment [comment]
-    (string/replace-all "\n" "\n\n" comment))
+    (string/replace-all "---" "\n\n" comment))
 
 
 (defn day-timestamp-html [day]
@@ -56,7 +56,6 @@
 
 (defn print-org-comment [comment]
   (print "<div class=\"comment-block\">")
-  (pp comment)
   (org (string comment "\n\n"))
   (print "</div>"))
 
@@ -83,7 +82,7 @@
         (row "title")
         "</p>"))
     (if-not (= (row "comment") "")
-            (print-org-comment (row "comment")))
+            (print-org-comment (format-comment (row "comment"))))
   ))
 
 (defn render-daily-logs [db]
