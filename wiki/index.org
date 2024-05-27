@@ -4,11 +4,13 @@ Hello. Welcome to my Recurse Center Personal Wiki!
 
 I will be using this a place to organize myself.
 
-The @!(ref "logs")!@ are a daily journals I make during
+Here are some things to check out:
+
+@!(ref "logs")!@: a daily journals I make during
 the day that allow me to remember what I did.
 
-The @!(ref "dz" "DAGzet")!@, short for "DAG-@!(wikiref "zettelkasten")!@" is a sort of
-local knowledge tree I have invented that allows me to structure things
-as
-a [[https://en.wikipedia.org/wiki/Directed_acyclic_graph][Directed Acyclic Graph]].
-
+@!(ref "dz" "DAGzet")!@: a @!(wikiref "zettelkasten")!@ inspired
+knowledge database I have invented that allows me to structure things
+as a [[https://en.wikipedia.org/wiki/Directed_acyclic_graph][Directed Acyclic Graph]]
+(DAG) using a markup language. The output has been HTMLized
+for your viewing pleasure.

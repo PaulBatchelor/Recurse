@@ -1,0 +1,10 @@
+@2024-05-27 Day 8. Memorial Day.
+Prev: Setting up HTML generation on recurse wiki and
+dagzet.
+---
+Next: Setting up tasks. Phasor DSP code in boing^3. Start
+transferring some code to new VoxBox project.
+
+@07:47 Morning Triage
+
+@07:53 create generate_all script

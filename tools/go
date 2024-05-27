@@ -1,0 +1,8 @@
+# (re)-generate data and wiki pages
+./tools/gen.sh
+
+# export HTML
+./tools/export.sh
+
+# transfer to live site and upload
+./tools/upload.sh
