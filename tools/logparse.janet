@@ -106,6 +106,48 @@
 
 
 (defn render-logs-from-tag [db tag]
-  (org (string "#+TITLE " tag))
+  (org (string "#+TITLE " tag "\n"))
   (def logs (get-logs-by-tag db tag))
   (each log logs (print-entry log true)))
+
+(defn get-tasks-from-group [db group]
+  (sqlite3/eval db
+    (string
+      "SELECT name, title "
+      "FROM tasks WHERE task_group is '" group "' "
+      # TODO: add position
+      "ORDER by name;"
+      )))
+
+(defn print-task [task]
+  (print "<li>")
+  (ref
+    (string "tasks/" (string/replace-all "-" "_" (task "name")))
+    (task "name"))
+  (org (string ": " (task "title")))
+  (print "</li>"))
+
+(defn render-tasks-from-group [db group]
+  (def tasks (get-tasks-from-group db group))
+  (org (string "#+TITLE " group "\n"))
+  (print "<ul>")
+  (each task tasks
+    (print-task task)))
+
+
+(defn get-taskgroups [db]
+  (sqlite3/eval db
+    (string
+      "SELECT distinct(task_group) as task_group FROM tasks "
+      "ORDER by task_group;"
+      )))
+
+(defn render-taskgroups-directory [db] 
+  (def taskgroups (get-taskgroups db))
+  (org "#+TITLE Task Groups\n")
+  (print "<ul>")
+  (each tg taskgroups
+    (print "<li>")
+    (ref (string "taskgroups/" (tg "task_group")) (tg "task_group"))
+    (print "</li>"))
+  (print "</ul>"))

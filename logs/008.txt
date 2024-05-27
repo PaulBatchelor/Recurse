@@ -107,4 +107,22 @@ This will be similar to what I did for dagzet. Create
 one page for each task, and give it a prefix like
 =tasks/htmlize-tasks=, which then displays a timeline of
 logs.
-@13:49 setting up initial janet code
+@13:49 setting up initial janet code #htmlize-tasks
+
+@14:13 now to generate task groups pages #htmlize-tasks
+I was thinking this could be like =taskgroups/priority=,
+with =taskgroups= display a directory of all the groups.
+
+@14:15 Setting up initial taskgroup pages #htmlize-tasks
+
+@14:23 Janet taskgroup renderer #htmlize-tasks
+
+@14:38 Generating grouptasks directory page #htmlize-tasks
+This will just be at @!(ref "taskgroups")!@.
+
+@14:42 janet code for taskgroups #htmlize-tasks
+
+@14:50 tasksgroups work. basic functionality complete. now what? #htmlize-tasks
+What's left here is to add descriptions to tasks and grouptasks,
+and also to add ordering to the task group lists.
+But hey, this is good enough for now.

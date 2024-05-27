@@ -10,3 +10,5 @@ many hours a particular task takes.
 @add-position-to-tasks add position variable to tasks
 where they are in the task list can be something that
 should be pretty trivial to get at and store.
+
+@html-task-descriptions add descriptions to grouptask and task
