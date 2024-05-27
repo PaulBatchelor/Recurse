@@ -126,3 +126,5 @@ This will just be at @!(ref "taskgroups")!@.
 What's left here is to add descriptions to tasks and grouptasks,
 and also to add ordering to the task group lists.
 But hey, this is good enough for now.
+
+@14:54 update site generator script to include new subdirs

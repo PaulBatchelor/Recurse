@@ -14,3 +14,6 @@ knowledge database I have invented that allows me to structure things
 as a [[https://en.wikipedia.org/wiki/Directed_acyclic_graph][Directed Acyclic Graph]]
 (DAG) using a markup language. The output has been HTMLized
 for your viewing pleasure.
+
+@!(ref "taskgroups" "tasks")!@: various tasks I am working on, organized
+by group.

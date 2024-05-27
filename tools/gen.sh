@@ -8,3 +8,4 @@
 # generate tasks and wiki pages
 ./tools/gentasks.sh
 ./tools/generate_task_pages.sh
+./tools/generate_taskgroup_pages.sh
