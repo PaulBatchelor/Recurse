@@ -43,4 +43,8 @@ https://github.com/PaulBatchelor/rust-wasm-audioworklet
 
 @log-sqlite-gen generate sqlite for logs data
 
+@task-sqlite-gen generate sqlite for tasks data
 
+@add-tag-parser add a tag parser #task-system-setup
+Potentially add the ability to parse tags to the
+log event parser.

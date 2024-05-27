@@ -108,8 +108,15 @@ local dayblurbs_table = table.concat({
     "blurb TEXT); ",
 }, "\n")
 
+local logtags_table = table.concat({
+    "CREATE TABLE IF NOT EXISTS logtags(",
+    "logid INTEGER, ",
+    "tag TEXT); ",
+}, "\n")
+
 print(logs_table)
 print(dayblurbs_table)
+print(logtags_table)
 
 fmt = string.format
 
@@ -126,6 +133,20 @@ function concat_comment(comment)
     return ""
 end
 
+function extract_tags(title)
+    for w in title:gmatch("%S+") do
+        if (w:byte(1) == string.byte("#")) then
+            local tag = w:sub(2)
+            print(fmt("INSERT INTO logtags(logid, tag) " ..
+                "VALUES (%s, '%s');",
+                -- last inserted log entry
+                "(SELECT max(rowid) from logs)",
+                tag
+                ))
+        end
+    end
+end
+
 for d,e in pairs(events) do
     if(e.comment or e.title) then
         print(fmt("INSERT INTO dayblurbs(day, title, blurb) "..
@@ -137,5 +158,6 @@ for d,e in pairs(events) do
         print(fmt("INSERT INTO logs(day, time, title, comment, position) "..
             "VALUES ('%s', '%s', '%s', '%s', %d);",
             d, evt.time, evt.title:gsub("'", "''"), concat_comment(evt.comment), pos))
+        extract_tags(evt.title)
     end
 end

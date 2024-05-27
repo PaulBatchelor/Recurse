@@ -5,3 +5,4 @@ logs/004.txt
 logs/005.txt
 logs/006.txt
 logs/007.txt
+logs/008.txt

@@ -1,12 +1,12 @@
 @!desc a good initial place to throw tasks
 
-@add-tag-parser add a tag parser #task-system-setup
-Potentially add the ability to parse tags to my proof
-of concept parser
-
 @plan-reading-schedule plan out reading schedule
 
 @create-time-log-format Create a time log format
 I'm starting to think that maybe I want to do time
 tracking again in some form to measure how
 many hours a particular task takes.
+
+@add-position-to-tasks add position variable to tasks
+where they are in the task list can be something that
+should be pretty trivial to get at and store.

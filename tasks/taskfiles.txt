@@ -4,3 +4,4 @@ tasks/main.txt
 tasks/priority.txt
 tasks/reading.txt
 tasks/rust.txt
+tasks/done.txt
