@@ -3,7 +3,5 @@ tasks that I intend to work on in the next few days or so.
 
 @implement-glot implement glot algorithm to voxbox
 
-@implement-mtof implement mtof utility
-
 @vscode-rust-setup set up rust workflow in vscode
 

@@ -52,3 +52,21 @@ This is the algorithm I'd like to use:
 @09:59 Would be nice to try and get a vs code setup today or tomorrow #vscode-rust-setup
 
 @10:00 Pack up and leave for RC
+
+@10:59 Arrival / Puttering on Couch
+
+@11:17 Piano / Wander
+
+@12:00 Audio Hang
+
+@13:00 Lunch
+
+@14:06 Software Foundations
+
+@15:11 add re-useable mtof utility to boing^3 #implement-mtof
+
+@15:16 glot pre-setup: import wavwrite #implement-glot
+This is hard for me because I don't actually know what the
+best practice is for organizing library code.
+---
+Found this: [[https://rust-classes.com/chapter_4_3]]

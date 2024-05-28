@@ -26,3 +26,9 @@ nn cpal
 hl https://github.com/RustAudio/cpal
 ln Cross-platform Audio I/O library in pure Rust
 tg audio rust
+
+nn organizing_code_project_structure
+hl https://rust-classes.com/chapter_4_3
+ln organizing code and project structure
+tg rust
+rm trying to set up VoxBox the "right way"
