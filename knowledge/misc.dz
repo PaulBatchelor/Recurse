@@ -60,3 +60,10 @@ nn high_fidelity_neural_audio_compression
 ln high fidelity neural audio compression
 tg codecs neuralaudio audio
 hl https://arxiv.org/pdf/2210.13438
+
+nn coqtail
+hl https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html
+ln Interactive Coq Proofs in Vim 
+tg coq software_foundations
+td try to set up coqtail?
+co $ software_foundations/top
