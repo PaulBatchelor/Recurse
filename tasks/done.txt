@@ -54,3 +54,5 @@ log event parser.
 @connect-logs-to-tasks connect log data tags to task names
 
 @implement-phasor Implement phasor in boing^3
+
+@htmlize-tasks htmlize tasks somehow #task-sqlite-gen

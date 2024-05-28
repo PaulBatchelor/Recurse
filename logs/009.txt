@@ -1,0 +1,54 @@
+@2024-05-28 Day 9.
+Prev: Added my task management system to my static site
+generator @!(ref "taskgroups")!@. Ported phasor algorithm to
+Rust [[https://github.com/PaulBatchelor/BoingBoingBoing/blob/main/src/phasor.rs]],
+paired with Dan learning how to use
+cpal [[https://github.com/RustAudio/cpal]], @!(dzref "rust/cpal")!@.
+---
+Next: Audio Hang, Software Foundations (Lurk), Graphics,
+migrate DSP code to voxbox, begin work on glottis
+algorithm port.
+
+@08:38 Thoughts during breakfast.
+I started with the general question "what is it that I'm
+trying to do here?" and worked from there. It ended up
+being a good way to articulate why I chose to do my
+singing synthesizer project.
+---
+I'm trying to find a job. I'm using my time here to
+diversify my skills to something less niche so I have
+a better time finding relevant jobs. My career up to this
+point has involved a lot of "legacy" systems that nobody
+is hiring for (unless it's a super senior position).
+---
+The project I have chosen here involves experiments in
+singing synthesis that run in browser. This to me has a
+good balance of familiarity (comfortable) and unfamiliarity
+(uncomfortable). Audio programming, singing synthesis,
+and DSP algorithms are comfortable things for me. The
+regions of the uncomfortale and unfamiliar lie in *how*
+I am doing these things. Namely, Rust (to webassembly),
+and just about anything related to web development.
+---
+I think my starting point is learning Rust. Even though
+it is quite complicated, it is the shortest distance
+away from my zone of familiarity, since this is where
+I'll be doing the audio DSP work. My first few weeks here
+will be spent building the core DSP kernel.
+---
+Web development is quite foreign to me, but
+@09:13 Morning triage.
+
+@09:55 This is in a good enough place. Follow-up tasks have been created. #htmlize-tasks
+
+@09:56 Resume building can happen next week I think #resume-setup
+
+@09:57 Hoping to start the glottis port today. #implement-glot
+This is the algorithm I'd like to use:
+[[https://git.sr.ht/~pbatch/mnodes/tree/master/item/glot/glot.c]].
+
+@09:58 It's trivial to add an mtof function. Doing this today. #implement-mtof
+
+@09:59 Would be nice to try and get a vs code setup today or tomorrow #vscode-rust-setup
+
+@10:00 Pack up and leave for RC

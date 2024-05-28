@@ -2,8 +2,6 @@
 
 @implement-osc implement table-lookup oscillator in boing^3
 
-@implement-glot implement glot algorithm to voxbox
-
 @implement-tract implement tract algorithm
 
 @implement-DRM implement DRM model for shaping tract
@@ -12,5 +10,3 @@
 this is the core thing behind a gesture signal generator.
 
 @implement-smoother implement 1-pole smoothing filter
-
-@implement-mtof implement mtof utility

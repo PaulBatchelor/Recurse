@@ -21,3 +21,8 @@ nn cargo_watch_command
 ln cargo watch -x build
 co $ cargo_watch
 cr example command
+
+nn cpal
+hl https://github.com/RustAudio/cpal
+ln Cross-platform Audio I/O library in pure Rust
+tg audio rust

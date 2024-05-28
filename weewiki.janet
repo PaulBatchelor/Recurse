@@ -75,6 +75,11 @@
 ``
 ))
 
+(defn dzref [ref]
+  (org "[")
+  (ref (string "dz/" ref) ref)
+  (org "]"))
+
 (import tools/genhtml :as genhtml)
 (defn dagzet-page [filepath]
   (genhtml/generate filepath webroot))
