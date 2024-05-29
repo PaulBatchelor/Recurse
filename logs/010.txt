@@ -6,3 +6,11 @@ Next: Port Glottis Algorithm to Rust, C Creatures, WASM Group
 @09:00 Morning Curation
 @09:43 Some initial work on glottis scaffolding #implement-glot
 @10:00 Pack and leave for RC
+
+@16:00 Rust pairing with Dan
+looked into mutexes. @!(dzref "rust/mutexes")!@
+
+@17:48 audio code works! using tinyaudio now
+see @(dzref "rust/tinyaudio")!@
+
+
