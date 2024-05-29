@@ -1,0 +1,7 @@
+ns voxbox
+gr stuff related to my vocal synthesizer project
+
+nn monowav
+ln monowav: a simple mono wav file for rapid prototyping
+hl https://github.com/PaulBatchelor/voxbox/blob/main/src/monowav.rs
+tg rust voxbox code

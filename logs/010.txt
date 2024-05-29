@@ -1,0 +1,8 @@
+@2024-05-29 Day 10.
+Prev: Audio Hang, Software Foundations, Graphics Hang, Rust
+
+Next: Port Glottis Algorithm to Rust, C Creatures, WASM Group
+
+@09:00 Morning Curation
+@09:43 Some initial work on glottis scaffolding #implement-glot
+@10:00 Pack and leave for RC

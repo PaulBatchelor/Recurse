@@ -75,10 +75,14 @@
 ``
 ))
 
-(defn dzref [ref]
-  (org "[")
-  (ref (string "dz/" ref) ref)
-  (org "]"))
+(defn dzref [dzpath]
+  (def split-path (string/split "/" dzpath))
+  (def graph (string/join (array/slice split-path 0 (- (length split-path) 1))))
+  (def node (split-path (- (length split-path) 1)))
+  (org (string
+    "&lt;&lt;"
+    (refstr (string "dz/" graph) (string graph "/" node) node)
+    "&gt;&gt;")))
 
 (import tools/genhtml :as genhtml)
 (defn dagzet-page [filepath]

@@ -8,4 +8,5 @@ knowledge/software_foundations.dz
 knowledge/workflow_planning.dz
 knowledge/career.dz
 knowledge/web.dz
+knowledge/voxbox.dz
 knowledge/zzz.dz

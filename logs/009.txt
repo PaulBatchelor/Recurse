@@ -3,7 +3,7 @@ Prev: Added my task management system to my static site
 generator @!(ref "taskgroups")!@. Ported phasor algorithm to
 Rust [[https://github.com/PaulBatchelor/BoingBoingBoing/blob/main/src/phasor.rs]],
 paired with Dan learning how to use
-cpal [[https://github.com/RustAudio/cpal]], @!(dzref "rust/cpal")!@.
+cpal @!(dzref "rust/cpal")!@.
 ---
 Next: Audio Hang, Software Foundations (Lurk), Graphics,
 migrate DSP code to voxbox, begin work on glottis
@@ -35,8 +35,6 @@ it is quite complicated, it is the shortest distance
 away from my zone of familiarity, since this is where
 I'll be doing the audio DSP work. My first few weeks here
 will be spent building the core DSP kernel.
----
-Web development is quite foreign to me, but
 @09:13 Morning triage.
 
 @09:55 This is in a good enough place. Follow-up tasks have been created. #htmlize-tasks
@@ -70,3 +68,20 @@ This is hard for me because I don't actually know what the
 best practice is for organizing library code.
 ---
 Found this: [[https://rust-classes.com/chapter_4_3]]
+
+@15:30 Graphics Hang
+@16:30 Home
+@20:00 Rust code organization
+Basically, wanted to see how Rust projects tend to split
+up components in a project (rather than one lib.rs file).
+---
+Glanced at some docs for this @!(dzref "rust/organizing_code_project_structure")!@,
+and @!(dzref "rust/bringing_paths_into_scope_use")!@.
+---
+There doesn't seem to be any good way to have shared code in
+examples that isn't included in the library. Something
+like monowav @!(dzref "voxbox/monowav")!@ isn't something
+that really should be a publically available functionality,
+but it's really useful for rapid prototyping. It's also
+too small to make it a whole other project. For now, I'm
+just leaving it in there.

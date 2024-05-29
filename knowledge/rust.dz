@@ -32,3 +32,8 @@ hl https://rust-classes.com/chapter_4_3
 ln organizing code and project structure
 tg rust
 rm trying to set up VoxBox the "right way"
+
+nn bringing_paths_into_scope_use
+hl https://doc.rust-lang.org/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html
+ln Bringing Paths into Scope with the use Keyword
+tg rust

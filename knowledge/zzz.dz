@@ -2,3 +2,6 @@ zz external connections between graphs
 
 cx rust/libs/regex reading/how_not_to_learn_rust/top
 cr mentioned in reading
+
+cx misc/coqtail software_foundations/01_logical_foundations/top
+cr use coq with vim to do software foundations
