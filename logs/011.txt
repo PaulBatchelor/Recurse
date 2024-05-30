@@ -1,0 +1,14 @@
+@2024-05-30 Day 11.
+More heads down today. Probably not going into the hub.
+---
+Prev: C Creatures, Chats, WASM Group, More Rust Audio Pairing
+---
+Next: Implement Glottis algorithm, and hopefully some
+tract stuff?
+@09:00 Morning Triage
+
+@09:25 Didn't complete this yesterday. Completing today. #implement-glot
+
+@09:26 Thinking about tackling some of this port today #implement-tract
+I want to push myself to get some singing sounds in Rust by
+the end of the week.

@@ -5,3 +5,5 @@ tasks that I intend to work on in the next few days or so.
 
 @vscode-rust-setup set up rust workflow in vscode
 
+@implement-tract implement tract algorithm
+

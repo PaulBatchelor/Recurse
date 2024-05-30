@@ -2,8 +2,6 @@
 
 @implement-osc implement table-lookup oscillator in boing^3
 
-@implement-tract implement tract algorithm
-
 @implement-DRM implement DRM model for shaping tract
 
 @implement-rephasor implement rephasor

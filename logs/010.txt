@@ -1,9 +1,24 @@
 @2024-05-29 Day 10.
 Prev: Audio Hang, Software Foundations, Graphics Hang, Rust
-
+---
 Next: Port Glottis Algorithm to Rust, C Creatures, WASM Group
 
 @09:00 Morning Curation
 @09:43 Some initial work on glottis scaffolding #implement-glot
 @10:00 Pack and leave for RC
+@11:00 C Creatures
 @11:44 Paul writes a log for a demo in C creatures
+@12:00 Whiteboarding with JZ
+@13:00 Chat with JM
+@13:30 Lunch (Attempt 1)
+I attempted to quickly find food before my next appointment.
+There was not enough time, and ultimately gave up.
+Fortunately, there was a bagel in the kitchen.
+@14:00 Chat with EB
+@14:30 Lunch (Attempt 2)
+Ate in the food court.
+@15:15 WebAssembly Group
+@16:00 Rust pairing with Dan
+looked into mutexes. @!(dzref "rust/mutexes")!@
+@17:48 audio code works! using tinyaudio now
+see @(dzref "rust/tinyaudio")!@
