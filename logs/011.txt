@@ -146,3 +146,6 @@ to use notation like =x.exp()=, and I messed up the notation.
 By itself, the glottal source component sounds pretty
 unremarkable. It will need a tract filter before it starts
 to sound talky.
+
+@15:09 publish glot algorithm to website.
+

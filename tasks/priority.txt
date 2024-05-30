@@ -1,8 +1,6 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@implement-glot implement glot algorithm to voxbox
-
 @vscode-rust-setup set up rust workflow in vscode
 
 @implement-tract implement tract algorithm

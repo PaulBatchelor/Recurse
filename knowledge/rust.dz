@@ -58,6 +58,6 @@ tg rust
 nn wrapping_mul
 hl https://doc.rust-lang.org/std/primitive.u32.html#method.wrapping_mul
 ln wrapping_mul()
-rg rust
+tg rust
 co $ checked_mul
 cr performs wraparound, needed to prevent panic in my LCG

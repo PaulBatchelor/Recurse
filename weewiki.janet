@@ -77,7 +77,7 @@
 
 (defn dzref [dzpath]
   (def split-path (string/split "/" dzpath))
-  (def graph (string/join (array/slice split-path 0 (- (length split-path) 1))))
+  (def graph (string/join (array/slice split-path 0 (- (length split-path) 1)) "/"))
   (def node (split-path (- (length split-path) 1)))
   (org (string
     "&lt;&lt;"
