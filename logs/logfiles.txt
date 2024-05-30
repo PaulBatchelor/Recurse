@@ -7,3 +7,4 @@ logs/006.txt
 logs/007.txt
 logs/008.txt
 logs/009.txt
+logs/010.txt

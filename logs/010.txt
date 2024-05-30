@@ -6,3 +6,4 @@ Next: Port Glottis Algorithm to Rust, C Creatures, WASM Group
 @09:00 Morning Curation
 @09:43 Some initial work on glottis scaffolding #implement-glot
 @10:00 Pack and leave for RC
+@11:44 Paul writes a log for a demo in C creatures
