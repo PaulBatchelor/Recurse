@@ -5,3 +5,6 @@ cr mentioned in reading
 
 cx misc/coqtail software_foundations/01_logical_foundations/top
 cr use coq with vim to do software foundations
+
+cx rust/book/rust_by_example/traits rust/book/rust_book/traits
+cr related

@@ -1,0 +1,12 @@
+ns rust/books/rust_book
+gr the rust book.
+
+nn traits
+hl https://doc.rust-lang.org/book/ch10-02-traits.html
+ln Traits: Defining Shared Behavior
+tg rust traits
+
+nn aka_interfaces
+ln sometimes known as "interfaces" in other languages
+co $ traits
+cr aka

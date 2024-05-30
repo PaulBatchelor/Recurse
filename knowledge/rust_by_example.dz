@@ -4,3 +4,8 @@ gr The Rust By Example Book
 nn URL
 hl https://doc.rust-lang.org/rust-by-example/
 ln URL
+
+nn traits
+ln Rust traits
+hl https://doc.rust-lang.org/rust-by-example/trait.html
+tg rust traits

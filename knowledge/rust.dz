@@ -49,3 +49,15 @@ ln rust bindings to tinyaudio
 rm easier to work with than cpal
 co $ cpal
 cr easier to work with than cpal
+
+nn checked_mul
+hl https://doc.rust-lang.org/std/primitive.u32.html#method.checked_mul
+ln checked_mul()
+tg rust
+
+nn wrapping_mul
+hl https://doc.rust-lang.org/std/primitive.u32.html#method.wrapping_mul
+ln wrapping_mul()
+rg rust
+co $ checked_mul
+cr performs wraparound, needed to prevent panic in my LCG

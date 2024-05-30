@@ -12,3 +12,137 @@ tract stuff?
 @09:26 Thinking about tackling some of this port today #implement-tract
 I want to push myself to get some singing sounds in Rust by
 the end of the week.
+
+@09:32 Building glot initializer #implement-glot
+Struct initialization feels like a pain point to me.
+
+@09:55 HP/LP filter uses similar struct, how to do inheritance like things? #implement-glot
+Using this as a learning opportunity.
+---
+Okay, looks like I want to implement a filter as a trait.
+See: @!(dzref "rust/books/rust_by_example/traits")!@ and @!(dzref "rust/books/rust_book/traits")!@.
+
+@10:12 Trying to get traits to work is premature optimization and too much time, making a new task for it. #implement-glot #refactor-glotfilt-traits
+I want to set aside some time to actually do this right.
+It's not quite fitting in my head at the moment, and I need
+to keep moving forward. Ultimately, what we want is to be
+able to have a nice way to define two two types: highpass
+and lowpass, which are two types that use identical data
+structs but slightly different methods.
+---
+I imagine it'll be pretty trivial to return and refactor.
+So far, this has been my experience with Rust.
+
+@10:16 Back to Butterworth porting #implement-glot
+These are needed to filter the noise source in the glottal
+model.
+
+@10:18 Oh wait, I implemented the butterworth filter in boing^3 #implement-glot
+I'll just copy that over. duh.
+
+@10:23 Ugh, how do I use modules locally? need a refresher. #implement-glot
+Revisiting @!(dzref "rust/organizing_code_project_structure")!@.
+---
+Here is the winning code block for imports.
+===
+#+BEGIN_SRC rust
+use crate::butterworth::{ButterworthLowPass, ButterworthHighPass};
+#+END_SRC
+===
+---
+Also needed to make sure that lib.rs had butterworth
+imported too.
+
+@10:36 Back to filling out rest of the glot struct #implement-glot
+I will need to return to implement the highpass filter.
+
+@10:45 implement setup_waveform #implement-glot
+
+@11:02 implement hanning table #implement-glot
+
+@11:06 implement highpass #implement-glot
+
+@11:09 initializer done. now some of the smaller methods #implement-glot
+
+@11:15 Port tick function. #implement-glot
+
+@11:30 I think there's enough in place for some initial sound #implement-glot
+
+@11:37 Uh oh, it panicked. #implement-glot
+There was an attempt to multiply with overflow. It seems
+to be a problem with the RNG.
+---
+disabling noise source for now.
+
+@11:40 No sound. Debugging in my future. #implement-glot
+
+@11:55 troubleshooting: why isn't there any sound? #implement-glot
+===
+#+BEGIN_SRC sh
+rm -f glot_simple.wav
+cargo run --example glot_simple
+mnolth wavdraw glot_simple.wav glot_simple.pbm
+#+END_SRC
+===
+---
+didn't finish setup_waveform()
+
+@12:12 Lunch
+
+@13:11 Line by line checking with reference #implement-glot
+I will log as I go.
+---
+setup_waveform: found multiply that should have been add.
+otherwise, it looks okay.
+---
+settup_hanning_table looks good.
+--
+rest of initializer looks good.
+--
+tick(): I messed up most of the exp function translations.
+Rust has a weird notation for this. instead of =exp(x)=,
+rust does =x.exp()=.
+
+@13:26 It seems to work! Now back to the LCG overflow issue. #implment-glot
+Looking at checked multiplies, @!(dzref "rust/checked_mul")!@,
+but that doesn't seem quite right. I want to do wraparound.
+---
+It seems to be okay with this solution:
+
+===
+#+BEGIN_SRC rust
+fn rand(&mut self) -> u32 {
+    self.rng = (self.rng.wrapping_mul(1103515245) + 12345) % LCG_MAX;
+    return self.rng;
+}
+#+END_SRC
+===
+---
+=wrapping_mul= was what I needed to keep the panic away.
+See @!(dzref "rust/wrapping_mul")!@.
+
+@14:00 final thoughts #implement-glot
+I have finished porting the glottal source component
+of my singing synthesizer from C to Rust. It was a bit
+of a tedious effort, but luckily the setbacks were small.
+---
+The port can be found here: [[https://github.com/PaulBatchelor/voxbox/blob/main/src/glot.rs]].
+---
+Sample code writing to WAV file: [[https://github.com/PaulBatchelor/voxbox/blob/main/examples/glot_simple.rs]].
+---
+This implements a glottal source model based on the one
+described by Hui-Ling Lu in their dissertation. It includes
+a version of the LF glottal flow derivative waveform model
+(based off an implementation by Neil Thapen of Pink Trombone),
+as well as a synchronous pulsed noise component for
+breathiness and aspiration.
+---
+On the first pass manually translating C to Rust, I ran
+into some issues. Most of the issues ended up being related
+to the way Rust handles math functions. Instead of doing
+something like =exp(x)= like you'd expect, Rust tends
+to use notation like =x.exp()=, and I messed up the notation.
+---
+By itself, the glottal source component sounds pretty
+unremarkable. It will need a tract filter before it starts
+to sound talky.
