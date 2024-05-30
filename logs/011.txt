@@ -149,3 +149,23 @@ to sound talky.
 
 @15:09 publish glot algorithm to website.
 
+@15:27 tract scaffolding #implement-tract
+
+@15:38 Using tubular. Already realizing some porting issues. #implement-tract
+Tubular @!(dzref "voxbox/tubular")!@ is the port I'll be
+basing this off of, and already I can see I did a lot
+of pointer stuff to manage buffers. I'll probably need
+to peel things back a little bit and remember what I 
+was doing before going forward.
+
+@15:56 Refamiliarize myself with Tubular. #implement-tract
+
+@16:00 Actually got unstuck, getting initial struct initialized #implement-tract
+
+@16:20 Initial struct made? setting up other bits in init #implement-tract
+
+@16:29 tick scaffolding #implement-tract
+@16:37 generate_reflection_coefficients #implement-tract
+@16:46 compute_areas_from_diams #implement-tract
+@16:49 compute_scattering_junctions #implement-tract
+@17:00 closing up for the day
