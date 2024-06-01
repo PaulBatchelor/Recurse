@@ -10,3 +10,7 @@ In addition to the bare minimum tract filter processing the glottal source, I've
 0: [[https://github.com/PaulBatchelor/voxbox/blob/main/src/tract.rs]]
 ---
 1: [[https://github.com/PaulBatchelor/voxbox/blob/main/examples/tract_simple.rs
+
+@10:28 Some looks at react quickstart #react-quickstart
+@10:45 Follow-up: tic-tac-toe tutorial #react-quickstart #react-tic-tac-toe
+Link [[https://react.dev/learn/tutorial-tic-tac-toe]]

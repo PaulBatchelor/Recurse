@@ -28,3 +28,4 @@ https://www.bunniestudios.com/blog/2022/rust-a-critical-retrospective/
 
 @logical-foundations-preface read "preface" from logical foundations
 @logical-foundations-basics read "basics" from logical foundations
+

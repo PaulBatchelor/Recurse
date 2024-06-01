@@ -62,3 +62,6 @@ log event parser.
 @implement-glot implement glot algorithm to voxbox
 
 @implement-tract implement tract algorithm
+
+@react-quickstart read react tutorial
+[[https://react.dev/learn]]

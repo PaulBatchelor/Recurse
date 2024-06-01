@@ -5,3 +5,22 @@ hl https://wiredjs.com/
 ln A set of common UI elements with a 
 ln hand-drawn, sketchy look.
 tg js webdev UI
+
+nn export_js
+ln export js keyword (MDN)
+hl https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
+co $ react_quickstart
+cr referenced in the quickstart guide wanted to better understand
+cr what was meant by "export default".
+
+
+ns webdev/react
+nn quickstart
+ln react quickstart
+hl https://react.dev/learn
+tg react
+
+nn reference
+hl https://react.dev/reference/react
+ln react reference
+tg react
