@@ -1,0 +1,12 @@
+@2024-06-01 Day 13. Moving day.
+@09:04 Tract example tweaks. #implement-tract
+@09:33 Some write-ups for social media on tract
+Here is what I wrote:
+---
+I have ported my tract filter to rust now [0]. I couldn't resist garnishing my "simple" example a little bit [1] to make it more musical and sing-y.
+---
+In addition to the bare minimum tract filter processing the glottal source, I've also added some controls over vibrato, amplitude, and tract shape (for vowel morphing). I tuned the tract shapes by ear using the distinct region model.
+---
+0: [[https://github.com/PaulBatchelor/voxbox/blob/main/src/tract.rs]]
+---
+1: [[https://github.com/PaulBatchelor/voxbox/blob/main/examples/tract_simple.rs
