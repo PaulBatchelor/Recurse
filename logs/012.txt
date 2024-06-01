@@ -1,0 +1,11 @@
+@2024-05-31 Day 12.
+@09:09 Morning triaging
+@09:30 Packing workstation up for new place (approximate time)
+@10:30 Leave for Recurse (approximate time)
+@11:30 Arrive at Recurse (approximate time)
+@12:30 Lunch with SW
+@15:00 Pick up keys to apartment
+@15:45 back to hub. attempt to do work?
+@14:15 head home early. forgot cables.
+@17:27 return to tract #implement-tract
+@19:15 working demo! #implement-tract

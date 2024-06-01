@@ -77,6 +77,7 @@ disabling noise source for now.
 @11:40 No sound. Debugging in my future. #implement-glot
 
 @11:55 troubleshooting: why isn't there any sound? #implement-glot
+Here is the debug script:
 ===
 #+BEGIN_SRC sh
 rm -f glot_simple.wav
@@ -85,7 +86,7 @@ mnolth wavdraw glot_simple.wav glot_simple.pbm
 #+END_SRC
 ===
 ---
-didn't finish setup_waveform()
+ah. I didn't finish setup_waveform()
 
 @12:12 Lunch
 
@@ -155,7 +156,7 @@ to sound talky.
 Tubular @!(dzref "voxbox/tubular")!@ is the port I'll be
 basing this off of, and already I can see I did a lot
 of pointer stuff to manage buffers. I'll probably need
-to peel things back a little bit and remember what I 
+to peel things back a little bit and remember what I
 was doing before going forward.
 
 @15:56 Refamiliarize myself with Tubular. #implement-tract

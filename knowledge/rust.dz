@@ -12,7 +12,7 @@ ln #[allow(dead_code)]
 tg rust
 
 nn cargo_watch
-ln Cargo Watch: Watches over your Cargo project’s source 
+ln Cargo Watch: Watches over your Cargo project’s source
 hl https://crates.io/crates/cargo-watch
 tg rust crates
 rm Useful way to auto-recompile rust project on any changes
@@ -61,3 +61,8 @@ ln wrapping_mul()
 tg rust
 co $ checked_mul
 cr performs wraparound, needed to prevent panic in my LCG
+
+nn debug_macro
+ln debug macro (dbg!)
+hl https://doc.rust-lang.org/std/macro.dbg.html
+tg rust macro debug
