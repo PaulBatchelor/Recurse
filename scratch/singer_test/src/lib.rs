@@ -14,6 +14,7 @@ pub struct SingerSynth {
     amp: Phasor,
     dcblk: DCBlocker,
     pitch: f32,
+    pitch_smoother: Smoother,
 }
 
 // a simple sine wave generator
@@ -34,7 +35,7 @@ impl SingerSynth {
         let mut ss = SingerSynth {
             counter: 0,
             glot: Glot::new(sr as usize),
-            tract: Tract::new(sr as usize, 13.0, 1),
+            tract: Tract::new(sr as usize, 13.0, 2),
             shape1:  [
                 2.0, 3.0, 9.0, 2.0,
                 1.0, 1.0, 1.0, 1.0,
@@ -49,10 +50,13 @@ impl SingerSynth {
             amp: Phasor::new(sr as usize, 0.0),
             dcblk: DCBlocker::new(sr as usize),
             pitch: 65.0,
+            pitch_smoother: Smoother::new(sr as usize),
         };
         ss.glot.set_shape(0.4);
         ss.glot.set_aspiration(0.1);
         ss.glot.set_noise_floor(0.01);
+        ss.pitch_smoother.set_smooth(0.1);
+        ss.pitch_smoother.snap_to_value(ss.pitch);
         ss
     }
 
@@ -69,7 +73,9 @@ impl SingerSynth {
                 shaper * self.shape1[i] +
                 (1.0 - shaper)*self.shape2[i];
         }
-        self.glot.set_freq(mtof(self.pitch + 0.5*vib));
+        let pitch = self.pitch_smoother.tick(self.pitch);
+        let freq = mtof(pitch + 0.5*vib);
+        self.glot.set_freq(freq);
         self.tract.drm(&self.shape1);
         let g = self.glot.tick();
         let tr = self.tract.tick(g);
@@ -120,5 +126,20 @@ pub extern "C" fn set_pitch(dsp: &mut SingerSynth, pitch: f32) {
 
 #[no_mangle]
 pub extern "C" fn set_region(dsp: &mut SingerSynth, regnum: u32, val: f32) {
-    dsp.shape[regnum as usize - 1] = val;
+    dsp.shape1[regnum as usize - 1] = val;
+}
+
+#[no_mangle]
+pub extern "C" fn set_aspiration(dsp: &mut SingerSynth, val: f32) {
+    dsp.glot.set_aspiration(val);
+}
+
+#[no_mangle]
+pub extern "C" fn set_noise_floor(dsp: &mut SingerSynth, val: f32) {
+    dsp.glot.set_noise_floor(val);
+}
+
+#[no_mangle]
+pub extern "C" fn set_shape(dsp: &mut SingerSynth, val: f32) {
+    dsp.glot.set_shape(val);
 }

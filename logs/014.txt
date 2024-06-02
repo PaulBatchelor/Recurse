@@ -1,0 +1,24 @@
+@2024-06-02 Day 14.
+@15:20 continue setting up DRM sliders #initial-singing-web
+@16:00 Add glottal controls #initial-singing-web
+@16:35 Is aspiration actually working?
+It is very faint.
+---
+Ah. Lag was at 0.7 instead of 0.07.
+@16:58 I cannot seem to set the aspiration value from JS #initial-singing-web
+
+@17:11 Okay, why is the pitch slider still working even after I disable it? #initial-singing-web
+Ah, chrome was still caching stuff.
+
+@17:20 Adding noise floor #initial-singing-web
+
+@17:28 Add glottal shape #initial-singing-web
+
+@17:39 let's add some smoothing to pitch #initial-singing-web
+
+@18:00 Improve start/stop experience #initial-singing-web
+
+@18:07 Moves to upload demo to website #initial-singing-web
+
+@18:19 it works! #initial-singing-web
+URL: [[https://pbat.ch/recurse/demos/singer_test/]].
