@@ -1,4 +1,24 @@
 const audioContext = new AudioContext();
+let SingerNode = {}; 
+
+class SingerWorkletNode extends AudioWorkletNode {
+    constructor(context, name, options) {
+        super(context, name, options);
+        //this.port.onmessage = (event) => this.onmessage(event.data);
+    }
+
+    set_pitch(pitch) {
+        this.port.postMessage({type: "pitch", data: pitch});
+    }
+
+    set_region(region, value) {
+        this.port.postMessage({
+            type: "regset",
+            region: region,
+            value: value,
+        });
+    }
+}
 
 const startAudio = async (context) => {
   try {
@@ -14,13 +34,34 @@ const startAudio = async (context) => {
         wasmBytes: wasmBuffer
   };
   const Singer = new
-        AudioWorkletNode(context, 'singer', {
+        SingerWorkletNode(context, 'singer', {
             processorOptions: options
         });
 
   Singer.connect(context.destination);
-
+  SingerNode = Singer;
 };
+
+const pitch_slider = document.getElementById('pitch');
+const pitch_value = document.getElementById('pitch-value');
+pitch_value.textContent = pitch_slider.value;
+
+pitch_slider.addEventListener("input", (event) => {
+    pitch_value.textContent = event.target.value;
+    SingerNode.set_pitch(event.target.value);
+});
+
+// TODO: refactor
+
+const rnum = 1
+const region_slider = document.getElementById('region1');
+const region_value = document.getElementById('region1-value');
+region_value.textContent = pitch_slider.value;
+
+region_slider.addEventListener("input", (event) => {
+    pitch_value.textContent = event.target.value;
+    SingerNode.set_region(1, event.target.value);
+});
 
 window.addEventListener('load', async () => {
   const buttonStart = document.getElementById('button-start');
@@ -49,4 +90,3 @@ window.addEventListener('load', async () => {
       buttonStop.disabled = false;
   }, false);
 });
-

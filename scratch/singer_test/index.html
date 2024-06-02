@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>Rust WASM Audioworklet Demo</title>
-  </head>
-  <body>
-    <script src="index.js"></script>
+    <head>
+        <meta charset="utf-8" />
+        <title>Rust WASM Audioworklet Demo</title>
+    </head>
+    <body>
+        <p>
+        <button id="button-begin" disabled>BEGIN</button>
+        <button id="button-start" disabled>START</button>
+        <button id="button-stop" disabled>STOP</button>
+        </p>
 
-    <div class="demo-box">
-      <button id="button-begin" disabled>BEGIN</button>
-      <button id="button-start" disabled>START</button>
-      <button id="button-stop" disabled>STOP</button>
-    </div>
-  </body>
+        <p>Pitch: <input type="range" min="24" max="82" id="pitch" value="65">
+        <output id="pitch-value"></output></p>
+
+        <p>R1: <input type="range" min="0" max="1" id="region1" value="0.5" step = 0.001>
+        <output id="region1-value"></output></p>
+
+        <script src="index.js"></script>
+    </body>
 </html>

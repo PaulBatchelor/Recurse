@@ -3,7 +3,6 @@ use std::f32::consts::PI;
 
 #[repr(C)]
 pub struct SingerSynth {
-    zero: f32,
     counter: usize,
     glot: Glot,
     tract: Tract,
@@ -14,6 +13,7 @@ pub struct SingerSynth {
     shaper: Phasor,
     amp: Phasor,
     dcblk: DCBlocker,
+    pitch: f32,
 }
 
 // a simple sine wave generator
@@ -32,7 +32,6 @@ pub fn mtof(nn: f32) -> f32 {
 impl SingerSynth {
     pub fn new(sr: u32) -> SingerSynth {
         let mut ss = SingerSynth {
-            zero: 0.0,
             counter: 0,
             glot: Glot::new(sr as usize),
             tract: Tract::new(sr as usize, 13.0, 1),
@@ -49,9 +48,10 @@ impl SingerSynth {
             shaper: Phasor::new(sr as usize, 0.0),
             amp: Phasor::new(sr as usize, 0.0),
             dcblk: DCBlocker::new(sr as usize),
+            pitch: 65.0,
         };
         ss.glot.set_shape(0.4);
-        ss.glot.set_aspiration(0.3);
+        ss.glot.set_aspiration(0.1);
         ss.glot.set_noise_floor(0.01);
         ss
     }
@@ -69,8 +69,8 @@ impl SingerSynth {
                 shaper * self.shape1[i] +
                 (1.0 - shaper)*self.shape2[i];
         }
-        self.glot.set_freq(mtof(69.0 + 0.5*vib));
-        self.tract.drm(&self.shape);
+        self.glot.set_freq(mtof(self.pitch + 0.5*vib));
+        self.tract.drm(&self.shape1);
         let g = self.glot.tick();
         let tr = self.tract.tick(g);
         let tr = self.dcblk.tick(tr * 0.8);
@@ -86,6 +86,10 @@ impl SingerSynth {
             outbuf[n] = self.tick();
         }
 
+    }
+
+    pub fn set_pitch(&mut self, pitch: f32) {
+        self.pitch = pitch;
     }
 }
 
@@ -107,4 +111,14 @@ pub extern "C" fn alloc(size: usize) -> *mut f32 {
 #[no_mangle]
 pub extern "C" fn process(dsp: &mut SingerSynth, outbuf: *mut f32, sz: usize) {
     dsp.process(outbuf, sz);
+}
+
+#[no_mangle]
+pub extern "C" fn set_pitch(dsp: &mut SingerSynth, pitch: f32) {
+    dsp.set_pitch(pitch);
+}
+
+#[no_mangle]
+pub extern "C" fn set_region(dsp: &mut SingerSynth, regnum: u32, val: f32) {
+    dsp.shape[regnum as usize - 1] = val;
 }

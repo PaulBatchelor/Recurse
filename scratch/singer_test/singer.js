@@ -9,6 +9,8 @@ class SingerSynth extends AudioWorkletProcessor {
         this.outbuf = new Float32Array(this.wasm.exports.memory.buffer,
                 this.outptr,
                 128);
+
+        this.port.onmessage = (event) => this.onmessage(event.data);
     }
 
     process(inputs, outputs, parameters) {
@@ -23,6 +25,15 @@ class SingerSynth extends AudioWorkletProcessor {
 
         return true;
     }
+
+    onmessage(event) {
+        if (event.type === "pitch") {
+            this.wasm.exports.set_pitch(this.dsp, event.data);
+        } else if (event.type === "regset") {
+            this.wasm.exports.set_region(this.dsp, event.region, event.value);
+        }
+    }
+
 }
 
 registerProcessor('singer', SingerSynth);

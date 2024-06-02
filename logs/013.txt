@@ -14,3 +14,8 @@ In addition to the bare minimum tract filter processing the glottal source, I've
 @10:28 Some looks at react quickstart #react-quickstart
 @10:45 Follow-up: tic-tac-toe tutorial #react-quickstart #react-tic-tac-toe
 Link [[https://react.dev/learn/tutorial-tic-tac-toe]]
+@16:45 Get some singing stuff working in the browser #initial-singing-web
+@18:00 Dinner
+@18:57 Is a hslider an HTML element? #initial-singing-web
+@19:20 How to set up pitch? #initial-singing-web #initial-singing-web
+@19:36 Set up DRM sliders #initial-singing-web

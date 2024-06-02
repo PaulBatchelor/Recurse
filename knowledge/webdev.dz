@@ -13,6 +13,10 @@ co $ react_quickstart
 cr referenced in the quickstart guide wanted to better understand
 cr what was meant by "export default".
 
+nn slider
+hl https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range
+ln slider: range input
+tg mdn html
 
 ns webdev/react
 nn quickstart

@@ -2,3 +2,5 @@
 tasks that I intend to work on in the next few days or so.
 
 @vscode-rust-setup set up rust workflow in vscode
+
+@initial-singing-web get initial singing demo working in browser
