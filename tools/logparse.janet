@@ -104,9 +104,21 @@
   (def days (get-available-days db))
   (each day days (render-day-entry db (day "day"))))
 
+(defn get-task-row [db tag]
+  (sqlite3/eval
+    db
+    (string
+      "SELECT title, description FROM tasks WHERE "
+      "name IS '" tag "'")))
 
 (defn render-logs-from-tag [db tag]
-  (org (string "#+TITLE " tag "\n"))
+  (def task-row (get-task-row db tag))
+  (def task-desc ((task-row 0) "description"))
+  (def task-title ((task-row 0) "title"))
+  (org (string "#+TITLE " task-title "\n"))
+  (if (> (length task-desc) 0)
+    (org (string task-desc "\n\n")))
+  (org (string "task id: " tag "\n\n"))
   (def logs (get-logs-by-tag db tag))
   (each log logs (print-entry log true)))
 
@@ -119,10 +131,13 @@
       "ORDER by name;"
       )))
 
+(defn generate-task-page-name [task]
+  (string "tasks/" (string/replace-all "-" "_" task)))
+
 (defn print-task [task]
   (print "<li>")
   (ref
-    (string "tasks/" (string/replace-all "-" "_" (task "name")))
+    (generate-task-page-name (task "name"))
     (task "name"))
   (org (string ": " (task "title")))
   (print "</li>"))
@@ -133,7 +148,6 @@
   (print "<ul>")
   (each task tasks
     (print-task task)))
-
 
 (defn get-taskgroups [db]
   (sqlite3/eval db
@@ -151,3 +165,28 @@
     (ref (string "taskgroups/" (tg "task_group")) (tg "task_group"))
     (print "</li>"))
   (print "</ul>"))
+
+(defn get-tasks [db]
+  (sqlite3/eval db
+    (string
+      "SELECT name, title, task_group FROM tasks "
+      "WHERE task_group is NOT 'done' "
+      "ORDER by name;"
+      )))
+
+(defn render-tasks-directory [db] 
+  (def tasks (get-tasks db))
+  (org "#+TITLE Tasks\n")
+  (each task tasks
+    (org (string
+           (refstr
+             (generate-task-page-name (task "name"))
+             (task "name"))
+           ": "
+           (task "title") " "
+           "("
+           (refstr
+             (string "taskgroups/" (task "task_group"))
+             (task "task_group"))
+           ")"
+           "\n\n"))))

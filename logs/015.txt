@@ -1,0 +1,15 @@
+@2024-06-03 Day 15.
+This weekend, I moved into the apartment that
+I will be staying in for the remainder of my batch. Will
+probably have earlier hours now.
+---
+prev: Made my first interactive singing synthesis demo
+for the web! See [[https://pbat.ch/recurse/demos/singer_test]].
+---
+next: velum, tasks page, C Creatures, more project scoping
+for voxbox.
+@08:00 Morning Triage.
+@08:18 creating some voxbox tasks
+@08:24 tasks directory work #create-tasks-directory
+@08:47 adding task descriptions #html-task-descriptions
+@08:59 Write-up for zulip checkin.

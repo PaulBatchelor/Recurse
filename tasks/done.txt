@@ -65,3 +65,5 @@ log event parser.
 
 @react-quickstart read react tutorial
 [[https://react.dev/learn]]
+
+@initial-singing-web get initial singing demo working in browser

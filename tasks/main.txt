@@ -13,8 +13,9 @@ should be pretty trivial to get at and store.
 
 @html-task-descriptions add descriptions to grouptask and task
 
-@create-tasks-directory create directory page for tasks
-
 @resume-setup re-examine resume #career
 https://www.recurse.com/jobs/advice#resumes
 https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb
+
+@vscode-rust-setup set up rust workflow in vscode
+

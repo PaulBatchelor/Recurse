@@ -1,6 +1,6 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@vscode-rust-setup set up rust workflow in vscode
+@implement-velum implement velum support in voxbox
 
-@initial-singing-web get initial singing demo working in browser
+@create-tasks-directory create directory page for tasks
