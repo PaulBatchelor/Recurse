@@ -2,16 +2,13 @@ ns webdev
 
 nn wiredjs
 hl https://wiredjs.com/
-ln A set of common UI elements with a 
+ln A set of common UI elements with a
 ln hand-drawn, sketchy look.
 tg js webdev UI
 
 nn export_js
 ln export js keyword (MDN)
 hl https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export
-co $ react_quickstart
-cr referenced in the quickstart guide wanted to better understand
-cr what was meant by "export default".
 
 nn slider
 hl https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range
@@ -25,6 +22,7 @@ tg audioworklet safari
 rm maybe this can fix issues on iphone?
 
 ns webdev/react
+
 nn quickstart
 ln react quickstart
 hl https://react.dev/learn

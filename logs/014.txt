@@ -22,3 +22,10 @@ Ah, chrome was still caching stuff.
 
 @18:19 it works! #initial-singing-web
 URL: [[https://pbat.ch/recurse/demos/singer_test/]].
+
+@21:17 Potential safari mobile fix attempt #initial-singing-web
+My friend says it doesn't work on iphone safari.
+I found a potential fix at @!(dzref "webdev/audioworklet_safari")!@.
+
+@21:46 friend tells me it ended up working anyways? #initial-singing-web
+I'm reverting changes back to what I did before

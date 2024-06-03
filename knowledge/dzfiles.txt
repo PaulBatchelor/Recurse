@@ -9,6 +9,7 @@ knowledge/software_foundations.dz
 knowledge/workflow_planning.dz
 knowledge/career.dz
 knowledge/web.dz
+knowledge/webdev.dz
 knowledge/voxbox.dz
 knowledge/recurse.dz
 knowledge/zzz.dz

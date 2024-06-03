@@ -8,3 +8,7 @@ cr use coq with vim to do software foundations
 
 cx rust/books/rust_by_example/traits rust/books/rust_book/traits
 cr related
+
+cx webdev/export_js webdev/react/quickstart
+cr referenced in the quickstart guide wanted to better understand
+cr what was meant by "export default".
