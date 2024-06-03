@@ -18,6 +18,12 @@ hl https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range
 ln slider: range input
 tg mdn html
 
+nn audioworklet_safari
+hl https://stackoverflow.com/questions/73164697/implementing-an-audioworklet-in-safari
+ln implementing audioworklet in safari
+tg audioworklet safari
+rm maybe this can fix issues on iphone?
+
 ns webdev/react
 nn quickstart
 ln react quickstart
