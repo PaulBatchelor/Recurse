@@ -1,7 +1,7 @@
 @2024-06-02 Day 14.
 @15:20 continue setting up DRM sliders #initial-singing-web
 @16:00 Add glottal controls #initial-singing-web
-@16:35 Is aspiration actually working?
+@16:35 Is aspiration actually working? #initial-singing-web
 It is very faint.
 ---
 Ah. Lag was at 0.7 instead of 0.07.
