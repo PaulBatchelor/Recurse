@@ -15,12 +15,20 @@ game jam. I don't think I can afford to do much more.
 @10:27 Where did I leave off with velum #implement-velum
 
 @10:34 Nap
+
 @11:05 Try to add some scaffolding #implement-velum
+
 @11:09 Actually realizing that "nose" is a better name #implement-velum
 "Velum" refers to the membrane separating the oral
 cavity (mouth) from the nasal cavity (nose). The nose is
 another waveguide. The velum is just a value that controls
 the opening of this waveguide.
+
 @11:29 Some initial scaffolding and comments. #implement-velum
 I think I understand enough to start coding some things up.
+
 @11:30 Getting ready to go to Hub
+@12:00 Pairing and level tweaks, game testing  #game-jam
+@13:00 Lunch
+@14:02 Back at home, coding up some nose/velum stuff. #implement-velum
+@14:34 Back to Hub
