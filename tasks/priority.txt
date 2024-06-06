@@ -3,4 +3,3 @@ tasks that I intend to work on in the next few days or so.
 
 @implement-velum implement velum support in voxbox
 
-@create-tasks-directory create directory page for tasks

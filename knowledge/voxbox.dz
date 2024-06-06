@@ -15,3 +15,9 @@ rm makes it possible to change the voice timbre (bass, tenor, alto, sop, etc)
 rm while preserving formants. It does not have velum support,
 rm which is needed for nasal qualities.
 tg cprog dsp
+
+nn tract
+ln tract: vocal tract model adapted from pink trombone
+hl https://pbat.ch/sndkit/tract/
+co tubular $
+cr adapted from tract. tubular does not have velum, but tract does

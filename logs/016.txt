@@ -1,0 +1,41 @@
+@2024-06-04 Day 16. Game Jam Day.
+Probably not going to have too much logging here.
+Today is going to mostly be about getting the mechanics
+and level designer interface working. Tomorrow will
+hopefully be more about refinement and design.
+@07:55 Scoping out gamejam stuff #game-jam
+I inked up some of my thoughts, set up priorities, attempts
+to focus what the game components will be.
+@09:00 nap
+@09:32 morning triage
+@09:32 let's revisit the code #rework-rectangles #game-jam
+@09:47 it would be nice to get rid of tubePos #rework-rectangles #game-jam
+
+@09:51 it's going to take to much time to recode this properly I think #rework-rectangles #game-jam
+I guess I'll have to live with it?
+
+@09:53 hmm, maybe I can start by trying to introduce global x offset #rework-rectangles #game-jam
+
+@10:00 trying to make tubes immutable data #rework-rectangles #game-jam
+Instead of updating the xoffset every time, create a new
+rectangle with global X offset applied.
+
+@10:09 attempt to establish more low-level rectangle format in JSON #rework-rectangles #game-jam
+I don't necessarily want double rectangles every time any more.
+---
+I have the schema, but more refactoring is needed. I want to
+load the raw rectangle and skip the tube positions (which
+then copy over to the rectangles).
+
+@10:17 might need to eliminate tubePos at this point? #rework-rectangles #game-jam
+The JSON file is loading rectangles directly, I don't think
+tubePos is required anymore?
+
+@10:57 JSON rectangle format works! now to generate in lua #rework-rectangles #game-jam
+@11:00 Game Jam #game-jam
+@12:00 Audio Hang
+@13:00 Quick Meet #game-jam
+@13:30 Lunch
+@14:00 Game Jam #game-jam
+@15:20 Brainstorm: what kind of interaction should blocks have? #game-jam
+@19:11 Brainstorm: some level design #game-jam

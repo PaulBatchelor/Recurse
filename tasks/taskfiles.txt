@@ -6,3 +6,4 @@ tasks/reading.txt
 tasks/rust.txt
 tasks/done.txt
 tasks/voxbox.txt
+tasks/gamejam.txt

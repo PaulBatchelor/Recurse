@@ -7,3 +7,17 @@ which are referred to as gesture vertices. A gesture vertice
 has 3 components: a scalar value, a rate multiplier that
 determines duration, and a behavior parameter that determines
 how to interpolate to the next value.
+
+@create-diams-interface create separate diameters interface
+In other words, don't include the diameters array/vector
+in the core tract struct since it is only partially used.
+
+@demo-preset-export add preset export for initial demo
+
+@demo-crossfade-shapes add shape crossfader support
+It's very helpful to be able to program a base shape (such as
+an "ah"), then crossfade to another
+
+@demo-react-UI port demo to react UI
+It's important to me that I do this because I want to
+become familiar with some frontend technologies.

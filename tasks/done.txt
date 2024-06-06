@@ -67,3 +67,7 @@ log event parser.
 [[https://react.dev/learn]]
 
 @initial-singing-web get initial singing demo working in browser
+
+@create-tasks-directory create directory page for tasks
+
+@game-jam the game jam.
