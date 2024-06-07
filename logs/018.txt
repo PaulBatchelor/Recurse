@@ -40,4 +40,6 @@ got completely soaked.
 Things start to get trickier here beacuse I'm trying
 to separate tract and nose code, but this needs stuff
 from tract.
-@15:28 Attempt to go back to hub. #implement-velum
+@15:28 Attempt to go back to hub.
+@16:00 Presentations.
+@18:00 Back home.
