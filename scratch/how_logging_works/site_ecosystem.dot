@@ -16,6 +16,7 @@ digraph G {
     sndkit [label = "sndkit"];
     worgle [label = "Worgle"];
     loom [label = "Loom"];
+    brain [label = "brain"];
     static_site_generators [label = "Static Site Generators"];
 
     personal_wikis -> weewiki;
@@ -24,7 +25,7 @@ digraph G {
     worgle -> sndkit;
     sndkit -> personal_wikis;
     gestlings -> personal_wikis;
-    sporthlings -> personal_wikis;
+    sporthlings -> static_site_generators;
     git -> HTML;
     recurse_wiki -> personal_wikis;
     static_site_generators -> git;
@@ -35,6 +36,10 @@ digraph G {
     zetdo -> zet;
 
     dagzet -> weewiki;
+    dagzet -> brain;
+    dagzet -> recurse_wiki;
+    zetdo -> brain;
+    brain -> personal_wikis;
 
     recurse -> recurse_wiki;
 

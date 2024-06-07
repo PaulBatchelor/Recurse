@@ -54,3 +54,5 @@ The =@!desc= tag adds a description for the task group.
 =@how-logging-works= creates a new task with the unique
 task ID "how-logging-works", followed by a title.
 The other lines can be used for an optional description.
+* Go back
+@!(ref "how_logging_works" "Back")!@.
