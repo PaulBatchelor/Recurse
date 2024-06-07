@@ -23,3 +23,7 @@ Gotta get images working now...
 @09:40 Site Ecosystem #logging-overview
 
 @09:48 Logging format #logging-overview
+
+@10:09 make sure things upload okay #logging-overview
+images are new, just want to make sure that code works
+okay.
