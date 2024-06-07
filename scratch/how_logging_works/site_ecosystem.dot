@@ -1,0 +1,51 @@
+digraph G {
+    shell_scripts [label="A miserable pile of shell scripts"];
+    weewiki [label="WeeWiki: personal wiki static site generator"];
+    recurse [label="Recurse Center Logging Pipeline"];
+    zetdo [label="Zetdo: TODO list"];
+    descript [label="Descript markup format"];
+    zet [label="Zet: Zettelkasten"];
+    task_groups [label="Task Groups"];
+    tasks [label = "Tasks"];
+    logs [label = "Logs"];
+    dagzet [label = "Dagzet: Knowledge Graph"];
+    sporthlings [label = "Sporthlings"];
+    gestlings [label = "Gestlings"];
+    personal_wikis [label = "Personal Wikis"];
+    recurse_wiki [label = "Recurse Center Wiki"];
+    sndkit [label = "sndkit"];
+    worgle [label = "Worgle"];
+    loom [label = "Loom"];
+    static_site_generators [label = "Static Site Generators"];
+
+    personal_wikis -> weewiki;
+    loom -> personal_wikis;
+    worgle -> loom;
+    worgle -> sndkit;
+    sndkit -> personal_wikis;
+    gestlings -> personal_wikis;
+    sporthlings -> personal_wikis;
+    git -> HTML;
+    recurse_wiki -> personal_wikis;
+    static_site_generators -> git;
+    weewiki -> static_site_generators;
+    shell_scripts -> static_site_generators;
+
+    zet -> weewiki;
+    zetdo -> zet;
+
+    dagzet -> weewiki;
+
+    recurse -> recurse_wiki;
+
+    descript -> recurse;
+
+    logs -> descript;
+
+    task_groups -> descript;
+
+    tasks -> task_groups;
+
+    logs -> tasks;
+
+}

@@ -1,0 +1,7 @@
+@2024-06-07 Day 17.
+Prev: game jam. some velum stuff.
+---
+Next: logging presentation for tool-time, velum.
+
+@07:25 hand-draw site ecosystem, brainstorm presentation format #logging-presentation
+@08:25 get dot graphs working #logging-presentation

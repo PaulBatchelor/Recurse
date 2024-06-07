@@ -1,0 +1,27 @@
+digraph G {
+    weewiki [label="WeeWiki: personal wiki static site generator"];
+    recurse [label="Recurse Center Logging Pipeline"];
+    descript [label="Descript markup format"];
+    task_groups [label="Task Groups"];
+    tasks [label = "Tasks"];
+    logs [label = "Logs"];
+    recurse_wiki [label = "Recurse Center Wiki"];
+    dagzet [label = "Dagzet Knowledge Graph"];
+
+    recurse_wiki -> weewiki;
+
+    dagzet -> recurse;
+
+    recurse -> recurse_wiki;
+
+    descript -> recurse;
+
+    logs -> descript;
+
+    task_groups -> descript;
+
+    tasks -> task_groups;
+
+    logs -> tasks;
+
+}

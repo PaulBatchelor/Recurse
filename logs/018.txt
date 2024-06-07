@@ -32,3 +32,12 @@ I think I understand enough to start coding some things up.
 @13:00 Lunch
 @14:02 Back at home, coding up some nose/velum stuff. #implement-velum
 @14:34 Back to Hub
+@15:00 LOL nvm the rain is too heavy
+I was out there for 2 minutes, got to half a block, and
+got completely soaked.
+@15:11 Back to working on this at home. #implement-velum
+@15:21 I forgot about reflections #implement-velum
+Things start to get trickier here beacuse I'm trying
+to separate tract and nose code, but this needs stuff
+from tract.
+@15:28 Attempt to go back to hub. #implement-velum

@@ -1,0 +1,6 @@
+digraph G {
+    text [label = "Markup (Text Files)"];
+    intermediate [label = "Intermediate Representation (SQLite)"];
+    generator [label = "HTML Generation (WeeWiki)"];
+    text -> intermediate -> generator;
+}
