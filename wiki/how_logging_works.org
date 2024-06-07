@@ -1,0 +1,16 @@
+#+TITLE: How Logging Works
+How logging works around here.
+
+Originally made for a presentation on Friday, June 7th, 2024.
+
+1. @!(ref "logging_overview")!@: An overview of logs and tasks,
+and how they appear on this website.
+
+2. @!(ref "logging_pipeline")!@: An overview of the underlying
+pipeline used to generate logs and tasks.
+
+3. @!(ref "site_ecosystem")!@: How the Recurse Wiki fits in
+with the larger ecosystem.
+
+4. @!(ref "logging_format")!@: What does a log actually look like?
+What does a task look like? How does it connect to a task?

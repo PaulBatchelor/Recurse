@@ -67,3 +67,7 @@ ln Interactive Coq Proofs in Vim
 tg coq software_foundations
 td try to set up coqtail?
 
+nn dotguide
+ln Drawing Graphs with dot
+hl https://www.graphviz.org/pdf/dotguide.pdf
+tg dot graphviz graph papers

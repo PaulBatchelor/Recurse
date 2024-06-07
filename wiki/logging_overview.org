@@ -1,0 +1,18 @@
+#+TITLE: Logging Overview
+
+Hi. I obsessively log stuff.
+
+I have a @!(ref "logs")!@ page for all my logs.
+
+Logs are also tied to @!(ref "tasks")!@.
+
+One task
+I did involved making an @!(ref "singer_demo"
+"initial singing synthesis demo using WASM, webaudio, and rust")!@.
+The task name is called @!(taskref "initial-singing-web")!@.
+
+This logging format is new and still in flux. I wrote
+it specifically for my time at RC. The source code for everything
+can be found on [[https://github.com/PaulBatchelor/Recurse][GitHub]].
+
+@!(ref "how_logging_works" "Back")!@.

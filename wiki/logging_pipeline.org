@@ -1,0 +1,26 @@
+#+TITLE: Logging Pipeline
+* General Overview
+@!(img "/res/recurse/logging_pipeline.png")!@
+
+Logs are written in a simple markup format in a text editor
+(Vim).
+
+Then, that text file is parsed and turned into an
+intermediate format (SQLite is used here).
+
+Finally, that intermediate format is parsed (SQL queries)
+and turned into HTML output (using WeeWiki and Janet).
+
+* Recurse Center Personal Logs Tooling Pipeline
+@!(img "/res/recurse/just_recurse.png")!@
+
+Logs, tasks, and taskgroups are written using the Descript
+markup format, which get turned into SQLite.
+
+Once in SQLite, they can be read with the WeeWiki
+personal wiki static site generator via the Janet
+Scripting language.
+
+* Go Back
+@!(ref "how_logging_works" "Back")!@
+

@@ -4,4 +4,22 @@ Prev: game jam. some velum stuff.
 Next: logging presentation for tool-time, velum.
 
 @07:25 hand-draw site ecosystem, brainstorm presentation format #logging-presentation
+
 @08:25 get dot graphs working #logging-presentation
+Transfer inked up outline to graphviz dot format.
+
+See: scratch/how_logging_works.
+---
+Useful guide on writing graphs with dot: @!(dzref "misc/dotguide")!@.
+
+@09:00 get initial presentation wiki page going. #logging-presentation
+see: @!(ref "how_logging_works")!@
+
+@09:06 Logging overview page #logging-overview
+
+@09:23 Logging Pipeline #logging-overview
+Gotta get images working now...
+
+@09:40 Site Ecosystem #logging-overview
+
+@09:48 Logging format #logging-overview

@@ -1,0 +1,8 @@
+#+TITLE: Personal Website Software Ecosystem
+At the time of writing, I've had a personal website
+for over a decade. Over these years a software ecosystem
+has grown and evolved to meet my needs.
+
+@!(img "/res/recurse/site_ecosystem.png")!@
+
+Go @!(ref "how_logging_works" "back")!@.

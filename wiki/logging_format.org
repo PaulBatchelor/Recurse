@@ -1,0 +1,56 @@
+#+TITLE: Logging Format
+* Daily Logs
+Logs are broken up into days (see the "logs" directory
+in the source).
+
+A log file could look like this:
+
+#+BEGIN_SRC txt
+@2024-06-07 Today is a Friday.
+Today is Friday, and I have to go talk to people about
+how this logging system works.
+
+@09:53 Write some sample code for a log #how-logging-works
+I am going to write some sample code
+
+@09:55 Write some words about the sample code #how-logging-works
+
+@10:04 Write words on tasks
+#+END_SRC
+
+A block starts with a line beginning with =@=, and
+provides the day. A optional description of the day can follow.
+
+New blocks following the day with a timestamp format =@HH:MM=
+will show up as time entries for that day. These have
+a title, and and optional description.
+
+There are also hashtags in the title like =#how-logging-works=.
+This is a tag, and is used a unique ID for tasks.
+
+When a task page is made, it looks for any log entries with
+hashtags reference their unique ID.
+* Tasks
+Tasks are broken up into separate files. The filename determines
+which task group a task belongs to.
+
+Transfering a task to another taskgroup is done by cutting
+the text over to another file using a text editor.
+
+Here is what a task file could look like:
+
+#+BEGIN_SRC
+@!desc This is a task group description
+
+@how-logging-works create personal logging presentation
+Create wiki pages that describe my logging workflow
+and tooling pipeline.
+
+@publish-presentation publish presentation to website
+#+END_SRC
+
+The =@!desc= tag adds a description for the task group.
+
+=@how-logging-works= creates a new task with the unique
+task ID "how-logging-works", followed by a title.
+The other lines can be used for an optional description.

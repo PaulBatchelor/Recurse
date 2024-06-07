@@ -92,3 +92,14 @@
 
 (defn wikiref [name]
   (org (string "[[" personal-wiki-path "/" name "][" name "]]")))
+
+(defn taskref [task]
+ (ref (logparse/generate-task-page-name task) task))
+
+(defn img [path &opt alt]
+  (print
+   (string
+    "<img src=\""
+    path "\""
+    (if-not (nil? alt) (string " alt=\"" alt "\""))
+    ">")))
