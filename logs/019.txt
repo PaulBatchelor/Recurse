@@ -31,3 +31,29 @@ okay.
 @10:18 Practice presentation, make tweaks #logging-overview
 
 @10:42 Catch up on yesterday's logs
+
+@13:06 nose tick function porting: right junction equation looks wrong #implement-velum
+Above it is the computation for the left junction. I'd imagine
+a symmetry between them, but it is not symmetrical. The
+original voc source code looks like this as well. I think I may
+have to go back to Pink trombone and check on it. At some point.
+In the meantime, I've dropped a TODO.
+
+@13:32 Hooking nose with tract in tick function #implement-velum
+
+@13:49 Try to an initial example up and running. #implement-velum
+
+@13:52 Uh-oh. Overflow with the existing example. #implement-velum
+It's the damn LCG again in the glottis.
+
+@14:01 tract example sounds chipmunky now #implement-velum
+going off track a little bit
+
+@14:20 Got a nice throat-singing patch going. No nose yet. #implement-velum
+But it sounds cool. Might want to import my reverb for added effect.
+
+@14:26 Okay it blew up. Fizzled into high frequency. #implement-velum
+But the good news is that it did build.
+
+@14:27 This is a good enough stopping point #implement-velum
+I gotta get ready for a presentation.
