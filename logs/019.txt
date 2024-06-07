@@ -57,3 +57,55 @@ But the good news is that it did build.
 
 @14:27 This is a good enough stopping point #implement-velum
 I gotta get ready for a presentation.
+
+@15:00 Tool-time workshop!
+Wiki page I presented from: @!(ref "how_logging_works")!@.
+
+@15:38 Debugging what went wrong #implement-velum
+Line by line debugging, comparing to reference C file.
+Yick.
+
+@16:18 Pretty sure the nose.tick() function is the culprit #implement-velum
+looking at it again. I have tried to clean up the code to make it
+more readable.
+
+@16:27 Nasal is a NaN! #implement-velum
+Must be dividing by zero somewhere.
+
+@16:32 NaN checking: no nans in nose reflections #implement-velum
+
+@16:34 NaN checking: NaN introduced during scattering junctions #implement-velum
+=ns_r= and =ns_l= both have it (which makes sense). Not sure
+which one gets it first. Going to check above.
+
+@16:42 Finding the earliest NaN #implement-velum
+Listing these as I go.
+---
+1367: =tr_jr[nose_start]=.
+---
+1367: =tr_l[nose_start]= is NaN before =tr_jr[nose_start]=.
+
+@16:53 Taking a break from NaNs #implement-velum
+NaN-hunting fries my brain.
+
+@16:59 NanHunting: A little more digging #implement-velum
+So far, I believe =tr_l[nose_start]= to be the earliest
+introduction of a NaN as sample position 1367.
+
+@17:07 NaN introduced into tract left 1 sample earlier, after nasal #implement-velum
+=tr_l[nose_start]= has a NaN at 1366 at the end of the computation
+loop, after the nasal component is made. It happens
+right after =update_waveguide=.
+
+@17:09 Following update_waveguide #implement-velum
+=tr_l= is copying over =tr_jl= with a multiply by 0.999.
+Where is the last place junction left is begin updated?
+
+@17:11 Following last update of junction left #implement-velum
+
+@17:17 I have lost the trail. Will start again tomorrow #implement-velum
+
+@17:20 Final NaN thoughts #implement-velum
+Junction Left at the nose start is the earliest instance
+of a NaN I have found in my code. At 1366, it is introduced
+before the nose tick, but after compute scattering junctions.
