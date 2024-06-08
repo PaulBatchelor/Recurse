@@ -1,0 +1,81 @@
+@2024-06-08 Day 20.
+Prev: Tooling workshop, nose/velum/nasal debugging.
+
+Next: NaN-hunting my nose code.
+
+@11:29 The NaN hunt resumes, where was I? #implement-velum
+
+@11:34 Earliear nan found at position 1365 #implement-velum
+There is something wrong with the omega (w) coefficient
+being computed inside of =compute_scattering_junctions=.
+Peeling that back some more now.
+---
+=w_r[i - 1]= is fine, and doesn't NaN before =w=.
+---
+=w_l[i]= is also fine, and doesn't NaN out before =w=.
+r[i] is the only variable left in there. Let's see if
+it NaNs.
+---
+r[i] is also fine. huh?
+
+@11:38 none of the components for =w= have NaNs #implement-velum
+I'm guessing it must be an overflow NaN. Some big numbers
+somewhere. Going to use =dbg!= to inspect the variables
+=w_r[i - 1]=, =w_l[i]=, and =r[i]=.
+
+@11:42 =w_r[i]= and =w_r[i -1]= are both big numbers #implement-velum
+Check it out:
+
+===
+#+BEGIN_SRC txt
+[src/tract.rs:183:17] w_r[i - 1] = 2.5360622e38
+[src/tract.rs:183:17] w_l[i] = 1.0904602e38
+[src/tract.rs:183:17] r[i] = 0.0
+#+END_SRC
+===
+
+---
+So, I gotta figure out why these numbers are getting so
+large. In my experience, it's usually due to numbers being
+so small.
+---
+I could change the precision to =f64= instead of =f32=,
+but this moves the goal posts, and might not actually fix
+the underlying problem.
+
+@11:46 Where would =w_r= and =w_l= be getting such large numbers? #implement-velum
+
+@11:57 Multiplying an inf by zero gives you a NaN #implement-velum
+Found an intersting thing here. I wanted to break down
+the components giving me NaN. So I wrote some debugging code
+that looked like this:
+
+===
+#+BEGIN_SRC rust
+    let add1 = w_r[i - 1] + w_l[i];
+    let add2 = r[i] * add1;
+
+    if add2.is_nan() {
+        dbg!(r[i], add1);
+        panic!("NAN");
+    }
+#+END_SRC
+===
+---
+The results of this are here:
+
+===
+#+BEGIN_SRC rust
+[src/tract.rs:190:17] r[i] = 0.0
+[src/tract.rs:190:17] add1 = inf
+thread 'main' panicked at src/tract.rs:191:17:
+NAN
+#+END_SRC
+===
+
+I was only checking for NaNs, but not infs. It looks
+like the problem starts as infs (very large numbers),
+and not NaNs (dividing by zero).
+
+@12:12 Note to self: =is_finite()= is how to check for infinity checks #implement-velum
+If it's false, it's inf.
