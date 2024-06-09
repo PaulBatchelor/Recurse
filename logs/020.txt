@@ -79,3 +79,17 @@ and not NaNs (dividing by zero).
 
 @12:12 Note to self: =is_finite()= is how to check for infinity checks #implement-velum
 If it's false, it's inf.
+
+@21:12 Some (hopefully) quick NaNhunting to try and move this a bit forward #implement-velum
+
+@21:14 Find when =w_r[i - 1]= and =w_l[i]= become inf earlier in the code #implement-velum
+It's going to be in the nose tick function somewhere I think.
+---
+Specifically, i is at position 11.
+
+@21:31 Large numbers start happening early on #implement-velum
+Specifically at =tr_jr[nose_start]=.
+
+@21:41 Tomorrow's strategy: comparing the numbers with the C implementation #implement-velum
+It seems like the reflection coefficients might be causing things
+to blow up.
