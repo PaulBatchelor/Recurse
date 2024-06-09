@@ -35,6 +35,8 @@ class SingerSynth extends AudioWorkletProcessor {
             this.wasm.exports.set_noise_floor(this.dsp, event.data);
         } else if (event.type === "shape") {
             this.wasm.exports.set_shape(this.dsp, event.data);
+        } else if (event.type === "velum") {
+            this.wasm.exports.set_velum(this.dsp, event.data);
         } else if (event.type === "regset") {
             this.wasm.exports.set_region(this.dsp, event.region, event.value);
         }

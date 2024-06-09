@@ -1,0 +1,67 @@
+@2024-06-09 Day 21.
+
+@10:32 Compare nose reflections with tract implementation. #implement-velum
+
+@10:41 Left Reflection coefficient seems too high #implement-velum
+In the rust version, I'm getting 2.0. In the original, it's -0.1.
+
+@10:43 wait wait wait, I need to look at right reflection not left #implement-velum
+Similar deal actually. The original is still a small negative value.
+
+@10:46 Changed velum to 0.0 in reference, similar results #implement-velum
+I have my velum set to be 0 in the rust version. So there is definitely
+something wrong with these left/right reflection coefficient
+calculations.
+
+@10:52 Sum value is very different #implement-velum
+It is larger in the reference (~7.3) vs my implementation
+(1.062).
+---
+I had my nose starting position calculated using a
+relative percentage of the tract length. Maybe this is
+an unstable way to do this?
+
+@10:59 I think I found it. #implement-velum
+There were typos in my reflection calculations. Additions
+that were supposed to be subtractions. Looking up the
+wrong index.
+
+@11:01 We have actual sound! #implement-velum
+
+@11:02 Velum control seems to work! #implement-velum
+
+@11:03 Reworking demo #implement-velum
+I lost the ideal tube shape sound. Going to need
+to fiddle around with the interactive example.
+
+@11:24 Getting velum slider working: Unknown upcode (195) #implement-velum
+
+@11:32 commented out panics and debug prints #implement-velum
+I think this was getting in the way of wasm compilation.
+
+@11:48 turning off vibrato #implement-velum
+
+@12:50 Some initial throat singing shapes made #implement-velum
+lots and lots of trial and error
+
+@13:33 Smooth transitions between overtones #implement-velum
+At this point, I'm just having fun. I think the velum is
+correct haha
+
+@14:06 Working on a melodic sequence #implement-velum
+
+@14:15 Drown it in reverb #implement-velum
+
+@14:42 Throat singing demo works, created mp3 for it. #implement-velum
+Now, time for cleanup.
+
+@14:57 well, it's a good thing I made an mp3... #implement-velum
+My shapes for the throat singing example
+are ruined once again because there was some code I
+accidentally commented out.
+
+@15:46 Another attempt #implement-velum
+
+@16:09 probably good enough #implement-velum
+
+@16:13 restoring web example, now with velum #implement-velum

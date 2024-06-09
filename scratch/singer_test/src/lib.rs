@@ -15,6 +15,7 @@ pub struct SingerSynth {
     dcblk: DCBlocker,
     pitch: f32,
     pitch_smoother: Smoother,
+    nose: Nose,
 }
 
 // a simple sine wave generator
@@ -32,10 +33,13 @@ pub fn mtof(nn: f32) -> f32 {
 
 impl SingerSynth {
     pub fn new(sr: u32) -> SingerSynth {
+        let tract_size_cm = 13.0;
+        let oversample = 2;
         let mut ss = SingerSynth {
             counter: 0,
             glot: Glot::new(sr as usize),
-            tract: Tract::new(sr as usize, 13.0, 2),
+            tract: Tract::new(sr as usize, tract_size_cm, oversample),
+            nose: Nose::new(sr as usize, tract_size_cm*0.63, oversample),
             shape1:  [
                 2.0, 3.0, 9.0, 2.0,
                 1.0, 1.0, 1.0, 1.0,
@@ -55,7 +59,7 @@ impl SingerSynth {
         ss.glot.set_shape(0.4);
         ss.glot.set_aspiration(0.1);
         ss.glot.set_noise_floor(0.01);
-        ss.pitch_smoother.set_smooth(0.1);
+        ss.pitch_smoother.set_smooth(0.05);
         ss.pitch_smoother.snap_to_value(ss.pitch);
         ss
     }
@@ -75,10 +79,12 @@ impl SingerSynth {
         }
         let pitch = self.pitch_smoother.tick(self.pitch);
         let freq = mtof(pitch + 0.5*vib);
+        //let freq = mtof(pitch);
         self.glot.set_freq(freq);
         self.tract.drm(&self.shape1);
         let g = self.glot.tick();
-        let tr = self.tract.tick(g);
+        let tr = self.tract.tick_with_nose(&mut self.nose, g);
+        //let tr = self.tract.tick(g);
         let tr = self.dcblk.tick(tr * 0.8);
         tr
     }
@@ -142,4 +148,9 @@ pub extern "C" fn set_noise_floor(dsp: &mut SingerSynth, val: f32) {
 #[no_mangle]
 pub extern "C" fn set_shape(dsp: &mut SingerSynth, val: f32) {
     dsp.glot.set_shape(val);
+}
+
+#[no_mangle]
+pub extern "C" fn set_velum(dsp: &mut SingerSynth, val: f32) {
+    dsp.nose.set_velum(val);
 }

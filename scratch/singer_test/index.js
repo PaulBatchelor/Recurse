@@ -30,6 +30,10 @@ class SingerWorkletNode extends AudioWorkletNode {
     set_shape(shape) {
         this.port.postMessage({type: "shape", data: shape});
     }
+
+    set_velum(shape) {
+        this.port.postMessage({type: "velum", data: shape});
+    }
 }
 
 const startAudio = async (context) => {
@@ -70,7 +74,7 @@ function add_region_slider(sliders, rnum) {
 
     slider.type = "range";
     slider.min = 0;
-    slider.max = 1;
+    slider.max = 4;
     slider.id = 'region' + rnum;
     slider.step = 0.001;
     slider.value = 0.5;
@@ -132,7 +136,7 @@ function addHorizSlider(name, minVal, maxVal, defaultVal, step, updateValue) {
 
 function add_glottal_controls() {
     const glottal_control = document.getElementById('glottal-control');
-    pitch = addHorizSlider("pitch", 50, 80, 65, 1,
+    pitch = addHorizSlider("pitch", 40, 80, 65, 1,
         (value) => {
             if (SingerNode !== null) {
                 SingerNode.set_pitch(value);
@@ -159,10 +163,18 @@ function add_glottal_controls() {
                 SingerNode.set_shape(value);
             }
         });
+
+    velum = addHorizSlider("velum", 0.0, 4.0, 0.0, 0.001,
+        (value) => {
+            if (SingerNode !== null) {
+                SingerNode.set_velum(value);
+            }
+        });
     glottal_control.appendChild(pitch);
     glottal_control.appendChild(shape);
     glottal_control.appendChild(aspiration);
     glottal_control.appendChild(noise_floor);
+    glottal_control.appendChild(velum);
 }
 
 audioStarted = false
