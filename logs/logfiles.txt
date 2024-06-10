@@ -16,3 +16,6 @@ logs/015.txt
 logs/016.txt
 logs/017.txt
 logs/018.txt
+logs/019.txt
+logs/020.txt
+logs/021.txt

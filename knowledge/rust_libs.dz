@@ -4,3 +4,8 @@ gr a collection of rust libraries
 nn regex
 ln regex
 hl https://lib.rs/crates/regex
+
+nn typed_floats
+ln typed floats
+hl https://lib.rs/crates/typed_floats
+rm found through someone on mastodon. "your problem made me search for 'better' floats"
