@@ -2,5 +2,3 @@
 
 @implement-osc implement table-lookup oscillator in boing^3
 
-@implement-rephasor implement rephasor
-this is the core thing behind a gesture signal generator.

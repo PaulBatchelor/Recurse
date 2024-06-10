@@ -21,6 +21,8 @@ ln implementing audioworklet in safari
 tg audioworklet safari
 rm maybe this can fix issues on iphone?
 
+zz -------------------------------------------------------
+
 ns webdev/react
 
 nn quickstart
@@ -32,3 +34,14 @@ nn reference
 hl https://react.dev/reference/react
 ln react reference
 tg react
+
+nn reactive_programming_wikipedia
+ln reactive programming wikipedia page
+hl https://en.wikipedia.org/wiki/Reactive_programming
+tg reactive
+rm I'm *pretty* sure this is related to React
+
+nn nextjs_wikipedia
+ln NextJS wikipedia page
+hl https://en.wikipedia.org/wiki/Next.js
+tg react nextjs

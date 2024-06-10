@@ -1,0 +1,26 @@
+@2024-06-10 Day 22.
+61 days until the end of my batch (August 10th)
+---
+Prev: Velum/Nasal debugging. Some demos involving
+overtone throat singing. Some initial preset work.
+---
+Next: Preset Import in demo, read up on React, scope out
+initial Gesture Synthesizer Generator components in Rust.
+
+@08:15 Morning Triage
+
+@08:27 Oscillator may be less important at this point... #implement-osc
+Originally, the idea was to use this is a proof of concept
+for the WAV writer. Things have moved forward without needing
+this.
+---
+LFOs are still a thing that would be nice to have though,
+so I'll keep that in mind.
+
+@08:29 rephasor sometime this week? #implement-rephasor
+Thinking about building a simple gesture signal generator
+in Rust this week.
+
+@08:30 gesture path would be nice this week #implement-gesture-path
+
+@08:33 should start my React-ing #react-tic-tac-toe

@@ -1,9 +1,3 @@
 @!desc rust-related tasks
 
-@impl-gesture-path implement initial gesture path
-Instead of doing Uxn like Gestvm, just implement some
-structures in Rust. I imagine this will encapsulate a
-rephasor with some kind of Rust array/vector holding
-gesture vertices.
-
 @refactor-glotfilt-traits Refactor glotfilt to use traits

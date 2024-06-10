@@ -2,3 +2,15 @@
 tasks that I intend to work on in the next few days or so.
 
 @quick-preset-export Hack up quick preset exporter for web demo
+
+@implement-rephasor implement rephasor
+this is the core thing behind a gesture signal generator.
+
+@impl-gesture-path implement initial gesture path
+Instead of doing Uxn like Gestvm, just implement some
+structures in Rust. I imagine this will encapsulate a
+rephasor with some kind of Rust array/vector holding
+gesture vertices.
+
+@react-tic-tac-toe do react tic-tac-toe tutorial
+link: [[https://react.dev/learn/tutorial-tic-tac-toe]].
