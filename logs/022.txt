@@ -71,3 +71,12 @@ I am not sure how it was working all this time then suddenly
 not working.
 
 @15:43 Uploaded to website #quick-preset-export
+
+@15:52 Tic Tac Toe Tutorial #react-tick-tac-toe
+
+@15:55 damn, distracted by trying to get a draw game #react-tic-tac-toe
+It took a few tries, ended up looking up a draw.
+
+@15:57 Okay back on track #react-tic-tac-toe
+
+@16:27 Packing up early. getting very sleepy #react-tic-tac-toe

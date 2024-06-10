@@ -49,3 +49,12 @@ nn nextjs_wikipedia
 ln NextJS wikipedia page
 hl https://en.wikipedia.org/wiki/Next.js
 tg react nextjs
+
+nn component
+ln component: piece of re-usable code that represents a part
+ln of a user interface
+tg glossary react
+
+nn JSX_element
+ln JSX Element: Combination of JS code and HTML tags that
+ln describe what you want to display.
