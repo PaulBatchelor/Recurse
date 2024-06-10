@@ -21,6 +21,10 @@ ln implementing audioworklet in safari
 tg audioworklet safari
 rm maybe this can fix issues on iphone?
 
+nn textcontent_mdn
+hl https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
+ln textContent property in node
+
 zz -------------------------------------------------------
 
 ns webdev/react

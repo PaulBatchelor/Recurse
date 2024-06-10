@@ -30,3 +30,44 @@ in Rust this week.
 @09:15 boot up linux box, get internet working
 
 @09:58 import ink from previous weeks.
+
+@10:14 ink added to git repo and pushed to github.
+
+@10:30 Get ready to go to RC.
+
+@11:05 Unblock and reflect workshop
+
+@14:02 planning what to work on
+
+@14:14 scope out preset importing functionality #quick-preset-export
+The thing that makes this difficult is that I want
+the UI elements to update with the internal state. I'd need
+to build something out to do this.
+---
+What's a quick way to get this done?
+
+@14:20 setting up some boilerplate, which is as far as I can see right now #quick-preset-export
+
+@14:32 Looks like I can simulate events. #quick-preset-export
+[[https://stackoverflow.com/questions/35659430/how-do-i-programmatically-trigger-an-input-event-without-jquery]]
+
+@14:52 Okay, grokking this better. #quick-preset-export
+I need to set the slider from JS, then fire off an input
+event to set the rest of the parameters.
+
+@15:03 Glottal controls work, now regions #quick-preset-export
+A little bit more challenging, since those sliders are made
+an older way. Hopefully I an refactor this so all the sliders
+are made the same way.
+
+@15:32 Okay it works #quick-preset-export
+I suddenly ran into some weird issues with the textarea
+=textContent= value, so I changed it to be =value= instead.
+
+@15:34 so textContent is not a textarea property but a DOM node property? #quick-preset-export
+See: @!(dzref "webdev/textcontent_mdn")!@.
+
+I am not sure how it was working all this time then suddenly
+not working.
+
+@15:43 Uploaded to website #quick-preset-export

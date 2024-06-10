@@ -1,5 +1,6 @@
 const audioContext = new AudioContext();
 let SingerNode = null;
+SingerController = {}
 
 class SingerWorkletNode extends AudioWorkletNode {
     constructor(context, name, options) {
@@ -51,6 +52,33 @@ class SingerWorkletNode extends AudioWorkletNode {
         this.data.velum = velum;
         this.port.postMessage({type: "velum", data: velum});
     }
+}
+
+function addHorizSlider(name, minVal, maxVal, defaultVal, step, updateValue) {
+    const control = document.createElement('p')
+    control.textContent = capitalizeFirstLetter(name) + ': ';
+    const slider = document.createElement('input');
+    const output = document.createElement('output');
+
+    slider.type = "range";
+    slider.min = minVal;
+    slider.max = maxVal;
+    slider.id = name;
+    slider.step = step;
+    slider.value = defaultVal;
+
+    output.id = name + '-value';
+    output.textContent = slider.value;
+
+    slider.addEventListener("input", (event) => {
+        output.textContent = event.target.value;
+        updateValue(event.target.value);
+    });
+
+    control.appendChild(slider);
+    control.appendChild(output);
+
+    return control;
 }
 
 const startAudio = async (context) => {
@@ -109,46 +137,23 @@ function add_region_slider(sliders, rnum) {
     region.appendChild(slider);
     region.appendChild(output);
     sliders.appendChild(region);
+
+    return region;
 }
 
 function add_region_sliders() {
     const sliders = document.getElementById('region-sliders');
 
+    SingerController.regions = [];
     for (let i = 1; i <= 8; i++) {
-        add_region_slider(sliders, i);
+        r = add_region_slider(sliders, i);
+        SingerController.regions.push(r);
     }
 }
 
 // https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript
 function capitalizeFirstLetter(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
-}
-
-function addHorizSlider(name, minVal, maxVal, defaultVal, step, updateValue) {
-    const control = document.createElement('p')
-    control.textContent = capitalizeFirstLetter(name) + ': ';
-    const slider = document.createElement('input');
-    const output = document.createElement('output');
-
-    slider.type = "range";
-    slider.min = minVal;
-    slider.max = maxVal;
-    slider.id = name;
-    slider.step = step;
-    slider.value = defaultVal;
-
-    output.id = name + '-value';
-    output.textContent = slider.value;
-
-    slider.addEventListener("input", (event) => {
-        output.textContent = event.target.value;
-        updateValue(event.target.value);
-    });
-
-    control.appendChild(slider);
-    control.appendChild(output);
-
-    return control;
 }
 
 function add_glottal_controls() {
@@ -160,12 +165,15 @@ function add_glottal_controls() {
             }
         });
 
+    SingerController.pitch = pitch;
+
     aspiration = addHorizSlider("aspiration", 0, 1, 0.03, 0.001,
         (value) => {
             if (SingerNode !== null) {
                 SingerNode.set_aspiration(value);
             }
         });
+    SingerController.aspiration = aspiration;
 
     noise_floor = addHorizSlider("noise_floor", 0, 1, 0.01, 0.001,
         (value) => {
@@ -173,6 +181,7 @@ function add_glottal_controls() {
                 SingerNode.set_noise_floor(value);
             }
         });
+    SingerController.noise_floor = noise_floor;
 
     shape = addHorizSlider("shape", 0.1, 0.9, 0.4, 0.001,
         (value) => {
@@ -180,6 +189,7 @@ function add_glottal_controls() {
                 SingerNode.set_shape(value);
             }
         });
+    SingerController.shape = shape;
 
     velum = addHorizSlider("velum", 0.0, 4.0, 0.0, 0.001,
         (value) => {
@@ -187,6 +197,7 @@ function add_glottal_controls() {
                 SingerNode.set_velum(value);
             }
         });
+    SingerController.velum = velum;
 
     glottal_control.appendChild(pitch);
     glottal_control.appendChild(shape);
@@ -197,6 +208,14 @@ function add_glottal_controls() {
 
 audioStarted = false
 audioPaused = true
+
+function update_param(param, ui_elem) {
+    let ctrl = ui_elem;
+    let slider = ctrl.childNodes[1];
+    slider.value = param;
+    evt = new Event('input', {bubbles: true});
+    slider.dispatchEvent(evt);
+}
 
 window.addEventListener('load', async () => {
     const buttonBegin = document.getElementById('button-begin');
@@ -224,13 +243,61 @@ window.addEventListener('load', async () => {
     add_region_sliders();
 
     const btnExport = document.getElementById('export');
+    const btnImport = document.getElementById('import');
+
     const textbox = document.getElementById('textbox');
 
     btnExport.addEventListener('click', () => {
         console.log("exporting...");
         if (SingerNode !== null) {
             console.log(SingerNode.data);
-            textbox.textContent = JSON.stringify(SingerNode.data, null, 4);
+            textbox.value = JSON.stringify(SingerNode.data, null, 4);
+        }
+    });
+
+    btnImport.addEventListener('click', () => {
+        console.log("importing...");
+        if (SingerNode !== null) {
+            const data = JSON.parse(textbox.value);
+            console.log(data);
+
+            if (data.pitch !== null) {
+                update_param(data.pitch, SingerController.pitch);
+            }
+
+            if (data.aspiration !== null) {
+                update_param(data.aspiration, SingerController.aspiration);
+                console.log("aspiration: " + data.aspiration);
+            }
+
+            if (data.velum !== null) {
+                update_param(data.velum , SingerController.velum);
+            }
+
+            if (data.noise_floor !== null) {
+                update_param(data.noise_floor, SingerController.noise_floor);
+            }
+
+            if (data.shape !== null) {
+                update_param(data.shape, SingerController.shape);
+            }
+
+            if (data.regions !== null) {
+                console.log("regions: " + data.regions);
+                nregions = data.regions.length;
+
+                if (nregions > 8) {
+                    nregions = 8;
+                }
+
+                if (nregions < 0) {
+                    nregions = 0;
+                }
+
+                for (let i = 0; i < nregions; i++) {
+                    update_param(data.regions[i], SingerController.regions[i]);
+                }
+            }
         }
     });
 });

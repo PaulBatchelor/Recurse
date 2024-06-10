@@ -1,8 +1,6 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@quick-preset-export Hack up quick preset exporter for web demo
-
 @implement-rephasor implement rephasor
 this is the core thing behind a gesture signal generator.
 
