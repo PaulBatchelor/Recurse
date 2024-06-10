@@ -26,3 +26,7 @@ in Rust this week.
 @08:33 should start my React-ing #react-tic-tac-toe
 
 @09:10 Just finished my zulip check-in
+
+@09:15 boot up linux box, get internet working
+
+@09:58 import ink from previous weeks.
