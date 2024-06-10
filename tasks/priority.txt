@@ -1,6 +1,4 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@implement-velum implement velum support in voxbox
-
-@logging-presentation Prepare for logging presentation.
+@quick-preset-export Hack up quick preset exporter for web demo

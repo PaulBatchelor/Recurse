@@ -71,3 +71,12 @@ log event parser.
 @create-tasks-directory create directory page for tasks
 
 @game-jam the game jam.
+
+@implement-velum implement velum support in voxbox
+
+@logging-presentation Prepare for logging presentation.
+
+@implement-smoother implement 1-pole smoothing filter
+
+@implement-DRM implement DRM model for shaping tract
+

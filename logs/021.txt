@@ -65,3 +65,17 @@ accidentally commented out.
 @16:09 probably good enough #implement-velum
 
 @16:13 restoring web example, now with velum #implement-velum
+
+@20:27 Coding up a quick exporter for singer demo #quick-preset-export
+Textarea with a button that says export/import.
+Export fills the textarea with the current vocal tract state.
+Import loads the stuff from the textarea.
+
+@20:40 Let's see if I can have one function update the pitch and UI releated to it #quick-preset-export
+Probably not going to be an ideal design pattern.
+I can already see why an architecture like react would be helpful.
+
+@20:47 Nevermind, let's just try and dump data? #quick-preset-export
+
+@21:15 Uploaded something with just "export", import still a WIP. #quick-preset-export
+Good enough for tonight.
