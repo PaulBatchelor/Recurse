@@ -1,0 +1,31 @@
+@2024-06-11 Day 23. Impossible Day.
+60 days until EOB (end of batch).
+---
+Yesterday I was very tired and out of it. I did a
+lot of walking over the weekend.
+---
+prev:
+Unblock and reflect workshop, lunch with people
+(Next Stop Vegan Festivals), some very baby steps into
+a react applications. @!(taskref "react-tic-tac-toe")!@,
+implemented a simple way to do preset import for singing synthesizer
+demo @!(taskref "quick-preset-export")!@.
+---
+next: impossible day! I'm currently planning on breaking
+my focus up into two parts. Some of my time will be spent working
+with Jeff B drive some of his video filter with audio.
+The other part of my time will be spent doing research
+into FPGA gaming. I'll be studying @!(dzref
+"FPGA/openfpga_pong")!@ and @!(dzref "FPGA/another_world_5k)!@
+
+@08:13 Morning Triage
+
+@08:32 Getting a tag set up for impossible day #impossible-day
+
+@08:34 Composing Zulip Check-in
+
+@08:49 Let's see if I can get pong working on my Analogue Pocket #impossible-day
+
+@09:16 Some initial talks with JB, Pong installed and running on AP #impossible-day
+
+@09:17 Getting ready to go to Hub. #impossible-day

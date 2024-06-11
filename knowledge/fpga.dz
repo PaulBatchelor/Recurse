@@ -1,0 +1,12 @@
+ns FPGA
+
+nn openfpga_pong
+ln FPGA pong implementation for the analogue pocket
+hl https://github.com/agg23/openfpga-pong
+tg gamedev fpga
+
+nn another_world_5k
+ln another world on an FPGA (UP5K FPGA)
+hl https://github.com/sylefeb/a5k
+tg gamedev fpga
+

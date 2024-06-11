@@ -37,6 +37,8 @@ in Rust this week.
 
 @11:05 Unblock and reflect workshop
 
+@12:00 Lunch
+
 @14:02 planning what to work on
 
 @14:14 scope out preset importing functionality #quick-preset-export

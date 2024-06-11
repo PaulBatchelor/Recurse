@@ -12,4 +12,5 @@ knowledge/web.dz
 knowledge/webdev.dz
 knowledge/voxbox.dz
 knowledge/recurse.dz
+knowledge/fpga.dz
 knowledge/zzz.dz
