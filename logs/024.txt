@@ -43,3 +43,20 @@ There are some follow-ups that I'm probably not going to do.
 @12:58 Nap
 
 @13:30 Pre-rephasor work #implement-rephasor
+
+@13:33 Working on rephasor on my linux box yay #implement-rephasor
+
+@13:34 Going to try out a new thing with how to log times
+Going to start a stop watch, and then somehow use the tag
+system here to log a duration with the event as the
+start time.
+
+@13:35 Beginning initial work #implement-rephasor #timelog 01:00:00
+
+@13:37 Boilerplate code from phasor #implement-rephasor
+
+@13:38 Copy over rephasor struct from sndkit #implement-rephasor
+
+@13:53 Building out initial example #implement-rephasor
+
+@14:37 Initial implementation with example done #implement-rephasor
