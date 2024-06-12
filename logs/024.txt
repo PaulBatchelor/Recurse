@@ -31,3 +31,5 @@ and @!(career/interactive_coding_challenges)!@.
 
 @10:12 Completed tutorial #react-tic-tac-toe
 There are some follow-ups that I'm probably not going to do.
+
+@10:35 Getting ready to leave for the hub
