@@ -58,3 +58,12 @@ tg glossary react
 nn JSX_element
 ln JSX Element: Combination of JS code and HTML tags that
 ln describe what you want to display.
+
+nn use_state
+ln useState: special function React uses that you can
+ln call from a component to let it "remember" things.
+co $ component
+cr called from a component
+tg react
+
+

@@ -29,3 +29,53 @@ into FPGA gaming. I'll be studying @!(dzref
 @09:16 Some initial talks with JB, Pong installed and running on AP #impossible-day
 
 @09:17 Getting ready to go to Hub. #impossible-day
+
+@10:00 Examining some code. #impossible-day
+
+@11:00 Kick-off for impossible day #impossible-day
+
+@11:30 Impossible day work #impossible-day
+
+@13:00 Lunch (approx.) #impossible-day
+A group of us ate at NAYA.
+
+@14:00 Impossible day work (approx.) #impossible-day
+At this point, I was very out of my depth.
+Jeff was very patient with me. Thank you, Jeff.
+
+@16:30 Regroup and presentations #impossible-day
+We were struggling getting zoom to work with the iOS
+emulator. But our thing did technically work. Sort of
+felt like I made a jerk of myself in front of everyone.
+Oops.
+---
+John Cage once asked how he felt about his audience
+laughing at some of his (admittedly odd) work, to which
+he replied "I prefer laughter to tears". No tears, only
+laughter. I suppose I was entertaining. So, I'll take the win.
+
+@17:00 A Quiet and Fast and Hopefully Polite Exit Home #impossible-day
+I think I am what you'd call an Introvert's Introvert. Being around
+people at RC is quite enjoyable, but it has been draining
+for me. I'm really starting to feel it.
+I'll need to see what I can do to find some quiet
+and recharge later this week.
+---
+Suddenly being around so many people after years
+of being around so few is an ongoing adjustment for me.
+Still, it is important to me that I try to push myself a bit
+and coax myself out of my apartment into uncomfortable
+situations. The people here are friendly.
+
+@20:49 Some logging.
+
+@20:50 Attempts at more of this react tutorial #react-tic-tac-toe
+
+@21:06 Trying to get react developer tool exstension for firefox working #react-tic-tac-toe
+The extension doesn't work on the current iteration of
+react ("This page doesn't appear to be using React"),
+but it does work on the React website.
+---
+Moving on with the tutorial without it.
+
+@21:24 Left off: about to code things so that X's can be written in every box #react-tic-tac-toe
