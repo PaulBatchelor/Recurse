@@ -1,0 +1,18 @@
+ns NTSC
+gr Stuff related to NTSC video processing, which is what
+gr I was looking at during impossible day: Tuesday,
+gr June 11th, 2024.
+
+nn ntsc_mtl_demo
+hl https://github.com/jefflovejapan/ntsc-mtl-demo
+ln swift NTSC demo by Jeff Blagdon
+
+nn ntsc_rs
+hl https://github.com/valadaptive/ntsc-rs
+ln rust version of NTSC video filter
+co $ ntsc_mtl_demo
+cr referenced used for swift version (I think?)
+
+nn mtl_means_metal
+ln MTL prefix refers to Apple's Metal protocol
+co $ ntsc_mtl_demo

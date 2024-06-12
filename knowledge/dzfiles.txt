@@ -13,4 +13,5 @@ knowledge/webdev.dz
 knowledge/voxbox.dz
 knowledge/recurse.dz
 knowledge/fpga.dz
+knowledge/ntsc.dz
 knowledge/zzz.dz

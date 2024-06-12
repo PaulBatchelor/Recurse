@@ -66,3 +66,11 @@ nn debug_macro
 ln debug macro (dbg!)
 hl https://doc.rust-lang.org/std/macro.dbg.html
 tg rust macro debug
+
+nn potential_vcv
+hl https://github.com/dbonel/potential
+ln Potential VCV Rack modules: examples of VCV Rack modules
+ln written in Rust
+rm Introduced to me by Paolo, who was interested in getting
+rm Voxbox into a VCV Rack format.
+tg rust audio

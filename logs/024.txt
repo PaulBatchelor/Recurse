@@ -1,0 +1,21 @@
+@2024-06-12 Day 24.
+59 days left of batch.
+---
+Prev: Impossible day! I worked with JB to attempt to
+implement some audio-reactive effects in Swift. There was
+no time to do the FPGA stuff I had in mind.
+---
+Next: Finish up react tutorial @!(taskref
+"react-tic-tac-toe")!@, start reading the
+follow-up @!(task "react-thinking-in-react")!@, start
+working implementing on the rephasor in Rust.
+
+@08:00 Morning triage
+
+@08:21 Researching VCVRack + Rust plugins #voxbox-vcv
+See: @!(dzref "rust/potential_vcv")!@.
+
+@08:29 Uh-oh, janet bug in my day 23 logs
+Okay fixed. Glad that was an easy one.
+
+@08:31 Ready to publish, writing up Zulip check-in

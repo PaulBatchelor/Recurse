@@ -16,7 +16,7 @@ my focus up into two parts. Some of my time will be spent working
 with Jeff B drive some of his video filter with audio.
 The other part of my time will be spent doing research
 into FPGA gaming. I'll be studying @!(dzref
-"FPGA/openfpga_pong")!@ and @!(dzref "FPGA/another_world_5k)!@
+"FPGA/openfpga_pong")!@ and @!(dzref "FPGA/another_world_5k")!@
 
 @08:13 Morning Triage
 
