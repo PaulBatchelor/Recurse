@@ -82,3 +82,7 @@ log event parser.
 
 @quick-preset-export Hack up quick preset exporter for web demo
 
+@react-tic-tac-toe do react tic-tac-toe tutorial
+link: [[https://react.dev/learn/tutorial-tic-tac-toe]].
+
+@impossible-day Things related to impossible day, June 11th, 2024.

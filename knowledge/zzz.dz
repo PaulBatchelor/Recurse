@@ -12,3 +12,6 @@ cr related
 cx webdev/export_js webdev/react/quickstart
 cr referenced in the quickstart guide wanted to better understand
 cr what was meant by "export default".
+
+cx webdev/react/tic_tac_toe webdev/spread_syntax
+cr discovered spread syntax from react's tic tac toe tutorial

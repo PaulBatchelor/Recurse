@@ -19,3 +19,15 @@ See: @!(dzref "rust/potential_vcv")!@.
 Okay fixed. Glad that was an easy one.
 
 @08:31 Ready to publish, writing up Zulip check-in
+
+@08:57 Adding my react code up to this point to git #react-tic-tac-toe
+
+@09:28 React extension works now! #react-tic-tac-toe
+I probably needed to restart the browser.
+
+@09:57 Got slightly distracted on Zulip finding things related to career
+See: @!(career/system_design_primer)!@
+and @!(career/interactive_coding_challenges)!@.
+
+@10:12 Completed tutorial #react-tic-tac-toe
+There are some follow-ups that I'm probably not going to do.

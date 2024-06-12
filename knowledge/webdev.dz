@@ -25,6 +25,12 @@ nn textcontent_mdn
 hl https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
 ln textContent property in node
 
+nn spread_syntax
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+ln Spread Syntax in JS
+tg js mdn
+rm Initially discovered while doing React tic-tac-toe tutorial
+
 zz -------------------------------------------------------
 
 ns webdev/react
@@ -66,4 +72,12 @@ co $ component
 cr called from a component
 tg react
 
+nn tic_tac_toe
+hl https://react.dev/learn/tutorial-tic-tac-toe
+ln tic-tac-toe tutorial
+tg react tutorials
 
+nn key_property
+ln key property: special and reserved property in React.
+ln used to decide which elements to update.
+tg react

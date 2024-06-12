@@ -4,3 +4,14 @@ gr stuff related to forwarding my career
 nn RC_jobs_advice
 hl https://www.recurse.com/jobs/advice
 ln RC jobs advice
+
+nn system_design_primer
+hl https://github.com/donnemartin/system-design-primer
+ln System Design Primer
+rm Found on Zulip thread about system design prep
+
+nn interactive_coding_challenges
+hl https://github.com/donnemartin/interactive-coding-challenges
+ln Interactive coding challenges
+co $ system_design_primer
+cr same author
