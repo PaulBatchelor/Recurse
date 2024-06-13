@@ -47,7 +47,7 @@ rm thought I'd save it for later.
 
 nn descript
 ln descript: State-of-the-art audio codec with 90x compression factor.
-ln Supports 44.1kHz, 24kHz, and 16kHz mono/stereo audio. 
+ln Supports 44.1kHz, 24kHz, and 16kHz mono/stereo audio.
 hl https://github.com/descriptinc/descript-audio-codec
 tg codecs audio
 
@@ -63,7 +63,7 @@ hl https://arxiv.org/pdf/2210.13438
 
 nn coqtail
 hl https://softwarefoundations.cis.upenn.edu/lf-current/Basics.html
-ln Interactive Coq Proofs in Vim 
+ln Interactive Coq Proofs in Vim
 tg coq software_foundations
 td try to set up coqtail?
 
@@ -71,3 +71,9 @@ nn dotguide
 ln Drawing Graphs with dot
 hl https://www.graphviz.org/pdf/dotguide.pdf
 tg dot graphviz graph papers
+
+nn mouthplay
+hl https://dillonbastan.com/store/maxforlive/index.php?product=mouth-play
+ln mouthplay: max4live model instrument that offers unconventional
+ln shaping of vocal tract with sound sources.
+tg vocsynth max4live
