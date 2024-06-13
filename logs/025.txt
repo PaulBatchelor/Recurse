@@ -1,0 +1,23 @@
+@2024-06-13 Day 25.
+58 Days Left of Batch.
+---
+Prev: Tic-Tac-Toe in React, WASM Users Group, Audio Hang,
+Rephasor Implementation, Hackers! Also read the intro/preface
+of "Elements of Computing Systems".
+---
+Next: Gesture Path Algorithm @!(taskref "implement-gesture-path")!@,
+"Thinking In React" reading @!(taskref "react-thinking-in-react")!@,
+create vocal ensemble chords demo, @!(taskref "chords-demo")!@.
+
+@07:19 Morning Triage #morning-triage #timelog 19:25
+
+@07:27 initial thoughts on chords demo #morning-triage #chords-demo
+I'm thinking about building a simple web demo involving 4
+voices, reverb, and some buttons that allow you to switch
+between chords. Probably just 4 or 5 buttons with chord
+states. It would be cool to be able to switch out chord
+sounds too.
+
+@07:34 Getting ready to write Zulip Check-in
+
+@07:46 Final wrap-up

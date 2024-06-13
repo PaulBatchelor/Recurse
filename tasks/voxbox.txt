@@ -1,12 +1,5 @@
 @!desc tasks related to the voxbox project
 
-@implement-gesture-path implement initial gesture path
-In Gesture Synthesis, a path is a primitive construct
-that builds up a single gesture from a list of values,
-which are referred to as gesture vertices. A gesture vertice
-has 3 components: a scalar value, a rate multiplier that
-determines duration, and a behavior parameter that determines
-how to interpolate to the next value.
 
 @create-diams-interface create separate diameters interface
 In other words, don't include the diameters array/vector

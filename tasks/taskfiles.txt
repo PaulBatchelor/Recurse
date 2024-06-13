@@ -7,3 +7,4 @@ tasks/rust.txt
 tasks/done.txt
 tasks/voxbox.txt
 tasks/gamejam.txt
+tasks/web.txt

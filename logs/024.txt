@@ -7,7 +7,7 @@ no time to do the FPGA stuff I had in mind.
 ---
 Next: Finish up react tutorial @!(taskref
 "react-tic-tac-toe")!@, start reading the
-follow-up @!(task "react-thinking-in-react")!@, start
+follow-up @!(taskref "react-thinking-in-react")!@, start
 working implementing on the rephasor in Rust.
 
 @08:00 Morning triage
@@ -26,8 +26,8 @@ Okay fixed. Glad that was an easy one.
 I probably needed to restart the browser.
 
 @09:57 Got slightly distracted on Zulip finding things related to career
-See: @!(career/system_design_primer)!@
-and @!(career/interactive_coding_challenges)!@.
+See: @!(dzref "career/system_design_primer")!@
+and @!(dzref "career/interactive_coding_challenges")!@.
 
 @10:12 Completed tutorial #react-tic-tac-toe
 There are some follow-ups that I'm probably not going to do.
@@ -62,3 +62,16 @@ start time.
 @14:37 Initial implementation with example done #implement-rephasor
 
 @14:40 Back to the Hub.
+
+@15:00 WASM Users Group (WUG)
+
+@16:00 Audio Hang
+
+@17:00 Dinner
+
+@18:00 Return To Hub
+I found a hard copy of the Elements of Computing Systems
+and read the preface and intro
+
+@18:30 Hackers Movie Night!
+HACK THE PLANET!

@@ -1,4 +1,2 @@
 @!desc web-dev related tasks
 
-@react-thinking-in-react go through "thinking in react"
-link: [[https://react.dev/learn/thinking-in-react]].

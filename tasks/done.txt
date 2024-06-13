@@ -86,3 +86,7 @@ log event parser.
 link: [[https://react.dev/learn/tutorial-tic-tac-toe]].
 
 @impossible-day Things related to impossible day, June 11th, 2024.
+
+@implement-rephasor implement rephasor
+this is the core thing behind a gesture signal generator.
+

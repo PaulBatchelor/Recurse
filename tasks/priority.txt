@@ -1,12 +1,17 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@implement-rephasor implement rephasor
-this is the core thing behind a gesture signal generator.
+@morning-triage Daily morning triage of tasks
 
-@impl-gesture-path implement initial gesture path
-Instead of doing Uxn like Gestvm, just implement some
-structures in Rust. I imagine this will encapsulate a
-rephasor with some kind of Rust array/vector holding
-gesture vertices.
+@implement-gesture-path implement initial gesture path
+In Gesture Synthesis, a path is a primitive construct
+that builds up a single gesture from a list of values,
+which are referred to as gesture vertices. A gesture vertice
+has 3 components: a scalar value, a rate multiplier that
+determines duration, and a behavior parameter that determines
+how to interpolate to the next value.
 
+@chords-demo create vocal synthesizer "vocal chords" ensemble demo
+
+@react-thinking-in-react go through "thinking in react"
+link: [[https://react.dev/learn/thinking-in-react]].
