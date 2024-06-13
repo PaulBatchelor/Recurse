@@ -20,4 +20,60 @@ sounds too.
 
 @07:34 Getting ready to write Zulip Check-in
 
-@07:46 Final wrap-up
+@07:46 Final wrap-up for morning triage
+
+@07:56 What are we in for for? #react-thinking-in-react
+Looks like a small overview page, with some follow-up links.
+
+@07:57 Follow-up link tasks created #react-thinking-in-react #react-installation #react-describing-the-ui
+(Other tasks linked here).
+
+@07:59 Start reading. #react-thinking-in-react #timelog 30:12
+
+@08:36 off to whole foods
+I need to get chip clips (for holding my remarkable in place
+on easel) and maybe chocolate.
+
+@09:30 Back. What to do now?
+
+@09:35 planning things for this #create-dagzet-todo-page #timelog 12:20
+Thinking about abusing my tagging system in my logs
+to link TODO tasks with dagzet items. 
+
+@09:39 Added dztodo utility. #create-dagzet-todo-page
+It just worked out of the box which is nice.
+
+@09:41 just thought up the "timelog" hashtag convention today #create-time-log-format
+
+@09:42 attempt to link task to dznode #react-first-component #dz-webdev-react-your-first-component
+The "dz" is the prefix for a node in the dagzet. following that is the
+path, with slashes "/" replaced with dashes "-".
+---
+As a proof of concept, I'll need to write a program that can
+use this log entry to link the task it belongs to the dagzet
+node being referenced here.
+
+@09:44 Testing out linking #create-dagzet-todo-page #test-dz-log-task-linking
+I've also created a proof of concept
+
+@09:46 The test page will be react first component, linked here #test-dz-log-task-linking #react-first-component
+Will follow up on this... at some point.
+
+@09:58 Create Voice abstraction #chords-demo #timelog 33:14
+This will make it easier to spin up voice demos.
+---
+Moving Nose to its own file.
+---
+Creating Voice file with struct
+---
+Adding Voice example. Does this make the unused warning go away?
+Oh, nevermind. I wasn't making the struct public.
+
+@10:34 Break
+
+@10:47 Building up an initial chord #chords-demo #timelog 20:37
+Wow, it sounds bad.
+
+@11:20 Lunch
+
+@12:20 Better ah sound #chord-demo #timelog 59:04

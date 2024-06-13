@@ -1,0 +1,10 @@
+function query() {
+sqlite3 a.db <<EOM
+.mode tabs
+SELECT dz_nodes.name, task from dz_todo
+INNER JOIN dz_nodes on dz_nodes.id = dz_todo.node
+ORDER by dz_nodes.name
+EOM
+}
+
+query | awk -F"\t" '{print $1; print "    " $2}'

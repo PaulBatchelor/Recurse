@@ -31,6 +31,16 @@ ln Spread Syntax in JS
 tg js mdn
 rm Initially discovered while doing React tic-tac-toe tutorial
 
+nn single_responsibility_principle
+ln Single Responsibility Principle: A module should be responsible to one, and only one, actor.
+hl https://en.wikipedia.org/wiki/Single-responsibility_principle
+rm found while reading the "Thinking In React" page
+
+nn class_selectors
+ln Class Selectors
+hl https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors
+tg mdn css
+
 zz -------------------------------------------------------
 
 ns webdev/react
@@ -81,3 +91,36 @@ nn key_property
 ln key property: special and reserved property in React.
 ln used to decide which elements to update.
 tg react
+
+nn thinking_in_react
+ln Thinking In React
+hl https://react.dev/learn/thinking-in-react
+tg react
+
+nn state_components_memory
+ln State: A Components Memory
+hl https://react.dev/learn/state-a-components-memory
+co $ thinking_in_react
+cr referenced
+td read this
+
+nn your_first_component
+ln Your First Component
+hl https://react.dev/learn/your-first-component
+co $ thinking_in_react
+cr referenced
+td read this
+
+nn passing_props_component
+ln Passing Props to a Component
+hl https://react.dev/learn/passing-props-to-a-component
+co $ thinking_in_react
+cr referenced
+td read this
+
+nn usestate_ref
+ln useState reference
+hl https://react.dev/reference/react/useState
+co $ use_state
+co $ thinking_in_react
+cr referenced when talking about useState "Hooks"

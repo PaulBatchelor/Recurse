@@ -13,5 +13,4 @@ how to interpolate to the next value.
 
 @chords-demo create vocal synthesizer "vocal chords" ensemble demo
 
-@react-thinking-in-react go through "thinking in react"
-link: [[https://react.dev/learn/thinking-in-react]].
+@create-dagzet-todo-page Create dagzet TODO page

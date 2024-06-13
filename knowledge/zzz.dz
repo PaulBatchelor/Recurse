@@ -15,3 +15,9 @@ cr what was meant by "export default".
 
 cx webdev/react/tic_tac_toe webdev/spread_syntax
 cr discovered spread syntax from react's tic tac toe tutorial
+
+cx webdev/single_responsibility_principle webdev/react/thinking_in_react
+cr found "Single Responsibility Principle" whiled reading "Thinking In React"
+
+cx webdev/class_selectors webdev/react/thinking_in_react
+cr found while reading thinking in react, wasn't 100% clear on terminology

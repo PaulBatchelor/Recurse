@@ -90,3 +90,7 @@ link: [[https://react.dev/learn/tutorial-tic-tac-toe]].
 @implement-rephasor implement rephasor
 this is the core thing behind a gesture signal generator.
 
+@react-thinking-in-react go through "thinking in react"
+link: [[https://react.dev/learn/thinking-in-react]].
+
+@html-task-descriptions add descriptions to grouptask and task
