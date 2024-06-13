@@ -77,3 +77,10 @@ Wow, it sounds bad.
 @11:20 Lunch
 
 @12:20 Better ah sound #chord-demo #timelog 59:04
+
+@13:36 Tuning to Voce8 Eric Whitacre chord at 21s #chord-demo
+https://youtu.be/aynHSTsYcUo?t=21
+
+@14:21 Gesture Path Initial Scaffolding #implement-gesture-path #timelog 00:00
+
+@14:37 Moving over to linux box.
