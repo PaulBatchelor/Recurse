@@ -84,3 +84,9 @@ https://youtu.be/aynHSTsYcUo?t=21
 @14:21 Gesture Path Initial Scaffolding #implement-gesture-path #timelog 55:03
 
 @14:37 Moving over to linux box.
+
+@15:39 Let's see if I can get this design right for choosing the next vertex #implement-gesture-path #timelog 15:17
+
+@16:02 Got an initial trait that compiles. Not sure this is the design I want though. #implement-gesture-path
+
+@16:03 Off to Hub
