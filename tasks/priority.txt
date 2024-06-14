@@ -12,5 +12,3 @@ determines duration, and a behavior parameter that determines
 how to interpolate to the next value.
 
 @chords-demo create vocal synthesizer "vocal chords" ensemble demo
-
-@create-dagzet-todo-page Create dagzet TODO page

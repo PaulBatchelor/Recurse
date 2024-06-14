@@ -1,0 +1,19 @@
+@2024-06-14 Day 26.
+57 days left of batch.
+---
+Prev: Thinking In React @!(taskref "react-thinking-in-react")!@, 
+Some initial work on a potential chords demo
+@!(taskref "chords-demo")!@, some initial work on implementing
+a basic Gesture Path Algorithm in Rust @!(taskref
+"implement-gesture-path")!@, infrastructure in my
+task management system @!(taskref "create-dagzet-todo-page")!@.
+--
+Next: TBD.
+
+@09:00 Morning Triage #morning-triage #timelog 14:20
+
+@09:06 I have follow-ups to this now #create-dagzet-todo-page
+see: @!(taskref "test-dz-log-task-linking"). Calling
+this one done now.
+
+@09:14 Will return back to this. #morning-triage

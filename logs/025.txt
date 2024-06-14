@@ -38,7 +38,7 @@ on easel) and maybe chocolate.
 
 @09:35 planning things for this #create-dagzet-todo-page #timelog 12:20
 Thinking about abusing my tagging system in my logs
-to link TODO tasks with dagzet items. 
+to link TODO tasks with dagzet items.
 
 @09:39 Added dztodo utility. #create-dagzet-todo-page
 It just worked out of the box which is nice.
