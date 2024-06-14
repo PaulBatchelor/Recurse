@@ -47,3 +47,11 @@ I've created a new task called @!(taskref "react-describing-ui")!@.
 @10:52 Okay done with this section. #react-first-component #react-describing-ui
 I'll just be tacking on reading progress on this section
 on @!(taskref "react-describing-ui")!@ from this point forward.
+
+@11:02 Lunch
+
+@12:00 Play some guitar
+I've been trying to pick out "Fire and Rain" on acoustic
+guitar by ear.
+
+@12:36 Gesture path #implement-gesture-path #timelog 00:00
