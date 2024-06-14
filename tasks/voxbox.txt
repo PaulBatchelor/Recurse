@@ -16,7 +16,3 @@ It's important to me that I do this because I want to
 become familiar with some frontend technologies.
 
 @voxbox-tongue-interface improve tongue interface for voxbox
-
-@voxbox-size-control Control tract size in realtime?
-
-@voxbox-vcv Get voxbox ported to VCV rack

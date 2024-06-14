@@ -8,7 +8,11 @@ a basic Gesture Path Algorithm in Rust @!(taskref
 "implement-gesture-path")!@, infrastructure in my
 task management system @!(taskref "create-dagzet-todo-page")!@.
 --
-Next: TBD.
+Next: More React stuff @!(taskfref "react-first-component")!@,
+Continuing building out the initial gesture
+path @!(taskref "implement-gesture-path")!@, try to compile
+Potential VCV @!(taskref "compile-potential-vcv")!@,
+tract size control if there's time? @!(taskref "voxbox-size-control")!@.
 
 @09:00 Morning Triage #morning-triage #timelog 14:20
 
@@ -17,3 +21,14 @@ see: @!(taskref "test-dz-log-task-linking"). Calling
 this one done now.
 
 @09:14 Will return back to this. #morning-triage
+
+@09:25 Okay Back I think. #morning-triage #timelog 00:00
+
+@09:35 Working on Zulip Check-in.
+
+@09:45 Tract-size control would be helpful for finding shapes #voxbox-size-control
+I think the secret to getting a better ensemble sound is going to be
+tuning vowel shapes for each particular voice type (soprano,
+alto, tenor, bass). Each of these need slightly different
+tract sizes. It would be very helpful if there were a way
+to dynamically adjust the size. No idea if this would work.

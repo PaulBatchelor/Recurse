@@ -3,6 +3,8 @@ tasks that I intend to work on in the next few days or so.
 
 @morning-triage Daily morning triage of tasks
 
+@react-first-component read "react: your first component"
+
 @implement-gesture-path implement initial gesture path
 In Gesture Synthesis, a path is a primitive construct
 that builds up a single gesture from a list of values,
@@ -12,3 +14,11 @@ determines duration, and a behavior parameter that determines
 how to interpolate to the next value.
 
 @chords-demo create vocal synthesizer "vocal chords" ensemble demo
+
+@compile-potential-vcv attempt to compile and run potential VCV
+link: [[https://github.com/dbonel/potential]].
+
+@voxbox-size-control Control tract size in realtime?
+
+@react-installation read React: installation
+link: [[https://react.dev/learn/installation]].
