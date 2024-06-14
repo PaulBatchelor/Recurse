@@ -22,7 +22,7 @@ this one done now.
 
 @09:14 Will return back to this. #morning-triage
 
-@09:25 Okay Back I think. #morning-triage #timelog 00:00
+@09:25 Okay Back I think. #morning-triage #timelog 29:42
 
 @09:35 Working on Zulip Check-in.
 
@@ -32,3 +32,18 @@ tuning vowel shapes for each particular voice type (soprano,
 alto, tenor, bass). Each of these need slightly different
 tract sizes. It would be very helpful if there were a way
 to dynamically adjust the size. No idea if this would work.
+
+@10:07 Starting react: your first component. #react-first-component #timelog 41:03
+@10:10 You know what, I'm printing and sending this to my remarkable #react-first-component
+I don't want the eye strain reading on this OLED screen.
+
+@10:18 Printed all the sections in this chapter, including this one. #react-first-component #react-describing-ui
+I didn't realize how the documentation was organized. So,
+I've created a new task called @!(taskref "react-describing-ui")!@.
+
+@10:19 Making new chapter tasks, a bit of a tangent #react-first-component
+
+@10:25 Getting back to reading, now on RM.
+@10:52 Okay done with this section. #react-first-component #react-describing-ui
+I'll just be tacking on reading progress on this section
+on @!(taskref "react-describing-ui")!@ from this point forward.

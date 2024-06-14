@@ -3,8 +3,6 @@ tasks that I intend to work on in the next few days or so.
 
 @morning-triage Daily morning triage of tasks
 
-@react-first-component read "react: your first component"
-
 @implement-gesture-path implement initial gesture path
 In Gesture Synthesis, a path is a primitive construct
 that builds up a single gesture from a list of values,
@@ -20,5 +18,5 @@ link: [[https://github.com/dbonel/potential]].
 
 @voxbox-size-control Control tract size in realtime?
 
-@react-installation read React: installation
-link: [[https://react.dev/learn/installation]].
+@react-describing-ui Read "Describing UI" from "Learning React" series
+Link: [[https://react.dev/learn/describing-the-ui]].
