@@ -52,3 +52,5 @@ We have sound! More fiddling with voxbox gesture path required.
 @14:08 Tempo control #voxbox-linear-gesture-demo #timelog 20:38
 
 @14:30 Some initial write-ups #voxbox-linear-gesture-demo #timelog 19:01
+
+@14:51 Uploading to website. #timelog 3:33
