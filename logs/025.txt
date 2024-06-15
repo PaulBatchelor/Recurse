@@ -9,7 +9,7 @@ Next: Gesture Path Algorithm @!(taskref "implement-gesture-path")!@,
 "Thinking In React" reading @!(taskref "react-thinking-in-react")!@,
 create vocal ensemble chords demo, @!(taskref "chords-demo")!@.
 
-@07:19 Morning Triage #morning-triage #timelog 19:25
+@07:19 Morning Triage #morning-triage #timelog:19:25
 
 @07:27 initial thoughts on chords demo #morning-triage #chords-demo
 I'm thinking about building a simple web demo involving 4
@@ -28,7 +28,7 @@ Looks like a small overview page, with some follow-up links.
 @07:57 Follow-up link tasks created #react-thinking-in-react #react-installation #react-describing-the-ui
 (Other tasks linked here).
 
-@07:59 Start reading. #react-thinking-in-react #timelog 30:12
+@07:59 Start reading. #react-thinking-in-react #timelog:30:12
 
 @08:36 off to whole foods
 I need to get chip clips (for holding my remarkable in place
@@ -36,7 +36,7 @@ on easel) and maybe chocolate.
 
 @09:30 Back. What to do now?
 
-@09:35 planning things for this #create-dagzet-todo-page #timelog 12:20
+@09:35 planning things for this #create-dagzet-todo-page #timelog:12:20
 Thinking about abusing my tagging system in my logs
 to link TODO tasks with dagzet items.
 
@@ -59,7 +59,7 @@ I've also created a proof of concept
 @09:46 The test page will be react first component, linked here #test-dz-log-task-linking #react-first-component
 Will follow up on this... at some point.
 
-@09:58 Create Voice abstraction #chords-demo #timelog 33:14
+@09:58 Create Voice abstraction #chords-demo #timelog:33:14
 This will make it easier to spin up voice demos.
 ---
 Moving Nose to its own file.
@@ -71,20 +71,20 @@ Oh, nevermind. I wasn't making the struct public.
 
 @10:34 Break
 
-@10:47 Building up an initial chord #chords-demo #timelog 20:37
+@10:47 Building up an initial chord #chords-demo #timelog:20:37
 Wow, it sounds bad.
 
 @11:20 Lunch
 
-@12:20 Better ah sound #chord-demo #timelog 59:04
+@12:20 Better ah sound #chord-demo #timelog:59:04
 
 @13:36 Tuning to Voce8 Eric Whitacre chord at 21s #chord-demo
 https://youtu.be/aynHSTsYcUo?t=21
 
-@14:21 Gesture Path Initial Scaffolding #implement-gesture-path #timelog 55:03
+@14:21 Gesture Path Initial Scaffolding #implement-gesture-path #timelog:55:03
 
 @14:37 Moving over to linux box.
 
-@15:39 Let's see if I can get this design right for choosing the next vertex #implement-gesture-path #timelog 15:17
+@15:39 Let's see if I can get this design right for choosing the next vertex #implement-gesture-path #timelog:15:17
 
 @16:02 Got an initial trait that compiles. Not sure this is the design I want though. #implement-gesture-path

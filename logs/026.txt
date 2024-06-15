@@ -14,7 +14,7 @@ path @!(taskref "implement-gesture-path")!@, try to compile
 Potential VCV @!(taskref "compile-potential-vcv")!@,
 tract size control if there's time? @!(taskref "voxbox-size-control")!@.
 
-@09:00 Morning Triage #morning-triage #timelog 14:20
+@09:00 Morning Triage #morning-triage #timelog:14:20
 
 @09:06 I have follow-ups to this now #create-dagzet-todo-page
 see: @!(taskref "test-dz-log-task-linking")!@. Calling
@@ -22,7 +22,7 @@ this one done now.
 
 @09:14 Will return back to this. #morning-triage
 
-@09:25 Okay Back I think. #morning-triage #timelog 29:42
+@09:25 Okay Back I think. #morning-triage #timelog:29:42
 
 @09:35 Working on Zulip Check-in.
 
@@ -33,7 +33,7 @@ alto, tenor, bass). Each of these need slightly different
 tract sizes. It would be very helpful if there were a way
 to dynamically adjust the size. No idea if this would work.
 
-@10:07 Starting react: your first component. #react-first-component #timelog 41:03
+@10:07 Starting react: your first component. #react-first-component #timelog:41:03
 @10:10 You know what, I'm printing and sending this to my remarkable #react-first-component
 I don't want the eye strain reading on this OLED screen.
 
@@ -54,9 +54,9 @@ on @!(taskref "react-describing-ui")!@ from this point forward.
 I've been trying to pick out "Fire and Rain" on acoustic
 guitar by ear.
 
-@12:36 Setting up example file scaffolding #implement-gesture-path #timelog 14:18
+@12:36 Setting up example file scaffolding #implement-gesture-path #timelog:14:18
 
-@12:54 Trying to work out how path arguments will work #implement-gesture-path #timelog 13:59
+@12:54 Trying to work out how path arguments will work #implement-gesture-path #timelog:13:59
 I think the path argument might just be a reference to an array
 of gesture vertices, which seems to mean lifetimes. no no, this
 will be good for me.
@@ -65,15 +65,15 @@ will be good for me.
 In theory, I think I have something that *might* work. But now I have
 to get back to interfaces.
 
-@13:08 Trying to get the traits working to fit my mental model #implement-gesture-path #timelog 41:46
+@13:08 Trying to get the traits working to fit my mental model #implement-gesture-path #timelog:41:46
 
-@13:51 Let's see what works and what breaks in the example #implement-gesture-path #timelog 59:04
+@13:51 Let's see what works and what breaks in the example #implement-gesture-path #timelog:59:04
 Amazingly, it seems to mostly work.
 
 @14:40 There's a bit of a logic bug. #implement-gesture-path
 Right now the example timings are off.
 
-@14:53 Get the example to sing tom's diner #implement-gesture-path #timelog 30:20
+@14:53 Get the example to sing tom's diner #implement-gesture-path #timelog:30:20
 I realized I had to make sure behavior logic was working as
 expected =(Aval -> (A_dur, A_bhvr) -> B_val)=
 
@@ -90,7 +90,7 @@ Reading through Rack dev tutorial [[https://vcvrack.com/manual/Building]]
 ---
 Okay this is going to take a while. Sigh. Will get back to this.
 
-20:30 Back at it #compile-potential-vcv #timelog 17:22
+20:30 Back at it #compile-potential-vcv #timelog:17:22
 20:45 It builds, and it seems to open up in VCV Rack #compile-potential-vcv
 I put the potential repo in the plugins folder of the Rack
 directory. Also, compiled Rack from source.
