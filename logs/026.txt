@@ -2,13 +2,13 @@
 57 days left of batch.
 ---
 Prev: Thinking In React @!(taskref "react-thinking-in-react")!@, 
-Some initial work on a potential chords demo
-@!(taskref "chords-demo")!@, some initial work on implementing
+Some initial work on a potential chords demo @!(taskref "chords-demo")!@,
+some initial work on implementing
 a basic Gesture Path Algorithm in Rust @!(taskref
 "implement-gesture-path")!@, infrastructure in my
 task management system @!(taskref "create-dagzet-todo-page")!@.
 --
-Next: More React stuff @!(taskfref "react-first-component")!@,
+Next: More React stuff @!(taskref "react-first-component")!@,
 Continuing building out the initial gesture
 path @!(taskref "implement-gesture-path")!@, try to compile
 Potential VCV @!(taskref "compile-potential-vcv")!@,
@@ -17,7 +17,7 @@ tract size control if there's time? @!(taskref "voxbox-size-control")!@.
 @09:00 Morning Triage #morning-triage #timelog 14:20
 
 @09:06 I have follow-ups to this now #create-dagzet-todo-page
-see: @!(taskref "test-dz-log-task-linking"). Calling
+see: @!(taskref "test-dz-log-task-linking")!@. Calling
 this one done now.
 
 @09:14 Will return back to this. #morning-triage
@@ -78,3 +78,21 @@ I realized I had to make sure behavior logic was working as
 expected =(Aval -> (A_dur, A_bhvr) -> B_val)=
 
 @15:24 It's working! Adding example to this repo #implement-gesture-path
+
+@16:03 Off to Hub
+
+@16:15 Jam With Dan and Scott, Midinous
+
+@20:09 Trying to compile potential vcv now #compile-potential-vcv
+Got a make error.
+---
+Reading through Rack dev tutorial [[https://vcvrack.com/manual/Building]]
+---
+Okay this is going to take a while. Sigh. Will get back to this.
+
+20:30 Back at it #compile-potential-vcv #timelog 17:22
+20:45 It builds, and it seems to open up in VCV Rack #compile-potential-vcv
+I put the potential repo in the plugins folder of the Rack
+directory. Also, compiled Rack from source.
+
+21:00 Okay I've seen enough. I'll have to see what I can do to study this. #compile-potential-vcv

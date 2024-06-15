@@ -23,3 +23,4 @@ logs/022.txt
 logs/023.txt
 logs/024.txt
 logs/025.txt
+logs/026.txt
