@@ -16,3 +16,6 @@ It's important to me that I do this because I want to
 become familiar with some frontend technologies.
 
 @voxbox-tongue-interface improve tongue interface for voxbox
+
+@voxbox-linear-gesture-demo Create gesture demo
+Use the Tom's Diner linear gesture example

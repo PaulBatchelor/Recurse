@@ -90,3 +90,19 @@ https://youtu.be/aynHSTsYcUo?t=21
 @16:02 Got an initial trait that compiles. Not sure this is the design I want though. #implement-gesture-path
 
 @16:03 Off to Hub
+
+@16:15 Jam With Dan and Scott
+
+@20:09 Trying to compile potential vcv now #compile-potential-vcv
+Got a make error.
+---
+Reading through Rack dev tutorial [[https://vcvrack.com/manual/Building]]
+---
+Okay this is going to take a while. Sigh. Will get back to this.
+
+20:30 Back at it #compile-potential-vcv #timelog 17:22
+20:45 It builds, and it seems to open up in VCV Rack #compile-potential-vcv
+I put the potential repo in the plugins folder of the Rack
+directory. Also, compiled Rack from source.
+
+21:00 Okay I've seen enough. I'll have to see what I can do to study this. #compile-potential-vcv
