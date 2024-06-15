@@ -10,11 +10,3 @@ tasks that I intend to work on in the next few days or so.
 @react-describing-ui Read "Describing UI" from "Learning React" series
 Link: [[https://react.dev/learn/describing-the-ui]].
 
-@voxbox-linear-gesture-demo Create gesture demo
-Use the Tom's Diner linear gesture example
-
-@create-time-log-format Create a time log format
-I'm starting to think that maybe I want to do time
-tracking again in some form to measure how
-many hours a particular task takes.
-
