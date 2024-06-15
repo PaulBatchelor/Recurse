@@ -1,0 +1,29 @@
+sqlite3 a.db <<EOM
+.mode tabs
+WITH timelogs as (SELECT logid,
+    strftime('%s', substr(tag, 9)) - strftime('%s', '00:00:00')
+    --substr(tag, 9)
+    as duration
+    FROM logtags WHERE
+    tag LIKE 'timelog%'),
+
+timelogids as (SELECT logid from timelogs),
+
+timed_tasks as (SELECT tag, logid FROM logtags WHERE
+    logid in timelogids
+    AND tag NOT like 'timelog%'),
+
+totalsecs as (SELECT 
+    timed_tasks.tag as taskname,
+    SUM(timelogs.duration) as seconds FROM timed_tasks
+INNER JOIN timelogs on timelogs.logid = timed_tasks.logid
+GROUP by taskname
+)
+
+
+SELECT taskname, time(seconds, 'unixepoch') FROM totalsecs 
+-- ORDER by seconds DESC
+;
+
+
+EOM

@@ -1,5 +1,5 @@
 descript = require("tools/descript")
-pp = require("pprint")
+--pp = require("pprint")
 
 function basename(str)
 	local name = string.gsub(str, "(.*/)(.*)", "%2")
