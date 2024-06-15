@@ -63,3 +63,6 @@ We have sound! More fiddling with voxbox gesture path required.
 Units will be in CM, and there won't be any interpolation.
 ---
 I can't believe it worked haha.
+
+@18:52 Okay time to make this stuff sound better in the chords demo #timelog:00:42:48
+Things are starting to sound pretty.
