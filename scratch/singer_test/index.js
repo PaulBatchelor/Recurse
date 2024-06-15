@@ -17,6 +17,7 @@ class SingerWorkletNode extends AudioWorkletNode {
         this.set_noise_floor(0.1);
         this.set_shape(0.4);
         this.set_velum(0.0);
+        this.set_length(13.0);
     }
 
     set_pitch(pitch) {
@@ -51,6 +52,11 @@ class SingerWorkletNode extends AudioWorkletNode {
     set_velum(velum) {
         this.data.velum = velum;
         this.port.postMessage({type: "velum", data: velum});
+    }
+
+    set_length(length) {
+        this.data.tract_length = length;
+        this.port.postMessage({type: "length", data: length});
     }
 }
 
@@ -158,7 +164,7 @@ function capitalizeFirstLetter(str) {
 
 function add_glottal_controls() {
     const glottal_control = document.getElementById('glottal-control');
-    pitch = addHorizSlider("pitch", 40, 80, 65, 1,
+    pitch = addHorizSlider("pitch", 26, 86, 65, 1,
         (value) => {
             if (SingerNode !== null) {
                 SingerNode.set_pitch(value);
@@ -204,6 +210,16 @@ function add_glottal_controls() {
     glottal_control.appendChild(aspiration);
     glottal_control.appendChild(noise_floor);
     glottal_control.appendChild(velum);
+
+    tract_length = addHorizSlider("length", 8.0, 25.0, 13.0, 0.1,
+        (value) => {
+            if (SingerNode !== null) {
+                SingerNode.set_length(value);
+            }
+        });
+    SingerController.tract_length = tract_length;
+
+    glottal_control.appendChild(tract_length);
 }
 
 audioStarted = false

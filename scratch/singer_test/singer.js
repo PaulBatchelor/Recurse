@@ -39,6 +39,8 @@ class SingerSynth extends AudioWorkletProcessor {
             this.wasm.exports.set_velum(this.dsp, event.data);
         } else if (event.type === "regset") {
             this.wasm.exports.set_region(this.dsp, event.region, event.value);
+        } else if (event.type === "length") {
+            this.wasm.exports.set_length(this.dsp, event.data);
         }
     }
 

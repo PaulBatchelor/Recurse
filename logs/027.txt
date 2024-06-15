@@ -58,3 +58,8 @@ We have sound! More fiddling with voxbox gesture path required.
 @16:02 Experimenting with timelog querying in SQLite #create-time-log-format #timelog:00:50:31
 
 @16:55 Commandline tool "timelog" made. Good enough for my needs #create-time-log-format
+
+@18:29 Going to implement crude tract size control #voxbox-size-control #timelog:00:52:41
+Units will be in CM, and there won't be any interpolation.
+---
+I can't believe it worked haha.

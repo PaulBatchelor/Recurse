@@ -33,7 +33,7 @@ pub fn mtof(nn: f32) -> f32 {
 
 impl SingerSynth {
     pub fn new(sr: u32) -> SingerSynth {
-        let tract_size_cm = 13.0;
+        let tract_size_cm = 25.0;
         let oversample = 2;
         let mut ss = SingerSynth {
             counter: 0,
@@ -70,7 +70,7 @@ impl SingerSynth {
         self.amp.set_freq(0.3);
         let vib = sin(self.vib.tick());
         let shaper = sin(self.shaper.tick());
-        let amp = sin(self.amp.tick());
+        // let amp = sin(self.amp.tick());
 
         for i in 0 .. 8 {
             self.shape[i] =
@@ -153,4 +153,9 @@ pub extern "C" fn set_shape(dsp: &mut SingerSynth, val: f32) {
 #[no_mangle]
 pub extern "C" fn set_velum(dsp: &mut SingerSynth, val: f32) {
     dsp.nose.set_velum(val);
+}
+
+#[no_mangle]
+pub extern "C" fn set_length(dsp: &mut SingerSynth, val: f32) {
+    dsp.tract.set_length(val);
 }
