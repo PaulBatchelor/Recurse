@@ -10,13 +10,13 @@ next:
 tract size control.
 @!(taskref "react-describing-ui")!@: read more from the
 "describing the UI" chapter from React website.
-@!(taskref "voxbox-linear-gestsure-demo")!@: create a linear
+@!(taskref "voxbox-linear-gesture-demo")!@: create a linear
 gesture webaudio demo from the "tom's diner" example I made
 yesterday.
 @!(taskref "create-time-log-format")!@: start building out workable
 code
 
-@10:00 Morning triage. #timelog 00:00
+@10:00 Morning triage. #timelog 27:00
 
 @10:14 Chords demo could benefit from having interactive tract size. #chords-demo #voxbox-size-control
 The issue with the chords at the moment is that the voice
@@ -33,3 +33,11 @@ able to parse it.
 
 @10:27 Okay it works again
 I forgot to close out an inline Janet expression.
+
+@11:03 Set up some initial boilerplate files for gesture demo #voxbox-linear-gesture-demo #timelog 00:00
+
+@11:42 oh boy, lifetimes #voxbox-linear-gesture-demo
+
+@11:51 maybe I should be using vectors here? #voxbox-linear-gesture-demo
+
+@12:03 Trying to rework things so that the linear gesture doesn't need the path upfront #voxbox-linear-gesture-demo
