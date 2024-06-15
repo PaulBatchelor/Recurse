@@ -34,10 +34,21 @@ able to parse it.
 @10:27 Okay it works again
 I forgot to close out an inline Janet expression.
 
-@11:03 Set up some initial boilerplate files for gesture demo #voxbox-linear-gesture-demo #timelog 00:00
+@11:03 Set up some initial boilerplate files for gesture demo #voxbox-linear-gesture-demo #timelog 1:28:37
 
 @11:42 oh boy, lifetimes #voxbox-linear-gesture-demo
 
 @11:51 maybe I should be using vectors here? #voxbox-linear-gesture-demo
 
 @12:03 Trying to rework things so that the linear gesture doesn't need the path upfront #voxbox-linear-gesture-demo
+
+@12:33 Okay taking a break from this. Still running into ownership problems #voxbox-linear-gesture-demo
+
+@13:45 Did some (re)-reading on the lifetimes chapter, and other research #voxbox-linear-gesture-demo #timelog 10:30
+
+@13:57 Things seem to build. Now, will it play? #voxbox-linear-gesture-demo #timelog 10:29
+We have sound! More fiddling with voxbox gesture path required.
+
+@14:08 Tempo control #voxbox-linear-gesture-demo #timelog 20:38
+
+@14:30 Some initial write-ups #voxbox-linear-gesture-demo #timelog 19:01

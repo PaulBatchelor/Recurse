@@ -3,12 +3,43 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="stylesheet" href="style.css">
         <title>Gesture Demo</title>
     </head>
     <body>
         <p>
         <button id="button-begin">BEGIN</button>
         </p>
+        <div id="controls">
+        </div>
+
+        <p>This demo aims to showcase the Gesture Synthesis Algorithm,
+        which can be thought of as the "SVG for audio-rate line generators".</p>
+       
+        <p>
+        After clicking begin, what will be heard is a vocal
+        synthesizer performing a rendition of the riff from
+        "Tom's Diner" by Suzanne Varga (notably one of the first songs
+        ever to be encoded to the mp3 format). Moving the
+        tempo slider will change the speed at which this
+        vocal melody is performed.
+        </p>
+
+        <p>
+        Notice how the legato jumps between
+        the notes will instantaneously stretch or squash relative to the tempo
+        changes. This is a key characteristic of the Gesture
+        Synthesis Algorithm. This is accomplished by using
+        an audio-rate phasor signal as a clock source. The 
+        Gesture Signal Generator controlling the pitch
+        then takes this phasor signal and uses it to control
+        timing between lines relative to the speed of the
+        phasor using a phase-locked loop. When the tempo
+        of the clock is changed, the gesture signal generator
+        is able to adapt and respond to the changes within
+        a few samples.
+        </p>
+
         <script src="index.js"></script>
     </body>
 </html>
