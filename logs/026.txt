@@ -54,4 +54,27 @@ on @!(taskref "react-describing-ui")!@ from this point forward.
 I've been trying to pick out "Fire and Rain" on acoustic
 guitar by ear.
 
-@12:36 Gesture path #implement-gesture-path #timelog 00:00
+@12:36 Setting up example file scaffolding #implement-gesture-path #timelog 14:18
+
+@12:54 Trying to work out how path arguments will work #implement-gesture-path #timelog 13:59
+I think the path argument might just be a reference to an array
+of gesture vertices, which seems to mean lifetimes. no no, this
+will be good for me.
+
+@12:58 Refreshing myself on lifetimes in the Rust book #implement-gesture-path
+In theory, I think I have something that *might* work. But now I have
+to get back to interfaces.
+
+@13:08 Trying to get the traits working to fit my mental model #implement-gesture-path #timelog 41:46
+
+@13:51 Let's see what works and what breaks in the example #implement-gesture-path #timelog 59:04
+Amazingly, it seems to mostly work.
+
+@14:40 There's a bit of a logic bug. #implement-gesture-path
+Right now the example timings are off.
+
+@14:53 Get the example to sing tom's diner #implement-gesture-path #timelog 30:20
+I realized I had to make sure behavior logic was working as
+expected =(Aval -> (A_dur, A_bhvr) -> B_val)=
+
+@15:24 It's working! Adding example to this repo #implement-gesture-path
