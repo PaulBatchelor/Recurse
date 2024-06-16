@@ -36,4 +36,6 @@ slowly creeping back in.
 Eventually, I'd like to generate interactive pages of code,
 but that can wait.
 
-@15:09 Okay let's get studying #vcv-potential-study
+@15:09 Okay let's get studying #vcv-potential-study #timelog:01:01:44
+
+@16:24 Trying to make dztodo filterable

@@ -1,8 +1,16 @@
+LIKESTR="%"
+
+if [ "$#" -gt 0 ]
+then
+    LIKESTR=$1
+fi
+
 function query() {
 sqlite3 a.db <<EOM
 .mode tabs
 SELECT dz_nodes.name, task from dz_todo
 INNER JOIN dz_nodes on dz_nodes.id = dz_todo.node
+WHERE dz_nodes.name LIKE '$LIKESTR'
 ORDER by dz_nodes.name
 EOM
 }
