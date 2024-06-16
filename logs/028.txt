@@ -39,3 +39,7 @@ but that can wait.
 @15:09 Okay let's get studying #vcv-potential-study #timelog:01:01:44
 
 @16:24 Trying to make dztodo filterable
+
+@16:27 break
+
+@16:43 Attempt to make a chord progression using gesture #chords-demo #timelog:01:45:00
