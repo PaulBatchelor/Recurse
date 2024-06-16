@@ -1,0 +1,11 @@
+ns codestudy/potential
+gr Study notes for some code files from the Potential plugin
+gr VCVRack suite.
+
+nn github
+hl https://github.com/dbonel/potential
+ln Gihub Link for source code
+
+nn test_reference
+ln Just a test reference
+fr codestudy/potential/plugin.cpp 12 14

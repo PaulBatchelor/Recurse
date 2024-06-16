@@ -339,6 +339,22 @@ function get_position(db, nid)
     return pos
 end
 
+function get_file_ranges(db, nid)
+    local stmt = db:prepare(
+        "SELECT filename, start, end FROM dz_file_ranges " ..
+        "WHERE node == " .. nid ..
+        " LIMIT 1;"
+    )
+
+    local fr = nil
+    for row in stmt:nrows() do
+        fr = row
+    end
+
+    stmt:finalize()
+    return fr
+end
+
 
 function generate_node_data(nodes, connections, namespace, db, nid)
     local children = get_children(connections, nid)
@@ -351,6 +367,7 @@ function generate_node_data(nodes, connections, namespace, db, nid)
     local img = get_image(db, nid)
     local pos = get_position(db, nid)
     local audio = get_audio(db, nid)
+    local franges = get_file_ranges(db, nid)
 
     local ns = namespace
     local node = {}
@@ -418,6 +435,7 @@ function generate_node_data(nodes, connections, namespace, db, nid)
     node.position = pos
     node.nid = nid
     node.audio = audio
+    node.file_ranges = franges
 
     return node, children
 end

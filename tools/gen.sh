@@ -9,3 +9,6 @@
 ./tools/gentasks.sh
 ./tools/generate_task_pages.sh
 ./tools/generate_taskgroup_pages.sh
+
+# code study
+./tools/import_codestudy.sh

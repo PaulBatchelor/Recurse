@@ -31,3 +31,7 @@ that out now.
 @14:28 I have once again installed NERDTree to help me out #vcv-potential-study
 I stripped my editor of all features a while ago, now they are
 slowly creeping back in.
+
+@14:46 Gotta make file ranges visisble in HTML output #vcv-potential-study
+Eventually, I'd like to generate interactive pages of code,
+but that can wait.

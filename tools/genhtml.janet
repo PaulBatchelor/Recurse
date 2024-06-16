@@ -251,6 +251,18 @@
         "\"><audio>")
       ))
 
+     (if-not
+       (nil? (nd "file_ranges"))
+       (table-keyval
+         "file reference"
+         (string
+           ((nd "file_ranges") "filename")
+           ":"
+           ((nd "file_ranges") "start")
+           (if-not
+             (nil? ((nd "file_ranges") "end"))
+             (string "-" ((nd "file_ranges") "end"))))))
+
      (print "</table><br>")
 
      (if (any-messages? namespace (nd "name"))
