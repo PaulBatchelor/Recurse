@@ -298,6 +298,10 @@ window.addEventListener('load', async () => {
                 update_param(data.shape, SingerController.shape);
             }
 
+            if (data.tract_length !== null) {
+                update_param(data.tract_length, SingerController.tract_length);
+            }
+
             if (data.regions !== null) {
                 console.log("regions: " + data.regions);
                 nregions = data.regions.length;
