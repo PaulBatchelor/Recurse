@@ -5,8 +5,7 @@ tasks that I intend to work on in the next few days or so.
 
 @chords-demo create vocal synthesizer "vocal chords" ensemble demo
 
-@voxbox-size-control Control tract size in realtime?
-
 @react-describing-ui Read "Describing UI" from "Learning React" series
 Link: [[https://react.dev/learn/describing-the-ui]].
 
+@vcv-potential-study study the VCV Potential Plugin Code
