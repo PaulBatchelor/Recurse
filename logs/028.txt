@@ -35,3 +35,5 @@ slowly creeping back in.
 @14:46 Gotta make file ranges visisble in HTML output #vcv-potential-study
 Eventually, I'd like to generate interactive pages of code,
 but that can wait.
+
+@15:09 Okay let's get studying #vcv-potential-study

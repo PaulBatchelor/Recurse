@@ -21,3 +21,6 @@ cr found "Single Responsibility Principle" whiled reading "Thinking In React"
 
 cx webdev/class_selectors webdev/react/thinking_in_react
 cr found while reading thinking in react, wasn't 100% clear on terminology
+
+cx rust/std_iter codestudy/potential/bipolar_iter
+cx rust/std_iter_zip codestudy/potential/bipolar_zip

@@ -74,3 +74,13 @@ ln written in Rust
 rm Introduced to me by Paolo, who was interested in getting
 rm Voxbox into a VCV Rack format.
 tg rust audio
+
+nn std_iter
+ln std::iter
+hl https://doc.rust-lang.org/std/iter/
+tg rust rust_std
+
+nn std_iter_zip
+ln std::iter::zip
+hl https://doc.rust-lang.org/std/iter/fn.zip.html
+tg rust rust_std

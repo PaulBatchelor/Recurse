@@ -260,7 +260,7 @@
            ":"
            ((nd "file_ranges") "start")
            (if-not
-             (nil? ((nd "file_ranges") "end"))
+             (< ((nd "file_ranges") "end") 0)
              (string "-" ((nd "file_ranges") "end"))))))
 
      (print "</table><br>")
