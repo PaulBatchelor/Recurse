@@ -2,3 +2,12 @@
 
 @react-installation read React: installation
 link: [[https://react.dev/learn/installation]].
+
+@react-adding-interactivity read React: adding interactivity
+link [[https://react.dev/learn/adding-interactivity]].
+
+@react-managing-state read React: managing state
+link [[https://react.dev/learn/managing-state]].
+
+@react-escape-hatches read React: escape hatches
+link [[https://react.dev/learn/escape-hatches]].

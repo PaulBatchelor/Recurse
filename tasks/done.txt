@@ -120,3 +120,7 @@ many hours a particular task takes.
 
 @voxbox-size-control Control tract size in realtime?
 
+@rework-rectangles rework rectangles in floppy
+rectangles are objects that one collides into. rework
+so rectanlges themselves are immutable, and only draw
+visible rectangles.

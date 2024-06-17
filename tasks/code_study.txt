@@ -1,2 +1,5 @@
 @study-termimad code study: termimad
 https://github.com/Canop/termimad
+
+@study-synthkit code study: synthkit
+link: [[https://github.com/sedson/SynthKit]]

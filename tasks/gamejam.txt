@@ -1,6 +1,1 @@
 @!desc tasks related to gamejam.
-
-@rework-rectangles rework rectangles in floppy
-rectangles are objects that one collides into. rework
-so rectanlges themselves are immutable, and only draw
-visible rectangles.

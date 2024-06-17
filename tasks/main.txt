@@ -14,3 +14,5 @@ https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/
 
 @voxbox-vcv Get voxbox ported to VCV rack
 
+@add-demos-page create a working demos page
+The current page can be found at @!(ref "demos")!@.

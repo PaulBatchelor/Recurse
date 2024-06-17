@@ -9,3 +9,11 @@ tasks that I intend to work on in the next few days or so.
 Link: [[https://react.dev/learn/describing-the-ui]].
 
 @vcv-potential-study study the VCV Potential Plugin Code
+
+@voxbox-tongue-interface improve tongue interface for voxbox
+
+@voxbox-change-nose-length change nose length
+
+@voxbox-better-size-control Improve tract size/length control with interpolation
+
+@htmlize-codestudy-files HTMLize code study files

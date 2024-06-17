@@ -15,6 +15,4 @@ an "ah"), then crossfade to another
 It's important to me that I do this because I want to
 become familiar with some frontend technologies.
 
-@voxbox-tongue-interface improve tongue interface for voxbox
-
-@voxbox-better-size-control Improve tract size/length control with interpolation
+@demo-tongue build tongue control demo

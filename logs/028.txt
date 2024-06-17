@@ -9,10 +9,10 @@ linear gesture demo, some sound design work on
 ---
 Next:
 
-@!(taskref "react-describing-ui")!@: read more from the
+|| @!(taskref "react-describing-ui")!@: read more from the
 "describing the UI" chapter from React website.
 
-@!(taskref "vcv-potential-study")!@: study the VCV potential
+|| @!(taskref "vcv-potential-study")!@: study the VCV potential
 plugin code.
 
 @14:08 starting this log

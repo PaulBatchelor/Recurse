@@ -6,14 +6,14 @@ path algorithm, got potential VCV plugin to compile and run,
 messed around with midinous with Dan and Scott.
 ---
 next:
-@!(taskref "voxbox-size-control")!@: experiment with realtime
+|| @!(taskref "voxbox-size-control")!@: experiment with realtime
 tract size control.
-@!(taskref "react-describing-ui")!@: read more from the
+|| @!(taskref "react-describing-ui")!@: read more from the
 "describing the UI" chapter from React website.
-@!(taskref "voxbox-linear-gesture-demo")!@: create a linear
+|| @!(taskref "voxbox-linear-gesture-demo")!@: create a linear
 gesture webaudio demo from the "tom's diner" example I made
 yesterday.
-@!(taskref "create-time-log-format")!@: start building out workable
+|| @!(taskref "create-time-log-format")!@: start building out workable
 code
 
 @10:00 Morning triage. #timelog:00:27:00

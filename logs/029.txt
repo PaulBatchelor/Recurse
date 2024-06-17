@@ -1,0 +1,56 @@
+@2024-06-17 Day 29. Start of Week 5?
+54 Days Left of Batch.
+---
+I am thinking about next week being the week I send my
+laptop in for repair. I do have my other computer, a NUC
+running Alpine Linux, but it's a very specialized
+computer. I won't be able to do much web stuff, but
+most Rust stuff will be fine.
+---
+Prev: More work on chord demo, studied VCV Rack Potential
+code using annotation @!(dzref "codestudy/potential")!@,
+set up code annotation tooling, React reading.
+---
+Next:
+
+|| @!(taskref "vcv-potential-study")!@: wrap-up initial
+review, follow up on TODOs made yesterday (dztodo).
+
+|| @!(taskref "chords-demo")!@: Build out initial interactive demo
+based on example.
+
+|| @!(taskref "voxbox-tongue-interface")!@: re-work the tongue
+control interface so it can work with arbitrary sizes.
+
+|| @!(taskref "htmlize-codestudy-files")!@: begin work
+on htmlizing code study files.
+
+@07:55 Morning triage
+
+@08:22 How to make this more actionable? #demo-react-UI
+When I initially wrote this, I didn't really know what
+it is I was talking about.
+---
+The goal here is to be able to use a NameBrand JS Framework
+to get better at understanding how this tool works. I think
+when I initially wrote this, I was imagining React to be
+more of a widget library, when really it's more about
+managing state of the widgets, and the widgets are
+somewhere else.
+---
+Perhaps what I really want are some nice looking sliders
+with CSS, and then using React to manage the state of these?
+
+@08:38 Writing Zulip Check-in message
+
+@09:05 Time to schedule an apple appoint for this screen. Sigh. Goodbye money.
+
+@09:19 Well, I forgot the password to my apple ID again.
+I don't have any other apple device, so this is a painful
+experience. Do I even bother?
+
+@09:59 Did some Zoom experiments on my Nuc
+Surprisingly, it seems to work on Alpine for now. It's
+nice to know that I can use that as an option in a pinch.
+
+@10:01 Getting ready to go to hub.
