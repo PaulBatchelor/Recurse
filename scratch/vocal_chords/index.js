@@ -4,10 +4,20 @@ let SingerNode = null;
 class VocalChordsWorkletNode extends AudioWorkletNode {
     constructor(context, name, options) {
         super(context, name, options);
+        this.base = 63;
     }
 
-    set_tempo(tempo) {
-        this.port.postMessage({type: "tempo", data: tempo});
+    setChordWithBase(chord, base) {
+        for (let i = 0; i < 4; i++) {
+            chord[i] *= Math.sign(base);
+            chord[i] += base;
+        }
+
+        this.port.postMessage({type: "chord", data: chord});
+    }
+
+    setChord(chord) {
+        this.setChordWithBase(chord, this.base);
     }
 
 }
@@ -45,15 +55,16 @@ function capitalizeFirstLetter(str) {
 }
 
 function add_controls() {
-    // const controls = document.getElementById('controls');
-    // tempo = addHorizSlider("tempo", 40, 200, 100, 1,
-    //     (value) => {
-    //         if (SingerNode !== null) {
-    //             SingerNode.set_tempo(value);
-    //         }
-    //     });
-
-    // controls.appendChild(tempo);
+    const controls = document.getElementById('controls');
+    const btn = document.createElement('button');
+    btn.textContent = "Chord1";
+   
+    btn.addEventListener('click', () => {
+        if (SingerNode !== null) {
+            SingerNode.setChord([0, 7, 0, 4]);
+        }
+    });
+    controls.appendChild(btn);
 }
 
 const startAudio = async (context) => {

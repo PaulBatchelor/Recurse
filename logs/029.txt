@@ -68,3 +68,13 @@ nice to know that I can use that as an option in a pinch.
 @12:44 Back to scheduling a genius appointment for my cracked screen
 
 @12:48 More boilerplate code setup? #chords-demo #timelog:00:10:00
+
+@13:00 C Creatures
+
+@14:00 Lunch
+
+@15:32 Initial sounds work, now more sounds. #chords-demo #timelog:01:07:57
+
+@16:46 OSC protocol
+/voc/pitch, /voc/velum, /voc/tongue/x, /voc/tongue/y,
+/voc/volume

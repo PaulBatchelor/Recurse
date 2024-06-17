@@ -27,8 +27,12 @@ class SingerSynth extends AudioWorkletProcessor {
     }
 
     onmessage(event) {
-        if (event.type === "tempo") {
-            this.wasm.exports.set_tempo(this.dsp, event.data);
+        if (event.type === "chord") {
+            let chord = event.data;
+
+            for (let i = 0; i < 4; i++) {
+                this.wasm.exports.set_pitch(this.dsp, i, chord[i]);
+            }
         }
     }
 
