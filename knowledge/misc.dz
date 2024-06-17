@@ -77,3 +77,9 @@ hl https://dillonbastan.com/store/maxforlive/index.php?product=mouth-play
 ln mouthplay: max4live model instrument that offers unconventional
 ln shaping of vocal tract with sound sources.
 tg vocsynth max4live
+
+nn applied_DSP
+hl https://www.youtube.com/watch?v=yGeXEwdNd_s&list=PL_QS1A2ZqaG7p50cd0AgLeG9Q3TN64vZJ
+ln Introduction to Applied Digital Signal Processing at Drexel University.
+tg dsp
+rm Recommended by Charlie V.

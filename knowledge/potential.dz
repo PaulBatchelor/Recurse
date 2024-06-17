@@ -22,7 +22,7 @@ rm This must be the top-level entry point
 nn add_model_magsign
 ln The magsign model is added with some function pointer called
 ln "addModel"
-fr $ 10
+fr $ 8
 td what is a model?
 co $ init_entry_point
 
