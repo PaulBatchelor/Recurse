@@ -3,3 +3,8 @@ https://github.com/Canop/termimad
 
 @study-synthkit code study: synthkit
 link: [[https://github.com/sedson/SynthKit]]
+
+@study-rusty-bikes code study: rusty bikes
+link: [[https://github.com/binhrobles/rusty-bikes]]
+
+

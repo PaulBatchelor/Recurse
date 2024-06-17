@@ -54,3 +54,5 @@ Surprisingly, it seems to work on Alpine for now. It's
 nice to know that I can use that as an option in a pinch.
 
 @10:01 Getting ready to go to hub.
+
+@10:29 Prep-work for rusty-bikes after chat with Binh #study-rusty-bikes #timelog:00:17:00

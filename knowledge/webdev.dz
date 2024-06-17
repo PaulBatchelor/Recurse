@@ -41,6 +41,13 @@ ln Class Selectors
 hl https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors
 tg mdn css
 
+nn nanostores
+hl https://github.com/nanostores/nanostores
+ln Nanostores: A tiny (286 bytes) state manager for
+ln React/RN/Preact/Vue/Svelte with many atomic tree-shakable
+ln stores
+tg webdev
+
 zz -------------------------------------------------------
 
 ns webdev/react

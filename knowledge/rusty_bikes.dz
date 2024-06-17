@@ -1,0 +1,42 @@
+ns codestudy/rusty_bikes
+gr Code study for Rust Bikes project by Binh Robles
+
+nn server_README
+hl https://github.com/binhrobles/rusty-bikes/blob/main/services/README.md
+ln Server README
+rm Binh: The server readme has my kinda polished up notes that I've 
+rm been writing as I've been working on this, and the arch 
+rm diagrams might give you a decent sense of where things are 
+rm in the system before you start diving into the code.
+
+nn client_README
+hl https://github.com/binhrobles/rusty-bikes/blob/main/client/README.md
+ln Client README
+rm The client readme also has a nifty dependency graph that I 
+rm found to be pretty useful in visualizing how the FE code 
+rm works. If you're interested in the FE <--> BE interface, 
+rm the file of note is the client/src/store/fetch.ts file, 
+rm which handles all server communication. I kinda went 
+rm overkill with using nanostores as an event bus within my FE 
+rm code, but essentially it enables me to make an API request 
+rm whenever any of the relevant data pieces change. 
+
+nn fetch_ts
+hl https://github.com/binhrobles/rusty-bikes/blob/main/client/src/store/fetch.ts
+ln fetch ts file
+co $ client_README
+cr FE <--> BE interface
+
+nn make_api_request_when_data_changs
+hl https://github.com/binhrobles/rusty-bikes/blob/787c67e0a32c01c47402167ffa503c8daa6bbee3/client/src/store/fetch.ts#L101
+ln Nanostores enables API requests to be made when any
+ln relevant data pieces change.
+rm paraphrased from Binh
+co $ client_README
+
+ln lambda_handler
+hl https://github.com/binhrobles/rusty-bikes/blob/main/services/src/bin/lambda-handler.rs
+ln rust backend that handles the API call
+rm Binh: st defines the APIs that the Rust backend can 
+rm serve and uses the graph and geojson modules to perform the 
+rm routing / format the API response.
