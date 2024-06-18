@@ -72,3 +72,7 @@ out how to send userdata to the SoundIO struct.
 @13:00 Lunch
 
 @14:45 Expand on chords. #chords-demo #timelog:00:25:56
+
+@15:30 Graphics Meetup
+
+@16:30 WASM Users Group
