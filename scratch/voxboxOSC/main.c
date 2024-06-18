@@ -22,6 +22,7 @@ struct VoxData * newdsp(uint32_t sr);
 
 float testgetter(struct VoxData *vd);
 float vox_tick(struct VoxData *vd);
+void vox_poll(struct VoxData *vd);
 
 static int usage(char *exe) {
     fprintf(stderr, "Usage: %s [options]\n"
@@ -61,7 +62,6 @@ static void write_sample_float64ne(char *ptr, double sample) {
 }
 
 static void (*write_sample)(char *ptr, double sample);
-static const double PI = 3.14159265358979323846264338328;
 static double seconds_offset = 0.0;
 static volatile bool want_pause = false;
 
@@ -88,11 +88,7 @@ static void write_callback(struct SoundIoOutStream *outstream, int frame_count_m
 
         const struct SoundIoChannelLayout *layout = &outstream->layout;
 
-        double pitch = 440;
-        double radians_per_second = pitch * 2.0 * PI;
         for (int frame = 0; frame < frame_count; frame += 1) {
-            //double sample = sin((seconds_offset + frame * seconds_per_frame) * radians_per_second);
-            //sample *= 0.5;
             double sample = vox_tick(ad->vd);
             for (int channel = 0; channel < layout->channel_count; channel += 1) {
                 write_sample(areas[channel].ptr, sample);
@@ -289,26 +285,27 @@ int main(int argc, char **argv) {
     /* TODO: poll for OSC messages in here */
     for (;;) {
         soundio_flush_events(soundio);
-        int c = getc(stdin);
-        if (c == 'p') {
-            fprintf(stderr, "pausing result: %s\n",
-                    soundio_strerror(soundio_outstream_pause(outstream, true)));
-        } else if (c == 'P') {
-            want_pause = true;
-        } else if (c == 'u') {
-            want_pause = false;
-            fprintf(stderr, "unpausing result: %s\n",
-                    soundio_strerror(soundio_outstream_pause(outstream, false)));
-        } else if (c == 'c') {
-            fprintf(stderr, "clear buffer result: %s\n",
-                    soundio_strerror(soundio_outstream_clear_buffer(outstream)));
-        } else if (c == 'q') {
-            break;
-        } else if (c == '\r' || c == '\n') {
-            // ignore
-        } else {
-            fprintf(stderr, "Unrecognized command: %c\n", c);
-        }
+        vox_poll(ad->vd);
+        // int c = getc(stdin);
+        // if (c == 'p') {
+        //     fprintf(stderr, "pausing result: %s\n",
+        //             soundio_strerror(soundio_outstream_pause(outstream, true)));
+        // } else if (c == 'P') {
+        //     want_pause = true;
+        // } else if (c == 'u') {
+        //     want_pause = false;
+        //     fprintf(stderr, "unpausing result: %s\n",
+        //             soundio_strerror(soundio_outstream_pause(outstream, false)));
+        // } else if (c == 'c') {
+        //     fprintf(stderr, "clear buffer result: %s\n",
+        //             soundio_strerror(soundio_outstream_clear_buffer(outstream)));
+        // } else if (c == 'q') {
+        //     break;
+        // } else if (c == '\r' || c == '\n') {
+        //     // ignore
+        // } else {
+        //     fprintf(stderr, "Unrecognized command: %c\n", c);
+        // }
     }
 
     soundio_outstream_destroy(outstream);

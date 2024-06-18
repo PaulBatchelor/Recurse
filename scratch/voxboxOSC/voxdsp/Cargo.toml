@@ -9,3 +9,4 @@ crate-type = ["staticlib"]
 
 [dependencies]
 voxbox = { path = "../../../../voxbox" }
+rosc = "~0.10"

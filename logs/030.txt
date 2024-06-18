@@ -55,4 +55,8 @@ data into C okay.
 While I didn't do any refactoring, I did manage to figure
 out how to send userdata to the SoundIO struct.
 
-@09:34 Initial attempts to get a voice working #voxboxOSC
+@09:34 Initial attempts to get a voice working #voxboxOSC #timelog:00:39:50
+
+@10:16 Initial attempt at receiving OSC messages #voxboxOSC #timelog:00:17:13
+
+@10:35 Now we try to get it to shut up over OSC #voxboxOSC
