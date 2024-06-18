@@ -83,3 +83,32 @@ hl https://www.youtube.com/watch?v=yGeXEwdNd_s&list=PL_QS1A2ZqaG7p50cd0AgLeG9Q3T
 ln Introduction to Applied Digital Signal Processing at Drexel University.
 tg dsp
 rm Recommended by Charlie V.
+
+nn pointcloud_garden
+hl www.pointcloud.garden/
+ln pointcloud.garden
+tg gfx
+
+nn pixel_pusher
+hl https://gitlab.com/awjchen/pixelpusher
+ln PixelPusher Game Source Code
+tg gamedev
+rm made by RC alum, shared on graphics meet up june 18, 2024
+
+nn pixel_pusher_trailer
+hl https://www.youtube.com/watch?v=1MbBVXSkxkE
+ln pixel pusher trailer
+co $ pixel_pusher
+cr trailer
+
+nn occt_draw
+ln OCCT Draw Harness for the browser
+hl https://gkv311.github.io/occt-draw/
+tg gfx
+
+nn open_cascade_technology_wikipedia
+hl https://en.wikipedia.org/wiki/Open_Cascade_Technology
+ln Open Cascade Technology Wikipedia Article
+tg wikipedia gfx
+co $ occt_draw
+cr context
