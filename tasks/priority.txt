@@ -18,4 +18,4 @@ Link: [[https://react.dev/learn/describing-the-ui]].
 
 @htmlize-codestudy-files HTMLize code study files
 
-@voxbox-OSC create OSC controlled synth for voxbox
+@voxboxOSC create OSC controlled synth for voxbox

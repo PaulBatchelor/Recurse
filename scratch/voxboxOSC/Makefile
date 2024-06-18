@@ -2,7 +2,7 @@ default: voxboxOSC
 
 OBJ=main.o
 
-CFLAGS=-Wall -pedantic
+CFLAGS=-Wall -pedantic -O3
 
 LIBS=-lsoundio -lvoxdsp
 

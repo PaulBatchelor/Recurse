@@ -8,3 +8,4 @@ name = "voxdsp"
 crate-type = ["staticlib"]
 
 [dependencies]
+voxbox = { path = "../../../../voxbox" }

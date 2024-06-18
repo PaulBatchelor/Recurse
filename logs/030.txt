@@ -11,7 +11,7 @@ Prototyping something out today.
 ---
 next:
 
-|| @!(taskref "voxbox-OSC")!@ work out initial OSC controlled
+|| @!(taskref "voxboxOSC")!@ work out initial OSC controlled
 prototype of voxbox.
 
 || @!(taskref "chords-demo")!@ iterate. Functionally it should
@@ -26,7 +26,7 @@ be good to have for the OSC controller
 
 @08:03 Morning triage
 
-@08:19 Current gameplan #voxbox-OSC
+@08:19 Current gameplan #voxboxOSC
 The rust library @!(dzref "rust/crates/cpal")!@ didn't work
 on my alpine linux box, but @!(dzref "rust/crates/rosc")!@.
 was fine. So, the plan is to build something up using
@@ -38,4 +38,21 @@ libsoundio, then have the inner loop be implemented in C.
 
 @08:43 Zulip checkin posted
 
-@08:57 setting up some boilerplate #voxboxOSC
+@08:57 setting up some boilerplate #voxboxOSC #timelog:00:19:32
+Now we have some C code making sound, and some exported
+rust code setting the frequency of a sine tone.
+
+@09:17 splitting up C code a bit #voxboxOSC #timelog:00:16:34
+This code is from the libsoundio sine example.
+I need to make sure this is organized well enough
+that I can start putting custom DSP code from Rust,
+and eventually add OSC polling.
+---
+Okay, nevermind on the splitting. I have a better sense of
+this control flow. I want to make sure I can get my Rust
+data into C okay.
+---
+While I didn't do any refactoring, I did manage to figure
+out how to send userdata to the SoundIO struct.
+
+@09:34 Initial attempts to get a voice working #voxboxOSC

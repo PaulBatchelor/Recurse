@@ -13,7 +13,15 @@
 #include <stdint.h>
 #include <math.h>
 
+typedef struct {
+    struct VoxData *vd;
+} AudioData;
+
 float testfunction(void);
+struct VoxData * newdsp(uint32_t sr);
+
+float testgetter(struct VoxData *vd);
+float vox_tick(struct VoxData *vd);
 
 static int usage(char *exe) {
     fprintf(stderr, "Usage: %s [options]\n"
@@ -56,6 +64,7 @@ static void (*write_sample)(char *ptr, double sample);
 static const double PI = 3.14159265358979323846264338328;
 static double seconds_offset = 0.0;
 static volatile bool want_pause = false;
+
 static void write_callback(struct SoundIoOutStream *outstream, int frame_count_min, int frame_count_max) {
     double float_sample_rate = outstream->sample_rate;
     double seconds_per_frame = 1.0 / float_sample_rate;
@@ -63,6 +72,9 @@ static void write_callback(struct SoundIoOutStream *outstream, int frame_count_m
     int err;
 
     int frames_left = frame_count_max;
+    AudioData *ad;
+
+    ad = (AudioData *)outstream->userdata;
 
     for (;;) {
         int frame_count = frames_left;
@@ -76,11 +88,12 @@ static void write_callback(struct SoundIoOutStream *outstream, int frame_count_m
 
         const struct SoundIoChannelLayout *layout = &outstream->layout;
 
-        double pitch = testfunction();
+        double pitch = 440;
         double radians_per_second = pitch * 2.0 * PI;
         for (int frame = 0; frame < frame_count; frame += 1) {
-            double sample = sin((seconds_offset + frame * seconds_per_frame) * radians_per_second);
-            sample *= 0.5;
+            //double sample = sin((seconds_offset + frame * seconds_per_frame) * radians_per_second);
+            //sample *= 0.5;
+            double sample = vox_tick(ad->vd);
             for (int channel = 0; channel < layout->channel_count; channel += 1) {
                 write_sample(areas[channel].ptr, sample);
                 areas[channel].ptr += areas[channel].step;
@@ -108,6 +121,11 @@ static void underflow_callback(struct SoundIoOutStream *outstream) {
     fprintf(stderr, "underflow %d\n", count++);
 }
 
+void setup_audio_data(AudioData *ad, uint32_t sr)
+{
+    ad->vd = newdsp(sr);
+}
+
 int main(int argc, char **argv) {
     char *exe = argv[0];
     enum SoundIoBackend backend = SoundIoBackendNone;
@@ -116,6 +134,8 @@ int main(int argc, char **argv) {
     char *stream_name = NULL;
     double latency = 0.0;
     int sample_rate = 0;
+    AudioData *ad;
+
     for (int i = 1; i < argc; i += 1) {
         char *arg = argv[i];
         if (arg[0] == '-' && arg[1] == '-') {
@@ -217,6 +237,9 @@ int main(int argc, char **argv) {
         return 1;
     }
 
+    ad = malloc(sizeof(AudioData));
+
+    outstream->userdata = ad;
     outstream->write_callback = write_callback;
     outstream->underflow_callback = underflow_callback;
     outstream->name = stream_name;
@@ -240,6 +263,8 @@ int main(int argc, char **argv) {
         return 1;
     }
 
+    setup_audio_data(ad, device->sample_rate_current);
+
     if ((err = soundio_outstream_open(outstream))) {
         fprintf(stderr, "unable to open device: %s", soundio_strerror(err));
         return 1;
@@ -261,6 +286,7 @@ int main(int argc, char **argv) {
         return 1;
     }
 
+    /* TODO: poll for OSC messages in here */
     for (;;) {
         soundio_flush_events(soundio);
         int c = getc(stdin);
@@ -288,5 +314,6 @@ int main(int argc, char **argv) {
     soundio_outstream_destroy(outstream);
     soundio_device_unref(device);
     soundio_destroy(soundio);
+    free(ad);
     return 0;
 }
