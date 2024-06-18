@@ -1,19 +1,39 @@
 const audioContext = new AudioContext();
 let SingerNode = null;
 
+const Chords = [
+        [0, 7, 0, 4],
+        [-2, 7, 0, 2],
+        [0, 7, 4, 5],
+        [0, 4, 5, 7],
+        [-4, 3, 0, 8],
+        [-5, 5, 2, 10],
+        [-12, 0, 4, 12],
+        [-12, 14, 4, 12],
+        [-12, 12, 4, 12],
+        [-12, 16, 2, 12],
+        [-12, 16, 5, 12],
+]
+
 class VocalChordsWorkletNode extends AudioWorkletNode {
     constructor(context, name, options) {
         super(context, name, options);
         this.base = 63;
+        this.setChordWithBase(Chords[0], -this.base);
+        //this.setChord(Chords[1]);
     }
 
     setChordWithBase(chord, base) {
+        console.log("base: " + base);
+        let transposed_chord = [0, 0, 0, 0];
         for (let i = 0; i < 4; i++) {
-            chord[i] *= Math.sign(base);
-            chord[i] += base;
+            transposed_chord[i] = chord[i];
+            transposed_chord[i] += Math.abs(base);
+            transposed_chord[i] *= Math.sign(base);
+            console.log("Chord: " + transposed_chord[i]);
         }
 
-        this.port.postMessage({type: "chord", data: chord});
+        this.port.postMessage({type: "chord", data: transposed_chord});
     }
 
     setChord(chord) {
@@ -56,15 +76,17 @@ function capitalizeFirstLetter(str) {
 
 function add_controls() {
     const controls = document.getElementById('controls');
-    const btn = document.createElement('button');
-    btn.textContent = "Chord1";
-   
-    btn.addEventListener('click', () => {
-        if (SingerNode !== null) {
-            SingerNode.setChord([0, 7, 0, 4]);
-        }
-    });
-    controls.appendChild(btn);
+
+    for (let i = 0; i < Chords.length; i++) {
+        let btn = document.createElement('button');
+        btn.textContent = "Chord" + i;
+        btn.addEventListener('click', () => {
+            if (SingerNode !== null) {
+                SingerNode.setChord(Chords[i]);
+            }
+        });
+        controls.appendChild(btn);
+    }
 }
 
 const startAudio = async (context) => {

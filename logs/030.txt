@@ -64,3 +64,11 @@ out how to send userdata to the SoundIO struct.
 @11:01 Why are pitches sounding different on OSX and Linux? #voxboxOSC
 
 @11:03 I explicitely hard coded a request for 44.1kHz on OSX and that seemed to fix it #voxboxOSC
+
+@11:30 webdev/typescript
+
+@12:30 Last bits of audio hang
+
+@13:00 Lunch
+
+@14:45 Expand on chords. #chords-demo

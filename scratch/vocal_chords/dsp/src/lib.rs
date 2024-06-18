@@ -18,7 +18,7 @@ impl PitchSmoother {
             bias: 0.0,
         };
 
-        p.smoother.set_smooth(0.1);
+        p.smoother.set_smooth(0.08);
 
         p
     }
@@ -27,8 +27,9 @@ impl PitchSmoother {
         if pitch < 0. {
             self.pitch = pitch.abs() + self.bias;
             self.smoother.snap_to_value(self.pitch + self.bias);
+        } else {
+            self.pitch = pitch + self.bias;
         }
-        self.pitch = pitch + self.bias;
     }
 
     pub fn tick(&mut self) -> f32 {
