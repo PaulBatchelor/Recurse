@@ -37,3 +37,5 @@ libsoundio, then have the inner loop be implemented in C.
 @08:25 Getting ready to write zulip checkin
 
 @08:43 Zulip checkin posted
+
+@08:57 setting up some boilerplate #voxboxOSC
