@@ -1,0 +1,39 @@
+@2024-06-18 Day 30.
+53 Days Left of Batch.
+---
+prev: Initial chords demo code works in browser, needs
+elaboration. Also, C Creatures. I didn't get to any of the
+other things planned. But, I did have some nice
+conversations. I guess I'm getting OSC interface working
+to control VoxBox? Looked into a few Rust and C options.
+Prototyping something out today.
+
+---
+next:
+
+|| @!(taskref "voxbox-OSC")!@ work out initial OSC controlled
+prototype of voxbox.
+
+|| @!(taskref "chords-demo")!@ iterate. Functionally it should
+all work for the most part. Now, I need to build it out
+and add more chord buttons.
+
+|| @!(taskref "htmlize-codestudy-files")!@: try to find
+time tobegin work on htmlizing code study files.
+
+|| @!(taskref "voxbox-tongue-interface")!@: This would
+be good to have for the OSC controller
+
+@08:03 Morning triage
+
+@08:19 Current gameplan #voxbox-OSC
+The rust library @!(dzref "rust/crates/cpal")!@ didn't work
+on my alpine linux box, but @!(dzref "rust/crates/rosc")!@.
+was fine. So, the plan is to build something up using
+libsoundio, then have the inner loop be implemented in C.
+
+@08:24 renaming "rust/libs" to "rust/crates"
+
+@08:25 Getting ready to write zulip checkin
+
+@08:43 Zulip checkin posted

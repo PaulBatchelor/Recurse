@@ -4,7 +4,7 @@ knowledge/misc.dz
 knowledge/rust.dz
 knowledge/rust_book.dz
 knowledge/rust_by_example.dz
-knowledge/rust_libs.dz
+knowledge/crates.dz
 knowledge/software_foundations.dz
 knowledge/workflow_planning.dz
 knowledge/career.dz
@@ -15,4 +15,5 @@ knowledge/recurse.dz
 knowledge/fpga.dz
 knowledge/ntsc.dz
 knowledge/potential.dz
+knowledge/rusty_bikes.dz
 knowledge/zzz.dz

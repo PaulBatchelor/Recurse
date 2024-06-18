@@ -6,7 +6,7 @@ I will be using this a place to organize myself.
 
 Here are some things to check out:
 
-@!(ref "logs")!@: a daily journals I make during
+@!(ref "logs")!@: daily journals I make during
 the day that allow me to remember what I did.
 
 @!(ref "dz" "DAGzet")!@: a @!(wikiref "zettelkasten")!@ inspired

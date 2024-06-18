@@ -25,6 +25,8 @@ control interface so it can work with arbitrary sizes.
 || @!(taskref "htmlize-codestudy-files")!@: begin work
 on htmlizing code study files.
 
+@07:28 Some morning reading #react-describing-ui #timelog:00:21:08
+
 @07:55 Morning triage
 
 @08:22 How to make this more actionable? #demo-react-UI
@@ -75,6 +77,6 @@ nice to know that I can use that as an option in a pinch.
 
 @15:32 Initial sounds work, now more sounds. #chords-demo #timelog:01:07:57
 
-@16:46 OSC protocol
+@16:46 OSC protocol with Paolo
 /voc/pitch, /voc/velum, /voc/tongue/x, /voc/tongue/y,
 /voc/volume
