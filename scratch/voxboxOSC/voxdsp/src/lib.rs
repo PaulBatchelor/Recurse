@@ -86,12 +86,12 @@ impl VoxData {
             listener: OSCServer::new("127.0.0.1:8001"),
         };
 
-        vd.voice.tract.drm(&shape1); 
+        vd.voice.tract.drm(&shape1);
         vd
     }
 
     pub fn tick(&mut self) -> f32 {
-        self.voice.pitch = 63.;
+        self.voice.pitch = 60.;
         self.voice.tick() * 0.8
     }
 }
@@ -111,7 +111,7 @@ pub extern "C" fn newdsp(sr: u32) -> Box<VoxData> {
 
 #[no_mangle]
 pub extern "C" fn testgetter(vd: &mut VoxData) -> f32 {
-    vd.testvar 
+    vd.testvar
 }
 
 #[no_mangle]

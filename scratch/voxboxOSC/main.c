@@ -132,6 +132,11 @@ int main(int argc, char **argv) {
     int sample_rate = 0;
     AudioData *ad;
 
+    // explicitely request 44.kHz. On OSX, I think the
+    // sample rate suddenly changes to 48kHz, which
+    // caused my DSP to be pitched wrong
+    sample_rate = 44100;
+
     for (int i = 1; i < argc; i += 1) {
         char *arg = argv[i];
         if (arg[0] == '-' && arg[1] == '-') {

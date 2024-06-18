@@ -60,3 +60,7 @@ out how to send userdata to the SoundIO struct.
 @10:16 Initial attempt at receiving OSC messages #voxboxOSC #timelog:00:17:13
 
 @10:35 Now we try to get it to shut up over OSC #voxboxOSC #timelog:00:18:24
+
+@11:01 Why are pitches sounding different on OSX and Linux? #voxboxOSC
+
+@11:03 I explicitely hard coded a request for 44.1kHz on OSX and that seemed to fix it #voxboxOSC
