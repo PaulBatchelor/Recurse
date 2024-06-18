@@ -4,10 +4,21 @@ OBJ=main.o
 
 CFLAGS=-Wall -pedantic
 
-LIBS=-lsoundio
+LIBS=-lsoundio -lvoxdsp
 
-voxboxOSC: $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $@ $(LIBS)
+DSPLIBPATH=voxdsp/target/release
+DSPLIB=$(DSPLIBPATH)/libvoxdsp.a
+
+LDFLAGS=-L$(DSPLIBPATH)
+
+voxboxOSC: $(OBJ) $(DSPLIB)
+	$(CC) $(CFLAGS) $(OBJ) -o $@ $(LDFLAGS) $(LIBS) 
+
+RUST_FILES=voxdsp/src/lib.rs
+
+$(DSPLIB): $(RUST_FILES)
+	cd voxdsp; cargo build --release
 
 clean:
 	$(RM) $(OBJ) voxboxOSC
+	cd voxdsp; cargo clean

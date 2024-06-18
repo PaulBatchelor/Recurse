@@ -13,6 +13,8 @@
 #include <stdint.h>
 #include <math.h>
 
+float testfunction(void);
+
 static int usage(char *exe) {
     fprintf(stderr, "Usage: %s [options]\n"
             "Options:\n"
@@ -74,10 +76,11 @@ static void write_callback(struct SoundIoOutStream *outstream, int frame_count_m
 
         const struct SoundIoChannelLayout *layout = &outstream->layout;
 
-        double pitch = 440.0;
+        double pitch = testfunction();
         double radians_per_second = pitch * 2.0 * PI;
         for (int frame = 0; frame < frame_count; frame += 1) {
             double sample = sin((seconds_offset + frame * seconds_per_frame) * radians_per_second);
+            sample *= 0.5;
             for (int channel = 0; channel < layout->channel_count; channel += 1) {
                 write_sample(areas[channel].ptr, sample);
                 areas[channel].ptr += areas[channel].step;
