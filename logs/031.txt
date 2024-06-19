@@ -1,0 +1,19 @@
+@2024-06-19 Day 31. Happy Juneteenth!
+52 Days Left of Batch.
+---
+I'm feeling a little bit of pain in my right arm, so I
+am going to be limiting my computer time today. More reading
+today, I think.
+---
+Prev: Initial code for OSC controlled voxbox, more
+chords on vocal chords demo. Did not get to HTMLizing
+codestudy stuff, tongue control in voxbox, or any reading.
+---
+Next: Finish up initial VoxBoxOSC MVP, React reading,
+make the chord demo look a bit nicer (maybe?)
+
+@08:30 Morning Triage
+
+@08:50 Work on Zulip Checkin
+
+@09:06 Okay. Going for a walk. Maybe shopping.

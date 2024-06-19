@@ -8,8 +8,6 @@ tasks that I intend to work on in the next few days or so.
 @react-describing-ui Read "Describing UI" from "Learning React" series
 Link: [[https://react.dev/learn/describing-the-ui]].
 
-@vcv-potential-study study the VCV Potential Plugin Code
-
 @voxbox-tongue-interface improve tongue interface for voxbox
 
 @voxbox-change-nose-length change nose length
