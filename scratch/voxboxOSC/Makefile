@@ -5,7 +5,7 @@ OBJ=main.o
 CFLAGS=-Wall -pedantic -O3
 LDFLAGS=-L$(DSPLIBPATH)
 
-CFLAGS += -I/opt/homebrew/include
+CFLAGS += -I/opt/homebrew/include -g
 LDFLAGS += -L/opt/homebrew/lib
 
 LIBS=-lsoundio -lvoxdsp

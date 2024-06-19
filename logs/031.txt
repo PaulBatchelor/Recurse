@@ -17,3 +17,18 @@ make the chord demo look a bit nicer (maybe?)
 @08:50 Work on Zulip Checkin
 
 @09:06 Okay. Going for a walk. Maybe shopping.
+
+@13:18 Get OSC messages to actually control stuff #voxboxOSC
+In rust, this might be slightly difficult with how I
+am currently arranging things because I have my OSC listener
+component separated from the DSP component. Ideally, I'd
+like to have the DSP be a reference inside the OSC component,
+but that may be tricky.
+
+@14:35 We are leaking memory #voxboxOSC
+Because the main loop in C, I'm leaking memory when I
+allocate the DSP object.
+
+@14:40 Wait I figured out how to free it unsafely! #voxboxOSC
+It involves calling =unsafe{Box::from_raw()}= and then
+=drop=.
