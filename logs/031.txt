@@ -25,3 +25,25 @@ They gave me a water bottle, so now I'm part
 of the Movie Industry now.
 
 @11:34 Shopping for food
+
+@13:18 Get OSC messages to actually control stuff #voxboxOSC
+In rust, this might be slightly difficult with how I
+am currently arranging things because I have my OSC listener
+component separated from the DSP component. Ideally, I'd
+like to have the DSP be a reference inside the OSC component,
+but that may be tricky.
+
+@14:35 We are leaking memory #voxboxOSC
+Because the main loop in C, I'm leaking memory when I
+allocate the DSP object.
+
+@14:40 Wait I figured out how to free it unsafely! #voxboxOSC
+It involves calling =unsafe{Box::from_raw()}= and then
+=drop=.
+
+@14:53 okay pitch control works from OSC. Taking a break from this #voxboxOSC #timelog:01:08:19
+
+@15:34 How does sourcehut handle source code highlighting #htmlize-codestudy-files #timelog:00:51:30
+Initial extraction and studies in =scratch/lines_css/=.
+
+@16:49 Let's see if I can improve the CSS of the buttons #chords-demo

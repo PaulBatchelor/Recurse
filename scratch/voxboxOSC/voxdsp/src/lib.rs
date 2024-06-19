@@ -9,7 +9,10 @@ use std::str::FromStr;
 pub struct VoxData {
     testvar: f32,
     voice: Voice,
+    pitch: f32,
+    pitch_smoother: Smoother,
     listener: OSCServer,
+    is_running: bool,
 }
 
 pub struct OSCServer {
@@ -30,46 +33,6 @@ impl OSCServer {
             buf: [0u8; rosc::decoder::MTU],
         }
     }
-
-    pub fn poll(&mut self) {
-        let sock = &self.sock;
-        let buf = &mut self.buf;
-        match sock.recv_from(buf) {
-            Ok((size, addr)) => {
-                println!("Received packet with size {} from: {}", size, addr);
-                let (_, packet) = rosc::decoder::decode_udp(&self.buf[..size]).unwrap();
-                handle_packet(packet);
-            }
-            Err(e) => {
-                println!("Error receiving from socket: {}", e);
-            }
-        };
-    }
-}
-
-fn handle_message(msg: OscMessage) {
-    let quit = Matcher::new("/quit").unwrap();
-
-    let addr = OscAddress::new(msg.addr.to_string()).unwrap();
-    if quit.match_address(&addr) {
-        println!("gonna quit now");
-    }
-
-    println!("OSC address: {}", msg.addr);
-    println!("OSC arguments: {:?}", msg.args);
-}
-
-fn handle_packet(packet: OscPacket) {
-    match packet {
-        OscPacket::Message(msg) => {
-            // println!("OSC address: {}", msg.addr);
-            // println!("OSC arguments: {:?}", msg.args);
-            handle_message(msg);
-        }
-        OscPacket::Bundle(bundle) => {
-            println!("OSC Bundle: {:?}", bundle);
-        }
-    }
 }
 
 impl VoxData {
@@ -84,15 +47,94 @@ impl VoxData {
             testvar: 12345.0,
             voice: Voice::new(sr, tract_len_cm, oversample),
             listener: OSCServer::new("127.0.0.1:8001"),
+            is_running: true,
+            pitch: 60.,
+            pitch_smoother: Smoother::new(sr),
         };
 
+        vd.pitch_smoother.set_smooth(0.07);
+        vd.voice.pitch = 60.;
         vd.voice.tract.drm(&shape1);
         vd
     }
 
     pub fn tick(&mut self) -> f32 {
-        self.voice.pitch = 60.;
+        self.voice.pitch = self.pitch_smoother.tick(self.pitch);
         self.voice.tick() * 0.8
+    }
+
+    pub fn poll(&mut self) {
+        let sock = &self.listener.sock;
+        let buf = &mut self.listener.buf;
+        match sock.recv_from(buf) {
+            Ok((size, addr)) => {
+                println!("Received packet with size {} from: {}", size, addr);
+                let (_, packet) = rosc::decoder::decode_udp(&self.listener.buf[..size]).unwrap();
+                self.handle_packet(packet);
+            }
+            Err(e) => {
+                println!("Error receiving from socket: {}", e);
+            }
+        };
+    }
+
+    fn handle_packet(&mut self, packet: OscPacket) {
+        match packet {
+            OscPacket::Message(msg) => {
+                // println!("OSC address: {}", msg.addr);
+                // println!("OSC arguments: {:?}", msg.args);
+                self.handle_message(msg);
+            }
+            OscPacket::Bundle(bundle) => {
+                println!("OSC Bundle: {:?}", bundle);
+            }
+        }
+    }
+
+    fn handle_message(&mut self, msg: OscMessage) {
+        let quit = Matcher::new("/quit").unwrap();
+        let voxparams = Matcher::new("/vox/{pitch}").unwrap();
+
+        let addr = OscAddress::new(msg.addr.to_string()).unwrap();
+        if quit.match_address(&addr) {
+            println!("gonna quit now");
+            self.is_running = false;
+        }
+
+        if voxparams.match_address(&addr) {
+            let path: Vec<_> = msg.addr.split("/").collect();
+            dbg!(&path);
+
+            match path[2] {
+                "pitch" => {
+                    let val = msg.args[0].clone().float().unwrap();
+                    self.pitch = val;
+                    println!("setting pitch");
+                }
+                _ => { },
+            }
+            //println!("setting pitch: {:?}", msg.args);
+            //self.voice.pitch = val;
+        }
+
+        println!("OSC address: {}", msg.addr);
+        println!("OSC arguments: {:?}", msg.args);
+    }
+
+    pub fn running(&mut self)->u8 {
+        let mut state = 1;
+
+        if self.is_running == false {
+            state = 0;
+        }
+
+        return state;
+    }
+}
+
+impl Drop for VoxData {
+    fn drop(&mut self) {
+        println!("dropping");
     }
 }
 
@@ -121,5 +163,16 @@ pub extern "C" fn vox_tick(vd: &mut VoxData) -> f32 {
 
 #[no_mangle]
 pub extern "C" fn vox_poll(vd: &mut VoxData) {
-    vd.listener.poll();
+    vd.poll();
+}
+
+#[no_mangle]
+pub extern "C" fn vox_running(vd: &mut VoxData) -> u8 {
+    vd.running()
+}
+
+#[no_mangle]
+pub extern "C" fn vox_free(vd: &mut VoxData) {
+    let ptr = unsafe {Box::from_raw(vd)};
+    drop(ptr);
 }

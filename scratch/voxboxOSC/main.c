@@ -23,6 +23,8 @@ struct VoxData * newdsp(uint32_t sr);
 float testgetter(struct VoxData *vd);
 float vox_tick(struct VoxData *vd);
 void vox_poll(struct VoxData *vd);
+void vox_free(struct VoxData *vd);
+uint8_t vox_running(struct VoxData *vd);
 
 static int usage(char *exe) {
     fprintf(stderr, "Usage: %s [options]\n"
@@ -287,8 +289,7 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    /* TODO: poll for OSC messages in here */
-    for (;;) {
+    while(vox_running(ad->vd)) {
         soundio_flush_events(soundio);
         vox_poll(ad->vd);
         // int c = getc(stdin);
@@ -316,6 +317,8 @@ int main(int argc, char **argv) {
     soundio_outstream_destroy(outstream);
     soundio_device_unref(device);
     soundio_destroy(soundio);
+
+    vox_free(ad->vd);
     free(ad);
     return 0;
 }
