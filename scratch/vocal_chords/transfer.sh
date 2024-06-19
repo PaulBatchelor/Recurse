@@ -1,3 +1,4 @@
-mkdir -p gesture_demo
-rsync -rvt dsp.wasm index.html index.js gesture_demo.js style.css gesture_demo
-rsync -rvt gesture_demo paul@pbat.ch:paulbatchelor.github.io/recurse/demos
+DEMO_NAME=vocal_chords
+mkdir -p $DEMO_NAME
+rsync -rvt dsp.wasm index.html index.js vocal_chords.js style.css $DEMO_NAME
+rsync -rvt $DEMO_NAME paul@pbat.ch:paulbatchelor.github.io/recurse/demos

@@ -1,6 +1,9 @@
 const audioContext = new AudioContext();
 let SingerNode = null;
 
+buttonList = [];
+lastSelected = -1;
+
 const Chords = [
         [0, 7, 0, 4],
         [-2, 7, 0, 2],
@@ -13,6 +16,7 @@ const Chords = [
         [-12, 12, 4, 12],
         [-12, 16, 2, 12],
         [-12, 16, 5, 12],
+        [-12, 14, 5, 12],
 ]
 
 class VocalChordsWorkletNode extends AudioWorkletNode {
@@ -76,17 +80,30 @@ function capitalizeFirstLetter(str) {
 
 function add_controls() {
     const controls = document.getElementById('controls');
-
+    let grid = document.createElement('div');
+    grid.id = 'container';
     for (let i = 0; i < Chords.length; i++) {
+        let rect = document.createElement('div');
         let btn = document.createElement('button');
-        btn.textContent = "Chord" + i;
+        buttonList[i] = btn;
+
+        btn.textContent = i;
+        btn.className = 'chordbutton';
         btn.addEventListener('click', () => {
             if (SingerNode !== null) {
                 SingerNode.setChord(Chords[i]);
+                buttonList[i].className = 'chordbutton-selected';
+                if (lastSelected >= 0) {
+                    buttonList[lastSelected].className = 'chordbutton';
+                }
+                lastSelected = i;
+
             }
         });
-        controls.appendChild(btn);
+        rect.appendChild(btn);
+        grid.appendChild(rect);
     }
+    controls.appendChild(grid);
 }
 
 const startAudio = async (context) => {
