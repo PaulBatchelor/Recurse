@@ -76,3 +76,7 @@ out how to send userdata to the SoundIO struct.
 @15:30 Graphics Meetup
 
 @16:30 WASM Users Group
+
+@17:30 Debugging/Pairing with Carsten
+
+@19:30 Home
