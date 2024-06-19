@@ -32,3 +32,8 @@ allocate the DSP object.
 @14:40 Wait I figured out how to free it unsafely! #voxboxOSC
 It involves calling =unsafe{Box::from_raw()}= and then
 =drop=.
+
+@14:53 okay pitch control works from OSC. Taking a break from this #voxboxOSC #timelog:01:08:19
+
+@15:34 How does sourcehut handle source code highlighting #htmlize-codestudy-files #timelog:00:51:30
+Initial extraction and studies in =scratch/lines_css/=.
