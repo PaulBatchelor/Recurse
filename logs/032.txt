@@ -44,4 +44,11 @@ extracted CSS to go from almost working to working.
 
 @11:30 Lunch
 
-@12:46 Implement gain, add smoothing paramter abstraction #voxboxOSC
+@12:46 Implement gain, add smoothing parameter abstraction #voxboxOSC #timelog:00:21:47
+
+@13:08 Time to look at this tongue interface again. #voxbox-tongue-interface
+
+@13:16 I think I might keep the diams vector in for now #voxbox-tongue-interface #create-diams-interface
+It's very helpful for tongue control.
+
+#13:27 Going to add smoothing to the tongue
