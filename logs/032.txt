@@ -1,0 +1,41 @@
+@2024-06-20 Day 32.
+51 Days Left of Batch
+---
+Cracked screen update: I have an appointment tomorrow
+morning at the apple store. I was thinking about just
+getting it in and fixed right there, but now I'm thinking
+I'll just get a quote and sit on it some more. It's
+going to be a lot of money. The internet tells me
+it's somewhere in the ballpark of 600-700 USD.
+I'm
+starting to think about just getting a refurbished
+thinkpad (x390). I'm not locked into the apple ecosystem,
+and I don't really need a powerful laptop for my needs.
+Also, my m1 works just fine when plugged into an external
+monitor.
+---
+Prev: More VoxBoxOSC Work, playing around with Sourcehut's CSS
+to figure out how they do line highlighting, reading on React,
+published my vocal chords demo! [[https://pbat.ch/recurse/demos/vocal_chords]].
+---
+Next:
+
+|| @!(taskref "voxbox-tongue-interface")!@: Implement
+this because it would be nice to have for voxboxOSC.
+
+|| @!(taskref "voxboxOSC")!@: add the rest of
+the planned parameters (tongue control and gain).
+
+|| @!(taskref "react-describing-ui")!@: Pretty sure I can
+finish up reading this chapter today.
+
+|| @!(taskref "htmlize-codestudy-files")!@: Get the
+extracted CSS to go from almost working to working.
+
+@08:28 Morning Triage.
+
+@08:40 Zulip Check-in.
+
+@08:57 Done with morning logging I think.
+
+09:24 Off to get batteries for my scanner wand

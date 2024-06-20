@@ -124,3 +124,6 @@ many hours a particular task takes.
 rectangles are objects that one collides into. rework
 so rectanlges themselves are immutable, and only draw
 visible rectangles.
+
+@chords-demo create vocal synthesizer "vocal chords" ensemble demo
+

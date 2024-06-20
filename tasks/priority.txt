@@ -3,8 +3,6 @@ tasks that I intend to work on in the next few days or so.
 
 @morning-triage Daily morning triage of tasks
 
-@chords-demo create vocal synthesizer "vocal chords" ensemble demo
-
 @react-describing-ui Read "Describing UI" from "Learning React" series
 Link: [[https://react.dev/learn/describing-the-ui]].
 
