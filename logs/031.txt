@@ -46,4 +46,6 @@ It involves calling =unsafe{Box::from_raw()}= and then
 @15:34 How does sourcehut handle source code highlighting #htmlize-codestudy-files #timelog:00:51:30
 Initial extraction and studies in =scratch/lines_css/=.
 
-@16:49 Let's see if I can improve the CSS of the buttons #chords-demo
+@16:49 Let's see if I can improve the CSS of the buttons #chords-demo #timelog:00:46:54
+
+@20:04 Some react reading. #react-describing-ui #timelog:00:41:05
