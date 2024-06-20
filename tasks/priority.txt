@@ -3,9 +3,6 @@ tasks that I intend to work on in the next few days or so.
 
 @morning-triage Daily morning triage of tasks
 
-@react-describing-ui Read "Describing UI" from "Learning React" series
-Link: [[https://react.dev/learn/describing-the-ui]].
-
 @voxbox-tongue-interface improve tongue interface for voxbox
 
 @voxbox-change-nose-length change nose length
@@ -13,5 +10,3 @@ Link: [[https://react.dev/learn/describing-the-ui]].
 @voxbox-better-size-control Improve tract size/length control with interpolation
 
 @htmlize-codestudy-files HTMLize code study files
-
-@voxboxOSC create OSC controlled synth for voxbox

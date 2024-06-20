@@ -46,9 +46,14 @@ extracted CSS to go from almost working to working.
 
 @12:46 Implement gain, add smoothing parameter abstraction #voxboxOSC #timelog:00:21:47
 
-@13:08 Time to look at this tongue interface again. #voxbox-tongue-interface
+@13:08 Time to look at this tongue interface again. #voxbox-tongue-interface #timelog:01:17:47
 
 @13:16 I think I might keep the diams vector in for now #voxbox-tongue-interface #create-diams-interface
 It's very helpful for tongue control.
 
-#13:27 Going to add smoothing to the tongue
+#13:27 Going to add smoothing to the tongue #voxbox-tongue-interface
+this proved to be more challenging than I expected because I was
+flipping between instantaneous and filtered and I wanted to make
+sure that doing things like setting the smooth amount wouldn't
+cause any jumps, which lead to some subtle logic. I think
+I got it mostly right. Well, good enough.

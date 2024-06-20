@@ -29,3 +29,4 @@ logs/028.txt
 logs/029.txt
 logs/030.txt
 logs/031.txt
+logs/032.txt

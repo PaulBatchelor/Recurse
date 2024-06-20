@@ -127,3 +127,8 @@ visible rectangles.
 
 @chords-demo create vocal synthesizer "vocal chords" ensemble demo
 
+@voxboxOSC create OSC controlled synth for voxbox
+
+@react-describing-ui Read "Describing UI" from "Learning React" series
+Link: [[https://react.dev/learn/describing-the-ui]].
+
