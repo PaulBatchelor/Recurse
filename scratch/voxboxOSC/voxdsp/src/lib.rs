@@ -5,12 +5,17 @@ use rosc::address::{Matcher, OscAddress};
 use std::net::{SocketAddrV4, UdpSocket};
 use std::str::FromStr;
 
+struct SmoothParam {
+    pub value: f32,
+    pub smoother: Smoother,
+}
+
 #[repr(C)]
 pub struct VoxData {
     testvar: f32,
     voice: Voice,
-    pitch: f32,
-    pitch_smoother: Smoother,
+    pitch: SmoothParam,
+    gain: SmoothParam,
     listener: OSCServer,
     is_running: bool,
 }
@@ -48,19 +53,20 @@ impl VoxData {
             voice: Voice::new(sr, tract_len_cm, oversample),
             listener: OSCServer::new("127.0.0.1:8001"),
             is_running: true,
-            pitch: 60.,
-            pitch_smoother: Smoother::new(sr),
+            pitch: SmoothParam::new(sr, 60.),
+            gain: SmoothParam::new(sr, 0.),
         };
 
-        vd.pitch_smoother.set_smooth(0.07);
+        vd.gain.smoother.set_smooth(0.005);
         vd.voice.pitch = 60.;
         vd.voice.tract.drm(&shape1);
         vd
     }
 
     pub fn tick(&mut self) -> f32 {
-        self.voice.pitch = self.pitch_smoother.tick(self.pitch);
-        self.voice.tick() * 0.8
+        self.voice.pitch = self.pitch.tick();
+        let gain = self.gain.tick();
+        self.voice.tick() * 0.8 * gain
     }
 
     pub fn poll(&mut self) {
@@ -93,7 +99,7 @@ impl VoxData {
 
     fn handle_message(&mut self, msg: OscMessage) {
         let quit = Matcher::new("/quit").unwrap();
-        let voxparams = Matcher::new("/vox/{pitch}").unwrap();
+        let voxparams = Matcher::new("/vox/{pitch,gain}").unwrap();
 
         let addr = OscAddress::new(msg.addr.to_string()).unwrap();
         if quit.match_address(&addr) {
@@ -108,8 +114,11 @@ impl VoxData {
             match path[2] {
                 "pitch" => {
                     let val = msg.args[0].clone().float().unwrap();
-                    self.pitch = val;
-                    println!("setting pitch");
+                    self.pitch.value = val;
+                }
+                "gain" => {
+                    let val = msg.args[0].clone().float().unwrap();
+                    self.gain.value = val;
                 }
                 _ => { },
             }
@@ -135,6 +144,21 @@ impl VoxData {
 impl Drop for VoxData {
     fn drop(&mut self) {
         println!("dropping");
+    }
+}
+
+impl SmoothParam {
+    pub fn new(sr: usize, ival: f32) -> Self {
+        let mut sp = SmoothParam {
+            value: ival,
+            smoother: Smoother::new(sr),
+        };
+        sp.smoother.set_smooth(0.07);
+        sp
+    }
+
+    pub fn tick(&mut self) -> f32 {
+        self.smoother.tick(self.value)
     }
 }
 

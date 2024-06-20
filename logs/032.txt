@@ -39,3 +39,9 @@ extracted CSS to go from almost working to working.
 @08:57 Done with morning logging I think.
 
 09:24 Off to get batteries for my scanner wand
+
+@10:39 React reading #react-describing-ui #timelog:00:32:22
+
+@11:30 Lunch
+
+@12:46 Implement gain, add smoothing paramter abstraction #voxboxOSC
