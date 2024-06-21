@@ -58,3 +58,9 @@ program. So, I'm putting it to rest for now.
 ---
 The attempts are managed in the "tractlen" branch on
 my voxbox repo
+
+@16:40 Attempts to study sourcehut CSS again #htmlize-codestudy-files
+
+@16:46 Ha, okay I managed to make it go. Magic! #htmlize-codestudy-files
+
+@16:53 Did some clean-up. I now need to start pre-planning htmlization #htmlize-codestudy-files
