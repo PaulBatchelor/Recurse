@@ -58,3 +58,9 @@ program. So, I'm putting it to rest for now.
 ---
 The attempts are managed in the "tractlen" branch on
 my voxbox repo
+
+@14:50 trying one more thing... #voxbox-better-size-control #timelog:00:18:43
+Somehow I think the fractional tract length needs to be
+considered while computing the scatering junctions. But
+I'm not sure how yet. I added in best guess but it's
+not right. Okay I really really need to stop this.
