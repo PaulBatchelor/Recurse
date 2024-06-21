@@ -55,3 +55,6 @@ between the last two samples at the output, but I I'm still getting
 issues. It's starting to turn into more of a DSP problem
 than I'd like it be, which is not why I'm here at this
 program. So, I'm putting it to rest for now.
+---
+The attempts are managed in the "tractlen" branch on
+my voxbox repo
