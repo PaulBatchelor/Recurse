@@ -99,7 +99,7 @@ impl VoxData {
 
     fn handle_message(&mut self, msg: OscMessage) {
         let quit = Matcher::new("/quit").unwrap();
-        let voxparams = Matcher::new("/vox/{pitch,gain,tsmooth,tongue}").unwrap();
+        let voxparams = Matcher::new("/vox/{pitch,gain,tsmooth,tongue,length}").unwrap();
 
         let addr = OscAddress::new(msg.addr.to_string()).unwrap();
         if quit.match_address(&addr) {
@@ -130,6 +130,10 @@ impl VoxData {
                     println!("smoothing");
                     let smooth = msg.args[0].clone().float().unwrap();
                     self.voice.tract.set_tongue_smooth(smooth);
+                }
+                "length" => {
+                    let length = msg.args[0].clone().float().unwrap();
+                    self.voice.tract.set_length(length);
                 }
                 _ => { },
             }

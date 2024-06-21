@@ -32,3 +32,26 @@ to look at this.
 @09:30 Done with morning logging.
 
 @09:48 Pack up for Apple appointment
+
+@12:00 Lunch
+
+@13:01 The poke should be a tickle. Think tickle-me-elmo, or the Pillsbury Doughboy #demo-poke
+
+@13:02 Adding tractlen control to OSC model #voxbox-better-size-control #timelog:00:03:47
+This will be a good way to test out tract length while on
+my Linux box.
+--
+Actually, this won't work. Interpolation doesn't smooth
+discontinuities, but allows smoothing transitions with
+floating point values. I will need to build an example.
+
+@13:08 Building tract length example instead #voxbox-better-size-control #timelog:00:06:00
+
+@13:15 The glitches are there (deliberately), now to see if they can be smoothed #voxbox-better-size-control #timelog:00:30:00
+
+@13:45 This is not working as expected #voxbox-better-size-control
+I was hoping this would be a quick matter of linear interpolation
+between the last two samples at the output, but I I'm still getting
+issues. It's starting to turn into more of a DSP problem
+than I'd like it be, which is not why I'm here at this
+program. So, I'm putting it to rest for now.
