@@ -1,0 +1,32 @@
+@2024-06-21 Day 33.
+50 Days Left of Batch
+---
+Prev: VoxBoxOSC works!, Tongue Control in VoxBox, React
+Reading (finished up "Describing the UI chapter").
+---
+Next
+
+|| @!(taskref "htmlize-codestudy-files")!@: Did not get to
+this yesterday. Hopefully today.
+
+|| @!(taskref "react-adding-interactivity")!@: More reading
+on React.
+
+|| @!(taskref "voxbox-change-nose-length")!@: shouldn't be too difficult to do
+
+|| @!(taskref "voxbox-better-size-control")!@: if there's time today, try
+to look at this.
+
+|| @!(taskref "demo-poke")!@: Start brainstorming the "poke" demo
+
+@08:58 Morning Triage
+
+@09:07 Small task, hoping to get to it today. #voxbox-change-nose-length
+
+@09:08 Will look at this today if there's time #voxbox-better-size-control
+
+@09:10 created. initial brainstorming today? #demo-poke
+
+@09:17 Writing up zulip checkin.
+
+@09:30 Done with morning logging.

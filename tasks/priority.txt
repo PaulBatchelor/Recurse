@@ -3,8 +3,6 @@ tasks that I intend to work on in the next few days or so.
 
 @morning-triage Daily morning triage of tasks
 
-@voxbox-tongue-interface improve tongue interface for voxbox
-
 @voxbox-change-nose-length change nose length
 
 @voxbox-better-size-control Improve tract size/length control with interpolation
@@ -13,3 +11,7 @@ tasks that I intend to work on in the next few days or so.
 
 @react-adding-interactivity Read "Adding Interactivity"
 Link: [[https://react.dev/learn/adding-interactivity]].
+
+@demo-poke "poke a face" demo.
+
+@demo-tongue-control "tongue control" demo

@@ -61,3 +61,12 @@ I got it mostly right. Well, good enough.
 @14:58 Adding more stuff to read to the priority bin
 
 @15:00 Exporting these to PDF #react-adding-interactivity
+
+@15:35 Reading #react-adding-interactivity #timelog:00:22:29
+
+@16:02 Presentations
+
+@20:02 Worked out some of the parts in "Agnus Dei" by Artemisia Trio
+In an uncharacteristic move, I went back to to the hub at night
+to work out some of the harmonies in this youtube video
+I found @!(dzref "misc/artemisia_agnus_dei")!@.
