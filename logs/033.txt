@@ -59,8 +59,29 @@ program. So, I'm putting it to rest for now.
 The attempts are managed in the "tractlen" branch on
 my voxbox repo
 
-@16:40 Attempts to study sourcehut CSS again #htmlize-codestudy-files
+@16:40 Attempts to study sourcehut CSS again #htmlize-codestudy-files #timelog:00:15:59
 
 @16:46 Ha, okay I managed to make it go. Magic! #htmlize-codestudy-files
 
 @16:53 Did some clean-up. I now need to start pre-planning htmlization #htmlize-codestudy-files
+
+@16:55 Re-familiarizing myself with the schemas used here. #htmlize-codestudy-files
+What does the schema look like? What kind of information does it have?
+How do file names get translated into things "seen" by dagzet?
+How to make sure file range links go to the right place?
+All this and more... later...
+
+@16:57 Attempt to quickly change the nose length like tract #voxbox-change-nose-length #timelog:00:23:10
+This would be the quick and dirty approach, no interpolation.
+
+@17:00 There is a lot of duplicate code between the tract and nose #voxbox-change-nose-length
+Including this tract size behavior. I am ignoring that fact right
+now.
+
+@17:06 attempting to integrate with singer sliders demo #voxbox-change-nose-length
+
+@17:11 Uh-oh. why is my JS code not working. I didn't do anything?
+Oh okay. Just needed to clean some caching and rebuild.
+
+@17:22 Things sound right in the example! #voxbox-change-nose-length
+The velum now sounds more nasally everywhere pretty evenly.
