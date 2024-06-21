@@ -10,3 +10,6 @@ tasks that I intend to work on in the next few days or so.
 @voxbox-better-size-control Improve tract size/length control with interpolation
 
 @htmlize-codestudy-files HTMLize code study files
+
+@react-adding-interactivity Read "Adding Interactivity"
+Link: [[https://react.dev/learn/adding-interactivity]].

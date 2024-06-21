@@ -29,9 +29,6 @@ https://www.bunniestudios.com/blog/2022/rust-a-critical-retrospective/
 @logical-foundations-preface read "preface" from logical foundations
 @logical-foundations-basics read "basics" from logical foundations
 
-@react-adding-interactivity Read "Adding Interactivity"
-Link: [[https://react.dev/learn/adding-interactivity]].
-
 @react-managing-state Read "managing state"
 Link: [[https://react.dev/learn/managing-state]].
 
