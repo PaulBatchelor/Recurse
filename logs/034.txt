@@ -27,6 +27,11 @@ curve may be just as big. But let's see!
 Sigh... Emscripten.
 ---
 Uhhhh... my harddrive just filled up I think.
+---
+This is an omen. I am ditching Sokol for this.
 
 @14:43 Freeing up space on my harddrive
 Damn. Fast internet fills up disk space quickly.
+
+@14:55 Now we try Pixels on my Linux box #investigate-2d-gameengine
+This is the ultimate test because nothing every wants to work.
