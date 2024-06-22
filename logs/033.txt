@@ -85,3 +85,8 @@ Oh okay. Just needed to clean some caching and rebuild.
 
 @17:22 Things sound right in the example! #voxbox-change-nose-length
 The velum now sounds more nasally everywhere pretty evenly.
+
+@20:15 Attempt to sequence the first few bars of "Milowda" using vocal synthesizer
+Found some sheet music. I want to hear how the sonorities sound.
+
+@21:49 Got some initial milowda chords. Attached it to the file "milowda_chords.mp3"
