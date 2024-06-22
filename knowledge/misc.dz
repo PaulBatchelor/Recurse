@@ -117,3 +117,9 @@ nn artemisia_agnus_dei
 hl https://www.youtube.com/watch?v=Do186kUmeM4
 ln Artemisia Trio: Agnus Dei (Traditional Corsican Village Chant)
 tg singing acapella
+
+nn pacman_c_sokol
+ln Pacman single-header file implement in C
+hl https://github.com/floooh/pacman.c
+tg gamedev sokol gamedev
+

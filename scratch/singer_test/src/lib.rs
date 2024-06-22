@@ -158,4 +158,5 @@ pub extern "C" fn set_velum(dsp: &mut SingerSynth, val: f32) {
 #[no_mangle]
 pub extern "C" fn set_length(dsp: &mut SingerSynth, val: f32) {
     dsp.tract.set_length(val);
+    dsp.nose.set_length(val*0.63);
 }

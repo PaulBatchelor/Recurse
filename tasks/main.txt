@@ -19,3 +19,4 @@ The current page can be found at @!(ref "demos")!@.
 
 @vcv-potential-study study the VCV Potential Plugin Code
 
+@blob-brainstorm Brainstorm: A Blob Named Bucket
