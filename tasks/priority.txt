@@ -15,3 +15,5 @@ Link: [[https://react.dev/learn/adding-interactivity]].
 @demo-poke "poke a face" demo.
 
 @demo-tongue-control "tongue control" demo
+
+@investigate-2d-gameengine Investigate 2d pixel art solutions

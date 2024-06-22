@@ -5,3 +5,28 @@ Saturday. Nothing really planned. This is intentional.
 @10:35 Late morning logging.
 @10:42 How hard is it to throw some pixels to a framebuffer in webgl? #blob-brainstorm #timelog:00:42:09
 let's find out!
+
+@14:20 Exploring pixels #investigate-2d-gameengine #timelog:00:11:15
+Link: [[https://github.com/parasyte/pixels]].
+---
+Space invaders example works on my Mac. Good lord that's
+a lot of dependencies though (it's okay, it's okay, just
+grit your teeth and do it).
+---
+Web example runs on my mac. Noticing use of wasm-bindgen.
+Is it time for me to bite the bullet and actually learn
+this? I wouldn't be able to get it done in a weekend.
+
+@14:34 Now time to look at Sokol #investigate-2d-gameengine #timelog:00:08:12
+Link: [[https://github.com/floooh/sokol]].
+---
+More "comfortable" because it's closer to a tech stack I
+know already. I've never used it before, so the learning
+curve may be just as big. But let's see!
+---
+Sigh... Emscripten.
+---
+Uhhhh... my harddrive just filled up I think.
+
+@14:43 Freeing up space on my harddrive
+Damn. Fast internet fills up disk space quickly.
