@@ -33,5 +33,20 @@ This is an omen. I am ditching Sokol for this.
 @14:43 Freeing up space on my harddrive
 Damn. Fast internet fills up disk space quickly.
 
-@14:55 Now we try Pixels on my Linux box #investigate-2d-gameengine
+@14:55 Now we try Pixels on my Linux box #investigate-2d-gameengine #timelog:00:08:49
 This is the ultimate test because nothing every wants to work.
+
+@15:05 Well that didn't work. Attempting softbuffer on Alpine Linux? #investigate-2d-gameengine #timelog:00:07:59
+Link: [[https://github.com/rust-windowing/softbuffer]].
+
+@15:14 Well that's a no go. Sokol on Alpine linux? #investigate-2d-gameengine #timelog:00:08:10
+Good ol' glfw backend works. I do not really like the strange build system.
+
+@15:24 Another stab at pixels on Alpine linux. #investigate-2d-gameengine
+
+@15:27 Trying sway to try run sway. wish me luck. #investigate-2d-gameengine #timelog:00:58:26
+
+@16:23 Got enough of sway working to re-run pixels invaders example. Still, no luck #investigate-2d-gameengine
+I'm starting to think a solution might involving having
+different backends, with as much logic in the Rust layer.
+This might take too long as well. Sigh. Graphics.
