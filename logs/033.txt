@@ -59,6 +59,10 @@ program. So, I'm putting it to rest for now.
 The attempts are managed in the "tractlen" branch on
 my voxbox repo
 
+@15:21 Reading and notetaking #react-adding-interactivity #timelog:00:19:07
+
+@15:43 More reading and notetaking #react-adding-interactivity #timelog:00:18:49
+
 @16:40 Attempts to study sourcehut CSS again #htmlize-codestudy-files #timelog:00:15:59
 
 @16:46 Ha, okay I managed to make it go. Magic! #htmlize-codestudy-files

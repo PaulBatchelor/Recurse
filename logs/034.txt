@@ -1,0 +1,7 @@
+@2024-06-22 Day 34.
+Saturday. Nothing really planned. This is intentional.
+
+@10:02 Initial concept sketches #blob-brainstorm #timelog:00:10:36
+@10:35 Late morning logging.
+@10:42 How hard is it to throw some pixels to a framebuffer in webgl? #blob-brainstorm #timelog:00:42:09
+let's find out!
