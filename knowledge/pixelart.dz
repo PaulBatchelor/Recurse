@@ -1,0 +1,21 @@
+ns gamedev/pixelart
+gr resources related to getting pixel
+gr art working in modern grapics pipelines
+
+nn scaling_pixel_art_without_destroying
+hl https://colececil.io/blog/2017/scaling-pixel-art-without-destroying-it/
+ln Scaling Pixel Art Without Destroying It
+
+nn rendering_pixel_art
+hl https://medium.com/@michelotti.matthew/rendering-pixel-art-c07a85d2dc43
+ln Rendering Pixel Art
+
+nn gate
+hl https://github.com/SergiusIW/gate
+ln gate: A specialized 2D game library
+co $ rendering_pixel_art
+cr library made by author
+
+nn manual_texfilt_pixel_games
+hl https://csantosbh.wordpress.com/2014/01/25/manual-texture-filtering-for-pixelated-games-in-webgl/
+ln Manual texture filtering for pixelated games in WebGL
