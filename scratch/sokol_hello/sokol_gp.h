@@ -1614,10 +1614,14 @@ static sg_shader _sgp_make_common_shader(void) {
 
     // source
     switch (backend) {
-        // case SG_BACKEND_GLCORE33:
-        //     desc.vs.source = sgp_vs_source_glsl330;
-        //     desc.fs.source = sgp_fs_source_glsl330;
-        //     break;
+        //case SG_BACKEND_GLCORE33:
+        //    desc.vs.source = sgp_vs_source_glsl330;
+        //    desc.fs.source = sgp_fs_source_glsl330;
+        //    break;
+        case SG_BACKEND_GLCORE:
+            desc.vs.source = sgp_vs_source_glsl330;
+            desc.fs.source = sgp_fs_source_glsl330;
+            break;
         case SG_BACKEND_GLES3:
             desc.vs.source = sgp_vs_source_glsl300es;
             desc.fs.source = sgp_fs_source_glsl300es;
