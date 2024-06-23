@@ -16,4 +16,5 @@ knowledge/fpga.dz
 knowledge/ntsc.dz
 knowledge/potential.dz
 knowledge/rusty_bikes.dz
+knowledge/sokol.dz
 knowledge/zzz.dz

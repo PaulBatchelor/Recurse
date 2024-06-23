@@ -46,3 +46,7 @@ I'd like to see this work, so I'm going to try and get
 this running on my Linux box. If that fails, I'm back
 to just learning more about =sokol_gfx.h= and actually
 reading the documentation.
+---
+Okay! The makefile works on my Linux box! Good. Progress.
+---
+Making a dagzet graph for sokol.
