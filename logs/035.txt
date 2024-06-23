@@ -1,0 +1,48 @@
+@2024-06-22 Day 35.
+48 Days left of batch.
+---
+Thinkpad ordered yesterday. Should be arriving by the 28th,
+So, I'll have about 40 days or so of use with it while
+I'm here. I got a quote for the m1, and it was less
+than I expected, so I might still do that. With the thinkpad,
+I'll never have any days where I'm without a portable
+computer. This is the important thing.
+---
+I was thinking all day about "A Blob Named Bucket", doing
+research on game engines and graphics libraries, and
+trying to get things to work on my Linux box. I think the
+best contender so far is Sokol. I'm hoping to do most of
+the game logic in Rust. A hybridized C + Rust approach
+may work too, if I can get it all compiled down to a wasm
+file working on the web.
+
+@09:20 I turn on my computer and create this log file.
+
+@09:27 Found this 2d sprite repo today with sokol/sdl. Looks perfect. #investigate-2d-gameengine
+link: [[https://github.com/seyhajin/webgl2-wasm-sdl-sokol-sprite]].
+---
+WASM builds and runs okay with emcc. I was hoping it would
+have had a sprite moving, but it's just projecting a static
+texture.
+---
+I'm starting to feel diminishing returns, as this
+"simple idea" might turn out to be not as simple as I
+thought, and might require more time/focus than I have
+right now.
+---
+Fail early. Fail often.
+
+@09:55 Back to studying "sapp" #investigate-2d-gameengine #timelog:00:04:52
+the "spine" examples seemed to be closest to what I was
+looking for, but it turns out it's also not what I'm looking
+for and intended for much larger games that I'd like to
+build: [[http://en.esotericsoftware.com/spine-in-depth]].
+
+@10:00 Trying out a Sokol add-on for 2d graphics someone made
+link: [[https://github.com/edubart/sokol_gp]]
+---
+The OSX build in this makefile is out of date. Getting errors.
+I'd like to see this work, so I'm going to try and get
+this running on my Linux box. If that fails, I'm back
+to just learning more about =sokol_gfx.h= and actually
+reading the documentation.
