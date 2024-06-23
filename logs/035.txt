@@ -137,3 +137,7 @@ file and ran parse, but the CSS parse path is wrong.
 I need to point to a brand new CSS file. Overwriting the
 usual one isn't going to work. Stopping for now because
 this will require fresh thinking.
+
+@18:23 Reading #react-adding-interactivity #timelog:00:23:08
+
+@19:14 Attempts to import small sokol gp example
