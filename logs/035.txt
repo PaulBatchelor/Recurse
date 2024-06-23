@@ -38,7 +38,7 @@ looking for, but it turns out it's also not what I'm looking
 for and intended for much larger games that I'd like to
 build: [[http://en.esotericsoftware.com/spine-in-depth]].
 
-@10:00 Trying out a Sokol add-on for 2d graphics someone made
+@10:00 Trying out a Sokol add-on for 2d graphics someone made #investigate-2d-gameengine #timelog:00:12:07
 link: [[https://github.com/edubart/sokol_gp]]
 ---
 The OSX build in this makefile is out of date. Getting errors.
@@ -50,3 +50,19 @@ reading the documentation.
 Okay! The makefile works on my Linux box! Good. Progress.
 ---
 Making a dagzet graph for sokol.
+
+@10:17 Studying sokol_gfx more in depth #investigate-2d-gameengine
+I want to get the text rendered to a PDF somehow, so I can
+read it on my remarkable.
+---
+Learned about =:hardcopy= in vim. =:hardcopy > foo.ps=.
+---
+set popts+=number:y will include line numbers
+---
+There are two kinds of programmers: those who understand
+why text editors have a "hardcopy" printing feature in
+2024, and those who do not.
+---
+Uploaded PDF to Remarkable.
+
+@10:30 Reading =sokol_gfx= header comments on remarkable #investigate-2d-gameengine
