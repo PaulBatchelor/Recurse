@@ -428,3 +428,42 @@
   (org (string " [[" (row "hyperlink") "]]"))
   (org "\n")
  ))
+
+
+(defn get-textlines [db textfile]
+  (def link-rows @{})
+  (def query
+       (sqlite3/eval
+         db
+         (string
+           "SELECT linum, data FROM dz_textfiles WHERE filename IS "
+           "'" textfile "' "
+           "ORDER by linum ;")))
+  query)
+
+(defn print-textline [line]
+  (print "<div>")
+  (print (line "data"))
+  (print "</div>")
+  )
+
+# Work in progress...
+(defn textlines [textfile]
+  (def lines (get-textlines (ww-db) textfile))
+  (print "<div class=\"container-fluid code-viewport\">")
+  (print "<div class=\"row mr-0\">")
+  (print "<div class=\"code-view\">")
+  (print "<pre class=\"lines\"><a href=\"#L1\" id=\"L1\">1</a>")
+  (each line lines
+    (def linum (line "linum"))
+    (if (> linum 1)
+      (print (string
+               "<a href=\"#L"
+               linum
+               "\" id=\"L2\">"
+               linum " </a>"))))
+  (print "<div class=\"highlight\">")
+  (each line lines
+    (print-textline line))
+  (print "</div>")
+  (print "</div></div>"))

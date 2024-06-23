@@ -108,3 +108,32 @@ junk errors.
 Took the clear-sapp example in the sokol-samples and gradually
 added lines from the rectangle sample in the sokol gp
 repo. We have a rotating rectangle now!
+
+@15:50 Making decisions on file design #htmlize-codestudy-files #timelog:00:15:11
+Files are stored in =dz_textfiles=.
+---
+Files given some sort of path, which can be analogous
+to a dagzet namespace URL. I'd probably opt to replace things
+like periods with underscores though.
+---
+Take something like =codestudy/potential/mag_sign.cpp=,
+that could a page called =codestudy/potential/mag_sign_cpp=.
+Some assumptions could be made that =codestudy/potential=
+would already exist and that =mag_sign_cpp= wouldn't
+be a pre-existing node.
+---
+A janet function could be written to generate the appropriate
+HTML given a file path. This could then be called using
+inline Janet, which could then be created procedurally
+using a script.
+
+@16:05 Bottoms-up: create initial render page. #htmlize-codestudy-files
+Gosh there's so friction getting this to work cuz everything
+is so connected. I wanted to just write Janet code, but
+I needed other things, so I put it inside a placeholder org
+file and ran parse, but the CSS parse path is wrong.
+
+@16:37 We're going to need to re-work the HTML generator in weewiki.janet #htmlize-codestudy-files #timelog:00:32:04
+I need to point to a brand new CSS file. Overwriting the
+usual one isn't going to work. Stopping for now because
+this will require fresh thinking.
