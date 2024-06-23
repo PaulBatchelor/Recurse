@@ -65,4 +65,46 @@ why text editors have a "hardcopy" printing feature in
 ---
 Uploaded PDF to Remarkable.
 
-@10:30 Reading =sokol_gfx= header comments on remarkable #investigate-2d-gameengine
+@10:30 Reading =sokol_gfx= header comments on remarkable #investigate-2d-gameengine #timelog:00:25:36
+
+@13:00 Trying out Gate #investigate-2d-gameengine #timelog:00:34:10
+Found this while looking up how to do pixel art on
+OpenGL: [[https://github.com/SergiusIW/gate]]
+---
+running into linker problems.
+---
+Solved by adding =println!("cargo:rustc-linker-arg=-L/opt/homebrew/lib")=.
+---
+Now it is panicking because it can't find OpenGL/GLES library.
+Probably something to do with it being a Mac?
+---
+Working out test file. [[https://stackoverflow.com/questions/26745284/cmake-not-finding-gl-h-on-os-x]]. This worked fine, though I had to change
+the include file from =GL/gl.h= to =OpenGL/gl.h=.
+---
+Digging into gate library a little more, since it is just
+SDL underneath it.
+---
+There's only so much stack tracing and debugging I can do
+before I call it quits here. This is another nope.
+
+@13:45 Another look at sokol gp on OSX #investigate-2d-gameengine #timelog:00:39:00
+I think the sokol headers are out of date. OSX references
+things like cocoa, new sokol headers references metal.
+---
+Nope. Fortunately, there's documentation on the build incantation
+used to build =cube-sapp.c= in the sokol-samples repo:
+
+===
+#+BEGIN_SRC sh
+cc sapp/cube-sapp.c -I ../fips-build/sokol-samples/sapp-metal-osx-make-release/sapp/ libs/sokol/sokol.m -o cube-sapp -DSOKOL_METAL -fobjc-arc -I ../sokol -I libs/ -framework Metal -framework Cocoa -framework MetalKit -framework Quartz -framework AudioToolbox
+#+END_SRC
+===
+---
+I want to update the Makefile in sokol gp to match this better
+---
+Made a build.sh script. Still getting a lot of weird metal-related
+junk errors.
+---
+Took the clear-sapp example in the sokol-samples and gradually
+added lines from the rectangle sample in the sokol gp
+repo. We have a rotating rectangle now!
