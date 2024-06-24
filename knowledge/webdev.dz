@@ -142,3 +142,8 @@ hl https://github.com/josephrmartinez/soapnotescribe/blob/main/app/components/Au
 ln soapnotescribe: audio recorder
 rm JM's project, mentioned this code in zulip chat
 td study code as a codestudy
+
+nn lua_react
+hl https://github.com/jsdotlua/react-lua
+ln React in Lua
+tg lua react
