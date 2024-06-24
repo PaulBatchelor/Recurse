@@ -136,3 +136,9 @@ hl https://react.dev/reference/react/useState
 co $ use_state
 co $ thinking_in_react
 cr referenced when talking about useState "Hooks"
+
+nn soapnotescribe_audiorecorder
+hl https://github.com/josephrmartinez/soapnotescribe/blob/main/app/components/AudioRecorder.tsx
+ln soapnotescribe: audio recorder
+rm JM's project, mentioned this code in zulip chat
+td study code as a codestudy
