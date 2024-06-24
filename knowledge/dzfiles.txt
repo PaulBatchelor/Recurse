@@ -17,4 +17,5 @@ knowledge/ntsc.dz
 knowledge/potential.dz
 knowledge/rusty_bikes.dz
 knowledge/sokol.dz
+knowledge/pixelart.dz
 knowledge/zzz.dz

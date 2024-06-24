@@ -1,0 +1,60 @@
+@2024-06-24 Day 36. Week 6.
+47 Days Left of Batch.
+---
+This is now about at the halfway point. Going to have to start
+thinking about what happens now.
+---
+Gandalf: "All we have to decide is what to do with the time that
+is given to us."
+---
+I spent this last weekend brainstorming an interactive
+experience involving my vocal synthesis engine. Next thing
+you know, I'm shopping around for small cross-platform
+game libraries that can handle pixel art okay. Sokol
+so far has been the winner @!(dzref "gamedev/sokol/github")!@.
+---
+Working title for my little game: A Blob Named Bucket.
+---
+Next:
+
+|| @!(taskref "htmlize-codestudy-files")!@: I ran into a bit
+of a hitch yesterday, hoping to return to this.
+
+|| @!(taskref "bucket-initial-scoping")!@: Set up some tasks
+for this.
+
+|| @!(taskref "voxbox-shape-morphing")!@: Begin planning
+how to add shape morphing with linear gesture.
+
+|| @!(taskref "what-now-week6")!@: Halfway point. Stop,
+Reflect, Plan.
+
+@08:15 Morning Triage.
+
+@08:22 De-prioritizing. #voxbox-better-size-control
+As I think I've mentioned already, this is turning out
+to be more of a DSP problem, less of a programmer problem.
+It'd be cool to have at some point, but not during my
+time at RC.
+
+@08:26 De-prioritizing #demo-tongue-control
+I think I need more musical demos now.
+
+@08:27 Initial investigation complete #investigate-2d-gameengine
+Sokol and/or SDL is probably going to be my solution moving
+forward. The general approach is to use textures and
+rectangles for sprites. There is documentation on this
+that I can read.
+
+@08:30 It would be great to get this done this week #htmlize-codestudy-files
+I think this is a very important aspect.
+
+@08:33 This could still work as a self-contained demo #demo-poke
+This could be done in a p5 app. I just want a circle that
+giggles and jitters when you poke at it. It'd be a good
+pre-cursor to other experiences I want to make like
+"A Blob Named Bucket".
+
+@08:41 Working on Zulip Checkin
+
+@09:11 Done with Zulip Checkin. Walk and think?

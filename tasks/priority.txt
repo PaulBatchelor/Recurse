@@ -3,10 +3,6 @@ tasks that I intend to work on in the next few days or so.
 
 @morning-triage Daily morning triage of tasks
 
-@voxbox-change-nose-length change nose length
-
-@voxbox-better-size-control Improve tract size/length control with interpolation
-
 @htmlize-codestudy-files HTMLize code study files
 
 @react-adding-interactivity Read "Adding Interactivity"
@@ -14,6 +10,10 @@ Link: [[https://react.dev/learn/adding-interactivity]].
 
 @demo-poke "poke a face" demo.
 
-@demo-tongue-control "tongue control" demo
-
 @investigate-2d-gameengine Investigate 2d pixel art solutions
+
+@bucket-initial-scoping project scoping for "A Blob Named Bucket"
+
+@what-now-week6 What do I do now?
+
+@voxbox-shape-morphing add shape morphing with linear gesture
