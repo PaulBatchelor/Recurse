@@ -1,4 +1,4 @@
-@2024-06-22 Day 35.
+@2024-06-23 Day 35.
 48 Days left of batch.
 ---
 Thinkpad ordered yesterday. Should be arriving by the 28th,
@@ -143,3 +143,5 @@ this will require fresh thinking.
 @19:14 Attempts to import small sokol gp example  #investigate-2d-gameengine #timelog:00:28:31
 
 @19:41 Imported. Builds on OSX and Linux now. #investigate-2d-gameengine
+
+@19:47 Import ink.
