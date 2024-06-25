@@ -36,3 +36,36 @@ design would be a great thing to garnish it with after. Sound
 design will be another task too.
 
 @09:56 Zulip Checkin
+
+@10:02 Initial refactoring attempt of my weewiki system #htmlize-codestudy-files #timelog:01:04:09
+Basically, there are default header/footer functions for
+HTML pages. I need to rework this so that the dagzet files
+use their own custom header/footer functions.
+---
+Does weewiki store the current page name somewhere? Yes,
+it's =ww-name=.
+---
+I'm going with global mutable state, because that's ultimately
+going to be easier.
+---
+Oh boy, this is tricky. By the time the Org gets parsed,
+the headers/footers are already set up. This means I
+can't actually disable the templates from the Org file
+itself. It needs to come from a lower level.
+---
+I can add the files to a list, but that's error prone.
+---
+Okay, files are going to have the "dzfiles" or perhaps
+"dzf" extension for terseness. So for example, a file
+called =codestudy/potential/mag_sign.rs= would have
+a prefix of =dzf/codestudy/potential/mag_sign.rs=.
+My weewiki server would then be able to filter those
+pages and disable templates entirely. So far this is the
+best hack I got.
+---
+testing out hacky idea
+---
+Initial idea working. I'll need to inject the rest of the
+HTML next.
+
+@10:03 Oh wow my laptop is coming today gotta pick that up.

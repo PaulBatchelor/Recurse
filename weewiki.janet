@@ -1,10 +1,7 @@
 (def personal-wiki-path "/wiki")
 (def ww-dir "_site/recurse")
 (def webroot (if (ww-server?) "/wiki" "/recurse"))
-(def css-path 
-  (if (ww-server?)
-    "/css/style.css"
-    (string webroot "/css/style.css")))
+(import templates)
 
 (defn pgexists? (name)
   (var db (ww-db))
@@ -49,31 +46,8 @@
       name
       "]]"))))
 
-(defn html-header []
-  (print
-    (string/join
-      @["<!DOCTYPE html>"
-        "<html lang=\"en\">"
-        "<head>"
-        "<meta charset=\"utf-8\">"
-        (string
-          "<link rel=\"stylesheet\" href=\""
-          css-path
-          "\">")
-        "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />"
-        "</head>"
-        "<body>"
-        "<div id=\"main\">"] "\n")))
-
-(defn html-footer
-  []
-  (print
-``
-</div>
-</body>
-</html>
-``
-))
+(defn html-header [] (templates/header (ww-name)))
+(defn html-footer [] (templates/footer (ww-name)))
 
 (defn dzref [dzpath]
   (def split-path (string/split "/" dzpath))
