@@ -147,3 +147,9 @@ nn lua_react
 hl https://github.com/jsdotlua/react-lua
 ln React in Lua
 tg lua react
+
+nn react_as_ui_runtime
+hl https://overreacted.io/react-as-a-ui-runtime/ln React as a UI Runtime
+tg react
+rm DF recommended this to me as a kind of
+rm deep dive
