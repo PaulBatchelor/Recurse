@@ -1,0 +1,38 @@
+@2024-06-24 Day 37.
+46 days left of batch.
+---
+A table of contents sure would be nice, huh. @!(taskref "toc-logs")!@.
+---
+Did you know Philip Glass used to be a plumber?
+---
+Prev: "A Blob Named Bucket" planning, reflect on RC time so
+far, C creatures, Reading.
+---
+Next:
+
+|| @!(taskref "htmlize-codestudy-files")!@: Did not
+do yesterday. Try to tackle this before leaving for Hub.
+
+|| @!(taskref "bucket-initial-scoping")!@: Did some brainstorming,
+now I want to work out some actionable items.
+
+|| Lots of RC things today: Webdev Meetup, Audio Hang,
+Graphics Hang, Half Baked Demos
+
+@09:29 Morning Triage.
+Late start. Ironically, I was trying to wake up earlier,
+but it backfired.
+
+@09:32 I need to do less. #what-now-week6
+There is always the temptation to bite off more than
+one can chew, and once again I feel like this is starting
+to happen. I'll probably want to leave this up for
+the rest of the week and see if any more thoughts emerge.
+
+@09:36 Make tiny games before this small game #bucket-initial-scoping
+I want to build demos exploring a some of the core "verbs" I wrote down,
+like "poke", "eat", "move (to target). Probably in p5. Sound
+design would be a great thing to garnish it with after. Sound
+design will be another task too.
+
+@09:56 Zulip Checkin
