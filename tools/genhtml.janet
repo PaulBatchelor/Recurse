@@ -1,3 +1,8 @@
+(def css-path 
+  (if (ww-server?)
+    "/css/code.css"
+    (string webroot "/css/code.css")))
+
 (defn generate [data-filepath &opt webroot]
  (default webroot "/wiki")
  (def fp (file/open data-filepath))
@@ -441,14 +446,30 @@
            "ORDER by linum ;")))
   query)
 
+(defn escape-line [txt]
+  (if (= (length txt) 0) "<br>"
+    (string/replace-all " " "&nbsp;" txt))
+  )
 (defn print-textline [line]
   (print "<div>")
-  (print (line "data"))
+  (print (escape-line (line "data")))
   (print "</div>")
   )
 
 # Work in progress...
 (defn textlines [textfile]
+  (print (string/join @[
+
+"<!DOCTYPE html>"
+"<html lang=\"en-US\">"
+    "<head>"
+        "<meta charset=\"utf-8\" />"
+        "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />"
+        (string "<link rel=\"stylesheet\" href=\"" css-path "\">")
+        (string "<title>"textfile"</title>")
+    "</head>"
+    "<body>"
+  ] "\n"))
   (def lines (get-textlines (ww-db) textfile))
   (print "<div class=\"container-fluid code-viewport\">")
   (print "<div class=\"row mr-0\">")
@@ -460,10 +481,14 @@
       (print (string
                "<a href=\"#L"
                linum
-               "\" id=\"L2\">"
-               linum " </a>"))))
+               "\" id=\"L" linum "\">"
+               linum "</a>"))))
+  (print "</pre></div>")
   (print "<div class=\"highlight\">")
   (each line lines
     (print-textline line))
   (print "</div>")
-  (print "</div></div>"))
+  (print "</div></div>")
+  (print "</body>")
+  (print "</html>")
+  )
