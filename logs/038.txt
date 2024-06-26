@@ -38,3 +38,39 @@ It works!
 @09:54 Attempt to pick up my thinkpad laptop #provision-thinkpad
 
 @10:07 Laptop turns on. Good. Now to get Alpine image downloaded and installed #provision-thinkpad
+
+@12:04 I have a decent enough system now
+
+@12:18 Working on getting nmcli configured
+Using the alpine wiki
+
+@12:26 networkmanager service stops when I try to list wifi networks
+I need to figure out how to troubleshoot this
+---
+It's in /var/log/messages I think, tailing now.
+---
+I can get more verbose output with =service networkmanager start -v=
+
+@12:35 rebooting
+
+@12:37 Okay nmcli can list devices now, attempting to connect
+I get an "not authorized to control networking message",
+which is a known thing in the Alpine wiki. There is
+a config file I make:
+
+===
+#+BEGIN_SRC ini
+[main]
+auth-polkit=false
+#+END_SRC
+===
+
+@12:42 we have a connection!
+
+@12:43 Going to run over to the hub and try to connect this thing to their WiFi
+I will feel pretty much accomplished by then.
+
+@13:30 (approx.) Lunch
+
+@15:19 OLED black figured out, back and forth
+
