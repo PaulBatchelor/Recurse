@@ -53,103 +53,32 @@ hl https://codepen.io/anon/pen/pgBjBy
 ln small webgl example drawing pixels
 tg webgl webdev
 
-zz -------------------------------------------------------
+nn zod
+hl https://zod.dev/
+ln zod: TypeScript-first schema validation with static
+ln type inference
 
-ns webdev/react
+nn conform
+hl https://conform.guide/
+ln conform: Conform is a type-safe form validation library
+ln utilizing web fundamentals to progressively enhance HTML
+ln Forms with full support for server frameworks like Remix
+ln and Next.js.
 
-nn quickstart
-ln react quickstart
-hl https://react.dev/learn
-tg react
+nn mswjs
+hl https://mswjs.io/
+ln mswjs: API mocking library that allows you to write
+ln client-agnostic mocks and reuse them across any
+ln frameworks, tools, and environments.
 
-nn reference
-hl https://react.dev/reference/react
-ln react reference
-tg react
+nn pdfmake
+hl http://pdfmake.org/
+ln Client/server side PDF printing in pure JavaScript
+tg pdf webdev
 
-nn reactive_programming_wikipedia
-ln reactive programming wikipedia page
-hl https://en.wikipedia.org/wiki/Reactive_programming
-tg reactive
-rm I'm *pretty* sure this is related to React
-
-nn nextjs_wikipedia
-ln NextJS wikipedia page
-hl https://en.wikipedia.org/wiki/Next.js
-tg react nextjs
-
-nn component
-ln component: piece of re-usable code that represents a part
-ln of a user interface
-tg glossary react
-
-nn JSX_element
-ln JSX Element: Combination of JS code and HTML tags that
-ln describe what you want to display.
-
-nn use_state
-ln useState: special function React uses that you can
-ln call from a component to let it "remember" things.
-co $ component
-cr called from a component
-tg react
-
-nn tic_tac_toe
-hl https://react.dev/learn/tutorial-tic-tac-toe
-ln tic-tac-toe tutorial
-tg react tutorials
-
-nn key_property
-ln key property: special and reserved property in React.
-ln used to decide which elements to update.
-tg react
-
-nn thinking_in_react
-ln Thinking In React
-hl https://react.dev/learn/thinking-in-react
-tg react
-
-nn state_components_memory
-ln State: A Components Memory
-hl https://react.dev/learn/state-a-components-memory
-co $ thinking_in_react
-cr referenced
-td read this
-
-nn your_first_component
-ln Your First Component
-hl https://react.dev/learn/your-first-component
-co $ thinking_in_react
-cr referenced
-td read this
-
-nn passing_props_component
-ln Passing Props to a Component
-hl https://react.dev/learn/passing-props-to-a-component
-co $ thinking_in_react
-cr referenced
-td read this
-
-nn usestate_ref
-ln useState reference
-hl https://react.dev/reference/react/useState
-co $ use_state
-co $ thinking_in_react
-cr referenced when talking about useState "Hooks"
-
-nn soapnotescribe_audiorecorder
-hl https://github.com/josephrmartinez/soapnotescribe/blob/main/app/components/AudioRecorder.tsx
-ln soapnotescribe: audio recorder
-rm JM's project, mentioned this code in zulip chat
-td study code as a codestudy
-
-nn lua_react
-hl https://github.com/jsdotlua/react-lua
-ln React in Lua
-tg lua react
-
-nn react_as_ui_runtime
-hl https://overreacted.io/react-as-a-ui-runtime/ln React as a UI Runtime
-tg react
-rm DF recommended this to me as a kind of
-rm deep dive
+nn vercel_files_serverless
+hl https://vercel.com/guides/how-can-i-use-files-in-serverless-functions
+ln This guide will explain how to read files from Vercel
+ln Functions, both when used with frameworks like Next.js
+ln or standalone on Vercel.
+tg webdev vercel

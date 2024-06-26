@@ -1,4 +1,4 @@
-@2024-06-24 Day 37.
+@2024-06-25 Day 37.
 46 days left of batch.
 ---
 A table of contents sure would be nice, huh. @!(taskref "toc-logs")!@.
@@ -69,3 +69,26 @@ Initial idea working. I'll need to inject the rest of the
 HTML next.
 
 @10:03 Oh wow my laptop is coming today gotta pick that up.
+
+@11:00 Prep For Hub
+
+@11:30 Webdev meetup
+
+@12:30 Half of Audio Hang
+
+@13:00 Lunch
+Halal cart nearby. Pretty good.
+
+@14:00 Graphics
+
+@15:00 More demo planning #what-now-week6 #timelog:00:23:46
+
+@16:00 Half-baked demos
+I showed my "milowda" work and my vocal chords demo. I
+feel a little self-conscious about showing the vocal chords
+demo, as it was a little too polished. This work is also
+very personal too me, so I felt quite anxious after
+presenting. Did not expect that. I'm usually pretty okay
+with presentations.
+
+@17:30 head home.

@@ -1,0 +1,36 @@
+@2024-06-26 Day 37.
+45 days left of batch.
+---
+My social battery is pretty drained, to be honest. It was
+a difficult day/night for me yesterday. Didn't sleep well.
+It's important to me that I push myself to keep showing up
+and interacting with people. I'm realizing that "working at
+the edge of your abilities" doesn't necessarily mean
+technical abilities.
+---
+Prev: codestudy, planning, lots of hub activities.
+---
+Next:
+
+|| @!(taskref "provision-thinkpad")!@: my laptop came yesterday!
+Going to pick it up and provision it today.
+
+|| @!(taskref "htmlize-codestudy-files")!@: still need more time
+on this.
+
+|| @!(taskref "what-now-week6")!@: commit some brainstorms
+to tasks.
+
+@09:14 Morning Triage
+
+@09:25 Prototyping the initial game using p5 is probably a good move #bucket-initial-scoping
+Other than the sound engine working, getting the drawing
+pipeline working feels like it'll be the most time consuming
+thing. I don't know if I want to spend my time doing that.
+
+@09:35 Writing out zulip check-in.
+
+@09:47 Trying out mini-wasm-renderer
+See @!(dzref "webdev/wasm/mini_wasm_renderer")!@.
+---
+It works!

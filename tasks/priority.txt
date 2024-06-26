@@ -17,3 +17,5 @@ Link: [[https://react.dev/learn/adding-interactivity]].
 @what-now-week6 What do I do now?
 
 @voxbox-shape-morphing add shape morphing with linear gesture
+
+@provision-thinkpad Provision thinkpad laptop

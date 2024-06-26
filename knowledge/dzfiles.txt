@@ -18,4 +18,6 @@ knowledge/potential.dz
 knowledge/rusty_bikes.dz
 knowledge/sokol.dz
 knowledge/pixelart.dz
+knowledge/wasm.dz
+knowledge/react.dz
 knowledge/zzz.dz
