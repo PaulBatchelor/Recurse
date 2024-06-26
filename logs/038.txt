@@ -34,3 +34,7 @@ thing. I don't know if I want to spend my time doing that.
 See @!(dzref "webdev/wasm/mini_wasm_renderer")!@.
 ---
 It works!
+
+@09:54 Attempt to pick up my thinkpad laptop #provision-thinkpad
+
+@10:07 Laptop turns on. Good. Now to get Alpine image downloaded and installed #provision-thinkpad
