@@ -78,7 +78,7 @@ I will feel pretty much accomplished by then.
 
 @16:05 The CSS works, now the links need to be hooked up into the HTMLized output #htmlize-codestudy-files #timelog:00:15:43
 
-@16:22 Test it out on website. #htmlize-codestudy-files #bug-missing-nodes
+@16:22 Test it out on website. #htmlize-codestudy-files #timelog:00:18:43
 
 @16:32 Why are nodes missing in "potential" codestudy? #bug-missing-nodes
 For example nodes like "cpp" and "magsign_cpp" are missing.
