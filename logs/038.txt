@@ -74,6 +74,25 @@ I will feel pretty much accomplished by then.
 
 @15:19 OLED black figured out, back and forth
 
-@15:45 Re-acquainting myself with last progress. Final remaining bits with any luck #htmlize-codestudy-files
+@15:45 Re-acquainting myself with last progress. Final remaining bits with any luck #htmlize-codestudy-files #timelog:00:23:06
 
+@16:05 The CSS works, now the links need to be hooked up into the HTMLized output #htmlize-codestudy-files #timelog:00:15:43
+
+@16:22 Test it out on website. #htmlize-codestudy-files #bug-missing-nodes
+
+@16:32 Why are nodes missing in "potential" codestudy? #bug-missing-nodes
+For example nodes like "cpp" and "magsign_cpp" are missing.
+---
+It's not being added to the data.
+===
+#+BEGIN_SRC shell
+jq .nodes[] | .name data/codestudy/potential/index.json | grep magsign_cpp
+#+END_SRC
+===
+It *is* showing up in the SQLite table. So the problem is
+in =generate_graph_data.lua=.
+===
+#+BEGIN_SRC sqlite
+SELECT name FROM dz_nodes WHERE name like "%cpp"
+#+END_SRC
 
