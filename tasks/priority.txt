@@ -3,8 +3,6 @@ tasks that I intend to work on in the next few days or so.
 
 @morning-triage Daily morning triage of tasks
 
-@htmlize-codestudy-files HTMLize code study files
-
 @react-adding-interactivity Read "Adding Interactivity"
 Link: [[https://react.dev/learn/adding-interactivity]].
 
@@ -19,3 +17,5 @@ Link: [[https://react.dev/learn/adding-interactivity]].
 @voxbox-shape-morphing add shape morphing with linear gesture
 
 @provision-thinkpad Provision thinkpad laptop
+
+@bug-missing-nodes Bug: nodes are missing in dagzet

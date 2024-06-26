@@ -12,3 +12,7 @@
 
 # code study
 ./tools/import_codestudy.sh
+
+# to be called after dagzet is created
+./tools/gendzfiles.sh
+
