@@ -70,7 +70,7 @@ auth-polkit=false
 @12:43 Going to run over to the hub and try to connect this thing to their WiFi
 I will feel pretty much accomplished by then.
 
-@13:30 (approx.) Lunch
+@13:30 (approx.) Extended Lunch
 
 @15:19 OLED black figured out, back and forth
 
