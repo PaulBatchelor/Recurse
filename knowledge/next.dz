@@ -1,0 +1,13 @@
+ns retrocomputing/next
+
+nn next_software_archive
+hl https://archive.org/details/NeXTArchive
+ln NeXT computer software archive
+
+nn next_user_manual_rev3
+hl https://archive.org/details/manualzilla-id-6266318
+ln Next NXT user manual rev3
+
+nn nextstep_dev_manual
+hl https://www.nextcomputers.org/files/manuals/nd/
+ln NEXTSTEP 3.3 developers manual

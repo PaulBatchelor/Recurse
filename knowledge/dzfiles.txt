@@ -22,4 +22,5 @@ knowledge/wasm.dz
 knowledge/react.dz
 knowledge/tic80.dz
 knowledge/pipewire.dz
+knowledge/next.dz
 knowledge/zzz.dz

@@ -129,12 +129,21 @@ visible rectangles.
 
 @voxboxOSC create OSC controlled synth for voxbox
 
-@react-describing-ui Read "Describing UI" from "Learning React" series
-Link: [[https://react.dev/learn/describing-the-ui]].
-
 @voxbox-tongue-interface improve tongue interface for voxbox
 
 @voxbox-change-nose-length change nose length
 
 @htmlize-codestudy-files HTMLize code study files
+
+@provision-thinkpad Provision thinkpad laptop
+
+@investigate-2d-gameengine Investigate 2d pixel art solutions
+
+@blob-brainstorm Brainstorm: A Blob Named Bucket
+
+@react-adding-interactivity Read "Adding Interactivity"
+Link: [[https://react.dev/learn/adding-interactivity]].
+
+@bucket-initial-scoping project scoping for "A Blob Named Bucket"
+
 

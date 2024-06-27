@@ -1,5 +1,24 @@
 @2024-06-27 Day 39.
 44 days left of batch.
+---
+Well, 43 days really. August 9th is a Friday.
+---
+prev: new thinkpad provisioning. react reading. codestudy
+mostly seems to work (though I found another weird bug which
+is probably unrelated).
+---
+next:
+|| @!(taskref "nexthacking")!@: NeXT hacking today with JB.
+
+|| @!(taskref "investigate-tic80")!@: Some initial tic80
+investigations. I want to see how feasible it is to hack
+the audio engine to play new synthesizers like my singing
+synthesizer.
+
+|| @!(taskref "what-now-week6")!@: I didn't really get
+around to this yesterday.
+
+|| @!(taskref "bug-missing-nodes")!@: Bug hunting
 
 @08:04 Log started.
 
@@ -41,3 +60,57 @@ I managed to re-install old jack.
 If there is pipewire support for JACK that works with
 TIC-80, I'd probably want to use that to get sound working
 on my Linux box. Further reading @!(dzref "audio/pipewire_docs")!@.
+
+@08:38 Morning triage.
+
+@08:48 Deprioritizing. #voxbox-shape-morphing
+It's going to need to get done, but I can't have it
+in the priority bin like this.
+
+@08:49 I think I've done enough for this research #investigate-2d-gameengine
+I've just had the idea to look into tic-80 and hack the audio
+engine. This seems to be most in the spirit of RC, and probably
+going to be more fun than trying to get a bunch of graphics
+libraries working.
+---
+Sokol would be what I'd want to try as well for something
+similar to tic-80 graphics-wise, but that's more upfront
+work.
+---
+There's always p5.js and friends for very quick rapid
+prototyping. I really need to convince myself to try using
+these for time constraints.
+
+@08:52 I really need to get this done soon. #bucket-initial-scoping
+Basically, "A Blob Named Bucket" will most likely be a
+culmination of other mechanics I try out.
+---
+As I type this. I can't help but wonder if this will be
+too time consuming to try and implement.
+---
+You know what. I'm going to story-board the gameplay
+for bucket. That's what is missing.
+
+@08:55 Task created #bucket-storyboard #bucket-initial-scoping
+A good follow-up to my initial scoping.
+I'm kind of paralyzed with tech stack choices, and I'm
+very limited with time, so boiling down game design is a
+good choice. I know how with a certain degree of accuracy
+how long pen and paper takes.
+
+@08:58 Finished reading this chapter yesterday #react-describing-ui
+
+@09:00 Next react chapter: managing state #react-managing-state
+
+@09:01 poke demo moved back to main #demo-poke
+Probably won't get to it until next week.
+This has been added to my priority group.
+
+@09:03 Getting zulip check-in ready
+
+@09:28 Some NeXT research #nexthacking #timelog:00:07:08
+
+@!(dzref "retrocomputing/next")!@
+
+@09:39 Quick time looking at the missing nodes #bug-missing-nodes
+

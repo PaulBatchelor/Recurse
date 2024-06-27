@@ -3,21 +3,14 @@ tasks that I intend to work on in the next few days or so.
 
 @morning-triage Daily morning triage of tasks
 
-@react-adding-interactivity Read "Adding Interactivity"
-Link: [[https://react.dev/learn/adding-interactivity]].
-
-@demo-poke "poke a face" demo.
-
-@investigate-2d-gameengine Investigate 2d pixel art solutions
-
-@bucket-initial-scoping project scoping for "A Blob Named Bucket"
-
 @what-now-week6 What do I do now?
-
-@voxbox-shape-morphing add shape morphing with linear gesture
-
-@provision-thinkpad Provision thinkpad laptop
 
 @bug-missing-nodes Bug: nodes are missing in dagzet
 
 @investigate-tic80 investigate tic80
+
+@nexthacking NeXT Hacking!
+
+@react-managing-state read React: managing state
+link [[https://react.dev/learn/managing-state]].
+

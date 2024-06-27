@@ -1,4 +1,5 @@
 json = require("tools/json")
+pprint = require("tools/pprint")
 genpage = require("tools/genpage")
 function split_at_slashes(inputstr)
     local t = {}
@@ -75,6 +76,8 @@ function generate_directories(h)
     gendir_rec(h)
 end
 
+debug_mode = false
+
 function generate_page_data(db, h, lookup, namespace, pglist)
     local nodes = {}
     local subgraphs = {}
@@ -113,10 +116,24 @@ function generate_page_data(db, h, lookup, namespace, pglist)
 
     local output = genpage.pagedata(db, nspath, nodes)
     output.subgraphs = subgraphs
+    if nspath == "codestudy/potential" then
+        debug_mode = true
+        genpage.debug_mode = true
+    end
+
+    if debug_mode then
+        print("DEBUG")
+        local fp = io.open("debug.json", "w")
+        fp:write(json.encode(output.nodes))
+        fp:close()
+    end
+
     print("writing to " .. filepath)
     local fp = io.open(filepath, "w")
     fp:write(json.encode(output))
     fp:close()
+    debug_mode = false
+    genpage.debug_mode = false
     return pglist
 end
 

@@ -1,5 +1,7 @@
 genpage = {}
 
+genpage.debug_mode = false
+
 function generate_nodes(db, namespace)
     local stmt = db:prepare(
         "SELECT name, id FROM dz_nodes " ..
@@ -79,6 +81,11 @@ function nodes_connected_to(node, edges)
 
     for _, e in pairs(edges) do
         if e[1] == node then
+            -- TODO: make this debug mode flag work
+            if genpage.debug_mode then
+                print("DEBUG: inserting node")
+                error("hi")
+            end
             table.insert(nodelist, e[2])
         end
     end

@@ -19,6 +19,9 @@ The current page can be found at @!(ref "demos")!@.
 
 @vcv-potential-study study the VCV Potential Plugin Code
 
-@blob-brainstorm Brainstorm: A Blob Named Bucket
-
 @toc-logs Make table of contents for a log file.
+
+@bucket-storyboard Storyboard the gameplay of "A Blob Named Bucket"
+
+@demo-poke "poke a face" demo.
+

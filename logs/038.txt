@@ -96,3 +96,6 @@ in =generate_graph_data.lua=.
 SELECT name FROM dz_nodes WHERE name like "%cpp"
 #+END_SRC
 
+@18:34 React Reading #react-adding-interactivity #timelog:00:18:40
+
+@20:00 SPACE JAM.
