@@ -20,4 +20,5 @@ knowledge/sokol.dz
 knowledge/pixelart.dz
 knowledge/wasm.dz
 knowledge/react.dz
+knowledge/tic80.dz
 knowledge/zzz.dz

@@ -1,0 +1,11 @@
+@2024-06-27 Day 39.
+44 days left of batch.
+
+@08:04 Log started.
+
+@08:05 How easy is it to build tic-80? #investigate-tic8
+Source @!(dzref "gamedev/tic80/github")!@.
+---
+Starting on my Mac. Looks like pretty typical CMake stuff.
+---
+Seems to work! now off to try Linux.

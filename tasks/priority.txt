@@ -19,3 +19,5 @@ Link: [[https://react.dev/learn/adding-interactivity]].
 @provision-thinkpad Provision thinkpad laptop
 
 @bug-missing-nodes Bug: nodes are missing in dagzet
+
+@investigate-tic80 investigate tic80
