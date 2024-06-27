@@ -606,7 +606,7 @@ function generate_sqlite_code()
 
     for _, v in pairs(nodelist) do
         print(fmt("INSERT INTO dz_nodes(name, position) " ..
-            "VALUES (\"%s\", %d);", v, nodes[v]))
+            "VALUES (\'%s\', %d);", v, nodes[v]))
     end
     print("COMMIT;");
 

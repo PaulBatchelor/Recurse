@@ -22,7 +22,7 @@ function generate_sqlite () {
 
 function delete_previous_pages() {
     sqlite3 a.db <<EOM
-DELETE FROM wiki WHERE key LIKE "taskgroups%"
+DELETE FROM wiki WHERE key LIKE 'taskgroups%'
 EOM
 }
 

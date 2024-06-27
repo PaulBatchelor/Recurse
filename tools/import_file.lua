@@ -19,8 +19,8 @@ local textfiles_table = table.concat({
 }, "\n")
 
 local clear_previous = table.concat({
-    "DELETE FROM dz_textfiles WHERE filename is \"",
-    file_with_ns .. "\";"
+    "DELETE FROM dz_textfiles WHERE filename is '",
+    file_with_ns .. "';"
 })
 
 local fp = io.open(filename)
@@ -40,7 +40,7 @@ for ln in fp:lines() do
     print(table.concat({
         "INSERT INTO dz_textfiles(filename, linum, data)",
         "VALUES(",
-        "\"" .. file_with_ns .. "\",",
+        "'" .. file_with_ns .. "',",
         num .. ",",
         "'" .. escape(ln) .. "'",
         ");",
