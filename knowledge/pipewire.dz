@@ -1,0 +1,5 @@
+ns audio/pipewire
+
+nn pipewire_docs
+ln https://docs.pipewire.org/page_overview.html
+hl Pipewire documentation
