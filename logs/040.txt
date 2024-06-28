@@ -5,14 +5,23 @@
 Oh wow that was easy. Little did I know I was 30 seconds
 away from getting this working last night.
 
-@07:30 Back to tic-80 compilation on new laptop
+@07:30 Back to tic-80 compilation on new laptop #investigate-tic80
 Now that sokol example works, I think I figured out
 all the graphics issues
 
 @07:36 TIC-80 builds, runs tetris, no sound yet
-@07:47 Sound works. Studying music demo.
+@07:47 Sound works. Studying music demo. #investigate-tic80
 I like the scale and form factor of this.
 
-@08:08 trying to see where export is hanging
+@08:08 trying to see where export is hanging #investigate-tic80
 
-@08:12 tried running in gdb and gdb crashed. musl issues?
+@08:12 tried running in gdb and gdb crashed. musl issues? #investigate-tic80
+
+@09:39 At the hub.
+
+@09:40 Back to investigating missing nodes #bug-missing-nodes
+
+@09:41 Oh crap the ulitimate spinner is available
+I missed my chance months ago (waited months
+for this). Can't afford it. Oh well. Still
+buying.
