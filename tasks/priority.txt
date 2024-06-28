@@ -7,12 +7,10 @@ tasks that I intend to work on in the next few days or so.
 
 @bug-missing-nodes Bug: nodes are missing in dagzet
 
-@investigate-tic80 investigate tic80
-
-@nexthacking NeXT Hacking!
-
 @react-managing-state read React: managing state
 link [[https://react.dev/learn/managing-state]].
 
 @investigate-wabt Investigate wabt
 link [[https://github.com/WebAssembly/wabt]]
+
+@what-now-week7 Career thoughts in week7

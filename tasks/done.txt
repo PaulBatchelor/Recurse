@@ -147,3 +147,8 @@ Link: [[https://react.dev/learn/adding-interactivity]].
 @bucket-initial-scoping project scoping for "A Blob Named Bucket"
 
 
+@nexthacking NeXT Hacking!
+
+@investigate-tic80 investigate tic80
+
+
