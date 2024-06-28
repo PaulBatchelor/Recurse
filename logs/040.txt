@@ -1,0 +1,18 @@
+@2024-06-27 Day 38.
+42 days left of batch.
+
+@07:28 Get Sokol example working on new laptop
+Oh wow that was easy. Little did I know I was 30 seconds
+away from getting this working last night.
+
+@07:30 Back to tic-80 compilation on new laptop
+Now that sokol example works, I think I figured out
+all the graphics issues
+
+@07:36 TIC-80 builds, runs tetris, no sound yet
+@07:47 Sound works. Studying music demo.
+I like the scale and form factor of this.
+
+@08:08 trying to see where export is hanging
+
+@08:12 tried running in gdb and gdb crashed. musl issues?

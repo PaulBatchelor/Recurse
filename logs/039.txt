@@ -113,3 +113,7 @@ This has been added to my priority group.
 @!(dzref "retrocomputing/next")!@
 
 @09:39 Quick time looking at the missing nodes #bug-missing-nodes #timelog:00:17:01
+
+@10:00 NeXT-ing
+@16:00 Presentations
+@20:30 Home
