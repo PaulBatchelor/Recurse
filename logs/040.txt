@@ -96,3 +96,74 @@ what isn't there.
 
 @11:21 Missing nodes seem to line up with the missing nodes on page #bug-missing-nodes
 Clocking out for now
+
+@13:34 Troubleshooting tic80 export on thinkpad #investigate-tic80 #timelog:00:44:37
+
+@13:42 onExportHTML call seems to return hmmm #investigate-tic80
+printf-ing to console works, even if gdb crashes
+
+@13:45 =tic_net_get()=: that doesn't sound great #investigate-tic80
+Sounds like it might be trying to download something from
+the internet? Yeah, that could be a problem here.
+
+@13:51 =tic_net_get()= might not be getting called #investigate-tic80
+Firslty, the printf I placed there isn't showing up.
+Secondly, it makes a call to =empscripten_fetch=, which
+I do not (think I) have.
+---
+Maybe it is defined elsewhere?
+---
+Ah, there are multiple definitions here. Wonder which
+one is the actual one.
+
+@13:57 =tic_net_get()= is an empty function. #investigate-tic80
+The tic cart loaders are pre-compiled wasm files.
+The path is =/export/1.2-dev/html=.
+
+@14:08 The tic cart loader, as far as I can tell, is closed source. #investigate-tic80
+Basically, HTML export works by fetching from a URL. This
+downloads a zipfile that already has the wasm in there.
+Exporting is simply a matter of dropping that TIC file
+in the in the zip file.
+
+@14:11 Options moving forward #investigate-tic80
+So, it's looking like doing any kind of hacking on this
+would be a fairly ambitious task that would take up most
+of my time. It looks like this wasm file is the only thing
+I have. What I'd like to do is to somehow patch it,
+potentially. And get it to load in custom code for audio
+playback.
+---
+It's not a no, though it would dramatically change what it
+is I came here to do. Instead of doing funny vocal synth
+stuff, I'd be going deep into trying to reverse engineer
+this thing. Feels very much in the spirit of RC. And this
+is more motivating to me than more frontend-y stuff. There
+may be less polished things to show, though.
+
+@14:21 Looking into wasm2wat #investigate-wabt #timelog:00:22:34
+Needed for reverse engineering tic80 wasm bundle.
+---
+I love how easy it was to build, and the tools look
+very neat.
+
+@14:45 thoughts on reverse engineering tic80 #investigate-tic80
+Using
+this to make any sense of tic80 feels like something
+that would take me maybe months to a year to do maybe.
+Hacking the tic80 source code itself would take
+less time. I'd probably have better luck building
+my own cartridge loader.
+---
+I think if I wanted to go deep on wasm rather
+than frontend stacks, I'd definitely want to look
+into this. This stuff sparks joy more than
+javascript/React.
+
+@14:46 how is a tic cart saved? #investigate-tic80 #timelog:00:22:00
+I am pretty sure it's lua5.3, based on grepping for
+version for the built in luajit.
+---
+Functions defined in =cart.c=. Looking at =music.tic=, the
+code for the seems to be at the very bottom.
+---

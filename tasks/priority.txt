@@ -14,3 +14,5 @@ tasks that I intend to work on in the next few days or so.
 @react-managing-state read React: managing state
 link [[https://react.dev/learn/managing-state]].
 
+@investigate-wabt Investigate wabt
+link [[https://github.com/WebAssembly/wabt]]
