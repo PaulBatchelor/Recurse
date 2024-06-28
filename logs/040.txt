@@ -16,3 +16,11 @@ I like the scale and form factor of this.
 @08:08 trying to see where export is hanging
 
 @08:12 tried running in gdb and gdb crashed. musl issues?
+
+@08:44 tic80 export works on mac
+The bundle includes the tic80 card and a wasm file. I
+have no idea where the wasm comes from. It's not a file
+included in the source, and there doesn't seem to be
+any clear indication where/how it is being generated. My
+best guess is that somewhere it gets made with emscripten
+because I see mentions of it when I grep for wasm-y things.
