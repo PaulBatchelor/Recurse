@@ -1,7 +1,8 @@
 @2024-06-27 Day 38.
 42 days left of batch.
 
-@07:28 Get Sokol example working on new laptop
+@07:28 Get Sokol example working on new laptop #investigating
+Precursor to getting tic-80 working.
 Oh wow that was easy. Little did I know I was 30 seconds
 away from getting this working last night.
 
@@ -9,7 +10,8 @@ away from getting this working last night.
 Now that sokol example works, I think I figured out
 all the graphics issues
 
-@07:36 TIC-80 builds, runs tetris, no sound yet
+@07:36 TIC-80 builds, runs tetris, no sound yet #investigate-tic80
+
 @07:47 Sound works. Studying music demo. #investigate-tic80
 I like the scale and form factor of this.
 
@@ -17,11 +19,80 @@ I like the scale and form factor of this.
 
 @08:12 tried running in gdb and gdb crashed. musl issues? #investigate-tic80
 
+@08:44 tic80 export works on mac #investigate-tic80
+The bundle includes the tic80 card and a wasm file. I
+have no idea where the wasm comes from. It's not a file
+included in the source, and there doesn't seem to be
+any clear indication where/how it is being generated. My
+best guess is that somewhere it gets made with emscripten
+because I see mentions of it when I grep for wasm-y things.
+
 @09:39 At the hub.
 
-@09:40 Back to investigating missing nodes #bug-missing-nodes
+@09:40 Back to investigating missing nodes #bug-missing-nodes #timelog:01:25:41
 
 @09:41 Oh crap the ulitimate spinner is available
 I missed my chance months ago (waited months
 for this). Can't afford it. Oh well. Still
 buying.
+
+@09:52 =generate_graph_data.lua= and =genpage.lua= #bug-missing-nodes
+These are the missing files
+
+@09:55 Run =dz_wikigen.sh= to trigger debug message #bug-missing-nodes
+
+@09:57 The nodelist is not being created correctly. why? #bug-missing-nodes
+
+@10:00 genpage.pagedata: output nodes being made via params.nodelist #bug-missing-nodes
+How is this being created?
+
+@10:00 Lua issues, debug flag is not working #bug-missing-nodes
+
+@10:12 Lua function setting the global variable sets it to true somehow? #bug-missing-nodes
+
+@10:13 Oh wait, I was setting this #bug-missing-nodes
+
+@10:18 okay weird. the debug flag is being unset somewhere apparently #bug-missing-nodes
+Not the problem I wanted to troubleshoot, but hey I need
+this for the visibility.
+
+@10:22 more testing for visibility with traverse_node() #bug-missing-nodes
+The debug mode flag is never set to true here. Confirmed
+with printing and filtering output.
+---
+Also confirmed that it doesn't matter if you're using the
+function =dbg= I made or checking the variable itself. It's
+the same. So, I'm pretty sure the =dbg= shortcut function is
+fine.
+---
+I need to be able to track down when this is being set,
+and then unset.
+
+@10:29 the debug flag is definitely being set exactly once #bug-missing-nodes
+I think what's happening is the variable is being copied over
+when it is loaded up in the module. Hoping to fix this by
+using a big global that can be read everywhere.
+
+@10:35 Okay, global debug flag didn't work. Rethinking approach #bug-missing-nodes
+This is NOT what I'm debugging. I just need visibility.
+
+@10:39 Crap. I was setting the debug flag too late. Oh well. #bug-missing-nodes
+I have a clumsier approach now, but it works, and I've wasted
+too much time chasing this pre-bug to improve it.
+
+@10:42 Missing node names show up in input node list supplied to genpage #bug-missing-nodes
+Confirmed that the nodes do come up, but they aren't being
+traversed for whatever reason.
+
+@10:44 Do missing nodes show up in topsort? #bug-missing-nodes
+
+@10:48 Topsort isn't returning enough nodes. Why? #bug-missing-nodes
+should be 33, but I'm getting 20.
+
+@11:17 Let's find ou the missing nodes #bug-missing-nodes
+I tried looking for something to make sense in the code,
+but I can't yet see a pattern for what is there and
+what isn't there.
+
+@11:21 Missing nodes seem to line up with the missing nodes on page #bug-missing-nodes
+Clocking out for now
