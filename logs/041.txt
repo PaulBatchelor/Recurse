@@ -57,3 +57,7 @@ Probably a target run today.
 @10:48 zulip-ing
 
 @10:51 Oh shoot, this machine isn't able to push to my website. Going to have to fix that when I get back home.
+
+@13:03 Extension cord acquired! #buy-extension-cord
+
+@14:01 Getting thinkpad SSH key ready #thinkpad-uploader
