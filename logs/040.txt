@@ -1,7 +1,7 @@
 @2024-06-27 Day 40.
 42 days left of batch.
 
-@07:28 Get Sokol example working on new laptop #investigating
+@07:28 Get Sokol example working on new laptop #investigate-tic80
 Precursor to getting tic-80 working.
 Oh wow that was easy. Little did I know I was 30 seconds
 away from getting this working last night.

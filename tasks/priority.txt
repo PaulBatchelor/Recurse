@@ -10,7 +10,10 @@ tasks that I intend to work on in the next few days or so.
 @react-managing-state read React: managing state
 link [[https://react.dev/learn/managing-state]].
 
-@investigate-wabt Investigate wabt
-link [[https://github.com/WebAssembly/wabt]]
-
 @what-now-week7 Career thoughts in week7
+
+@buy-extension-cord: By small extension cord
+
+@toc-logs Make table of contents for a log file.
+
+@thinkpad-uploader make sure thinkpad can upload to website

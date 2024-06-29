@@ -152,3 +152,10 @@ Link: [[https://react.dev/learn/adding-interactivity]].
 @investigate-tic80 investigate tic80
 
 
+@voxbox-vcv Get voxbox ported to VCV rack
+
+@vcv-potential-study study the VCV Potential Plugin Code
+
+@investigate-wabt Investigate wabt
+link [[https://github.com/WebAssembly/wabt]]
+
