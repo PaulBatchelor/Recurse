@@ -147,3 +147,7 @@ Hopefully I just wrote them in wrong.
 So, I've added a task for this. @!(taskref "add-day-titles")!@.
 
 @16:27 okay it all works now! #toc-logs
+
+@18:14 Printing and transferring to RM #react-managing-state #timelog:00:14:00
+
+@18:28 Off to hub. Some attempts to try reading there.
