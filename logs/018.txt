@@ -1,4 +1,4 @@
-@2024-06-06 Post Game-Jam.
+@2024-06-06 Day 18. Post Game-Jam.
 Prev: game jam.
 ---
 Next: game jam wrap-up. back to implementing velum. thoughts

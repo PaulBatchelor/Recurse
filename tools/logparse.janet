@@ -52,6 +52,14 @@
     "</a>"
     ))
 
+(defn day-timestamp-html-no-id [day]
+  (def id (string/replace-all "-" "_" day))
+  (string 
+    "<a href=\"#" id "\">"
+    day
+    "</a>"
+    ))
+
 (defn day-entry-html [day time &opt fulldate]
   (default fulldate false)
   (def id
@@ -94,14 +102,31 @@
            (string " " (dayblurb "title")))
          "\n"))
 
+  (print "<a href=\"#top\">jump to top</a>")
+
   (if (is-valid-key dayblurb "blurb")
     (org (string (format-comment (dayblurb "blurb")) "\n\n")))
 
   (each row day-rows
     (print-entry row)))
 
+(defn generate-log-jumplink [db day]
+  (def dayblurb (get-dayblurb db (day "day")))
+
+  (string
+    (day-timestamp-html-no-id (day "day"))
+    (if (is-valid-key dayblurb "title")
+      (string " " (dayblurb "title")))))
+
 (defn render-daily-logs [db]
   (def days (get-available-days db))
+  (print "<ul id=\"top\">")
+  (each day days
+    (print "<li>")
+    (print (generate-log-jumplink db day))
+    (print "</li>"))
+  (print "</ul>")
+
   (each day days (render-day-entry db (day "day"))))
 
 (defn get-task-row [db tag]
@@ -190,3 +215,4 @@
              (task "task_group"))
            ")"
            "\n\n"))))
+

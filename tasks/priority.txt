@@ -3,8 +3,6 @@ tasks that I intend to work on in the next few days or so.
 
 @morning-triage Daily morning triage of tasks
 
-@what-now-week6 What do I do now?
-
 @bug-missing-nodes Bug: nodes are missing in dagzet
 
 @react-managing-state read React: managing state
@@ -12,8 +10,4 @@ link [[https://react.dev/learn/managing-state]].
 
 @what-now-week7 Career thoughts in week7
 
-@buy-extension-cord: By small extension cord
-
-@toc-logs Make table of contents for a log file.
-
-@thinkpad-uploader make sure thinkpad can upload to website
+@add-day-titles add day titles to logs

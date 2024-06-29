@@ -135,3 +135,15 @@ This is insightful: the cpp node shows up 2/3 times.
 The missing node here is =magsign_cpp=. So, =cpp=
 might be forever missing if =magsign_cpp= is missing.
 That's enough for today.
+
+@16:01 Time to make a log TOC #toc-logs #timelog:00:24:54
+
+@16:18 adding "jump to top" links.
+
+@16:22 functional. But I'm finding title errors now.
+Hopefully I just wrote them in wrong.
+
+@16:25 It would be great to retrospectively add titles to days #toc-logs #add-day-titles
+So, I've added a task for this. @!(taskref "add-day-titles")!@.
+
+@16:27 okay it all works now! #toc-logs

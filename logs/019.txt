@@ -1,4 +1,4 @@
-@2024-06-07 Day 17.
+@2024-06-07 Day 19.
 Prev: game jam. some velum stuff.
 ---
 Next: logging presentation for tool-time, velum.

@@ -159,3 +159,12 @@ Link: [[https://react.dev/learn/adding-interactivity]].
 @investigate-wabt Investigate wabt
 link [[https://github.com/WebAssembly/wabt]]
 
+@what-now-week6 What do I do now?
+
+@buy-extension-cord: By small extension cord
+
+
+@thinkpad-uploader make sure thinkpad can upload to website
+
+@toc-logs Make table of contents for a logs
+

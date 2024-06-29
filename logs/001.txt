@@ -1,4 +1,4 @@
-@2024-05-20 First day of recurse. Organize.
+@2024-05-20 Day 1. First day of recurse. Organize.
 First day of Recurse! Figuring out how to best organize
 myself. I want to use systems I already know, while also
 keep the data out in the open and readable from GH while
