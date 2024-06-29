@@ -57,3 +57,29 @@ Probably a target run today.
 @10:48 zulip-ing
 
 @10:51 Oh shoot, this machine isn't able to push to my website. Going to have to fix that when I get back home.
+
+@11:20 Quick pairing with M: learning how to make typescript react
+installed npx:
+
+===
+#+BEGIN_SRC sh
+sudo npm i -g npx
+#+END_SRC
+===
+
+---
+Got to figure out why this npx command didn't work:
+
+===
+#+BEGIN_SRC sh
+npx create-react-app my-app --template typescript
+#+END_SRC
+===
+
+---
+Solution: [[https://stackoverflow.com/questions/7718313/how-to-change-to-an-older-version-of-node-js]]
+---
+Instll n, run =n stable=. Basically, the version
+of node was "bleeding edge".
+---
+And we're running!
