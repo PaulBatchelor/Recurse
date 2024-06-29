@@ -1,0 +1,57 @@
+@2024-06-27 Day 41. Halfway.
+41 days left of batch.
+---
+Exactly halfway now. Perfectly balanced.
+---
+Moving forward,
+I'm going to be reducing my check-in presence on Zulip
+now. I'll still post links to my daily logs, but no
+words until the end of the week (Friday), where I'll
+do a weekly digest.
+---
+I have an idea-concept for my interactions at the hub.
+I want to be my physically present here. Now that have
+this Fancy Laptop, why not try to set up a usual spot and
+work out in the open?
+The corner of the fourth floor lunch table is a strategic
+location. Lots of people around here, and it's also by
+a power outlet (may need to get extension cord).
+My goal is to become furniture at the hub. Be the rock
+in the center of the river.
+---
+Actually, what if daily check-ins could be like haikus?
+It's fun and creative, while also being an exercize
+to summarize the day.
+---
+Haiku for previous day:
+where did my nodes go? /
+investigate TIC-80 /
+remaining weeks planned
+---
+Today:
+
+|| @!(taskref "bug-missing-nodes")!@: Plug away at
+this for a bit.
+
+|| @!(taskref "react-managing-state")!@: Print this
+out, start reading a bit.
+
+|| @!(taskref "buy-extension-cord")!@: I need a short
+extension cord for my charger so people don't trip over
+it.
+
+|| @!(taskref "toc-logs")!@: 
+
+@10:28 Late morning thoughts at the hub.
+
+@10:42 Didn't get around to doing this one. Oh well. #voxbox-vcv
+
+@10:43 I studied enough here. #vcv-potential-study
+It was a helpful excercise, but I need to move forward.
+
+@10:44 Bumping to priority because the page is starting to get big. #toc-logs
+
+@10:46 Need a cord so people don't trip over my AC adapter #buy-extension-cord
+Probably a target run today.
+
+@10:48 zulip-ing
