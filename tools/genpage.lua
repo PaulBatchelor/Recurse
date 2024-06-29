@@ -97,6 +97,9 @@ function nodes_connected_to(node, edges)
 
     for _, e in pairs(edges) do
         if e[1] == node then
+        if global_debug_mode and node == 137 then
+            print("DEBUG: nodes_connected_to: " .. e[2])
+        end
             table.insert(nodelist, e[2])
         end
     end
@@ -118,14 +121,22 @@ function topsort(nodes, connections)
 
     local edges = {}
     local xnodes = {}
+    local dbg = global_debug_mode
 
     if global_debug_mode then
         print("DEBUG: beginning topsort")
     end
 
+    local fstr = string.format
+
     for left, rcons in pairs(connections) do
-        -- print(nodes[v[1]] .. " -> " .. nodes[v[2]])
         for right, _ in pairs(rcons) do
+            if dbg then
+                --print("BEGIN: connect " .. nodes[left] .. " -> " .. nodes[right])
+                lnode = nodes[left]
+                rnode = nodes[right]
+                print(fstr("DEBUG: connect %d (%s) -> %d (%s) ", left, lnode, right, rnode))
+            end
             table.insert(edges, {left, right})
         end
     end
@@ -139,11 +150,20 @@ function topsort(nodes, connections)
         end
     end
 
+    if dbg then
+        for _, id in pairs(no_incoming) do
+            print(fstr("DEBUG: no_incoming %d (%s)", id, nodes[id]))
+        end
+    end
+
     while #no_incoming > 0 do
         local n = table.remove(no_incoming)
         local nodesfrom = nodes_connected_to(n, edges)
         table.insert(sorted, n)
         for _,m in pairs(nodesfrom) do
+            if dbg and m == 134 then
+                print("DEBUG: existing cpp node is here from " .. n .. " (" .. nodes[n] .. ")")
+            end
             remove_edge(edges, n, m)
             if has_incoming_nodes(m, edges) == false then
                 table.insert(no_incoming, m)
@@ -168,7 +188,7 @@ function topsort(nodes, connections)
         -- print the names of the ones remaining
 
         for ni, _ in pairs(nids) do
-            print("DEBUG: missing node " .. nodes[ni])
+            print("DEBUG: missing node " .. nodes[ni] .. " " .. ni)
 
         end
     end

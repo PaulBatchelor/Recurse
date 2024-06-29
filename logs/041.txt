@@ -88,3 +88,50 @@ And we're running!
 
 @14:01 Getting thinkpad SSH key ready #thinkpad-uploader
 
+@14:38 Back at the hub.
+
+@14:39 Looking at this again today. #bug-missing-nodes #timelog:01:04:58
+
+@14:44 Do the nodes ever make it in the main sort loop? #bug-missing-nodes
+Using =magsign_cpp= as an example, which currently has
+the id of 146.
+---
+It doesn't seem to be showing up.
+
+@14:52 checking connections #bug-missing-nodes
+Connections look right.
+
+@15:01 what are the initial "no incoming nodes"? #bug-missing-nodes
+This comes next after populating connections.
+I have a feeling that calling =table.remove=
+and =table.insert= aren't doing the things I expected.
+
+---
+Checking these nodes.
+---
+I mean, I guess it looks right?
+
+@15:16 How to trace what would need to happen to reach "cpp" node (missing) #bug-missing-nodes
+"cpp" would have to be added to the "no incoming" table.
+Which, I would expect wouldn't be happening.
+---
+The =nodes_connected_to= function: which way is the
+direction? if "nodes connected to A" returns B,
+is it "B->A" or "A->B"?
+---
+It's checking if the node is on the left, so
+"A->B", so the parent nodes.
+---
+If this is true,
+=header_file_looks_like_boilerplate= (id 137) should
+return the =cpp= node (id 134). Let's test this.
+---
+It's not showing up. Nevermind that was my fault.
+---
+Okay the cpp node is indeed showing up as expected.
+
+@15:39 check how many times cpp node shows up? #bug-missing-nodes
+This is insightful: the cpp node shows up 2/3 times.
+The missing node here is =magsign_cpp=. So, =cpp=
+might be forever missing if =magsign_cpp= is missing.
+That's enough for today.
