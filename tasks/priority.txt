@@ -1,8 +1,6 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@morning-triage Daily morning triage of tasks
-
 @bug-missing-nodes Bug: nodes are missing in dagzet
 
 @react-managing-state read React: managing state
@@ -11,3 +9,9 @@ link [[https://react.dev/learn/managing-state]].
 @what-now-week7 Career thoughts in week7
 
 @add-day-titles add day titles to logs
+
+@voxbox-shape-morphing add shape morphing with linear gesture
+
+@troubleshoot-webaudio-thinkpad Why aren't sounds playing from my demos on my thinkpad?
+
+@site-debugging-jun30 fixing site issues cuz I borked it.

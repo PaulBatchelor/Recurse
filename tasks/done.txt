@@ -162,8 +162,10 @@ link [[https://github.com/WebAssembly/wabt]]
 
 @buy-extension-cord: By small extension cord
 
-
 @thinkpad-uploader make sure thinkpad can upload to website
 
 @toc-logs Make table of contents for a logs
 
+@morning-triage Daily morning triage of tasks
+
+@react-describing-the-ui Read react describing the UI

@@ -151,3 +151,11 @@ So, I've added a task for this. @!(taskref "add-day-titles")!@.
 @18:14 Printing and transferring to RM #react-managing-state #timelog:00:14:00
 
 @18:28 Off to hub. Some attempts to try reading there.
+
+@18:45 React reading: reacting to input with state #react-managing-state #timelog:00:32:21
+
+@19:41 React reading: choosing the right state #timelog:00:27:44
+
+@20:15 Bang on electric keys in the hub. Loudly sing half-remembered songs.
+
+@21:00 go home.

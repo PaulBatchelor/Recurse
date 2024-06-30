@@ -11,7 +11,7 @@ EOM
 function insert {
 cat <<EOM
 INSERT INTO wiki(key, value)
-VALUES('dzf/$1', '@!(genhtml/textlines ''$1'')!@');
+VALUES('dzf/$1', '@!(genhtml/textlines "$1")!@');
 EOM
 }
 

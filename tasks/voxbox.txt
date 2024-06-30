@@ -1,6 +1,5 @@
 @!desc tasks related to the voxbox project
 
-
 @create-diams-interface create separate diameters interface
 In other words, don't include the diameters array/vector
 in the core tract struct since it is only partially used.
@@ -18,5 +17,3 @@ become familiar with some frontend technologies.
 @voxbox-better-size-control Improve tract size/length control with interpolation
 
 @demo-tongue-control "tongue control" demo
-
-@voxbox-shape-morphing add shape morphing with linear gesture

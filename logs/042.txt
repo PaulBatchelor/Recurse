@@ -1,0 +1,61 @@
+@2024-06-30 Day 42. (Something something Deep Thought)
+40 days left of batch.
+---
+Previous:
+
+Typescript and React \
+Topological Sort Bugs \
+Singing Quite Loudly
+
+---
+Next:
+
+|| @!(taskref "voxbox-shape-morphing")!@: set up initial
+mechanics for morphing shapes in voxbox.
+
+
+|| @!(taskref "troubleshoot-webaudio-thinkpad")!@: Figure
+out why sounds aren't playing in the browser on my
+thinkpad.
+
+@09:43 Morning Triage.
+
+@09:50 Sunsetting morning triage task #morning-triage
+I initially was going to time my morning
+triage stuff. But I don't think I want to do that.
+---
+Also, comments on the triage itself aren't all too
+helpful. I'd much rather comment on tasks themselves
+
+@09:52 core mechanic for this shouldn't be too hard #voxbox-shape-morphing
+
+@09:58 webaudio is broken on firefox thinkpad. #troubleshoot-webaudio-thinkpad
+Sounds do work on youtube, so I am getting browser sound.
+No clues in console. Locally hosted versions do not
+work either.
+
+@10:02 Uploading and posting to zulip
+Ah, still running into issues with uploading.
+I didn't finish setting things up.
+---
+Ooops I just blew up my recurse site. ROLL BAAACK.
+
+@10:11 Oh god it's all broken. starting a new task. #site-debugging-jun30
+Seeing what I can accomplish in 15 minutes, then
+I have to quickly leave for errands.
+
+@10:15 Ooops forgot to install rsync. #site-debugging-jun30
+
+@10:16 codestudy is getting errors in export #site-debugging-jun30
+Looks like the escape string is wrong. I am using
+"'" instead of """. I did this to myself when I was
+trying to update the SQLite generator scripts (they
+got stricter about single vs double qoute usage apparently.
+Technically, you're supposed to use single quotes only,
+but they used to allow both interchangeably).
+
+@10:23 I deleted some tasks #site-debugging-jun30
+I think this is fine actually? Looking at them,
+it seems like I meant to delete them. I was
+worried that I accidentally deleted the tasks
+or something.
