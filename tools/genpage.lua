@@ -1,9 +1,5 @@
 genpage = {}
 
-function genpage.set_dbg(state)
-    genpage.debug_mode2 = state
-end
-
 function generate_nodes(db, namespace)
     local stmt = db:prepare(
         "SELECT name, id FROM dz_nodes " ..
@@ -78,9 +74,6 @@ function has_incoming_nodes(node, edges, nodelist)
             -- the receiving node of an incoming node must
             -- local to the subgraph
             if nodelist[e[1]] ~= nil and e[2] == node then
-                if global_debug_mode then
-                    print("DEBUG: has_incoming_nodes: " .. ndname)
-                end
                 return true
             end
         else
@@ -97,9 +90,6 @@ function nodes_connected_to(node, edges)
 
     for _, e in pairs(edges) do
         if e[1] == node then
-        if global_debug_mode and node == 137 then
-            print("DEBUG: nodes_connected_to: " .. e[2])
-        end
             table.insert(nodelist, e[2])
         end
     end
@@ -121,22 +111,11 @@ function topsort(nodes, connections)
 
     local edges = {}
     local xnodes = {}
-    local dbg = global_debug_mode
-
-    if global_debug_mode then
-        print("DEBUG: beginning topsort")
-    end
 
     local fstr = string.format
 
     for left, rcons in pairs(connections) do
         for right, _ in pairs(rcons) do
-            if dbg then
-                --print("BEGIN: connect " .. nodes[left] .. " -> " .. nodes[right])
-                lnode = nodes[left]
-                rnode = nodes[right]
-                print(fstr("DEBUG: edge %d (%s) -> %d (%s) ", left, lnode, right, rnode))
-            end
 
             if nodes[left] == nil then
                 table.insert(edges, {left, right})
@@ -148,15 +127,6 @@ function topsort(nodes, connections)
     for n, ndname in pairs(nodes) do
         if has_incoming_nodes(n, edges, nodes) == false then
             table.insert(no_incoming, n)
-            if global_debug_mode then
-                print("DEBUG: adding " .. ndname)
-            end
-        end
-    end
-
-    if dbg then
-        for _, id in pairs(no_incoming) do
-            print(fstr("DEBUG: no_incoming %d (%s)", id, nodes[id]))
         end
     end
 
@@ -165,43 +135,11 @@ function topsort(nodes, connections)
         local nodesfrom = nodes_connected_to(n, edges)
         table.insert(sorted, n)
         for _,m in pairs(nodesfrom) do
-            if dbg and m == 136 then
-                print("DEBUG: existing cpp node is here from " .. n .. " (" .. nodes[n] .. ")")
-            end
-            if dbg and n == 148 then
-                print("DEBUG: @@ magsign_cpp found")
-            end
             remove_edge(edges, n, m)
             if has_incoming_nodes(m, edges) == false then
                 table.insert(no_incoming, m)
             end
         end
-    end
-
-    if global_debug_mode then
-        local nids = {}
-
-        -- copy node list id values
-        for ni, _ in pairs(nodes) do
-            nids[ni] = true
-        end
-
-        -- remove nodes that exist in sorted
-
-        for _, ni in pairs(sorted) do
-            nids[ni] = nil
-        end
-
-        -- print the names of the ones remaining
-
-        for ni, _ in pairs(nids) do
-            print("DEBUG: missing node " .. nodes[ni] .. " " .. ni)
-
-        end
-    end
-
-    if global_debug_mode then
-        print("DEBUG: ending topsort")
     end
 
     return sorted
@@ -518,7 +456,7 @@ function generate_node_data(nodes, connections, namespace, db, nid)
     return node, children
 end
 
-function traverse_node(params, nid, dbg)
+function traverse_node(params, nid)
     if params.traversed[nid] == nil then
         local node, children  =
             generate_node_data(params.nodes,
@@ -526,10 +464,6 @@ function traverse_node(params, nid, dbg)
                                params.namespace,
                                params.db,
                                nid)
-        if dbg then
-            print("DEBUG: inserting " .. node.name)
-        end
-
         table.insert(params.nodelist, node)
         params.traversed[nid] = true
         return children
@@ -537,10 +471,10 @@ function traverse_node(params, nid, dbg)
     return {}
 end
 
-function traverse_children(params, children_nids, dbg)
+function traverse_children(params, children_nids)
     local next_children_nids = {}
     for _, c in pairs(children_nids) do
-        local tmp = traverse_node(params, c, dbg)
+        local tmp = traverse_node(params, c)
         for _,v in pairs(tmp) do
             table.insert(next_children_nids, v)
         end
@@ -654,7 +588,7 @@ function get_graph_remarks(db, namespace)
     return remarks
 end
 
-function genpage.pagedata(db, namespace, nodes, dbg)
+function genpage.pagedata(db, namespace, nodes)
     -- local nodes = generate_nodes(db, namespace)
     local connections = create_connections(db, nodes)
     local output = {}
@@ -679,33 +613,14 @@ function genpage.pagedata(db, namespace, nodes, dbg)
         nodelist = nodelist
     }
 
-    if dbg then
-
-        -- -- print all node names
-        -- 7/28 10:43, proves that input does have missing
-        -- nodes. no longer needed to print
-        -- for _, nd in pairs(nodes) do
-        --     print("DEBUG: nodename " .. nd)
-        -- end
-       
-        local nlen = 0
-        for _, nd in pairs(nodes) do
-            print("DEBUG: nodename " .. nd)
-            nlen = nlen + 1
-        end
-
-        -- 7/28 10:45: compare lengths of topsort vs nodes
-        print("DEBUG: compare lengths " .. nlen .. " " .. #sorted)
-    end
-
     for i=#sorted,1, -1 do
         local nid = sorted[i]
 
         if traversed[nid] == nil then
-            local children_nids = traverse_node(params, sorted[i], dbg)
+            local children_nids = traverse_node(params, sorted[i])
 
             while #children_nids > 0 do
-                children_nids = traverse_children(params, children_nids, dbg)
+                children_nids = traverse_children(params, children_nids)
             end
         end
     end

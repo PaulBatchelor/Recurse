@@ -1,5 +1,3 @@
-global_debug_mode = false
-
 json = require("tools/json")
 pprint = require("tools/pprint")
 genpage = require("tools/genpage")
@@ -114,29 +112,14 @@ function generate_page_data(db, h, lookup, namespace, pglist)
     table.insert(pglist, nspath)
     filepath = filepath .. nspath .. "/index.json"
 
-    if nspath == "codestudy/potential" then
-        print("DEBUG: it is codestudy")
-        global_debug_mode = true
-    end
-
-    local output = genpage.pagedata(db, nspath, nodes, global_debug_mode)
+    local output = genpage.pagedata(db, nspath, nodes)
     output.subgraphs = subgraphs
-
-    if global_debug_mode then
-        local fp = io.open("debug.json", "w")
-        fp:write(json.encode(output.nodes))
-        fp:close()
-    end
 
     print("writing to " .. filepath)
     local fp = io.open(filepath, "w")
     fp:write(json.encode(output))
     fp:close()
 
-    if global_debug_mode then
-        print("DEBUG: it is no longer code study")
-    end
-    global_debug_mode = false
     return pglist
 end
 
