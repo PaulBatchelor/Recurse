@@ -135,9 +135,13 @@ function topsort(nodes, connections)
                 --print("BEGIN: connect " .. nodes[left] .. " -> " .. nodes[right])
                 lnode = nodes[left]
                 rnode = nodes[right]
-                print(fstr("DEBUG: connect %d (%s) -> %d (%s) ", left, lnode, right, rnode))
+                print(fstr("DEBUG: edge %d (%s) -> %d (%s) ", left, lnode, right, rnode))
             end
-            table.insert(edges, {left, right})
+
+            if nodes[left] == nil then
+                table.insert(edges, {left, right})
+            end
+
         end
     end
 
@@ -161,8 +165,11 @@ function topsort(nodes, connections)
         local nodesfrom = nodes_connected_to(n, edges)
         table.insert(sorted, n)
         for _,m in pairs(nodesfrom) do
-            if dbg and m == 134 then
+            if dbg and m == 136 then
                 print("DEBUG: existing cpp node is here from " .. n .. " (" .. nodes[n] .. ")")
+            end
+            if dbg and n == 148 then
+                print("DEBUG: @@ magsign_cpp found")
             end
             remove_edge(edges, n, m)
             if has_incoming_nodes(m, edges) == false then

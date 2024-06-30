@@ -148,3 +148,68 @@ refit to take in shapes. Somehow. (Indices? references?)
 
 @15:40 attempts to look at this typescript sample code #typescript-react-slider #timelog:00:54:42
 Does it look like the other react code I've been examining?
+
+@17:15 React Reading: Sharing State Between Components #react-managing-state #timelog:00:24:29
+
+@18:17 Another session of troubleshooting #bug-missing-nodes 
+
+@18:24 Ah, the node IDs changed I think. good for me. #bug-missing-nodes
+Actually not too much of an issue, I have enough
+printing happening now that I can update when/if
+needed.
+
+@18:29 Examining all the connections now #bug-missing-nodes
+The =magsign_cpp= is what we are investigating. What
+would need to happen for it to not show up in =cpp=?
+
+@18:33 =magsign_struct= is the only child that doesn't exist #bug-missing-nodes
+Not sure if that is helpful or not.
+---
+Of the three, It's also the only one that only shows
+up once as a left-node (it only has
+one parent node). That parent is =magsign_cpp=.
+
+@18:39 It's probably the external nodes. #bug-missing-nodes
+As we go down this tree, we are approaching the only
+two external nodes here: =rust/std= and
+=rust/std_iter_zip=. The TOC generates the links
+just fine, but it just seems like anything that has
+those links doesn't want to show up.
+
+@18:40 Also, edges for those external are returning NULL. #bug-missing-nodes
+What's up with that?
+
+@18:41 commenting out the external nodes, I want to see what happens.
+
+@18:43 People of Earth, we have our smoking gun. #bug-missing-nodes
+Removing those external nodes causes it to render
+properly.
+
+@18:47 Working out another hunch #bug-missing-nodes
+I don't think the edges are supposed to be nil, even
+though they are here.
+---
+I have another hunch: there is a local node called
+"rust", and the namespace for these external nodes
+also starts with "rust". Going to re-introduce the
+external nodes, and change the local "rust" node
+to be "rust_code", and then if that still breaks,
+"code_rust". It could be that there is some faulty
+logic related to string matching somewhere.
+---
+Neither worked. Okay, so I have to check
+out those nil edges now.
+
+@18:51 Tracking down those nil edges. #bug-missing-nodes
+
+@19:00 I think I did it. #bug-missing-nodes
+While populating a local copy of
+the edges table (to be pruned later by the topsort
+algo), I added a check to see if the left node
+id shows up in the nodes list. If it doesn't, it
+indicates that it is an externally linked node
+outside of the namespace.
+---
+TL;DR: Check for foreign nodes.
+
+@19:04 cleanup debug code #bug-missing nodes
