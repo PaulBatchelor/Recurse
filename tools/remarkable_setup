@@ -1,0 +1,1 @@
+/sbin/ifconfig usb0 inet 10.11.99.3 netmask 255.255.255.248
