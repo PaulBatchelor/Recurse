@@ -171,3 +171,6 @@ link [[https://github.com/WebAssembly/wabt]]
 @react-describing-the-ui Read react describing the UI
 
 @mplayer-jack-thinkpad Compile mplayer with JACK support on thinkpad.
+
+@bug-missing-nodes Bug: nodes are missing in dagzet
+

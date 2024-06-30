@@ -151,7 +151,7 @@ Does it look like the other react code I've been examining?
 
 @17:15 React Reading: Sharing State Between Components #react-managing-state #timelog:00:24:29
 
-@18:17 Another session of troubleshooting #bug-missing-nodes 
+@18:17 Another session of troubleshooting #bug-missing-nodes #timelog:00:51:53
 
 @18:24 Ah, the node IDs changed I think. good for me. #bug-missing-nodes
 Actually not too much of an issue, I have enough
@@ -212,4 +212,4 @@ outside of the namespace.
 ---
 TL;DR: Check for foreign nodes.
 
-@19:04 cleanup debug code #bug-missing nodes
+@19:04 cleanup debug code #bug-missing node
