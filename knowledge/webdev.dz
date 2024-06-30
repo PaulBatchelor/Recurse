@@ -82,3 +82,11 @@ ln This guide will explain how to read files from Vercel
 ln Functions, both when used with frameworks like Next.js
 ln or standalone on Vercel.
 tg webdev vercel
+
+nn npx_create_react_app_typescript
+ln npx create-react-app my-app --template typescript
+
+nn mdn_header_element
+ln The header element (MDN)
+hl https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header
+tg html mdn

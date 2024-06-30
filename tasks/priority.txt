@@ -8,7 +8,7 @@ link [[https://react.dev/learn/managing-state]].
 
 @what-now-week7 Career thoughts in week7
 
-@add-day-titles add day titles to logs
+@add-day-titles add day titles to logs (retro-actively)
 
 @voxbox-shape-morphing add shape morphing with linear gesture
 
@@ -16,4 +16,10 @@ link [[https://react.dev/learn/managing-state]].
 
 @site-debugging-jun30 fixing site issues cuz I borked it.
 
-@mplayer-jack-thinkpad Compile mplayer with JACK support on thinkpad.
+@typescript-react-slider Get a slider working in typescript react
+
+@resume-setup re-examine resume #career
+https://www.recurse.com/jobs/advice#resumes
+https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb
+
+@add-wasm-dz add missing wasm.dz to repo

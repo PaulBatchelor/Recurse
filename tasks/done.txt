@@ -169,3 +169,5 @@ link [[https://github.com/WebAssembly/wabt]]
 @morning-triage Daily morning triage of tasks
 
 @react-describing-the-ui Read react describing the UI
+
+@mplayer-jack-thinkpad Compile mplayer with JACK support on thinkpad.

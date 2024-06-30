@@ -27,3 +27,6 @@ cx rust/std_iter_zip codestudy/potential/bipolar_zip
 
 cx webdev/nanostores codestudy/rusty_bikes/client_README
 cr mentioned by Binh, "overkill using nanostores as event bus within my FE code"
+
+cx webdev/mdn_header_element codestudy/hello_ts_react/header_element
+cr looked up header element because I didn't recognize it

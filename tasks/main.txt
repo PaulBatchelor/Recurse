@@ -4,10 +4,6 @@
 where they are in the task list can be something that
 should be pretty trivial to get at and store.
 
-@resume-setup re-examine resume #career
-https://www.recurse.com/jobs/advice#resumes
-https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb
-
 @vscode-rust-setup set up rust workflow in vscode
 
 @test-dz-log-task-linking proof of concept: link dagzet node to task via log entry

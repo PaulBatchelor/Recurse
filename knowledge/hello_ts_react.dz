@@ -1,0 +1,107 @@
+ns codestudy/hello_ts_react
+gr Studying the boilerplate typescript code in
+gr React that's generated with the command
+gr "npx create-react-app my-app --template typescript"
+
+zz -------------------- app.tsx ----------------------
+nn app_tsx
+ln App.tsx: seems to be the entry point
+fr codestudy/hello_ts_react/App.tsx 0
+
+nn top_level_app_func
+ln Top Level App() function
+co $ app_tsx
+fr $ 5 24
+
+nn app_tsx_imports
+co $ app_tsx
+ln imports for App.tsx
+fr $ 1 3
+
+nn top_level_jsx_code
+fr 7 23
+ln this looks like JSX code?
+co $ top_level_app_func
+
+nn header_element
+ln header element: thought this could have
+ln been a custom element, but it wasn't.
+
+nn components_use_capitals
+ln custom react components use capital letters
+ln as a naming convention.
+
+zz -------------------- index.tsx --------------------
+nn index_tsx
+ln index.tsx file
+rm kind of looks like boilerplate
+fr codestudy/hello_ts_react/index.tsx 0
+
+nn import_app_tsx
+fr $ 4
+ln imports the App created in App.tsx
+rm This must mean that index.tsx is the top-level
+rm node that gets created.
+co $ top_level_jsx_code
+cr imports this function
+co $ index_tsx
+
+nn root_render
+fr $ 10 14
+co $ index_tsx
+ln top-level render, "root render"
+
+nn create_root
+fr $ 7 9
+ln create a root element via ReactDOM.createRoot
+co $ index_tsx
+
+nn react_strictmode_elem
+fr 11 13
+co $ root_render
+ln React.StrictMode element.
+rm this seems to be the top-most element.
+rm I wonder if StrictMode is a typescript
+rm thing, or if it's a react thing that you
+rm can do in JS as well?
+td Learn more about React.StrictMode
+
+nn app_elem
+ln App element component
+co $ react_strictmode_elem
+fr $ 12
+co $ import_app_tsx
+co $ components_use_capitals
+cr This here is a react component, not a built-in
+
+nn report_web_vitals
+fr $ 19
+ln reportWebVitals(): some way to profile performance
+ln apparently. You need to pass in a function for it
+ln to log performance.
+
+zz ----------------- App.test.tsx -------------------
+
+nn app_test_tsx
+ln App.test.tst: tests for App
+fr codestudy/hello_ts_react/App.test.tsx 0
+
+nn test_react_link
+fr $ 5 9
+co $ app_test_tsx
+
+nn render_app_component
+co $ test_react_link
+fr $ 6
+rm render is a function imported from testing/library/react
+
+nn search_for_text
+ln looks for "learn react" in screen
+fr $ 7
+co $ test_react_link
+
+nn expect_to_be_in_document
+fr $ 8
+ln there's a check using an expect and toBeInTheDocument
+td look up reference for toBeInTheDocument()
+co $ search_for_text
