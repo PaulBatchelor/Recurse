@@ -15,3 +15,5 @@ link [[https://react.dev/learn/managing-state]].
 @troubleshoot-webaudio-thinkpad Why aren't sounds playing from my demos on my thinkpad?
 
 @site-debugging-jun30 fixing site issues cuz I borked it.
+
+@mplayer-jack-thinkpad Compile mplayer with JACK support on thinkpad.

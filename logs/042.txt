@@ -44,7 +44,7 @@ Ooops I just blew up my recurse site. ROLL BAAACK.
 Seeing what I can accomplish in 15 minutes, then
 I have to quickly leave for errands.
 
-@10:15 Ooops forgot to install rsync. #site-debugging-jun30
+@10:15 Ooops forgot to install rsync. #site-debugging-jun30 #timelog:00:20:00
 
 @10:16 codestudy is getting errors in export #site-debugging-jun30
 Looks like the escape string is wrong. I am using
@@ -59,3 +59,49 @@ I think this is fine actually? Looking at them,
 it seems like I meant to delete them. I was
 worried that I accidentally deleted the tasks
 or something.
+
+@10:35 Errands
+
+@11:36 Back at Hub. Setting up.
+
+@11:37 Initial voxbox-ing setup #voxbox-shape-morphing
+
+@11:39 Oh, right. I need to build mplayer form source #voxbox-shape-morphing #mplayer-jack-thinkpad
+This thinkpad isn't fully provisioned yet. Upstream
+mplayer doesn't have jack support, so I need to
+build it from source.
+---
+I remember this taking a while. Uh, maybe I should look
+at other things.
+---
+Nevermind? It just finsihed as I wrote this. That's
+not a great sign.
+---
+Ran into build issues. Great. Downloading from git,
+using the APKBUILD as hints.
+---
+MPlayer is kinda SVN? But this build script is
+using git?
+
+@11:40 Attempts to get mplayer working on thinkpad begins. #mplayer-jack-thinkpad #timelog:00:48:13
+
+@12:01 Going to try building the package instead of source. #mplayer-jack-thinkpad
+Not what I wanted to do, but here we are.
+---
+Bandwidth is slow even at the hub. git feels slow too.
+I wonder how much faster it'd be on a newer laptop.
+
+@12:09 going to attempt to get abuild to run #mplayer-jack-thinkpad
+
+@12:19 It builds! But I wasn't sure how to install it #mplayer-jack-thinkpad
+Build time wasn't too bad, so I'm rebuilding.
+
+@12:20 Where is "pkgdir"? #mplayer-jack-thinkpad
+Package installed in =packages/community/x86_64=.
+
+@12:24 attempting to install manually #mplayer-jack-thinkpad
+Can be done with =apk add foo.apk=. I don't think I needed
+the =--allow-untrusted= flag because it was self-signed.
+
+@12:26 works! #mplayer-jack-thinkpad
+I love how straightforward that was.
