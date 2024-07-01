@@ -176,3 +176,5 @@ link [[https://github.com/WebAssembly/wabt]]
 
 @site-debugging-jun30 fixing site issues cuz I borked it.
 
+@troubleshoot-webaudio-thinkpad Why aren't sounds playing from my demos on my thinkpad?
+

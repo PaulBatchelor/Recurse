@@ -10,8 +10,6 @@ link [[https://react.dev/learn/managing-state]].
 
 @voxbox-shape-morphing add shape morphing with linear gesture
 
-@troubleshoot-webaudio-thinkpad Why aren't sounds playing from my demos on my thinkpad?
-
 @typescript-react-slider Get a slider working in typescript react
 
 @resume-setup re-examine resume #career

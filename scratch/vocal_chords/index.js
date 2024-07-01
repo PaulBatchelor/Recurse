@@ -132,6 +132,11 @@ audioStarted = false
 audioPaused = true
 
 window.addEventListener('load', async () => {
+    if (window.AudioContext == null) {
+        // WIP: this could be how to get sounds working on
+        // older iPhones?
+        window.AudioContext = window.webKitAudioContext;
+    }
     const buttonBegin = document.getElementById('button-begin');
     console.log(audioContext.state);
     buttonBegin.addEventListener('click', async () => {

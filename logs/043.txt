@@ -23,6 +23,9 @@ set up resume, and make a new one.
 the boilerplate yesterday, I feel ready enough to
 add a slider.
 
+|| @!(taskref "troubleshoot-webaudio-thinkpad")!@
+This would be very helpful to figure out today.
+
 @08:26 Morning Triage
 
 @08:33 Do this at lunch today #add-wasm-dz
@@ -61,3 +64,36 @@ and a good way to start the more whimsical toyetic
 vocal demos.
 
 @08:56 publishing logs from yesterday
+
+@09:03 Let's see if I can find more things out on this #troubleshoot-webaudio-thinkpad #timelog:00:32:02
+
+@09:06 Glicol works, but my project does not #troubleshoot-webaudio-thinkpad
+This has been a repeating theme: my audio code
+doesn't work everywhere, but Glicol does tend to work
+everywhere. Why?
+
+@09:07 Glancing at glicol JS audoi code #troubleshoot-webaudio-thinkpad
+Found an interesting line:
+
+===
+#+BEGIN_SRC
+window.AudioContext = window.AudioContext || window.webkitAudiotContext
+#+END_SRC
+===
+
+@09:17 Sound is broken in glicol now #troubleshoot-webaudio-thinkpad
+More importantly: sounds suddenly worked for my vocal
+demo?
+
+@09:27 Not sure why but I guess it's all working now #troubleshoot-webaudio-thinkpad
+Both my vocal chords and glicol demo work.
+---
+I did do some cache clearing in the dev tools, so
+that could be partially to blame for why it's
+suddenly deciding to work.
+
+@09:30 webkit is safari? #troubleshoot-webaudio-thinkpad #vocal-chords-older-iphone
+Unrelated, but that webkit line may be how to
+get sound working on some iphone devices.
+---
+I've made a new task for this @!(taskref "vocal-chords-older-iphone")!@.
