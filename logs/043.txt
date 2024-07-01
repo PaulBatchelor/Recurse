@@ -124,3 +124,24 @@ Not a good sign for future developments on the thinkpad.
 
 @10:58 Trying chromium #demo-poke
 Chromium plays isorhythms okay! Just one of those things.
+
+@11:30 Back home for Lunch
+
+@13:00 Attempted C Creatures Hang
+I was there for 15 minutes, and nobody showed up.
+
+@13:40 Back at the hub. Back to p5 context? #demo-poke #timelog:01:00:08
+Now that things work if we "run in chromium" (sigh), things
+can move forward.
+
+@13:47 Found the documentation #demo-poke
+Found the documentation: [[https://archive.p5js.org/reference/#/p5/p5]].
+
+@14:07 Initial p5 boilerplate working #demo-poke
+Going to put it in a 400x400 window, or something.
+---
+scratch that, let's see what 400x680 does. approximately
+pacman proportions.
+
+@14:33 Adding wall collisions #demo-poke
+It doesn't work, but it's a good start.
