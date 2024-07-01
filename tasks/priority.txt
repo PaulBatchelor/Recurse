@@ -13,8 +13,8 @@ link [[https://react.dev/learn/managing-state]].
 @typescript-react-slider Get a slider working in typescript react
 
 @resume-setup re-examine resume #career
-https://www.recurse.com/jobs/advice#resumes
-https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb
+[[https://www.recurse.com/jobs/advice#resumes]].
+[[https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb]].
 
 @add-wasm-dz add missing wasm.dz to repo
 

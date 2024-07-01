@@ -97,3 +97,17 @@ Unrelated, but that webkit line may be how to
 get sound working on some iphone devices.
 ---
 I've made a new task for this @!(taskref "vocal-chords-older-iphone")!@.
+
+@09:43 I am drafting up a new resume #resume-setup #timelog:00:21:27
+Scew it, outlining in markdown. Text will set us
+free.
+
+@10:05 An outline of a resume has been made in markdown #resume-setup
+it is stored in this repo under =resume/resume.md=.
+---
+I should pandoc this at some point.
+--
+okay it didn't work out of the box and this frustrates me.
+---
+Crazy overengineered idea. Write the resume in dagzet,
+compile to SQLite, then produce tex structure from this.
