@@ -151,4 +151,12 @@ Approximating the timelog to be about 15 minutes. Solution
 was much less complicated that my thinking. Instead of
 wrapping slider in react, just use stateful hooks.
 
-@16:28 Trying to make the bounce #demo-poke
+@16:28 Trying to make the bounce work #demo-poke #12:14
+
+@16:33 Oh, circle is diameter, not radius. #demo-poke
+
+@16:43 Closer, but not right still. Pen and paper now #demo-poke
+
+@17:00 Lots of pairing and people stopping by to help me #timelog:01:00:00
+And we are done!
+
