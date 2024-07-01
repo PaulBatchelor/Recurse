@@ -1,0 +1,63 @@
+@2024-06-30 Day 43.
+39 days left of batch.
+---
+Prev:
+
+The creeping answer
+Of a gigantic bug hunt:
+Check for foreign nodes.
+
+---
+
+Next:
+
+|| @!(taskref "add-wasm-dz")!@: missing file in my
+repo, on one of my computers. Quick thing.
+
+|| @!(taskref "resume-setup")!@: read the way to
+set up resume, and make a new one.
+
+|| @!(taskref "demo-poke")!@: pre-work on this
+
+|| @!(taskref "typescript-react-slider")!@: studied
+the boilerplate yesterday, I feel ready enough to
+add a slider.
+
+@08:26 Morning Triage
+
+@08:33 Do this at lunch today #add-wasm-dz
+
+@08:36 Plans on doing this today #resume-setup
+
+@08:39 Pre-work on this today #demo-poke
+Goal will be to figure out initial technical
+scaffolding, getting p5 in a windowed context,
+mouse pointer stuff, etc.
+
+@08:41 added a task for ensemble demo #demo-ensemble
+This will build on the vocal chords demo, and
+will most likely be something vaguely like
+Blob Opera and Choir. Slightly lower priority
+than @!(taskref "demo-poke")!@ because that
+task will let me focus on details for one
+face and voice, which can be a helpful learning
+experience when I go to do the choir app.
+
+@08:43 An actual demos page would be useful this week #add-demos-page
+This shouldn't take any time at all.
+
+@08:45 Ready to actual add a slider now #typescript-react-slider
+After studying the boilerplate in way too much detail
+yesterday @!(dzref "codestudy/hello_ts_react/app_tsx")!@,
+I feel ready for this.
+
+@08:48 I really need to make it possible to link graphs #dzgraph-hyperlinks
+You can't actually use =dzref= to link to graphs, only
+nodes. Hoping to fix that cuz it comes up a lot.
+
+@08:51 Poke demo is priority this week #demo-poke
+It's a good contrast from the vocal chords demo,
+and a good way to start the more whimsical toyetic
+vocal demos.
+
+@08:56 publishing logs from yesterday

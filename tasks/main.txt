@@ -8,11 +8,8 @@ should be pretty trivial to get at and store.
 
 @test-dz-log-task-linking proof of concept: link dagzet node to task via log entry
 
-@add-demos-page create a working demos page
-The current page can be found at @!(ref "demos")!@.
-
-
 @bucket-storyboard Storyboard the gameplay of "A Blob Named Bucket"
 
-@demo-poke "poke a face" demo.
+@demo-ensemble "singing faces ensemble" demo
 
+@dzgraph-hyperlinks make it possible to link dzgraphs

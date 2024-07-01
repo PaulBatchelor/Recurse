@@ -12,8 +12,6 @@ link [[https://react.dev/learn/managing-state]].
 
 @troubleshoot-webaudio-thinkpad Why aren't sounds playing from my demos on my thinkpad?
 
-@site-debugging-jun30 fixing site issues cuz I borked it.
-
 @typescript-react-slider Get a slider working in typescript react
 
 @resume-setup re-examine resume #career
@@ -21,3 +19,8 @@ https://www.recurse.com/jobs/advice#resumes
 https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb
 
 @add-wasm-dz add missing wasm.dz to repo
+
+@demo-poke "poke a face" demo.
+
+@add-demos-page create a working demos page
+The current page can be found at @!(ref "demos")!@.
