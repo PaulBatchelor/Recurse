@@ -1,8 +1,6 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@bug-missing-nodes Bug: nodes are missing in dagzet
-
 @react-managing-state read React: managing state
 link [[https://react.dev/learn/managing-state]].
 

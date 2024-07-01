@@ -213,3 +213,25 @@ outside of the namespace.
 TL;DR: Check for foreign nodes.
 
 @19:04 cleanup debug code #bug-missing node
+
+@19:37 refactor linear gesture to take in generics #voxbox-shape-morphing #timelog:00:21:41
+Okay that didn't work.
+
+@19:49 stop writing code, think about the problem. Why generics? #voxbox-shape-morphing
+This gesture is currently hard-coded to work with
+floats as values. Which, most of the time, is fine.
+However, for shape morphing, the values that
+need to be interpolated aren't floating point values,
+but tables.
+---
+The hope with generics was to be able to elegantly
+use the existing linear gesture logic to create
+gestures that morphed between DRM shapes.
+---
+Things would be set up in such a way that when
+=tick()= would be called, it would know to
+interplate between two DRM tables and store it
+somewhere in another table. That table could
+then be taken and passed to the vocal tract.
+---
+Stopping for now because I've had enough of a day.
