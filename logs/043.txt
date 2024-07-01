@@ -145,3 +145,10 @@ pacman proportions.
 
 @14:33 Adding wall collisions #demo-poke
 It doesn't work, but it's a good start.
+
+@15:57 Nice pairing with Binh on getting a slider in React #typescript-react-slider #timelog:00:15
+Approximating the timelog to be about 15 minutes. Solution
+was much less complicated that my thinking. Instead of
+wrapping slider in react, just use stateful hooks.
+
+@16:28 Trying to make the bounce #demo-poke
