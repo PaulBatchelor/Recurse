@@ -4,6 +4,10 @@
     (string webroot "/css/code.css")))
 
 
+(defn escape-html-tags [str]
+(string/replace-all
+  ">" "&gt;"
+  (string/replace-all "<" "&lt;" str)))
 
 (defn generate [data-filepath &opt webroot]
   (default webroot "/wiki")
@@ -462,7 +466,7 @@
 
 (defn escape-line [txt]
   (if (= (length txt) 0) "<br>"
-    (string/replace-all " " "&nbsp;" txt))
+    (string/replace-all " " "&nbsp;" (escape-html-tags txt)))
   )
 (defn print-textline [line]
   (print "<div>")
@@ -470,7 +474,6 @@
   (print "</div>")
   )
 
-# Work in progress...
 (defn textlines [textfile]
   (print (string/join @[
 

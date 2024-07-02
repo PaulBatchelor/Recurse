@@ -19,7 +19,7 @@ ln imports for App.tsx
 fr $ 1 3
 
 nn top_level_jsx_code
-fr 7 23
+fr $ 7 23
 ln this looks like JSX code?
 co $ top_level_app_func
 
@@ -57,7 +57,7 @@ ln create a root element via ReactDOM.createRoot
 co $ index_tsx
 
 nn react_strictmode_elem
-fr 11 13
+fr $ 11 13
 co $ root_render
 ln React.StrictMode element.
 rm this seems to be the top-most element.

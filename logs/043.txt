@@ -155,8 +155,22 @@ wrapping slider in react, just use stateful hooks.
 
 @16:33 Oh, circle is diameter, not radius. #demo-poke
 
-@16:43 Closer, but not right still. Pen and paper now #demo-poke
+@16:43 Closer, but not right still. Pen and paper now #demo-poke #timelog:00:15:00
 
 @17:00 Lots of pairing and people stopping by to help me #timelog:01:00:00
 And we are done!
 
+@19:47 React Reading: preserving and resetting state. #react-managing-state #timelog:00:43:21
+
+@20:37 Fixing some dagzet code in hello ts typescript
+
+@20:45 Thinking about haiku bits for tomorrow.
+Poking Propulsion
+---
+Worked Better In Chromium
+---
+Markdown Resume
+---
+New Resume Time
+---
+Stored state in sliders
