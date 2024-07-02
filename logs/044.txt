@@ -59,3 +59,19 @@ to be simplified as well.
 I want to see how much I can do of the LC75 problem sets.
 
 @08:51 Publishing and Zulip
+
+@08:59 Making some initial tract states #create-chatter-sounds #timelog:00:35:23
+Going to use my phone for this, as the touchscreen
+is the best interface I have right now.
+
+@09:32 shape exploration is slow and tedious #create-chatter-sounds
+I need to find a better way
+
+@09:43 Getting intial boilerplate code setup #create-chatter-sounds #timelog:00:27:00
+
+@10:10 initial boilerplate with shapes created #create-chatter-sounds
+
+@10:11 Time to modulate the shapes linearly with a phasor #create-chatter-sounds #timelog:00:15:28
+
+@10:43 Structuring my graph using dagzet notation. #resume-setup #timelog:00:13:10
+I think I want to implemented an ordered list command.

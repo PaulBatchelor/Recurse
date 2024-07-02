@@ -1,0 +1,40 @@
+ns resume
+
+nn experience
+ln Experience
+
+nn projects
+ln Projects
+
+nn skills
+ln Skills
+
+nn education
+ln Education
+
+
+nn recurse_center
+ln Recurse Center, Participant (May 2024 - August 2024)
+co $ experience
+
+nn boomy
+ln Boomy, Music Automation Engineer (July 2022 - January 2023)
+co $ experience
+
+nn electrosmith
+ln Electrosmith, Consultant (September 2017 - December 2017)
+co $ experience
+
+nn microsoft
+ln Microsoft Research, Music Technology Intern (June 2017 - August 2017)
+co $ experience
+
+nn safari_books
+ln Safari Books Online, Systems Administration Intern (2014-2015)
+co $ experience
+
+zz select experience node
+zz sn experience
+zz appened to ordered list
+zz ol recurse_center boomy electrosmith microsoft
+zz ol safari_books
