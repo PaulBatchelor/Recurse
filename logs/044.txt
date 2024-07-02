@@ -1,0 +1,61 @@
+@2024-07-02 Day 44.
+38 days left of batch.
+---
+Prev:
+
+Poking Propulsion /
+Works better in Chromium /
+Stored State in Sliders
+
+---
+
+Next
+
+|| @!(taskref "resume-setup")!@: more structuring.
+overengineering stuff (of course I would do this).
+
+|| @!(taskref "create-chatter-sounds")!@: some initial
+code setup for an example in VoxBox, and some
+sound design planning because a version of this
+will eventually end up in Poke.
+
+|| @!(demo-react-UI)!@: Now that we've officially
+started the basics, time to move along and get
+all the sliders up.
+
+@08:20 Morning Triage
+
+@08:30 Finished. Next steps... #typescript-react-slider
+Next steps are to port the rest of the UI
+into React
+
+@08:32 Ready to start working on this #demo-react-UI
+I think I know enough now to start getting the
+rest of this UI ported to React. I can just focus
+on the UI elements first, and then worry about hooking
+it up later.
+
+@08:36 added earlier this morning #add-wasm-dz
+
+@08:37 chatter sounds are needed for poke #create-chatter-sounds #demo-poke
+The most important thing for this demo is the vocal-like
+chattering. So this example will more or less aim to
+build the model. The new thing to try out will be
+morphing between DRM shapes. The critter here will be
+quite small, so the tract size wlil be quite small.
+---
+I will be thinking more about the design today.
+
+@08:40 Chatter sounds are precursor to morphing shapes with gesture #voxbox-shape-morphing
+The chatter sound model will feature DRM shape morphing
+using a pre-defined set of tract shapes. This will be
+a simplified version of what I'm expecting to do
+with the Gesture shape morphing. The chatter system will
+interpolate using a phasor, but there won't be the
+rephasor component. The code structure will also attempt
+to be simplified as well.
+
+@08:47 How to factor in leet-grinding into my schedule? #what-now-week7
+I want to see how much I can do of the LC75 problem sets.
+
+@08:51 Publishing and Zulip

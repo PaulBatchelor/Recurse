@@ -1,4 +1,4 @@
-@2024-06-30 Day 43.
+@2024-07-01 Day 43. Audio Troubleshooting, Moving Circles, Stateful Sliders in React and Typescript
 39 days left of batch.
 ---
 Prev:

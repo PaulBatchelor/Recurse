@@ -178,3 +178,6 @@ link [[https://github.com/WebAssembly/wabt]]
 
 @troubleshoot-webaudio-thinkpad Why aren't sounds playing from my demos on my thinkpad?
 
+@typescript-react-slider Get a slider working in typescript react
+
+@add-wasm-dz add missing wasm.dz to repo
