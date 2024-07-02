@@ -75,3 +75,31 @@ I need to find a better way
 
 @10:43 Structuring my graph using dagzet notation. #resume-setup #timelog:00:13:10
 I think I want to implemented an ordered list command.
+
+@11:00 Lunch
+
+@11:30 Webdev hangout
+
+@12:30 Audio hangout
+
+@13:30 Back to hub
+
+@14:10 Catching up with logs, hanging with Dan
+
+@15:36 A small pocket of time.
+
+@15:37 I need to implement some kind of jitter #create-chatter-sounds
+Thinking about something like randi, but phasor-driven.
+And a phasor that can have randomized periods.
+
+@15:38 Testing out MIDI controller
+
+===
+#+BEGIN_SRC
+amidi --dump -phw:1,0,0
+#+END_SRC
+===
+
+@15:46 Set up some boilerplate code for react typescript demo
+
+@16:00 Zig
