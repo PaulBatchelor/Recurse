@@ -3,16 +3,6 @@ ns resume
 nn experience
 ln Experience
 
-nn projects
-ln Projects
-
-nn skills
-ln Skills
-
-nn education
-ln Education
-
-
 nn recurse_center
 ln Recurse Center, Participant (May 2024 - August 2024)
 co $ experience
@@ -38,3 +28,38 @@ sn experience
 zz appened to ordered list
 ol recurse_center boomy electrosmith microsoft
 ol safari_books
+
+nn projects
+ln Projects
+
+nn skills
+ln Skills
+
+nn programming_languages
+ln Programming Languges: C/C++, Rust, Lua, Python,
+ln JavaScript,CSS, Scheme, Forth, Typescript
+co $ skills
+
+nn frameworks_tools
+ln Frameworks and Tools: alpine linux, git, docker,
+ln bash, make, cmake, gcc, cargo, React, ninja, coreutils
+co $ skills
+
+sn skills
+ol programming_languages frameworks_tools
+
+nn education
+ln Education
+
+nn masters_degree
+ln MA, Music (Music, Science, Technology) Stanford
+ln University (2015-2017)
+co $ education
+
+nn undergraduate_degree
+ln BM, Electronic Production and Design, Berklee
+ln College of Music. Summa Cum Laude (2010-2014)
+co $ education
+
+sn education
+ol masters_degree undergraduate_degree

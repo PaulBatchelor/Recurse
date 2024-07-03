@@ -152,3 +152,16 @@ seem worth it to DRY it right now.
 This completes the idea I was thinking about
 
 @11:50 Got roped into conversation, but clock is resumed #create-chatter-sounds
+
+@15:31 had lunch, lots of conversations, now on floor 5.
+
+@15:32 back to adding structure to resume. #resume-setup #timelog:00:40:44
+
+@15:50 I need to think about how I'm going to template this. #resume-setup
+As a sidetrack, try to see how hard text templates
+
+@16:16 This was a very unproductive 40 minutes. #resume-setup
+I tried exploring go templates briefly. I don't think
+this is really going to help me. The data format
+is what is most important. I think I'm just going
+whip something up in janet, shell, or lua.
