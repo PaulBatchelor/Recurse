@@ -34,6 +34,19 @@
       name
       "]]")))
 
+# I am bad at names
+(defn pagelink (link &opt name)
+  (def url (string webroot link))
+  (if (nil? name)
+    (org (string "[[" url "][" link "]]"))
+    (org
+     (string
+      "[["
+      url
+      "]["
+      name
+      "]]"))))
+
 (defn ref (link &opt name target)
   (default target nil)
   (if (nil? name)
@@ -77,3 +90,5 @@
     path "\""
     (if-not (nil? alt) (string " alt=\"" alt "\""))
     ">")))
+
+

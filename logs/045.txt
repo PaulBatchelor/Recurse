@@ -170,3 +170,8 @@ whip something up in janet, shell, or lua.
 Triaging, figuring out what to do next.
 
 @18:02 Time to whip up a demo page. #add-demos-page
+Oh. Looks like I had a placeholder page here already.
+---
+Ah, what makes this interesting is that these demos
+aren't wiki pages, can't use =ref=, and you can't
+have them be typical links either.
