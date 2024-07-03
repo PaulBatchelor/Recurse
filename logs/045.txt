@@ -178,3 +178,38 @@ have them be typical links either.
 ---
 add a new janet function for creating these links
 called "pagelink" which doesn't do any checks.
+
+@18:37 React Reading: Extracting State Logic into a Reducer #timelog:00:46:27
+
+@19:39 Evening Triaging
+
+@19:40 I keep putting this off. #demo-react-UI
+Part of my hesitation with my initial "port it
+to react" is: how bulky will this end up being
+on my website? Do I even want it there? Does it
+even matter if it just is code that's here in my
+Recurse monorepo and nowhere else?
+
+@19:42 Created "demos" taskgroup.
+
+See: @!(ref "demos/taskgroups/demos")!@.
+
+@19:45 Creating task to investigate size of react apps. #demo-react-UI #how-big-are-react-apps
+One of my concerns with building a react app is that
+if I host these on my droplet, it's going to
+clog things up in and take space. What I want to
+know is: when I go through the process of minifying
+and exporting the code, how much space does it end
+up being? What goes into uploading and running
+this on my webserver?
+---
+My other concern (which I'm trying not to think
+about too hard about) is: my website is 99% static,
+and introducing JS could mean adding an attack
+surface to my website. Probably just being paranoid.
+
+@19:49 two minutes. quick some haiku ideas.
+
+built jitter signals
+summer 2 conversations
+then I napped a bit

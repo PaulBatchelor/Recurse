@@ -8,8 +8,4 @@ should be pretty trivial to get at and store.
 
 @test-dz-log-task-linking proof of concept: link dagzet node to task via log entry
 
-@bucket-storyboard Storyboard the gameplay of "A Blob Named Bucket"
-
-@demo-ensemble "singing faces ensemble" demo
-
 @dzgraph-hyperlinks make it possible to link dzgraphs

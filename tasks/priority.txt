@@ -24,6 +24,8 @@ become familiar with some frontend technologies.
 Something that involves a thing that randomly interpolates
 between a set of DRM shapes and is clocked by a phasor.
 
+@dagzet-rust Port dagzet to rust
+
 @investigate-kickstart-neovim Look into Kickstart + NeoVim
 
-@dagzet-rust Port dagzet to rust
+@how-big-are-react-apps Investigate: How big are react apps?
