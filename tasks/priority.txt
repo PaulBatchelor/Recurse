@@ -18,6 +18,7 @@ link [[https://react.dev/learn/managing-state]].
 @add-demos-page create a working demos page
 The current page can be found at @!(ref "demos")!@.
  make it possible to link dzgraphs
+
 @demo-react-UI port demo to react UI
 It's important to me that I do this because I want to
 become familiar with some frontend technologies.
@@ -25,8 +26,6 @@ become familiar with some frontend technologies.
 @create-chatter-sounds Create chatter sounds example
 Something that involves a thing that randomly interpolates
 between a set of DRM shapes and is clocked by a phasor.
-
-@dagzet-lists Implement dagzet ordered lists
 
 @investigate-kickstart-neovim Look into Kickstart + NeoVim
 

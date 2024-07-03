@@ -165,3 +165,8 @@ I tried exploring go templates briefly. I don't think
 this is really going to help me. The data format
 is what is most important. I think I'm just going
 whip something up in janet, shell, or lua.
+
+@17:59 After crashing at my place, Back at the hub.
+Triaging, figuring out what to do next.
+
+@18:02 Time to whip up a demo page. #add-demos-page
