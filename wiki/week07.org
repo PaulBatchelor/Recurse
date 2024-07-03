@@ -15,3 +15,19 @@ Singing Quite Loudly
 The creeping answer /
 Of a gigantic bug hunt: /
 Check for foreign nodes.
+
+* Monday, July 1st
+
+Poking Propulsion /
+Works better in Chromium /
+Stored State in Sliders
+
+* Tuesday, July 2nd
+
+Tiny Creature Sounds /
+Told Told Some People About It /
+Then I learned about Zig
+
+Creature Sounds, Audio Chats with Dan,
+Webdev Hangout (spatial audio, typescript stuff,
+frog choir), tested out MIDI controller.

@@ -1,4 +1,4 @@
-@2024-07-02 Day 44.
+@2024-07-02 Day 44. Initial Tiny Creature Sounds, MIDI knobs, slightly more typescript, Zig
 38 days left of batch.
 ---
 Prev:
@@ -19,7 +19,7 @@ code setup for an example in VoxBox, and some
 sound design planning because a version of this
 will eventually end up in Poke.
 
-|| @!(demo-react-UI)!@: Now that we've officially
+|| @!(taskref "demo-react-UI")!@: Now that we've officially
 started the basics, time to move along and get
 all the sliders up.
 
@@ -100,6 +100,6 @@ amidi --dump -phw:1,0,0
 #+END_SRC
 ===
 
-@15:46 Set up some boilerplate code for react typescript demo
+@15:46 Set up some boilerplate code for react typescript demo #demo-react-UI #timelog:00:15:00
 
 @16:00 Zig

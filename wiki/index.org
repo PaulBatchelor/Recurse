@@ -2,7 +2,10 @@
 
 Hello. Welcome to my Recurse Center Personal Wiki!
 
-I will be using this a place to organize myself.
+My name is Paul (he/him). I like to make computers sing!
+During my batch (Summer 1 2024),
+I'll be exploring ways to get vocal synthesis working
+in the web browswer.
 
 Here are some things to check out:
 

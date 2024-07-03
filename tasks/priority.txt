@@ -25,3 +25,7 @@ become familiar with some frontend technologies.
 @create-chatter-sounds Create chatter sounds example
 Something that involves a thing that randomly interpolates
 between a set of DRM shapes and is clocked by a phasor.
+
+@dagzet-lists Implement dagzet ordered lists
+
+@investigate-kickstart-neovim Look into Kickstart + NeoVim

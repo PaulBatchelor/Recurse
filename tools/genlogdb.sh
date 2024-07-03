@@ -6,5 +6,6 @@ EOM
 
 while read -r line
 do
+    echo $line
     ./tools/evparse.sh $line | sqlite3 a.db
 done < logs/logfiles.txt

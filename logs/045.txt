@@ -1,0 +1,65 @@
+@2024-07-03 Day 45.
+37 days left of batch.
+
+---
+
+Prev:
+
+Tiny Creature Sounds /
+Told Told Some People About It /
+Then I installed zig
+
+---
+
+Next:
+
+|| @!(taskref "create-chatter-sounds")!@: Build
+up some jitter constructs.
+
+|| @!(taskref "add-demos-page")!@: Quickly made
+a demos page with links.
+
+|| @!(taskref "react-managing-state")!@: Most
+likely will have time to do some reading on this.
+
+|| @!(taskref "resume-setup")!@: Building the
+metadata structure out more.
+
+|| @!(taskref "dagzet-lists")!@: Implement ordered
+lists in dagzet (needed for dagzet setup).
+
+
+@07:59 Adding some words to landing page
+
+@08:00 Morning triage.
+
+@08:08 I want to build some jitter constructs today #create-chatter-sounds
+
+The first will be a randi like module clocked with
+an external phasor. The second will be a phasor
+whose rate can be randomized every period. Together,
+they can build a pretty decent jitter signal.
+
+---
+
+I'll probably be extracting my LCG logic into
+an RNG module as well.
+
+@08:10 Going to tackle this this morning #add-demos-page
+
+@08:11 Ordered lists in dagzet needed for resume #resume-setup #dagzet-lists
+I know, I know, I'm overengineering this.
+
+@08:17 Kickstart: way to set up neovim with LSP? #investigate-kickstart-neovim
+
+Dan mentioned using VSCode again, and I'm inclined to
+take his advice. However, before I try that, I want
+to see if I can get some decent LSP things working
+with NeoVim. Would be especially helpful if I
+can get it running on this Alpine thinkpad.
+---
+Found Kickstart while trying to google "typescript in
+neovim". This was the other thing mentioned too:
+[[https://github.com/pmizio/typescript-tools.nvim]].
+
+@08:21 Getting ready to publish.
