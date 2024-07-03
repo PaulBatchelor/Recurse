@@ -30,6 +30,7 @@ images = {}
 audio = {}
 pages = {}
 todo = {}
+olists = {}
 
 function split_at_spaces(inputstr)
     local t = {}
@@ -328,6 +329,30 @@ handler = {
     pg = function(args)
         pages[curnode] = args
     end,
+
+    -- select node
+    sn = function(args)
+        local args = split_at_spaces(args)
+        curnode = namespace .. "/" .. args[1]
+        assert(nodes[curnode] ~= nil, "Could not select node " .. curnode)
+    end,
+
+    -- ordered list
+    ol = function(args)
+        local args = split_at_spaces(args)
+
+        if (olists[curnode] == nil) then
+            olists[curnode] = {}
+        end
+
+        for _, v in pairs(args) do
+            local nodename = namespace .. "/" .. v
+            assert(nodes[nodename] ~= nil, "Could not find node: " .. nodename)
+            table.insert(olists[curnode], nodename)
+        end
+
+    end,
+
 }
 
 for ln in fp:lines() do
@@ -579,6 +604,13 @@ function generate_sqlite_code()
         "task STRING);",
     }, "\n")
 
+    local list_table = concat({
+        "CREATE TABLE IF NOT EXISTS dz_lists(",
+        "node INTEGER,",
+        "item INTEGER,",
+        "position INTEGER);",
+    }, "\n")
+
     print("BEGIN;");
     print(nodes_table)
     print(connections_table)
@@ -594,6 +626,7 @@ function generate_sqlite_code()
     print(audio_table)
     print(pages_table)
     print(todo_table)
+    print(list_table)
 
     local fmt = string.format
     local nodelist = {}
@@ -710,6 +743,19 @@ function generate_sqlite_code()
             "VALUES (%s, '%s');",
             name_lookup(k),
             table.concat(v, " ")))
+    end
+
+    for k,v in pairs(olists) do
+        local node_id = name_lookup(k)
+        for pos, item in pairs(v) do
+            local item_id = name_lookup(item)
+            print(fmt("INSERT INTO dz_lists(node, item, position) "..
+                "VALUES (%s, %s, %d);",
+                node_id,
+                item_id,
+                pos))
+        end
+
     end
 
     print("COMMIT;");

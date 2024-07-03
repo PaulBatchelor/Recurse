@@ -34,7 +34,7 @@ ln Safari Books Online, Systems Administration Intern (2014-2015)
 co $ experience
 
 zz select experience node
-zz sn experience
+sn experience
 zz appened to ordered list
-zz ol recurse_center boomy electrosmith microsoft
-zz ol safari_books
+ol recurse_center boomy electrosmith microsoft
+ol safari_books

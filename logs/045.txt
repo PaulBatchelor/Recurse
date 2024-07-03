@@ -63,3 +63,60 @@ neovim". This was the other thing mentioned too:
 [[https://github.com/pmizio/typescript-tools.nvim]].
 
 @08:21 Getting ready to publish.
+
+@08:36 Start implementing ordered lists in dagzet #dagzet-lists #timelog:00:45:56
+As reference, there is my resume dagzet code which
+has some prototype syntax.
+
+@08:35 I really need to rewrite dagzet #dagzet-rust
+My lua implementation was always designed to just
+be a prototype, and nowadays it's getting quite heavy.
+Now that I'm a bit more familiar with the language,
+I don't think it'd be too difficult to build it in
+Rust, tbh. I think the standard library has enough
+rich data types that it should be pretty
+straightforward.
+
+@08:52 Now I need to think about table schema #dagzet-lists
+I think I know what I want in the schema, but it comes
+down to naming. Working out the words here.
+---
+A list belongs to a node, and has items in the list,
+which are other nodes in the current namespace. Each
+item has a position in the list, which is known.
+I will want these positions to be zero-indexed.
+
+@09:05 I am inconsistent with design philosophy here #dagzet-lists
+This approach I'm using for representing lists is
+more SQL-y compared to say, how I'm handling =dz_lines=.
+I'm using more rows: each list item gets a row with
+a position. In theory, I should be able to
+reconstruct the list using some join and amalgamation
+operation in vanilla SQL.
+---
+By comparison, the other parts of this code represent
+lists as JSON arrays encoded as strings. SQLite does
+come with JSON bindings now by default, so it seems
+this is reasonably portable. But it does require
+that extra JSON parser, and a part of me wonders
+if that was the right decision.
+---
+So, consider this an experiement. I'll have both:
+more SQL-driven and more JSON-driven,
+and I'll see which one feels better over time.
+
+@09:10 Making SQL query to reproduce the list #dagzet-lists
+Nice! There was a double join on the same table
+I had to do and I pretty much just guessed it.
+---
+The query I made:
+
+===
+#+BEGIN_SRC sqlite
+SELECT dz_nodes.name, group_concat(itemlist.name) FROM dz_lists
+INNER JOIN dz_nodes on dz_nodes.id == dz_lists.node,
+dz_nodes as itemlist on itemlist.id == dz_lists.item
+GROUP BY dz_nodes.name
+ORDER BY dz_lists.position;
+#+END_SRC
+===

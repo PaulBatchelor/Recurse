@@ -29,3 +29,5 @@ between a set of DRM shapes and is clocked by a phasor.
 @dagzet-lists Implement dagzet ordered lists
 
 @investigate-kickstart-neovim Look into Kickstart + NeoVim
+
+@dagzet-rust Port dagzet to rust
