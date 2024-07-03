@@ -169,9 +169,12 @@ whip something up in janet, shell, or lua.
 @17:59 After crashing at my place, Back at the hub.
 Triaging, figuring out what to do next.
 
-@18:02 Time to whip up a demo page. #add-demos-page
+@18:02 Time to whip up a demo page. #add-demos-page #timelog:00:20:48
 Oh. Looks like I had a placeholder page here already.
 ---
 Ah, what makes this interesting is that these demos
 aren't wiki pages, can't use =ref=, and you can't
 have them be typical links either.
+---
+add a new janet function for creating these links
+called "pagelink" which doesn't do any checks.

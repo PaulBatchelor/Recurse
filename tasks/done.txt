@@ -184,3 +184,8 @@ link [[https://github.com/WebAssembly/wabt]]
 
 @dagzet-lists Implement dagzet ordered lists
 
+@add-demos-page create a working demos page
+The current page can be found at @!(ref "demos")!@.
+ make it possible to link dzgraphs
+
+
