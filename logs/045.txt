@@ -120,3 +120,35 @@ GROUP BY dz_nodes.name
 ORDER BY dz_lists.position;
 #+END_SRC
 ===
+
+@09:35 Off to make a simple RNG module #create-chatter-sounds #timelog:00:07:07
+
+@09:41 Implementing randi #create-chatter-sounds #timelog:00:17:31
+
+@09:59 Testing random line on chatter example #create-chatter-sounds #timelog:00:08:54
+
+@10:09 Working out jitter line #create-chatter-sounds
+An ideal jitter line would be a random line segment
+clocked a phasor that some kind of variable fluctuation
+in timing. But how does that phasor's rate get controlled?
+---
+The best answer I can come up with is to have a specialized
+phasor whose rate can be smoothly randomized within
+a range. This, combined with the random line generator
+made previously, would build up the components for
+a jitter line generator.
+---
+As a test, this random phasor could be used on the
+chatter test to modulate how quickly the shapes are
+changing.
+
+@10:18 Building out random phasor #create-chatter-sounds #timelog:00:21:22
+Yes, I think I'm going to call it RandomPhasor.
+I'm going to copy and paste the phasor code for now,
+since there's not a lot of code. It just doesn't
+seem worth it to DRY it right now.
+
+@10:53 Implementing Jitter, then that's enough of this for the day #create-chatter-sounds #timelog:00:19:03
+This completes the idea I was thinking about
+
+@11:50 Got roped into conversation, but clock is resumed #create-chatter-sounds
