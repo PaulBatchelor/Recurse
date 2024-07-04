@@ -72,3 +72,27 @@ I will opt to port the envelope I made in sndkit.
 
 @11:13 Loud distored noises (it didn't work). investigating #demo-poke
 Now it works. Forgot to add the =exp= and update =pgate=.
+
+@11:30 Lunch
+
+@13:34 Refactoring chatter, getting it ready for poke. #demo-poke #timelog:00:42:36
+Chatter sound needs to be consolidated into a struct
+rather than in a main function. There also needs to be
+a poke method, which will eventually be the thing called
+when the user pokes the circle on the screen.
+
+@13:35 At this point, the base chatter sounds have been made #create-chatter-sounds #demo-poke
+So I think this task can be considered completed. The rest
+of the sound design work will be polish for the poke demo.
+
+@14:16 Fully encapsulated chatter into struct #create-chatter-sounds #demo-poke
+
+@14:17 Now, to implement poke method #demo-poke #timelog:00:12:11
+Up to this point, "poking" has been simulating using a
+metro object. This metro needs to be pulled out of the
+struct, and replaced with a gate fed into a threshold
+generator. The metro function will exist outside, and when
+it ticks an impulse, it will call the poke method. The
+poke method will flip a gate signal on and off. Inside
+ChatterBox, it will detect changes in the gate and turn
+those into triggers like before.

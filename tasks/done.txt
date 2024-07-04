@@ -188,4 +188,6 @@ link [[https://github.com/WebAssembly/wabt]]
 The current page can be found at @!(ref "demos")!@.
  make it possible to link dzgraphs
 
-
+@create-chatter-sounds Create chatter sounds example
+Something that involves a thing that randomly interpolates
+between a set of DRM shapes and is clocked by a phasor.
