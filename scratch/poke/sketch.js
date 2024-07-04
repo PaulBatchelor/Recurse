@@ -1,7 +1,7 @@
 function sketch(p) {
-    circ = [50.0, 50.0];
+    circ = [50.0, 100.0];
     circRad = 50;
-    circVelocity = [800.0, 800.0];
+    circVelocity = [80.0, 100.0];
     circAccel = 8.0;
     i = 0;
     width = 400;
@@ -12,24 +12,28 @@ function sketch(p) {
         p.describe('A white circle drawn on a gray background.');
     };
 
+    function poke() {
+        console.log("poke");
+        // TODO: add poke
+    }
+
     function getDistance(x, y) {
         let dx = x - circ[0];
         let dy = y - circ[1];
         let dist = Math.sqrt(dx*dx + dy*dy);
     }
 
-    function intersection(x, y) {
+    function checkIntersection(x, y) {
         let dx = circ[0] - x;
         let dy = circ[1] - y;
 
         let dist = Math.sqrt(dx*dx + dy*dy);
 
-
         if (dist > circRad) return;
 
-        let newVel = [0, 0];
+        poke();
 
-        console.log("inside the circle");
+        let newVel = [0, 0];
 
         newVel[0] = dx / dist;
         newVel[1] = dy / dist;
@@ -45,21 +49,19 @@ function sketch(p) {
             circ[1] = circRad;
             circVelocity[1] *= -1;
         }
-        
+
         // check east wall
         if ((circ[0] + circRad) > width) {
             circ[0] = width - circRad;
-            //console.log(circVelocity);
             circVelocity[0] *= -1;
-            //console.log(circVelocity);
         }
-       
+
         // check south wall
         if ((circ[1] + circRad) > height) {
             circ[1] = height - circRad;
             circVelocity[1] *= -1;
         }
-        
+
         // check west wall
         if ((circ[0] - circRad) < 0) {
             circ[0] = circRad;
@@ -80,7 +82,7 @@ function sketch(p) {
 
         //circVelocity[0] -= circAccel*ds;
         //circVelocity[1] -= circAccel*ds;
-        
+
         circVelocity[0] *= 0.99;
         circVelocity[1] *= 0.99;
 
@@ -92,8 +94,7 @@ function sketch(p) {
     };
 
     p.mousePressed = function() {
-        console.log("pressed! " + p.mouseX + " " + p.mouseY);
-        intersection(p.mouseX, p.mouseY); 
+        checkIntersection(p.mouseX, p.mouseY);
     }
 }
 

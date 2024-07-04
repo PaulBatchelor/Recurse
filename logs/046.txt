@@ -96,3 +96,7 @@ it ticks an impulse, it will call the poke method. The
 poke method will flip a gate signal on and off. Inside
 ChatterBox, it will detect changes in the gate and turn
 those into triggers like before.
+
+@15:27 Making sure graphics work on my mac #demo-poke #timelog:00:01:34
+
+@15:29 Connecting sound to audio. #demo-poke
