@@ -153,6 +153,7 @@ function sketch(p) {
     p.mousePressed = function() {
         if (audioStarted == false) {
             beginAudio();
+            return;
             // circ[0] = p.mouseX;
             // circ[1] = p.mouseY;
         }

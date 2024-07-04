@@ -112,3 +112,5 @@ stopping point.
 @16:22 Add "tap to begin" mechanic #demo-poke #timelog:30:12
 
 @17:06 Debugging tap to begin on mobile #demo-poke
+
+@17:15 Attempting to SSH #demo-poke #timelog:00:16:55
