@@ -99,4 +99,9 @@ those into triggers like before.
 
 @15:27 Making sure graphics work on my mac #demo-poke #timelog:00:01:34
 
-@15:29 Connecting sound to audio. #demo-poke
+@15:29 Connecting sound to graphics. #demo-poke #timelog:00:17:55
+It works! It's a coarse experience, but it sorta works.
+
+@15:56 Trying out on Android. #demo-poke
+termux is awesome, because I can run it locally on my
+phone.
