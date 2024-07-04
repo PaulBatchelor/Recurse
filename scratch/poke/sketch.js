@@ -152,7 +152,7 @@ function sketch(p) {
 
     p.mousePressed = function() {
         if (audioStarted == false) {
-            beginAudio();
+            //beginAudio();
             return;
             // circ[0] = p.mouseX;
             // circ[1] = p.mouseY;
@@ -163,7 +163,15 @@ function sketch(p) {
 
 // Select the web page's body element.
 //let body = document.querySelector('body');
-let body = document.getElementById('sketch');
+let canvas = document.getElementById('sketch');
+
+canvas.addEventListener('click', async () => {
+    if (audioStarted === false) {
+        audioStarted = true;
+        await startAudio(audioContext);
+        audioContext.resume();
+    }
+})
 
 // Initialize the sketch and attach it to the web page's body.
-new p5(sketch, body);
+new p5(sketch, canvas);
