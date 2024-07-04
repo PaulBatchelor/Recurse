@@ -110,3 +110,5 @@ It works. definitely needs some refinement. But a good enough
 stopping point.
 
 @16:22 Add "tap to begin" mechanic #demo-poke #timelog:30:12
+
+@17:06 Debugging tap to begin on mobile #demo-poke
