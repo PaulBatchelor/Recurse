@@ -32,26 +32,32 @@ const startAudio = async (context) => {
 
     nd.connect(context.destination);
     ChatterNode = nd;
-    audioContext.resume();
 };
 
+async function beginAudio() {
+    await startAudio(audioContext);
+    audioContext.resume();
+    audioStarted = true;
+}
+
 function sketch(p) {
-    circ = [50.0, 100.0];
     circRad = 50;
-    circVelocity = [80.0, 100.0];
+    circVelocity = [0, 0];
     circAccel = 8.0;
     i = 0;
     width = 400;
     height = 680;
+    pokeForce = 200.;
+    strokeThickness = 3.
+    circ = [width*0.5, height*0.5];
+
     // Declare the setup() method.
     p.setup = function () {
         p.createCanvas(width, height);
-        p.describe('A white circle drawn on a gray background.');
     };
 
     function poke() {
         console.log("poke");
-        // TODO: add poke
         if (ChatterNode != null) {
             ChatterNode.poke();
         }
@@ -64,6 +70,7 @@ function sketch(p) {
     }
 
     function checkIntersection(x, y) {
+        if (audioStarted == false) return;
         let dx = circ[0] - x;
         let dy = circ[1] - y;
 
@@ -78,40 +85,50 @@ function sketch(p) {
         newVel[0] = dx / dist;
         newVel[1] = dy / dist;
 
-
-        circVelocity[0] += newVel[0] * 100;
-        circVelocity[1] += newVel[1] * 100;
+        circVelocity[0] += newVel[0] * pokeForce;
+        circVelocity[1] += newVel[1] * pokeForce;
     }
 
     function checkWalls() {
+        let strokedWidth = width - strokeThickness;
+        let strokedHeight = height - strokeThickness;
         // check north wall
         if ((circ[1] - circRad) < 0) {
-            circ[1] = circRad;
+            circ[1] = circRad + strokeThickness;
             circVelocity[1] *= -1;
         }
 
         // check east wall
-        if ((circ[0] + circRad) > width) {
-            circ[0] = width - circRad;
+        if ((circ[0] + circRad) > strokedWidth) {
+            circ[0] = strokedWidth - circRad;
             circVelocity[0] *= -1;
         }
 
         // check south wall
-        if ((circ[1] + circRad) > height) {
-            circ[1] = height - circRad;
+        if ((circ[1] + circRad) > strokedHeight) {
+            circ[1] = strokedHeight - circRad;
             circVelocity[1] *= -1;
         }
 
         // check west wall
         if ((circ[0] - circRad) < 0) {
-            circ[0] = circRad;
+            circ[0] = circRad + strokeThickness;
             circVelocity[0] *= -1;
         }
     }
 
     // Declare the draw() method.
     p.draw = function () {
-        p.background(200);
+        p.background(255);
+
+        p.strokeWeight(strokeThickness);
+        p.rect(3, 3, width -6, height - 6);
+        if (audioStarted == false) {
+            p.textSize(20);
+            p.textAlign(p.CENTER);
+            p.text("Tap to begin", width/2, height/2);
+            return;
+        }
 
         let ds = p.deltaTime * 0.001;
         // Draw the circle.
@@ -135,8 +152,9 @@ function sketch(p) {
 
     p.mousePressed = function() {
         if (audioStarted == false) {
-            audioStarted = true;
-            startAudio(audioContext);
+            beginAudio();
+            // circ[0] = p.mouseX;
+            // circ[1] = p.mouseY;
         }
         checkIntersection(p.mouseX, p.mouseY);
     }
