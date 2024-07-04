@@ -1,0 +1,5 @@
+ns webdev/typescript
+
+nn declaration_files
+hl https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html
+ln Declaration Files in Typescript

@@ -31,3 +31,16 @@ Then I learned about Zig
 Creature Sounds, Audio Chats with Dan,
 Webdev Hangout (spatial audio, typescript stuff,
 frog choir), tested out MIDI controller.
+* Tuesday, July 2nd
+
+built jitter signals /
+summer 2 conversations /
+learned about old pipes
+
+implemented jitter and jitter components (RandomLine,
+RandomPhasor), implemented ordered lists, lots of
+conversations with the summer 2s, more resume structure
+in dagzet (yak shaving), added links to @!(ref
+"demos")!@ page, attempt to figure out text templates
+in Go (again, more yak shaving for resume,probably not worth
+my time actually).

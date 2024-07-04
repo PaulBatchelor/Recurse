@@ -134,3 +134,22 @@ hl https://browser.engineering/
 ln Web Browser Engineering
 tg web books
 rm found on zulip
+
+nn algebraic_types_rest_of_us
+ln Algebraic Types for The Rest of Us
+hl https://overreacted.io/algebraic-effects-for-the-rest-of-us/
+tg webdev
+
+nn effect_system
+ln Effect System
+hl https://en.wikipedia.org/wiki/Effect_system
+co $ algebraic_types_rest_of_us
+cr related concept I think
+
+ns demos
+nn poptart_commercials
+ln Poptart commercial compilation animateds
+rm animation style inspiration
+hl https://www.youtube.com/watch?v=egrGpVbGpbA
+
+ns misc

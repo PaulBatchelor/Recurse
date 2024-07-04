@@ -1,0 +1,54 @@
+@2024-07-03 Day 46.
+36 days left of batch.
+---
+Prev:
+
+built jitter signals /
+summer 2 conversations /
+learned about old pipes
+
+---
+
+Next:
+
+|| @!(taskref "create-chatter-sounds")!@: In the example,
+add poke interactions, somehow.
+
+|| @!(taskref "demo-poke")!@: Add eyes and mouth.
+
+|| @!(taskref "how-big-are-react-apps")!@: Figure out,
+how big are these react apps when exported?
+
+|| @!(taskref "investigate-kickstart-neovim")!@: See how
+far I can go getting kickstart to work with neovim.
+
+@08:32 Morning Triage.
+Starting this at home on my Mac.
+
+@09:01 Poke interactions in chatter: thoughts. #demo-poke
+The offline example should have some parts that will
+eventually be designed to be modulated by user input (poking).
+Poking can be simulating using a triggered gate. The gate
+would go into an envelope (envelopes?) of some sort as way
+to shape things like fundamental pitch and jitter.
+
+@09:05 Eyes and mouth thoughts #demo-poke
+Basically, my source of inspiration for this one are
+those poptart commercials that were around during
+the early 2000s @!(dzref "demos/poptarts")!@
+---
+It'd be nice to get collision working for the eyes, because
+I think they will bulge out of the face occasionally.
+---
+Mouth shape needs to be flexible enough to support
+mouth shapes. I want these to be synchronized with
+the mouth shapes being synthesized by the audio.
+
+@09:12 Trying to look into this today #investigate-kickstart-neovim
+
+@09:13 I would like to have a working demo by EOD Friday (tomorrow) #demo-poke
+
+@09:14 Publishing logs from yesterday
+
+@09:29 I really need to focus and get this done by EOD Friday #resume-setup
+I keep procrastinating and yak-shaving on this.

@@ -1,4 +1,4 @@
-@2024-07-03 Day 45.
+@2024-07-03 Day 45. Jitter, Summer 2s First day in Hub
 37 days left of batch.
 
 ---
@@ -27,7 +27,6 @@ metadata structure out more.
 
 || @!(taskref "dagzet-lists")!@: Implement ordered
 lists in dagzet (needed for dagzet setup).
-
 
 @07:59 Adding some words to landing page
 
@@ -152,6 +151,16 @@ seem worth it to DRY it right now.
 This completes the idea I was thinking about
 
 @11:50 Got roped into conversation, but clock is resumed #create-chatter-sounds
+Unexpected Knowledge Acquisition: Learning about some of the
+old oil pipe constructions in the US, and their ecological/environmental
+implications. Apparently some of these pipes were transferred
+in carts in a way that the pipes would rub up against
+eachother. The friction would produce weak spots, which
+would turn the pipes into "swiss cheese". I just love that
+imagery.
+---
+Someone in summer 2 wants to work on boot sector games, and
+I am in full support of this.
 
 @15:31 had lunch, lots of conversations, now on floor 5.
 
@@ -208,8 +217,8 @@ about too hard about) is: my website is 99% static,
 and introducing JS could mean adding an attack
 surface to my website. Probably just being paranoid.
 
-@19:49 two minutes. quick some haiku ideas.
+@19:49 two minutes. quick! think of some haiku ideas.
 
-built jitter signals
-summer 2 conversations
+built jitter signals /
+summer 2 conversations /
 then I napped a bit
