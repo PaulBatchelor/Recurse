@@ -115,4 +115,5 @@ stopping point.
 
 @17:15 Attempting to SSH #demo-poke #timelog:00:16:55
 
-@18:14 Maybe a div/canvas onClick event handler will work? #demo-poke
+@18:14 Maybe a div/canvas onClick event handler will work? #demo-poke #timelog:00:06:17
+Okay that works! Nice.
