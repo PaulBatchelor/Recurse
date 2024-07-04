@@ -92,6 +92,7 @@ impl ChatterBox {
             *cur %= shapes.len();
             *nxt %= shapes.len();
         }
+
         let shp_a = shapes[*cur];
         let shp_b = shapes[*nxt];
 

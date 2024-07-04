@@ -1,3 +1,40 @@
+const audioContext = new AudioContext();
+let ChatterNode = null;
+audioStarted = false
+
+class ChatterWorkletNode extends AudioWorkletNode {
+    constructor(context, name, options) {
+        super(context, name, options);
+    }
+
+    poke(tempo) {
+        this.port.postMessage({type: "poke"});
+    }
+}
+
+const startAudio = async (context) => {
+    try {
+        await context.audioWorklet.addModule('chatter.js');
+    } catch(e) {
+        throw new Error(`noise generator error: ${e.message}`);
+    }
+
+    const wasmFile = await fetch('dsp.wasm');
+    const wasmBuffer = await wasmFile.arrayBuffer();
+
+    const options = {
+        wasmBytes: wasmBuffer
+    };
+    const nd = new
+        ChatterWorkletNode(context, 'chatter', {
+            processorOptions: options
+        });
+
+    nd.connect(context.destination);
+    ChatterNode = nd;
+    audioContext.resume();
+};
+
 function sketch(p) {
     circ = [50.0, 100.0];
     circRad = 50;
@@ -15,6 +52,9 @@ function sketch(p) {
     function poke() {
         console.log("poke");
         // TODO: add poke
+        if (ChatterNode != null) {
+            ChatterNode.poke();
+        }
     }
 
     function getDistance(x, y) {
@@ -94,6 +134,10 @@ function sketch(p) {
     };
 
     p.mousePressed = function() {
+        if (audioStarted == false) {
+            audioStarted = true;
+            startAudio(audioContext);
+        }
         checkIntersection(p.mouseX, p.mouseY);
     }
 }
