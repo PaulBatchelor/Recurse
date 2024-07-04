@@ -102,6 +102,9 @@ those into triggers like before.
 @15:29 Connecting sound to graphics. #demo-poke #timelog:00:17:55
 It works! It's a coarse experience, but it sorta works.
 
-@15:56 Trying out on Android. #demo-poke
+@15:56 Trying out on Android. #demo-poke #timelog:00:03:15
 termux is awesome, because I can run it locally on my
 phone.
+---
+It works. definitely needs some refinement. But a good enough
+stopping point.
