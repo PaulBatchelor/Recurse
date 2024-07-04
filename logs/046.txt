@@ -52,3 +52,23 @@ the mouth shapes being synthesized by the audio.
 
 @09:29 I really need to focus and get this done by EOD Friday #resume-setup
 I keep procrastinating and yak-shaving on this.
+
+@10:04 Adding tgate. #demo-poke #timelog:00:19:46
+
+@10:24 Creating metro #demo-poke #timelog:00:06:45
+This will drive the tgate. This can be made from a phasor.
+Any time the phasor resets, produce a trigger.
+---
+Created a phasor to trigger utility called PhasorTrig
+
+@10:32 Initial test of tgate in chatter example #demo-poke #timelog:00:10:10
+Actually, I'm building out a metro that combines phasor
+and phasortrig.
+
+@10:42 I want an envelope now. #demo-poke #timelog:00:26:20
+I will opt to port the envelope I made in sndkit.
+
+@11:10 Initial envelope code ported. Now to see if it works. #demo-poke #timelog:00:07:16
+
+@11:13 Loud distored noises (it didn't work). investigating #demo-poke
+Now it works. Forgot to add the =exp= and update =pgate=.
