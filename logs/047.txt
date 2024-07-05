@@ -93,4 +93,8 @@ worth the time.
 I wasn't hearing what I wanted to hear. Turns out
 the jitter was getting in the way.
 
-10:45 Android testing again #demo-poke
+10:45 Android testing again #demo-poke #timelog:00:03:38
+Feels okay enough. Maybe a bit too shrill on phone
+speakers. But I'll worry about mixing another time.
+
+@10:50 Merged "chatter" branch in voxbox. #demo-poke
