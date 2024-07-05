@@ -7,10 +7,12 @@ class ChatterWorkletNode extends AudioWorkletNode {
         super(context, name, options);
         this.port.onmessage = (event) => this.onmessage(event.data);
         this.mouthopen = 0.;
+        this.mouthState = [0, 0, 0.0];
     }
 
     poll() {
         this.port.postMessage({type: "mouthopen-get"});
+        this.port.postMessage({type: "mouthstate-get"});
     }
 
     poke(tempo) {
@@ -18,7 +20,9 @@ class ChatterWorkletNode extends AudioWorkletNode {
     }
 
     onmessage(event) {
-        if (event.type === "mouthopen-rsp") {
+        if (event.type === "mouthstate-rsp") {
+            this.mouthState = event.data.slice();
+        } else if (event.type === "mouthopen-rsp") {
             this.mouthopen = event.data;
         }
     }
@@ -69,6 +73,8 @@ function sketch(p) {
         [0.5, 0.5, 0.0, 0.0],
         [1.8, 0.2, 0.0, 0.0]
     ];
+
+    var mouthState = [0, 0, 0.0];
 
     let closedMouth = [1.0, 0.04];
 
@@ -145,11 +151,22 @@ function sketch(p) {
     }
 
     function computeMouthShape() {
-        let ms = mouthShapes[0];
+        var ms = mouthShapes[0];
         var open = 1.0;
 
         if (ChatterNode != null) {
             open = ChatterNode.mouthopen;
+            let state = ChatterNode.mouthState;
+
+            let shp1 = mouthShapes[state[0]];
+            let shp2 = mouthShapes[state[1]];
+            let pos = state[2];
+
+            ms = [
+                (1.0 - pos)*shp1[0] + pos*shp2[0],
+                (1.0 - pos)*shp1[1] + pos*shp2[1]
+            ];
+
         }
 
         return [
@@ -189,7 +206,6 @@ function sketch(p) {
         p.circle(circ[0] + circRad*0.6, circ[1] - circRad*0.4, circRad*0.1);
 
         // mouth
-        //let ms = mouthShapes[0];
         let ms = computeMouthShape();
 
         p.ellipse(circ[0], circ[1] + circRad*0.6, circRad * ms[0], circRad * ms[1]);

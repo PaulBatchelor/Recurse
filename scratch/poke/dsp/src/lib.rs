@@ -24,9 +24,9 @@ pub struct ChatterBox {
     tgate: TriggerGate,
     env: Envelope,
     shapes: Vec<[f32; 8]>,
-    cur: usize,
-    nxt: usize,
-    pphs: f32,
+    pub cur: usize,
+    pub nxt: usize,
+    pub pphs: f32,
     gate: u8,
     pgate: u8,
 
@@ -220,4 +220,19 @@ pub extern "C" fn poke(dsp: &mut ChatterBox) {
 #[no_mangle]
 pub extern "C" fn mouth_open(dsp: &mut ChatterBox) -> f32 {
     dsp.mouth_open
+}
+
+#[no_mangle]
+pub extern "C" fn mouth_curshape(dsp: &mut ChatterBox) -> u8 {
+    dsp.cur as u8
+}
+
+#[no_mangle]
+pub extern "C" fn mouth_nxtshape(dsp: &mut ChatterBox) -> u8 {
+    dsp.nxt as u8
+
+}
+#[no_mangle]
+pub extern "C" fn mouth_pos(dsp: &mut ChatterBox) -> f32 {
+    dsp.pphs
 }
