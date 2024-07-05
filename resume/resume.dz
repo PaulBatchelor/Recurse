@@ -36,13 +36,13 @@ nn skills
 ln Skills
 
 nn programming_languages
-ln Programming Languges: C/C++, Rust, Lua, Python,
+ln Programming Languges: C, Rust, Lua, C++, Bash, Python,
 ln JavaScript,CSS, Scheme, Forth, Typescript
 co $ skills
 
 nn frameworks_tools
-ln Frameworks and Tools: alpine linux, git, docker,
-ln bash, make, cmake, gcc, cargo, React, ninja, coreutils
+ln Frameworks and Tools: Linux, Git, Docker,
+ln Make, CMake, Ninja, gcc, React, coreutils
 co $ skills
 
 sn skills

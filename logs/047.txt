@@ -98,3 +98,9 @@ Feels okay enough. Maybe a bit too shrill on phone
 speakers. But I'll worry about mixing another time.
 
 @10:50 Merged "chatter" branch in voxbox. #demo-poke
+
+@10:54 can I still build my old tex resume? #resume-setup
+Short answer is: no.
+---
+Okay, so I just want to preview the data right now.
+I'm going to render to markup.
