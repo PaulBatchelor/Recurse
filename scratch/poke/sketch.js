@@ -119,6 +119,7 @@ function sketch(p) {
 
     // Declare the draw() method.
     p.draw = function () {
+        p.fill(255);
         p.background(255);
 
         p.strokeWeight(strokeThickness);
@@ -131,11 +132,25 @@ function sketch(p) {
         }
 
         let ds = p.deltaTime * 0.001;
-        // Draw the circle.
+
+        p.fill(255);
+        // Face
         p.circle(circ[0], circ[1], circRad*2.0);
+
+        // eyes
+        p.circle(circ[0] - circRad*0.6, circ[1] - circRad*0.4, circRad*1.0);
+        p.circle(circ[0] + circRad*0.6, circ[1] - circRad*0.4, circRad*1.0);
+
+        p.fill(0);
+        p.circle(circ[0] - circRad*0.6, circ[1] - circRad*0.4, circRad*0.1);
+        p.circle(circ[0] + circRad*0.6, circ[1] - circRad*0.4, circRad*0.1);
+
+        // mouth
+        p.ellipse(circ[0], circ[1] + circRad*0.6, circRad, circRad * 0.04);
 
         circ[0] += circVelocity[0]*ds;
         circ[1] += circVelocity[1]*ds;
+
 
         //circVelocity[0] -= circAccel*ds;
         //circVelocity[1] -= circAccel*ds;
@@ -161,8 +176,6 @@ function sketch(p) {
     }
 }
 
-// Select the web page's body element.
-//let body = document.querySelector('body');
 let canvas = document.getElementById('sketch');
 
 canvas.addEventListener('click', async () => {
@@ -173,5 +186,4 @@ canvas.addEventListener('click', async () => {
     }
 })
 
-// Initialize the sketch and attach it to the web page's body.
 new p5(sketch, canvas);

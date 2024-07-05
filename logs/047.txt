@@ -57,4 +57,8 @@ time for this.
 "passing data deeply" (23 pages) and "scaling up"
 (20 pages)
 
-@08:18 Getting ready to publish
+@08:18 Publishing
+
+@08:30 Let's work on a face for my little guy #demo-poke #timelog:00:16:03
+
+@08:46 Initial face created. Next up: mouth sync #demo-poke
