@@ -1,5 +1,9 @@
 #+TITLE: Week 7
 
+This week, I made a interactive tiny critter
+that you can poke! You
+can @!(pagelink "/demos/poke" "play the demo here")!@.
+
 * Saturday, June 29th
 
 @!(ref "logs" "logs" "2024_06_29")!@
@@ -7,6 +11,12 @@
 Typescript and React /
 Topological Sort Bugs /
 Singing Quite Loudly
+
+Figured out how to setup up typescript react
+project using npx, troubleshooting with nodes,
+stayed late in the hub, sang half-remembered
+songs and played piano.
+
 
 * Sunday, June 30th
 
@@ -16,24 +26,45 @@ The creeping answer /
 Of a gigantic bug hunt: /
 Check for foreign nodes.
 
+Built mplayer from source on thinkpad, attempting
+to get generics in Rust working with my Gesture
+Synthesizer Generator code,
+finally found the reason why nodes were missing
+in my knowledge graph.
+
+
 * Monday, July 1st
+
+@!(ref "logs" "logs" "2024_07_01")!@
 
 Poking Propulsion /
 Works better in Chromium /
 Stored State in Sliders
 
+Troubleshooting audio difficulties on thinkpad,
+paired with E to troubleshoot velocity,
+paired with J to get poking propulsion working,
+figured out how to get a p5 context,
+paired with B to get a slider working in React,
+some iinitial resume-ing in Markdown.
+
+
 * Tuesday, July 2nd
+
+@!(ref "logs" "logs" "2024_07_02")!@
 
 Tiny Creature Sounds /
 Told Told Some People About It /
 Then I learned about Zig
 
-Iinitial Creature Sounds (morphing a sequence of tube
+Initial Creature Sounds (morphing a sequence of tube
 shapes), Audio Chats with Dan,
 Webdev Hangout (spatial audio, typescript stuff,
 frog choir), tested out MIDI controller.
 
 * Wednesday, July 3rd
+
+@!(ref "logs" "logs" "2024_07_03")!@
 
 built jitter signals /
 summer 2 conversations /
@@ -49,6 +80,8 @@ my time actually).
 
 * Thursday, July 4th
 
+@!(ref "logs" "logs" "2024_07_04")!@
+
 sounds and visuals /
 connected together for /
 the poking demo
@@ -58,3 +91,12 @@ initial audio and sound. Chatter sound refactored
 to live inside single struct (better for porting). figured out
 "tap to begin" mechanic to start webaudio. Created envelope
 generator, triggergate, metro.
+
+* Friday July 5th
+
+@!(ref "logs" "logs" "2024_07_05")!@
+
+Haiku TBD.
+
+Some more tweaks to Poke: mouth, eyes, and tuning the
+chattering in the sound.

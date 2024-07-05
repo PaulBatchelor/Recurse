@@ -113,3 +113,7 @@ It still works!
 @14:31 More slider-ing #demo-react-UI #timelog:01:11:08
 
 @15:45 Pushing initial poke demo online. #demo-poke #timelog:00:07:39
+
+@16:00 Presentations
+
+@16:48 Work on week 7 recap.
