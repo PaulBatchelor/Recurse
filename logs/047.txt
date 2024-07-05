@@ -1,0 +1,60 @@
+@2024-07-05 Day 47.
+35 days left of batch.
+---
+Prev:
+
+sounds and visuals /
+connected together for /
+the poking demo
+
+---
+
+Next:
+
+|| @!(taskref "demo-poke")!@: add eyes and a mouth,
+sync mouth shapes to sounds, tweak sounds.
+
+|| @!(taskref "resume-setup")!@: work up a little
+lua script to generate tex code using my old
+TeX template.
+
+|| @!(taskref "how-big-are-react-apps")!@: Didn't
+get to this the other day. Experiment and observe.
+
+|| @!(taskref "demo-react-UI")!@: Try to actually
+get to adding sliders to this.
+
+|| @!(taskref "investigate-kickstart-neovim")!@ if
+there is time.
+
+|| @!(taskref "react-managing-state")!@ read "passing
+data deeply"
+
+@07:49 Morning triage
+
+@08:06 Planning Demo Poke tweaks #demo-poke
+Visuals: eyes and mouth, make sure they all
+collide against walls. Sounds: use envelope
+to modulate pitch, used smoothed gate for
+amplitude (decay doesn't work).
+---
+Resist the urge to tune and tweak all day.
+
+@08:09 Plan: use existing data today to make Tex Generator #resume-setup
+
+@08:11 Try to look into this today #how-big-are-react-apps
+
+@08:13 Try to add sliders today #demo-react-UI
+I'm honestly losing motivation for this, but
+it's important to me that I do this in order to
+learn.
+
+@08:15 If there is time #investigate-kickstart-neovim
+This is a pretty open day, so there's a chance I'll have
+time for this.
+
+@08:17 Two more chapters left here #react-managing-state
+"passing data deeply" (23 pages) and "scaling up"
+(20 pages)
+
+@08:18 Getting ready to publish

@@ -28,10 +28,12 @@ Tiny Creature Sounds /
 Told Told Some People About It /
 Then I learned about Zig
 
-Creature Sounds, Audio Chats with Dan,
+Iinitial Creature Sounds (morphing a sequence of tube
+shapes), Audio Chats with Dan,
 Webdev Hangout (spatial audio, typescript stuff,
 frog choir), tested out MIDI controller.
-* Tuesday, July 2nd
+
+* Wednesday, July 3rd
 
 built jitter signals /
 summer 2 conversations /
@@ -44,3 +46,15 @@ in dagzet (yak shaving), added links to @!(ref
 "demos")!@ page, attempt to figure out text templates
 in Go (again, more yak shaving for resume,probably not worth
 my time actually).
+
+* Thursday, July 4th
+
+sounds and visuals /
+connected together for /
+the poking demo
+
+Worked out poking mechanics for sound, hooked up
+initial audio and sound. Chatter sound refactored
+to live inside single struct (better for porting). figured out
+"tap to begin" mechanic to start webaudio. Created envelope
+generator, triggergate, metro.
