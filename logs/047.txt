@@ -106,4 +106,6 @@ Okay, so I just want to preview the data right now.
 I'm going to render to markup.
 
 11:49 I wrote a CV in plain tex once, trying to compile #resume-setup
-It still works good!
+It still works!
+
+@13:13 Back to the resume. Filling in more details. #resume-setup #timelog:01:04:52

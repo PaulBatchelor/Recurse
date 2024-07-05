@@ -105,6 +105,15 @@ function experience(fp)
     for _, v in pairs(explst) do
         local title = get_node_lines(db, v)
         fp:write(header3(title))
+        local points = get_node_list(db, v)
+
+        if #points > 0 then
+            fp:write(begin_list())
+            for _, li in pairs(points) do
+                fp:write(item(get_node_lines(db, li)))
+            end
+            fp:write(end_list())
+        end
     end
 
 end
