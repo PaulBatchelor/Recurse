@@ -183,6 +183,7 @@ function sketch(p) {
         p.strokeWeight(strokeThickness);
         p.rect(3, 3, width -6, height - 6);
         if (audioStarted == false) {
+            p.fill(0);
             p.textSize(20);
             p.textAlign(p.CENTER);
             p.text("Tap to begin", width/2, height/2);
