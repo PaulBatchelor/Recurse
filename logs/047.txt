@@ -111,3 +111,5 @@ It still works!
 @13:13 Back to the resume. Filling in more details. #resume-setup #timelog:01:04:52
 
 @14:31 More slider-ing #demo-react-UI #timelog:01:11:08
+
+@15:45 Pushing initial poke demo online. #demo-poke #timelog:00:07:39
