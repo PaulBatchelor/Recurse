@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  width:100%;
+  align-items:center;
+  justify-content:space-around;
+  flex-direction: column;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    width:40%;
+    align-items:center;
+    justify-content:space-around;
+}
+
+.slider-number {
+    width: 100%;
+}
+
+.slider-slider {
+    width: 100%;
+}
+
+.slider-label {
+    width: 100%;
+    height: 100%;
+}
