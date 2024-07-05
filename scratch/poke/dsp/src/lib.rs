@@ -21,7 +21,9 @@ pub struct ChatterBox {
     chooser: LinearCongruentialGenerator,
     drm: [f32; 8],
     jit_freq: Jitter,
+    jit_velum: Jitter,
     tgate: TriggerGate,
+    tgate_pitch: TriggerGate,
     env: Envelope,
     shapes: Vec<[f32; 8]>,
     pub cur: usize,
@@ -29,8 +31,10 @@ pub struct ChatterBox {
     pub pphs: f32,
     gate: u8,
     pgate: u8,
-
+    env_pitch: Envelope,
     pub mouth_open: f32,
+    hpfilt: ButterworthHighPass,
+    reverb: BigVerb,
 }
 
 impl ChatterBox {
@@ -44,7 +48,9 @@ impl ChatterBox {
             drm: [0.5; 8],
             jit_freq: Jitter::new(sr),
             tgate: TriggerGate::new(sr),
+            tgate_pitch: TriggerGate::new(sr),
             env: Envelope::new(sr),
+            env_pitch: Envelope::new(sr),
             shapes: generate_shape_table(),
             pphs: -1.,
             cur: 0,
@@ -52,18 +58,33 @@ impl ChatterBox {
             gate: 0,
             pgate: 0,
             mouth_open: 0.,
+            jit_velum: Jitter::new(sr),
+            hpfilt: ButterworthHighPass::new(sr),
+            reverb: BigVerb::new(sr),
         };
 
         cb.shape_morpher.min_freq = 3.0;
         cb.shape_morpher.max_freq = 10.0;
         cb.chooser.seed(4444);
         cb.jit_freq.seed(43438, 5555);
-        cb.jit_freq.range_amplitude(-5., 12.);
+        cb.jit_freq.range_amplitude(-5., 1.);
         cb.jit_freq.range_rate(3., 10.);
-        cb.tgate.duration = 0.4;
+        cb.tgate.duration = 0.9;
         cb.env.set_attack(0.01);
-        cb.env.set_release(0.7);
+        cb.env.set_release(0.1);
         cb.voice.pitch = 63.;
+
+        cb.env_pitch.set_attack(0.4);
+        cb.env_pitch.set_release(1.5);
+        cb.tgate_pitch.duration = 0.2;
+        cb.jit_velum.seed(12345, 54321);
+        cb.jit_velum.range_amplitude(0., 2.);
+        cb.jit_velum.range_rate(1., 4.);
+
+        cb.hpfilt.set_freq(800.);
+        cb.reverb.size = 0.6;
+        cb.reverb.cutoff = 4000.;
+
         cb
     }
 
@@ -78,6 +99,7 @@ impl ChatterBox {
         let chooser = &mut self.chooser;
         let drm = &mut self.drm;
         let jit_freq = &mut self.jit_freq;
+        let jit_velum= &mut self.jit_velum;
         let tgate = &mut self.tgate;
         let env = &mut self.env;
 
@@ -87,6 +109,24 @@ impl ChatterBox {
         let pphs = &mut self.pphs;
         let gate = &self.gate;
         let pgate = &mut self.pgate;
+        let env_pitch = &mut self.env_pitch;
+        let tgate_pitch = &mut self.tgate_pitch;
+        let hpfilt = &mut self.hpfilt;
+        let reverb = &mut self.reverb;
+
+        let t = if *pgate != *gate {
+            1.0
+        } else {
+            0.0
+        };
+        let gt = tgate.tick(t);
+        let ev = env.tick(gt);
+        let gtp = tgate_pitch.tick(t);
+        let evpch = env_pitch.tick(gtp);
+
+
+        shape_morpher.min_freq = 2.0 + 6.*evpch;
+        shape_morpher.max_freq = 3.0 + 6.*evpch;
 
         let phs = shape_morpher.tick();
         if phs < *pphs {
@@ -99,8 +139,13 @@ impl ChatterBox {
         let shp_a = shapes[*cur];
         let shp_b = shapes[*nxt];
 
+        jit_freq.range_amplitude(-3., 3. + 5.*evpch);
+        jit_freq.range_rate(3. + 9.*evpch, 10. + 7.*evpch);
+
         let jf = jit_freq.tick();
-        voice.pitch = 63.0 + jf;
+        let jv = jit_velum.tick();
+
+        voice.pitch = 62.0 + jf + 12.0*evpch;
 
         let alpha = gliss_it(phs, 0.8);
         for i in 0..8 {
@@ -109,16 +154,14 @@ impl ChatterBox {
                 alpha * shp_b[i];
         }
 
+        voice.nose.set_velum(jv);
         voice.tract.drm(drm);
-
-        let t = if *pgate != *gate {
-            1.0
-        } else {
-            0.0
-        };
-        let gt = tgate.tick(t);
-        let ev = env.tick(gt);
         let out = voice.tick() * 0.5 * ev;
+        let out = hpfilt.tick(out);
+        let (rvb, _) = reverb.tick(out, out);
+        let out = out + rvb * 0.1;
+
+
         *pphs = phs;
         *pgate = *gate;
 

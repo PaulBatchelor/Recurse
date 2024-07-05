@@ -67,6 +67,8 @@ function sketch(p) {
     strokeThickness = 3.
     circ = [width*0.5, height*0.5];
 
+    pokeExpand = 2.0;
+
     let mouthShapes = [
         [1.0, 0.5, 0.0, 0.0],
         [0.5, 1.0, 0.0, 0.0],
@@ -109,7 +111,7 @@ function sketch(p) {
 
         let dist = Math.sqrt(dx*dx + dy*dy);
 
-        if (dist > circRad) return;
+        if (dist > circRad*pokeExpand) return;
 
         poke();
 
@@ -179,10 +181,11 @@ function sketch(p) {
     p.draw = function () {
         p.fill(255);
         p.background(255);
-
         p.strokeWeight(strokeThickness);
-        p.rect(3, 3, width -6, height - 6);
+
         if (audioStarted == false) {
+            p.fill(0, 0, 0, 0);
+            p.rect(strokeThickness*0.5, strokeThickness*0.5, width - strokeThickness, height - strokeThickness);
             p.fill(0);
             p.textSize(20);
             p.textAlign(p.CENTER);
@@ -203,8 +206,8 @@ function sketch(p) {
         p.circle(circ[0] + circRad*0.6, circ[1] - circRad*0.4, circRad*1.0);
 
         p.fill(0);
-        p.circle(circ[0] - circRad*0.6, circ[1] - circRad*0.4, circRad*0.1);
-        p.circle(circ[0] + circRad*0.6, circ[1] - circRad*0.4, circRad*0.1);
+        p.circle(circ[0] - circRad*0.6, circ[1] - circRad*0.4, circRad*0.2);
+        p.circle(circ[0] + circRad*0.6, circ[1] - circRad*0.4, circRad*0.2);
 
         // mouth
         let ms = computeMouthShape();
@@ -218,6 +221,8 @@ function sketch(p) {
         circVelocity[1] *= 0.99;
 
         checkWalls();
+        p.fill(0, 0, 0, 0);
+        p.rect(strokeThickness*0.5, strokeThickness*0.5, width - strokeThickness, height - strokeThickness);
 
     };
 
