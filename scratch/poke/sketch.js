@@ -5,10 +5,22 @@ audioStarted = false
 class ChatterWorkletNode extends AudioWorkletNode {
     constructor(context, name, options) {
         super(context, name, options);
+        this.port.onmessage = (event) => this.onmessage(event.data);
+        this.mouthopen = 0.;
+    }
+
+    poll() {
+        this.port.postMessage({type: "mouthopen-get"});
     }
 
     poke(tempo) {
         this.port.postMessage({type: "poke"});
+    }
+
+    onmessage(event) {
+        if (event.type === "mouthopen-rsp") {
+            this.mouthopen = event.data;
+        }
     }
 }
 
@@ -51,6 +63,15 @@ function sketch(p) {
     strokeThickness = 3.
     circ = [width*0.5, height*0.5];
 
+    let mouthShapes = [
+        [1.0, 0.5, 0.0, 0.0],
+        [0.5, 1.0, 0.0, 0.0],
+        [0.5, 0.5, 0.0, 0.0],
+        [1.8, 0.2, 0.0, 0.0]
+    ];
+
+    let closedMouth = [1.0, 0.04];
+
     // Declare the setup() method.
     p.setup = function () {
         p.createCanvas(width, height);
@@ -60,6 +81,12 @@ function sketch(p) {
         console.log("poke");
         if (ChatterNode != null) {
             ChatterNode.poke();
+        }
+    }
+
+    function poll() {
+        if (ChatterNode != null) {
+            ChatterNode.poll();
         }
     }
 
@@ -117,6 +144,20 @@ function sketch(p) {
         }
     }
 
+    function computeMouthShape() {
+        let ms = mouthShapes[0];
+        var open = 1.0;
+
+        if (ChatterNode != null) {
+            open = ChatterNode.mouthopen;
+        }
+
+        return [
+            open*ms[0] + (1.0 - open)*closedMouth[0],
+            open*ms[1] + (1.0 - open)*closedMouth[1]
+        ];
+    }
+
     // Declare the draw() method.
     p.draw = function () {
         p.fill(255);
@@ -130,6 +171,8 @@ function sketch(p) {
             p.text("Tap to begin", width/2, height/2);
             return;
         }
+
+        poll();
 
         let ds = p.deltaTime * 0.001;
 
@@ -146,20 +189,16 @@ function sketch(p) {
         p.circle(circ[0] + circRad*0.6, circ[1] - circRad*0.4, circRad*0.1);
 
         // mouth
-        p.ellipse(circ[0], circ[1] + circRad*0.6, circRad, circRad * 0.04);
+        //let ms = mouthShapes[0];
+        let ms = computeMouthShape();
+
+        p.ellipse(circ[0], circ[1] + circRad*0.6, circRad * ms[0], circRad * ms[1]);
 
         circ[0] += circVelocity[0]*ds;
         circ[1] += circVelocity[1]*ds;
 
-
-        //circVelocity[0] -= circAccel*ds;
-        //circVelocity[1] -= circAccel*ds;
-
         circVelocity[0] *= 0.99;
         circVelocity[1] *= 0.99;
-
-        //if (circVelocity[0] < 0) circVelocity[0] = 0;
-        //if (circVelocity[1] < 0) circVelocity[1] = 0;
 
         checkWalls();
 

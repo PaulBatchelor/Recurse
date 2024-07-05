@@ -29,6 +29,8 @@ pub struct ChatterBox {
     pphs: f32,
     gate: u8,
     pgate: u8,
+
+    pub mouth_open: f32,
 }
 
 impl ChatterBox {
@@ -49,6 +51,7 @@ impl ChatterBox {
             nxt: 1,
             gate: 0,
             pgate: 0,
+            mouth_open: 0.,
         };
 
         cb.shape_morpher.min_freq = 3.0;
@@ -118,6 +121,8 @@ impl ChatterBox {
         let out = voice.tick() * 0.5 * ev;
         *pphs = phs;
         *pgate = *gate;
+
+        self.mouth_open = ev;
         out
     }
 
@@ -210,4 +215,9 @@ pub extern "C" fn process(dsp: &mut ChatterBox, outbuf: *mut f32, sz: usize) {
 #[no_mangle]
 pub extern "C" fn poke(dsp: &mut ChatterBox) {
     dsp.poke();
+}
+
+#[no_mangle]
+pub extern "C" fn mouth_open(dsp: &mut ChatterBox) -> f32 {
+    dsp.mouth_open
 }

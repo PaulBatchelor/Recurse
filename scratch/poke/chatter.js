@@ -30,6 +30,9 @@ class ChatterSynth extends AudioWorkletProcessor {
     onmessage(event) {
         if (event.type === "poke") {
             this.wasm.exports.poke(this.dsp);
+        } else if (event.type === "mouthopen-get") {
+            let m = this.wasm.exports.mouth_open(this.dsp);
+            this.port.postMessage({type: "mouthopen-rsp", data:m});
         }
     }
 
