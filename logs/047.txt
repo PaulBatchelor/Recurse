@@ -99,8 +99,11 @@ speakers. But I'll worry about mixing another time.
 
 @10:50 Merged "chatter" branch in voxbox. #demo-poke
 
-@10:54 can I still build my old tex resume? #resume-setup
+@10:54 can I still build my old tex resume? #resume-setup #timelog:01:00:06
 Short answer is: no.
 ---
 Okay, so I just want to preview the data right now.
 I'm going to render to markup.
+
+11:49 I wrote a CV in plain tex once, trying to compile #resume-setup
+It still works good!
