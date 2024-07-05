@@ -61,7 +61,7 @@ time for this.
 
 @08:30 Let's work on a face for my little guy #demo-poke #timelog:00:16:03
 
-@08:46 Initial face created. Next up: mouth sync #demo-poke
+@08:46 Initial face created. Next up: mouth sync #demo-poke #timelog:00:58:42
 open/close and shape morphing
 
 @09:24 Initial open/close created. Now to interpolate shapes. #demo-poke
