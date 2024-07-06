@@ -22,7 +22,7 @@ class SingerWorkletNode extends AudioWorkletNode {
 
     set_pitch(pitch) {
         this.data.pitch = parseFloat(pitch);
-        this.port.postMessage({type: "pitch", data: pitch});
+        this.port.postMessage({ type: "pitch", data: pitch });
     }
 
     set_region(region, value) {
@@ -36,27 +36,27 @@ class SingerWorkletNode extends AudioWorkletNode {
 
     set_aspiration(aspiration) {
         this.data.aspiration = parseFloat(aspiration);
-        this.port.postMessage({type: "aspiration", data: aspiration});
+        this.port.postMessage({ type: "aspiration", data: aspiration });
     }
 
     set_noise_floor(noise_floor) {
         this.data.noise_floor = parseFloat(noise_floor);
-        this.port.postMessage({type: "noise_floor", data: noise_floor});
+        this.port.postMessage({ type: "noise_floor", data: noise_floor });
     }
 
     set_shape(shape) {
         this.data.shape = shape;
-        this.port.postMessage({type: "shape", data: shape});
+        this.port.postMessage({ type: "shape", data: shape });
     }
 
     set_velum(velum) {
         this.data.velum = velum;
-        this.port.postMessage({type: "velum", data: velum});
+        this.port.postMessage({ type: "velum", data: velum });
     }
 
     set_length(length) {
         this.data.tract_length = length;
-        this.port.postMessage({type: "length", data: length});
+        this.port.postMessage({ type: "length", data: length });
     }
 }
 
@@ -90,7 +90,7 @@ function addHorizSlider(name, minVal, maxVal, defaultVal, step, updateValue) {
 const startAudio = async (context) => {
     try {
         await context.audioWorklet.addModule('singer.js');
-    } catch(e) {
+    } catch (e) {
         throw new Error(`noise generator error: ${e.message}`);
     }
 
@@ -229,7 +229,7 @@ function update_param(param, ui_elem) {
     let ctrl = ui_elem;
     let slider = ctrl.childNodes[1];
     slider.value = param;
-    evt = new Event('input', {bubbles: true});
+    evt = new Event('input', { bubbles: true });
     slider.dispatchEvent(evt);
 }
 
@@ -287,7 +287,7 @@ window.addEventListener('load', async () => {
             }
 
             if (data.velum !== null) {
-                update_param(data.velum , SingerController.velum);
+                update_param(data.velum, SingerController.velum);
             }
 
             if (data.noise_floor !== null) {
