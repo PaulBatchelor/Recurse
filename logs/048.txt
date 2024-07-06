@@ -117,4 +117,12 @@ oscsend did not work. But: HACK THE PLANET
 
 @18:44 now what.
 
-@18:48 Add glottis parameters. #demo-react-UI
+@18:48 Add glottis parameters. #demo-react-UI #timelog:00:18:50
+
+@19:08 Now for the region sliders #demo-react-UI #timelog:00:12:18
+
+@19:20 Sliders React demo is currently 600kb #how-big-are-react-apps
+Did this by running =npm run build= then examining
+size of "build" directory.
+---
+By comparison, my vanilla JS project was only 12kb.
