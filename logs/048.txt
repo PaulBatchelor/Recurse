@@ -112,3 +112,6 @@ are opened in neovim for the first time.
 @15:59 Back to the hub. Now what.
 
 @16:00 Work out initial TeX backend based on cv.tex #resume-setup #timelog:00:43:48
+
+@16:47 play with the LED sign here in hub #LEDsign #timelog:00:12:27
+oscsend did not work. But: HACK THE PLANET

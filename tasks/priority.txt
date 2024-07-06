@@ -21,3 +21,5 @@ become familiar with some frontend technologies.
 @how-big-are-react-apps Investigate: How big are react apps?
 
 @consider-poke-follow-up Consider poke follow-up?
+
+@LEDsign play with LED sign at hub
