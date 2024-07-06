@@ -4,8 +4,6 @@ tasks that I intend to work on in the next few days or so.
 @react-managing-state read React: managing state
 link [[https://react.dev/learn/managing-state]].
 
-@what-now-week7 Career thoughts in week7
-
 @add-day-titles add day titles to logs (retro-actively)
 
 @voxbox-shape-morphing add shape morphing with linear gesture

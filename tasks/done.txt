@@ -198,3 +198,6 @@ between a set of DRM shapes and is clocked by a phasor.
 
 @investigate-kickstart-neovim Look into Kickstart + NeoVim
 link: [[https://github.com/nvim-lua/kickstart.nvim]].
+
+@what-now-week7 Career thoughts in week7
+

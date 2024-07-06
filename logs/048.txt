@@ -108,3 +108,7 @@ the LSP also does autoformatting. It *will* touch your
 files once they are opened, so note to self be sure
 to commit the files before doing anything when they
 are opened in neovim for the first time.
+
+@15:59 Back to the hub. Now what.
+
+@16:00 Work out initial TeX backend based on cv.tex #resume-setup #timelog:00:43:48
