@@ -201,3 +201,5 @@ link: [[https://github.com/nvim-lua/kickstart.nvim]].
 
 @what-now-week7 Career thoughts in week7
 
+@LEDsign play with LED sign at hub
+

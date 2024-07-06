@@ -29,7 +29,7 @@ const parameters = [
     },
 ];
 
-function Slider({name, minRange, maxRange, stepSize, label, defaultValue}: SliderProps) {
+function Slider({ name, minRange, maxRange, stepSize, label, defaultValue }: SliderProps) {
     const [param, setParam] = React.useState(defaultValue);
 
     function handleChange(e: React.FormEvent<HTMLInputElement>) {
@@ -38,18 +38,18 @@ function Slider({name, minRange, maxRange, stepSize, label, defaultValue}: Slide
 
     return (
         <>
-        <div className="slider">
-        <div className="slider-label">{label}</div>
-        <div className="slider-slider"><input
-            type="range"
-            value={param}
-            onChange={handleChange}
-            min={minRange}
-            max={maxRange}
-            step={stepSize}
-        /></div>
-        <div className="slider-number">{param}</div>
-        </div>
+            <div className="slider">
+                <div className="slider-label">{label}</div>
+                <div className="slider-slider"><input
+                    type="range"
+                    value={param}
+                    onChange={handleChange}
+                    min={minRange}
+                    max={maxRange}
+                    step={stepSize}
+                /></div>
+                <div className="slider-number">{param}</div>
+            </div>
         </>
     );
 
@@ -61,20 +61,20 @@ function App() {
     parameters.forEach((param) => {
         sliders.push(
             <Slider
-            key={param.name}
-            name={param.name}
-            minRange={param.minRange}
-            maxRange={param.maxRange}
-            stepSize={param.stepSize}
-            label={param.label}
-            defaultValue={param.defaultValue}
+                key={param.name}
+                name={param.name}
+                minRange={param.minRange}
+                maxRange={param.maxRange}
+                stepSize={param.stepSize}
+                label={param.label}
+                defaultValue={param.defaultValue}
             />
         );
     })
 
     return (
         <div className="App">
-        {sliders}
+            {sliders}
         </div>
     );
 }
