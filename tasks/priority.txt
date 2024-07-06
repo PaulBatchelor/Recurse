@@ -25,3 +25,5 @@ become familiar with some frontend technologies.
 @investigate-kickstart-neovim Look into Kickstart + NeoVim
 
 @how-big-are-react-apps Investigate: How big are react apps?
+
+@build-faust-from-source Build FAUST from source

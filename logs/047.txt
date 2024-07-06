@@ -117,3 +117,32 @@ It still works!
 @16:00 Presentations
 
 @16:48 Work on week 7 recap.
+
+@18:56 Attempts to build FAUST from source. #build-faust-from-source
+Gotta love this. There's a header file called
+=execinfo.h= that doesn't exist on musl (alpine)
+and there's a specific macro that disables including this
+file. There's probably a way to set this macro using
+a flag somewhere in a deeply nested Makefile, but it's
+just going to be easier to comment these bits out. It's
+only this file. FAUST is like this sometimes.
+---
+It is building...
+---
+I get weird permission issues when it builds?
+
+[[
+https://stackoverflow.com/questions/72978485/git-submodule-update-failed-with-fatal-detected-dubious-ownership-in-reposit]].
+So sketchy.
+
+---
+
+@19:19 Attemping to mod cmake files. Sigh. #build-faust-from-source
+
+@19:26 sketchy permissions warnings again. #build-faust-from-source
+I have this feeling that one of the optional submodules
+is causing issues.
+---
+Oh, it was more sketchy stuff that I had to comment out.
+The "install" target of the Makefile had this weird
+line that was triggering the git issue.
