@@ -84,3 +84,27 @@ to Jobs Chat already jeez.
 
 @13:02 Okay it works. Kinda neat. Trying to get typescript set up #investigate-kickstart-neovim
 It works!
+
+@13:14 epilogue #investigate-kickstart-neovim #timelog:00:05:40
+Key things I did to get things working:
+---
+Clone the kickstart repo to =~/.config/nvim=. That is to
+say, the repo becomes the folder "nvim" as your base
+config. Opening up nvim does the rest.
+---
+the =init.lua= file in =nvim= is chock full of comments
+and README stuff. I searched and skimmed around for
+ways to turn on =rust-analyzer= with =lsp-config=, it
+was a line I had to uncomment.
+---
+Also had to uncomment a line to include new plugins,
+like the typescript neovim plugin I found. Installing
+stuff through this plugin manager thing called =Lazy=
+is basically a matter of appending table values
+to the return table value in =lua/custom/plugins/init.lua=.
+Opening up nvim handles installing stuff.
+---
+the LSP also does autoformatting. It *will* touch your
+files once they are opened, so note to self be sure
+to commit the files before doing anything when they
+are opened in neovim for the first time.

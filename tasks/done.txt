@@ -196,3 +196,5 @@ between a set of DRM shapes and is clocked by a phasor.
 
 @demo-poke "poke a face" demo.
 
+@investigate-kickstart-neovim Look into Kickstart + NeoVim
+link: [[https://github.com/nvim-lua/kickstart.nvim]].

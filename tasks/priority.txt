@@ -20,9 +20,6 @@ become familiar with some frontend technologies.
 
 @dagzet-rust Port dagzet to rust
 
-@investigate-kickstart-neovim Look into Kickstart + NeoVim
-link: [[https://github.com/nvim-lua/kickstart.nvim]].
-
 @how-big-are-react-apps Investigate: How big are react apps?
 
 @consider-poke-follow-up Consider poke follow-up?
