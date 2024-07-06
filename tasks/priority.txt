@@ -14,8 +14,6 @@ link [[https://react.dev/learn/managing-state]].
 [[https://www.recurse.com/jobs/advice#resumes]].
 [[https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb]].
 
-@demo-poke "poke a face" demo.
-
 @demo-react-UI port demo to react UI
 It's important to me that I do this because I want to
 become familiar with some frontend technologies.
@@ -23,7 +21,8 @@ become familiar with some frontend technologies.
 @dagzet-rust Port dagzet to rust
 
 @investigate-kickstart-neovim Look into Kickstart + NeoVim
+link: [[https://github.com/nvim-lua/kickstart.nvim]].
 
 @how-big-are-react-apps Investigate: How big are react apps?
 
-@build-faust-from-source Build FAUST from source
+@consider-poke-follow-up Consider poke follow-up?

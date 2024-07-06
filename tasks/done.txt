@@ -191,3 +191,8 @@ The current page can be found at @!(ref "demos")!@.
 @create-chatter-sounds Create chatter sounds example
 Something that involves a thing that randomly interpolates
 between a set of DRM shapes and is clocked by a phasor.
+
+@build-faust-from-source Build FAUST from source
+
+@demo-poke "poke a face" demo.
+

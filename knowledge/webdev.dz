@@ -90,3 +90,8 @@ nn mdn_header_element
 ln The header element (MDN)
 hl https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header
 tg html mdn
+
+nn typescript_handbook
+ln The (new) typescript handbook
+hl https://microsoft.github.io/TypeScript-New-Handbook/everything/
+tg typescript
