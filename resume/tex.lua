@@ -40,7 +40,7 @@ function header1(str)
 end
 
 function header2(str)
-    return "\\section{" .. str .. "}\n\\medskip\n"
+    return "\\smallskip\\section{" .. str .. "}\n\\medskip\n"
 end
 
 function header3(str)

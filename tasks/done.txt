@@ -204,3 +204,8 @@ link: [[https://github.com/nvim-lua/kickstart.nvim]].
 @LEDsign play with LED sign at hub
 
 @how-big-are-react-apps Investigate: How big are react apps?
+
+@investigate-css-codestudy why is codestudy broken?
+
+@consider-drawing-tablet consider getting a drawing tablet?
+

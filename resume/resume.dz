@@ -124,29 +124,86 @@ ln Articulatory Singing Synthesizer DSP library implemented in Rust
 co $ voxbox
 
 nn webaudio_demos
-ln Compiled to wasm targets to build webaudio demos
+ln Compiled to WebAssebly (WASM) for webaudio demos
 co $ voxbox
 
+sn voxbox
+ol singing_dsp_rust webaudio_demos
+
 nn sndkit
-ln sndkit
+ln SndKit
 
 nn literate_programming_dsp
-ln An audio DSP library built using literate programming
+ln Audio DSP library built using literate programming
 co $ sndkit
 
 nn org_wiki
-ln Built using custom Wiki engine based on org markup,
+ln Custom Wiki engine based on org markup,
 ln with inline scripting using janet.
 co $ sndkit
 
+nn sndkit_languages_tools
+ln Languages: C, janet, SQLite, org
+
+sn sndkit
+ol literate_programming_dsp org_wiki
+
 nn sporth
-ln sporth
+ln Sporth
+
+nn stack_based_audio
+ln Stack-based language for producing audio
+co $ sporth
+
+nn audiokit
+ln Used in AudioKit DSP engine, an iOS audio framework
+
+sn sporth
+ol stack_based_audio audiokit
 
 nn orb
 ln Orb
 
+nn musical_game
+ln Interactive musical puzzle game for Android
+co $ orb
+
+nn procedurally_generated_sounds
+ln Procedurally generated music and sound effects with custom DSP engine
+co $ orb
+
+nn orb_languages_tools
+ln Languages and Frameworks: Android NDK, Java JNI, OpenGLES, OpenSLES, NanoVG, C, C++, Lua
+co $ orb
+
+sn orb
+ol musical_game procedurally_generated_sounds orb_languages_tools
+
+nn handsfreemusic
+ln Microsoft HandsFree Sound Jam (aka EyeJam)
+
+nn musicmaking_tool_als
+ln Music-Making software for musicians with ALS, built with
+ln eye-tracking technology
+co $ handsfreemusic
+
+nn SXSW_innovation_award
+ln Recieved SXSW 2018 Music Innovation Award
+co $ handsfreemusic
+
+nn custom_UI_sound
+ln Custom UI and sound engine designed gaze-based interfaces
+co $ handsfreemusic
+
+nn handsfreemusic_tools
+ln Tools and Software: Tobii SDK, mingw64, C/C++, OpenGL
+co $ handsfreemusic
+
+sn handsfreemusic
+ol musicmaking_tool_als SXSW_innovation_award custom_UI_sound handsfreemusic_tools
+
 sn projects
-ol voxbox sndkit sporth orb
+ol voxbox sndkit handsfreemusic
 
 nn skills
 ln Skills

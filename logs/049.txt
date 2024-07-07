@@ -142,6 +142,20 @@ to be =nowrap= and the problem went away.
 
 @15:23 Back to tic80 #investigate-tic80-audio #timelog:00:49:55
 
-
 @15:42 What things call these functions? #investigate-tic80-audio
 I want to see an audio callback.
+
+@17:01 Tasking.
+
+@17:06 Next steps #investigate-tic80-audio
+I think I'm pretty close to understanding how
+the callback stores audio into buffers. There's
+a resampling step which I need to figure out
+more, but I believe I know where I can
+inject custom DSP. At that point, I'll be
+ready to make a follow-up task.
+
+@17:08 Adding project details to resume #resume-setup
+
+@17:41 Project links maybe? #resume-setup
+This is looking pretty good though.

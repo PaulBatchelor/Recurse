@@ -138,6 +138,15 @@ function projects(fp, backend)
     for _, v in pairs(explst) do
         local title = get_node_lines(db, v)
         fp:write(backend.header3(title))
+        local points = get_node_list(db, v)
+
+        if #points > 0 then
+            fp:write(backend.begin_list())
+            for _, li in pairs(points) do
+                fp:write(backend.item(get_node_lines(db, li)))
+            end
+            fp:write(backend.end_list())
+        end
     end
 end
 
