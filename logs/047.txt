@@ -1,0 +1,148 @@
+@2024-07-05 Day 47. Poke Prototype Published
+35 days left of batch.
+---
+Prev:
+
+sounds and visuals /
+connected together for /
+the poking demo
+
+---
+
+Next:
+
+|| @!(taskref "demo-poke")!@: add eyes and a mouth,
+sync mouth shapes to sounds, tweak sounds.
+
+|| @!(taskref "resume-setup")!@: work up a little
+lua script to generate tex code using my old
+TeX template.
+
+|| @!(taskref "how-big-are-react-apps")!@: Didn't
+get to this the other day. Experiment and observe.
+
+|| @!(taskref "demo-react-UI")!@: Try to actually
+get to adding sliders to this.
+
+|| @!(taskref "investigate-kickstart-neovim")!@ if
+there is time.
+
+|| @!(taskref "react-managing-state")!@ read "passing
+data deeply"
+
+@07:49 Morning triage
+
+@08:06 Planning Demo Poke tweaks #demo-poke
+Visuals: eyes and mouth, make sure they all
+collide against walls. Sounds: use envelope
+to modulate pitch, used smoothed gate for
+amplitude (decay doesn't work).
+---
+Resist the urge to tune and tweak all day.
+
+@08:09 Plan: use existing data today to make Tex Generator #resume-setup
+
+@08:11 Try to look into this today #how-big-are-react-apps
+
+@08:13 Try to add sliders today #demo-react-UI
+I'm honestly losing motivation for this, but
+it's important to me that I do this in order to
+learn.
+
+@08:15 If there is time #investigate-kickstart-neovim
+This is a pretty open day, so there's a chance I'll have
+time for this.
+
+@08:17 Two more chapters left here #react-managing-state
+"passing data deeply" (23 pages) and "scaling up"
+(20 pages)
+
+@08:18 Publishing
+
+@08:30 Let's work on a face for my little guy #demo-poke #timelog:00:16:03
+
+@08:46 Initial face created. Next up: mouth sync #demo-poke #timelog:00:58:42
+open/close and shape morphing
+
+@09:24 Initial open/close created. Now to interpolate shapes. #demo-poke
+
+@09:47 Testing on Android #demo-poke
+
+@09:49 Where did the tap to begin go? #demo-poke
+
+@09:55 Tuning and tweaking #demo-poke #timelog:00:49:37
+
+@09:56 First up, expand the poking radius #demo-poke
+Sometimes the pokes don't register because you are
+out of bounds.
+
+@10:00 Map envelope to fundamental pitch, rate, jitter #demo-poke
+
+@10:16 add some jitter controlling velum #demo-poke
+
+@10:22 remove some low end #demo-poke
+
+@10:25 fine. add reverb #demo-poke
+
+@10:32 draw the frame last #demo-poke
+That way, eyeballs can go off screen.
+I'm not going to do collision checks on mouth/eyes. Not
+worth the time.
+
+@10:39 More pitch tuning #demo-poke
+I wasn't hearing what I wanted to hear. Turns out
+the jitter was getting in the way.
+
+10:45 Android testing again #demo-poke #timelog:00:03:38
+Feels okay enough. Maybe a bit too shrill on phone
+speakers. But I'll worry about mixing another time.
+
+@10:50 Merged "chatter" branch in voxbox. #demo-poke
+
+@10:54 can I still build my old tex resume? #resume-setup #timelog:01:00:06
+Short answer is: no.
+---
+Okay, so I just want to preview the data right now.
+I'm going to render to markup.
+
+11:49 I wrote a CV in plain tex once, trying to compile #resume-setup
+It still works!
+
+@13:13 Back to the resume. Filling in more details. #resume-setup #timelog:01:04:52
+
+@14:31 More slider-ing #demo-react-UI #timelog:01:11:08
+
+@15:45 Pushing initial poke demo online. #demo-poke #timelog:00:07:39
+
+@16:00 Presentations
+
+@16:48 Work on week 7 recap.
+
+@18:56 Attempts to build FAUST from source. #build-faust-from-source
+Gotta love this. There's a header file called
+=execinfo.h= that doesn't exist on musl (alpine)
+and there's a specific macro that disables including this
+file. There's probably a way to set this macro using
+a flag somewhere in a deeply nested Makefile, but it's
+just going to be easier to comment these bits out. It's
+only this file. FAUST is like this sometimes.
+---
+It is building...
+---
+I get weird permission issues when it builds?
+
+[[
+https://stackoverflow.com/questions/72978485/git-submodule-update-failed-with-fatal-detected-dubious-ownership-in-reposit]].
+So sketchy.
+
+---
+
+@19:19 Attemping to mod cmake files. Sigh. #build-faust-from-source
+
+@19:26 sketchy permissions warnings again. #build-faust-from-source
+I have this feeling that one of the optional submodules
+is causing issues.
+---
+Oh, it was more sketchy stuff that I had to comment out.
+The "install" target of the Makefile had this weird
+line that was triggering the git issue.

@@ -11,38 +11,154 @@ nn boomy
 ln Boomy, Music Automation Engineer (July 2022 - January 2023)
 co $ experience
 
+nn python_test_coverage
+ln Refactored Python codebases, which improved all test
+ln coverage and made it easier to spot regression bugs.
+co $ boomy
+
+nn benchmarking
+ln Created benchmarking and profiling utilities to improve
+ln overall throughput performance in rendering.
+co $ boomy
+
+nn prototyping_DSP
+ln Built out DSP prototypes for internal sound engine
+co $ boomy
+
+sn boomy
+ol python_test_coverage benchmarking prototyping_DSP
+
+nn muvik
+ln Muvik Labs, Chief Technical Officer (2018 - 2021)
+co $ experience
+
+nn leader_research
+ln Lead teams for internal research and development in
+ln the space of wellness and interactive music technology.
+co $ muvik
+
+nn audiovisual_engine
+ln Developed custom rendering engine for audio and video.
+co $ muvik
+
+nn android_prototypes
+ln Built rapid prototypes of high-performance interactive
+ln realtime audio applications for Android mobile.
+co $ muvik
+
+nn designed_stimuli
+ln Designed audio-visual stimuli for use in clinical
+ln research trials.
+co $ muvik
+
+sn muvik
+ol leader_research audiovisual_engine android_prototypes designed_stimuli
+
 nn electrosmith
 ln Electrosmith, Consultant (September 2017 - December 2017)
 co $ experience
+
+nn daisysp_library 
+ln Created initial DSP code for DaisySP DSP library
+
+nn dsp_hardware
+ln Designed and prototyped audio DSP algorithms and sample code
+ln for embedded systems using C and C++.
+
+sn electrosmith
+ol daisysp_library dsp_hardware
 
 nn microsoft
 ln Microsoft Research, Music Technology Intern (June 2017 - August 2017)
 co $ experience
 
+nn prototypes_music_eyetracking
+ln Designed prototypes of novel interactive music making
+ln software using
+ln eye-tracking for musicians with ALS
+co $ microsoft
+
+nn published_open_source
+ln Worked with internal teams to release open source
+ln code related to the project.
+
+sn microsoft
+ol prototypes_music_eyetracking published_open_source
+
 nn safari_books
 ln Safari Books Online, Systems Administration Intern (2014-2015)
 co $ experience
 
+nn log_management
+ln Managed logs of services on Linux virtual servers running
+co $ safari_books
+
+nn puppet_fabric
+ln Wrote tools using Puppet and Fabric for the automation
+ln of tasks
+co $ safari_books
+
 zz select experience node
 sn experience
-zz appened to ordered list
-ol recurse_center boomy electrosmith microsoft
-ol safari_books
+ol boomy muvik electrosmith microsoft
+zz ol safari_books
 
 nn projects
 ln Projects
+
+nn eyejam
+ln Microsoft Hands-Free Sound Jam
+hl https://www.microsoft.com/en-us/research/project/microsoft-hands-free-sound-jam/
+co $ projects
+
+nn ethersurface
+ln EtherSurface
+co $ projects
+
+nn voxbox
+ln VoxBox
+co $ projects
+
+nn singing_dsp_rust
+ln Articulatory Singing Synthesizer DSP library implemented in Rust
+co $ voxbox
+
+nn webaudio_demos
+ln Compiled to wasm targets to build webaudio demos
+co $ voxbox
+
+nn sndkit
+ln sndkit
+
+nn literate_programming_dsp
+ln An audio DSP library built using literate programming
+co $ sndkit
+
+nn org_wiki
+ln Built using custom Wiki engine based on org markup,
+ln with inline scripting using janet.
+co $ sndkit
+
+nn sporth
+ln sporth
+
+nn orb
+ln Orb
+
+sn projects
+ol voxbox sndkit sporth orb
 
 nn skills
 ln Skills
 
 nn programming_languages
-ln Programming Languges: C/C++, Rust, Lua, Python,
-ln JavaScript,CSS, Scheme, Forth, Typescript
+ln Programming Languges: C, Rust, Lua, C++, Bash, Python,
+ln JavaScript, Scheme, Forth
 co $ skills
 
 nn frameworks_tools
-ln Frameworks and Tools: alpine linux, git, docker,
-ln bash, make, cmake, gcc, cargo, React, ninja, coreutils
+ln Frameworks and Tools: Linux, Git, Docker,
+ln Make, CMake, Ninja, gcc, React, coreutils
 co $ skills
 
 sn skills

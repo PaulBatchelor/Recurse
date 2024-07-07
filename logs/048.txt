@@ -1,0 +1,130 @@
+@2024-07-06 Day 48.
+34 days left of batch.
+---
+Prev:
+
+poking propulsion /
+prototype published. ponder: /
+participants pleased?
+
+---
+
+Next:
+
+|| @!(taskref "investigate-kickstart-neovim")!@ Try
+to get to this today.
+
+|| @!(taskref "resume-setup")!@ Create an initial
+TeX backend for my resume generator.
+
+|| @!(taskref "demo-react-UI")!@ Slider groups,
+all the parameters.
+
+@11:20 (Late) Morning Triage
+
+@11:27 initial demo done. Follow-up? #demo-poke #consider-poke-follow-up
+I've gotten good feedback from people, and was
+really interested in watching people interact
+with it. It's apparently has startled many cats!
+I may want to scope out some follow-up improvemnts
+to this, if there's time. Some things include:
+wall collision sounds, more dynamic interactions
+when poking, more variation in sound, and
+more empathy mechanics (feeding, laughter/tickling,
+etc).
+
+@11:33 final week7 career thoughts. #what-now-week7
+It's been nice getting most of my resume
+structured as data. It's very "music tech" oriented,
+with a strong emphasis on DSP and "low-level" languages
+like C/C++. For some reason, I didn't expect for
+a narrative like that to so strongly emerge.
+I could probably find enjoyment in "systems" oriented
+things: studying databases, OSes, computer architecture,
+etc. Rust seems like a good way to stay relevant
+in these fields.
+---
+I think the leetcode is going to resume next week.
+If I can find time every day, I could do about
+30 leetcode problems before this batch is over.
+But, leetcode takes more time than people think.
+An hour of focused time is quite valuable. If I
+can work my way up to 2 every day, that's most of
+LC-75 (80%). If I do 2 every other day, and at least
+one every day, that's about 45, or 60%
+of LC-75.
+---
+I want to get typescript under my belt. The
+handbook @!(dzref "webdev/typescript_handbook")!@ is
+a little under 40 pages, so probably something I
+could feasibly read. Then again, maybe it's just good
+enough to throw up some sliders in React and
+just bump around typescript that way? How
+much of my time is it worth?
+---
+Maybe if I can get neovim up and running, I
+think I may have a better time doing webdev stuff and
+feeling "modern"? (He says while typing in
+a very vanilla vim editor in termux running
+on Alpine linux using vintage IBM colors.)
+---
+But damn, get this resume built up and send it off
+to Jobs Chat already jeez.
+
+@12:18 Publishing
+
+@12:20 Let's see how easy this "kickstart" thing is. #investigate-kickstart-neovim #timelog:00:51:20
+
+@12:41 It seems to be working. Some sort of LSP is installed I think, but I want autocomplete #investigate-kickstart-neovim
+
+@12:42 Attempting to install YouCompleteMe #investigate-kickstart-neovim
+
+@12:45 Wait wait, I think there's another way to get rust analyzer working using nvim-lspconfig #investigate-kickstart-neovim
+
+@13:02 Okay it works. Kinda neat. Trying to get typescript set up #investigate-kickstart-neovim
+It works!
+
+@13:14 epilogue #investigate-kickstart-neovim #timelog:00:05:40
+Key things I did to get things working:
+---
+Clone the kickstart repo to =~/.config/nvim=. That is to
+say, the repo becomes the folder "nvim" as your base
+config. Opening up nvim does the rest.
+---
+the =init.lua= file in =nvim= is chock full of comments
+and README stuff. I searched and skimmed around for
+ways to turn on =rust-analyzer= with =lsp-config=, it
+was a line I had to uncomment.
+---
+Also had to uncomment a line to include new plugins,
+like the typescript neovim plugin I found. Installing
+stuff through this plugin manager thing called =Lazy=
+is basically a matter of appending table values
+to the return table value in =lua/custom/plugins/init.lua=.
+Opening up nvim handles installing stuff.
+---
+the LSP also does autoformatting. It *will* touch your
+files once they are opened, so note to self be sure
+to commit the files before doing anything when they
+are opened in neovim for the first time.
+
+@15:59 Back to the hub. Now what.
+
+@16:00 Work out initial TeX backend based on cv.tex #resume-setup #timelog:00:43:48
+
+@16:47 play with the LED sign here in hub #LEDsign #timelog:00:12:27
+oscsend did not work. But: HACK THE PLANET
+
+@18:44 now what.
+
+@18:48 Add glottis parameters. #demo-react-UI #timelog:00:18:50
+
+@19:08 Now for the region sliders #demo-react-UI #timelog:00:12:18
+
+@19:20 Sliders React demo is currently 600kb #how-big-are-react-apps
+Did this by running =npm run build= then examining
+size of "build" directory.
+---
+By comparison, my vanilla JS project was only 12kb.
+
+@19:44 Initial importing of webaudio junk #demo-react-UI #timelog:00:32:39

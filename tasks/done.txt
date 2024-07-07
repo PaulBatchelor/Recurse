@@ -191,3 +191,16 @@ The current page can be found at @!(ref "demos")!@.
 @create-chatter-sounds Create chatter sounds example
 Something that involves a thing that randomly interpolates
 between a set of DRM shapes and is clocked by a phasor.
+
+@build-faust-from-source Build FAUST from source
+
+@demo-poke "poke a face" demo.
+
+@investigate-kickstart-neovim Look into Kickstart + NeoVim
+link: [[https://github.com/nvim-lua/kickstart.nvim]].
+
+@what-now-week7 Career thoughts in week7
+
+@LEDsign play with LED sign at hub
+
+@how-big-are-react-apps Investigate: How big are react apps?

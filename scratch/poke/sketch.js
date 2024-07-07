@@ -5,10 +5,26 @@ audioStarted = false
 class ChatterWorkletNode extends AudioWorkletNode {
     constructor(context, name, options) {
         super(context, name, options);
+        this.port.onmessage = (event) => this.onmessage(event.data);
+        this.mouthopen = 0.;
+        this.mouthState = [0, 0, 0.0];
+    }
+
+    poll() {
+        this.port.postMessage({type: "mouthopen-get"});
+        this.port.postMessage({type: "mouthstate-get"});
     }
 
     poke(tempo) {
         this.port.postMessage({type: "poke"});
+    }
+
+    onmessage(event) {
+        if (event.type === "mouthstate-rsp") {
+            this.mouthState = event.data.slice();
+        } else if (event.type === "mouthopen-rsp") {
+            this.mouthopen = event.data;
+        }
     }
 }
 
@@ -51,6 +67,19 @@ function sketch(p) {
     strokeThickness = 3.
     circ = [width*0.5, height*0.5];
 
+    pokeExpand = 2.0;
+
+    let mouthShapes = [
+        [1.0, 0.5, 0.0, 0.0],
+        [0.5, 1.0, 0.0, 0.0],
+        [0.5, 0.5, 0.0, 0.0],
+        [1.8, 0.2, 0.0, 0.0]
+    ];
+
+    var mouthState = [0, 0, 0.0];
+
+    let closedMouth = [1.0, 0.04];
+
     // Declare the setup() method.
     p.setup = function () {
         p.createCanvas(width, height);
@@ -60,6 +89,12 @@ function sketch(p) {
         console.log("poke");
         if (ChatterNode != null) {
             ChatterNode.poke();
+        }
+    }
+
+    function poll() {
+        if (ChatterNode != null) {
+            ChatterNode.poll();
         }
     }
 
@@ -76,7 +111,7 @@ function sketch(p) {
 
         let dist = Math.sqrt(dx*dx + dy*dy);
 
-        if (dist > circRad) return;
+        if (dist > circRad*pokeExpand) return;
 
         poke();
 
@@ -117,36 +152,77 @@ function sketch(p) {
         }
     }
 
+    function computeMouthShape() {
+        var ms = mouthShapes[0];
+        var open = 1.0;
+
+        if (ChatterNode != null) {
+            open = ChatterNode.mouthopen;
+            let state = ChatterNode.mouthState;
+
+            let shp1 = mouthShapes[state[0]];
+            let shp2 = mouthShapes[state[1]];
+            let pos = state[2];
+
+            ms = [
+                (1.0 - pos)*shp1[0] + pos*shp2[0],
+                (1.0 - pos)*shp1[1] + pos*shp2[1]
+            ];
+
+        }
+
+        return [
+            open*ms[0] + (1.0 - open)*closedMouth[0],
+            open*ms[1] + (1.0 - open)*closedMouth[1]
+        ];
+    }
+
     // Declare the draw() method.
     p.draw = function () {
+        p.fill(255);
         p.background(255);
-
         p.strokeWeight(strokeThickness);
-        p.rect(3, 3, width -6, height - 6);
+
         if (audioStarted == false) {
+            p.fill(0, 0, 0, 0);
+            p.rect(strokeThickness*0.5, strokeThickness*0.5, width - strokeThickness, height - strokeThickness);
+            p.fill(0);
             p.textSize(20);
             p.textAlign(p.CENTER);
             p.text("Tap to begin", width/2, height/2);
             return;
         }
 
+        poll();
+
         let ds = p.deltaTime * 0.001;
-        // Draw the circle.
+
+        p.fill(255);
+        // Face
         p.circle(circ[0], circ[1], circRad*2.0);
+
+        // eyes
+        p.circle(circ[0] - circRad*0.6, circ[1] - circRad*0.4, circRad*1.0);
+        p.circle(circ[0] + circRad*0.6, circ[1] - circRad*0.4, circRad*1.0);
+
+        p.fill(0);
+        p.circle(circ[0] - circRad*0.6, circ[1] - circRad*0.4, circRad*0.2);
+        p.circle(circ[0] + circRad*0.6, circ[1] - circRad*0.4, circRad*0.2);
+
+        // mouth
+        let ms = computeMouthShape();
+
+        p.ellipse(circ[0], circ[1] + circRad*0.6, circRad * ms[0], circRad * ms[1]);
 
         circ[0] += circVelocity[0]*ds;
         circ[1] += circVelocity[1]*ds;
 
-        //circVelocity[0] -= circAccel*ds;
-        //circVelocity[1] -= circAccel*ds;
-
         circVelocity[0] *= 0.99;
         circVelocity[1] *= 0.99;
 
-        //if (circVelocity[0] < 0) circVelocity[0] = 0;
-        //if (circVelocity[1] < 0) circVelocity[1] = 0;
-
         checkWalls();
+        p.fill(0, 0, 0, 0);
+        p.rect(strokeThickness*0.5, strokeThickness*0.5, width - strokeThickness, height - strokeThickness);
 
     };
 
@@ -161,8 +237,6 @@ function sketch(p) {
     }
 }
 
-// Select the web page's body element.
-//let body = document.querySelector('body');
 let canvas = document.getElementById('sketch');
 
 canvas.addEventListener('click', async () => {
@@ -173,5 +247,4 @@ canvas.addEventListener('click', async () => {
     }
 })
 
-// Initialize the sketch and attach it to the web page's body.
 new p5(sketch, canvas);

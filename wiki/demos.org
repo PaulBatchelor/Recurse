@@ -1,14 +1,16 @@
 #+TITLE: Demos
 A collection of web demos. TBD.
 
-@!(pagelink "/demos/singer_test" "singer test")!@: An initial
-demo, exposing the core vocal synthesis algorithm parameters
-as sliders.
-
 @!(pagelink "/demos/vocal_chords" "Vocal Chords")!@: Experiments
 in making singing vocal ensembles. The key thing I was
 exploring was getting this voices to blend. This took a
 fair bit of tweaking and fine-tuning!
+
+@!(pagelink "/demos/poke" "Poke")!@: Poke a little fella around.
+
+@!(pagelink "/demos/singer_test" "singer test")!@: An initial
+demo, exposing the core vocal synthesis algorithm parameters
+as sliders.
 
 @!(pagelink "/demos/gesture_demo" "Tom's Diner With Gesture Synthesis")!@: An
 interactive experiment featuring Gesture synthesis, an

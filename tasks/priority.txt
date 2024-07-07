@@ -4,8 +4,6 @@ tasks that I intend to work on in the next few days or so.
 @react-managing-state read React: managing state
 link [[https://react.dev/learn/managing-state]].
 
-@what-now-week7 Career thoughts in week7
-
 @add-day-titles add day titles to logs (retro-actively)
 
 @voxbox-shape-morphing add shape morphing with linear gesture
@@ -14,14 +12,11 @@ link [[https://react.dev/learn/managing-state]].
 [[https://www.recurse.com/jobs/advice#resumes]].
 [[https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb]].
 
-@demo-poke "poke a face" demo.
-
 @demo-react-UI port demo to react UI
 It's important to me that I do this because I want to
 become familiar with some frontend technologies.
 
 @dagzet-rust Port dagzet to rust
 
-@investigate-kickstart-neovim Look into Kickstart + NeoVim
+@consider-poke-follow-up Consider poke follow-up?
 
-@how-big-are-react-apps Investigate: How big are react apps?
