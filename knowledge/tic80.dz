@@ -8,3 +8,103 @@ hl https://tic80.com/
 nn github
 ln github
 hl https://github.com/nesbox/TIC-80
+
+ns codestudy/tic80
+gr Studying components of the codebase for TIC-80.
+
+nn sound_c
+ln sound.c: sound engine
+fr codestudy/tic80/sound.c 0
+
+nn notefreqs
+ln NoteFreqs: a giant array of ints, presumably some kind
+ln of conversion table. Probably generated, as it's all
+ln on one line.
+fr $ 38
+co $ sound_c
+
+nn static_asserts
+fr $ 39 45
+ln static asserts? I've never seen these before. I'm assuming
+ln they are compile-time checks.
+co $ sound_c
+
+nn sound_public_funcs
+ln Public functions in sound.c
+co $ sound_c
+
+nn tic_api_music
+ln tic_api_music()
+fr $ 498 506
+co $ sound_public_funcs
+
+nn tic_api_sfx
+ln tic_api_sfx
+fr $ 508 512
+co $ sound_public_funcs
+
+nn tic_core_synth_sound
+fr $ 542 561
+ln tic_core_synth_sound()
+co $ sound_public_funcs
+
+
+nn tic_core_sound_tick_start
+fr $ 563 581
+ln tic_core_sound_tick_start()
+co $ sound_public_funcs
+
+nn tic_core_sound_tick_end
+fr $ 583 598
+ln tic_core_sound_tick_end()
+co $ sound_public_funcs
+
+
+nn blip_read_samples
+ln calls to blip_read_samples()
+co $ tic_core_synth_sound()
+fr $ 551 552
+rm These are calls from a third-party library called blip-buf
+rm Looking at the README for it, this seems to handle audio
+rm re-sampling.
+
+nn blip_set_rates
+ln blip_set_rates: used to set "clock" and regular samplerates
+rm it's set somewhere outside of this file
+co $ blip_read_samples
+cr I believe this is how the rates are being set
+
+
+nn tick_funcs
+ln A tick is a unit of time where things happen.
+ln It includes sound events and input events,
+ln among other things.
+
+co tic_core_sound_tick_end tick_funcs
+co tic_core_sound_tick_start tick_funcs
+
+nn tic_c
+ln tic.c
+fr codestudy/tic80/tic.c 0
+
+nn tic80_sound
+ln tic80_sound()
+fr $ 127 131
+co tic_core_synth_sound $
+co $ tic_c
+
+nn studio_c
+ln studio.c
+fr codestudy/tic80/studio.c 0
+
+nn studio_sound
+ln studio_sound()
+co $ studio_c
+fr $ 2446 2459
+rm This seems to be called by sokol, so this might
+rm be the way sound is rendered in TIC80?
+
+sn tic80_sound
+rm this seems to be a top-level sound function.
+co studio_sound $
+cr tic80_sound is also used in sokol API calls.

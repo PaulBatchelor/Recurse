@@ -1,0 +1,6 @@
+ns codestudy/tic80
+gr studying the codestudy codebase.
+
+nn sound_c
+ln sound.c: sound engine code.
+fr codestudy/sound.c 0

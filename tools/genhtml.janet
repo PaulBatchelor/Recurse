@@ -464,10 +464,13 @@
            "ORDER by linum ;")))
   query)
 
+# (defn escape-line [txt]
+#   (if (= (length txt) 0) "<br>"
+#     (string/replace-all " " "&nbsp;" (escape-html-tags txt))))
 (defn escape-line [txt]
   (if (= (length txt) 0) "<br>"
-    (string/replace-all " " "&nbsp;" (escape-html-tags txt)))
-  )
+    (string/replace-all " " "&nbsp;" (escape-html-tags txt))))
+
 (defn print-textline [line]
   (print "<div>")
   (print (escape-line (line "data")))
@@ -507,5 +510,4 @@
   (print "</div>")
   (print "</div></div>")
   (print "</body>")
-  (print "</html>")
-  )
+  (print "</html>"))

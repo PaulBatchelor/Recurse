@@ -107,3 +107,41 @@ with this thing.
 The inputs will be the 10 keys on my numberpad, and
 the XYZ inputs from the drawing pad. Realtime audio,
 etc.
+
+@14:07 Examining TIC-80 codebase for audio #investigate-tic80-audio #timelog:00:21:25
+The idea is to find the files, then add them to codestudy.
+---
+I think I found the music. One file =sound.c=, almost 600
+lines. Not too bad, actually.
+---
+Adding to codestudy.
+---
+why didn't sound.c import?
+---
+oh it did, but the CSS broke. why did it break? Gotta
+look into this. again.
+
+@14:28 gotta see why CSS for this broke. #investigate-css-codestudy #timelog:00:44:46
+Confirmed broken on my website as well.
+---
+git blame says CSS has been unchanged since it
+was initially added.
+---
+demos CSS still works fine.
+---
+Huh. so the file works on a smaller portion of sound.c.
+---
+Looks like an overflow bug.
+
+@15:15 Overflow error confirmed. Deeper investigation. #investigate-css-codestudy #timelog:00:07:30
+The issue is, I don't know how this CSS works. It
+was just lifted from SourceHut.
+---
+It seems to be a flexbox attribute. I changed =flex-wrap=
+to be =nowrap= and the problem went away.
+
+@15:23 Back to tic80 #investigate-tic80-audio #timelog:00:49:55
+
+
+@15:42 What things call these functions? #investigate-tic80-audio
+I want to see an audio callback.

@@ -22,3 +22,7 @@ import_code codestudy/hello_ts_react hello_ts_react/App.css
 import_code codestudy/hello_ts_react hello_ts_react/App.test.tsx
 import_code codestudy/hello_ts_react hello_ts_react/App.tsx
 import_code codestudy/hello_ts_react hello_ts_react/index.tsx
+
+import_code codestudy/tic80 tic80/sound.c
+import_code codestudy/tic80 tic80/tic.c
+import_code codestudy/tic80 tic80/studio.c

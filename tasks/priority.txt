@@ -23,3 +23,5 @@ become familiar with some frontend technologies.
 @consider-drawing-tablet consider getting a drawing tablet?
 
 @investigate-tic80-audio investigate tic80 audio
+
+@investigate-css-codestudy why is codestudy broken?
