@@ -18,6 +18,5 @@ become familiar with some frontend technologies.
 
 @dagzet-rust Port dagzet to rust
 
-@how-big-are-react-apps Investigate: How big are react apps?
-
 @consider-poke-follow-up Consider poke follow-up?
+

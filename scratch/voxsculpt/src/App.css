@@ -8,6 +8,10 @@
   flex-direction: column;
 }
 
+.range-slider {
+    width: 80%;
+}
+
 .slider {
     display: flex;
     flex-direction: row;

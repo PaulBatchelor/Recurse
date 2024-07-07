@@ -1,6 +1,74 @@
 import React from 'react';
 import './App.css';
 
+interface SingerSynthParams {
+    pitch: number;
+    regions: number[];
+    aspiration: number;
+    noise_floor: number;
+    shape: number;
+    velum: number;
+    length: number;
+}
+
+class SingerWorkletNode extends AudioWorkletNode {
+    data: SingerSynthParams;
+
+    constructor(context: BaseAudioContext,
+        name: string, options: Object) {
+        super(context, name, options);
+        this.data = {
+            pitch: 63.0,
+            regions: new Array<number>(8),
+            aspiration: 0.01,
+            noise_floor: 0.01,
+            shape: 0.4,
+            velum: 0.0,
+            length: 14.0,
+        };
+    }
+
+    set_pitch(pitch: number) {
+        this.data.pitch = pitch;
+        this.port.postMessage({ type: "pitch", data: pitch });
+    }
+
+    set_region(region: number, value: number) {
+        this.data.regions[region - 1] = value;
+        this.port.postMessage({
+            type: "regset",
+            region: region,
+            value: value,
+        });
+    }
+
+    set_aspiration(aspiration: number) {
+        this.data.aspiration = aspiration;
+        this.port.postMessage({ type: "aspiration", data: aspiration });
+    }
+
+    set_noise_floor(noise_floor: number) {
+        this.data.noise_floor = noise_floor;
+        this.port.postMessage({ type: "noise_floor", data: noise_floor });
+    }
+
+    set_shape(shape: number) {
+        this.data.shape = shape;
+        this.port.postMessage({ type: "shape", data: shape });
+    }
+
+    set_velum(velum: number) {
+        this.data.velum = velum;
+        this.port.postMessage({ type: "velum", data: velum });
+    }
+
+    set_length(length: number) {
+        this.data.length = length;
+        this.port.postMessage({ type: "length", data: length });
+    }
+
+}
+
 interface SliderProps {
     name: string;
     minRange: number;
@@ -102,6 +170,7 @@ function Slider({ minRange, maxRange, stepSize, label, defaultValue }: SliderPro
             <div className="slider">
                 <div className="slider-label">{label}</div>
                 <div className="slider-slider"><input
+                    className="range-slider"
                     type="range"
                     value={param}
                     onChange={handleChange}
