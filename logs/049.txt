@@ -155,7 +155,7 @@ more, but I believe I know where I can
 inject custom DSP. At that point, I'll be
 ready to make a follow-up task.
 
-@17:08 Adding project details to resume #resume-setup
+@17:08 Adding project details to resume #resume-setup #timelog:00:30:32
 
 @17:41 Project links maybe? #resume-setup
 This is looking pretty good though.
