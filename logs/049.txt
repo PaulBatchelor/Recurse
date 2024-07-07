@@ -68,3 +68,42 @@ want to hack stuff.
 @09:56 Publish!
 
 @10:00 taking a walk, thinking about tablets and interfaces and other such things #consider-drawing-tablet
+
+@11:01 Tablet and mousepad purchased. #consider-drawing-tablet
+During my walk, I realized this was a perfect device
+for exploring vocal synthesis control. A sort of gold
+standard I could use to try out interface concepts before
+porting to the web.
+---
+I'm starting to see building instruments for the web as
+"redux", as far as solo interactive musical
+experiences go. It's incredibly convenient, but
+ultimately the medium of the browser is still lackluster,
+and usually there are tradeoffs.
+---
+Future thinking: collaboration and share-ability are the
+big strengths of the web. Something I haven't really
+explored yet. Maybe that's something to think about?
+
+@11:10 Concerto: Vocal ensemble control is still first-person experiences #concept-concerto
+I want to move forward with an ensemble demo, but
+coming up with the interface has been a blocker for me.
+I don't want to blindly recreate Blob Opera or Choir.
+It's been hard to see past that. How do you meaningfully
+control multiple voices?
+---
+Then I realized, it was never about controlling
+multiple voices in Blob Opera or Choir. You were
+always controlling one voice at a time, and
+the rest would follow. A leader-follower, or
+soloist-orchestra relationship. Such a thing
+I will call a "concerto" format.
+
+@11:17 drawing tablet demo needs to be realized now #drawing-tablet-demo
+The initial proof-of-concept should ideally be flexible
+and modular. I'll want to prototype a few instruments
+with this thing.
+
+The inputs will be the 10 keys on my numberpad, and
+the XYZ inputs from the drawing pad. Realtime audio,
+etc.

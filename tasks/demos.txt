@@ -1,3 +1,7 @@
 @demo-ensemble "singing faces ensemble" demo
 
 @bucket-storyboard Storyboard the gameplay of "A Blob Named Bucket"
+
+@concept-concerto Flesh out "concerto" concept
+
+@drawing-tablet-demo work out initial drawing tablet demo
