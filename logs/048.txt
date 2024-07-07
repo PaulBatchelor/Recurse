@@ -1,4 +1,4 @@
-@2024-07-06 Day 48.
+@2024-07-06 Day 48. Setting up NeoVim with Kickstart
 34 days left of batch.
 ---
 Prev:
@@ -127,4 +127,4 @@ size of "build" directory.
 ---
 By comparison, my vanilla JS project was only 12kb.
 
-@19:44 Initial importing of webaudio junk #demo-react-UI #timelog:00:32:39
+@19:44 Initial importing of webaudio stuff #demo-react-UI #timelog:00:32:39

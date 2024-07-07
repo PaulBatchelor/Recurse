@@ -96,7 +96,9 @@ generator, triggergate, metro.
 
 @!(ref "logs" "logs" "2024_07_05")!@
 
-Haiku TBD.
+poking propulsion /
+prototype published. ponder: /
+participants pleased?
 
 Some more tweaks to Poke: mouth, eyes, and tuning the
 chattering in the sound.

@@ -1,0 +1,70 @@
+@2024-07-07 Day 49.
+33 days left of batch.
+---
+prev:
+
+kickstart neovim /
+slider groups typescript react /
+rust-analyzer
+
+---
+next:
+
+|| @!(taskref "resume-setup")!@: Add data points
+for projects.
+
+|| @!(taskref "consider-drawing-tablet")!@: potentially
+buy a small drawing tablet to play with.
+
+|| @!(taskref "investigate-tic80-audio")!@: look into
+tic80 audio code and music player.
+
+---
+Right arm is a little sore today, probably
+from typing too much yesterday. Going to lay off
+a little bit today.
+
+@09:21 Morning Triage
+
+@09:40 Data for projects, then done? #resume-setup
+
+@09:41 Impulsive idea to buy a drawing tablet today #consider-drawing-tablet
+I've been on and off about this for a few days.
+I think it could be a good interface to try
+and tune vocal synth parameters. But, I should make a
+decision by end of day.
+---
+Thinking about using this with my number pad, somehow.
+I like the minimalism of the numpad, and consider
+it an interesting interface challenge for the
+task of musical sequencing. The tablet
+could be a good way to get continuous fine tuned
+gestural control.
+---
+Performance interface too?
+
+@09:48 want to examine audio code and capabilities in tic80 today #investigate-tic80-audio
+How hackable is it? Is it feasible to shove my rust
+DSP code into the TIC80, audio callback, and control
+it from tic80 code?
+---
+I think this could be a fruitful way to build an
+ecosystem of toys that match my current aesthetic.
+I have semi-long term plans for this potentially.
+---
+I say "semi-potentially" because for its constraints,
+the software has quite a complex software stack. I
+don't expect this to be the most portable thing
+in the world. The most portable things are ideas,
+and after that, bytes of data (8 bits to a byte
+is fairly universal). There is a cartridge format,
+which may end up being a promising data format
+for portability, but we'll see.
+---
+Short term (as in this batch),
+portability or longevity is not a concern. I just
+want to hack stuff.
+
+@09:56 Publish!
+
+@10:00 taking a walk, thinking about tablets and interfaces and other such things #consider-drawing-tablet
