@@ -22,3 +22,5 @@ become familiar with some frontend technologies.
 
 @LC75 Leetcode 75
 Link: [[https://leetcode.com/studyplan/leetcode-75/]].
+
+@drawing-tablet-experiments drawing tablet experiments
