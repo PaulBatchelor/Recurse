@@ -1,3 +1,20 @@
+#!/bin/sh
+
+abort()
+{
+    echo >&2 '
+***************
+*** ABORTED ***
+***************
+'
+    echo "An error occurred. Exiting..." >&2
+    exit 1
+}
+
+trap 'abort' 0
+
+set -eo pipefail
+
 sqlite3 a.db <<EOF
     DROP TABLE IF EXISTS dz_nodes;
     DROP TABLE IF EXISTS dz_connections;
@@ -19,20 +36,31 @@ EOF
 LUA="mnolth lua"
 GRAPH_DATA_DIR="dagzet/graph"
 DAGZET_LUA="tools/dagzet.lua"
-function add_to_dagzet() {
+
+
+function dagzet()
+{
     DZFILE=$1
-    if [ -f $DZFILE ]
-    then
-        echo $DZFILE
-        $LUA $DAGZET_LUA $DZFILE | sqlite3 a.db
-    else
-        echo "Warning: $DZFILE does not exist"
-    fi
+    $LUA $DAGZET_LUA $DZFILE 
 
     if [[ ! $? -eq 0 ]]
     then
         exit 1
     fi
+}
+
+function add_to_dagzet() {
+    DZFILE=$1
+    if [ -f $DZFILE ]
+    then
+        # echo $DZFILE
+        # $LUA $DAGZET_LUA $DZFILE #| sqlite3 a.db
+        echo $DZFILE
+         dagzet $DZFILE | sqlite3 a.db
+    else
+        echo "Warning: $DZFILE does not exist"
+    fi
+
 }
 
 function import_code() {
@@ -47,3 +75,5 @@ while read -r line
 do
     add_to_dagzet $line
 done < knowledge/dzfiles.txt
+
+trap : 0

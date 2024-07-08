@@ -1,6 +1,6 @@
 #+TITLE: Week 8
 * Saturday, July 6th
-@!(ref "logs" "logs" "2024_07_05")!@
+@!(ref "logs" "logs" "2024_07_06")!@
 
 kickstart neovim /
 slider groups typescript react /
@@ -13,6 +13,7 @@ Got a neovim setup working with kickstart,
 language server works for both Rust (rust-analyzer) and
 Typescript (typescript-nvim). Learned a little bit
 about installing plugins with neovim.
+
 ** React + Typescript: UI progress and porting webaudio bits
 tasks: @!(taskref "demo-react-UI")!@, @!(taskref "how-big-are-react-apps"!@.
 
@@ -29,6 +30,7 @@ Also, learned how to export npm projects to minified
 JS. The total size of this app so far is 600kb, compared
 to the 12kb for my vanilla JS demo. A little bit yikes,
 but not unexpected. It is what it is.
+
 ** TeX backend for resume generator
 I've been yak-shaving my resume by building a
 new resume generator (as is tradition). I had
@@ -37,3 +39,14 @@ TeX, not LaTeX, because reasons), and used that
 to build a TeX backend. Now my resume has a markdown
 and TeX, and the markdown can be converted to HTML
 via pandoc.
+
+* Saturday, July 7th
+@!(ref "logs" "logs" "2024_07_07")!@
+
+TIC-80 Sound Code /
+Drawing tablets for music? /
+Planning next demo.
+
+Bought a mini drawing tablet to use as a musical
+interface, codestudy CSS debugging, studied audio
+code in TIC80, project details to my resume.

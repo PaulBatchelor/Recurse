@@ -1,8 +1,23 @@
 # (re)-generate data and wiki pages
 ./tools/gen.sh
 
+if [[ ! $? -eq 0 ]]
+then
+    exit 1
+fi
+
 # export HTML
 ./tools/export.sh
 
+if [[ ! $? -eq 0 ]]
+then
+    exit 1
+fi
+
 # transfer to live site and upload
 ./tools/upload.sh
+
+if [[ ! $? -eq 0 ]]
+then
+    exit 1
+fi

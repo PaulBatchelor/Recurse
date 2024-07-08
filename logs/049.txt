@@ -1,4 +1,4 @@
-@2024-07-07 Day 49.
+@2024-07-07 Day 49. Mini drawing tablets, TIC-80 audio code
 33 days left of batch.
 ---
 prev:
@@ -159,3 +159,5 @@ ready to make a follow-up task.
 
 @17:41 Project links maybe? #resume-setup
 This is looking pretty good though.
+
+@19:21 React: passing state deeply with context. #react-managing-state #timelog:00:31:46

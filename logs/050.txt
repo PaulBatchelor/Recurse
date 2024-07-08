@@ -1,0 +1,60 @@
+@2024-07-07 Day 48.
+32 days left of batch.
+---
+prev:
+
+TIC-80 Sound Code /
+Drawing tablets for music? /
+Planning next demo.
+
+---
+
+next:
+
+|| @!(taskref "LC75")!@: Begin leetcode today I guess?
+
+|| @!(taskref "investigate-tic80-audio")!@: Get
+a better sense how the audio callback works, then
+create follow-ups.
+
+|| @!(taskref "demo-react-UI")!@: continue getting
+WebAudio code ported to typescript.
+
+|| @!(taskref "resume-setup")!@: Finishing touches
+I swear.
+
+|| @!(taskref "consider-poke-follow-up")!@: Create
+some feasible tasks today.
+
+---
+Ears have been quite blocked this weekend. Still
+blocked today.
+
+@08:03 Morning triage
+
+@08:15 Leetcode task created. #LC75
+
+@08:17 Try to get project links working today #resume-setup
+Timebox it to about 30 minutes. Give it one last
+look, then send it to Jobs Chat.
+
+@08:18 Downgrading shape morphing #voxbox-shape-morphing
+The approach here isn't interactive enough, and I
+think I need to keep focusing on interaction. I'd
+rather have one mediocre vowel shape and interaction
+than several excellent vowel shapes and no interaction.
+
+@08:27 GOing to try to make some follow-up poke tasks today  #consider-poke-follow-up
+
+@08:29 Been thinking a lot about the mechanics of this over the last few days #concept-concerto
+Things involving Gesture mechanics. Specifically,
+the concept of getting some kind of "auto-accompaniment"
+to work with Gesture signal generator systems. Something
+something event scheduler. Might be good to write some
+things down.
+
+@08:32 Writing better error handling for gendb
+
+@09:01 Phew. Okay. Now, we can publish.
+
+@09:10 TIC-80 investigations part 2. #investigate-tic80-audio

@@ -15,3 +15,5 @@ an "ah"), then crossfade to another
 @demo-tongue-control "tongue control" demo
 
 @vocal-chords-older-iphone Get vocal chords working on older iphone
+
+@voxbox-shape-morphing add shape morphing with linear gesture

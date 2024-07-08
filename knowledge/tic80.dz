@@ -62,7 +62,7 @@ co $ sound_public_funcs
 
 nn blip_read_samples
 ln calls to blip_read_samples()
-co $ tic_core_synth_sound()
+co $ tic_core_synth_sound
 fr $ 551 552
 rm These are calls from a third-party library called blip-buf
 rm Looking at the README for it, this seems to handle audio
