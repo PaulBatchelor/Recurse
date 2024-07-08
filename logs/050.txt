@@ -57,4 +57,56 @@ things down.
 
 @09:01 Phew. Okay. Now, we can publish.
 
-@09:10 TIC-80 investigations part 2. #investigate-tic80-audio
+@09:10 TIC-80 investigations part 2. #investigate-tic80-audio #timelog:01:017:34
+@09:19 8-bit audio. #investigate-tic80-audio
+I shouldn't be terribly surprised by this, but the
+output is 8-bit.
+
+@09:24 8khz 8-bit singing vocals don't sound too terrible
+Tested on my linear gesture demo using SoX.
+The darker sound actually works favorably for this
+synthesizer.
+---
+Converting to LPC10 (via sox), however, sucks.
+The pitch is wrong.
+
+@09:48 second-guessing myself on the 8-bit depth #investigate-tic80-audio
+It could be that that's just a raw byte format.
+The sound code here is fairly involved. I'm
+going to need to look at this more.
+
+
+@09:50 Unclear what is a buffer and what is a tick #investigate-tic80-audio
+It is unclear to me when things are computing a single
+sample of audio (tick), and when it's writing to
+a buffer.
+---
+For example, SOKOL seems to be writing shorts (16-bit).
+---
+What I do know is that samples eventually show up in
+something called "product->samples.buffer", but
+I cannot find that definition yet (there's a lot
+of macro magic in this repo). There is also a buffer
+count too. It appears that these could be interleaved
+samples.
+
+@10:20 So much is implicitly defined #investigate-tic80-audio
+As far as I can tell, =product.samples= is dynamically
+generated. It's not actually anywhere in a struct.
+The =tic80= stuct I have yet to actually find.
+Same goes for =product.samples.buffer= and
+=product.samples.count=. 
+---
+There are two top audio callbacks that tell tic80 to
+generate soud (how much sound not sure? but it's
+definitely multi-channel). I'm looking at
+the one sokol uses called =studio_sound=. This
+calls =tic_core_synth_sound()=, which I assume
+writes to =product.samples.buffer= somehow.
+If I can inject an effects processor right after
+the buffer is fully written, I think that can be
+enough for me.
+
+@10:30 =runPcm()= and =stereo_synthesize()= are things to look at #investigate-tic80-audio
+These calls seem to happen right before they
+are resampled.
