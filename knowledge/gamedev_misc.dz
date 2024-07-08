@@ -1,0 +1,18 @@
+ns gamedev/misc
+
+nn meg4
+hl https://www.galaxykate.com/pdfs/katecompton-casualcreators-advancement-slides.pdf
+ln meg4
+rm Chirag mentioned this. Uses Sokol.
+
+nn spacebox
+hl https://open.shampoo.ooo/shampoo/spacebox
+ln spacebox: game engine
+rm Chirag mentioned this. Doesn't use Sokol, but does have web target.
+
+nn casual_creators
+hl https://www.galaxykate.com/pdfs/katecompton-casualcreators-advancement-slides.pdf
+ln Casual Creators
+rm Chirag mentioned this when I was talking about "toys" and "toy mind"
+
+
