@@ -137,3 +137,8 @@ The X axis is about 2541.1764. Huh.
 
 @15:49 After some googling and JQ-ing, got both pen and finger disabled #timelog:01:09:42
 They still work in my test poller.
+
+@15:59 Quick attempt at project links #resume-setup #timelog:00:20:06
+I think I already have URL code in the TeX code?
+---
+oops maybe not

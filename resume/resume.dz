@@ -12,17 +12,18 @@ ln Boomy, Music Automation Engineer (July 2022 - January 2023)
 co $ experience
 
 nn python_test_coverage
-ln Refactored Python codebases, which improved all test
-ln coverage and made it easier to spot regression bugs.
+ln Refactored Python codebases, improved test
+ln coverage, yielding easier to spot regression bugs.
 co $ boomy
 
 nn benchmarking
 ln Created benchmarking and profiling utilities to improve
-ln overall throughput performance in rendering.
+ln overall throughput performance in audio rendering.
 co $ boomy
 
 nn prototyping_DSP
-ln Built out DSP prototypes for internal sound engine
+ln Built out musical instrument DSP prototypes for internal
+ln sound engine
 co $ boomy
 
 sn boomy
@@ -74,8 +75,8 @@ co $ experience
 
 nn prototypes_music_eyetracking
 ln Designed prototypes of novel interactive music making
-ln software using
-ln eye-tracking for musicians with ALS
+ln tools utilizing
+ln eye-tracking hardware for musicians with ALS
 co $ microsoft
 
 nn published_open_source
@@ -118,13 +119,14 @@ co $ projects
 nn voxbox
 ln VoxBox
 co $ projects
+hl https://github.com/PaulBatchelor/VoxBox
 
 nn singing_dsp_rust
 ln Articulatory Singing Synthesizer DSP library implemented in Rust
 co $ voxbox
 
 nn webaudio_demos
-ln Compiled to WebAssebly (WASM) for webaudio demos
+ln Compiled to WebAssebly (WASM) for Web Audio demos
 co $ voxbox
 
 sn voxbox
@@ -132,6 +134,7 @@ ol singing_dsp_rust webaudio_demos
 
 nn sndkit
 ln SndKit
+hl https://pbat.ch/sndkit
 
 nn literate_programming_dsp
 ln Audio DSP library built using literate programming
@@ -181,6 +184,7 @@ ol musical_game procedurally_generated_sounds orb_languages_tools
 
 nn handsfreemusic
 ln Microsoft HandsFree Sound Jam (aka EyeJam)
+hl https://pbat.ch/proj/eyejam
 
 nn musicmaking_tool_als
 ln Music-Making software for musicians with ALS, built with
@@ -196,7 +200,7 @@ ln Custom UI and sound engine designed gaze-based interfaces
 co $ handsfreemusic
 
 nn handsfreemusic_tools
-ln Tools and Software: Tobii SDK, mingw64, C/C++, OpenGL
+ln Tools and Software: Tobii SDK, mingw64, C/C++, OpenGL, RtAudio
 co $ handsfreemusic
 
 sn handsfreemusic
