@@ -1,9 +1,6 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@react-managing-state read React: managing state
-link [[https://react.dev/learn/managing-state]].
-
 @add-day-titles add day titles to logs (retro-actively)
 
 @resume-setup re-examine resume #career
@@ -18,9 +15,18 @@ become familiar with some frontend technologies.
 
 @consider-poke-follow-up Consider poke follow-up?
 
-@investigate-tic80-audio investigate tic80 audio
-
 @LC75 Leetcode 75
 Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 
 @drawing-tablet-experiments drawing tablet experiments
+
+@react-escape-hatches read React: escape hatches
+link [[https://react.dev/learn/escape-hatches]].
+
+@concept-concerto Flesh out "concerto" concept
+
+@drawing-tablet-demo work out initial drawing tablet demo
+
+@tic80-sine-tone Inject a sine tone into tic80 audio pipeline
+
+@poke-sound-warning Add sound warning

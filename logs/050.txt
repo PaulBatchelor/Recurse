@@ -1,4 +1,4 @@
-@2024-07-07 Day 48.
+@2024-07-08 Day 50. Week 8. More TIC80  code exploration, unexpected Wacom Tablet, staggered voice algorithm
 32 days left of batch.
 ---
 prev:
@@ -142,3 +142,8 @@ They still work in my test poller.
 I think I already have URL code in the TeX code?
 ---
 oops maybe not
+
+@16:27 React Reading: Scaling up with Reducer and Context #react-managing-state #timelog:00:20:48
+This concludes the "managing state" chapter.
+
+@18:42 Some "staggered voice" system design planning #concept-concerto #timelog:00:32:48

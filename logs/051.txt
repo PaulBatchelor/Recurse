@@ -1,0 +1,104 @@
+@2024-07-09 Day 51.
+31 days left of batch.
+---
+prev:
+
+tic80: buffers? /
+staggered voice algorithm, /
+wacom tablet fun
+
+---
+Next:
+
+|| @!(taskref "drawing-tablet-experiments")!@: Build
+a proof of concept voice-theremin, precursor to interface
+work for @!(taskref "drawing-tablet-demo")!@ mechanics.
+
+|| @!(taskref "demo-react-UI")!@ WebAudio work.
+
+|| @!(taskref "LC75")!@: make PDF versions so I can
+read on RM tablet.
+
+|| @!(taskref "consider-poke-follow-up")!@: please
+write some tasks. I think I want to push myself to
+iterate.
+
+@07:51 Morning Triage.
+
+@08:02 Escape hatches next on the React reading list #react-escape-hatches
+
+@08:16 have this work for wacom and xp-pen #drawing-tablet-demo
+I have access to a Wacom tablet now, and I kind of
+love the size of it.
+
+@08:19 Didn't get to this yesterday, today hopefully #demo-react-UI
+
+@08:19 Initial investigation completed, now onto initial challenge: sine tone test. #investigate-tic80-audio #tic80-sine-tone
+I think I know about enough to get started on hacking
+in a sine tone into the TIC-80 sound codebase.
+---
+A sine tone is ideal because it's a pitched pure tone,
+and it can be easy to tell if I'm getting the buffering
+and sample rate correct. If I can get a sine.
+
+@08:22 Drawing tablet experiment vs demo #drawing-tablet-demo #drawing-tablet-experiments
+There is a bit of overlap here. I want the end of the
+"drawing tablet experiments" to have sound, and the
+"drawing tablet demo" to build up from that initial demo,
+tuning the sound better, and adding an abstraction
+that will make it easy to go between tablets.
+
+@08:24 Did not get to this yesterday. #LC75
+In the true yak-shaving tradition, I want to build
+a quick webscraper that takes all the links in
+the LC75 page and then prints them to PDF.
+From there, I can view them on my remarkable, so
+I can be a way from my computer and study them with
+pen and paper.
+
+@08:27 Write some tasks today please. #consider-poke-follow-up
+I think it would be good for me to iterate on this.
+I'm getting great feedback.
+
+@08:28 Pokey fella needs to laugh #consider-poke-follow-up
+
+@08:30 There needs to be a sound warning #consider-poke-follow-up #poke-sound-warning
+Someone yesterday got very surprised by the sound and
+immediately closed the browser. Oops.
+
+@08:39 Publish
+
+@09:00 Some experiments with the wacom. #drawing-tablet-experiments #timelog:00:36:51
+
+@09:01 What model is this Wacom Tablet? #drawing-tablet-experiments
+Wacom Intuos PT M 2, according to dmesg. Researching.
+---
+More specifically: CTH-690 [Intuos Art (M)]
+(using product/vendor ID lookup).
+---
+Super cheap to buy on ebay.
+
+@09:25 I have to learn about the finger tracking information here #drawing-tablet-experiments
+Is it multi-touch?
+
+@09:39 ABS_MT_SLOT keeps track of multi-touch points I think. #drawing-tablet-experiments
+I'm counting 10 points multitouch.
+---
+X axis resolution: ~2143 (2150?), Y axis resolution: ~1333
+
+@09:49 Time to make some noise. #drawing-tablet-experiments
+
+@09:54 gotta build libsoundio on this device to get jack backend #drawing-tablet-experiments
+
+@09:57 voxboxOSC builds and runs. now to extract the relevant bits. #drawing-tablet-experiments
+No need for the OSC bits, but the sound and DSP are a good
+start.
+
+@10:13 time to get the code tablet hooked up #drawing-tablet-experiments
+udev permissions are in order.
+
+@10:33 Only set pitch when pen is down. #drawing-tablet-experiments
+
+@10:47 It works. Gotta place with this thing now. #drawing-tablet-experiments
+
+@10:54 Adding files and committing. #drawing-tablet-experiments
