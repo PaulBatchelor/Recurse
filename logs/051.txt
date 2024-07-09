@@ -102,3 +102,5 @@ udev permissions are in order.
 @10:47 It works. Gotta place with this thing now. #drawing-tablet-experiments
 
 @10:54 Adding files and committing. #drawing-tablet-experiments
+
+@11:40 Experimenting with tablets again
