@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+let SingerNode: SingerWorkletNode;
+const audioContext = new AudioContext();
 
 interface SingerSynthParams {
     pitch: number;
@@ -69,6 +71,28 @@ class SingerWorkletNode extends AudioWorkletNode {
 
 }
 
+const startAudio = async (context: AudioContext) => {
+    try {
+        await context.audioWorklet.addModule('singer.js');
+    } catch (e: any) {
+        throw new Error(`noise generator error: ${e.message}`);
+    }
+
+    const wasmFile = await fetch('dsp.wasm');
+    const wasmBuffer = await wasmFile.arrayBuffer();
+
+    const options = {
+        wasmBytes: wasmBuffer
+    };
+    const Singer = new
+        SingerWorkletNode(context, 'singer', {
+            processorOptions: options
+        });
+
+    Singer.connect(context.destination);
+    SingerNode = Singer;
+};
+
 interface SliderProps {
     name: string;
     minRange: number;
@@ -76,6 +100,7 @@ interface SliderProps {
     stepSize: number;
     defaultValue: number;
     label: string;
+    onParamChange: (val: number) => void;
 }
 
 interface SliderGroupProps {
@@ -83,7 +108,9 @@ interface SliderGroupProps {
     sliders: SliderProps[];
 }
 
-const glottis_parameters = [
+function dummyParam(val: number) { }
+
+const glottis_parameters: SliderProps[] = [
     {
         name: "freq",
         label: "Frequency",
@@ -91,6 +118,9 @@ const glottis_parameters = [
         maxRange: 86.0,
         defaultValue: 65.0,
         stepSize: 1,
+        onParamChange: (val) => {
+            SingerNode.set_pitch(val);
+        },
     },
     {
         name: "aspiration",
@@ -99,6 +129,9 @@ const glottis_parameters = [
         maxRange: 1.0,
         defaultValue: 0.03,
         stepSize: 0.001,
+        onParamChange: (val) => {
+            SingerNode.set_aspiration(val);
+        },
     },
     {
         name: "noise_floor",
@@ -107,6 +140,9 @@ const glottis_parameters = [
         maxRange: 1.0,
         defaultValue: 0.01,
         stepSize: 0.001,
+        onParamChange: (val) => {
+            SingerNode.set_noise_floor(val);
+        },
     },
     {
         name: "shape",
@@ -115,6 +151,9 @@ const glottis_parameters = [
         maxRange: 0.9,
         defaultValue: 0.4,
         stepSize: 0.001,
+        onParamChange: (val) => {
+            SingerNode.set_shape(val);
+        },
     },
     {
         name: "velum",
@@ -123,10 +162,13 @@ const glottis_parameters = [
         maxRange: 4.0,
         defaultValue: 0.0,
         stepSize: 0.001,
+        onParamChange: (val) => {
+            SingerNode.set_velum(val);
+        },
     },
 ];
 
-const tract_parameters = [
+const tract_parameters: SliderProps[] = [
     {
         name: "length",
         label: "Tract Length",
@@ -134,11 +176,14 @@ const tract_parameters = [
         maxRange: 30.0,
         defaultValue: 14.0,
         stepSize: 0.1,
+        onParamChange: (val) => {
+            SingerNode.set_length(val);
+        },
     },
 ];
 
-function generateRegionParams() {
-    let p = []
+function generateRegionParams(): SliderProps[] {
+    let p: SliderProps[] = [];
 
 
     for (let i = 1; i <= 8; i++) {
@@ -149,6 +194,9 @@ function generateRegionParams() {
             maxRange: 4.0,
             defaultValue: 0.5,
             stepSize: 0.001,
+            onParamChange: (val) => {
+                SingerNode.set_region(i, val);
+            },
         });
     }
 
@@ -158,11 +206,13 @@ function generateRegionParams() {
 
 const tract_region_params = generateRegionParams();
 
-function Slider({ minRange, maxRange, stepSize, label, defaultValue }: SliderProps) {
+function Slider({ onParamChange, minRange, maxRange, stepSize, label, defaultValue }: SliderProps) {
     const [param, setParam] = React.useState(defaultValue);
 
     function handleChange(e: React.FormEvent<HTMLInputElement>) {
-        setParam(parseFloat(e.currentTarget.value));
+        let pitch = parseFloat(e.currentTarget.value);
+        setParam(pitch);
+        onParamChange(pitch);
     }
 
     return (
@@ -190,7 +240,7 @@ function SliderGroup({ label, sliders }: SliderGroupProps) {
     var slidersJSX: React.JSX.Element[] = [];
 
     slidersJSX.push(
-        <h2>{label}</h2>
+        <h2 key="header">{label}</h2>
     );
 
     sliders.forEach((param) => {
@@ -203,6 +253,7 @@ function SliderGroup({ label, sliders }: SliderGroupProps) {
                 stepSize={param.stepSize}
                 label={param.label}
                 defaultValue={param.defaultValue}
+                onParamChange={param.onParamChange}
             />
         );
     })
@@ -214,9 +265,36 @@ function SliderGroup({ label, sliders }: SliderGroupProps) {
     );
 }
 
+function StartAudioButton() {
+    const [audioStarted, setAudioStarted] = React.useState(false);
+    const [audioPaused, setAudioPaused] = React.useState(false);
+    const [buttonText, setButtonText] = React.useState("Start");
+
+    return <button onClick={async () => {
+        if (audioStarted === false) {
+            setAudioStarted(true);
+            await startAudio(audioContext);
+            audioContext.resume();
+            setButtonText("Playing...");
+            setAudioPaused(true);
+        } else {
+            if (audioPaused) {
+                setButtonText("Playing");
+                audioContext.resume();
+                setAudioPaused(false);
+            } else {
+                setButtonText("Stopped");
+                setAudioPaused(true);
+                audioContext.suspend();
+            }
+        }
+    }}>{buttonText}</button>;
+}
+
 function App() {
     return (
         <div className="App">
+            <StartAudioButton key="startaudio" />
             <SliderGroup
                 label="Glottis"
                 sliders={glottis_parameters}

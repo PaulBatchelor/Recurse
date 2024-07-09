@@ -171,3 +171,13 @@ could probably work here.
 @16:07 poke pellets: drop things to have the fella eat #consider-poke-follow-up #poke-pellets
 
 @16:08 Implement laughter and chitter sounds #consider-poke-follow-up #poke-laughter-chitter
+
+@16:18 More webaudio code porting #demo-react-UI #timelog:00:35:00
+Note to self: we're calling this voxsculpt.
+
+@16:52 Mostly works. Now the rest. #demo-react-UI
+
+@16:53 "User aborted request" #demo-react-UI
+Happens when I attempt "await startAudio" in onclick callback.
+
+@16:58 Sound is made, but sliders do not control anything.
