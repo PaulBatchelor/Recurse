@@ -236,7 +236,6 @@ function Slider({ onParamChange, minRange, maxRange, stepSize, label, defaultVal
 }
 
 function SliderGroup({ label, sliders }: SliderGroupProps) {
-
     var slidersJSX: React.JSX.Element[] = [];
 
     slidersJSX.push(
