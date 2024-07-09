@@ -1,3 +1,11 @@
 @demo-ensemble "singing faces ensemble" demo
 
 @bucket-storyboard Storyboard the gameplay of "A Blob Named Bucket"
+
+@poke-collision-sounds Add collision sounds to poke
+
+@poke-evolving-sounds Add evolving sounds to poke
+
+@poke-pellets Add the ability to have pellets
+
+@poke-laughter-chitter implement laughter and chitter

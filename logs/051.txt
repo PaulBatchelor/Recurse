@@ -104,3 +104,70 @@ udev permissions are in order.
 @10:54 Adding files and committing. #drawing-tablet-experiments
 
 @11:40 Experimenting with tablets again
+Tried to an xp-pen tablet working that Seamus had. Could not
+use evdev to parse the tablet events for whatever reason,
+but I could read the raw bytes using cat and xxd.
+
+@12:00 Audio Hang
+
+@13:00 Lunch
+
+@13:42 Now what?
+
+@13:44 Initial work on web scraper for LC75 #LC75-scraper #timelog:01:11:40
+
+@14:00 wget doesn't work, curl doesn't work, selenium hangs #LC75-scraper
+
+@14:05 trying wget again #LC75-scraper
+
+@14:13 I just copy-pasted from the view source in browser #LC75-scraper
+It had the data embedded in there from a JSON blob.
+I was able to extract it in Vim. Currently jq-ing it.
+---
+Here is my big query:
+
+===
+#+BEGIN_SRC
+jq .props.pageProps.dehydratedState.queries[0].state.data.studyPlanV2Detail.planSubGroups data_pretty.json
+#+END_SRC
+===
+
+@14:34 Picking apart LC75.json data #LC75-scraper
+It's an array of items, split up by category (of
+which there are 22 categories). Each entry is an
+object with a =questionNum= field. When you add
+all the =questionNum=s together, you get 75.
+---
+The key I want for the URL is =titleSlug=, and
+the id is =questionFrontendId= for the LC (I can
+use this to reference the problem tersely online).
+These are objects found in the "questions" objects,
+aka =.[0].questions[0]=.
+
+@14:44 Headless print on linux? #LC75-scraper
+It's not going to matter.
+
+@14:49 I have hit a security wall #LC75-scraper
+
+@14:57 Can use wayback machine with limited success #LC75-scraper
+Given a leetcode article, I can find a cached version
+on wayback machine, which I can then curl to
+an HTML file. Most of the HTML can be stripped using
+=w3m -dump=.
+
+@15:27 Does wayback machine have an API for getting cached pages? #LC75-scraper #timelog:00:15:48
+It does! There's a URL you can query and get a JSON
+response from. It does produce HTML, but, even with
+w3m it does seem to be kinda messy. Damn.
+
+@16:00 making some follow-up tasks for poke. #consider-poke-follow-up #timelog:00:07:15
+
+@16:01 Sounds events should happen when there's a collision #consider-poke-follow-up #poke-collision-sounds
+
+@16:03 successive pokes should build up energy #poke-evolving-sounds #poke-evolving-sounds
+For example, my "balloon" control signal generator
+could probably work here.
+
+@16:07 poke pellets: drop things to have the fella eat #consider-poke-follow-up #poke-pellets
+
+@16:08 Implement laughter and chitter sounds #consider-poke-follow-up #poke-laughter-chitter

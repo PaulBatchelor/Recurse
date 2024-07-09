@@ -30,3 +30,5 @@ link [[https://react.dev/learn/escape-hatches]].
 @tic80-sine-tone Inject a sine tone into tic80 audio pipeline
 
 @poke-sound-warning Add sound warning
+
+@LC75-scraper build LC-75 web scraper

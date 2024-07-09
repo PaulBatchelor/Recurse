@@ -95,3 +95,9 @@ nn typescript_handbook
 ln The (new) typescript handbook
 hl https://microsoft.github.io/TypeScript-New-Handbook/everything/
 tg typescript
+
+nn slug
+ln slug MDN
+hl https://developer.mozilla.org/en-US/docs/Glossary/Slug
+tg mdn
+rm came up while looking at keys from a LC75 data dump
