@@ -86,7 +86,7 @@ I'm counting 10 points multitouch.
 ---
 X axis resolution: ~2143 (2150?), Y axis resolution: ~1333
 
-@09:49 Time to make some noise. #drawing-tablet-experiments
+@09:49 Time to make some noise. #drawing-tablet-experiments #timelog:01:07:40
 
 @09:54 gotta build libsoundio on this device to get jack backend #drawing-tablet-experiments
 
