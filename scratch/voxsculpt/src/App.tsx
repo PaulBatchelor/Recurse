@@ -267,28 +267,24 @@ function SliderGroup({ label, sliders }: SliderGroupProps) {
 
 function StartAudioButton() {
     const [audioStarted, setAudioStarted] = React.useState(false);
-    const [audioPaused, setAudioPaused] = React.useState(false);
-    const [buttonText, setButtonText] = React.useState("Start");
+    const [audioPlaying, setAudioPlaying] = React.useState(false);
 
-    return <button onClick={async () => {
-        if (audioStarted === false) {
-            setAudioStarted(true);
+    async function handleClick() {
+        if (!audioStarted) {
             await startAudio(audioContext);
-            audioContext.resume();
-            setButtonText("Playing...");
-            setAudioPaused(true);
-        } else {
-            if (audioPaused) {
-                setButtonText("Playing");
-                audioContext.resume();
-                setAudioPaused(false);
-            } else {
-                setButtonText("Stopped");
-                setAudioPaused(true);
-                audioContext.suspend();
-            }
+            setAudioStarted(true);
         }
-    }}>{buttonText}</button>;
+
+        if (audioPlaying) {
+            setAudioPlaying(false);
+            audioContext.suspend();
+        } else {
+            setAudioPlaying(true);
+            audioContext.resume();
+        }
+    }
+
+    return <button onClick={handleClick}>{audioPlaying ? "Stop" : "Play"}</button>;
 }
 
 function App() {
