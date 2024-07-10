@@ -180,5 +180,7 @@ Note to self: we're calling this voxsculpt.
 @16:53 "User aborted request" #demo-react-UI
 Happens when I attempt "await startAudio" in onclick callback.
 
-@16:58 Sound is made, but sliders do not control anything. #timelog:01:10:44
+@16:58 Sound is made, but sliders do not control anything. #demo-react-UI #timelog:01:10:44
 Also paired with Dan to help out with things.
+
+@19:04 Troubleshooting xp-pen tablet. #drawing-tablet-experiments #timelog:00:23:34

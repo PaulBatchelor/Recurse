@@ -304,7 +304,8 @@ int main(int argc, char **argv) {
     int fd;
     int rc = 1;
 
-    const char *devpath ="/dev/input/by-id/usb-Wacom_Co._Ltd._Intuos_PTM-event-mouse";
+    //const char *devpath ="/dev/input/by-id/usb-Wacom_Co._Ltd._Intuos_PTM-event-mouse";
+    const char *devpath = "/dev/input/by-id/usb-28bd_9_inch_PenTablet_0000000000-if02-event-mouse";
     fd = open(devpath, O_RDONLY|O_NONBLOCK);
     rc = libevdev_new_from_fd(fd, &dev);
     if (rc < 0) {
@@ -348,8 +349,9 @@ int main(int argc, char **argv) {
                     float x_axis;
                     float pitch;
 
-                    x_axis = ev.value / 21600.0;
-                    pitch = 48.0 + (12.0 * 3) * x_axis;
+                    //x_axis = ev.value / 21600.0;
+                    x_axis = ev.value / 46024.0;
+                    pitch = 48.0 + (12.0 * 4) * x_axis;
 
                     vox_pitch(ad->vd, pitch);
 
