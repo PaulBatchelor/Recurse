@@ -2,6 +2,10 @@
 
 @bucket-storyboard Storyboard the gameplay of "A Blob Named Bucket"
 
-@concept-concerto Flesh out "concerto" concept
+@poke-collision-sounds Add collision sounds to poke
 
-@drawing-tablet-demo work out initial drawing tablet demo
+@poke-evolving-sounds Add evolving sounds to poke
+
+@poke-pellets Add the ability to have pellets
+
+@poke-laughter-chitter implement laughter and chitter

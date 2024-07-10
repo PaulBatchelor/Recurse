@@ -209,3 +209,8 @@ link: [[https://github.com/nvim-lua/kickstart.nvim]].
 
 @consider-drawing-tablet consider getting a drawing tablet?
 
+@react-managing-state read React: managing state
+link [[https://react.dev/learn/managing-state]].
+
+@investigate-tic80-audio investigate tic80 audio
+

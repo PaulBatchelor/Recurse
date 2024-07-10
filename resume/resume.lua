@@ -33,6 +33,21 @@ function get_node_name(db, nid)
 
 end
 
+function get_hyperlink(db, nid)
+    local stmt = db:prepare(
+        "SELECT hyperlink FROM dz_hyperlinks " ..
+        "WHERE node == '"  .. nid .. "'"
+    )
+
+    local link = nil
+
+    for row in stmt:nrows() do
+        link = row.hyperlink
+    end
+
+    return link
+end
+
 function get_node_list(db, nid)
     local lst = {}
 
@@ -137,7 +152,8 @@ function projects(fp, backend)
 
     for _, v in pairs(explst) do
         local title = get_node_lines(db, v)
-        fp:write(backend.header3(title))
+        local link = get_hyperlink(db, v)
+        fp:write(backend.header3(title, link))
         local points = get_node_list(db, v)
 
         if #points > 0 then

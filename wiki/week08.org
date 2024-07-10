@@ -15,7 +15,7 @@ Typescript (typescript-nvim). Learned a little bit
 about installing plugins with neovim.
 
 ** React + Typescript: UI progress and porting webaudio bits
-tasks: @!(taskref "demo-react-UI")!@, @!(taskref "how-big-are-react-apps"!@.
+tasks: @!(taskref "demo-react-UI")!@, @!(taskref "how-big-are-react-apps")!@.
 
 I've been trying to find excuses to learn React,
 and now with suggestions from others, I'm learinng
@@ -40,8 +40,11 @@ to build a TeX backend. Now my resume has a markdown
 and TeX, and the markdown can be converted to HTML
 via pandoc.
 
-* Saturday, July 7th
+* Sunday, July 7th
 @!(ref "logs" "logs" "2024_07_07")!@
+
+Tasks: @!(taskref "consider-drawing-tablet")!@, @!(taskref "investigate-tic80-audio")!@, @!(taskref "drawing-tablet-demo")!@, @!(taskref "investigate-css-codestudy")!@,
+@!(taskref "resume-setup")!@, @!(taskref "react-managing-state")!@.
 
 TIC-80 Sound Code /
 Drawing tablets for music? /
@@ -50,3 +53,19 @@ Planning next demo.
 Bought a mini drawing tablet to use as a musical
 interface, codestudy CSS debugging, studied audio
 code in TIC80, project details to my resume.
+
+* Monday, June 8th
+
+@!(ref "logs" "logs" "2024_07_08")!@
+
+Tasks: @!(taskref "resume-setup")!@,  @!(taskref "concept-concerto")!@, @!(taskref "investigate-tic80-audio")!@,
+@!(taskref "drawing-tablet-experiments")!@, @!(taskref "react-managing-state")!@
+
+tic80: buffers? /
+staggered voice algorithm, /
+wacom tablet fun
+
+More studying of TIC-80 codebase to learn how audio
+works there, talk with Chirag, parsing Wacom
+Tablet events with libevdev, react reading (finished "managing state" yesterday), some planning of staggered
+voice algorithm.

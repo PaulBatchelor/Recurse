@@ -19,7 +19,7 @@ local function prelude()
 
         "\\def\\entry#1#2#3{",
         "{\\regularfontbold #1}",
-        "{\\regularfont \\textcolor{lightgrey}{#2}}",
+        "{\\regularfont{\\underbar{#2}}}",
         "\\hfill \\textcolor{lightblue}{#3}",
         "\\smallskip",
         "{\\color{lightgrey} \\hrule }",
@@ -43,8 +43,9 @@ function header2(str)
     return "\\smallskip\\section{" .. str .. "}\n\\medskip\n"
 end
 
-function header3(str)
-    return "\\entry{" .. str .. "}{}{}\n"
+function header3(str, link)
+    link = link or ""
+    return "\\entry{" .. str .. "}{" .. link .. "}{}\n"
 end
 
 function begin_list()

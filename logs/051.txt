@@ -1,0 +1,186 @@
+@2024-07-09 Day 51.
+31 days left of batch.
+---
+prev:
+
+tic80: buffers? /
+staggered voice algorithm, /
+wacom tablet fun
+
+---
+Next:
+
+|| @!(taskref "drawing-tablet-experiments")!@: Build
+a proof of concept voice-theremin, precursor to interface
+work for @!(taskref "drawing-tablet-demo")!@ mechanics.
+
+|| @!(taskref "demo-react-UI")!@ WebAudio work.
+
+|| @!(taskref "LC75")!@: make PDF versions so I can
+read on RM tablet.
+
+|| @!(taskref "consider-poke-follow-up")!@: please
+write some tasks. I think I want to push myself to
+iterate.
+
+@07:51 Morning Triage.
+
+@08:02 Escape hatches next on the React reading list #react-escape-hatches
+
+@08:16 have this work for wacom and xp-pen #drawing-tablet-demo
+I have access to a Wacom tablet now, and I kind of
+love the size of it.
+
+@08:19 Didn't get to this yesterday, today hopefully #demo-react-UI
+
+@08:19 Initial investigation completed, now onto initial challenge: sine tone test. #investigate-tic80-audio #tic80-sine-tone
+I think I know about enough to get started on hacking
+in a sine tone into the TIC-80 sound codebase.
+---
+A sine tone is ideal because it's a pitched pure tone,
+and it can be easy to tell if I'm getting the buffering
+and sample rate correct. If I can get a sine.
+
+@08:22 Drawing tablet experiment vs demo #drawing-tablet-demo #drawing-tablet-experiments
+There is a bit of overlap here. I want the end of the
+"drawing tablet experiments" to have sound, and the
+"drawing tablet demo" to build up from that initial demo,
+tuning the sound better, and adding an abstraction
+that will make it easy to go between tablets.
+
+@08:24 Did not get to this yesterday. #LC75
+In the true yak-shaving tradition, I want to build
+a quick webscraper that takes all the links in
+the LC75 page and then prints them to PDF.
+From there, I can view them on my remarkable, so
+I can be a way from my computer and study them with
+pen and paper.
+
+@08:27 Write some tasks today please. #consider-poke-follow-up
+I think it would be good for me to iterate on this.
+I'm getting great feedback.
+
+@08:28 Pokey fella needs to laugh #consider-poke-follow-up
+
+@08:30 There needs to be a sound warning #consider-poke-follow-up #poke-sound-warning
+Someone yesterday got very surprised by the sound and
+immediately closed the browser. Oops.
+
+@08:39 Publish
+
+@09:00 Some experiments with the wacom. #drawing-tablet-experiments #timelog:00:36:51
+
+@09:01 What model is this Wacom Tablet? #drawing-tablet-experiments
+Wacom Intuos PT M 2, according to dmesg. Researching.
+---
+More specifically: CTH-690 [Intuos Art (M)]
+(using product/vendor ID lookup).
+---
+Super cheap to buy on ebay.
+
+@09:25 I have to learn about the finger tracking information here #drawing-tablet-experiments
+Is it multi-touch?
+
+@09:39 ABS_MT_SLOT keeps track of multi-touch points I think. #drawing-tablet-experiments
+I'm counting 10 points multitouch.
+---
+X axis resolution: ~2143 (2150?), Y axis resolution: ~1333
+
+@09:49 Time to make some noise. #drawing-tablet-experiments #timelog:01:07:40
+
+@09:54 gotta build libsoundio on this device to get jack backend #drawing-tablet-experiments
+
+@09:57 voxboxOSC builds and runs. now to extract the relevant bits. #drawing-tablet-experiments
+No need for the OSC bits, but the sound and DSP are a good
+start.
+
+@10:13 time to get the code tablet hooked up #drawing-tablet-experiments
+udev permissions are in order.
+
+@10:33 Only set pitch when pen is down. #drawing-tablet-experiments
+
+@10:47 It works. Gotta place with this thing now. #drawing-tablet-experiments
+
+@10:54 Adding files and committing. #drawing-tablet-experiments
+
+@11:40 Experimenting with tablets again
+Tried to an xp-pen tablet working that Seamus had. Could not
+use evdev to parse the tablet events for whatever reason,
+but I could read the raw bytes using cat and xxd.
+
+@12:00 Audio Hang
+
+@13:00 Lunch
+
+@13:42 Now what?
+
+@13:44 Initial work on web scraper for LC75 #LC75-scraper #timelog:01:11:40
+
+@14:00 wget doesn't work, curl doesn't work, selenium hangs #LC75-scraper
+
+@14:05 trying wget again #LC75-scraper
+
+@14:13 I just copy-pasted from the view source in browser #LC75-scraper
+It had the data embedded in there from a JSON blob.
+I was able to extract it in Vim. Currently jq-ing it.
+---
+Here is my big query:
+
+===
+#+BEGIN_SRC
+jq .props.pageProps.dehydratedState.queries[0].state.data.studyPlanV2Detail.planSubGroups data_pretty.json
+#+END_SRC
+===
+
+@14:34 Picking apart LC75.json data #LC75-scraper
+It's an array of items, split up by category (of
+which there are 22 categories). Each entry is an
+object with a =questionNum= field. When you add
+all the =questionNum=s together, you get 75.
+---
+The key I want for the URL is =titleSlug=, and
+the id is =questionFrontendId= for the LC (I can
+use this to reference the problem tersely online).
+These are objects found in the "questions" objects,
+aka =.[0].questions[0]=.
+
+@14:44 Headless print on linux? #LC75-scraper
+It's not going to matter.
+
+@14:49 I have hit a security wall #LC75-scraper
+
+@14:57 Can use wayback machine with limited success #LC75-scraper
+Given a leetcode article, I can find a cached version
+on wayback machine, which I can then curl to
+an HTML file. Most of the HTML can be stripped using
+=w3m -dump=.
+
+@15:27 Does wayback machine have an API for getting cached pages? #LC75-scraper #timelog:00:15:48
+It does! There's a URL you can query and get a JSON
+response from. It does produce HTML, but, even with
+w3m it does seem to be kinda messy. Damn.
+
+@16:00 making some follow-up tasks for poke. #consider-poke-follow-up #timelog:00:07:15
+
+@16:01 Sounds events should happen when there's a collision #consider-poke-follow-up #poke-collision-sounds
+
+@16:03 successive pokes should build up energy #poke-evolving-sounds #poke-evolving-sounds
+For example, my "balloon" control signal generator
+could probably work here.
+
+@16:07 poke pellets: drop things to have the fella eat #consider-poke-follow-up #poke-pellets
+
+@16:08 Implement laughter and chitter sounds #consider-poke-follow-up #poke-laughter-chitter
+
+@16:18 More webaudio code porting #demo-react-UI #timelog:00:35:00
+Note to self: we're calling this voxsculpt.
+
+@16:52 Mostly works. Now the rest. #demo-react-UI
+
+@16:53 "User aborted request" #demo-react-UI
+Happens when I attempt "await startAudio" in onclick callback.
+
+@16:58 Sound is made, but sliders do not control anything. #demo-react-UI #timelog:01:10:44
+Also paired with Dan to help out with things.
+
+@19:04 Troubleshooting xp-pen tablet. #drawing-tablet-experiments #timelog:00:23:34
