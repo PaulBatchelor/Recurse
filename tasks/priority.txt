@@ -3,14 +3,6 @@ tasks that I intend to work on in the next few days or so.
 
 @add-day-titles add day titles to logs (retro-actively)
 
-@resume-setup re-examine resume #career
-[[https://www.recurse.com/jobs/advice#resumes]].
-[[https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb]].
-
-@demo-react-UI port demo to react UI
-It's important to me that I do this because I want to
-become familiar with some frontend technologies.
-
 @dagzet-rust Port dagzet to rust
 
 @consider-poke-follow-up Consider poke follow-up?

@@ -226,3 +226,8 @@ pub extern "C" fn vox_pitch(vd: &mut VoxData, pitch: f32) {
 pub extern "C" fn vox_gate(vd: &mut VoxData, gate: f32) {
     vd.gain.value = gate*0.8;
 }
+
+#[no_mangle]
+pub extern "C" fn vox_tongue_shape(vd: &mut VoxData, x: f32, y: f32) {
+    vd.voice.tract.tongue_shape(x, y);
+}

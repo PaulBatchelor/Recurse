@@ -34,6 +34,7 @@ float vox_tick(struct VoxData *vd);
 void vox_poll(struct VoxData *vd);
 void vox_free(struct VoxData *vd);
 void vox_pitch(struct VoxData *vd, float pitch);
+void vox_tongue_shape(struct VoxData *vd, float x, float y);
 void vox_gate(struct VoxData *vd, float gate);
 uint8_t vox_running(struct VoxData *vd);
 
@@ -305,7 +306,8 @@ int main(int argc, char **argv) {
     int rc = 1;
 
     //const char *devpath ="/dev/input/by-id/usb-Wacom_Co._Ltd._Intuos_PTM-event-mouse";
-    const char *devpath = "/dev/input/by-id/usb-28bd_9_inch_PenTablet_0000000000-if02-event-mouse";
+    //const char *devpath = "/dev/input/by-id/usb-28bd_9_inch_PenTablet_0000000000-if02-event-mouse";
+    const char *devpath = "/dev/input/by-id/usb-UGTABLET_4_inch_PenTablet_000000-if01-event-mouse";
     fd = open(devpath, O_RDONLY|O_NONBLOCK);
     rc = libevdev_new_from_fd(fd, &dev);
     if (rc < 0) {
@@ -342,7 +344,8 @@ int main(int argc, char **argv) {
                 printf("touching is now %d\n", touching);
             }
 
-            int please_print = ev.type == EV_ABS && (ev.code == ABS_X);
+            //int please_print = ev.type == EV_ABS && (ev.code == ABS_X);
+            int please_print = ev.type == EV_ABS;
             if (please_print && touching == 1) {
 
                 if (ev.code == ABS_X) {
@@ -350,11 +353,19 @@ int main(int argc, char **argv) {
                     float pitch;
 
                     //x_axis = ev.value / 21600.0;
-                    x_axis = ev.value / 46024.0;
-                    pitch = 48.0 + (12.0 * 4) * x_axis;
+                    //x_axis = ev.value / 46024.0;
+                    x_axis = ev.value / 32767.0;
+                    //pitch = 48.0 + (12.0 * 4) * x_axis;
+                    pitch = 48.0 + (12.0 * 2) * x_axis;
 
                     vox_pitch(ad->vd, pitch);
 
+                } else if (ev.code == ABS_Y) {
+                    float y_axis;
+                    y_axis = ev.value / 32767.0;
+                    y_axis = 0.1 + y_axis * 0.8;
+                    vox_tongue_shape(ad->vd, 0.1, y_axis);
+                    
                 } else if (ev.code == ABS_PRESSURE) {
                     // float gate;
 
