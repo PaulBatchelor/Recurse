@@ -140,3 +140,17 @@ the timing of sound rendering is related to the drawing
 callback. There's things like jitter and frame-drops.
 How does it handle that sort of thing? Does the
 so-called "blip buffer" smooth things out somehow?
+
+@11:00 Chat with Sonali
+
+@12:47 Time to start drawing tablet demo #drawing-tablet-demo
+
+@13:53 Some light refactoring #drawing-tablet-demo
+
+@14:20 Lots of very welcome distractions #drawing-tablet-demo
+But we are back. Attempting to clean up main a little
+bit. Starting with the arg parsing.
+
+@14:42 Add an interrupt signal. #drawing-tablet-demo
+It keeps screwing up my terminal window when I
+ctrl-C.

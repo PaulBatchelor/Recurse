@@ -22,6 +22,12 @@
 #include <sys/stat.h>
 #include <errno.h>
 
+#include <signal.h>
+    
+//const char *devpath ="/dev/input/by-id/usb-Wacom_Co._Ltd._Intuos_PTM-event-mouse";
+//const char *devpath = "/dev/input/by-id/usb-28bd_9_inch_PenTablet_0000000000-if02-event-mouse";
+#define DEVICE_PATH "/dev/input/by-id/usb-UGTABLET_4_inch_PenTablet_000000-if01-event-mouse"
+
 typedef struct {
     struct VoxData *vd;
 } AudioData;
@@ -37,6 +43,8 @@ void vox_pitch(struct VoxData *vd, float pitch);
 void vox_tongue_shape(struct VoxData *vd, float x, float y);
 void vox_gate(struct VoxData *vd, float gate);
 uint8_t vox_running(struct VoxData *vd);
+
+static volatile int running = 1;
 
 static int usage(char *exe) {
     fprintf(stderr, "Usage: %s [options]\n"
@@ -136,55 +144,52 @@ void setup_audio_data(AudioData *ad, uint32_t sr)
     ad->vd = newdsp(sr);
 }
 
-int main(int argc, char **argv) {
+struct audio_options {
+    enum SoundIoBackend backend;
+    bool raw;
+    char *device_id;
+    char *stream_name;
+    double latency;
+    int sample_rate;
+};
+
+static int parse_arguments(int argc, char *argv[], struct audio_options *ao)
+{
     char *exe = argv[0];
-    enum SoundIoBackend backend = SoundIoBackendNone;
-    char *device_id = NULL;
-    bool raw = false;
-    char *stream_name = NULL;
-    double latency = 0.0;
-    int sample_rate = 0;
-    AudioData *ad;
-
-    // explicitely request 44.kHz. On OSX, I think the
-    // sample rate suddenly changes to 48kHz, which
-    // caused my DSP to be pitched wrong
-    sample_rate = 44100;
-
     for (int i = 1; i < argc; i += 1) {
         char *arg = argv[i];
         if (arg[0] == '-' && arg[1] == '-') {
             if (strcmp(arg, "--raw") == 0) {
-                raw = true;
+                ao->raw = true;
             } else {
                 i += 1;
                 if (i >= argc) {
                     return usage(exe);
                 } else if (strcmp(arg, "--backend") == 0) {
                     if (strcmp(argv[i], "dummy") == 0) {
-                        backend = SoundIoBackendDummy;
+                        ao->backend = SoundIoBackendDummy;
                     } else if (strcmp(argv[i], "alsa") == 0) {
-                        backend = SoundIoBackendAlsa;
+                        ao->backend = SoundIoBackendAlsa;
                     } else if (strcmp(argv[i], "pulseaudio") == 0) {
-                        backend = SoundIoBackendPulseAudio;
+                        ao->backend = SoundIoBackendPulseAudio;
                     } else if (strcmp(argv[i], "jack") == 0) {
-                        backend = SoundIoBackendJack;
+                        ao->backend = SoundIoBackendJack;
                     } else if (strcmp(argv[i], "coreaudio") == 0) {
-                        backend = SoundIoBackendCoreAudio;
+                        ao->backend = SoundIoBackendCoreAudio;
                     } else if (strcmp(argv[i], "wasapi") == 0) {
-                        backend = SoundIoBackendWasapi;
+                        ao->backend = SoundIoBackendWasapi;
                     } else {
                         fprintf(stderr, "Invalid backend: %s\n", argv[i]);
                         return 1;
                     }
                 } else if (strcmp(arg, "--device") == 0) {
-                    device_id = argv[i];
+                    ao->device_id = argv[i];
                 } else if (strcmp(arg, "--name") == 0) {
-                    stream_name = argv[i];
+                    ao->stream_name = argv[i];
                 } else if (strcmp(arg, "--latency") == 0) {
-                    latency = atof(argv[i]);
+                    ao->latency = atof(argv[i]);
                 } else if (strcmp(arg, "--sample-rate") == 0) {
-                    sample_rate = atoi(argv[i]);
+                    ao->sample_rate = atoi(argv[i]);
                 } else {
                     return usage(exe);
                 }
@@ -194,14 +199,57 @@ int main(int argc, char **argv) {
         }
     }
 
+    return 0;
+}
+
+void audio_options_init(struct audio_options *ao) {
+    ao->backend = SoundIoBackendNone;
+    ao->raw = false;
+    ao->device_id = NULL;
+    ao->stream_name = NULL;
+    ao->latency = 0;
+    ao->sample_rate = 44100;
+}
+
+static int handle_quit(int dummy) {
+    running = 0;
+}
+
+int main(int argc, char **argv) {
+    char *exe = argv[0];
+    //char *device_id = NULL;
+    //bool raw = false;
+    //char *stream_name = NULL;
+    //double latency = 0.0;
+    //int sample_rate = 0;
+    AudioData *ad;
+    int rc;
+    struct audio_options iao;
+    struct audio_options *ao;
+
+    ao = &iao;
+    audio_options_init(ao);
+
+    // explicitely request 44.kHz. On OSX, I think the
+    // sample rate suddenly changes to 48kHz, which
+    // caused my DSP to be pitched wrong
+    ao->sample_rate = 44100;
+
+    rc = parse_arguments(argc, argv, ao);
+    if (rc) {
+        return rc;
+    }
+
+    signal(SIGINT, handle_quit);
+
     struct SoundIo *soundio = soundio_create();
     if (!soundio) {
         fprintf(stderr, "out of memory\n");
         return 1;
     }
 
-    int err = (backend == SoundIoBackendNone) ?
-        soundio_connect(soundio) : soundio_connect_backend(soundio, backend);
+    int err = (ao->backend == SoundIoBackendNone) ?
+        soundio_connect(soundio) : soundio_connect_backend(soundio, ao->backend);
 
     if (err) {
         fprintf(stderr, "Unable to connect to backend: %s\n", soundio_strerror(err));
@@ -213,11 +261,13 @@ int main(int argc, char **argv) {
     soundio_flush_events(soundio);
 
     int selected_device_index = -1;
-    if (device_id) {
+    if (ao->device_id) {
         int device_count = soundio_output_device_count(soundio);
         for (int i = 0; i < device_count; i += 1) {
             struct SoundIoDevice *device = soundio_get_output_device(soundio, i);
-            bool select_this_one = strcmp(device->id, device_id) == 0 && device->is_raw == raw;
+            bool select_this_one =
+                strcmp(device->id, ao->device_id) == 0 &&
+                device->is_raw == ao->raw;
             soundio_device_unref(device);
             if (select_this_one) {
                 selected_device_index = i;
@@ -257,9 +307,9 @@ int main(int argc, char **argv) {
     outstream->userdata = ad;
     outstream->write_callback = write_callback;
     outstream->underflow_callback = underflow_callback;
-    outstream->name = stream_name;
-    outstream->software_latency = latency;
-    outstream->sample_rate = sample_rate;
+    outstream->name = ao->stream_name;
+    outstream->software_latency = ao->latency;
+    outstream->sample_rate = ao->sample_rate;
 
     if (soundio_device_supports_format(device, SoundIoFormatFloat32NE)) {
         outstream->format = SoundIoFormatFloat32NE;
@@ -303,11 +353,9 @@ int main(int argc, char **argv) {
 
     struct libevdev *dev = NULL;
     int fd;
-    int rc = 1;
+    rc = 1;
 
-    //const char *devpath ="/dev/input/by-id/usb-Wacom_Co._Ltd._Intuos_PTM-event-mouse";
-    //const char *devpath = "/dev/input/by-id/usb-28bd_9_inch_PenTablet_0000000000-if02-event-mouse";
-    const char *devpath = "/dev/input/by-id/usb-UGTABLET_4_inch_PenTablet_000000-if01-event-mouse";
+    const char *devpath = DEVICE_PATH;
     fd = open(devpath, O_RDONLY|O_NONBLOCK);
     rc = libevdev_new_from_fd(fd, &dev);
     if (rc < 0) {
@@ -317,8 +365,10 @@ int main(int argc, char **argv) {
     }
 
     vox_gate(ad->vd, 0);
+
     int touching = 0;
-    while(vox_running(ad->vd)) {
+
+    while (running) {
         soundio_flush_events(soundio);
 
         struct input_event ev;
@@ -351,12 +401,20 @@ int main(int argc, char **argv) {
                 if (ev.code == ABS_X) {
                     float x_axis;
                     float pitch;
+                    int noct;
+                    float base;
+                    float max_xres;
+
+                    noct = 2;
+                    base = 48.0;
+                    max_xres = 32767.0;
 
                     //x_axis = ev.value / 21600.0;
                     //x_axis = ev.value / 46024.0;
-                    x_axis = ev.value / 32767.0;
+                    x_axis = ev.value / max_xres;
                     //pitch = 48.0 + (12.0 * 4) * x_axis;
-                    pitch = 48.0 + (12.0 * 2) * x_axis;
+                    pitch = base + (12.0 * noct) * x_axis;
+                    //pitch = 24.0 + (12.0 * 2) * x_axis;
 
                     vox_pitch(ad->vd, pitch);
 
@@ -377,27 +435,6 @@ int main(int argc, char **argv) {
             }
         }
 
-        //vox_poll(ad->vd);
-        // int c = getc(stdin);
-        // if (c == 'p') {
-        //     fprintf(stderr, "pausing result: %s\n",
-        //             soundio_strerror(soundio_outstream_pause(outstream, true)));
-        // } else if (c == 'P') {
-        //     want_pause = true;
-        // } else if (c == 'u') {
-        //     want_pause = false;
-        //     fprintf(stderr, "unpausing result: %s\n",
-        //             soundio_strerror(soundio_outstream_pause(outstream, false)));
-        // } else if (c == 'c') {
-        //     fprintf(stderr, "clear buffer result: %s\n",
-        //             soundio_strerror(soundio_outstream_clear_buffer(outstream)));
-        // } else if (c == 'q') {
-        //     break;
-        // } else if (c == '\r' || c == '\n') {
-        //     // ignore
-        // } else {
-        //     fprintf(stderr, "Unrecognized command: %c\n", c);
-        // }
     }
 
     soundio_outstream_destroy(outstream);
