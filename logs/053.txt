@@ -154,3 +154,7 @@ bit. Starting with the arg parsing.
 @14:42 Add an interrupt signal. #drawing-tablet-demo
 It keeps screwing up my terminal window when I
 ctrl-C.
+
+@14:46 Move out tablet control to separate file. #drawing-tablet-demo
+
+@15:10 Make the pitch snap #drawing-tablet-demo

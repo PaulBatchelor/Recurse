@@ -211,17 +211,15 @@ void audio_options_init(struct audio_options *ao) {
     ao->sample_rate = 44100;
 }
 
-static int handle_quit(int dummy) {
+static void handle_quit(int dummy) {
     running = 0;
 }
 
+void handle_tablet_event(struct VoxData *vd,
+    struct input_event *ev,
+    int *touching);
+
 int main(int argc, char **argv) {
-    char *exe = argv[0];
-    //char *device_id = NULL;
-    //bool raw = false;
-    //char *stream_name = NULL;
-    //double latency = 0.0;
-    //int sample_rate = 0;
     AudioData *ad;
     int rc;
     struct audio_options iao;
@@ -376,63 +374,7 @@ int main(int argc, char **argv) {
         rc = libevdev_next_event(dev, LIBEVDEV_READ_FLAG_NORMAL, &ev);
 
         if (rc == 0) {
-            int on_touch;
-
-            on_touch =
-                ev.type == EV_KEY &&
-                ev.code == BTN_TOUCH;
-
-            if (on_touch) {
-
-                if (ev.value == 1) {
-                    touching = 1;
-                    vox_gate(ad->vd, 1);
-                } else {
-                    touching = 0;
-                    vox_gate(ad->vd, 0);
-                }
-                printf("touching is now %d\n", touching);
-            }
-
-            //int please_print = ev.type == EV_ABS && (ev.code == ABS_X);
-            int please_print = ev.type == EV_ABS;
-            if (please_print && touching == 1) {
-
-                if (ev.code == ABS_X) {
-                    float x_axis;
-                    float pitch;
-                    int noct;
-                    float base;
-                    float max_xres;
-
-                    noct = 2;
-                    base = 48.0;
-                    max_xres = 32767.0;
-
-                    //x_axis = ev.value / 21600.0;
-                    //x_axis = ev.value / 46024.0;
-                    x_axis = ev.value / max_xres;
-                    //pitch = 48.0 + (12.0 * 4) * x_axis;
-                    pitch = base + (12.0 * noct) * x_axis;
-                    //pitch = 24.0 + (12.0 * 2) * x_axis;
-
-                    vox_pitch(ad->vd, pitch);
-
-                } else if (ev.code == ABS_Y) {
-                    float y_axis;
-                    y_axis = ev.value / 32767.0;
-                    y_axis = 0.1 + y_axis * 0.8;
-                    vox_tongue_shape(ad->vd, 0.1, y_axis);
-                    
-                } else if (ev.code == ABS_PRESSURE) {
-                    // float gate;
-
-                    // gate = ev.value > 0;
-                    // vox_gate(ad->vd, gate);
-
-
-                }
-            }
+            handle_tablet_event(ad->vd, &ev, &touching);
         }
 
     }

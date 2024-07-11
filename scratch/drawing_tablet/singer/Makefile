@@ -1,6 +1,6 @@
 default: singer_tablet_test
 
-OBJ=main.o
+OBJ=main.o tablet.o
 
 CFLAGS=-Wall -pedantic -O3
 LDFLAGS=-L$(DSPLIBPATH)
