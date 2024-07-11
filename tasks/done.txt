@@ -226,3 +226,4 @@ become familiar with some frontend technologies.
 
 @drawing-tablet-experiments drawing tablet experiments
 
+@poke-sound-warning Add sound warning

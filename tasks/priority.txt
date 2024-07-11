@@ -18,5 +18,3 @@ link [[https://react.dev/learn/escape-hatches]].
 @drawing-tablet-demo work out initial drawing tablet demo
 
 @tic80-sine-tone Inject a sine tone into tic80 audio pipeline
-
-@poke-sound-warning Add sound warning

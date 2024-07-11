@@ -189,7 +189,7 @@ function sketch(p) {
             p.fill(0);
             p.textSize(20);
             p.textAlign(p.CENTER);
-            p.text("Tap to begin", width/2, height/2);
+            p.text("Tap to begin (Warning: loud sound)", width/2, height/2);
             return;
         }
 
