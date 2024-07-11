@@ -143,7 +143,7 @@ so-called "blip buffer" smooth things out somehow?
 
 @11:00 Chat with Sonali
 
-@12:47 Time to start drawing tablet demo #drawing-tablet-demo
+@12:47 Time to start drawing tablet demo #drawing-tablet-demo #timelog:01:28:59
 
 @13:53 Some light refactoring #drawing-tablet-demo
 
