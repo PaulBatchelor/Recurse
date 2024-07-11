@@ -1,4 +1,4 @@
-@2024-07-10 Day 52.
+@2024-07-10 Day 52. I do not understand how tic80 sound works.
 30 days left of batch.
 ---
 Prev:
@@ -93,3 +93,7 @@ terminal?
 ---
 What's the deal with registers? How do they end up
 in a PCM buffer?
+
+@18:05 brainstorming #concept-concerto #timelog:00:05:53
+
+@18:15 brainstorming #concept-concerto #timelog:00:14:53

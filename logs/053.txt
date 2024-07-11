@@ -1,0 +1,50 @@
+@2024-07-11 Day 53.
+29 days left of batch.
+---
+Prev:
+
+I truly do not /
+understand how the sound works /
+inside TIC-80
+---
+
+Next:
+
+|| @!(taskref "poke-sound-warning")!@: shoot I forgot
+to do this one yesterday.
+
+|| @!(taskref "tic80-sine-tone")!@: Not completely
+out of ideas yet
+
+|| @!(taskref "drawing-tablet-demo")!@: time to transition
+from experiment to demo
+
+|| @!(taskref "dagzet-rust")!@: peak at this, if there
+is time?
+
+@08:28 This is not worth any more of my time.
+Considering how few of these I'm realistically going
+to get to, it's going to be easier to just manually
+print them to PDF to get them on my RM. Solid attempt
+though, had a good adventure.
+
+@08:32 Ooops forgot. First thing today #poke-sound-warning
+
+@08:33 I have a few more ideas on how to do this #tic80-sine-tone
+Look at =tic_core_sound_tick_start=
+and  =tic_core_sound_tick_end=.
+
+@08:35 Officially concluded. #drawing-tablet-experiments
+Now onto demo
+
+@08:37 Drawing tablet demo: mono singing voice #drawing-tablet-demo
+Going to try and timebox this to just today. What
+I want is to get pitch snapping on x-axis,
+reverb and delay effects, as well as y-axis intensity
+control.
+
+@08:39 Some initial boilerplate rust code would be nice to set up today if there's time #dagzet-rust
+
+@08:40 Publishing
+
+@08:51 Gotta add a sound warning to poke. #poke-sound-warning
