@@ -31,7 +31,6 @@ void handle_tablet_event(struct VoxData *vd,
             *touching = 0;
             vox_gate(vd, 0);
         }
-        printf("touching is now %d\n", *touching);
     }
 
     int please_print = ev->type == EV_ABS;
@@ -39,11 +38,9 @@ void handle_tablet_event(struct VoxData *vd,
         if (ev->code == ABS_X) {
             float x_axis;
             float pitch;
-            int noct;
             float base;
             float max_xres;
 
-            noct = 2;
             base = 60.0;
             max_xres = 32767.0;
 
@@ -61,7 +58,7 @@ void handle_tablet_event(struct VoxData *vd,
             float y_axis;
             y_axis = ev->value / 32767.0;
             y_axis = 0.1 + y_axis * 0.8;
-            vox_tongue_shape(vd, 0.1, y_axis);
+            //vox_tongue_shape(vd, 0.1, y_axis);
         } else if (ev->code == ABS_PRESSURE) {
             // float gate;
 

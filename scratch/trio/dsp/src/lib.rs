@@ -34,7 +34,7 @@ pub struct VoxData {
 //             Ok(addr) => addr,
 //             Err(_) => panic!("oops"),
 //         };
-// 
+//
 //         let sock = UdpSocket::bind(addr).unwrap();
 //         OSCServer {
 //             sock: sock,
@@ -45,19 +45,16 @@ pub struct VoxData {
 
 impl VoxData {
     pub fn new(sr: usize) -> Self {
-        let tract_len_cm = 16.0;
+        let tract_len_cm = 13.0;
         let oversample = 2;
-        let shape1 = [
-            1.011, 0.201, 0.487, 0.440,
-            1.297, 2.368, 1.059, 2.225
-        ];
+        let shape1 = [1.011, 0.201, 0.487, 0.440, 1.297, 2.368, 1.059, 2.225];
         let mut vd = VoxData {
             testvar: 12345.0,
             voice: Voice::new(sr, tract_len_cm, oversample),
             // listener: OSCServer::new("127.0.0.1:8001"),
             is_running: true,
             pitch: SmoothParam::new(sr, 60.),
-            gain: SmoothParam::new(sr, 0.5),
+            gain: SmoothParam::new(sr, 0.0),
             reverb: BigVerb::new(sr),
             dcblk: DCBlocker::new(sr),
         };
@@ -83,7 +80,7 @@ impl VoxData {
         (v + r * 0.1) * 0.6
     }
 
-    pub fn running(&mut self)->u8 {
+    pub fn running(&mut self) -> u8 {
         let mut state = 1;
 
         if self.is_running == false {
@@ -120,7 +117,6 @@ pub extern "C" fn testfunction() -> f32 {
     return 330.0;
 }
 
-
 #[no_mangle]
 pub extern "C" fn newdsp(sr: u32) -> Box<VoxData> {
     let sr = sr as usize;
@@ -150,7 +146,7 @@ pub extern "C" fn vox_running(vd: &mut VoxData) -> u8 {
 
 #[no_mangle]
 pub extern "C" fn vox_free(vd: &mut VoxData) {
-    let ptr = unsafe {Box::from_raw(vd)};
+    let ptr = unsafe { Box::from_raw(vd) };
     drop(ptr);
 }
 
@@ -161,7 +157,7 @@ pub extern "C" fn vox_pitch(vd: &mut VoxData, pitch: f32) {
 
 #[no_mangle]
 pub extern "C" fn vox_gate(vd: &mut VoxData, gate: f32) {
-    vd.gain.value = gate*0.8;
+    vd.gain.value = gate * 0.8;
 }
 
 #[no_mangle]
