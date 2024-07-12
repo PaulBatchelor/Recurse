@@ -139,3 +139,10 @@ Got it! Typing "File" then hitting ctrl-y does it.
 I have it parsing command codes in the test file, and there
 is some placeholder stuff where I can eventually do stuff
 with those commands.
+
+@12:15 Back at hub. Setting myself up.
+I got a nice big screen here. Looks nice.
+
+@12:21 Initial boilerplate code, maybe some chords #demo-trio
+
+@12:22 make copy of the singer test. #demo-trio
