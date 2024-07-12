@@ -227,3 +227,10 @@ become familiar with some frontend technologies.
 @drawing-tablet-experiments drawing tablet experiments
 
 @poke-sound-warning Add sound warning
+
+@consider-poke-follow-up Consider poke follow-up?
+
+@drawing-tablet-demo work out initial drawing tablet demo
+
+@concept-concerto Flesh out "concerto" concept
+

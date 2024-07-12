@@ -3,3 +3,5 @@
 @react-installation read React: installation
 link: [[https://react.dev/learn/installation]].
 
+@react-escape-hatches read React: escape hatches
+link [[https://react.dev/learn/escape-hatches]].

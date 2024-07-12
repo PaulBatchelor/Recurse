@@ -1,0 +1,54 @@
+@2024-07-12 Day 54.
+28 days left of batch.
+---
+Prev:
+
+More sine tone attempts /
+More singing drawing tablets /
+All you need is NAND
+
+---
+Next:
+
+|| @!(taskref "compeng-resources")!@ import CE links
+into knowledge graph.
+
+|| @!(taskref "dagzet-rust")!@ Try to get to this today?
+
+|| @!(taskref "tic80-sine-tone")!@: timebox this today,
+see if I can make more progress.
+
+|| @!(taskref "dmeo-trio")!@: initial code, get chords
+working.
+
+@08:13 Morning triage.
+
+@08:14 Did not get to this yesterday. Today maybe? #dagzet-rust
+
+@08:44 I think I nerfed the experience with quantization #drawing-tablet-demo
+I think I might have nerfed the experience
+with the pitch quanitization to be honest. It
+seems like the people I showed the quantized
+version to used it for less time compared to
+when it was "fretless". People really enjoyed
+the fluidic expressiveness of the pitch control
+and getting it to emote things using just
+inflection. Food for thought for another demo?
+
+@08:55 This would be a good weekend project #add-day-titles
+
+@08:56 I have still not started this. Sigh. #LC75
+
+@08:57 Don't know if this is worth my time to actually read right now #react-escape-hatches
+
+@08:58 This concept feels pretty fleshed out #concept-concerto #demo-trio
+I think I might call it "trio", and the elevator pitch
+is that you control one voice in a trio, and there
+is an algorithm that controls the other two pitches
+to form 3 part harmony.
+---
+Follow-up task created: @!(taskref "demo-trio")!@.
+
+@08:59 First step in trio: get instantaneous chords #demo-trio
+
+@09:02 Publishing
