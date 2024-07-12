@@ -6,6 +6,7 @@ struct VoxData;
 void vox_pitch(struct VoxData *vd, float pitch);
 void vox_tongue_shape(struct VoxData *vd, float x, float y);
 void vox_gate(struct VoxData *vd, float gate);
+void vox_x_axis(struct VoxData *vd, float x);
 
 
 float pitches[] = {
@@ -52,8 +53,8 @@ void handle_tablet_event(struct VoxData *vd,
             pitch = base + pitches[(int)pitch];
             //pitch = 24.0 + (12.0 * 2) * x_axis;
 
-            vox_pitch(vd, pitch);
-
+            //vox_pitch(vd, pitch);
+            vox_x_axis(vd, x_axis);
         } else if (ev->code == ABS_Y) {
             float y_axis;
             y_axis = ev->value / 32767.0;

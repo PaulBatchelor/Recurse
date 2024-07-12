@@ -146,3 +146,7 @@ I got a nice big screen here. Looks nice.
 @12:21 Initial boilerplate code, maybe some chords #demo-trio
 
 @12:22 make copy of the singer test. #demo-trio
+
+@12:36 getting the pitch control happening in rust instead of C #demo-trio
+
+@12:36 time for initial chord logic? #demo-trio

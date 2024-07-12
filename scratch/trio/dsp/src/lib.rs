@@ -1,9 +1,4 @@
-//extern crate rosc;
 use voxbox::*;
-// use rosc::{OscPacket, OscMessage};
-// use rosc::address::{Matcher, OscAddress};
-//use std::net::{SocketAddrV4, UdpSocket};
-//use std::str::FromStr;
 
 struct SmoothParam {
     pub value: f32,
@@ -19,29 +14,11 @@ pub struct VoxData {
     reverb: BigVerb,
     dcblk: DCBlocker,
 
-    // listener: OSCServer,
     is_running: bool,
+    pub x_axis: f32,
+    px_axis: f32,
+    pitches: Vec<i16>,
 }
-
-// pub struct OSCServer {
-//     sock: UdpSocket,
-//     buf: [u8; rosc::decoder::MTU],
-// }
-
-// impl OSCServer {
-//     pub fn new(addr_str: &str) -> Self {
-//         let addr = match SocketAddrV4::from_str(&addr_str) {
-//             Ok(addr) => addr,
-//             Err(_) => panic!("oops"),
-//         };
-//
-//         let sock = UdpSocket::bind(addr).unwrap();
-//         OSCServer {
-//             sock: sock,
-//             buf: [0u8; rosc::decoder::MTU],
-//         }
-//     }
-// }
 
 impl VoxData {
     pub fn new(sr: usize) -> Self {
@@ -57,6 +34,9 @@ impl VoxData {
             gain: SmoothParam::new(sr, 0.0),
             reverb: BigVerb::new(sr),
             dcblk: DCBlocker::new(sr),
+            x_axis: 0.,
+            px_axis: -1.,
+            pitches: vec![0, 2, 4, 5, 7, 9, 11, 12, 14, 16, 17, 19],
         };
 
         vd.gain.smoother.set_smooth(0.005);
@@ -67,6 +47,14 @@ impl VoxData {
     }
 
     pub fn tick(&mut self) -> f32 {
+        if self.x_axis != self.px_axis {
+            self.px_axis = self.x_axis;
+            let pitch = (self.x_axis * self.pitches.len() as f32) as usize;
+            let pitch = pitch.clamp(0, self.pitches.len() - 1);
+            let pitch = 60.0 + self.pitches[pitch] as f32;
+            self.pitch.value = pitch;
+        }
+
         self.voice.pitch = self.pitch.tick();
         let gain = self.gain.tick();
 
@@ -163,4 +151,9 @@ pub extern "C" fn vox_gate(vd: &mut VoxData, gate: f32) {
 #[no_mangle]
 pub extern "C" fn vox_tongue_shape(vd: &mut VoxData, x: f32, y: f32) {
     vd.voice.tract.tongue_shape(x, y);
+}
+
+#[no_mangle]
+pub extern "C" fn vox_x_axis(vd: &mut VoxData, x: f32) {
+    vd.x_axis = x;
 }
