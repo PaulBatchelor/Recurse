@@ -154,5 +154,13 @@ For now: given a pitch (octave-wrapped, 0-11), find
 the corresponding triad. Use a lookup table (vector,
 probably).
 
-@12:54 initial voices #demo-trio
-Gotta consolidate a voice into it's own struct.
+@12:54 consolidate voice into struct #demo-trio
+
+@13:05 two intial instances #demo-trio
+
+@13:16 initial chord look-up table #demo-trio
+
+@13:51 initial chord logic works! #demo-trio
+I'm going to need to rework this to make it
+work with gesture and chords, but this
+is a good start.

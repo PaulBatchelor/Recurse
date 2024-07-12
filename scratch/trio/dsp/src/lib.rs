@@ -43,6 +43,8 @@ impl VoiceWithSmoother {
 pub struct VoxData {
     testvar: f32,
     lead: VoiceWithSmoother,
+    lower: VoiceWithSmoother,
+    upper: VoiceWithSmoother,
     reverb: BigVerb,
     dcblk: DCBlocker,
 
@@ -50,24 +52,50 @@ pub struct VoxData {
     pub x_axis: f32,
     px_axis: f32,
     pitches: Vec<i16>,
+    base: u16,
+    upper_lookup: [i16; 7],
+    lower_lookup: [i16; 7],
 }
+
+//0  1  2  3  4  5  6  7  8  9 10  11
+//0  0  1  1  2  3  3  4  4  5  5  6
+//do di re ri mi fa fi so si la te ti
+const PITCH_TO_DIATONIC: [i16; 12] = [0, 0, 1, 1, 2, 3, 3, 4, 4, 5, 5, 6];
 
 impl VoxData {
     pub fn new(sr: usize) -> Self {
         let tract_len_cm = 13.0;
         let oversample = 2;
-        let vd = VoxData {
+        let mut vd = VoxData {
             testvar: 12345.0,
             lead: VoiceWithSmoother::new(sr, tract_len_cm, oversample),
+            lower: VoiceWithSmoother::new(sr, tract_len_cm * 1.05, oversample),
+            upper: VoiceWithSmoother::new(sr, tract_len_cm * 0.95, oversample),
             is_running: true,
             reverb: BigVerb::new(sr),
             dcblk: DCBlocker::new(sr),
             x_axis: 0.,
             px_axis: -1.,
             pitches: vec![0, 2, 4, 5, 7, 9, 11, 12, 14, 16, 17, 19],
+            base: 60,
+            lower_lookup: [-5, -3, -1, 0, 2, 4, 5],
+            upper_lookup: [4, 5, 7, 9, 11, 12, 14],
         };
 
+        vd.upper.voice.vibrato_depth(0.1);
+        vd.upper.voice.vibrato_rate(6.2);
+
+        vd.lower.voice.vibrato_depth(0.1);
+        vd.lower.voice.vibrato_rate(6.0);
         vd
+    }
+
+    pub fn get_scale_degree(&self) -> (usize, f32) {
+        let pitch = self.lead.pitch.value as u16 - self.base;
+        let octave = pitch / 12;
+        let pitch = pitch % 12;
+        let pitch = PITCH_TO_DIATONIC[pitch as usize];
+        (pitch as usize, octave as f32)
     }
 
     pub fn tick(&mut self) -> f32 {
@@ -77,13 +105,24 @@ impl VoxData {
             let pitch = pitch.clamp(0, self.pitches.len() - 1);
             let pitch = 60.0 + self.pitches[pitch] as f32;
             self.lead.pitch.value = pitch;
+
+            let (idx, octave) = self.get_scale_degree();
+
+            self.lower.pitch.value =
+                self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+            self.upper.pitch.value =
+                self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
         }
 
-        let v = self.lead.tick();
-        let (r, _) = self.reverb.tick(v, v);
+        let lead = self.lead.tick();
+        let lower = self.lower.tick();
+        let upper = self.upper.tick();
+
+        let voices = (lead + lower + upper) * 0.33;
+        let (r, _) = self.reverb.tick(voices, voices);
         let r = self.dcblk.tick(r);
 
-        (v + r * 0.1) * 0.6
+        (voices + r * 0.1) * 0.6
     }
 
     pub fn running(&mut self) -> u8 {
@@ -164,6 +203,8 @@ pub extern "C" fn vox_pitch(vd: &mut VoxData, pitch: f32) {
 #[no_mangle]
 pub extern "C" fn vox_gate(vd: &mut VoxData, gate: f32) {
     vd.lead.gain.value = gate * 0.8;
+    vd.lower.gain.value = gate * 0.8;
+    vd.upper.gain.value = gate * 0.8;
 }
 
 #[no_mangle]
