@@ -1,4 +1,4 @@
-AudioContext = window.AudioContext || window.webkitAudioContext;
+const AudioContext = window.AudioContext || window.webkitAudioContext;
 
 const audioContext = new AudioContext();
 let ChatterNode = null;
