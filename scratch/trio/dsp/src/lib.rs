@@ -84,9 +84,13 @@ impl VoxData {
 
         vd.upper.voice.vibrato_depth(0.1);
         vd.upper.voice.vibrato_rate(6.2);
+        vd.upper.gain.smoother.set_smooth(0.008);
+        vd.upper.pitch.smoother.set_smooth(0.08);
 
         vd.lower.voice.vibrato_depth(0.1);
         vd.lower.voice.vibrato_rate(6.0);
+        vd.lower.gain.smoother.set_smooth(0.009);
+        vd.lower.pitch.smoother.set_smooth(0.09);
         vd
     }
 

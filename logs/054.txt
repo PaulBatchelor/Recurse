@@ -164,3 +164,5 @@ probably).
 I'm going to need to rework this to make it
 work with gesture and chords, but this
 is a good start.
+
+@13:56 changing the smooth times makes a HUGE difference wow #demo-trio
