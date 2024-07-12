@@ -53,9 +53,7 @@ Follow-up task created: @!(taskref "demo-trio")!@.
 
 @09:02 Publishing
 
-@09:16 Let's begin a dagzet rust project #dagzet-rust
-
-@09:17 initial thoughts #dagzet-rust #timelog:00:18:23
+@09:16 initial thoughts #dagzet-rust #timelog:00:18:23
 My hope is that the lua implementatoin is trivial
 enough that I can bring it over to rust without
 too many complications. I will outline some of the
@@ -113,3 +111,31 @@ no cycles, generate the SQLite code to standard output.
 This seems pretty straight forward to me, more or less
 going through the generated struct (read-only)
 and printing equivalent SQLite code.
+
+@09:45 Starting initial boilerplate code. #dagzet-rust #timelog:01:07:29 
+
+@09:46 get it to read lines of a file #dagzet-rust
+Going to try to use neovim for this now.
+---
+tangent: trying to get auto-import working. Found: @!(dagzet "neovim/nvim_cmp")!@.
+---
+how to get this working with lazy, README only has vim-plug?
+---
+Wait, it's already installed, according to the
+Lazy control panel. What does InsertEnter mean?
+---
+Okay, I get the recommendations, but I don't know how
+to insert it.
+---
+Got it! Typing "File" then hitting ctrl-y does it.
+---
+@10:19 haha. flopping around with rust compiler on trivial things. nailing it. #dagzet-rust
+
+@10:24 give it a file on the command line #dagzet-rust
+
+@10:39 Parse lines, find their command code. #dagzet-rust
+
+@10:51 That's some good enough boilerplate. #dagzet-rust
+I have it parsing command codes in the test file, and there
+is some placeholder stuff where I can eventually do stuff
+with those commands.

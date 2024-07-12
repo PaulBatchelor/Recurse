@@ -84,3 +84,8 @@ nn std_iter_zip
 ln std::iter::zip
 hl https://doc.rust-lang.org/std/iter/fn.zip.html
 tg rust rust_std
+
+nn std_bufread_lines
+ln using lines() to read a file line by line
+hl https://doc.rust-lang.org/std/io/trait.BufRead.html#method.lines
+rm useful when building dagzet in rust
