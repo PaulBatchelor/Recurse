@@ -149,4 +149,10 @@ I got a nice big screen here. Looks nice.
 
 @12:36 getting the pitch control happening in rust instead of C #demo-trio
 
-@12:36 time for initial chord logic? #demo-trio
+@12:51 time for initial chord logic? #demo-trio
+For now: given a pitch (octave-wrapped, 0-11), find
+the corresponding triad. Use a lookup table (vector,
+probably).
+
+@12:54 initial voices #demo-trio
+Gotta consolidate a voice into it's own struct.

@@ -5,12 +5,44 @@ struct SmoothParam {
     pub smoother: Smoother,
 }
 
+struct VoiceWithSmoother {
+    pub voice: Voice,
+    pub pitch: SmoothParam,
+    pub gain: SmoothParam,
+}
+
+impl VoiceWithSmoother {
+    pub fn new(sr: usize, tract_len_cm: f32, oversample: u16) -> Self {
+        let shape1 = [1.011, 0.201, 0.487, 0.440, 1.297, 2.368, 1.059, 2.225];
+        let mut v = VoiceWithSmoother {
+            voice: Voice::new(sr, tract_len_cm, oversample),
+            pitch: SmoothParam::new(sr, 60.),
+            gain: SmoothParam::new(sr, 0.0),
+        };
+
+        v.gain.smoother.set_smooth(0.005);
+        v.pitch.smoother.set_smooth(0.04);
+        v.voice.pitch = 60.;
+        v.voice.tract.drm(&shape1);
+        v.voice.vibrato_depth(0.3);
+        v.voice.vibrato_rate(6.1);
+
+        v
+    }
+
+    pub fn tick(&mut self) -> f32 {
+        self.voice.pitch = self.pitch.tick();
+        let gain = self.gain.tick();
+
+        let v = self.voice.tick() * 0.7 * gain;
+        v
+    }
+}
+
 #[repr(C)]
 pub struct VoxData {
     testvar: f32,
-    voice: Voice,
-    pitch: SmoothParam,
-    gain: SmoothParam,
+    lead: VoiceWithSmoother,
     reverb: BigVerb,
     dcblk: DCBlocker,
 
@@ -24,14 +56,10 @@ impl VoxData {
     pub fn new(sr: usize) -> Self {
         let tract_len_cm = 13.0;
         let oversample = 2;
-        let shape1 = [1.011, 0.201, 0.487, 0.440, 1.297, 2.368, 1.059, 2.225];
-        let mut vd = VoxData {
+        let vd = VoxData {
             testvar: 12345.0,
-            voice: Voice::new(sr, tract_len_cm, oversample),
-            // listener: OSCServer::new("127.0.0.1:8001"),
+            lead: VoiceWithSmoother::new(sr, tract_len_cm, oversample),
             is_running: true,
-            pitch: SmoothParam::new(sr, 60.),
-            gain: SmoothParam::new(sr, 0.0),
             reverb: BigVerb::new(sr),
             dcblk: DCBlocker::new(sr),
             x_axis: 0.,
@@ -39,10 +67,6 @@ impl VoxData {
             pitches: vec![0, 2, 4, 5, 7, 9, 11, 12, 14, 16, 17, 19],
         };
 
-        vd.gain.smoother.set_smooth(0.005);
-        vd.pitch.smoother.set_smooth(0.04);
-        vd.voice.pitch = 60.;
-        vd.voice.tract.drm(&shape1);
         vd
     }
 
@@ -52,16 +76,10 @@ impl VoxData {
             let pitch = (self.x_axis * self.pitches.len() as f32) as usize;
             let pitch = pitch.clamp(0, self.pitches.len() - 1);
             let pitch = 60.0 + self.pitches[pitch] as f32;
-            self.pitch.value = pitch;
+            self.lead.pitch.value = pitch;
         }
 
-        self.voice.pitch = self.pitch.tick();
-        let gain = self.gain.tick();
-
-        self.voice.vibrato_depth(0.3);
-        self.voice.vibrato_rate(6.1);
-        let v = self.voice.tick() * 0.7 * gain;
-
+        let v = self.lead.tick();
         let (r, _) = self.reverb.tick(v, v);
         let r = self.dcblk.tick(r);
 
@@ -140,17 +158,17 @@ pub extern "C" fn vox_free(vd: &mut VoxData) {
 
 #[no_mangle]
 pub extern "C" fn vox_pitch(vd: &mut VoxData, pitch: f32) {
-    vd.pitch.value = pitch;
+    vd.lead.pitch.value = pitch;
 }
 
 #[no_mangle]
 pub extern "C" fn vox_gate(vd: &mut VoxData, gate: f32) {
-    vd.gain.value = gate * 0.8;
+    vd.lead.gain.value = gate * 0.8;
 }
 
 #[no_mangle]
 pub extern "C" fn vox_tongue_shape(vd: &mut VoxData, x: f32, y: f32) {
-    vd.voice.tract.tongue_shape(x, y);
+    vd.lead.voice.tract.tongue_shape(x, y);
 }
 
 #[no_mangle]
