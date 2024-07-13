@@ -1,4 +1,36 @@
 #+TITLE: Week 8
+* This week I learned...
+This week, I learned...
+
+... how to set up NeoVim. I got a decent setup working
+using Kickstart. I got a LSP server stuff working
+for Rust and Typescript.
+
+...how to use libevdev, a low-level
+linux kernel library for handling input events.
+I learned just enough to parse events from
+3 separate drawing events. I used libevdev with
+libsoundio and my VoxBox Rust vocal synthesis
+DSP library to build some singing demos.
+
+...a bit more about the tic80 sound engine. TIC-80,
+similar to PICO-8,
+is a fantasy console that can be used to make
+small games with early 8-bit console aesethetics.
+I've been attempting to inject my singing DSP
+code into the TIC-80 sound engine. It has been
+a humbling experience. This audio system is
+built quite strangely compared to other systems
+I've worked with.
+
+...that NAND can be used to build AND, OR, and NOT.
+I've just started reading "The Elements of Computer Systems" (AKA the nand2tetris textbook), and have been reading
+the first chapter on boolean algebra and HDLs.
+
+...a little bit of TypeScript and React. Just
+enough to port my first interactive singing synthesizer
+demo.
+
 * Saturday, July 6th
 @!(ref "logs" "logs" "2024_07_06")!@
 
@@ -97,6 +129,7 @@ Paired with Dan, got the rest of the typescript react
 demo working.
 
 * Wednesday, July 10th
+@!(ref "logs" "logs" "2024_07_10")!@
 
 I truly do not /
 understand how the sound works /
@@ -105,6 +138,7 @@ inside TIC-80
 Tasks: @!(taskref "tic80-sine-tone")!@, @!(taskref
 "drawing-tablet-experiments")!@.
 
+** Throwing singing synthesizers at innocent Recursers
 Late morning. The first half of the day was spent
 playing with my XP-Pen drawing tablet that
 arrived in the mail. I got it hooked up to my
@@ -117,6 +151,7 @@ when when you suddenly accelerate, and also
 adding virtual "bumps" in the space that cause
 frications to happen.
 
+** Sine tones in TIC-80... some attempts were made
 Second half was spend trying
 to code in a sine tone in the TIC-80 audio
 system. I didn't get too far, and frankly I'm
@@ -136,6 +171,7 @@ Towards the end of my tic80 troubleshooting, I
 just started putting printfs everwhere in a desperate
 attempt to see something - anything really - work.
 
+** Planning: chord generation algorithms for voice
 Finally, I snuck in a few minutes inking down
 a few more ideas about chord generation in this
 ensemble interface I'm thinking about. I'm working
@@ -147,6 +183,7 @@ delaying the notes chosen, otherwise known as
 harmonies and tensions during the transitions
 from one stable triad to the next.
 * Thursday, July 11th
+@!(ref "logs" "logs" "2024_07_11")!@
 
 More sine tone attempts /
 More singing drawing tablets /
@@ -155,8 +192,13 @@ All you need is NAND
 Tasks: @!(taskref "poke-sound-warning")!@, @!(taskref "drawing-tablet-demo")!@, @!(taskref
 "tic80-sine-tone")!@, @!(taskref "read-elem-compsys")!@.
 
-Added a sound warning to Poke.
+** Added a sound warning to Poke.
+To the person who opened my Poke demo in public
+and immediately shut it off after the first
+warble: I am sorry. I should have mentioned
+that there was sound.
 
+** There was another attempt to get tic80 sound working
 I had more attempts to tic80 sound working. I found myself
 going outwards in the abstraction towards the OS
 audio callbacks again, and learned that my build
@@ -173,6 +215,7 @@ code to follow, and there seems to be a lot of
 macro magic which makes it difficult to grep for
 stuff.
 
+** The singing tablet proof of concept is done
 I basically "completed" my singing tablet demo.
 I took my experiment, refactored the wrong things
 (argument parser), then I refactored the right things
@@ -189,6 +232,7 @@ the fluidic expressiveness of the pitch control
 and getting it to emote things using just
 inflection. Food for thought for another demo?
 
+** Career Meetings
 I had my first career meeting today. They pegged
 me as a systems guy, which I think is a good fit?
 I do tend to think in terms of systems in my work,
@@ -197,13 +241,46 @@ I am rethinking my priorities slightly, and wondering
 if it's worth my time to do any more with frontend
 tools. I might shift my focus to more systems stuff.
 
+** Elements of Computer Systems
 Partially motivated by my career meeting, I started
 more seriously diving into "Elements of Computer
 Systems", AKA the textboook used in nand2tetris.
 There is a hard copy of here at the RC library. I
 do like reading on paper instead of screen.
 
+** Reaching out about Computer Engineering
 I pinged CE again about computer engineering stuff,
 and they gave me a treasure trove of things to look at.
 I am grateful for their thoughtfulness. I hope to
 look dig into that in the next couple days.
+
+* Friday, July 12th
+@!(ref "logs" "logs" "2024_07_12")!@
+
+some zettelkastens
+directed acyclic graphs,
+bytebeats, and trios
+
+Tasks: @!(taskref "dagzet-rust")!@, @!(taskref
+"demo-trio")!@
+
+** Porting Dagzet To Rust
+"dagzet" stands for Directed-Acyclic-Graph ZETtelkasten,
+and it is a markup language and tool I wrote for 
+myself to produce @!(ref "dz" "knowledge graphs")!@,
+such as the one I built specifically for RC.
+
+The current implementation is written in Lua,
+but I thought it would be a neat challenge
+to try porting it to Rust. I spent time setting
+up some scaffolding: a comprehensive plan
+document for implementing, and then some initial
+boilerplate.
+
+** Initial Auto-chords in my "Trio" demo
+I implemented some initial triad chord logic
+for my "trio" demo, based on the
+singing tablet experiment code I wrote earlier
+this week. The voice managment logic has been moved
+from the C bits of code to Rust. The goal is to look
+at less C code and more Rust

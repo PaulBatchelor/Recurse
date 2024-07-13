@@ -1,0 +1,37 @@
+@2024-07-13 Day 55.
+27 days left of batch.
+---
+Prev:
+
+some zettelkastens /
+directed acyclic graphs, /
+bytebeats, and trios
+
+---
+
+Next:
+
+|| @!(taskref "tic80-sine-tone")!@: didn't
+get to this yesterday, first thing on my TODO
+today.
+
+|| @!(taskref "add-day-titles")!@: A good day
+to think about meaningful titles for my previous
+logs.
+
+|| @!(taskref "dagzet-rust")!@: More dagzet
+porting.
+
+@12:02 Noon Triage
+Meant to do a weekly re-cap end of day, but I got
+caught up in an ad-hoc bytebeat coding session.
+
+@12:35 finished up summarizing week 8
+I still need to write up yesterday though...
+
+@13:51 Sidetracked: Learned about a new dumpling place
+Looks good. Gotta go back there and actually get something.
+Also got caught up in conversation with JM.
+
+@13:54 I gotta finish this triage up lol.
+I am here to be interrupted.

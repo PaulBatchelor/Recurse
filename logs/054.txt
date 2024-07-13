@@ -1,4 +1,5 @@
-@2024-07-12 Day 54.
+@2024-07-12 Day 54. Trios, triads, and bytebeats.
+
 28 days left of batch.
 ---
 Prev:
@@ -117,7 +118,7 @@ and printing equivalent SQLite code.
 @09:46 get it to read lines of a file #dagzet-rust
 Going to try to use neovim for this now.
 ---
-tangent: trying to get auto-import working. Found: @!(dagzet "neovim/nvim_cmp")!@.
+tangent: trying to get auto-import working. Found: @!(dzref "neovim/nvim_cmp")!@.
 ---
 how to get this working with lazy, README only has vim-plug?
 ---
@@ -168,6 +169,6 @@ is a good start.
 @13:56 changing the smooth times makes a HUGE difference wow #demo-trio
 
 @16:43 Fell into pairing all day.
-the LED sign is 96x38
+Side note: the LED sign is 96x38
 
 @18:21 Wrapping up
