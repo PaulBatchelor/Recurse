@@ -126,7 +126,7 @@ ln Articulatory Singing Synthesizer DSP library implemented in Rust
 co $ voxbox
 
 nn webaudio_demos
-ln Compiled to WebAssebly (WASM) for Web Audio demos
+ln Compiled to WebAssembly (WASM) for Web Audio demos
 co $ voxbox
 
 sn voxbox
@@ -137,12 +137,12 @@ ln SndKit
 hl https://pbat.ch/sndkit
 
 nn literate_programming_dsp
-ln Audio DSP library built using literate programming
+ln Audio DSP library built using literate programming paradigm
 co $ sndkit
 
 nn org_wiki
 ln Custom Wiki engine based on org markup,
-ln with inline scripting using janet.
+ln with inline scripting using LISP.
 co $ sndkit
 
 nn sndkit_languages_tools
@@ -192,11 +192,11 @@ ln eye-tracking technology
 co $ handsfreemusic
 
 nn SXSW_innovation_award
-ln Recieved SXSW 2018 Music Innovation Award
+ln Received SXSW 2018 Music Innovation Award
 co $ handsfreemusic
 
 nn custom_UI_sound
-ln Custom UI and sound engine designed gaze-based interfaces
+ln Custom UI and sound engine designed for gaze-based interfaces
 co $ handsfreemusic
 
 nn handsfreemusic_tools
