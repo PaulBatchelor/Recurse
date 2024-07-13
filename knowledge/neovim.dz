@@ -1,0 +1,7 @@
+ns neovim
+gr all things related to neovim
+
+nn nvim_cmp
+hl https://github.com/hrsh7th/nvim-cmp
+ln nvim-cmp: A completion plugin for neovim coded in Lua
+rm already installed via kickstart

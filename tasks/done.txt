@@ -214,3 +214,23 @@ link [[https://react.dev/learn/managing-state]].
 
 @investigate-tic80-audio investigate tic80 audio
 
+@resume-setup re-examine resume #career
+[[https://www.recurse.com/jobs/advice#resumes]].
+[[https://docs.google.com/document/d/1YTN4mNdV09x0gjA77tH4XjjVqDCQmEolIR7GAkeZpbA/edit#heading=h.9eyjsjsj5vtb]].
+
+@demo-react-UI port demo to react UI
+It's important to me that I do this because I want to
+become familiar with some frontend technologies.
+
+@LC75-scraper build LC-75 web scraper
+
+@drawing-tablet-experiments drawing tablet experiments
+
+@poke-sound-warning Add sound warning
+
+@consider-poke-follow-up Consider poke follow-up?
+
+@drawing-tablet-demo work out initial drawing tablet demo
+
+@concept-concerto Flesh out "concerto" concept
+

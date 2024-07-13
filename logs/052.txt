@@ -1,1 +1,102 @@
+@2024-07-10 Day 52. I do not understand how tic80 sound works.
+30 days left of batch.
+---
+Prev:
+
+Drawing tablets. lots /
+of singing drawing tablets. /
+so many tablets
+
+---
+Next:
+
+|| @!(taskref "tic80-sine-tone")!@: begin initial work
+on this
+
+|| @!(taskref "drawing-tablet-experiments")!@: get new tablet working
+
+|| @!(taskref "drawing-tablet-demo")!@: start building
+out the singing demo.
+
 @09:38 Sending this off. #resume-setup
+
+@10:47 Late morning triage
+
+@11:11 This feels complete #demo-react-UI #voxsculpt-preset-manager
+I don't have preset import/export, but that
+can be another task.
+
+@11:14 This would be a good day to try to work on this #tic80-sine-tone
+
+@11:16 Singing tablet demo features to add #drawing-tablet-demo #timelog:00:56:06
+I want pitch quantiziation, and a y-axis controlling
+intensity
+
+@11:36 Publishing.
+
+@12:02 Trying out my new x-pen #drawing-tablet-experiments
+
+@12:06 It works #drawing-tablet-experiments
+32767 both directions. which potentially poses a problem
+if you want the aspect ratio.
+---
+Just measured. 4x3 inches. so 4:3 ratio.
+---
+In theory, it's 15 bit resolution, which is
+great considering the size. But is it actually
+15-bit? or just upsampled.
+
+@12:11 udev rules to use without sudo #drawing-tablet-experiments
+Also wondering: how to get max resolution automatically
+of touchpad?
+---
+Ah, yes it does [[https://www.freedesktop.org/software/libevdev/doc/latest/group__bits.html#ga97a3411ae85f1f3b5c5eb1d5351b11ca]].
+
+@12:20 Disabling the tablet from sway. #drawing-tablet-experiments
+Note to self: I gotta organize this script better.
+
+@12:24 Hook-up to singer #drawing-tablet-experiments
+
+@12:38 Tongue shape control. #drawing-tablet-experiments
+
+@14:00 Lunch.
+
+@14:45 Creative coding show and tell
+
+@15:20 Attempts to get a sine tone playing in tic80 #tic80-sine-tone #timelog:01:19:56
+
+@15:24 =update_amp()=, what does that do? #tic80-sine-tone
+Ah, I don't think I have to care about that, I can
+process data directly.
+
+@16:22 runPcm not working. going a level down. #tic80-sine-tone
+
+@16:26 How does =tic_tool_noise= generate sound?
+Wait, =runNoise= is what I want.
+
+@16:55 Wow, I am having a hard time grokking this code #tic80-sine-tone
+I don't understand what =update_amp= is doing. It seems
+to be some kind of delta encoding.
+---
+I'm just putting printf statements in functions now
+to see what runs and happens.
+
+@17:39 the =tic_sound_register_data= is key #tic80-sine-tone
+It can be found in =core.h=. The value I think that
+is relevant for an arbitrary sine tone is "amp",
+which is the "current amp in the delta buffer". Does
+that mean the amp is delta encoded or PCM encoded?
+---
+There are 4 channels of sound.
+
+@17:45 Follow-ups #tic80-sine-tone
+How can I print any non-zero sound PCM values to
+terminal?
+---
+What's the deal with registers? How do they end up
+in a PCM buffer?
+
+@18:05 brainstorming #concept-concerto #timelog:00:05:53
+
+@18:15 brainstorming #concept-concerto #timelog:00:14:53
+>>>>>>> 03b7a0f0726864212f2607659576cc56a672c515
