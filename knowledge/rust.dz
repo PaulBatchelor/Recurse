@@ -89,3 +89,7 @@ nn std_bufread_lines
 ln using lines() to read a file line by line
 hl https://doc.rust-lang.org/std/io/trait.BufRead.html#method.lines
 rm useful when building dagzet in rust
+
+nn bitwhip
+hl https://github.com/bitwhip/bitwhip
+ln bitwhip: low latency screen sharing
