@@ -24,4 +24,5 @@ knowledge/tic80.dz
 knowledge/pipewire.dz
 knowledge/next.dz
 knowledge/hello_ts_react.dz
+knowledge/compeng.dz
 knowledge/zzz.dz
