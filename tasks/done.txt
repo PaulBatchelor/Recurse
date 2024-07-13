@@ -222,3 +222,15 @@ link [[https://react.dev/learn/managing-state]].
 It's important to me that I do this because I want to
 become familiar with some frontend technologies.
 
+@LC75-scraper build LC-75 web scraper
+
+@drawing-tablet-experiments drawing tablet experiments
+
+@poke-sound-warning Add sound warning
+
+@consider-poke-follow-up Consider poke follow-up?
+
+@drawing-tablet-demo work out initial drawing tablet demo
+
+@concept-concerto Flesh out "concerto" concept
+

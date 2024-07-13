@@ -54,7 +54,7 @@ Bought a mini drawing tablet to use as a musical
 interface, codestudy CSS debugging, studied audio
 code in TIC80, project details to my resume.
 
-* Monday, June 8th
+* Monday, July 8th
 
 @!(ref "logs" "logs" "2024_07_08")!@
 
@@ -70,7 +70,7 @@ works there, talk with Chirag, parsing Wacom
 Tablet events with libevdev, react reading (finished "managing state" yesterday), some planning of staggered
 voice algorithm.
 
-* Tuesday, June 9th
+* Tuesday, July 9th
 
 @!(ref "logs" "logs" "2024_07_09")!@
 
@@ -95,3 +95,115 @@ More thoughts on Poke demo. Created some follow-up tasks.
 
 Paired with Dan, got the rest of the typescript react
 demo working.
+
+* Wednesday, July 10th
+
+I truly do not /
+understand how the sound works /
+inside TIC-80
+
+Tasks: @!(taskref "tic80-sine-tone")!@, @!(taskref
+"drawing-tablet-experiments")!@.
+
+Late morning. The first half of the day was spent
+playing with my XP-Pen drawing tablet that
+arrived in the mail. I got it hooked up to my
+drawing synth, and had a good time getting people
+to play around with it.
+
+Some good ideas presented: somehow adding ostinato
+rhythms and grooves, and adding in fricatives
+when when you suddenly accelerate, and also
+adding virtual "bumps" in the space that cause
+frications to happen.
+
+Second half was spend trying
+to code in a sine tone in the TIC-80 audio
+system. I didn't get too far, and frankly I'm
+surprised at how difficult it is to do seemingly
+basic things like injecting a sine tone into
+the signal path.
+
+A few difficulties in this codebase. First, the
+sound engine code is designed as if it were a
+low level virtual machine, which makes the code
+logic a little hard to follow. Second, there
+seems to be a lot of macro magic going on, so
+it is difficult to trace certain definitions
+in the codebase.
+
+Towards the end of my tic80 troubleshooting, I
+just started putting printfs everwhere in a desperate
+attempt to see something - anything really - work.
+
+Finally, I snuck in a few minutes inking down
+a few more ideas about chord generation in this
+ensemble interface I'm thinking about. I'm working
+towards having a single voice you control the pitch
+of, with two other voices automatically picking
+notes to form a triad. It is my hope that,
+delaying the notes chosen, otherwise known as
+"staggering", will cause some interesting "in-between"
+harmonies and tensions during the transitions
+from one stable triad to the next.
+* Thursday, July 11th
+
+More sine tone attempts /
+More singing drawing tablets /
+All you need is NAND
+
+Tasks: @!(taskref "poke-sound-warning")!@, @!(taskref "drawing-tablet-demo")!@, @!(taskref
+"tic80-sine-tone")!@, @!(taskref "read-elem-compsys")!@.
+
+Added a sound warning to Poke.
+
+I had more attempts to tic80 sound working. I found myself
+going outwards in the abstraction towards the OS
+audio callbacks again, and learned that my build
+was using the SDL backend. I also was figuring out
+more about the tic80's tick start/end mechanics,
+and how it relates to the audio callback. It would
+seem that because tic80's tick functions are managed
+inside of the drawing thread,
+audio timing is partially controlled 
+by the drawing callback. Which is weird. I'm wondering
+if their "blip buffer" resampling solution is somehow
+involved in making this work. It's very strange
+code to follow, and there seems to be a lot of
+macro magic which makes it difficult to grep for
+stuff.
+
+I basically "completed" my singing tablet demo.
+I took my experiment, refactored the wrong things
+(argument parser), then I refactored the right things
+(pulled the message handler out into another file),
+then finally added some pitch quantization, vibrato,
+and reverb.
+
+I think I might have nerfed the experience
+with the pitch quanitization to be honest. It
+seems like the people I showed the quantized
+version to used it for less time compared to
+when it was "fretless". People really enjoyed
+the fluidic expressiveness of the pitch control
+and getting it to emote things using just
+inflection. Food for thought for another demo?
+
+I had my first career meeting today. They pegged
+me as a systems guy, which I think is a good fit?
+I do tend to think in terms of systems in my work,
+and so far quite enjoy what I've been reading about.
+I am rethinking my priorities slightly, and wondering
+if it's worth my time to do any more with frontend
+tools. I might shift my focus to more systems stuff.
+
+Partially motivated by my career meeting, I started
+more seriously diving into "Elements of Computer
+Systems", AKA the textboook used in nand2tetris.
+There is a hard copy of here at the RC library. I
+do like reading on paper instead of screen.
+
+I pinged CE again about computer engineering stuff,
+and they gave me a treasure trove of things to look at.
+I am grateful for their thoughtfulness. I hope to
+look dig into that in the next couple days.

@@ -1,4 +1,4 @@
-default: singer_tablet_test
+default: trio
 
 OBJ=main.o tablet.o
 
@@ -15,7 +15,7 @@ DSPLIBPATH=dsp/target/release
 DSPLIB=$(DSPLIBPATH)/libvoxdsp.a
 
 
-singer_tablet_test: $(OBJ) $(DSPLIB)
+trio: $(OBJ) $(DSPLIB)
 	$(CC) $(CFLAGS) $(OBJ) -o $@ $(LDFLAGS) $(LIBS)
 
 RUST_FILES=dsp/src/lib.rs
@@ -24,5 +24,5 @@ $(DSPLIB): $(RUST_FILES)
 	cd dsp; cargo build --release
 
 clean:
-	$(RM) $(OBJ) singer_tablet_test
+	$(RM) $(OBJ) trio
 	cd dsp; cargo clean

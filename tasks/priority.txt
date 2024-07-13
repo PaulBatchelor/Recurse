@@ -3,24 +3,15 @@ tasks that I intend to work on in the next few days or so.
 
 @add-day-titles add day titles to logs (retro-actively)
 
-@dagzet-rust Port dagzet to rust
-
-@consider-poke-follow-up Consider poke follow-up?
-
 @LC75 Leetcode 75
 Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 
-@drawing-tablet-experiments drawing tablet experiments
-
-@react-escape-hatches read React: escape hatches
-link [[https://react.dev/learn/escape-hatches]].
-
-@concept-concerto Flesh out "concerto" concept
-
-@drawing-tablet-demo work out initial drawing tablet demo
-
 @tic80-sine-tone Inject a sine tone into tic80 audio pipeline
 
-@poke-sound-warning Add sound warning
+@read-elem-compsys Read: Elements of Computer Systems
 
-@LC75-scraper build LC-75 web scraper
+@compeng-resources Import CE resources and links into knowledge graph
+
+@dagzet-rust Port dagzet to rust
+
+@demo-trio Create "trio" demo
