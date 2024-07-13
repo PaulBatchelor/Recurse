@@ -51,7 +51,7 @@ control.
 
 @09:01 Another stab at this tic80 sound stuff #tic80-sine-tone
 
-@09:06 looking at ringbuf in tick end function #poke-sound-warning
+@09:06 looking at ringbuf in tick end function #tic80-sine-tone
 It seems like there's a ring buffer of registers,
 and a register holds the data for one frame of audio.
 A frame consists of 4 channels of sound. Each channel
