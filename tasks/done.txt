@@ -234,3 +234,5 @@ become familiar with some frontend technologies.
 
 @concept-concerto Flesh out "concerto" concept
 
+@tic80-sine-tone Inject a sine tone into tic80 audio pipeline
+

@@ -160,3 +160,79 @@ PCM data (128 samples) to the blip buffer.
 called in =runEnvelope= and =runNoise=. There's a similar
 pattern to both of these, where a "period"
 is determined from some frequency value.
+
+@16:28 Another attempt. #tic80-sine-tone #timelog:02:07:33
+
+@16:29 Let's isolate where those opening blips are coming from #tic80-sine-tone
+In the =sfx= callback, which is in =tic_core_sound_tick_start=.
+
+@16:38 runPcm isn't doing anything. #tic80-sine-tone
+when I comment the call =runPcm=, sound still works.
+This must some way to get PCM data in like sample
+playback stuff.
+
+@16:41 Making test noise now. #tic80-sine-tone
+If my intuition is understanding this correctly,
+I think this program takes in a pile of delta time
+values, and turns that into a workable buffer?
+I have two optional things to try. One could be:
+write new deltas directly to the blip. Another
+could be, write to the existing PCM channel.
+---
+I got noise working! But, It's stereo noise, and
+I was expecting mono noise. I forgot that
+stereo synthesize is called twice, once for
+each channel.
+---
+Noise is working! It is being written to the
+ringbuf PCM data before calls to =stereo_synthesize=
+are made. I'm noticing gaps in the noise when
+I go between the editor and the console.
+
+@17:03 now, to make it a square. #tic80-sine-tone
+I get the sense that I might not be handling the
+data type correctly. It might be short (16-bit)
+ints, not 8-bit ones. A pitched square will
+for sure be able to figure it out.
+---
+The pitch is wrong. I'm assuming a 44.1 samplerate
+in the square calculation.
+But the blip-buf might be targetting another
+samplerate like 8kHz or something.
+
+@17:18 trying to understand how blip initialization works #tic80-sine-tone
+So the function =blip_set_rates= is definitely being
+set to be the host sample rate of 44.1kHz,
+however, the blip buffer gets initialized to be
+only a 10th of that size, making it effectively 
+~4khz max. Right? And that's assuming 1 channel.
+There are 4 channels that need to share that
+buffer, so that's like 1kHz?
+
+@17:26 Trying the square the blip-buf way. #tic80-sine-tone
+Okay. I'm fighting blip-buf itself somehow? I
+don't want to waste any more time trying
+to figure that out.
+
+@17:44 Writing a square after blip-buf #tic80-sine-tone
+
+@17:59 Finally found the tic80 struct? #tic80-sine-tone
+It wasn't opaque, I just wasn't looking in
+the top level directory. It's in =include/tic80.h=.
+Wow. That's embarassing.
+
+@18:14 What could be causing the crackling? #tic80-sine-tone
+My square shouldn't be crackling. I refuse to
+believe that it's buffer xrun. Sure does sound
+like it though.
+
+@18:17 zeroing out the buffer should have caused the blip to be off #tic80-sine-tone
+This is a clue.
+
+@18:25 Good lord we have a square now. #tic80-sine-tone
+I just messed up the logic for filling up interleaved
+audio.
+
+@18:26 Getting ready to make my damn sine. #tic80-sine-tone
+
+@18:30 sine tone created. it is done now. #tic80-sine-tone
