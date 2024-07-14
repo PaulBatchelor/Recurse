@@ -1,4 +1,4 @@
-@2024-05-23 Day 4.
+@2024-05-23 Day 4. mono WAV writer in C
 @09:00 Morning Logging
 Raining today, might go into the hub later.
 @09:48 VoxBox project setup thoughts #rust-proj-setup

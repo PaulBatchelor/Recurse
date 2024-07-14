@@ -1,4 +1,4 @@
-@2024-06-25 Day 37.
+@2024-06-25 Day 37. HTMLize codestudy work, half-baked demos
 46 days left of batch.
 ---
 A table of contents sure would be nice, huh. @!(taskref "toc-logs")!@.

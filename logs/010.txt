@@ -1,4 +1,4 @@
-@2024-05-29 Day 10.
+@2024-05-29 Day 10. Glottis Scaffolding, some realtime audio in Rust
 Prev: Audio Hang, Software Foundations, Graphics Hang, Rust
 ---
 Next: Port Glottis Algorithm to Rust, C Creatures, WASM Group

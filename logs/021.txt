@@ -1,4 +1,4 @@
-@2024-06-09 Day 21.
+@2024-06-09 Day 21. Even more NaN-hunting. Initial preset export. Synthesized overtone throat singing.
 
 @10:32 Compare nose reflections with tract implementation. #implement-velum
 

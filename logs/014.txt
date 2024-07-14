@@ -1,4 +1,4 @@
-@2024-06-02 Day 14.
+@2024-06-02 Day 14. Initial singing web demo
 @15:20 continue setting up DRM sliders #initial-singing-web
 @16:00 Add glottal controls #initial-singing-web
 @16:35 Is aspiration actually working? #initial-singing-web

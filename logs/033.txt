@@ -1,4 +1,4 @@
-@2024-06-21 Day 33.
+@2024-06-21 Day 33. Attempted better tract length control, "Milowda" chords
 50 Days Left of Batch
 ---
 Prev: VoxBoxOSC works!, Tongue Control in VoxBox, React

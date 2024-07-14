@@ -1,4 +1,4 @@
-@2024-05-24 Day 5
+@2024-05-24 Day 5 planning VoxBox, monowav in Rust
 @08:50 Wrap up logging from yesterday
 @09:00 Write checkin
 Prev: more voxbox scaffolding, wrote a simple wav writer in

@@ -43,3 +43,9 @@ mainly doing this so I can compose some of this audio
 telephone thing using mnolth. Frankly, the Uxn
 thing in GestVM is a bit cumbersome.... the setup
 time takes too long.
+
+@09:47 publishing
+
+@09:50 Let's add some titles to my logs. #add-day-titles #timelog:00:38:08
+
+@10:30 Clearly, I really do not want to do this. #LC75

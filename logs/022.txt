@@ -1,4 +1,4 @@
-@2024-06-10 Day 22.
+@2024-06-10 Day 22. Preset import. React tic-tac-toe.
 61 days until the end of my batch (August 10th)
 ---
 Prev: Velum/Nasal debugging. Some demos involving

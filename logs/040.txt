@@ -1,4 +1,4 @@
-@2024-06-28 Day 40.
+@2024-06-28 Day 40. Missing nodes. HTML/WASM export in tic80.
 42 days left of batch.
 
 @07:28 Get Sokol example working on new laptop #investigate-tic80

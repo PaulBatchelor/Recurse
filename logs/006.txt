@@ -1,5 +1,4 @@
-@2024-05-25 Day 6
-Saturday. Not too much work.
+@2024-05-25 Day 6. Saturday. Not too much work.
 
 @14:50 Add ink from last week to repo
 @15:05 Set up ad-hoc workspace

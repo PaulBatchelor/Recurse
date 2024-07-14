@@ -1,4 +1,4 @@
-@2024-06-07 Day 19.
+@2024-06-07 Day 19. Initial velum implementation. The NanHunt begins.
 Prev: game jam. some velum stuff.
 ---
 Next: logging presentation for tool-time, velum.

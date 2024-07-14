@@ -1,4 +1,4 @@
-@2024-06-18 Day 30.
+@2024-06-18 Day 30. VoxBox over OSC, more Chords.
 53 Days Left of Batch.
 ---
 prev: Initial chords demo code works in browser, needs

@@ -1,4 +1,4 @@
-@2024-05-31 Day 12.
+@2024-05-31 Day 12. Picked up keys. Initial working vocal tract.
 @09:09 Morning triaging
 @09:30 Packing workstation up for new place (approximate time)
 @10:30 Leave for Recurse (approximate time)

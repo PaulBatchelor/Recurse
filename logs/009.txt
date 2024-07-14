@@ -1,4 +1,4 @@
-@2024-05-28 Day 9.
+@2024-05-28 Day 9. Rust code organization.
 Prev: Added my task management system to my static site
 generator @!(ref "taskgroups")!@. Ported phasor algorithm to
 Rust [[https://github.com/PaulBatchelor/BoingBoingBoing/blob/main/src/phasor.rs]],

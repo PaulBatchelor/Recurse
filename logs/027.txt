@@ -1,4 +1,4 @@
-@2024-06-15 Day 27.
+@2024-06-15 Day 27. Coarse tract size control, Linear Gesture Demo, Better Sounds in Chords demo
 56 days left of batch.
 ---
 prev: read up on react, finished implementing linear gesture

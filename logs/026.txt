@@ -1,4 +1,4 @@
-@2024-06-14 Day 26.
+@2024-06-14 Day 26. Compile Potential VCV Rack plugins, More Gesture Path
 57 days left of batch.
 ---
 Prev: Thinking In React @!(taskref "react-thinking-in-react")!@, 

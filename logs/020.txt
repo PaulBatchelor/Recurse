@@ -1,4 +1,4 @@
-@2024-06-08 Day 20.
+@2024-06-08 Day 20. More NaN-hunting.
 Prev: Tooling workshop, nose/velum/nasal debugging.
 
 Next: NaN-hunting my nose code.

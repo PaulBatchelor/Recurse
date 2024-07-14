@@ -1,4 +1,4 @@
-@2024-06-16 Day 28.
+@2024-06-16 Day 28. Chord progressions in vocal ensemble, studying VCV Potential code
 55 days left of Batch.
 ---
 Prev: Added adjustable vocal tract size to singer demo

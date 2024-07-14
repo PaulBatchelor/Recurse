@@ -236,3 +236,5 @@ become familiar with some frontend technologies.
 
 @tic80-sine-tone Inject a sine tone into tic80 audio pipeline
 
+@add-day-titles add day titles to logs (retro-actively)
+

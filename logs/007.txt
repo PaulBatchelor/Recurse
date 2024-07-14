@@ -1,4 +1,5 @@
-@2024-05-26 Day 7.
+@2024-05-26 Day 7. Recurse Wiki is born. Initial log generator plans
+
 Sunday. I'm starting to think maybe just build a recurse
 weewiki? In many ways it's the path of least resistance.
 

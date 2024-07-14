@@ -1,4 +1,4 @@
-@2024-05-30 Day 11.
+@2024-05-30 Day 11. Glottis algorithm in Rust, thoughts about Tract
 More heads down today. Probably not going into the hub.
 ---
 Prev: C Creatures, Chats, WASM Group, More Rust Audio Pairing
