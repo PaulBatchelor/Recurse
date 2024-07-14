@@ -49,3 +49,37 @@ time takes too long.
 @09:50 Let's add some titles to my logs. #add-day-titles #timelog:00:38:08
 
 @10:30 Clearly, I really do not want to do this. #LC75
+
+@10:52 Initial linear gesture interface work #linear-gesture-interface
+First, I'll build out the initial interface in Rust,
+which will wrap the existing linear gesture node with
+a self contained vector of paths. I'll then write
+some C-style functions that make it possible to
+do the following: initialize, append, tick, and destroy.
+I will make a quick example of this in Rust, which
+will be a good stopping point.
+---
+The next parts involve actually getting this inside
+of mnolth/mnodes, and creating the glue code there.
+
+@10:57 Initial scaffolding #linear-gesture-interface #timelog:00:26:58
+
+@11:20 Creating an int to behavior wrapper #linear-gesture-interface #timelog:00:35:38
+Using this as an opportunity to learn how
+to build a function with proper error handling
+and testing.
+I was going to do a more elaborte check validating
+each "okay" one, but it was less messy just to
+see it catch errors.
+
+@12:01 Build an initial example using interface. #linear-gesture-interface
+
+@12:11 Running into borrow-checker woes #linear-gesture-interface
+
+@12:18 More borrow-checker woes. I am thinking of this problem wrong #linear-gesture-interface
+Instead of building on the existing LinearGesture Generator,
+build a new gesture interface that owns a vector that
+can grow.
+
+@12:29 Things work now. That's enough for now. #linear-gesture-interface #timelog:00:27:52
+Going to work on the C interface next.
