@@ -1,0 +1,12 @@
+ns tablets
+
+nn w700ds
+hl https://www.cnet.com/reviews/lenovo-thinkpad-w700ds-review/
+ln thinkpad w700ds: thinkpad with built in
+ln wacom tablet
+rm mentioned by Carsten
+
+nn retrocad_digitizers
+hl https://youtu.be/1DF5jHmIDgw?si=ZQsWWRNIJlfV1Sr4
+ln RetroCAD: digitizers
+
