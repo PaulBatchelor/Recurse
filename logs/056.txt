@@ -72,7 +72,7 @@ I was going to do a more elaborte check validating
 each "okay" one, but it was less messy just to
 see it catch errors.
 
-@12:01 Build an initial example using interface. #linear-gesture-interface
+@12:01 Build an initial example using interface. #linear-gesture-interface #timelog:01:16:06
 
 @12:11 Running into borrow-checker woes #linear-gesture-interface
 
@@ -83,3 +83,17 @@ can grow.
 
 @12:29 Things work now. That's enough for now. #linear-gesture-interface #timelog:00:27:52
 Going to work on the C interface next.
+
+@13:59 Attempting the C interface #linear-gesture-interface
+
+@14:47 Using C interface with Rust example. #linear-gesture-interface
+I think I can do that right?
+
+@14:50 We cannot make this both a crate and a library, but can we? #linear-gesture-interface
+I did a bit of a hack, which was to duplicate "src/lib.rs",
+make it "src/clib.rs", and then add an example in the
+Cargo toml file.
+
+@15:14 Time to get this in mnodes. #linear-gesture-interface
+
+@16:38 Sidetracked. This will have to wait. #linear-gesture-interface
