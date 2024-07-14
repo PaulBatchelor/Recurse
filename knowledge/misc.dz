@@ -159,8 +159,12 @@ hl https://en.m.wikipedia.org/wiki/Ithkuil
 ln Ithkuil Conlang
 rm mentioned by isaac r
 
-
 nn tinkerbell
 hl https://en.m.wikipedia.org/wiki/Tinkerbell_map
 ln tinkerbell map
 rm mentioned during "chaos" show and tell
+
+nn libevdev_get_abs_maximum
+hl https://www.freedesktop.org/software/libevdev/doc/latest/group__bits.html#ga97a3411ae85f1f3b5c5eb1d5351b11ca]]
+ln libevdev_get_abs_maximum(): how to get max res of tablet
+ln automaticaly.
