@@ -26,4 +26,5 @@ knowledge/next.dz
 knowledge/hello_ts_react.dz
 knowledge/gamedev_misc.dz
 knowledge/compeng.dz
+knowledge/sys.dz
 knowledge/zzz.dz
