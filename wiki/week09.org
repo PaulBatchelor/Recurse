@@ -1,3 +1,44 @@
 #+TITLE: Week 9
 
-* Saturday, July 6th
+* Saturday, July 13th
+
+@!(ref "logs" "logs" "2024_07_13")!@
+
+Tasks: @!(taskref "tic80-sine-tone")!@.
+
+A sine tone signal /
+writes itself to a buffer / 
+after many hours
+
+It took many hours over many days, but
+I finally figured out a decent entry point
+to write a test sine tone to the DAC.
+
+This took much, much longer than I expected.
+
+Part of the reason this took so long was that
+the engine was a little weird (but not as
+weird as I initially thought). Like the rest of
+the system, the TIC80 sound engine is written
+like an 8-bit system, emulating how
+sound chips worked at the time. To make these
+chips work with modern audio systems with
+high fidelity sound, a special library
+is used (blip-buf), which is included in
+the TIC-80 codebase. This was not an easy library
+to figure out.
+
+(I should mention that the only available documentation I
+had here were the code comments, which were helpful).
+
+The other reason it took so long (I'm a little
+embarassed to admit this) is that I couldn't
+find all the code I needed to see (I wasn't
+searching in the right directory). In my hubris,
+I simply declared early on that those structs were
+dynamically generated with too many macros and
+therefore considered "opaque". No no. It turns
+out they were in fact, in a file somewhere in
+one place. A lot of time was spent needlessly
+black-boxing stuff to figure out what the data
+was. Sigh.

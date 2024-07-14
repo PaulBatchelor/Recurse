@@ -56,7 +56,7 @@ the use of macros makes it very opaque. I can't
 simply grep or use ctags to find definitions in
 the codebase.
 ---
-Take, for instance, this line (breaks and indentatoin
+Take, for instance, this line (breaks and indentation
 my own):
 ===
 #+BEGIN_SRC c

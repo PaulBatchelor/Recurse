@@ -1,0 +1,45 @@
+@2024-07-14 Day 56.
+26 days left of batch.
+---
+Prev:
+
+A sine tone signal /
+writes itself to a buffer / 
+after many hours
+---
+Next:
+
+|| @!(taskref "add-day-titles")!@: First thing today.
+
+|| @!(taskref "linear-gesture-interface")!@: build
+some code that makes it easier to build out linear
+gestures using mnolth
+
+|| @!(taskref "dagzet-rust")!@: if there's time.
+
+
+@09:06 Morning triage
+
+@09:23 A couple notes on blip-buffer size #tic80-sine-tone
+This is going to bother me if I don't write it down.
+I made a mention that having a buffer size of (sr/10)
+would effectively downsample the buffer by 10x, and
+this is not true. It's not true because that buffer
+is not filling in a second of audio, it's 1/60th of
+a second of audio.
+---
+Let it be known that many incorrect assumptions and guesses
+were made here. I leave them intact for historical reasons.
+
+@09:33 Indulging myself a little bit here #linear-gesture-interface
+I've got a linear gesture interface that works pretty
+well in VoxBox, and I'd like to be able to use it
+with mnolth. I also want to be able to populate gesture
+from within lua. To do this, I'll need to build out
+an interface in rust, export a C interface, and
+write some mnolth glue code (mnodes).
+---
+mainly doing this so I can compose some of this audio
+telephone thing using mnolth. Frankly, the Uxn
+thing in GestVM is a bit cumbersome.... the setup
+time takes too long.
