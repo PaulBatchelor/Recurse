@@ -93,3 +93,7 @@ rm useful when building dagzet in rust
 nn bitwhip
 hl https://github.com/bitwhip/bitwhip
 ln bitwhip: low latency screen sharing
+
+nn large_codebases
+hl https://kerkour.com/rust-how-to-organize-large-workspaces
+ln How to organize large Rust codebases
