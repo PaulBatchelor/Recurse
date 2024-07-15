@@ -99,3 +99,18 @@ deep copying an entire event.
 ---
 For dequeue, I should either return a reference or an id
 that eventually resolve to a reference.
+
+@15:49 More work on dagzet in rust #rust-dagzet #timelog:00:35:58
+@15:50 Let's run clippy on my dagzet project so far #rust-dagzet
+Turns out it doesn't have a lot to say.
+---
+Voxbox, on the other hand, is a mess.
+
+@15:52 cargo clippy is a mess on this repo #voxbox-cargo-clippy
+I also think some of the examples are broken?
+
+@16:19 finished new node command, now lines. #rust-dagzet
+
+@16:32 Looking at bytebeat stuff with dan
+
+@17:09 pairing on visuals
