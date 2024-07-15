@@ -1,0 +1,51 @@
+@2024-07-15 Day 57.
+
+Prev:
+
+Wanted lines with sound /
+Built the necessary tools /
+Abandoned the Thought
+
+---
+
+Next:
+
+|| @!(taskref "event-driven-gesture")!@: initial work on
+event-driven gesture interface
+
+|| @!(taskef "dagzet-rust")!@: more dagzet work, cuz
+I didn't get to it yesterday.
+
+---
+
+Very tired and groggy today. I've been going to bed
+too late, and waking up too early.
+
+@08:41 Morning Triage
+
+@08:42 After all that work yesterday, I didn't use any of it #linear-gesture-interface
+I'll briefly try to defend the notion that it was mostly
+a good effort. For starters, I got very a convenient linear
+gesture interface, which required some moderate thinking
+about design in rust with ownership in mind. Secondly,
+I got Rust code working in mnolth for the first time, and
+this is important because it shows that I can leverage
+what I've done before to boost what I'm working on
+right now.
+
+@08:45 As it turns out, there was no time yesterday. #dagzet-rust
+
+@09:01 hoping to start work on event-driven gesture today #event-driven-gesture
+Using the trait system in place, the problem is a matter
+of how to build the "next" gesture. I'm thinking of
+implementing an event queue, possibly fixed sized.
+---
+I think the plan is to have this work in a single-threaded
+context first, then building abstractions around that
+inside of an existing event system. (in a webaudio worklet,
+this would wrap around the "onmessage" passing interface
+used).
+
+@09:11 Publishing.
+Zulip will be a re-cap of last week with a link to
+the weekly page.

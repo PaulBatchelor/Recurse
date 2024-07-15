@@ -257,8 +257,8 @@ look dig into that in the next couple days.
 * Friday, July 12th
 @!(ref "logs" "logs" "2024_07_12")!@
 
-some zettelkastens
-directed acyclic graphs,
+some zettelkastens /
+directed acyclic graphs, /
 bytebeats, and trios
 
 Tasks: @!(taskref "dagzet-rust")!@, @!(taskref
