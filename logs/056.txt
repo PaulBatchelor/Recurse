@@ -1,4 +1,4 @@
-@2024-07-14 Day 56.
+@2024-07-14 Day 56. Week 9. Linear Gesture Builder for mnolth
 26 days left of batch.
 ---
 Prev:
@@ -16,7 +16,6 @@ some code that makes it easier to build out linear
 gestures using mnolth
 
 || @!(taskref "dagzet-rust")!@: if there's time.
-
 
 @09:06 Morning triage
 

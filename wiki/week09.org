@@ -42,3 +42,33 @@ out they were in fact, in a file somewhere in
 one place. A lot of time was spent needlessly
 black-boxing stuff to figure out what the data
 was. Sigh.
+
+* Sunday, July 14th
+
+@!(ref "logs" "logs" "2024_07_13")!@
+
+Wanted lines with sound /
+Built the necessary tools /
+Abandoned the Thought
+
+Tasks: @!(taskref "add-day-titles")!@, @!(taskref "linear-gesture-interface")!@.
+
+Retro-actively added some titles to my @!(ref "logs")!@.
+I feel like there's something of a narrative now.
+
+Most of yestreday was spent building a better programming
+interface for signal processing algorithm I'm calling a
+"linear gesture".
+I was working on a composition, and I wanted to use
+my Gesture algorithms to control effects like you
+would an automation curve. I also wanted to use
+my mnolth system, which meant I wanted to be able to
+use C. But my stuff was written in Rust. So, the task
+was to get some existing rust code in VoxBox working
+with an existing C project. I ended up getting
+sidetracked with conversatoins all day.
+But, in the evening I did get it to work.
+
+I ended up not using any of the code, and basically
+just submitted the raw sketch of my composition
+instead. I believe there is a lesson to be learned.
