@@ -71,4 +71,31 @@ which feels nice.
 I'm making use of Result and putting return codes
 into a single Enum. This is just mirroring how I'd
 do it in C. Hopefully it's idiomatic enough in Rust.
-Eventually, handle error gracefully. Panic is okay.
+
+@13:49 Gesture event queue initial scaffolding #event-driven-gesture #timelog:01:46:56
+
+@14:27 What are the common verbs used to describe queueo operatoins? #event-driven-gesture
+push/pop makes sense to me, but those are stack terms not
+queue terms.
+---
+Wikipedia tells me they use the terms "dequeue" and
+"enqueue".
+---
+Side note: my tired brain is having a great time parsing
+the "ueue"s of these words. Imagine if you pronounced it
+"wehweh". Hilarious.
+
+@14:59 Unions are unsafe. doh. #event-driven-gesture
+I'm kludging it into a struct with optionals
+for now. This doesn't spark joy. I'm going to test this
+well, and when/if I refactor, I can rely on these tests.
+
+@15:11 Get tests working for pushing other event types #event-driven-gesture
+
+@15:15 interface is wrong. too much data allocation #event-driven-gesture
+For enqueue, I should only be passing specific data types,
+and then mutating the internal event array. Right now,
+deep copying an entire event.
+---
+For dequeue, I should either return a reference or an id
+that eventually resolve to a reference.
