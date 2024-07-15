@@ -97,3 +97,7 @@ ln bitwhip: low latency screen sharing
 nn large_codebases
 hl https://kerkour.com/rust-how-to-organize-large-workspaces
 ln How to organize large Rust codebases
+
+nn doc_comments
+ln doc comments in rust (rust by example)
+hl https://doc.rust-lang.org/rust-by-example/meta/doc.html
