@@ -116,3 +116,6 @@ I also think some of the examples are broken?
 @17:09 pairing on visuals
 
 019:00 home
+
+@20:25 back to dagzet #rust-dagzet #timelog:00:22:25
+added a lines command. now I'm very tired.
