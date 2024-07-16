@@ -1,4 +1,5 @@
-@2024-07-15 Day 57.
+@2024-07-15 Day 57. Event-driven Gesture, Dagzet, Testing in Rust
+25 days left of batch.
 
 Prev:
 
@@ -13,7 +14,7 @@ Next:
 || @!(taskref "event-driven-gesture")!@: initial work on
 event-driven gesture interface
 
-|| @!(taskef "dagzet-rust")!@: more dagzet work, cuz
+|| @!(taskref "dagzet-rust")!@: more dagzet work, cuz
 I didn't get to it yesterday.
 
 ---

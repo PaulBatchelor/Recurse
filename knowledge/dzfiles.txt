@@ -28,4 +28,5 @@ knowledge/gamedev_misc.dz
 knowledge/compeng.dz
 knowledge/sys.dz
 knowledge/tablets.dz
+knowledge/gameboy.dz
 knowledge/zzz.dz
