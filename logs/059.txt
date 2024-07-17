@@ -161,3 +161,17 @@ the next value will be set.
 @15:47 Tests have been made. They fail. Now to implement it. #event-driven-gesture
 
 @15:53 Wait implemented, tests pass. #event-driven-gesture
+
+@16:02 Shelving tic80 voxbox demo for now #tic80-voxbox
+This feels like a dead-end at the moment. Maybe if there
+was already an existing following of tic80 peeps who
+were adventerous to make their own builds. BUT, this
+is not the case right now.
+---
+I'm sticking to shareable presentations that work on
+the web. Unfortunately, the wasm is pre-built so there
+is no great way to hack audio into this.
+---
+I honestly don't have any meaningful things to do with this
+new hack I did. It serves no other purpose than "oh, I did
+it". It's not enough.
