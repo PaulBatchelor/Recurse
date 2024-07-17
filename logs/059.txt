@@ -44,4 +44,4 @@ unless I can make something that is presentable.
 
 @09:05 Publishing
 
-@09:11 Extracting links and resources from CE's page
+@09:11 Extracting links and resources from CE's page #timelog:00:36:40
