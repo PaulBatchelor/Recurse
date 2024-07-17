@@ -17,5 +17,3 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 @linear-gesture-interface build linear gesture interface for mnolth
 
 @event-driven-gesture implement event driven gesture
-
-@impossible-day-2 Impossible day 2: Make a sound toy for the gameboy

@@ -1,4 +1,4 @@
-@2024-07-15 Day 58. Impossible Day. (AGAIN??)
+@2024-07-16 Day 58. Impossible Day. (AGAIN??)
 24 days left of batch.
 
 prev:
@@ -11,7 +11,7 @@ bytebeat stuff part two
 
 next:
 
-|| @!(taskref "impossible-day-2)!@: impossible day,
+|| @!(taskref "impossible-day-2")!@: impossible day,
 take 2: make a sound toy for the gameboy, and do it
 in assembly.
 
@@ -87,3 +87,15 @@ then I'll feel like I've accomplished something original.
 @15:57 Nope wow compiling GBDK is too cursed #impossible-day-2
 
 @16:09 I gotta see if this works on the actual cartridge or not #impossible-day-2
+It does not.
+
+@19:40 More boolean algebra #read-elem-compsys #timelog:01:00:16
+The last part of this chapter had the reader
+implement things like AND, OR, NOT from
+NAND. I could get NOT without too much trouble.
+I figured out an implementation of AND, sort of
+(NOT-NAND did not immediately come to mind. I
+was too busy trying to find patterns in all the
+cases). I struggle with OR, even after looking
+at the answers. It's clear I need to build up
+more intuition.
