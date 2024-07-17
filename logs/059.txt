@@ -83,3 +83,81 @@ For starters, I need to be able to initialize this gesture
 by pushing an initial set of events.
 
 @11:31 got a test to pass for producing first event #event-driven-gesture
+
+@12:00 Audio Hang
+
+@13:33 Event driven gestures part 2 #event-driven-gesture #timelog:02:03:08
+
+@13:41 Need to test that events change when expected #event-driven-gesture
+Behavior we want: events should only be processed at the
+start of a new phase.
+---
+Situation: I push an event A and call =preinit=. I then
+push event B, after the tick is called. What is the
+expected set of states for each period?
+---
+Pre-init sets things up so that our first period for
+sure starts with A. I believe that first tick sets things
+up such that the next state it is transitioning to is also A.
+Either that, or it is uninitialized. Not sure. Checking.
+
+@14:13 event queue is not working as expected #event-driven-gesture
+My test is currently failing to get the next point
+as expected.
+---
+Oh wait, it's because I'm checking the external clock's
+phase changes, not the internal change.
+
+@14:23 quick check on bbl vizzy
+
+@14:26 Trying to see what happens when using =new_period= #event-driven-gesture
+
+@14:36 I am using println to set up a timeline of events #event-driven-gesture
+The order that things get set is very crucial. I want
+to see if I am doing the timing correctly here.
+
+@14:45 I am trying to understand the timeline #event-driven-gesture
+It is eventually correct, but I have to wait about 5 samples
+after the first period.
+---
+Before the first tick, event A is pushed, and then preinit is
+called. This triggets the =next= event to happen, which
+dequeues the event and sets the value.
+---
+At the first tick, next vertex is called immediately.
+There are no values. The cached vertex is left unchanged,
+so it is still A.
+---
+Note to self: I am using =new_period= wrong. The timeline
+---
+Event B is pushed as an event before the next tick.
+It will not be read until the next period.
+When will the next period happen? The current phasor
+is currently set to have a incrementor value of 0.1, so
+10 samples per period. The rate multiplier has been set
+to be 2/3, which is like slowing things down by a factor of
+1.5. The test *does* seem to pass after about 15 samples
+through trial and error.
+
+@14:57 I am tracking the change in phase wrong. #event-driven-gesture
+I need keep track of the interal rephasored value and watch
+for new periods there.
+---
+Works!
+
+@15:06 Now, onto waits #event-driven-gesture
+Wait are events that tell the clock to wait some number
+of periods before processing the next events in the queue.
+---
+A wait time of 1 will wait one whole period before allowing
+further events in the queue to be processed. 
+---
+If I push a wait of 1, and then a scalar in the middle of
+period A, the start of the next period, B will dequeue
+the wait, and then suspend reading other events. At
+the next period C, there will no longer be a wait, and
+the next value will be set.
+
+@15:47 Tests have been made. They fail. Now to implement it. #event-driven-gesture
+
+@15:53 Wait implemented, tests pass. #event-driven-gesture
