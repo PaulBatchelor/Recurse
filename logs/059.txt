@@ -43,3 +43,5 @@ unless I can make something that is presentable.
 @09:02 Hoping to get an example by end of day. #event-driven-gesture
 
 @09:05 Publishing
+
+@09:11 Extracting links and resources from CE's page

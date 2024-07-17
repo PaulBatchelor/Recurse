@@ -14,3 +14,19 @@ tg gamedev fpga
 nn spirtualized_gb_gbc
 ln Spirtualized GB/GBC
 hl https://github.com/spiritualized1997/openFPGA-GB-GBC
+
+nn wikipedia
+hl https://en.wikipedia.org/wiki/Field-programmable_gate_array
+ln FPGA wikipedia page
+
+nn yosys_oss_cad_suite
+ln Yosys OSS CAD Suite
+hl https://github.com/YosysHQ/oss-cad-suite-build
+
+nn fomu
+ln fomu: an FPGA in your USB port
+hl https://tomu.im/fomu.html
+
+nn ULX3S
+ln ULX3S: A powerful, open hardware ECP5 FPGA dev board
+hl https://www.crowdsupply.com/radiona/ulx3s
