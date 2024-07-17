@@ -45,3 +45,41 @@ unless I can make something that is presentable.
 @09:05 Publishing
 
 @09:11 Extracting links and resources from CE's page #timelog:00:36:40
+
+@10:04 back to this event queue #event-driven-gesture #timelog:01:26:19
+
+@10:05 Did I rework the abstraction already? #event-driven-gesture
+
+@10:11 Making clippy happy. #event-driven-gesture
+I don't love this. This feels like busywork.
+
+@10:16 Monowav errors with cargo clippy #event-driven-gesture
+I'm crashing when I run cargo clippy. Let's make
+it not crash. I can deal with the warnings later.
+
+@10:26 Back to event queue, gotta work with other types #event-driven-gesture
+Scalars are being handled, now to work with the other
+types.
+
+@10:47 I am annoyed with clippy now #event-driven-gesture
+This is why nothing gets done. I've been wasting time
+trying to make Clippy happy all in the name of supposedly "better"
+code, and I'm almost 45 minutes with nothing to show.
+---
+It warps the brain, seeing all these squigglys in an editor.
+Like a teacher marking up an essay in red. I don't think
+it's actually possible to turn syntax off in nvim. The
+usualy "syntax off" trick doesn't work.
+
+@10:49 I think the event queue is done? #event-driven-gesture
+I think it's reasonable to think about starting
+the Gesture.
+
+@10:52 Incorporating initial event queue into Gesture. #event-driven-gesture
+I'm liking these incremental tests. What's a good way to
+test that things are working as expected?
+---
+For starters, I need to be able to initialize this gesture
+by pushing an initial set of events.
+
+@11:31 got a test to pass for producing first event #event-driven-gesture
