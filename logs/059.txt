@@ -175,3 +175,41 @@ is no great way to hack audio into this.
 I honestly don't have any meaningful things to do with this
 new hack I did. It serves no other purpose than "oh, I did
 it". It's not enough.
+
+@16:06 Attempting to implement connect #rust-dagzet #timelog:01:07:59
+Connect adds a pair of edges to the graph.
+---
+These are set to be local connections. ID values
+work just fine here.
+---
+I'm curious about knowing how I did cx? Was that
+another structure? Am I checking cycles there?
+---
+cx is another structure and loops/cycles are not=
+being checked for.
+
+@16:37 I think connections don't check for existing nodes until the end? #rust-dagzet
+My original dagzet implementation reperesents the
+dagzet connections as strings that are only checked
+at the end of parsing when all the nodes have been
+added. Only then does it attempt to resolve
+the symbols. This makes for a more permissive
+parser.
+---
+My dagzet parser does the topological sort with
+the strings. I think it would be better to resolve
+those chunks into local ID values before the sort.
+
+@17:09 Connections work, but unverified #rust-dagzet
+This is intentional. Verifications are defferred until
+everything is parsed. Verification is beyond the
+responsibility of connection.
+---
+There is a linear check for already existing
+connections, and a test is put into place
+to make sure this is all properly caught.
+
+@17:13 Shortcuts are not yet supported in co #rust-dagzet
+Adding TODOs for that.
+---
+I've implemented enough today.
