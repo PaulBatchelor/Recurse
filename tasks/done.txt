@@ -238,3 +238,4 @@ become familiar with some frontend technologies.
 
 @add-day-titles add day titles to logs (retro-actively)
 
+@impossible-day-2 Impossible day 2: Make a sound toy for the gameboy

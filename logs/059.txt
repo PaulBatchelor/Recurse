@@ -1,0 +1,45 @@
+@2024-07-17 Day 58.
+23 days left of batch.
+---
+Note to self: 3 time 7 is 21. 23 days feels like
+a small amount of time to me. And it is. But
+it's also a little over 3 weeks, and when I
+say it like that it feels like more time.
+---
+Prev:
+
+Sounds on the gameboy /
+worked in the emulator /
+not on the real thing
+
+---
+Next:
+
+|| @!(taskref "tic80-voxbox")!@: I either need to
+scrap this project, or turn this into a presentable
+demo
+
+|| @!(taskref "event-driven-gesture")!@ keep moving
+forward with this, try to get a working proof of
+concept by today
+
+|| @!(taskref "compeng-resources")!@ Get resources
+imported into knowledge graph
+
+@08:17 Morning Triage
+
+@08:37 follow-up #impossible-day-2
+I figured out that some of the example
+game does have sound working. I don't
+know what I am missing here.
+
+Don't think I'll have much more time for
+this during my batch though.
+
+@08:58 I need to scrap this project, or plan a demo #tic80-voxbox
+I don't think I can justify putting more time into this,
+unless I can make something that is presentable.
+
+@09:02 Hoping to get an example by end of day. #event-driven-gesture
+
+@09:05 Publishing
