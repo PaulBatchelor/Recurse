@@ -9,7 +9,3 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 @dagzet-rust Port dagzet to rust
 
 @demo-trio Create "trio" demo
-
-@linear-gesture-interface build linear gesture interface for mnolth
-
-@event-driven-gesture implement event driven gesture

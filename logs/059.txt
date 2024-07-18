@@ -1,7 +1,7 @@
-@2024-07-17 Day 58.
+@2024-07-17 Day 59. Eventful Gestures and Dagzet
 23 days left of batch.
 ---
-Note to self: 3 time 7 is 21. 23 days feels like
+Note to self: 3 times 7 is 21. 23 days feels like
 a small amount of time to me. And it is. But
 it's also a little over 3 weeks, and when I
 say it like that it feels like more time.
@@ -213,3 +213,15 @@ to make sure this is all properly caught.
 Adding TODOs for that.
 ---
 I've implemented enough today.
+
+@19:22 Reading #read-elem-compsys #timelog:01:08:49
+Finished up reading last bits in chapter 1. Read chapter
+2 (shorter) on Boolean Arithmetic and their ALU.
+---
+I have not done any of the projects yet. I am hoping
+this can be one of those things I can return back to
+when I have a chunk of time available.
+---
+I want to believe that "just reading" without doing
+projects is "not nothing, not everything". That is to say,
+I hope I'm getting something worthwhile from this.
