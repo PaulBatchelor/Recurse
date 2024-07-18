@@ -62,6 +62,7 @@ pub struct VoxData {
     pitch_changed: bool,
     pitch_last_changed: u32,
     cached_lead_pitch: f32,
+    lower_has_changed: bool,
 }
 
 //0  1  2  3  4  5  6  7  8  9 10  11
@@ -94,6 +95,7 @@ impl VoxData {
             time: 0,
             pitch_last_changed: 0,
             pitch_changed: false,
+            lower_has_changed: false,
         };
 
         vd.clk.set_freq(1.0);
@@ -120,9 +122,6 @@ impl VoxData {
 
     fn update_pitches(&mut self) {
         let pitch = self.lead.pitch.value;
-        //self.last_pitch = pitch;
-        //self.lead.pitch.value = pitch;
-
         let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
 
         self.lower.pitch.value = self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
@@ -144,11 +143,6 @@ impl VoxData {
 
         // instantaneous update of lead pitch
         self.lead.pitch.value = pitch;
-
-        // let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
-
-        // self.lower.pitch.value = self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
-        // self.upper.pitch.value = self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
     }
 
     pub fn tick(&mut self) -> f32 {
@@ -162,12 +156,39 @@ impl VoxData {
             let did_pitch_change =
                 self.last_pitch > 0. && self.cached_lead_pitch != self.last_pitch;
 
-            let held_long_enough = (self.time - self.pitch_last_changed) > 0;
-            if did_pitch_change && held_long_enough {
+            let held_long_enough_low = (self.time - self.pitch_last_changed) > 0;
+            let held_long_enough_upper = (self.time - self.pitch_last_changed) > 1;
+
+            if did_pitch_change && held_long_enough_low {
                 //self.lead.pitch.value = self.last_pitch;
-                println!("pitch changed and held long enough");
+                println!("lower: pitch changed and held long enough");
                 self.cached_lead_pitch = self.last_pitch;
-                self.update_pitches();
+                //self.update_pitches();
+
+                let pitch = self.lead.pitch.value;
+                let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+
+                self.lower.pitch.value =
+                    self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+                //self.upper.pitch.value =
+                //    self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+                self.lower_has_changed = true;
+            }
+
+            if self.lower_has_changed && held_long_enough_upper {
+                //self.lead.pitch.value = self.last_pitch;
+                println!("upper: pitch changed and held long enough");
+                self.cached_lead_pitch = self.last_pitch;
+                //self.update_pitches();
+
+                let pitch = self.lead.pitch.value;
+                let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+
+                // self.lower.pitch.value =
+                //     self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+                self.upper.pitch.value =
+                    self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+                self.lower_has_changed = false;
             }
             self.last_pitch = self.lead.pitch.value;
         }

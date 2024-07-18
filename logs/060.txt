@@ -155,3 +155,21 @@ voices.
 I think I'm going to have to do this anyways because the event
 scheduler in the eventful gesture is so small, and can really
 only take one vertice at a time.
+
+@14:34 reworking things for variable stagger times #demo-trio
+The logic would need to be: lower gets set first, then
+upper.
+---
+Initially I had it so that the chord would be determined,
+and then you'd send off the events with delays. Rethinking
+this a bit.
+---
+I want it so that the upper pitch only changes if it waits
+2 beats, and the lower pitch changes if it waits 1 beat.
+
+@14:48 I'm going to try having another state variable #demo-trio
+I want to have a state when the lower changed, but the
+upper hasn't. When the upper gets changed, the lower
+changed gets setup.
+
+@15:01 Now I want the voices to be staggered on too #demo-trio
