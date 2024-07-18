@@ -54,6 +54,14 @@ pub struct VoxData {
     base: u16,
     upper_lookup: [i16; 7],
     lower_lookup: [i16; 7],
+
+    clk: Phasor,
+    lphs: f32,
+    last_pitch: f32,
+    time: u32,
+    pitch_changed: bool,
+    pitch_last_changed: u32,
+    cached_lead_pitch: f32,
 }
 
 //0  1  2  3  4  5  6  7  8  9 10  11
@@ -79,8 +87,16 @@ impl VoxData {
             base: 60,
             lower_lookup: [-5, -3, -1, 0, 2, 4, 5],
             upper_lookup: [4, 5, 7, 9, 11, 12, 14],
+            clk: Phasor::new(sr, 0.),
+            lphs: -1.,
+            cached_lead_pitch: -1.,
+            last_pitch: -1.,
+            time: 0,
+            pitch_last_changed: 0,
+            pitch_changed: false,
         };
 
+        vd.clk.set_freq(1.0);
         vd.upper.voice.vibrato_depth(0.1);
         vd.upper.voice.vibrato_rate(6.2);
         vd.upper.gain.smoother.set_smooth(0.008);
@@ -103,10 +119,9 @@ impl VoxData {
     }
 
     fn update_pitches(&mut self) {
-        let pitch = (self.x_axis * self.pitches.len() as f32) as usize;
-        let pitch = pitch.clamp(0, self.pitches.len() - 1);
-        let pitch = 60.0 + self.pitches[pitch] as f32;
-        self.lead.pitch.value = pitch;
+        let pitch = self.lead.pitch.value;
+        //self.last_pitch = pitch;
+        //self.lead.pitch.value = pitch;
 
         let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
 
@@ -114,11 +129,55 @@ impl VoxData {
         self.upper.pitch.value = self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
     }
 
+    fn check_for_pitch_changes(&mut self) {
+        let pitch = (self.x_axis * self.pitches.len() as f32) as usize;
+        let pitch = pitch.clamp(0, self.pitches.len() - 1);
+        let pitch = 60.0 + self.pitches[pitch] as f32;
+
+        let did_pitch_change = self.last_pitch > 0. && self.last_pitch != pitch;
+
+        if did_pitch_change {
+            println!("changed {} -> {} at {}", self.last_pitch, pitch, self.time);
+            self.last_pitch = pitch;
+            self.pitch_last_changed = self.time;
+        }
+
+        // instantaneous update of lead pitch
+        self.lead.pitch.value = pitch;
+
+        // let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+
+        // self.lower.pitch.value = self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+        // self.upper.pitch.value = self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+    }
+
     pub fn tick(&mut self) -> f32 {
+        let clk = self.clk.tick();
+
+        if self.lphs >= 0. && self.lphs > clk {
+            self.time += 1;
+            println!("tick {}", self.time);
+            //self.pitch_changed = false;
+
+            let did_pitch_change =
+                self.last_pitch > 0. && self.cached_lead_pitch != self.last_pitch;
+
+            let held_long_enough = (self.time - self.pitch_last_changed) > 0;
+            if did_pitch_change && held_long_enough {
+                //self.lead.pitch.value = self.last_pitch;
+                println!("pitch changed and held long enough");
+                self.cached_lead_pitch = self.last_pitch;
+                self.update_pitches();
+            }
+            self.last_pitch = self.lead.pitch.value;
+        }
+
         if self.x_axis != self.px_axis {
             self.px_axis = self.x_axis;
-            self.update_pitches();
+            self.check_for_pitch_changes();
         }
+
+        self.lphs = clk;
 
         let lead = self.lead.tick();
         let lower = self.lower.tick();

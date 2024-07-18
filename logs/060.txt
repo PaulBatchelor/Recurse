@@ -66,13 +66,92 @@ of sync. But, it's good enough for now. I imagine
 I'll be doing this lookup operatoin quite a few times
 I don't want to do a linear sweep every time.
 
-10:50 Up next: connection remarks #dagzet-rust
+@10:50 Up next: connection remarks #dagzet-rust
 Variation on a theme, I suspect.
 Unplugging and getting lunch now.
 
-12:35 Time to revisit the trio. #demo-trio
+@12:35 Time to revisit the trio. #demo-trio
 Now that I supposedly have an event-driven gesture,
 I need to begin work incorporating those mechanics
 into the existing demo.
 
-12:36 refamiliarizing myself with the work. #demo-trio
+@12:36 refamiliarizing myself with the work. #demo-trio
+
+@13:00 light refactoring. main clock added. #demo-trio
+Now, for the initial process of introducing these
+eventful gestures.
+---
+Before any events can be added to any gestures, we need
+to be able to simulate adding events. Events should
+only be added after the lead has held onto a pitch
+for one period.
+---
+The easiest way to do this using a global timer that
+keeps track the phasor ticks, which occur once a second.
+If a u32 is used, how many seconds is that?
+---
+Okay, so that's about a millenium short of 50k years.
+I think there's no general risk of things overflowing. I
+will be long dead and forgotten before that happens to
+a potential user.
+---
+Is this enough granularity though if I want to detect
+pitch changes? Maybe not actually.
+
+@13:11 How to tell if pitch has lasted for a period. #demo-trio
+Might need to ink this one out.
+
+@13:27 Inked out an idea #demo-trio
+First, implement things so that it detects changes in
+pitch. Then, build a sample and hold with along with
+a global monotonically increasing clock that increments
+at the start of every tick.
+---
+Now, any time a pitch change occurs in the lead, it
+can be compared against the sampled pitch. If the
+pitch is different, but the timestamps aren't, the
+whole period is marked as having been changed for
+the rest of the period.
+---
+The "dirty bit" trick is used in situations where
+the pitch changes quickly inside a period.
+
+@13:32 Implementing pitch changes, alert on change. #demo-trio
+
+@13:37 implementing clock and sample and hold #demo-trio
+
+@13:50 shoot. I'm actually unable to articulate when a change *should* happen #demo-trio
+I think there may be another state required.
+---
+How about this:
+If there has been a requested
+pitch change from the current lead pitch, and this request
+has been held for a period, apply this changed pitch
+to the current lead.
+---
+This should happen at the start of every period.
+
+@14:05 well, now my logic isn't working at all. #demo-trio
+I was setting things to be negative oops.
+
+@14:11 this timing logic is trickier than I expected #demo-trio
+
+@14:15 Going to try caching the lead value between takes. #demo-trio
+Caching the lead value and also storing the last changed
+value may be what I'm looking for.
+---
+Essentially, this lead value needs ot be updated regardeless,
+but the other two voices need to be delayed.
+
+@14:19 Okay, the complexity comes from the lead value needing to be updated #demo-trio
+I can't simply cache the last lead pitch every time
+because I'm setting it every time.
+
+@14:23 The delayed behavior works as expected now. #demo-trio
+Now I am looking to delay chord changes on the upper/lower
+voices.
+
+@14:28 I think I might be able to work staggering without gesture #demo-trio
+I think I'm going to have to do this anyways because the event
+scheduler in the eventful gesture is so small, and can really
+only take one vertice at a time.
