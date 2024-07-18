@@ -175,3 +175,8 @@ changed gets setup.
 @15:01 Now I want the voices to be staggered on too #demo-trio
 
 @15:08 Weird timing bugs #demo-trio
+
+@15:14 Try to reset clock on new voice. #demo-trio
+
+@15:34 Clock works, but the voices aren't resetting pitches #demo-trio
+This causes some very rude sounding glisses sometimes.
