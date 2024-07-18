@@ -42,3 +42,26 @@ works well for my needs.
 
 @09:08 Oh my god there's a clippy book
 See @!(dzref "rust/clippy_book")!@.
+
+@09:34 connection shortcuts #dagzet-rust #timelog:01:03:58
+
+@09:39 oh no, I'm getting my task tags wrong #dagzet-rust
+
+@09:42 back on track. #dagzet-rust
+
+@10:00 Reminding myself why string hashmaps are used for nodes #dagzet-rust
+hashmaps are used as the data structure to ensure
+that a node isn't created twice.
+---
+if I wanted to get a node name from a string,
+how would I do that? Right now, the answer seems
+to be enumerate through all the keys and find
+an answer. I could also just make a separate
+inverse lookup table out of a vector.
+
+@10:20 I made an inverse lookup table #dagzet-rust
+It's a memory hit, and there's room for
+the eventual possibility that the tables will go out
+of sync. But, it's good enough for now. I imagine
+I'll be doing this lookup operatoin quite a few times
+I don't want to do a linear sweep every time.
