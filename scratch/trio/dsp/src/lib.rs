@@ -93,28 +93,31 @@ impl VoxData {
         vd
     }
 
-    pub fn get_scale_degree(&self) -> (usize, f32) {
-        let pitch = self.lead.pitch.value as u16 - self.base;
+    fn get_scale_degree(&self, pitch: u16, base: u16) -> (usize, f32) {
+        //let pitch = self.lead.pitch.value as u16 - self.base;
+        let pitch = pitch - base;
         let octave = pitch / 12;
         let pitch = pitch % 12;
         let pitch = PITCH_TO_DIATONIC[pitch as usize];
         (pitch as usize, octave as f32)
     }
 
+    fn update_pitches(&mut self) {
+        let pitch = (self.x_axis * self.pitches.len() as f32) as usize;
+        let pitch = pitch.clamp(0, self.pitches.len() - 1);
+        let pitch = 60.0 + self.pitches[pitch] as f32;
+        self.lead.pitch.value = pitch;
+
+        let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+
+        self.lower.pitch.value = self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+        self.upper.pitch.value = self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+    }
+
     pub fn tick(&mut self) -> f32 {
         if self.x_axis != self.px_axis {
             self.px_axis = self.x_axis;
-            let pitch = (self.x_axis * self.pitches.len() as f32) as usize;
-            let pitch = pitch.clamp(0, self.pitches.len() - 1);
-            let pitch = 60.0 + self.pitches[pitch] as f32;
-            self.lead.pitch.value = pitch;
-
-            let (idx, octave) = self.get_scale_degree();
-
-            self.lower.pitch.value =
-                self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
-            self.upper.pitch.value =
-                self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+            self.update_pitches();
         }
 
         let lead = self.lead.tick();
