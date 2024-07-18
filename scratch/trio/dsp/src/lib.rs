@@ -36,6 +36,10 @@ impl VoiceWithSmoother {
 
         self.voice.tick() * 0.7 * gain
     }
+
+    pub fn reset(&mut self) {
+        self.pitch.reset();
+    }
 }
 
 #[repr(C)]
@@ -64,6 +68,7 @@ pub struct VoxData {
     cached_lead_pitch: f32,
     lower_has_changed: bool,
     lead_playing: bool,
+    please_reset: bool,
 }
 
 //0  1  2  3  4  5  6  7  8  9 10  11
@@ -98,17 +103,18 @@ impl VoxData {
             pitch_changed: false,
             lower_has_changed: false,
             lead_playing: true,
+            please_reset: false,
         };
 
         vd.clk.set_freq(1.0);
         vd.upper.voice.vibrato_depth(0.1);
         vd.upper.voice.vibrato_rate(6.2);
-        vd.upper.gain.smoother.set_smooth(0.008);
+        vd.upper.gain.smoother.set_smooth(0.03);
         vd.upper.pitch.smoother.set_smooth(0.08);
 
         vd.lower.voice.vibrato_depth(0.1);
         vd.lower.voice.vibrato_rate(6.0);
-        vd.lower.gain.smoother.set_smooth(0.009);
+        vd.lower.gain.smoother.set_smooth(0.02);
         vd.lower.pitch.smoother.set_smooth(0.09);
         vd
     }
@@ -137,9 +143,26 @@ impl VoxData {
 
         // instantaneous update of lead pitch
         self.lead.pitch.value = pitch;
+
+        if self.please_reset {
+            println!("resetting THE LEAD PITCH");
+            self.lead.reset();
+        }
     }
 
     pub fn tick(&mut self) -> f32 {
+        if self.please_reset {
+            println!("RESETTING");
+            self.clk.reset();
+            self.last_pitch = -1.;
+            self.time = 0;
+            self.pitch_last_changed = 0;
+            self.lower_has_changed = false;
+            //self.lower.reset();
+            //self.lead.reset();
+            //self.upper.reset();
+        }
+
         let clk = self.clk.tick();
 
         if self.lphs >= 0. && self.lphs > clk {
@@ -169,6 +192,9 @@ impl VoxData {
                 self.lower_has_changed = true;
 
                 if self.lead_playing {
+                    if self.lower.gain.value == 0. {
+                        self.lower.reset();
+                    }
                     self.lower.gain.value = 0.8;
                 }
             }
@@ -189,6 +215,9 @@ impl VoxData {
                 self.lower_has_changed = false;
 
                 if self.lead_playing {
+                    if self.upper.gain.value == 0. {
+                        self.upper.reset();
+                    }
                     self.upper.gain.value = 0.8;
                 }
             }
@@ -200,6 +229,7 @@ impl VoxData {
             self.check_for_pitch_changes();
         }
 
+        self.please_reset = false;
         self.lphs = clk;
 
         let lead = self.lead.tick();
@@ -243,6 +273,10 @@ impl SmoothParam {
     pub fn tick(&mut self) -> f32 {
         self.smoother.tick(self.value)
     }
+
+    pub fn reset(&mut self) {
+        self.smoother.snap_to_value(self.value);
+    }
 }
 
 #[no_mangle]
@@ -285,13 +319,16 @@ pub extern "C" fn vox_pitch(vd: &mut VoxData, pitch: f32) {
 
 #[no_mangle]
 pub extern "C" fn vox_gate(vd: &mut VoxData, gate: f32) {
+    println!("gate: {gate}");
     if gate == 0.0 {
         vd.lead.gain.value = 0.;
         vd.upper.gain.value = 0.;
         vd.lower.gain.value = 0.;
         vd.lead_playing = false;
     } else {
+        vd.please_reset = true;
         vd.lead.gain.value = gate * 0.8;
+        vd.lead.reset();
         vd.lead_playing = true;
     }
 }
