@@ -239,3 +239,12 @@ become familiar with some frontend technologies.
 @add-day-titles add day titles to logs (retro-actively)
 
 @impossible-day-2 Impossible day 2: Make a sound toy for the gameboy
+
+@event-driven-gesture implement event driven gesture
+
+@linear-gesture-interface build linear gesture interface for mnolth
+
+@vscode-rust-setup set up rust workflow in vscode
+
+@rust-neovim-setup set up rust with neovim
+link: [[https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/]]

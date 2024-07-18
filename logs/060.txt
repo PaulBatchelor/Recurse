@@ -1,0 +1,44 @@
+@2024-07-18 Day 60.
+Prev:
+
+event queue finished /
+eventful gesture looming /
+no more tic80
+---
+Next:
+
+|| @!(taskref "demo-trio")!@: start work
+implementing voice staggering.
+
+|| @!(taskref "dagzet-rust")!@: continue onwards
+with this
+
+|| @!(taskref "read-elem-compsys")!@: more reading.
+
+@08:12 Morning Triage
+
+@08:39 complete in theory. time to test in trio demo. #event-driven-gesture #demo-trio
+Attempt voice staggering using event-driven gesture
+algorithm, see what goes wrong.
+
+@08:47 dagzet could bea good portfolio project #dagzet-rust
+It's got a good scope, it's got data structures, and
+I'm putting in the time to incrementally test as
+I go.
+---
+This is also a migration project. If I do this right,
+I should be able to drop in the dagzet program
+and have it replace my adhoc lua code for my
+knowledge tree generator, which I'm using
+to power the knowledge graph here.
+
+@08:53 This has been completed #rust-neovim-setup
+
+@08:54 Not today, vscode. Not today #vscode-rust-setup
+vscode does not work on Alpine, and NeoVim
+works well for my needs.
+
+@09:05 publishing
+
+@09:08 Oh my god there's a clippy book
+See @!(dzref "rust/clippy_book")!@.

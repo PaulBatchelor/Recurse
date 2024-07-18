@@ -147,3 +147,79 @@ was too busy trying to find patterns in all the
 cases). I struggle with OR, even after looking
 at the answers. It's clear I need to build up
 more intuition.
+
+* Wednesday, July 17th
+
+@!(ref "logs" "logs" "2024_07_17")!@
+
+event queue finished /
+eventful gesture looming /
+no more tic80
+
+Tasks: @!(taskref "tic80-voxbox")!@, @!(taskref "compeng-resources")!@, @!(taskref
+"event-driven-gesture")!@, @(taskref "rust-dagzet")!@
+
+** Event Queue Finished
+I have been building a very simple event queue in
+Rust, with the idea that it can be used in the
+context of something I'm building called an
+"event-driven gesture", which is an idea I had
+to take my Gesture algorithm and make it controllable
+through events.
+
+I believe I have implemented all the initial
+features for this event queue. The functionality
+and behaviors have all been worked out incrementally
+using the test suite.
+
+** Eventful Gesture Looming
+The "event-driven gesture" is being called
+"EventfulGesture" in VoxBox. This has been
+built out, and seems to work as expected in
+the test suite. I now need try and use this
+and see if it actually works.
+
+To test this out, I'm going to have to jump
+right in and start working with it in this
+trio demo, using it to implement voice staggering.
+
+** no more tic80
+I've decided to shelve the tic80 project, despite
+my investment of time into it over the last
+few weeks. It just doesn't fit with what I came here
+to do.
+
+Things would be different if there were an
+already active interest in tic80
+at RC, or my hacks could more easily work on the
+web, or if it was written in a language more
+people here were excited about (tic80 engine
+is written in C, and it's difficult finding
+enthusiasm for C here).
+
+But alas, no. None of that here. So, it's
+not worth my time right now.
+
+** Computer Engineering Resources
+A fellow recurser has been quite generous with
+their knowledge recently. After I asked them
+about resources in computer engineering, they
+made a whole page on it. I found some time
+to look into these and add them to my Dagzet.
+
+The node on my dagzet: @!(dzref "compeng/eckman_resources")!@.
+Follow the child nodes to see the resources.
+
+** Dagzet in Rust continues
+Spent a decent chunk of time doing more work on my
+Rust port of Dagzet. There are now lines and connections
+working.
+
+I keep getting dazzled and distracted by all the stimulating
+fanciness that is Neovim and Clippy. The colors,
+animations, and the desire to unsquiggle all the squiggles
+that the clippy linter makes for me. It's very districacting,
+and I grew frustrated with how it hijacked my attention.
+
+I am amused that =:syntax off= doesn't actually seem to do
+anything in neovim.

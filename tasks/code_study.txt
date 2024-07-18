@@ -7,4 +7,5 @@ link: [[https://github.com/sedson/SynthKit]]
 @study-rusty-bikes code study: rusty bikes
 link: [[https://github.com/binhrobles/rusty-bikes]]
 
-
+@study-ripgrep code study: ripgrep
+link: [[https://github.com/BurntSushi/ripgrep]].
