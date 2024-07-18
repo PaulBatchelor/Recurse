@@ -63,6 +63,7 @@ pub struct VoxData {
     pitch_last_changed: u32,
     cached_lead_pitch: f32,
     lower_has_changed: bool,
+    lead_playing: bool,
 }
 
 //0  1  2  3  4  5  6  7  8  9 10  11
@@ -96,6 +97,7 @@ impl VoxData {
             pitch_last_changed: 0,
             pitch_changed: false,
             lower_has_changed: false,
+            lead_playing: true,
         };
 
         vd.clk.set_freq(1.0);
@@ -118,14 +120,6 @@ impl VoxData {
         let pitch = pitch % 12;
         let pitch = PITCH_TO_DIATONIC[pitch as usize];
         (pitch as usize, octave as f32)
-    }
-
-    fn update_pitches(&mut self) {
-        let pitch = self.lead.pitch.value;
-        let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
-
-        self.lower.pitch.value = self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
-        self.upper.pitch.value = self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
     }
 
     fn check_for_pitch_changes(&mut self) {
@@ -173,6 +167,10 @@ impl VoxData {
                 //self.upper.pitch.value =
                 //    self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
                 self.lower_has_changed = true;
+
+                if self.lead_playing {
+                    self.lower.gain.value = 0.8;
+                }
             }
 
             if self.lower_has_changed && held_long_enough_upper {
@@ -189,6 +187,10 @@ impl VoxData {
                 self.upper.pitch.value =
                     self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
                 self.lower_has_changed = false;
+
+                if self.lead_playing {
+                    self.upper.gain.value = 0.8;
+                }
             }
             self.last_pitch = self.lead.pitch.value;
         }
@@ -283,9 +285,15 @@ pub extern "C" fn vox_pitch(vd: &mut VoxData, pitch: f32) {
 
 #[no_mangle]
 pub extern "C" fn vox_gate(vd: &mut VoxData, gate: f32) {
-    vd.lead.gain.value = gate * 0.8;
-    vd.lower.gain.value = gate * 0.8;
-    vd.upper.gain.value = gate * 0.8;
+    if gate == 0.0 {
+        vd.lead.gain.value = 0.;
+        vd.upper.gain.value = 0.;
+        vd.lower.gain.value = 0.;
+        vd.lead_playing = false;
+    } else {
+        vd.lead.gain.value = gate * 0.8;
+        vd.lead_playing = true;
+    }
 }
 
 #[no_mangle]

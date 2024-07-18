@@ -173,3 +173,5 @@ upper hasn't. When the upper gets changed, the lower
 changed gets setup.
 
 @15:01 Now I want the voices to be staggered on too #demo-trio
+
+@15:08 Weird timing bugs #demo-trio
