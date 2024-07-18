@@ -69,3 +69,10 @@ I don't want to do a linear sweep every time.
 10:50 Up next: connection remarks #dagzet-rust
 Variation on a theme, I suspect.
 Unplugging and getting lunch now.
+
+12:35 Time to revisit the trio. #demo-trio
+Now that I supposedly have an event-driven gesture,
+I need to begin work incorporating those mechanics
+into the existing demo.
+
+12:36 refamiliarizing myself with the work. #demo-trio

@@ -34,8 +34,7 @@ impl VoiceWithSmoother {
         self.voice.pitch = self.pitch.tick();
         let gain = self.gain.tick();
 
-        let v = self.voice.tick() * 0.7 * gain;
-        v
+        self.voice.tick() * 0.7 * gain
     }
 }
 
@@ -132,11 +131,11 @@ impl VoxData {
     pub fn running(&mut self) -> u8 {
         let mut state = 1;
 
-        if self.is_running == false {
+        if !self.is_running {
             state = 0;
         }
 
-        return state;
+        state
     }
 }
 
@@ -159,11 +158,6 @@ impl SmoothParam {
     pub fn tick(&mut self) -> f32 {
         self.smoother.tick(self.value)
     }
-}
-
-#[no_mangle]
-pub extern "C" fn testfunction() -> f32 {
-    return 330.0;
 }
 
 #[no_mangle]
