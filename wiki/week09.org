@@ -157,7 +157,7 @@ eventful gesture looming /
 no more tic80
 
 Tasks: @!(taskref "tic80-voxbox")!@, @!(taskref "compeng-resources")!@, @!(taskref
-"event-driven-gesture")!@, @(taskref "rust-dagzet")!@
+"event-driven-gesture")!@, @(taskref "dagzet-rust")!@
 
 ** Event Queue Finished
 I have been building a very simple event queue in
