@@ -157,3 +157,63 @@ The current rust implementation is a little cryptic.
 Add docstrings now.
 
 @13:33 comments added. going to scratch my head how to solve this one #gesture-reset
+
+@13:58 More thoughts on rephasor reset #rephasor-reset #timelog:00:32:20
+Establishing a line of thought here.
+---
+A phasor reset occurs when the ramp suddenly resets
+back to 0 in the middle of period.
+---
+In this scenario, the reset happens as a result of
+an intentional interrupt. It is known precisely
+when this interrupt happens. The rephasor is called
+immediately after this interrupt. For this
+reason, the idea is it can be told ahead of time
+that the phasor reset itself, and to act occordingly.
+---
+Other than the interrupt, it is assumed that the
+clock is moving at a steady rate.
+---
+In order for the rephasor to handle a reset phasor
+properly, it must keep the overall increment amount
+approximately equal to the increment amount of the
+phasor. Any jumps indicate a failure to handle
+this result properly.
+---
+Assmuming rephasor scale amount is 1 (same as input),
+the increment of the rephasor is determined from
+the correction coefficient and the delta of the
+previous sample.
+---
+Possible solution: don't update anything with
+the clock reset artifact in it. Wait for it to pass
+through the system before updating correction
+and incrementor.
+---
+I think waiting two ticks should do it.
+
+@14:12 Trying to implement wait counter method #rephasor-reset
+
+@14:21 now test is passing when it shouldn't #rephasor-reset
+
+@14:23 oh, perhaps this is a non issue #rephasor-reset
+I wrote the test wrong which is why it was failing
+in the first place. But, now it works.
+---
+I think this test might be resilient against this
+particular kind of reset beacuse the phase goes
+to exactly 0 and also that the overall slope
+doesn't change.
+---
+No changes needed. But the test is in there to prove
+this.
+
+@14:31 Time to actually hook up gesture to trio #demo-trio
+
+@14:48 This code is approaching "putting out fires" mode #deom-trio
+I'm feeling a little overwhelmed at the moment.
+---
+Erased my changes. Took a breath.
+
+@15:04 Things sound better than expected. #demo-trio
+It did not crash. Not one crash. Thanks, Rust.
