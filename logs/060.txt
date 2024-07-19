@@ -1,4 +1,6 @@
-@2024-07-18 Day 60.
+@2024-07-18 Day 60. Staggered voices work in Trio.
+22 days left of batch.
+---
 Prev:
 
 event queue finished /
@@ -182,3 +184,25 @@ changed gets setup.
 This causes some very rude sounding glisses sometimes.
 
 @15:45 it works. clocking out. #demo-trio
+
+@16:00 Presentations.
+I co-presented with Dan and Seamus on "bbl_vizzy".
+
+@17:00 Dinner
+First time at stickies. Would go again.
+
+@19:00 Negation needed for NAND. (approximate time)
+DF had a good pair of questions for me.
+First one was "what is NAND?" "Not AND". Follow up:
+"Why NAND? Why not AND?". I could not answer this
+well, but luckily JK was there. I am paraphrasing,
+but it turns out that the negation operation is
+important for Turing completeness. You need the
+negation to do things like turn a 1 to a 0.
+---
+Both NAND and NOR are what are known as "universal
+gates", in that they can be building blocks to
+implement the core boolean operations like AND, OR,
+and NOT.
+
+@19:32 Reading. #read-elem-compsys #timelog:01:01:16
