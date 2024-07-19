@@ -141,3 +141,19 @@ it will return an Ok, otherwise an error code.
 
 @11:02 Placeholder tests and functions in place. #dagzet-rust
 Implementation will come next. Signing off for now.
+
+@12:26 Implement Phasor Reset (attempt) #gesture-reset #timelog:01:06:58
+
+@12:32 Implementing initial phasor reset test #gesture-reset
+Somehow, this needs to simulate a phasor reset, and
+measure specifically what goes wrong.
+
+@13:14 My initial idea of skipping a sample didn't work #gesture-reset
+I need to re-remember how this rephasor works.
+Luckily, I wrote documentation for the C
+implementation.
+---
+The current rust implementation is a little cryptic.
+Add docstrings now.
+
+@13:33 comments added. going to scratch my head how to solve this one #gesture-reset
