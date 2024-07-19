@@ -1,0 +1,57 @@
+@2024-07-19 Day 61.
+21 days left of batch.
+---
+Prev:
+
+Negation in NAND /
+is a requirement for /
+Turing completeness
+
+---
+
+Next:
+
+|| @!(taskref "dagzet-rust")!@: connection remarks,
+and plan next steps. cycle checking? sqlite code
+generation?
+
+|| @!(taskref "demo-trio")!@: get the event-driven
+gesture working
+
+|| @!(taskref "gesture-reset")!@: implement gesture
+reset that happens on phase reset.
+
+@07:48 Morning triage
+
+@08:12 Connection remarks next, then what? #dagzet-rust
+My goal is to use this rust port as a drop-in
+replacement for my current dagzet program.
+So, a good thing to do would be to write a program
+that scrapes all the current commands used in
+my RC dagzet instance.
+---
+I also have more than enough here to begin
+working on implementing topological sort
+and SQLite code generation.
+
+@08:19 Clock resets are going to throw off gesture algorithm #demo-trio
+One of the things I am doing in Trio is forcing
+a phase reset on pen down so the voices always
+stagger the same way. The funderlying rephasor in
+the gesture signal generator does not have a way
+of handling phase resets, so it'll assume a faster
+tempo change and cause unwanted jumps in time.
+The rephasor needs a way to be told that there
+has been a phase reset, which would cause it to
+skip calculating the delta time in the next
+sample tick.
+---
+I wonder if we can build a test around this?
+
+@08:26 Task created for gesture reset #gesture-reset #demo-trio
+I want to not only do the fix, but create a test
+in the test suite that showcases the problem before
+the fix is created, just so I know that I properly
+understand the problem that I am trying to solve.
+
+@08:29 Publishing
