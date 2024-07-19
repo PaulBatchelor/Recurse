@@ -9,6 +9,7 @@ struct VoiceWithSmoother {
     pub voice: Voice,
     pub pitch: SmoothParam,
     pub gain: SmoothParam,
+    pub gest: EventfulGesture,
 }
 
 impl VoiceWithSmoother {
@@ -18,6 +19,7 @@ impl VoiceWithSmoother {
             voice: Voice::new(sr, tract_len_cm, oversample),
             pitch: SmoothParam::new(sr, 60.),
             gain: SmoothParam::new(sr, 0.0),
+            gest: EventfulGesture::default(),
         };
 
         v.gain.smoother.set_smooth(0.005);
@@ -37,8 +39,21 @@ impl VoiceWithSmoother {
         self.voice.tick() * 0.7 * gain
     }
 
+    pub fn tick_with_gesture(&mut self, clk: f32) -> f32 {
+        self.voice.pitch = self.gest.tick(clk);
+        let gain = self.gain.tick();
+
+        self.voice.tick() * 0.7 * gain
+    }
+
     pub fn reset(&mut self) {
         self.pitch.reset();
+    }
+
+    pub fn set_pitch(&mut self, pitch: f32) {
+        //self.pitch.value = pitch;
+        self.gest.scalar(pitch);
+        self.gest.behavior(Behavior::GlissHuge);
     }
 }
 
@@ -185,8 +200,9 @@ impl VoxData {
                 let pitch = self.lead.pitch.value;
                 let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
 
-                self.lower.pitch.value =
-                    self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+                let pitch = self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+                //self.lower.pitch.value = pitch;
+                self.lower.set_pitch(pitch);
                 //self.upper.pitch.value =
                 //    self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
                 self.lower_has_changed = true;
@@ -210,8 +226,9 @@ impl VoxData {
 
                 // self.lower.pitch.value =
                 //     self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
-                self.upper.pitch.value =
-                    self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+                let pitch = self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+                //self.upper.pitch.value = pitch;
+                self.upper.set_pitch(pitch);
                 self.lower_has_changed = false;
 
                 if self.lead_playing {
@@ -233,8 +250,8 @@ impl VoxData {
         self.lphs = clk;
 
         let lead = self.lead.tick();
-        let lower = self.lower.tick();
-        let upper = self.upper.tick();
+        let lower = self.lower.tick_with_gesture(clk);
+        let upper = self.upper.tick_with_gesture(clk);
 
         let voices = (lead + lower + upper) * 0.33;
         let (r, _) = self.reverb.tick(voices, voices);
