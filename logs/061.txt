@@ -55,3 +55,39 @@ the fix is created, just so I know that I properly
 understand the problem that I am trying to solve.
 
 @08:29 Publishing
+
+@09:04 Connection remarks in dagzet #dagzet-rust #timelog:01:02:06
+
+@09:06 Connection remarks notes: more difficult than expected #dagzet-rust
+This is more difficult than I expected. A connection remark
+needs to reference a connection (the last connection made).
+So, how does one reasonably accomplish this?
+---
+Since the connections are a pair,
+one approach is to use a 2-dimensional hashmap of values.
+It feels like a lot more space is used up here. It also
+duplicates some of the logic in the connections hashmap.
+---
+Another thing to do is to somehow reference the connection.
+An actual Rust memory reference could cause the borrow
+checker to be grumpy. Using unique ID values to reference
+each connection, and having that be a key in a hash table
+could work. This could become a bookkeeping problem if
+I ever added the ability to remove connections, but there
+are no plans to add such a feature.
+---
+Connection ID can be their position in the "connections"
+vector.
+---
+Since there is no way to selecting a specific connection,
+it is reasonable to assume that the last connection
+will always be implicitely be what remarks are being
+written to. So, the ID will always be length of the vector
+(minus one for the index).
+
+@09:23 Making tests for connection remarks #dagzet-rust
+
+@09:33 Implementing connection remarks #dagzet-rust
+
+@09:59 I am weirdly stumped as to why this test is failing #dagzet-rust
+It was silently erroring. I needed to add a namespace.
