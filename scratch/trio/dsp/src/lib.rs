@@ -48,10 +48,17 @@ impl VoiceWithSmoother {
 
     pub fn reset(&mut self) {
         self.pitch.reset();
+        self.gest.immediate(self.pitch.value);
     }
 
     pub fn set_pitch(&mut self, pitch: f32) {
-        //self.pitch.value = pitch;
+        self.pitch.value = pitch;
+    }
+
+    pub fn schedule_pitch(&mut self, pitch: f32) {
+        println!("scheduling pitch {pitch}");
+        self.pitch.value = pitch;
+        self.gest.clear();
         self.gest.scalar(pitch);
         self.gest.behavior(Behavior::GlissHuge);
     }
@@ -202,7 +209,7 @@ impl VoxData {
 
                 let pitch = self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
                 //self.lower.pitch.value = pitch;
-                self.lower.set_pitch(pitch);
+                self.lower.schedule_pitch(pitch);
                 //self.upper.pitch.value =
                 //    self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
                 self.lower_has_changed = true;
@@ -228,7 +235,7 @@ impl VoxData {
                 //     self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
                 let pitch = self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
                 //self.upper.pitch.value = pitch;
-                self.upper.set_pitch(pitch);
+                self.upper.schedule_pitch(pitch);
                 self.lower_has_changed = false;
 
                 if self.lead_playing {
@@ -252,6 +259,8 @@ impl VoxData {
         let lead = self.lead.tick();
         let lower = self.lower.tick_with_gesture(clk);
         let upper = self.upper.tick_with_gesture(clk);
+        //let lower = self.lower.tick();
+        //let upper = self.upper.tick();
 
         let voices = (lead + lower + upper) * 0.33;
         let (r, _) = self.reverb.tick(voices, voices);
