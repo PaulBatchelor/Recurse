@@ -57,3 +57,4 @@ logs/056.txt
 logs/057.txt
 logs/058.txt
 logs/059.txt
+logs/060.txt
