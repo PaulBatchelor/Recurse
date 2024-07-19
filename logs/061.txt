@@ -91,3 +91,53 @@ written to. So, the ID will always be length of the vector
 
 @09:59 I am weirdly stumped as to why this test is failing #dagzet-rust
 It was silently erroring. I needed to add a namespace.
+
+
+@10:16 Time for unknown nodes. #dagzet-rust #timelog:00:21:57
+
+@10:20 before topsort, but unknown nodes #dagzet-rust
+I initially thought I was ready for topsort and cycle
+checking. But unknown node resolution should happen
+first.
+---
+An edge list should be created from the connections for
+the topsort. But those should all be resolved ID values.
+"Check unknown" nodes should return a set of nodes
+that do not exist in the node.
+---
+Rust does have a set in their library! Huzzah! Called
+HashSet. That's what I need.
+
+@10:26 Building test for unknown node checker #dagzet-rust
+
+@10:37 Implementing unknown nodes. #dagzet-rust
+
+@10:39 Begin cycle checking #dagzet-rust #timelog:00:22:41
+
+@10:42 How to make this a testable component? #dagzet-rust
+The trick here is that the connections need to
+be resolved, which is another step to test independently.
+---
+A connection list, after it has been verified, should be
+turned into an edge list. This function is still allowed
+to error out. This edge list then gets passed in to the
+cycle checker.
+---
+Note: Topsort makes use of sets that will expand and grow.
+I expect to dynamically generate these inside the function.
+---
+Generating an edgelist should come first. Panic on missing
+nodes for now. that can be fixed later.
+---
+The top-level cycle checker should be a method called =check_for_cycles=.
+The original implementation was able to get some information
+on these cycles.
+---
+Looks like the original topsort populates a "loops found"
+list. I will do the same, only it'll be a HashSet. On success
+it will return an Ok, otherwise an error code.
+
+@10:51 Implementing initial cycle checker test #dagzet-rust
+
+@11:02 Placeholder tests and functions in place. #dagzet-rust
+Implementation will come next. Signing off for now.
