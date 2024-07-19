@@ -219,3 +219,32 @@ Erased my changes. Took a breath.
 It did not crash. Not one crash. Thanks, Rust.
 
 @15:07 A quick break. #demo-trio
+
+@15:25 More trio tweaks #demo-trio #timelog:00:50:22
+@15:26 Need a way to instantaneously set value of gesture. #demo-trio
+This can be like a method or something
+like =immediate()=. Setting the next/prev values
+to be some scalar value should work for the most part.
+The event queue should also be cleared as well.
+
+@15:53 Weird bug: playing the same note twice doesn't trigger events #demo-trio
+
+@16:04 A rewrite might be in order for this voice state management #demo-trio
+There's too much spaghetti right now. I think I need
+to actually attempt to model this as a state machine
+and add some tests. Otherwise, I'm never going to
+figure out the issue, and this code will become
+too unwieldy to maintain.
+
+@16:13 Gesture is unpredictable. #demo-trio
+Not sure if this is my scheduling logic, or some subtle
+bug with the gesture event queue, or a mix of both.
+---
+Testing is definitely in order. But like, not today.
+I'm pretty drained.
+---
+Yeah, considering I want to change the chord selection
+logic, it's going to be even worse. This needs a rewrite.
+---
+I have built what is essentially a concurrent event
+system. So yeah, this is tough one to do correctly.
