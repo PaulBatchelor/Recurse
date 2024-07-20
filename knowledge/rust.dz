@@ -105,3 +105,7 @@ hl https://doc.rust-lang.org/rust-by-example/meta/doc.html
 nn clippy_book
 ln The Clippy Book
 hl https://doc.rust-lang.org/clippy/index.html
+
+nn phantom_types
+ln Phantom Types
+hl https://doc.rust-lang.org/rust-by-example/generics/phantom.html

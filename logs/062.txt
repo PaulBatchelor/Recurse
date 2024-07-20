@@ -43,3 +43,67 @@ No. Not it does not. Typical glibc woes.
 @12:14 Work on loop checker #dagzet-rust #timelog:00:54:23
 
 @13:22 Loop checker passes test. I think it works. #dagzet-rust
+
+@13:52 Begin SQLite code generation primitives #dagzet-rust
+
+@13:53 Initial thoughts #dagzet-rust
+Most of this boils down to string generation.
+It'd be good to have some intermediate
+structures before that.
+---
+Being able to generate sqlite schemas is a good
+start. A table as named values, each with a type.
+---
+It would be nice to have a consistent ordering
+of these names, for things like generating
+insert statements.
+---
+A table itself also has a distinct name.
+---
+=stringify()= could be a behavior that types
+and tables implement.
+---
+Ah, stringify is already a behavior the standard
+libary implements.
+
+@14:04 Making a new file. Thinking about SQLite params. #dagzet-rust
+
+@14:30 Got some tests going. Now working on a table. #dagzet-rust
+
+@14:51 Now, how about some insert statements #dagzet-rust #timelog:02:22:15
+The best thing would be to have some struct map
+to the =VALUES= part in an =INSERT= statement.
+A method on the table, such as =sqlize_insert=,
+could then take in a pointer to a struct implementing
+that row that's able to generate values.
+---
+Trying to un-confuse myself: supposing I had table A.
+I'd want to make it so =A.sqlize_insert(row)= would
+generate an insert statement from data in row.
+Another table B attempting to call =B.sqlize_insert(row)=
+would get a compiler error due a type mismatch.
+---
+Generics for trait? Like this trait can only work when
+the type is A, not B.
+
+@15:07 Attempting initial insert row logic #dagzet-rust
+
+@15:18 My table abstraction could be better #dagzet-rust
+The table schema itself needs to be a concrete type,
+which it is not right now. If that happens, then
+I can make a row type for that table.
+
+@15:21 Make table a concrete type. #dagzet-rust
+
+@15:33 Working backwards. #dagzet-rust
+Define the interface that I want to see in
+a test, then work backwards from there.
+
+@15:36 Maybe what I want are phantom types? #dagzet-rust
+See: @!(dzref "rust/phantom_types")!@.
+
+@15:55 The code feels close, but Rust compiler still doesn't like it #dagzet-rust
+
+@16:02 Hooked something up using phantom types #dagzet-rust
+
+@16:13 Tests passed. I believe this is what I want? #dagzet-rust
