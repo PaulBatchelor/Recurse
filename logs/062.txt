@@ -1,0 +1,41 @@
+@2024-07-20 Day 62.
+20 days left of batch.
+---
+Zulip checkins: I don't think this is working for me.
+I tried out this silly daily haiku thing with
+an end of the week digest,
+and it didn't get the traction I wanted.
+I feel like I'm adding unnecessary noise.
+So, no more Zulip check-ins for a while.
+I will continue to log here.
+---
+On a more personal note, Zulip is triggering some
+of the anxiety-induced FOMO feelings similar
+to the ones that prompted
+me to delete Facebook a decade ago. Crazy to
+think that even after all this time and growth,
+I still find myself reacting to situations in
+same way (how disappointing). Going to have to delete
+Zulip from my phone after the batch is over.
+---
+Prev: 
+
+Synthesized Voices /
+Three of them in a black box /
+Controlled by Gesture
+
+---
+Next:
+
+|| @!(taskref "dagzet-rust")!@: Work on cycle
+checks today.
+
+|| @!(taskref "demo-trio")!@: Begin building
+a more formal voice handling state machine model.
+
+@10:00 Late morning triage.
+
+@10:26 Does renoise work on Alpine?
+No. Not it does not. Typical glibc woes.
+
+@10:56 Publishing.

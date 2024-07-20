@@ -9,5 +9,3 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 @dagzet-rust Port dagzet to rust
 
 @demo-trio Create "trio" demo
-
-@gesture-reset Create "reset" for rephasor/gesture

@@ -1,4 +1,4 @@
-@2024-07-19 Day 61.
+@2024-07-19 Day 61. Gestured Voices Work in Trio.
 21 days left of batch.
 ---
 Prev:
@@ -250,3 +250,6 @@ I have built what is essentially a concurrent event
 system. So yeah, this is tough one to do correctly.
 
 @16:20 Working on weekly recap now.
+
+@19:17 Reading #read-elem-compsys #timelog:00:43:04
+More reading on sequential logic.
