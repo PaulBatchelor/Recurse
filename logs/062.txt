@@ -39,3 +39,7 @@ a more formal voice handling state machine model.
 No. Not it does not. Typical glibc woes.
 
 @10:56 Publishing.
+
+@12:14 Work on loop checker #dagzet-rust #timelog:00:54:23
+
+@13:22 Loop checker passes test. I think it works. #dagzet-rust
