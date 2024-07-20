@@ -107,3 +107,10 @@ See: @!(dzref "rust/phantom_types")!@.
 @16:02 Hooked something up using phantom types #dagzet-rust
 
 @16:13 Tests passed. I believe this is what I want? #dagzet-rust
+
+@16:32 start working on the CLI, generate nodes table #dagzet-rust #timelog:00:28:30
+Real quick stuff.
+
+@17:01 Some things print. #dagzet-rust
+Lots of elaboration needed, but it's a great start.
+Things work.
