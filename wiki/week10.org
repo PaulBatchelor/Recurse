@@ -34,3 +34,8 @@ Rust to do it for me. The solution ended up
 using a combination of traits, generics,
 and things called "phantom types" and  "phantom data".
 See: @!(dzref "rust/phantom_types")!@
+
+@09:46 Which commands am I using in my recurse dagzet? #dagzet-rust
+The goal is to get just enough working that it can replace
+my RC dagzet. I believe I can do this with just some shell
+scripts.
