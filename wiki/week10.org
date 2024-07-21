@@ -1,0 +1,36 @@
+#+TITLE: Week 10
+
+* Saturday, July 20th
+
+Logs: @!(ref "logs" "logs" "2024_07_20")!@
+
+DAG Zettelkasten /
+generates database code /
+more will come later
+
+Tasks: @!(taskref "dagzet-rust")!@
+
+It was pretty much an entire day spent
+on my dagzet rust port. I got loop checking
+to work in the morning, and the some
+initial SQLlite generation code made
+later.
+
+Most of the time I think was spent trying
+to be clever with Rust's type system. I
+wanted there to be a way to use structs
+as an intermediate representation for
+a row of a particular table. You send
+this row struct as an argument into
+a method on a table struct, and you'd
+have the type checker ensure that only
+that particular kind of row works with
+that particular kind of table. It was
+a top-down idea, rather than a bottoms-up
+one in the sense that I knew what I
+wanted the programming interface to feel
+like, and it was a matter of wrangling
+Rust to do it for me. The solution ended up
+using a combination of traits, generics,
+and things called "phantom types" and  "phantom data".
+See: @!(dzref "rust/phantom_types")!@
