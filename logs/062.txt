@@ -152,3 +152,10 @@ Let's try the connections table.
 
 @20:47 Lines work. This is a great stopping point #dagzet-rust
 Most of the hard stuff is accomplished I think.
+
+@21:00 Some impromptu showings of trio demo prototype #demo-trio
+I turned on gesture again, and I think the wrong notes
+are caused by the event graph not removing events
+at the right time. I think. Anyways, this needs to
+be rebuilt for sure because I don't want to
+live life doing guess and check.

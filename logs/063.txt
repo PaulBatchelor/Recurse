@@ -1,0 +1,18 @@
+@2024-07-21 Day 63. Week 10.
+19 days left of batch.
+
+@09:15 Morning Triage
+
+Prev:
+
+DAG Zettelkasten /
+generates database code /
+more will come later
+
+Next:
+
+|| @!(taskref "dagzet-rust")!@: Figure out remaining
+commands needed to get things working in the RC dagzet,
+and get them working in the implementation
+
+@09:40 Publishing
