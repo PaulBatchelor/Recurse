@@ -39,3 +39,15 @@ See: @!(dzref "rust/phantom_types")!@
 The goal is to get just enough working that it can replace
 my RC dagzet. I believe I can do this with just some shell
 scripts.
+
+* Sunday, July 21st
+
+Logs: @!(ref "logs" "logs" "2024_07_21")!@
+
+Tasks: @!(taskref "dagzet-rust")!@
+
+I really only worked in the morning
+yesterday. Managed to scope out the bare minimum
+of what needs to be done in order for my dagzet
+rust port to work with my existing RC knowledge
+graph. It is, of course, more work than I expected
