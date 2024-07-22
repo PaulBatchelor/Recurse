@@ -34,3 +34,7 @@ manage how the voice scheduling works for
 trio.
 
 @09:07 Publish
+
+@09:16 Some initial inking of voice scheduler #demo-trio-voice-scheduler #timelog:00:49:09
+
+@10:36 Attempts at initial code and tests #demo-trio-voice-scheduler
