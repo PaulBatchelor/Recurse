@@ -38,3 +38,28 @@ trio.
 @09:16 Some initial inking of voice scheduler #demo-trio-voice-scheduler #timelog:00:49:09
 
 @10:36 Attempts at initial code and tests #demo-trio-voice-scheduler
+
+@11:23 How to set up event scheduling logic? #demo-trio-voice-scheduler #timelog:00:59:47
+I have the basic actions and primitives
+for the most part. Now, they need to be composed
+and worked together to trigger events for
+the other voices.
+---
+These events need to be triggered exactly once.
+---
+Event triggers at the start of a tick.
+---
+In a test, one should be able to tick() then
+ask the state questions. Is the voice supposed to
+launch? Is it playing already? Did the voice
+just turn off? Is it supposed to turn off? Etc,
+etc.
+---
+These events need to happen exactly once. Tick,
+check and see if things need to be done, tick,
+those things are done.
+---
+prev/curr state system could probably do this?
+At each tick, update prev to be curr. So,
+that means changes and probing would have to happen
+together before the next tick?
