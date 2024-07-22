@@ -1,0 +1,36 @@
+@2024-07-21 Day 64.
+18 days left of batch.
+---
+I think Haikus have run their course.
+---
+Prev: briefly worked on rust Dagzet stuff @!(taskref "dagzet-rust")!@,
+I have an idea of what I need to build out still to
+get it working on the RC knowledge graph here: @!(ref "dz" "check it out")!@.
+---
+Next:
+
+|| @!(taskref "dagzet-rust")!@: work on file range command,
+in addition others.
+
+|| @!(taskref "LC75")!@: study planning ideas
+
+|| @!(taskref "demo-trio")!@: draft out voice
+state machine
+
+@08:50 Morning Triage.
+
+@08:57 How can I work on this stuff offline? #LC75
+Leetcode provides validation of solutions, which
+is nice. But having a format that distills the
+problems into something offline for reference
+would be nice.
+---
+I think I might just manually transcribe the questions
+to markdown and put them in a repo.
+
+@09:03 good time to figure out pikchr? #demo-trio
+I'm trying to more formally establish a way to
+manage how the voice scheduling works for
+trio.
+
+@09:07 Publish
