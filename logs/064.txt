@@ -66,4 +66,51 @@ together before the next tick?
 
 @13:10 Inking out thoughts on triggers #demo-trio-voice-scheduler #timelog:00:20:12
 
-@13:35 Attempts to implement triggers #demo-trio-voice-scheduler
+@13:35 Attempts to implement triggers #demo-trio-voice-scheduler #timelog:01:57:19
+
+@13:53 Core trigger built. Now to try to use them #demo-trio-voice-scheduler
+
+@14:36 Inking and brainstorming #demo-trio-voice-scheduler
+I was trying to figure out when to trigger certain events
+like gates and pitch changes. I was has having difficulty
+getting to the bottom of pitch changes for auto voices:
+when they are initially turned on (happens when the gate
+is first on), the pitch needs to be instantaneous, otherwise
+it is scheduled. How does the voice know the difference?
+What state information is needed?
+
+@14:43 Introduce two boolean gates indicating on/off state for auto-voices? #demo-trio-voice-scheduler
+This is the best I got so far.
+---
+Consider the state needed to determine a pitch change
+for an autovoice: it happens when when the lead note
+is on, and the timer has reached a particular value.
+An extra value could be used to determine whether
+to immediate set or schedule based on if the voice is
+turned on.
+---
+An auto voice will always be immediately set to
+a pitch first, and would therefore set the voice flag to
+on. Subsequent voice changes will be scheduled until
+this voice flag is turned off.
+---
+The only way the voice flag is turned off is when an
+gate off event happens. This will turn off all the voices
+in the state.
+
+@14:51 attempting to code this line of thinking up #demo-trio-voice-scheduler
+I'm tempted to have this be a set of state separate
+from the current set of state. I believe you could make
+the case that the flow of information is one-way:
+changes from the main state influence the states of
+the auto voices, and not the other way around.
+---
+Separating state like this I think will make it easier to
+test.
+
+@15:14 These states need triggers hooked into them now. #demo-trio-voice-scheduler
+
+@15:41 initial firing logic works for a lower voice #demo-trio-voice-scheduler
+Right now, it doesn't know the difference between
+an instantaneous vs scheduled pitch change, but
+the scaffolding is there.
