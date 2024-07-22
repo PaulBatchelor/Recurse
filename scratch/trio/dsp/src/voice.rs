@@ -1,6 +1,6 @@
 #[allow(dead_code)]
 #[derive(Default, Debug, PartialEq)]
-pub struct SchedulerState {
+struct SchedulerState {
     pitch: u32,
     time: u32,
     gate: bool,
@@ -8,8 +8,49 @@ pub struct SchedulerState {
 
 #[allow(dead_code)]
 #[derive(Default)]
-pub struct Trigger {
+struct Trigger {
     trig: bool,
+}
+
+#[allow(dead_code)]
+#[derive(Clone, Copy)]
+pub enum EventType {
+    Lower,
+}
+
+#[allow(dead_code)]
+struct EventTrigger {
+    evtype: EventType,
+    trigger: Trigger,
+}
+
+impl EventTrigger {
+    pub fn new(evtype: EventType) -> Self {
+        EventTrigger {
+            trigger: Trigger::default(),
+            evtype,
+        }
+    }
+}
+
+#[allow(dead_code)]
+struct Hooks {
+    lower_voice: EventTrigger,
+}
+
+impl Default for Hooks {
+    fn default() -> Self {
+        Hooks {
+            lower_voice: EventTrigger::new(EventType::Lower),
+        }
+    }
+}
+
+#[allow(dead_code)]
+#[derive(Default)]
+pub struct AutoVoiceState {
+    upper: bool,
+    lower: bool,
 }
 
 #[allow(dead_code)]
@@ -37,6 +78,8 @@ impl Trigger {
 #[derive(Default)]
 pub struct VoiceScheduler {
     state: SchedulerState,
+    autovoice: AutoVoiceState,
+    hooks: Hooks,
 }
 
 #[allow(dead_code)]
@@ -49,19 +92,32 @@ impl VoiceScheduler {
 
     pub fn off(&mut self) {
         let state = &mut self.state;
+        let av = &mut self.autovoice;
+
         state.gate = false;
         state.time = 0;
 
-        // TODO: There needs to eb a way to
-        // shut off other voices
+        av.upper = false;
+        av.lower = false;
     }
 
     pub fn tick(&mut self) {
         let state = &mut self.state;
 
-        if state.gate {
-            state.time += 1;
+        if !state.gate {
+            return;
         }
+
+        let av = &mut self.autovoice;
+
+        if state.time == 1 {
+            av.lower = true;
+            self.hooks.lower_voice.trigger.fire();
+        } else if state.time == 2 {
+            av.upper = true;
+        }
+
+        state.time += 1;
     }
 
     pub fn change(&mut self, pitch: u32) {
@@ -70,6 +126,18 @@ impl VoiceScheduler {
             state.pitch = pitch;
             state.time = 0;
         }
+    }
+
+    pub fn pop_next_event(&mut self) -> Option<EventType> {
+        let hooks = &mut self.hooks;
+
+        let s = hooks.lower_voice.trigger.check();
+
+        if s {
+            return Some(hooks.lower_voice.evtype);
+        }
+
+        None
     }
 }
 
@@ -229,5 +297,72 @@ mod tests {
             !trig.has_fired(),
             "Check() did not reset state as expected."
         );
+    }
+
+    #[test]
+    fn test_autovoice() {
+        let av = AutoVoiceState::default();
+
+        assert!(!av.upper && !av.lower, "Sanity check failed");
+
+        let mut vs = VoiceScheduler::default();
+
+        vs.on();
+        vs.tick();
+        assert!(!av.lower, "Lower voice is supposed to be off");
+
+        // two ticks needed for at least 1 full tick
+        vs.tick();
+
+        let av = &vs.autovoice;
+        assert!(av.lower, "Lower voice is supposed to be on");
+        assert!(!av.upper, "Upper voice is supposed to be off");
+
+        vs.tick();
+        let av = &vs.autovoice;
+
+        assert!(av.lower, "Lower voice is supposed to be on");
+        assert!(av.upper, "Upper voice is supposed to be on");
+
+        vs.off();
+        let av = &vs.autovoice;
+        assert!(!av.lower, "Lower voice is supposed to be off");
+        assert!(!av.upper, "Upper voice is supposed to be off");
+    }
+
+    #[test]
+    fn test_initial_lower() {
+        let mut vs = VoiceScheduler::default();
+
+        vs.on();
+        vs.tick();
+
+        let mut nevents = 0;
+
+        while let Some(_) = vs.pop_next_event() {
+            nevents += 1;
+        }
+
+        assert_eq!(nevents, 0, "Expected no events on first tick");
+
+        vs.tick();
+
+        let mut found_lower = false;
+
+        while let Some(evt) = vs.pop_next_event() {
+            found_lower = matches!(evt, EventType::Lower);
+        }
+
+        assert!(found_lower, "Expected lower voice event");
+
+        vs.tick();
+
+        let mut found_lower = false;
+
+        while let Some(evt) = vs.pop_next_event() {
+            found_lower = matches!(evt, EventType::Lower);
+        }
+
+        assert!(!found_lower, "Expected not to find lower voice event");
     }
 }
