@@ -63,3 +63,7 @@ prev/curr state system could probably do this?
 At each tick, update prev to be curr. So,
 that means changes and probing would have to happen
 together before the next tick?
+
+@13:10 Inking out thoughts on triggers #demo-trio-voice-scheduler #timelog:00:20:12
+
+@13:35 Attempts to implement triggers #demo-trio-voice-scheduler

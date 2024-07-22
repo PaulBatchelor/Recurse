@@ -8,6 +8,33 @@ pub struct SchedulerState {
 
 #[allow(dead_code)]
 #[derive(Default)]
+pub struct Trigger {
+    trig: bool,
+}
+
+#[allow(dead_code)]
+impl Trigger {
+    pub fn fire(&mut self) {
+        self.trig = true;
+    }
+
+    pub fn has_fired(&mut self) -> bool {
+        self.trig
+    }
+
+    pub fn reset(&mut self) {
+        self.trig = false;
+    }
+
+    pub fn check(&mut self) -> bool {
+        let fired = self.has_fired();
+        self.reset();
+        fired
+    }
+}
+
+#[allow(dead_code)]
+#[derive(Default)]
 pub struct VoiceScheduler {
     state: SchedulerState,
 }
@@ -175,5 +202,32 @@ mod tests {
         assert_eq!(&vs.state, &cmp, "did not change pitch as expected");
 
         // TODO: retriggers should work somehow, more state needed?
+    }
+
+    #[test]
+    fn test_trigger() {
+        let mut trig = Trigger::default();
+        assert!(!trig.trig, "Default sanity check failed");
+
+        assert!(!trig.has_fired(), "Trigger has not yet fired");
+
+        trig.fire();
+
+        assert!(trig.has_fired(), "Trigger was supposed to fire.");
+
+        trig.reset();
+
+        assert!(!trig.has_fired(), "Trigger did not reset as expected.");
+
+        trig.fire();
+
+        let fired = trig.check();
+
+        assert!(fired, "Trigger was supposed to have fired");
+
+        assert!(
+            !trig.has_fired(),
+            "Check() did not reset state as expected."
+        );
     }
 }
