@@ -1,3 +1,4 @@
+mod voice;
 use voxbox::*;
 
 struct SmoothParam {
@@ -51,6 +52,7 @@ impl VoiceWithSmoother {
         self.gest.immediate(self.pitch.value);
     }
 
+    #[allow(dead_code)]
     pub fn set_pitch(&mut self, pitch: f32) {
         self.pitch.value = pitch;
     }
