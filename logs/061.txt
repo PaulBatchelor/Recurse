@@ -1,0 +1,255 @@
+@2024-07-19 Day 61. Gestured Voices Work in Trio.
+21 days left of batch.
+---
+Prev:
+
+Negation in NAND /
+is a requirement for /
+Turing completeness
+
+---
+
+Next:
+
+|| @!(taskref "dagzet-rust")!@: connection remarks,
+and plan next steps. cycle checking? sqlite code
+generation?
+
+|| @!(taskref "demo-trio")!@: get the event-driven
+gesture working
+
+|| @!(taskref "gesture-reset")!@: implement gesture
+reset that happens on phase reset.
+
+@07:48 Morning triage
+
+@08:12 Connection remarks next, then what? #dagzet-rust
+My goal is to use this rust port as a drop-in
+replacement for my current dagzet program.
+So, a good thing to do would be to write a program
+that scrapes all the current commands used in
+my RC dagzet instance.
+---
+I also have more than enough here to begin
+working on implementing topological sort
+and SQLite code generation.
+
+@08:19 Clock resets are going to throw off gesture algorithm #demo-trio
+One of the things I am doing in Trio is forcing
+a phase reset on pen down so the voices always
+stagger the same way. The funderlying rephasor in
+the gesture signal generator does not have a way
+of handling phase resets, so it'll assume a faster
+tempo change and cause unwanted jumps in time.
+The rephasor needs a way to be told that there
+has been a phase reset, which would cause it to
+skip calculating the delta time in the next
+sample tick.
+---
+I wonder if we can build a test around this?
+
+@08:26 Task created for gesture reset #gesture-reset #demo-trio
+I want to not only do the fix, but create a test
+in the test suite that showcases the problem before
+the fix is created, just so I know that I properly
+understand the problem that I am trying to solve.
+
+@08:29 Publishing
+
+@09:04 Connection remarks in dagzet #dagzet-rust #timelog:01:02:06
+
+@09:06 Connection remarks notes: more difficult than expected #dagzet-rust
+This is more difficult than I expected. A connection remark
+needs to reference a connection (the last connection made).
+So, how does one reasonably accomplish this?
+---
+Since the connections are a pair,
+one approach is to use a 2-dimensional hashmap of values.
+It feels like a lot more space is used up here. It also
+duplicates some of the logic in the connections hashmap.
+---
+Another thing to do is to somehow reference the connection.
+An actual Rust memory reference could cause the borrow
+checker to be grumpy. Using unique ID values to reference
+each connection, and having that be a key in a hash table
+could work. This could become a bookkeeping problem if
+I ever added the ability to remove connections, but there
+are no plans to add such a feature.
+---
+Connection ID can be their position in the "connections"
+vector.
+---
+Since there is no way to selecting a specific connection,
+it is reasonable to assume that the last connection
+will always be implicitely be what remarks are being
+written to. So, the ID will always be length of the vector
+(minus one for the index).
+
+@09:23 Making tests for connection remarks #dagzet-rust
+
+@09:33 Implementing connection remarks #dagzet-rust
+
+@09:59 I am weirdly stumped as to why this test is failing #dagzet-rust
+It was silently erroring. I needed to add a namespace.
+
+
+@10:16 Time for unknown nodes. #dagzet-rust #timelog:00:21:57
+
+@10:20 before topsort, but unknown nodes #dagzet-rust
+I initially thought I was ready for topsort and cycle
+checking. But unknown node resolution should happen
+first.
+---
+An edge list should be created from the connections for
+the topsort. But those should all be resolved ID values.
+"Check unknown" nodes should return a set of nodes
+that do not exist in the node.
+---
+Rust does have a set in their library! Huzzah! Called
+HashSet. That's what I need.
+
+@10:26 Building test for unknown node checker #dagzet-rust
+
+@10:37 Implementing unknown nodes. #dagzet-rust
+
+@10:39 Begin cycle checking #dagzet-rust #timelog:00:22:41
+
+@10:42 How to make this a testable component? #dagzet-rust
+The trick here is that the connections need to
+be resolved, which is another step to test independently.
+---
+A connection list, after it has been verified, should be
+turned into an edge list. This function is still allowed
+to error out. This edge list then gets passed in to the
+cycle checker.
+---
+Note: Topsort makes use of sets that will expand and grow.
+I expect to dynamically generate these inside the function.
+---
+Generating an edgelist should come first. Panic on missing
+nodes for now. that can be fixed later.
+---
+The top-level cycle checker should be a method called =check_for_cycles=.
+The original implementation was able to get some information
+on these cycles.
+---
+Looks like the original topsort populates a "loops found"
+list. I will do the same, only it'll be a HashSet. On success
+it will return an Ok, otherwise an error code.
+
+@10:51 Implementing initial cycle checker test #dagzet-rust
+
+@11:02 Placeholder tests and functions in place. #dagzet-rust
+Implementation will come next. Signing off for now.
+
+@12:26 Implement Phasor Reset (attempt) #gesture-reset #timelog:01:06:58
+
+@12:32 Implementing initial phasor reset test #gesture-reset
+Somehow, this needs to simulate a phasor reset, and
+measure specifically what goes wrong.
+
+@13:14 My initial idea of skipping a sample didn't work #gesture-reset
+I need to re-remember how this rephasor works.
+Luckily, I wrote documentation for the C
+implementation.
+---
+The current rust implementation is a little cryptic.
+Add docstrings now.
+
+@13:33 comments added. going to scratch my head how to solve this one #gesture-reset
+
+@13:58 More thoughts on rephasor reset #rephasor-reset #timelog:00:32:20
+Establishing a line of thought here.
+---
+A phasor reset occurs when the ramp suddenly resets
+back to 0 in the middle of period.
+---
+In this scenario, the reset happens as a result of
+an intentional interrupt. It is known precisely
+when this interrupt happens. The rephasor is called
+immediately after this interrupt. For this
+reason, the idea is it can be told ahead of time
+that the phasor reset itself, and to act occordingly.
+---
+Other than the interrupt, it is assumed that the
+clock is moving at a steady rate.
+---
+In order for the rephasor to handle a reset phasor
+properly, it must keep the overall increment amount
+approximately equal to the increment amount of the
+phasor. Any jumps indicate a failure to handle
+this result properly.
+---
+Assmuming rephasor scale amount is 1 (same as input),
+the increment of the rephasor is determined from
+the correction coefficient and the delta of the
+previous sample.
+---
+Possible solution: don't update anything with
+the clock reset artifact in it. Wait for it to pass
+through the system before updating correction
+and incrementor.
+---
+I think waiting two ticks should do it.
+
+@14:12 Trying to implement wait counter method #rephasor-reset
+
+@14:21 now test is passing when it shouldn't #rephasor-reset
+
+@14:23 oh, perhaps this is a non issue #rephasor-reset
+I wrote the test wrong which is why it was failing
+in the first place. But, now it works.
+---
+I think this test might be resilient against this
+particular kind of reset beacuse the phase goes
+to exactly 0 and also that the overall slope
+doesn't change.
+---
+No changes needed. But the test is in there to prove
+this.
+
+@14:31 Time to actually hook up gesture to trio #demo-trio #timelog:00:36:25
+
+@14:48 This code is approaching "putting out fires" mode #deom-trio
+I'm feeling a little overwhelmed at the moment.
+---
+Erased my changes. Took a breath.
+
+@15:04 Things sound better than expected. #demo-trio
+It did not crash. Not one crash. Thanks, Rust.
+
+@15:07 A quick break. #demo-trio
+
+@15:25 More trio tweaks #demo-trio #timelog:00:50:22
+@15:26 Need a way to instantaneously set value of gesture. #demo-trio
+This can be like a method or something
+like =immediate()=. Setting the next/prev values
+to be some scalar value should work for the most part.
+The event queue should also be cleared as well.
+
+@15:53 Weird bug: playing the same note twice doesn't trigger events #demo-trio
+
+@16:04 A rewrite might be in order for this voice state management #demo-trio
+There's too much spaghetti right now. I think I need
+to actually attempt to model this as a state machine
+and add some tests. Otherwise, I'm never going to
+figure out the issue, and this code will become
+too unwieldy to maintain.
+
+@16:13 Gesture is unpredictable. #demo-trio
+Not sure if this is my scheduling logic, or some subtle
+bug with the gesture event queue, or a mix of both.
+---
+Testing is definitely in order. But like, not today.
+I'm pretty drained.
+---
+Yeah, considering I want to change the chord selection
+logic, it's going to be even worse. This needs a rewrite.
+---
+I have built what is essentially a concurrent event
+system. So yeah, this is tough one to do correctly.
+
+@16:20 Working on weekly recap now.
+
+@19:17 Reading #read-elem-compsys #timelog:00:43:04
+More reading on sequential logic.

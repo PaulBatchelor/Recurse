@@ -17,3 +17,5 @@ an "ah"), then crossfade to another
 @vocal-chords-older-iphone Get vocal chords working on older iphone
 
 @voxbox-shape-morphing add shape morphing with linear gesture
+
+@voxbox-cargo-clippy Fix errors when cargo-clippy is run

@@ -1,0 +1,86 @@
+@2024-07-21 Day 63. Week 10.
+19 days left of batch.
+
+@09:15 Morning Triage
+
+Prev:
+
+DAG Zettelkasten /
+generates database code /
+more will come later
+
+Next:
+
+|| @!(taskref "dagzet-rust")!@: Figure out remaining
+commands needed to get things working in the RC dagzet,
+and get them working in the implementation
+
+@09:40 Publishing
+
+@09:44 Figuring out which commands I need to make #dagzet-rust #timelog:00:14:09
+I just need enough to generate my RC dagzet and replace
+the lua implementation.
+---
+The results of my shell-ing:
+===
+#+BEGIN_SRC sh
+$ cat *.dz | awk '{print $1}' | grep -v "^$" | sort | uniq -c
+    127 co
+     50 cr
+     15 cx
+     59 fr
+     38 gr
+    165 hl
+    357 ln
+    280 nn
+     40 ns
+     96 rm
+      1 sn
+     15 td
+     76 tg
+      4 zz
+#+END_SRC
+===
+---
+Done: co, cr, ln, gr, ln, nn, ns.
+---
+TODO: cx, fr, hl, rm, sn, td, tg, zz
+---
+Wow that's more than I expected. And there's going to be
+a non-trivial amount of time troubleshooting the SQLite
+generated code because of course it's not going to work
+on the first try.
+---
+More slow, incremental testing?
+---
+No, the errors are going to come from incorrectly generated
+SQLite code, and SQL code validation is outside the scope of
+dagzet.
+
+@10:00 Let's port some more commands. #dagzet-rust #timelog:01:05:39
+
+@10:03 graph remarks table generation #dagzet-rust
+
+@10:18 connection remarks: needs edges table #dagzet-rust
+I need to generate that once, and cache it in dagzet.
+
+@10:23 actually, no not really. SQLite does ID lookup #dagzet-rust
+The connections can remain as strings.
+
+@10:31 comments now #dagzet-rust
+
+@10:37 node remarks #dagzet-rust
+
+@10:51 File ranges. (fr) #dagzet-rust
+Oh yeah, that's right. This has some shorthand behavior
+as well. '$' is used to reference the last file. This
+might take up the rest of my morning before I break.
+---
+Some of the slowness comes from building up the
+test correctly. I'm doing this one right, becaues I've
+already done it wrong.
+
+@11:09 Some placeholder test code for file range. #dagzet-rust
+Comments in place, testing a handful of edge cases.
+Now I just need to implement incrementally.
+That's for another time.

@@ -1,0 +1,227 @@
+@2024-07-17 Day 59. Eventful Gestures and Dagzet
+23 days left of batch.
+---
+Note to self: 3 times 7 is 21. 23 days feels like
+a small amount of time to me. And it is. But
+it's also a little over 3 weeks, and when I
+say it like that it feels like more time.
+---
+Prev:
+
+Sounds on the gameboy /
+worked in the emulator /
+not on the real thing
+
+---
+Next:
+
+|| @!(taskref "tic80-voxbox")!@: I either need to
+scrap this project, or turn this into a presentable
+demo
+
+|| @!(taskref "event-driven-gesture")!@ keep moving
+forward with this, try to get a working proof of
+concept by today
+
+|| @!(taskref "compeng-resources")!@ Get resources
+imported into knowledge graph
+
+@08:17 Morning Triage
+
+@08:37 follow-up #impossible-day-2
+I figured out that some of the example
+game does have sound working. I don't
+know what I am missing here.
+
+Don't think I'll have much more time for
+this during my batch though.
+
+@08:58 I need to scrap this project, or plan a demo #tic80-voxbox
+I don't think I can justify putting more time into this,
+unless I can make something that is presentable.
+
+@09:02 Hoping to get an example by end of day. #event-driven-gesture
+
+@09:05 Publishing
+
+@09:11 Extracting links and resources from CE's page #timelog:00:36:40
+
+@10:04 back to this event queue #event-driven-gesture #timelog:01:26:19
+
+@10:05 Did I rework the abstraction already? #event-driven-gesture
+
+@10:11 Making clippy happy. #event-driven-gesture
+I don't love this. This feels like busywork.
+
+@10:16 Monowav errors with cargo clippy #event-driven-gesture
+I'm crashing when I run cargo clippy. Let's make
+it not crash. I can deal with the warnings later.
+
+@10:26 Back to event queue, gotta work with other types #event-driven-gesture
+Scalars are being handled, now to work with the other
+types.
+
+@10:47 I am annoyed with clippy now #event-driven-gesture
+This is why nothing gets done. I've been wasting time
+trying to make Clippy happy all in the name of supposedly "better"
+code, and I'm almost 45 minutes with nothing to show.
+---
+It warps the brain, seeing all these squigglys in an editor.
+Like a teacher marking up an essay in red. I don't think
+it's actually possible to turn syntax off in nvim. The
+usualy "syntax off" trick doesn't work.
+
+@10:49 I think the event queue is done? #event-driven-gesture
+I think it's reasonable to think about starting
+the Gesture.
+
+@10:52 Incorporating initial event queue into Gesture. #event-driven-gesture
+I'm liking these incremental tests. What's a good way to
+test that things are working as expected?
+---
+For starters, I need to be able to initialize this gesture
+by pushing an initial set of events.
+
+@11:31 got a test to pass for producing first event #event-driven-gesture
+
+@12:00 Audio Hang
+
+@13:33 Event driven gestures part 2 #event-driven-gesture #timelog:02:03:08
+
+@13:41 Need to test that events change when expected #event-driven-gesture
+Behavior we want: events should only be processed at the
+start of a new phase.
+---
+Situation: I push an event A and call =preinit=. I then
+push event B, after the tick is called. What is the
+expected set of states for each period?
+---
+Pre-init sets things up so that our first period for
+sure starts with A. I believe that first tick sets things
+up such that the next state it is transitioning to is also A.
+Either that, or it is uninitialized. Not sure. Checking.
+
+@14:13 event queue is not working as expected #event-driven-gesture
+My test is currently failing to get the next point
+as expected.
+---
+Oh wait, it's because I'm checking the external clock's
+phase changes, not the internal change.
+
+@14:23 quick check on bbl vizzy
+
+@14:26 Trying to see what happens when using =new_period= #event-driven-gesture
+
+@14:36 I am using println to set up a timeline of events #event-driven-gesture
+The order that things get set is very crucial. I want
+to see if I am doing the timing correctly here.
+
+@14:45 I am trying to understand the timeline #event-driven-gesture
+It is eventually correct, but I have to wait about 5 samples
+after the first period.
+---
+Before the first tick, event A is pushed, and then preinit is
+called. This triggets the =next= event to happen, which
+dequeues the event and sets the value.
+---
+At the first tick, next vertex is called immediately.
+There are no values. The cached vertex is left unchanged,
+so it is still A.
+---
+Note to self: I am using =new_period= wrong. The timeline
+---
+Event B is pushed as an event before the next tick.
+It will not be read until the next period.
+When will the next period happen? The current phasor
+is currently set to have a incrementor value of 0.1, so
+10 samples per period. The rate multiplier has been set
+to be 2/3, which is like slowing things down by a factor of
+1.5. The test *does* seem to pass after about 15 samples
+through trial and error.
+
+@14:57 I am tracking the change in phase wrong. #event-driven-gesture
+I need keep track of the interal rephasored value and watch
+for new periods there.
+---
+Works!
+
+@15:06 Now, onto waits #event-driven-gesture
+Wait are events that tell the clock to wait some number
+of periods before processing the next events in the queue.
+---
+A wait time of 1 will wait one whole period before allowing
+further events in the queue to be processed. 
+---
+If I push a wait of 1, and then a scalar in the middle of
+period A, the start of the next period, B will dequeue
+the wait, and then suspend reading other events. At
+the next period C, there will no longer be a wait, and
+the next value will be set.
+
+@15:47 Tests have been made. They fail. Now to implement it. #event-driven-gesture
+
+@15:53 Wait implemented, tests pass. #event-driven-gesture
+
+@16:02 Shelving tic80 voxbox demo for now #tic80-voxbox
+This feels like a dead-end at the moment. Maybe if there
+was already an existing following of tic80 peeps who
+were adventerous to make their own builds. BUT, this
+is not the case right now.
+---
+I'm sticking to shareable presentations that work on
+the web. Unfortunately, the wasm is pre-built so there
+is no great way to hack audio into this.
+---
+I honestly don't have any meaningful things to do with this
+new hack I did. It serves no other purpose than "oh, I did
+it". It's not enough.
+
+@16:06 Attempting to implement connect #dagzet-rust #timelog:01:07:59
+Connect adds a pair of edges to the graph.
+---
+These are set to be local connections. ID values
+work just fine here.
+---
+I'm curious about knowing how I did cx? Was that
+another structure? Am I checking cycles there?
+---
+cx is another structure and loops/cycles are not=
+being checked for.
+
+@16:37 I think connections don't check for existing nodes until the end? #dagzet-rust
+My original dagzet implementation reperesents the
+dagzet connections as strings that are only checked
+at the end of parsing when all the nodes have been
+added. Only then does it attempt to resolve
+the symbols. This makes for a more permissive
+parser.
+---
+My dagzet parser does the topological sort with
+the strings. I think it would be better to resolve
+those chunks into local ID values before the sort.
+
+@17:09 Connections work, but unverified #dagzet-rust
+This is intentional. Verifications are defferred until
+everything is parsed. Verification is beyond the
+responsibility of connection.
+---
+There is a linear check for already existing
+connections, and a test is put into place
+to make sure this is all properly caught.
+
+@17:13 Shortcuts are not yet supported in co #dagzet-rust
+Adding TODOs for that.
+---
+I've implemented enough today.
+
+@19:22 Reading #read-elem-compsys #timelog:01:08:49
+Finished up reading last bits in chapter 1. Read chapter
+2 (shorter) on Boolean Arithmetic and their ALU.
+---
+I have not done any of the projects yet. I am hoping
+this can be one of those things I can return back to
+when I have a chunk of time available.
+---
+I want to believe that "just reading" without doing
+projects is "not nothing, not everything". That is to say,
+I hope I'm getting something worthwhile from this.

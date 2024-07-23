@@ -1,0 +1,208 @@
+@2024-07-18 Day 60. Staggered voices work in Trio.
+22 days left of batch.
+---
+Prev:
+
+event queue finished /
+eventful gesture looming /
+no more tic80
+---
+Next:
+
+|| @!(taskref "demo-trio")!@: start work
+implementing voice staggering.
+
+|| @!(taskref "dagzet-rust")!@: continue onwards
+with this
+
+|| @!(taskref "read-elem-compsys")!@: more reading.
+
+@08:12 Morning Triage
+
+@08:39 complete in theory. time to test in trio demo. #event-driven-gesture #demo-trio
+Attempt voice staggering using event-driven gesture
+algorithm, see what goes wrong.
+
+@08:47 dagzet could bea good portfolio project #dagzet-rust
+It's got a good scope, it's got data structures, and
+I'm putting in the time to incrementally test as
+I go.
+---
+This is also a migration project. If I do this right,
+I should be able to drop in the dagzet program
+and have it replace my adhoc lua code for my
+knowledge tree generator, which I'm using
+to power the knowledge graph here.
+
+@08:53 This has been completed #rust-neovim-setup
+
+@08:54 Not today, vscode. Not today #vscode-rust-setup
+vscode does not work on Alpine, and NeoVim
+works well for my needs.
+
+@09:05 publishing
+
+@09:08 Oh my god there's a clippy book
+See @!(dzref "rust/clippy_book")!@.
+
+@09:34 connection shortcuts #dagzet-rust #timelog:01:03:58
+
+@09:39 oh no, I'm getting my task tags wrong #dagzet-rust
+
+@09:42 back on track. #dagzet-rust
+
+@10:00 Reminding myself why string hashmaps are used for nodes #dagzet-rust
+hashmaps are used as the data structure to ensure
+that a node isn't created twice.
+---
+if I wanted to get a node name from a string,
+how would I do that? Right now, the answer seems
+to be enumerate through all the keys and find
+an answer. I could also just make a separate
+inverse lookup table out of a vector.
+
+@10:20 I made an inverse lookup table #dagzet-rust
+It's a memory hit, and there's room for
+the eventual possibility that the tables will go out
+of sync. But, it's good enough for now. I imagine
+I'll be doing this lookup operatoin quite a few times
+I don't want to do a linear sweep every time.
+
+@10:50 Up next: connection remarks #dagzet-rust
+Variation on a theme, I suspect.
+Unplugging and getting lunch now.
+
+@12:35 Time to revisit the trio. #demo-trio #timelog:03:01:06
+Now that I supposedly have an event-driven gesture,
+I need to begin work incorporating those mechanics
+into the existing demo.
+
+@12:36 refamiliarizing myself with the work. #demo-trio
+
+@13:00 light refactoring. main clock added. #demo-trio
+Now, for the initial process of introducing these
+eventful gestures.
+---
+Before any events can be added to any gestures, we need
+to be able to simulate adding events. Events should
+only be added after the lead has held onto a pitch
+for one period.
+---
+The easiest way to do this using a global timer that
+keeps track the phasor ticks, which occur once a second.
+If a u32 is used, how many seconds is that?
+---
+Okay, so that's about a millenium short of 50k years.
+I think there's no general risk of things overflowing. I
+will be long dead and forgotten before that happens to
+a potential user.
+---
+Is this enough granularity though if I want to detect
+pitch changes? Maybe not actually.
+
+@13:11 How to tell if pitch has lasted for a period. #demo-trio
+Might need to ink this one out.
+
+@13:27 Inked out an idea #demo-trio
+First, implement things so that it detects changes in
+pitch. Then, build a sample and hold with along with
+a global monotonically increasing clock that increments
+at the start of every tick.
+---
+Now, any time a pitch change occurs in the lead, it
+can be compared against the sampled pitch. If the
+pitch is different, but the timestamps aren't, the
+whole period is marked as having been changed for
+the rest of the period.
+---
+The "dirty bit" trick is used in situations where
+the pitch changes quickly inside a period.
+
+@13:32 Implementing pitch changes, alert on change. #demo-trio
+
+@13:37 implementing clock and sample and hold #demo-trio
+
+@13:50 shoot. I'm actually unable to articulate when a change *should* happen #demo-trio
+I think there may be another state required.
+---
+How about this:
+If there has been a requested
+pitch change from the current lead pitch, and this request
+has been held for a period, apply this changed pitch
+to the current lead.
+---
+This should happen at the start of every period.
+
+@14:05 well, now my logic isn't working at all. #demo-trio
+I was setting things to be negative oops.
+
+@14:11 this timing logic is trickier than I expected #demo-trio
+
+@14:15 Going to try caching the lead value between takes. #demo-trio
+Caching the lead value and also storing the last changed
+value may be what I'm looking for.
+---
+Essentially, this lead value needs ot be updated regardeless,
+but the other two voices need to be delayed.
+
+@14:19 Okay, the complexity comes from the lead value needing to be updated #demo-trio
+I can't simply cache the last lead pitch every time
+because I'm setting it every time.
+
+@14:23 The delayed behavior works as expected now. #demo-trio
+Now I am looking to delay chord changes on the upper/lower
+voices.
+
+@14:28 I think I might be able to work staggering without gesture #demo-trio
+I think I'm going to have to do this anyways because the event
+scheduler in the eventful gesture is so small, and can really
+only take one vertice at a time.
+
+@14:34 reworking things for variable stagger times #demo-trio
+The logic would need to be: lower gets set first, then
+upper.
+---
+Initially I had it so that the chord would be determined,
+and then you'd send off the events with delays. Rethinking
+this a bit.
+---
+I want it so that the upper pitch only changes if it waits
+2 beats, and the lower pitch changes if it waits 1 beat.
+
+@14:48 I'm going to try having another state variable #demo-trio
+I want to have a state when the lower changed, but the
+upper hasn't. When the upper gets changed, the lower
+changed gets setup.
+
+@15:01 Now I want the voices to be staggered on too #demo-trio
+
+@15:08 Weird timing bugs #demo-trio
+
+@15:14 Try to reset clock on new voice. #demo-trio
+
+@15:34 Clock works, but the voices aren't resetting pitches #demo-trio
+This causes some very rude sounding glisses sometimes.
+
+@15:45 it works. clocking out. #demo-trio
+
+@16:00 Presentations.
+I co-presented with Dan and Seamus on "bbl_vizzy".
+
+@17:00 Dinner
+First time at stickies. Would go again.
+
+@19:00 Negation needed for NAND. (approximate time)
+DF had a good pair of questions for me.
+First one was "what is NAND?" "Not AND". Follow up:
+"Why NAND? Why not AND?". I could not answer this
+well, but luckily JK was there. I am paraphrasing,
+but it turns out that the negation operation is
+important for Turing completeness. You need the
+negation to do things like turn a 1 to a 0.
+---
+Both NAND and NOR are what are known as "universal
+gates", in that they can be building blocks to
+implement the core boolean operations like AND, OR,
+and NOT.
+
+@19:32 Reading. #read-elem-compsys #timelog:01:01:16

@@ -2,5 +2,3 @@
 
 @refactor-glotfilt-traits Refactor glotfilt to use traits
 
-@rust-neovim-setup set up rust with neovim
-link: [[https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/]]

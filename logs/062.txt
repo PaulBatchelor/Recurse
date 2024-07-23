@@ -1,0 +1,161 @@
+@2024-07-20 Day 62.
+20 days left of batch.
+---
+Zulip checkins: I don't think this is working for me.
+I tried out this silly daily haiku thing with
+an end of the week digest,
+and it didn't get the traction I wanted.
+I feel like I'm adding unnecessary noise.
+So, no more Zulip check-ins for a while.
+I will continue to log here.
+---
+On a more personal note, Zulip is triggering some
+of the anxiety-induced FOMO feelings similar
+to the ones that prompted
+me to delete Facebook a decade ago. Crazy to
+think that even after all this time and growth,
+I still find myself reacting to situations in
+same way (how disappointing). Going to have to delete
+Zulip from my phone after the batch is over.
+---
+Prev: 
+
+Synthesized Voices /
+Three of them in a black box /
+Controlled by Gesture
+
+---
+Next:
+
+|| @!(taskref "dagzet-rust")!@: Work on cycle
+checks today.
+
+|| @!(taskref "demo-trio")!@: Begin building
+a more formal voice handling state machine model.
+
+@10:00 Late morning triage.
+
+@10:26 Does renoise work on Alpine?
+No. Not it does not. Typical glibc woes.
+
+@10:56 Publishing.
+
+@12:14 Work on loop checker #dagzet-rust #timelog:00:54:23
+
+@13:22 Loop checker passes test. I think it works. #dagzet-rust
+
+@13:52 Begin SQLite code generation primitives #dagzet-rust
+
+@13:53 Initial thoughts #dagzet-rust
+Most of this boils down to string generation.
+It'd be good to have some intermediate
+structures before that.
+---
+Being able to generate sqlite schemas is a good
+start. A table as named values, each with a type.
+---
+It would be nice to have a consistent ordering
+of these names, for things like generating
+insert statements.
+---
+A table itself also has a distinct name.
+---
+=stringify()= could be a behavior that types
+and tables implement.
+---
+Ah, stringify is already a behavior the standard
+libary implements.
+
+@14:04 Making a new file. Thinking about SQLite params. #dagzet-rust
+
+@14:30 Got some tests going. Now working on a table. #dagzet-rust
+
+@14:51 Now, how about some insert statements #dagzet-rust #timelog:02:22:15
+The best thing would be to have some struct map
+to the =VALUES= part in an =INSERT= statement.
+A method on the table, such as =sqlize_insert=,
+could then take in a pointer to a struct implementing
+that row that's able to generate values.
+---
+Trying to un-confuse myself: supposing I had table A.
+I'd want to make it so =A.sqlize_insert(row)= would
+generate an insert statement from data in row.
+Another table B attempting to call =B.sqlize_insert(row)=
+would get a compiler error due a type mismatch.
+---
+Generics for trait? Like this trait can only work when
+the type is A, not B.
+
+@15:07 Attempting initial insert row logic #dagzet-rust
+
+@15:18 My table abstraction could be better #dagzet-rust
+The table schema itself needs to be a concrete type,
+which it is not right now. If that happens, then
+I can make a row type for that table.
+
+@15:21 Make table a concrete type. #dagzet-rust
+
+@15:33 Working backwards. #dagzet-rust
+Define the interface that I want to see in
+a test, then work backwards from there.
+
+@15:36 Maybe what I want are phantom types? #dagzet-rust
+See: @!(dzref "rust/phantom_types")!@.
+
+@15:55 The code feels close, but Rust compiler still doesn't like it #dagzet-rust
+
+@16:02 Hooked something up using phantom types #dagzet-rust
+
+@16:13 Tests passed. I believe this is what I want? #dagzet-rust
+
+@16:32 start working on the CLI, generate nodes table #dagzet-rust #timelog:00:28:30
+Real quick stuff.
+
+@17:01 Some things print. #dagzet-rust
+Lots of elaboration needed, but it's a great start.
+Things work.
+
+@18:35 Get more things to print #dagzet-rust #timelog:02:10:58
+
+@18:41 IntegerPrimaryKey shouldn't be used in insert. #dagzet-rust
+
+@18:56 Oh goodness. These generics are beginning to be chaotic #dagzet-rust
+I'm trying to rework the nodes table code into something
+more re-usable.
+---
+It feels like it's *just* starting to slip into something
+out of my grasp.
+
+@18:59 Ah okay, the rust syntax gets weirder too #dagzet-rust
+This makes me feel better. It has an easy code smell.
+---
+Make this an interface somehow?
+
+@19:03 This isn't working either. #dagzet-rust
+you know what they are just going to be functions.
+refactor later.
+
+@19:12 rework things to use writer instead of print! #dagzet-rust
+I'm hoping to use the trick in C where the file handle
+can be standard out as well as a file.
+
+@19:38 writer works, but I can't get things to abstract well #dagzet-rust
+
+@19:49 A useable interface, now to move stuff out of main #dagzet-rust
+
+@19:54 Make clippy happy again #dagzet-rust
+
+@20:02 Finally, let's get another table in there. #dagzet-rust
+Let's try the connections table.
+
+@20:11 Add the lines table. #dagzet-rust
+
+@20:47 Lines work. This is a great stopping point #dagzet-rust
+Most of the hard stuff is accomplished I think.
+
+@21:00 Some impromptu showings of trio demo prototype #demo-trio
+I turned on gesture again, and I think the wrong notes
+are caused by the event graph not removing events
+at the right time. I think. Anyways, this needs to
+be rebuilt for sure because I don't want to
+live life doing guess and check.

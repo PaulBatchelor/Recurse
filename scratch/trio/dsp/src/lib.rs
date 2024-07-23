@@ -1,3 +1,4 @@
+mod voice;
 use voxbox::*;
 
 struct SmoothParam {
@@ -9,6 +10,7 @@ struct VoiceWithSmoother {
     pub voice: Voice,
     pub pitch: SmoothParam,
     pub gain: SmoothParam,
+    pub gest: EventfulGesture,
 }
 
 impl VoiceWithSmoother {
@@ -18,6 +20,7 @@ impl VoiceWithSmoother {
             voice: Voice::new(sr, tract_len_cm, oversample),
             pitch: SmoothParam::new(sr, 60.),
             gain: SmoothParam::new(sr, 0.0),
+            gest: EventfulGesture::default(),
         };
 
         v.gain.smoother.set_smooth(0.005);
@@ -34,8 +37,32 @@ impl VoiceWithSmoother {
         self.voice.pitch = self.pitch.tick();
         let gain = self.gain.tick();
 
-        let v = self.voice.tick() * 0.7 * gain;
-        v
+        self.voice.tick() * 0.7 * gain
+    }
+
+    pub fn tick_with_gesture(&mut self, clk: f32) -> f32 {
+        self.voice.pitch = self.gest.tick(clk);
+        let gain = self.gain.tick();
+
+        self.voice.tick() * 0.7 * gain
+    }
+
+    pub fn reset(&mut self) {
+        self.pitch.reset();
+        self.gest.immediate(self.pitch.value);
+    }
+
+    #[allow(dead_code)]
+    pub fn set_pitch(&mut self, pitch: f32) {
+        self.pitch.value = pitch;
+    }
+
+    pub fn schedule_pitch(&mut self, pitch: f32) {
+        println!("scheduling pitch {pitch}");
+        self.pitch.value = pitch;
+        self.gest.clear();
+        self.gest.scalar(pitch);
+        self.gest.behavior(Behavior::GlissHuge);
     }
 }
 
@@ -55,6 +82,17 @@ pub struct VoxData {
     base: u16,
     upper_lookup: [i16; 7],
     lower_lookup: [i16; 7],
+
+    clk: Phasor,
+    lphs: f32,
+    last_pitch: f32,
+    time: u32,
+    pitch_changed: bool,
+    pitch_last_changed: u32,
+    cached_lead_pitch: f32,
+    lower_has_changed: bool,
+    lead_playing: bool,
+    please_reset: bool,
 }
 
 //0  1  2  3  4  5  6  7  8  9 10  11
@@ -80,47 +118,151 @@ impl VoxData {
             base: 60,
             lower_lookup: [-5, -3, -1, 0, 2, 4, 5],
             upper_lookup: [4, 5, 7, 9, 11, 12, 14],
+            clk: Phasor::new(sr, 0.),
+            lphs: -1.,
+            cached_lead_pitch: -1.,
+            last_pitch: -1.,
+            time: 0,
+            pitch_last_changed: 0,
+            pitch_changed: false,
+            lower_has_changed: false,
+            lead_playing: true,
+            please_reset: false,
         };
 
+        vd.clk.set_freq(1.0);
         vd.upper.voice.vibrato_depth(0.1);
         vd.upper.voice.vibrato_rate(6.2);
-        vd.upper.gain.smoother.set_smooth(0.008);
+        vd.upper.gain.smoother.set_smooth(0.03);
         vd.upper.pitch.smoother.set_smooth(0.08);
 
         vd.lower.voice.vibrato_depth(0.1);
         vd.lower.voice.vibrato_rate(6.0);
-        vd.lower.gain.smoother.set_smooth(0.009);
+        vd.lower.gain.smoother.set_smooth(0.02);
         vd.lower.pitch.smoother.set_smooth(0.09);
         vd
     }
 
-    pub fn get_scale_degree(&self) -> (usize, f32) {
-        let pitch = self.lead.pitch.value as u16 - self.base;
+    fn get_scale_degree(&self, pitch: u16, base: u16) -> (usize, f32) {
+        //let pitch = self.lead.pitch.value as u16 - self.base;
+        let pitch = pitch - base;
         let octave = pitch / 12;
         let pitch = pitch % 12;
         let pitch = PITCH_TO_DIATONIC[pitch as usize];
         (pitch as usize, octave as f32)
     }
 
-    pub fn tick(&mut self) -> f32 {
-        if self.x_axis != self.px_axis {
-            self.px_axis = self.x_axis;
-            let pitch = (self.x_axis * self.pitches.len() as f32) as usize;
-            let pitch = pitch.clamp(0, self.pitches.len() - 1);
-            let pitch = 60.0 + self.pitches[pitch] as f32;
-            self.lead.pitch.value = pitch;
+    fn check_for_pitch_changes(&mut self) {
+        let pitch = (self.x_axis * self.pitches.len() as f32) as usize;
+        let pitch = pitch.clamp(0, self.pitches.len() - 1);
+        let pitch = 60.0 + self.pitches[pitch] as f32;
 
-            let (idx, octave) = self.get_scale_degree();
+        let did_pitch_change = self.last_pitch > 0. && self.last_pitch != pitch;
 
-            self.lower.pitch.value =
-                self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
-            self.upper.pitch.value =
-                self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+        if did_pitch_change {
+            println!("changed {} -> {} at {}", self.last_pitch, pitch, self.time);
+            self.last_pitch = pitch;
+            self.pitch_last_changed = self.time;
         }
 
+        // instantaneous update of lead pitch
+        self.lead.pitch.value = pitch;
+
+        if self.please_reset {
+            println!("resetting THE LEAD PITCH");
+            self.lead.reset();
+        }
+    }
+
+    pub fn tick(&mut self) -> f32 {
+        if self.please_reset {
+            println!("RESETTING");
+            self.clk.reset();
+            self.last_pitch = -1.;
+            self.time = 0;
+            self.pitch_last_changed = 0;
+            self.lower_has_changed = false;
+            //self.lower.reset();
+            //self.lead.reset();
+            //self.upper.reset();
+        }
+
+        let clk = self.clk.tick();
+
+        if self.lphs >= 0. && self.lphs > clk {
+            self.time += 1;
+            println!("tick {}", self.time);
+            //self.pitch_changed = false;
+
+            let did_pitch_change =
+                self.last_pitch > 0. && self.cached_lead_pitch != self.last_pitch;
+
+            let held_long_enough_low = (self.time - self.pitch_last_changed) > 0;
+            let held_long_enough_upper = (self.time - self.pitch_last_changed) > 1;
+
+            if did_pitch_change && held_long_enough_low {
+                //self.lead.pitch.value = self.last_pitch;
+                println!("lower: pitch changed and held long enough");
+                self.cached_lead_pitch = self.last_pitch;
+                //self.update_pitches();
+
+                let pitch = self.lead.pitch.value;
+                let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+
+                let pitch = self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+                //self.lower.pitch.value = pitch;
+                self.lower.schedule_pitch(pitch);
+                //self.upper.pitch.value =
+                //    self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+                self.lower_has_changed = true;
+
+                if self.lead_playing {
+                    if self.lower.gain.value == 0. {
+                        self.lower.reset();
+                    }
+                    self.lower.gain.value = 0.8;
+                }
+            }
+
+            if self.lower_has_changed && held_long_enough_upper {
+                //self.lead.pitch.value = self.last_pitch;
+                println!("upper: pitch changed and held long enough");
+                self.cached_lead_pitch = self.last_pitch;
+                //self.update_pitches();
+
+                let pitch = self.lead.pitch.value;
+                let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+
+                // self.lower.pitch.value =
+                //     self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+                let pitch = self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+                //self.upper.pitch.value = pitch;
+                self.upper.schedule_pitch(pitch);
+                self.lower_has_changed = false;
+
+                if self.lead_playing {
+                    if self.upper.gain.value == 0. {
+                        self.upper.reset();
+                    }
+                    self.upper.gain.value = 0.8;
+                }
+            }
+            self.last_pitch = self.lead.pitch.value;
+        }
+
+        if self.x_axis != self.px_axis {
+            self.px_axis = self.x_axis;
+            self.check_for_pitch_changes();
+        }
+
+        self.please_reset = false;
+        self.lphs = clk;
+
         let lead = self.lead.tick();
-        let lower = self.lower.tick();
-        let upper = self.upper.tick();
+        let lower = self.lower.tick_with_gesture(clk);
+        let upper = self.upper.tick_with_gesture(clk);
+        //let lower = self.lower.tick();
+        //let upper = self.upper.tick();
 
         let voices = (lead + lower + upper) * 0.33;
         let (r, _) = self.reverb.tick(voices, voices);
@@ -132,11 +274,11 @@ impl VoxData {
     pub fn running(&mut self) -> u8 {
         let mut state = 1;
 
-        if self.is_running == false {
+        if !self.is_running {
             state = 0;
         }
 
-        return state;
+        state
     }
 }
 
@@ -159,11 +301,10 @@ impl SmoothParam {
     pub fn tick(&mut self) -> f32 {
         self.smoother.tick(self.value)
     }
-}
 
-#[no_mangle]
-pub extern "C" fn testfunction() -> f32 {
-    return 330.0;
+    pub fn reset(&mut self) {
+        self.smoother.snap_to_value(self.value);
+    }
 }
 
 #[no_mangle]
@@ -206,9 +347,18 @@ pub extern "C" fn vox_pitch(vd: &mut VoxData, pitch: f32) {
 
 #[no_mangle]
 pub extern "C" fn vox_gate(vd: &mut VoxData, gate: f32) {
-    vd.lead.gain.value = gate * 0.8;
-    vd.lower.gain.value = gate * 0.8;
-    vd.upper.gain.value = gate * 0.8;
+    println!("gate: {gate}");
+    if gate == 0.0 {
+        vd.lead.gain.value = 0.;
+        vd.upper.gain.value = 0.;
+        vd.lower.gain.value = 0.;
+        vd.lead_playing = false;
+    } else {
+        vd.please_reset = true;
+        vd.lead.gain.value = gate * 0.8;
+        vd.lead.reset();
+        vd.lead_playing = true;
+    }
 }
 
 #[no_mangle]

@@ -1,0 +1,128 @@
+@2024-07-21 Day 64.
+18 days left of batch.
+---
+I think Haikus have run their course.
+---
+Prev: briefly worked on rust Dagzet stuff @!(taskref "dagzet-rust")!@,
+I have an idea of what I need to build out still to
+get it working on the RC knowledge graph here: @!(ref "dz" "check it out")!@.
+---
+Next:
+
+|| @!(taskref "dagzet-rust")!@: work on file range command,
+in addition others.
+
+|| @!(taskref "LC75")!@: study planning ideas
+
+|| @!(taskref "demo-trio")!@: draft out voice
+state machine
+
+@08:50 Morning Triage.
+
+@08:57 How can I work on this stuff offline? #LC75
+Leetcode provides validation of solutions, which
+is nice. But having a format that distills the
+problems into something offline for reference
+would be nice.
+---
+I think I might just manually transcribe the questions
+to markdown and put them in a repo.
+
+@09:03 good time to figure out pikchr? #demo-trio
+I'm trying to more formally establish a way to
+manage how the voice scheduling works for
+trio.
+
+@09:07 Publish
+
+@09:16 Some initial inking of voice scheduler #demo-trio-voice-scheduler #timelog:00:49:09
+
+@10:36 Attempts at initial code and tests #demo-trio-voice-scheduler
+
+@11:23 How to set up event scheduling logic? #demo-trio-voice-scheduler #timelog:00:59:47
+I have the basic actions and primitives
+for the most part. Now, they need to be composed
+and worked together to trigger events for
+the other voices.
+---
+These events need to be triggered exactly once.
+---
+Event triggers at the start of a tick.
+---
+In a test, one should be able to tick() then
+ask the state questions. Is the voice supposed to
+launch? Is it playing already? Did the voice
+just turn off? Is it supposed to turn off? Etc,
+etc.
+---
+These events need to happen exactly once. Tick,
+check and see if things need to be done, tick,
+those things are done.
+---
+prev/curr state system could probably do this?
+At each tick, update prev to be curr. So,
+that means changes and probing would have to happen
+together before the next tick?
+
+@13:10 Inking out thoughts on triggers #demo-trio-voice-scheduler #timelog:00:20:12
+
+@13:35 Attempts to implement triggers #demo-trio-voice-scheduler #timelog:01:57:19
+
+@13:53 Core trigger built. Now to try to use them #demo-trio-voice-scheduler
+
+@14:36 Inking and brainstorming #demo-trio-voice-scheduler
+I was trying to figure out when to trigger certain events
+like gates and pitch changes. I was has having difficulty
+getting to the bottom of pitch changes for auto voices:
+when they are initially turned on (happens when the gate
+is first on), the pitch needs to be instantaneous, otherwise
+it is scheduled. How does the voice know the difference?
+What state information is needed?
+
+@14:43 Introduce two boolean gates indicating on/off state for auto-voices? #demo-trio-voice-scheduler
+This is the best I got so far.
+---
+Consider the state needed to determine a pitch change
+for an autovoice: it happens when when the lead note
+is on, and the timer has reached a particular value.
+An extra value could be used to determine whether
+to immediate set or schedule based on if the voice is
+turned on.
+---
+An auto voice will always be immediately set to
+a pitch first, and would therefore set the voice flag to
+on. Subsequent voice changes will be scheduled until
+this voice flag is turned off.
+---
+The only way the voice flag is turned off is when an
+gate off event happens. This will turn off all the voices
+in the state.
+
+@14:51 attempting to code this line of thinking up #demo-trio-voice-scheduler
+I'm tempted to have this be a set of state separate
+from the current set of state. I believe you could make
+the case that the flow of information is one-way:
+changes from the main state influence the states of
+the auto voices, and not the other way around.
+---
+Separating state like this I think will make it easier to
+test.
+
+@15:14 These states need triggers hooked into them now. #demo-trio-voice-scheduler
+
+@15:41 initial firing logic works for a lower voice #demo-trio-voice-scheduler
+Right now, it doesn't know the difference between
+an instantaneous vs scheduled pitch change, but
+the scaffolding is there.
+
+@16:55 dagzet things? #dagzet-rust #timelog:00:05:00
+
+@18:55 dagzet: file range work #dagzet-rust #timelog:00:28:08
+
+@19:16 initial tests pass, but they are wrong #dagzet-rust
+
+@19:38 Attempts to get the file range table working. #dagzet-rust
+Okay, nevermind.
+
+@20:16 Got distracted.
+Haptic rotary knob controllers. What was I supposed to do?

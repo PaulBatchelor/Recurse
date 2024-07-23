@@ -1,0 +1,32 @@
+ns gamedev/gameboy
+gr Stuff related to gameboy and gameboy color
+
+nn gameboy_asm
+hl https://gbdev.io/gb-asm-tutorial/index.html
+ln GameBoy ASM tutorial
+
+nn gameboy_asm_gh
+hl https://github.com/gbdev/gb-asm-tutorial/
+ln gameboy ASM github page
+co $ gameboy_asm
+cr github
+
+nn rgbds_gh
+hl https://github.com/gbdev/rgbds
+ln RGBDS github
+
+nn pandocs_audio
+hl https://gbdev.io/pandocs/Audio.html
+ln Pandocs: Audio Overview
+
+nn huderlem_gameboy_2bpp
+hl https://www.huderlem.com/demos/gameboy2bpp.html
+ln gameboy 2bpp graphics format
+
+nn gbdk_beep
+hl https://github.com/mrombout/gbdk_playground/blob/master/beep/beep.c
+ln A beep example in GBDK (C)
+
+nn gbdk_gh
+hl https://github.com/gbdk-2020/gbdk-2020
+ln GBDK (2020) github

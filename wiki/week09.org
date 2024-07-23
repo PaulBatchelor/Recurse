@@ -1,4 +1,33 @@
 #+TITLE: Week 9
+* Recap
+This week I learned...
+
+...how to inject a sine tone into the tic80
+sound engine. In theory, I can now hack in
+any DSP I want into the TIC-80 codebase.
+
+...how to integrate my new rust DSP code with
+my old written in C. This will make
+transitioning to a newer system easier.
+
+...Testing and TDD in Rust! This was the first time
+I actually had an opportunity to write tests
+in Rust. A very satisfying experience.
+
+...Game development for the gameboy in assembly!
+For impossible day this week, I took my first
+steps learning gameboy assembly and attempted
+to build a musical instrument ROM.
+
+...A little bit about sequential logic,
+flip-flops, as well as sequential vs combinational
+chips.
+
+I have also made some good progress on my
+interactive vocal trio demo. The basic
+staggering behavior is mostly not broken. The
+fancier staggering behavior I built out is more
+broken.
 
 * Saturday, July 13th
 
@@ -42,3 +71,281 @@ out they were in fact, in a file somewhere in
 one place. A lot of time was spent needlessly
 black-boxing stuff to figure out what the data
 was. Sigh.
+
+* Sunday, July 14th
+
+@!(ref "logs" "logs" "2024_07_14")!@
+
+Wanted lines with sound /
+Built the necessary tools /
+Abandoned the Thought
+
+Tasks: @!(taskref "add-day-titles")!@, @!(taskref "linear-gesture-interface")!@.
+
+Retro-actively added some titles to my @!(ref "logs")!@.
+I feel like there's something of a narrative now.
+
+Most of yestreday was spent building a better programming
+interface for signal processing algorithm I'm calling a
+"linear gesture".
+I was working on a composition, and I wanted to use
+my Gesture algorithms to control effects like you
+would an automation curve. I also wanted to use
+my mnolth system, which meant I wanted to be able to
+use C. But my stuff was written in Rust. So, the task
+was to get some existing rust code in VoxBox working
+with an existing C project. I ended up getting
+sidetracked with conversatoins all day.
+But, in the evening I did get it to work.
+
+I ended up not using any of the code, and basically
+just submitted the raw sketch of my composition
+instead. I believe there is a lesson to be learned.
+
+* Monday, July 15th
+
+@!(ref "logs" "logs" "2024_07_15")!@
+
+gesture with events /
+unit tests for rust dagzet /
+bytebeat stuff part two
+
+Tasks: @!(taskref "dagzet-rust")!@, @!(taskref "event-driven-gesture")!@
+
+** Initial Unit Tests for Rust Dagzet Project
+It's nice to focus on non-audio problems in Rust
+for change. Porting Dagzet is a nice project because
+it's a program I can port incrementally one piece
+at a time. Each piece has isolated behavior
+that I can throw inside of a unit test. I've
+been figuring out how to set up unit tests 
+in Rust, and have adopted a TDD approach to
+porting. It's a very satisfying process. I wish
+I had more opportunities to work this way.
+
+** Event-Driven Gesture
+For my trio demo idea @!(taskref "demo-trio")!@,
+I've been trying to imagine ways to use my
+Gesture algorithm in a more interactive way. I
+have come up with this notion of an "event-driven"
+Gesture. So, instead of feeding it a predefined
+sequence of things to play, use an event queue
+and a means of sending events to it.
+
+I currently have been implementing a very basic
+event queue. Fixed size pool, thread-unsafe, etc.
+I've had a good time TDD-ing the core event logic,
+building tests as I go to verify functionality.
+
+Big picture, I'm hoping this event-driven gesture
+signal generator can be used to implement the
+voice staggering effect I'm looking for in this
+trio algorithm.
+
+* Tuesday, July 16th
+
+@!(ref "logs" "logs" "2024_07_16")!@
+
+Sounds on the gameboy /
+worked in the emulator /
+not on the real thing
+
+Tasks: @!(taskref "impossible-day-2")!@.
+
+** Impossible Day Task: Writing a gameboy musical instrument in assembly
+Another impossible day. This time, I focused on
+trying to figure out how to build a musical
+instrument for the gameboy using assembly.
+I learned enough assembly from the tutorial
+to figure out how to access the sound chip.
+I managed to get a single sound working...
+on the mgba emulator. The actual hardware
+did not want to do sound.
+
+The rest of the sample game from the tutorial
+does have sound working, so I'll need to look
+into what is going on here at some point.
+
+** More Boolean Algebra in Elements of Computer Systems
+The last part of this chapter had the reader
+implement things like AND, OR, NOT from
+NAND. I could get NOT without too much trouble.
+I figured out an implementation of AND, sort of
+(NOT-NAND did not immediately come to mind. I
+was too busy trying to find patterns in all the
+cases). I struggle with OR, even after looking
+at the answers. It's clear I need to build up
+more intuition.
+
+* Wednesday, July 17th
+
+@!(ref "logs" "logs" "2024_07_17")!@
+
+event queue finished /
+eventful gesture looming /
+no more tic80
+
+Tasks: @!(taskref "tic80-voxbox")!@, @!(taskref "compeng-resources")!@, @!(taskref
+"event-driven-gesture")!@, @(taskref "dagzet-rust")!@
+
+** Event Queue Finished
+I have been building a very simple event queue in
+Rust, with the idea that it can be used in the
+context of something I'm building called an
+"event-driven gesture", which is an idea I had
+to take my Gesture algorithm and make it controllable
+through events.
+
+I believe I have implemented all the initial
+features for this event queue. The functionality
+and behaviors have all been worked out incrementally
+using the test suite.
+
+** Eventful Gesture Looming
+The "event-driven gesture" is being called
+"EventfulGesture" in VoxBox. This has been
+built out, and seems to work as expected in
+the test suite. I now need try and use this
+and see if it actually works.
+
+To test this out, I'm going to have to jump
+right in and start working with it in this
+trio demo, using it to implement voice staggering.
+
+** no more tic80
+I've decided to shelve the tic80 project, despite
+my investment of time into it over the last
+few weeks. It just doesn't fit with what I came here
+to do.
+
+Things would be different if there were an
+already active interest in tic80
+at RC, or my hacks could more easily work on the
+web, or if it was written in a language more
+people here were excited about (tic80 engine
+is written in C, and it's difficult finding
+enthusiasm for C here).
+
+But alas, no. None of that here. So, it's
+not worth my time right now.
+
+** Computer Engineering Resources
+A fellow recurser has been quite generous with
+their knowledge recently. After I asked them
+about resources in computer engineering, they
+made a whole page on it. I found some time
+to look into these and add them to my Dagzet.
+
+The node on my dagzet: @!(dzref "compeng/eckman_resources")!@.
+Follow the child nodes to see the resources.
+
+** Dagzet in Rust continues
+Spent a decent chunk of time doing more work on my
+Rust port of Dagzet. There are now lines and connections
+working.
+
+I keep getting dazzled and distracted by all the stimulating
+fanciness that is Neovim and Clippy. The colors,
+animations, and the desire to unsquiggle all the squiggles
+that the clippy linter makes for me. It's very districacting,
+and I grew frustrated with how it hijacked my attention.
+
+I am amused that =:syntax off= doesn't actually seem to do
+anything in neovim.
+
+* Thursday, July 18th
+
+@!(ref "logs" "logs" "2024_07_18")!@
+
+Negation in NAND /
+is a requirement for /
+Turing completeness
+
+Tasks: @!(taskref "dagzet-rust")!@, @!(taskref
+"demo-trio")!@, @!(taskref "")!@, @!(taskref
+"read-elem-compsys")!@
+
+** Dagzet: shorthands notation
+I got the shorthand notation work for connection
+operation "co". The =$= is used to reference
+the currently selected node so you don't need
+to type it out. =co $ aaa= connects the currently
+selected node to =aaa=. =co aaa $= connects
+aaa to the currently selected node.
+
+** Trio: initial staggered voice leading
+I managed to implement initial voice staggering
+in my trio demo. The program uses an internal
+phasor clock to keep track of time. When the
+lead voice changes pitch and holds on for
+a period of time, it will schedule a change
+in the lower voice, followed by a change in
+the upper voice if the change is long enough.
+
+This took up most of my day. It was surprisingly
+difficult to get the pitch change logic right.
+I found myself adding a lot of "states", which
+got me thinking about React and how React programmers
+think a lot about minimizing state logic.
+
+I did not end up hooking up gesture as planned.
+
+** Reading: Sequential Logic
+In Elements of Computer Systems, I read a little
+bit about sequential logic, which are used to
+build memory elements of a computer like RAM.
+
+* Friday, July 19th
+
+Synthesized voices /
+Three of them in a black box /
+Controlled by Gesture
+
+Tasks: @!(taskref "dagzet-rust")!@, @!(taskref
+"demo-trio")!@, @!(taskref "gesture-reset")!@
+
+** Testing gesture/rephasor resets
+In Trio, voices are controlled by a clock
+signal. In my initial prototype, I introduced
+a clock reset that happened every time
+the user put triggered a note-on event by
+putting their finger (well, stylus) down.
+By resetting the clock, the staggered voices
+remained consistent: "do mi so"  would have
+the same timings every time.
+
+I was worried that perhaps this reset would cause
+issues in the underlying Gesture synthesizer
+algorithm. So, I made a test simulating this
+problem. If my tests are to be believed, it
+doesn't look like this actually affects anything.
+I believe this had to do with some of the details
+of the implementation and how it ignores
+phase resets.
+
+** Dagzet: Connection remarks, unknown node checker
+Implemented the connection remarks checker with tests.
+I also did work building an unknown node checker.
+During this process, I got to work with the HashSet
+data type in the Rust standard library.
+
+I am getting used to the layout of the Rust Standard
+Library reference. It's so much better to use this
+directly instead of asking Google or ChatGPT for
+partial answers.
+
+** Trio: voices controlled by Gesture
+At long last, I finally have the upper and lower
+voices in Trio (the ones that follow your lead voice)
+being controlled with Event-driven Gesture Signal
+generators instead of just using a 1-pole smoothing
+filter. I think it definitely makes a difference
+in sound quality. Being able to control the interpolation
+behavior is a nice detail.
+
+Unfortunately, the voices they are choosing don't
+work. I fear the voice logic code is turning into
+hard to read code fueled as a result of ad-hoc
+decisions to get the prototype working. It is worth
+rewriting this whole thing with a more formally
+tested state machine.
