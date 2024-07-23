@@ -145,6 +145,8 @@ impl VoiceScheduler {
         self.hooks
             .insert(EventType::LowerChange, Trigger::default());
         self.hooks.insert(EventType::UpperOn, Trigger::default());
+        self.hooks
+            .insert(EventType::UpperChange, Trigger::default());
     }
 }
 
@@ -457,5 +459,52 @@ mod tests {
         }
 
         assert!(found, "Expected upper voice event");
+    }
+
+    #[test]
+    fn test_upper_changed() {
+        let mut vs = VoiceScheduler::default();
+        vs.populate_hooks();
+
+        // Turn on lead before first tick
+        vs.on();
+        vs.change(60);
+        pop_events(&mut vs);
+
+        // tick 1
+        vs.tick();
+        pop_events(&mut vs);
+
+        // tick 2: expect lower voice to turn on
+        vs.tick();
+        pop_events(&mut vs);
+
+        // tick 3: expect upper voice to turn on
+        vs.tick();
+        pop_events(&mut vs);
+
+        // tick 4
+        vs.tick();
+        pop_events(&mut vs);
+
+        vs.change(65);
+
+        // tick 5: Pitch change has happened during previous tick
+        vs.tick();
+        pop_events(&mut vs);
+
+        // tick 6: Lower voice change happens
+        vs.tick();
+        pop_events(&mut vs);
+        // tick 7: Upper voice change now happens
+        vs.tick();
+
+        let mut found = false;
+
+        while let Some(evt) = vs.pop_next_event() {
+            found = matches!(evt, EventType::UpperChange);
+        }
+
+        assert!(found, "Expected upper voice change event");
     }
 }
