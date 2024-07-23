@@ -116,3 +116,13 @@ an instantaneous vs scheduled pitch change, but
 the scaffolding is there.
 
 @16:55 dagzet things? #dagzet-rust #timelog:00:05:00
+
+@18:55 dagzet: file range work #dagzet-rust #timelog:00:28:08
+
+@19:16 initial tests pass, but they are wrong #dagzet-rust
+
+@19:38 Attempts to get the file range table working. #dagzet-rust
+Okay, nevermind.
+
+@20:16 Got distracted.
+Haptic rotary knob controllers. What was I supposed to do?
