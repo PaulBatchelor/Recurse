@@ -57,3 +57,17 @@ test before I break for lunch. Maybe.
 I'm not sure why it's not getting the correct
 number of tags? Oh well, will have to look at it
 later.
+
+@12:21 What is going on what this test #dagzet-rust #timelog:00:31:14
+I was misinterpretting the boolean result of the hashset
+insert method. Negating that fixed stuff.
+---
+tags finished.
+
+@12:53 Attempts to move test to another place #dagzet-rust #timelog:00:08:11
+I think for the most part these could be thought of
+as integration tests.
+---
+Nevermind. I just won't fight it right now.
+
+@13:03 Select node command is last on my list I think #dagzet-rust #timelog:00:12:18
