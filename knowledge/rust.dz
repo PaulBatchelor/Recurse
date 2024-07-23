@@ -101,6 +101,7 @@ ln How to organize large Rust codebases
 nn doc_comments
 ln doc comments in rust (rust by example)
 hl https://doc.rust-lang.org/rust-by-example/meta/doc.html
+<<<<<<< HEAD
 
 nn clippy_book
 ln The Clippy Book
@@ -109,3 +110,5 @@ hl https://doc.rust-lang.org/clippy/index.html
 nn phantom_types
 ln Phantom Types
 hl https://doc.rust-lang.org/rust-by-example/generics/phantom.html
+=======
+>>>>>>> 29bc97e48ddbac8a4e75e96d5449dddc8e206e54
