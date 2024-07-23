@@ -38,7 +38,7 @@ GRAPH_DATA_DIR="dagzet/graph"
 DAGZET_LUA="tools/dagzet.lua"
 
 
-function dagzet()
+function dagzet_util()
 {
     DZFILE=$1
     $LUA $DAGZET_LUA $DZFILE 
@@ -56,7 +56,8 @@ function add_to_dagzet() {
         # echo $DZFILE
         # $LUA $DAGZET_LUA $DZFILE #| sqlite3 a.db
         echo $DZFILE
-         dagzet $DZFILE | sqlite3 a.db
+        #dagzet_util $DZFILE | sqlite3 a.db
+        dagzet $DZFILE | sqlite3 a.db
     else
         echo "Warning: $DZFILE does not exist"
     fi

@@ -121,7 +121,7 @@ tg singing acapella
 nn pacman_c_sokol
 ln Pacman single-header file implement in C
 hl https://github.com/floooh/pacman.c
-tg gamedev sokol gamedev
+tg gamedev sokol
 
 nn boston_cream_pie
 ln Boston Cream Pie

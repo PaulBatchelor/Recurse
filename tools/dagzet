@@ -4,5 +4,5 @@ then
     exit 1
 fi
 
-# ./tools/dagzet.lua $1
-dagzet $1
+./tools/dagzet.lua $1
+# dagzet $1
