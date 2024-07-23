@@ -2,9 +2,9 @@ use std::collections::HashMap;
 
 #[allow(dead_code)]
 #[derive(Default, Debug, PartialEq)]
-struct SchedulerState {
+pub struct SchedulerState {
     pitch: u32,
-    time: u32,
+    pub time: u32,
     gate: bool,
 }
 
@@ -28,7 +28,7 @@ pub enum EventType {
 }
 
 #[allow(dead_code)]
-#[derive(Default)]
+#[derive(Default, Debug, PartialEq)]
 pub struct AutoVoiceState {
     upper: bool,
     lower: bool,
@@ -58,7 +58,7 @@ impl Trigger {
 #[allow(dead_code)]
 #[derive(Default)]
 pub struct VoiceScheduler {
-    state: SchedulerState,
+    pub state: SchedulerState,
     autovoice: AutoVoiceState,
     //hooks: Hooks,
     hooks: HashMap<EventType, Trigger>,
@@ -224,13 +224,20 @@ mod tests {
             gate: false,
         };
 
+        let av = AutoVoiceState {
+            upper: false,
+            lower: false,
+        };
+
         vs.on();
+        vs.tick();
         vs.tick();
         vs.tick();
         vs.tick();
 
         vs.off();
         assert_eq!(&vs.state, &cmp);
+        assert_eq!(&vs.autovoice, &av);
     }
 
     #[test]
@@ -496,6 +503,7 @@ mod tests {
         // tick 6: Lower voice change happens
         vs.tick();
         pop_events(&mut vs);
+
         // tick 7: Upper voice change now happens
         vs.tick();
 
