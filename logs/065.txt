@@ -97,3 +97,12 @@ I gotta replace it there.
 @13:51 Okay it crashed because I forgot to escape. #dagzet-rust
 
 @14:01 Lots more errors. This makes more sense now. Halting for now. #dagzet-rust
+I need better error reporting. It seems like this version
+of dagzet has stricter parsing (you can't have duplicate
+tags, for example, whereas my old implementation could).
+
+@14:13 Trio Triggers #demo-trio-voice-scheduler
+
+@14:44 Already shooting myself in the foot with this code #demo-trio-voice-scheduler
+Going to create an interface where hooks are automatically
+appended and interated through.
