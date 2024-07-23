@@ -34,3 +34,26 @@ I know, I know. I'm putting it off.
 
 @09:25 fixed logdb generator bottleneck
 Classic mistake: forgot to add BEGIN/COMMIT
+
+@09:31 file range table generation #dagzet-rust #timelog:00:07:14
+
+@09:39 Off to implement hyperlinks #dagzet-rust #timelog:00:37:18
+
+@10:16 TODO task #dagzet-rust #timelog:00:13:18
+
+@10:30 Tags (tg) #dagzet-rust #timelog:00:31:30
+This one is slightly more interesting because of
+how the data is represented in SQLite vs how
+it's entered in dagzet. From a dagzet point of
+view, tags are a list of entries associated with
+a node. In SQLite, they boil down into pairs.
+---
+Tags should be able to be called more than once.
+---
+I think I'm only going to have time for the initial
+test before I break for lunch. Maybe.
+
+@11:01 Test is breaking in a weird way. #dagzet-rust
+I'm not sure why it's not getting the correct
+number of tags? Oh well, will have to look at it
+later.
