@@ -106,3 +106,6 @@ tags, for example, whereas my old implementation could).
 @14:44 Already shooting myself in the foot with this code #demo-trio-voice-scheduler
 Going to create an interface where hooks are automatically
 appended and interated through.
+
+@15:22 Working on UpperVoice now #demo-trio-voice-scheduler
+Lower voice seems to behave as expected.
