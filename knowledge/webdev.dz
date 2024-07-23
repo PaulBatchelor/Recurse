@@ -105,3 +105,10 @@ rm came up while looking at keys from a LC75 data dump
 nn deno
 hl https://github.com/denoland/deno
 ln Deno: A modern runtime for JavaScript and TypeScript.
+
+nn stately_docs
+hl https://stately.ai/docs
+ln Stately documentation
+rm DF mentioned this when we were talking
+rm about state machines, thinks the concepts
+rm are solid.
