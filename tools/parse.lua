@@ -168,6 +168,7 @@ function extract_tags(title)
     end
 end
 
+print("BEGIN;")
 for d,e in pairs(events) do
     if(e.comment or e.title) then
         print(fmt("INSERT INTO dayblurbs(day, title, blurb) "..
@@ -182,3 +183,4 @@ for d,e in pairs(events) do
         extract_tags(evt.title)
     end
 end
+print("COMMIT;")
