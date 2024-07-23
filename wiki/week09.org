@@ -74,7 +74,11 @@ was. Sigh.
 
 * Sunday, July 14th
 
+<<<<<<< HEAD
 @!(ref "logs" "logs" "2024_07_14")!@
+=======
+@!(ref "logs" "logs" "2024_07_13")!@
+>>>>>>> 29bc97e48ddbac8a4e75e96d5449dddc8e206e54
 
 Wanted lines with sound /
 Built the necessary tools /
@@ -101,6 +105,7 @@ But, in the evening I did get it to work.
 I ended up not using any of the code, and basically
 just submitted the raw sketch of my composition
 instead. I believe there is a lesson to be learned.
+<<<<<<< HEAD
 
 * Monday, July 15th
 
@@ -349,3 +354,5 @@ hard to read code fueled as a result of ad-hoc
 decisions to get the prototype working. It is worth
 rewriting this whole thing with a more formally
 tested state machine.
+=======
+>>>>>>> 29bc97e48ddbac8a4e75e96d5449dddc8e206e54
