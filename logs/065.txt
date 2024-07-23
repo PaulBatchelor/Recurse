@@ -27,3 +27,5 @@ time to start this?
 I know, I know. I'm putting it off.
 
 @08:56 getting ready to fix merge conflicts.
+
+@09:07 Publishing
