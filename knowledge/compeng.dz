@@ -1,6 +1,6 @@
 ns compeng
 
-nn eckman_resources
+nn cceckman_resources
 hl https://cceckman.com/writing/computer-engineering-resources/
 ln Computer Engineering Resources
 td add links to dagzet
@@ -8,17 +8,17 @@ td add links to dagzet
 nn nand2tetris
 ln nand2tetris
 hl https://www.nand2tetris.org/
-rm CE: This starting point skips over the more "electrical"
+rm cceckman: This starting point skips over the more "electrical"
 rm side of things, like how to construct logic gates and 
 rm memories out of transistors. But it's a great place to 
 rm start if you're coming from a programming background.
-co $ eckman_resources
+co $ cceckman_resources
 
 nn logism_evolution
 hl https://github.com/logisim-evolution/logisim-evolution
 ln logism evolution: digitial logic design tool and simulator
-co $ eckman_resources
-rm CE used a version of logism during their first logical
+co $ cceckman_resources
+rm cceckman used a version of logism during their first logical
 rm design course. Drag and drop logic gates and wires,
 rm watch them toggle on and off. This seems to be an
 rm actively maintained community version of the now-retired
@@ -29,39 +29,39 @@ hl https://www.righto.com/
 ln Ken Shiriff's Blog
 rm reverse engineering of processors, such as 8088 or
 rm Pentium
-co $ eckman_resources
+co $ cceckman_resources
 
 nn computer_organization_design
 ln Computer Organization and Design by Patterso And Hennesey
-co $ eckman_resources
+co $ cceckman_resources
 co $ nand2tetris
-cr CE: good for a second or third course in computer
+cr cceckman: good for a second or third course in computer
 cr architecture after nand2tetris
-rm CE: as of 2024, I'd recommend the RISC-V editions, 2017
+rm cceckman: as of 2024, I'd recommend the RISC-V editions, 2017
 rm or later.
 
 nn riscv
 hl https://riscv.org
 ln RISC-V
-co $ eckman_resources
+co $ cceckman_resources
 
 nn 7400_IC_wikipedia
 hl https://en.wikipedia.org/wiki/7400-series_integrated_circuits
 ln 7400-series integrated circuits (wikipedia)
-co $ eckman_resources
+co $ cceckman_resources
 
 nn HDL_wikipedia
 hl https://en.wikipedia.org/wiki/Hardware_description_language
 ln Hardware Description Language (wikipedia)
-co $ eckman_resources
-cr CE: At least in the hobby universe, there are HDLs that
+co $ cceckman_resources
+cr cceckman: At least in the hobby universe, there are HDLs that
 cr are easier to understand than the incumbents (Verilog VHDL).
 
 nn tiny_tapeout
 hl https://tinytapeout.com/
 ln Tiny Tapeout
-co $ eckman_resources
-rm CE: Tiny Tapeout looks like a neat project.
+co $ cceckman_resources
+rm cceckman: Tiny Tapeout looks like a neat project.
 rm By putting many small projects into a single 
 rm integrated circuit, they can amortize the per-IC 
 rm costs, putting custom silicon into the 
