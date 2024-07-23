@@ -71,3 +71,18 @@ as integration tests.
 Nevermind. I just won't fight it right now.
 
 @13:03 Select node command is last on my list I think #dagzet-rust #timelog:00:12:18
+
+@13:18 I think it's all implemented? Now for an initial replacement test #dagzet-rust #timelog:00:05:23
+
+@13:21 Wow, I think it might have worked on the first go. #dagzet-rust
+Installed with =cargo install --path .". Replaced
+my lua program with my rust program. Looked around on
+the generated ouput. It seems to be right so far?
+Publishing to see what will happen.
+---
+Yeah, it says it is fine. so that's pretty cool.
+
+@13:23 Adding a README #dagzet-rust #timelog:00:19:13
+
+@13:43 I forgot about cx. #dagzet-rust
+I've done enough for one session. It's almost there.
