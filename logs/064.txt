@@ -1,4 +1,4 @@
-@2024-07-21 Day 64.
+@2024-07-22 Day 64. Haptic Knob Controllers.
 18 days left of batch.
 ---
 I think Haikus have run their course.

@@ -51,3 +51,26 @@ yesterday. Managed to scope out the bare minimum
 of what needs to be done in order for my dagzet
 rust port to work with my existing RC knowledge
 graph. It is, of course, more work than I expected
+
+* Monday, July 22nd
+
+Logs: @!(ref "logs" "logs" "2024_07_22")!@
+
+Tasks: @!(taskref
+"demo-trio-voice-scheduler")!@, @!(taskref "dagzet-rust")!@
+
+Pretty much most of my day was spent building up
+a new voice scheduling system for the Trio
+demo @!(taskref "demo-trio")!@. The idea was to build
+a system that made it easy to simulate interactions
+in a test suite to ensure that behavior in the
+system was working correctly.
+
+Dan showed me Stately (LINK NEEDED), because I mentioned
+my interested in building a state machine
+representing this system.
+
+Dagzet in Rust is chugging along. I didn't do
+much yesterday, but I did implement the rest of
+the File Range command. I still need to generate
+the table for it (this should be a small task).
