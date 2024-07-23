@@ -54,7 +54,6 @@ logs/053.txt
 logs/054.txt
 logs/055.txt
 logs/056.txt
-<<<<<<< HEAD
 logs/057.txt
 logs/058.txt
 logs/059.txt
@@ -62,5 +61,3 @@ logs/060.txt
 logs/061.txt
 logs/062.txt
 logs/063.txt
-=======
->>>>>>> 29bc97e48ddbac8a4e75e96d5449dddc8e206e54

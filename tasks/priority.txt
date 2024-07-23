@@ -10,12 +10,4 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 
 @demo-trio Create "trio" demo
 
-<<<<<<< HEAD
 @demo-trio-voice-scheduler implement proper voice schedule
-=======
-@tic80-voxbox hello voxbox in tic80
-
-@linear-gesture-interface build linear gesture interface for mnolth
-
-@event-driven-gesture implement event driven gesture
->>>>>>> 29bc97e48ddbac8a4e75e96d5449dddc8e206e54
