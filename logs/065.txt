@@ -31,3 +31,6 @@ I know, I know. I'm putting it off.
 @09:07 Publishing
 
 @09:20 Actually, before publishing, fix compeng page
+
+@09:25 fixed logdb generator bottleneck
+Classic mistake: forgot to add BEGIN/COMMIT
