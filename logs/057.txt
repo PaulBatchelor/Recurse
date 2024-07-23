@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 @2024-07-15 Day 57. Event-driven Gesture, Dagzet, Testing in Rust
 25 days left of batch.
-=======
-@2024-07-15 Day 57.
->>>>>>> 29bc97e48ddbac8a4e75e96d5449dddc8e206e54
 
 Prev:
 
@@ -11,18 +7,12 @@ Wanted lines with sound /
 Built the necessary tools /
 Abandoned the Thought
 
----
-
 Next:
 
 || @!(taskref "event-driven-gesture")!@: initial work on
 event-driven gesture interface
 
-<<<<<<< HEAD
 || @!(taskref "dagzet-rust")!@: more dagzet work, cuz
-=======
-|| @!(taskef "dagzet-rust")!@: more dagzet work, cuz
->>>>>>> 29bc97e48ddbac8a4e75e96d5449dddc8e206e54
 I didn't get to it yesterday.
 
 ---
@@ -108,12 +98,12 @@ deep copying an entire event.
 ---
 For dequeue, I should either return a reference or an id
 that eventually resolve to a reference.
-<<<<<<< HEAD
 
 @15:49 More work on dagzet in rust #dagzet-rust #timelog:00:35:58
+
 @15:50 Let's run clippy on my dagzet project so far #dagzet-rust
+
 Turns out it doesn't have a lot to say.
----
 Voxbox, on the other hand, is a mess.
 
 @15:52 cargo clippy is a mess on this repo #voxbox-cargo-clippy
@@ -129,5 +119,3 @@ I also think some of the examples are broken?
 
 @20:25 back to dagzet #dagzet-rust #timelog:00:22:25
 added a lines command. now I'm very tired.
-=======
->>>>>>> 29bc97e48ddbac8a4e75e96d5449dddc8e206e54
