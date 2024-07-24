@@ -105,3 +105,41 @@ I get a ton of stuff.
 #+BEGIN_SRC sh
 ./tools/gendb.sh && ./tools/dz_wikigen.sh | cut -f 2 | sort | uniq -c | sort
 #+END_SRC
+
+@16:46 debugging #dagzet-rust #timelog:00:45:48
+My goal is to take a look at the generated table outputs of both.
+
+@17:00 number of nodes are consistent, name order is not #dagzet-rust
+This is probably due to the randomized hashmap structure
+in Rust.
+---
+But, the node IDs are the same, monotonically increasing
+unique values.
+
+@17:02 lines output is identical as well #dagzet-rust
+
+@17:14 something is wrong with the connections #dagzet-rust
+There seems to be duplicates. I generated and sorted
+the connections alphabetically and found these.
+---
+The rust version also has inconsistent connections as well.
+
+@17:18 connections: 127 rust dagzet vs 142 lua dagzet #dagzet-rust
+It is consistently this. I wonder if "cx" is partially
+to blame. disabling all the cxs now.
+
+@17:21 connections are the same without cx. #dagzet-rust
+There are 15 cx connections made, and that accounts for
+the missing connections.
+
+@17:22 I wonder if it's the edge generation somehow #dagzet-rust
+
+@17:25 I think I should be doing a name lookup, not using the ID values directly #dagzet-rust
+
+@17:30 Okay! that fixed the connections issues. #dagzet-rust
+Now, let's see if the error goes away.
+
+@17:32 FINALLY. IT WORKS. #dagzet-rust
+I think I really mean it this time. It generates the
+data without crashing and everything. Peaking around,
+it seems to produce the data just fine.

@@ -171,8 +171,6 @@ function get_parents(connections, nid)
 end
 
 function shortname(namespace, name)
-    -- DEBUG PRINT HERE
-    print(namespace, name)
     local newstr = name:gsub(namespace .. "/", "")
     return newstr
 end
