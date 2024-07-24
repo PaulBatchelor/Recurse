@@ -56,8 +56,8 @@ function add_to_dagzet() {
         # echo $DZFILE
         # $LUA $DAGZET_LUA $DZFILE #| sqlite3 a.db
         echo $DZFILE
-        #dagzet_util $DZFILE | sqlite3 a.db
-        dagzet $DZFILE | sqlite3 a.db
+        dagzet_util $DZFILE | sqlite3 a.db
+        #dagzet $DZFILE | sqlite3 a.db
     else
         echo "Warning: $DZFILE does not exist"
     fi

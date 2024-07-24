@@ -123,3 +123,5 @@ it now, and construct simulations in a very precise way.
 I think the event handler needed to reset the head/tail
 indices as well. That fix seemed to clear up all the
 gesture related issues which I was suspecting.
+
+@19:21 Reading: Machine Language #read-elem-compsys #timelog:00:53:45

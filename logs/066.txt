@@ -1,0 +1,41 @@
+@2024-07-24 Day 66.
+16 days left of batch.
+---
+Prev: Dagzet initial commandset almost done,
+but different strange things break when I try to use it.
+The Trio voice manager mostly works except for that
+one weird timing thing, which ain't bad.
+---
+Next: try to get rust dagzet working with my RC
+knowledge grpah. investigate timing logic and think
+about chords in Trio, 
+
+@09:40 Later morning triage.
+
+@09:51 This feels completed. #demo-trio-voice-scheduler #demo-trio-low-timing
+There's one timing issue that I'm going to look at,
+but that feels like another task.
+
+@09:52 Description of timing issue #demo-trio-low-timing
+Sometimes, when I put the pen down on the tablet,
+the lower voice will wait an extra beat before
+turning on. I can see in the window that the time
+value becomes "1" twice, which I don't want to happen.
+---
+I think the issue here may have to do with how I am
+handling clock resets. It's possible that I missed
+something when I quickly add it in yesterday.
+
+@10:04 Our little fella needs to enjoy themselves #poke-laughter-chitter
+The sound could be done to facilitate this better.
+But I also think the eyes should change from bug-eyed
+to the kawaii "> <" eyes.
+---
+The graphics will be a faster change than the sounds,
+so I may want to get started on that in the next
+day or so
+
+@10:11 A more sophisticated chord selection algorithm is required #demo-trio-chords #demo-trio
+The issue is there is no sense of resolution anywhere.
+It still kinda meanders.
+

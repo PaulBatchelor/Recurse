@@ -8,3 +8,4 @@ tasks/done.txt
 tasks/voxbox.txt
 tasks/gamejam.txt
 tasks/web.txt
+tasks/demos.txt
