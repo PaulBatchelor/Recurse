@@ -1,4 +1,4 @@
-@2024-07-23 Day 65.
+@2024-07-23 Day 65. Voice Scheduler Feature Complete. Rust Dagzet nearly feature complete.
 17 days left of batch.
 ---
 Prev: Work on new voice scheduling system for
@@ -20,7 +20,7 @@ implementing triggers for specific events with tests.
 I am putting it in "main" instead of priority.
 ---
 Let me get these last few projects in a good
-place (@!(taskref "demo-trio)!@ and @!(taskref
+place (@!(taskref "demo-trio")!@ and @!(taskref
 "dagzet-rust")!@), and then I'll try to find
 time to start this?
 ---
