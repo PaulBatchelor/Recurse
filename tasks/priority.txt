@@ -6,8 +6,6 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 
 @read-elem-compsys Read: Elements of Computer Systems
 
-@dagzet-rust Port dagzet to rust
-
 @demo-trio Create "trio" demo
 
 @poke-laughter-chitter implement laughter and chitter
