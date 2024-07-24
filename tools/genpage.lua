@@ -171,6 +171,8 @@ function get_parents(connections, nid)
 end
 
 function shortname(namespace, name)
+    -- DEBUG PRINT HERE
+    print(namespace, name)
     local newstr = name:gsub(namespace .. "/", "")
     return newstr
 end
@@ -181,6 +183,10 @@ function get_lines(db, nid)
         "WHERE node == " .. nid ..
         " LIMIT 1;"
     )
+
+    if stmt == nil then
+        error("could not find: " .. db:errmsg())
+    end
 
     local lines = nil
     for row in stmt:nrows() do

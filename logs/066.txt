@@ -40,3 +40,68 @@ The issue is there is no sense of resolution anywhere.
 It still kinda meanders.
 
 @10:16 Publish
+
+@10:27 More dagzet integration work #dagzet-rust #timelog:00:42:14
+
+@10:34 I don't think I finished the topsort work #dagzet-rust
+
+@11:09 topsort bug fixed. I just didn't finish writing #dagzet-rust
+The test I had for it was too small.
+
+@11:10 nice! running into invalid command error, which is what we want. #dagzet-rust
+
+@11:11 Working on cx command. #dagzet-rust
+"cx" is an external connection, and it allows you to make
+connections to nodes that are external
+---
+A partial implementation of cx is all that is needed for now.
+No aliases, no shorthands. It's all just full paths.
+---
+Any nodes used by =cx= get stored in a list (set?). When
+unknown nodes are checked, if it can't find the node
+in the locally created nodes, it'll check the nodes here.
+---
+Connections will work the same way since it utilizes a SQL
+command. The burden is on the dagzetter to ensure that
+nodes get created before they are connected with =cx=. This
+is different from =co=, which follows a more declarative
+style.
+
+@11:38 set up tests for initila cx behavior #dagzet-rust
+
+@11:50 now the implementation #dagzet-rust
+
+@12:09 now to try and hook things up again #dagzet-rust
+
+@12:12 In generate edges, I need to ignore external connections #dagzet-rust
+At this point, any unknown nodes should have checked for.
+---
+Is there ever a situation where an edge would have an
+unknown node missed by the unknown node error check?
+
+@12:22 I think it works. One quick look around. #dagzet-rust
+
+@12:24 Full page generation is causing a crash in genpage.lua #dagzet-rust
+It's a sqlite error. I need to figure out what the error is.
+---
+I need to use =db:errmsg=
+---
+I didn't configure the column name correctly.
+
+@12:34 More sqlite errors. I think I'm forgetting to name the columns #dagzet-rust
+
+@12:36 The rest of the tables need to be implemented #dagzet-rust
+
+@12:54 Running into a really odd stack overflow error #dagzet-rust
+I'm going to have to call it quits after this.
+
+@13:00 We are getting loops in the output. #dagzet-rust
+It is random too, probably due to randomness in lua tables.
+---
+Something is going wrong in the SQLite table generation.
+When I place debug prints in the =shortname= generator,
+I get a ton of stuff.
+===
+#+BEGIN_SRC sh
+./tools/gendb.sh && ./tools/dz_wikigen.sh | cut -f 2 | sort | uniq -c | sort
+#+END_SRC
