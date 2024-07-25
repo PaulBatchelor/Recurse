@@ -16,4 +16,4 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 
 @voxbox-balloon Port balloon signal generator to voxbox
 
-@resume-followup Follow-up on resume suggestions
+@resume-follow-up Follow-up on resume suggestions
