@@ -20,3 +20,9 @@ I got some good suggestions.
 @10:03 publishing.
 
 @10:06 laughing facial expressions in poke. #poke-laughter-chitter #timelog:01:05:39
+
+@12:54 Trio Chord Selector planning #demo-trio-chords #timelog:01:11:47
+
+@14:41 Plan out some initial code #demo-trio-chords
+The initial structures: chords, and valid chord
+transitions.

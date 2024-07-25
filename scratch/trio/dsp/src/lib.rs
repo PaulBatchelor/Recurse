@@ -2,6 +2,8 @@ mod voice;
 use voice::{EventType, VoiceScheduler};
 use voxbox::*;
 
+mod chords;
+
 struct SmoothParam {
     pub value: f32,
     pub smoother: Smoother,
