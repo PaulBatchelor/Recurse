@@ -1,4 +1,4 @@
-@2024-07-24 Day 66.
+@2024-07-24 Day 66. Initial Dagzet Rust Port Completed.
 16 days left of batch.
 ---
 Prev: Dagzet initial commandset almost done,
@@ -8,7 +8,7 @@ one weird timing thing, which ain't bad.
 ---
 Next: try to get rust dagzet working with my RC
 knowledge grpah. investigate timing logic and think
-about chords in Trio, 
+about chords in Trio.
 
 @09:40 Later morning triage.
 
@@ -145,3 +145,5 @@ data without crashing and everything. Peaking around,
 it seems to produce the data just fine.
 
 @18:21 I have taken a break broadcast my success. Heading out now for dinner. #dagzet-rust
+
+@20:14 More reading on machine language. #read-elem-compsys #timelog:00:45:17

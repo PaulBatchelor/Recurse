@@ -13,3 +13,7 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 @demo-trio-low-timing Investigate low voice timing issues
 
 @demo-trio-chords Implement chord selection algorithm
+
+@voxbox-balloon Port balloon signal generator to voxbox
+
+@resume-followup Follow-up on resume suggestions

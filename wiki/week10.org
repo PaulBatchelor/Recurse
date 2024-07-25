@@ -35,11 +35,6 @@ using a combination of traits, generics,
 and things called "phantom types" and  "phantom data".
 See: @!(dzref "rust/phantom_types")!@
 
-@09:46 Which commands am I using in my recurse dagzet? #dagzet-rust
-The goal is to get just enough working that it can replace
-my RC dagzet. I believe I can do this with just some shell
-scripts.
-
 * Sunday, July 21st
 
 Logs: @!(ref "logs" "logs" "2024_07_21")!@
@@ -104,3 +99,14 @@ some issues. I'm going to need more descriptive
 errors in the command line before I can figure
 out what is going on.
 
+* Wednesday, July 24th
+
+Logs: @!(ref "logs" "logs" "2024_07_24")!@
+
+Tasks: @!(taskref "dagzet-rust")!@
+
+My initial port of dagzet to rust is now complete.
+It can now serve as a drop-in replacement for
+the original implementation in Lua.
+
+21 hours, 47 minutes, 32 seconds of logged time.

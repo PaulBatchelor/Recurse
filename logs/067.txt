@@ -1,0 +1,20 @@
+@2024-07-25 Day 67.
+15 days left of batch.
+---
+Prev: initial dagzet rust port completed.
+---
+Next: work out chord engine logic in trio. add
+more facial expressions in poke, port balloon
+signal generator to trio?
+
+@08:43 Morning triage
+
+@08:53 Might be worth trying to port balloon #voxbox-balloon
+I have just created the task for it.
+
+@08:56 Might be a good day to do some resume follow-up stuff #resume-follow-up
+I got some good suggestions.
+
+@10:02 finished up responding back to jobs chat.
+
+@10:03 publishing.
