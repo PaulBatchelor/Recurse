@@ -23,6 +23,16 @@ I got some good suggestions.
 
 @12:54 Trio Chord Selector planning #demo-trio-chords #timelog:01:11:47
 
-@14:41 Plan out some initial code #demo-trio-chords
+@14:41 Plan out some initial code #demo-trio-chords #timelog:01:16:26
 The initial structures: chords, and valid chord
 transitions.
+
+@15:53 Initial chord structure, now to think about querying #demo-trio
+We want to make a query: given some pitch (0-11), and
+a current chord, provide a range of potential candidates
+for the next chord.
+---
+Since this is going to be used in a realtime
+situation. My thinking is to populate
+with a pre-allocated fixed size array that is managed
+internally.

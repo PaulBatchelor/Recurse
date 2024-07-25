@@ -22,6 +22,8 @@ type Chord = [u8; 3];
 struct ChordStates {
     chords: Vec<Chord>,
     transitions: HashMap<usize, Vec<usize>>,
+    candidates: [usize; 16],
+    ncandiates: u8,
 }
 
 #[allow(dead_code)]
@@ -57,6 +59,10 @@ impl ChordStates {
             transitions.insert(from_chord, vec![to_chord]);
             Some(0)
         }
+    }
+
+    pub fn query(&mut self, next_note: u8, curchord: usize) {
+        !todo()
     }
 }
 
