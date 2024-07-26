@@ -22,14 +22,15 @@ type Chord = [u8; 3];
 
 #[allow(dead_code)]
 struct NoteTransitionTable {
-    transitions: [usize; 42],
+    // 12 notes x 11 possible next notes
+    transitions: [usize; 132],
     pub key: u8,
 }
 
 impl Default for NoteTransitionTable {
     fn default() -> Self {
         NoteTransitionTable {
-            transitions: [0; 42],
+            transitions: [0; 132],
             key: 0,
         }
     }
@@ -41,7 +42,7 @@ impl NoteTransitionTable {
         let curnote = (curnote - self.key) % 12;
         let nxtnote = (nxtnote - self.key) % 12;
 
-        let pos = (7 * curnote + nxtnote) as usize;
+        let pos = (12 * curnote + nxtnote) as usize;
 
         // adding 1 allows zero to be an empty value
         // I'm not using Option<T> because I don't know
@@ -54,7 +55,7 @@ impl NoteTransitionTable {
         let curnote = (curnote - self.key) % 12;
         let nxtnote = (nxtnote - self.key) % 12;
 
-        let pos = (7 * curnote + nxtnote) as usize;
+        let pos = (12 * curnote + nxtnote) as usize;
 
         self.transitions[pos] == chord_ref + 1
     }
@@ -215,7 +216,10 @@ mod tests {
 
     #[test]
     fn test_note_transition_table() {
-        let mut nt = NoteTransitionTable::default();
+        let mut nt = NoteTransitionTable {
+            key: KEY_C,
+            ..Default::default()
+        };
 
         let tonic = 0;
         let subdominant = 1;
@@ -230,5 +234,8 @@ mod tests {
         nt.insert(62, 60, subdominant);
 
         assert!(nt.was_used_last(62, 60, subdominant));
+
+        // test a note transition that wasn't used yet
+        assert!(!nt.was_used_last(65, 60, tonic));
     }
 }
