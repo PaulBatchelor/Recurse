@@ -1,0 +1,20 @@
+@2024-07-26 Day 68.
+14 days left of batch.
+---
+Prev: Poke facial expressions, ChordSelector Planning,
+Reading
+---
+Next: More ChordSelector work, Balloon port for poke?
+
+@09:04 Morning Triage
+
+@09:24 Might try to get to this today #voxbox-balloon
+I can test it out in Poke
+
+@09:26 Publishing
+
+@09:36 Responding to Jobs Chat
+
+@09:51 Implement query. #demo-trio-chords
+Query: given a current chord, and a new lead
+note, find all the valid chords to transition to.

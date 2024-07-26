@@ -1,4 +1,4 @@
-@2024-07-25 Day 67.
+@2024-07-25 Day 67. Chord Selector Planning.
 15 days left of batch.
 ---
 Prev: initial dagzet rust port completed.
@@ -36,3 +36,7 @@ Since this is going to be used in a realtime
 situation. My thinking is to populate
 with a pre-allocated fixed size array that is managed
 internally.
+
+@16:00 Presentations
+
+@19:27 Wrap-up chapter 4 (machine language), begin chapter 5 (Computer Architecture) #read-elem-compsys #timelog:01:00:09

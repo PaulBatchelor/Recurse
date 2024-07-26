@@ -15,6 +15,9 @@ const LA: u8 = 9;
 #[allow(dead_code)]
 const TI: u8 = 11;
 
+#[allow(dead_code)]
+const KEY_C: u8 = 0;
+
 type Chord = [u8; 3];
 
 #[derive(Default)]
@@ -23,7 +26,7 @@ struct ChordStates {
     chords: Vec<Chord>,
     transitions: HashMap<usize, Vec<usize>>,
     candidates: [usize; 16],
-    ncandiates: u8,
+    ncandidates: u8,
 }
 
 #[allow(dead_code)]
@@ -61,8 +64,33 @@ impl ChordStates {
         }
     }
 
-    pub fn query(&mut self, next_note: u8, curchord: usize) {
-        !todo()
+    pub fn query(&mut self, curchord: usize, next_note: u8, key: u8) {
+        // extract scale degree from note and key
+        // TODO: this won't work for most notes <12, problem?
+        let scale_degree = (next_note - key) % 12;
+
+        self.ncandidates = 0;
+
+        if curchord >= self.chords.len() {
+            return;
+        }
+
+        let potentials = self.transitions.get(&curchord);
+
+        if potentials.is_none() {
+            return;
+        }
+
+        let potentials = potentials.unwrap();
+
+        for chord_idx in potentials {
+            let chord: &Chord = &self.chords[*chord_idx];
+
+            if chord.contains(&scale_degree) {
+                self.candidates[self.ncandidates as usize] = *chord_idx;
+                self.ncandidates += 1;
+            }
+        }
     }
 }
 
@@ -94,5 +122,53 @@ mod tests {
         assert!(result.is_none());
         let result = states.add_transition(tonic, 999);
         assert!(result.is_none());
+    }
+
+    #[test]
+    fn test_query() {
+        let mut states = ChordStates::default();
+        let tonic = states.add_chord(&[DO, MI, SO]);
+        let subdominant = states.add_chord(&[DO, FA, LA]);
+        let dominant = states.add_chord(&[RE, SO, TI]);
+        let supertonic = states.add_chord(&[RE, FA, LA]);
+
+        states.add_transition(tonic, dominant);
+        states.add_transition(tonic, subdominant);
+        states.add_transition(tonic, supertonic);
+
+        states.add_transition(subdominant, dominant);
+        states.add_transition(subdominant, tonic);
+        states.add_transition(dominant, tonic);
+
+        // Query all possible chord transitions
+        // for subdominant given a the note B
+        // (7th scale degree TI)
+        states.query(subdominant, 71, KEY_C);
+
+        // Expectation: only one chord possible (dominant)
+
+        assert_eq!(states.ncandidates, 1);
+
+        // Do another query on tonic going to F.
+        // Two results expected
+        states.query(tonic, 65, KEY_C);
+        assert_eq!(states.ncandidates, 2);
+
+        let mut contains_subdominant = false;
+        let mut contains_supertonic = false;
+
+        for i in 0..states.ncandidates as usize {
+            let chord_idx = states.candidates[i];
+            if chord_idx == subdominant {
+                contains_subdominant = true;
+            }
+
+            if chord_idx == supertonic {
+                contains_supertonic = true;
+            }
+        }
+
+        assert!(contains_supertonic);
+        assert!(contains_subdominant);
     }
 }
