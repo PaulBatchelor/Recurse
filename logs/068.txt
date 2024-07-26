@@ -37,3 +37,30 @@ Chords need to be removed.
 @14:23 I'm running into overflow issues. Why? #demo-trio-chords
 Oh just figured it out. I was using "chord index" instead
 of "index".
+
+@15:07 Initial test created for note transition chord test #demo-trio-chords
+This has an interface that applies the heuristic to the
+candidate, which effectively removes the previous chord
+in place.
+
+@15:12 kind of a clunky interface, but it can be reworked later #demo-trio-chords
+I'm querying the chord, removeing the previous transition chord,
+and updating the note pair table in 3 separate steps. It
+feels maybe too low-level and could be consolidated
+better?
+
+@15:22 remove previous transition not working as expected #demo-trio-chords
+It has no effect at all apparently.
+
+@15:34 I think I found an off by one error #demo-trio-chords
+I'm 99% sure it's the problem, but is it worth the problem?
+---
+There are two kinds of references right now: zero-index
+and one-indexed. The one-indexed ones are used because
+it means 0 can be reserved for None. =was_used_last=
+expects a zero-indexed chord. But really, these indexes
+are transparent for the most part. =add_chord= returns
+a zero-indexed position as well.
+---
+I think it makes sense to 1-index everything because
+that 0 is so critical.

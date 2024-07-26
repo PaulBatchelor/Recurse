@@ -80,13 +80,13 @@ impl CandidatesTable {
 
     #[allow(dead_code)]
     pub fn get_chord(&self, pos: usize) -> Option<usize> {
-        let chord = self.candidates[pos] - 1;
+        let chord = self.candidates[pos];
 
         if chord == 0 {
             return None;
         }
 
-        Some(chord)
+        Some(chord - 1)
     }
 
     #[allow(dead_code)]
@@ -95,7 +95,15 @@ impl CandidatesTable {
             return None;
         }
 
-        self.get_chord(0)
+        // iterate through candidates until first non-zero
+        for i in 0..self.ncandidates as usize {
+            let chord = self.get_chord(i);
+            if chord.is_some() {
+                return chord;
+            }
+        }
+
+        None
     }
 
     #[allow(dead_code)]
@@ -106,7 +114,7 @@ impl CandidatesTable {
         next: u8,
     ) {
         for i in 0..self.ncandidates as usize {
-            if note_transitions.was_used_last(prev, next, self.candidates[i]) {
+            if note_transitions.was_used_last(prev, next, self.candidates[i] - 1) {
                 self.candidates[i] = 0;
             }
         }
@@ -120,7 +128,8 @@ struct ChordStates {
     transitions: HashMap<usize, Vec<usize>>,
     // candidates: [usize; 16],
     // ncandidates: u8,
-    note_transitions: NoteTransitionTable,
+    // TODO: pull this out of ChordStates?
+    pub note_transitions: NoteTransitionTable,
 }
 
 #[allow(dead_code)]
@@ -317,11 +326,12 @@ mod tests {
 
         let chord = candidates.get_first_chord().unwrap();
         assert_eq!(chord, dominant);
+        states.note_transitions.insert(60, 62, chord);
+        assert!(states.note_transitions.was_used_last(60, 62, chord));
 
         // expect supertonic to be top result
         states.query(tonic, 62, KEY_C, &mut candidates);
         candidates.remove_previous_transition(&states.note_transitions, 60, 62);
-        assert_eq!(candidates.ncandidates, 2);
 
         let chord = candidates.get_first_chord().unwrap();
         assert_eq!(chord, supertonic);
