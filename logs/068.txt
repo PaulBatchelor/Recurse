@@ -64,3 +64,16 @@ a zero-indexed position as well.
 ---
 I think it makes sense to 1-index everything because
 that 0 is so critical.
+
+@15:52 Fixed indexing #demo-trio-chords
+Wow, that was tedious. Glad I had the tests. It almost
+makes me wished I used =Option<T>=...
+
+@15:56 What happens if the current note doesn't have a valid state transition? #demo-trio-chords
+There is no way to account for this yet. It will catch it as
+having zero candidates though.
+
+@15:58 I'm now realizing that my look-up table should just be 12x12, not 12x11 #demo-trio-chords
+Because it's harder to calculate what that second index
+is going to be. There also needs to be a check to make
+sure prev/next is not equal.

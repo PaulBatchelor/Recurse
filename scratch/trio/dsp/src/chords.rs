@@ -22,15 +22,16 @@ type Chord = [u8; 3];
 
 #[allow(dead_code)]
 struct NoteTransitionTable {
-    // 12 notes x 11 possible next notes
-    transitions: [usize; 132],
+    // 12 notes x 12 possible next notes
+    // ignore the spaces that are the same
+    transitions: [usize; 144],
     pub key: u8,
 }
 
 impl Default for NoteTransitionTable {
     fn default() -> Self {
         NoteTransitionTable {
-            transitions: [0; 132],
+            transitions: [0; 144],
             key: 0,
         }
     }
@@ -113,6 +114,10 @@ impl CandidatesTable {
         prev: u8,
         next: u8,
     ) {
+        // only attempt if there is more than one candidate
+        if self.ncandidates < 2 {
+            return;
+        }
         for i in 0..self.ncandidates as usize {
             if note_transitions.was_used_last(prev, next, self.candidates[i]) {
                 self.candidates[i] = 0;
@@ -340,6 +345,30 @@ mod tests {
         candidates.remove_previous_transition(&states.note_transitions, 60, 62);
 
         let chord = candidates.get_first_chord().unwrap();
+        states.note_transitions.insert(60, 62, chord);
         assert_eq!(chord, supertonic);
+
+        // expect dominant to be top result again
+        states.query(tonic, 62, KEY_C, &mut candidates);
+        candidates.remove_previous_transition(&states.note_transitions, 60, 62);
+        states.note_transitions.insert(60, 62, chord);
+
+        let chord = candidates.get_first_chord().unwrap();
+        assert_eq!(chord, dominant);
+
+        // Try again with subdominant
+        states.query(subdominant, 60, KEY_C, &mut candidates);
+        candidates.remove_previous_transition(&states.note_transitions, 65, 60);
+        let chord = candidates.get_first_chord().unwrap();
+        states.note_transitions.insert(65, 60, chord);
+        assert_eq!(chord, tonic);
+
+        states.query(subdominant, 60, KEY_C, &mut candidates);
+        candidates.remove_previous_transition(&states.note_transitions, 65, 60);
+        let chord = candidates.get_first_chord();
+        assert!(chord.is_some());
+        let chord = chord.unwrap();
+        states.note_transitions.insert(65, 60, chord);
+        assert_eq!(chord, tonic);
     }
 }
