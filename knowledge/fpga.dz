@@ -30,3 +30,7 @@ hl https://tomu.im/fomu.html
 nn ULX3S
 ln ULX3S: A powerful, open hardware ECP5 FPGA dev board
 hl https://www.crowdsupply.com/radiona/ulx3s
+
+nn memmap_fpga_stm32
+ln Memory mapping an FPGA from an STM32
+hl https://serd.es/2024/07/24/Memory-mapping-an-FPGA-from-a-STM32.html
