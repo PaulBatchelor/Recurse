@@ -48,7 +48,7 @@ impl NoteTransitionTable {
         // I'm not using Option<T> because I don't know
         // what the overhead is like (not that that is
         // terribly important).
-        self.transitions[pos] = chord_ref + 1;
+        self.transitions[pos] = chord_ref;
     }
 
     fn was_used_last(&self, curnote: u8, nxtnote: u8, chord_ref: usize) -> bool {
@@ -57,7 +57,7 @@ impl NoteTransitionTable {
 
         let pos = (12 * curnote + nxtnote) as usize;
 
-        self.transitions[pos] == chord_ref + 1
+        self.transitions[pos] == chord_ref
     }
 }
 
@@ -74,7 +74,7 @@ impl CandidatesTable {
     }
 
     pub fn append_chord(&mut self, chord_ref: usize) {
-        self.candidates[self.ncandidates as usize] = chord_ref + 1;
+        self.candidates[self.ncandidates as usize] = chord_ref;
         self.ncandidates += 1;
     }
 
@@ -86,7 +86,7 @@ impl CandidatesTable {
             return None;
         }
 
-        Some(chord - 1)
+        Some(chord)
     }
 
     #[allow(dead_code)]
@@ -114,7 +114,7 @@ impl CandidatesTable {
         next: u8,
     ) {
         for i in 0..self.ncandidates as usize {
-            if note_transitions.was_used_last(prev, next, self.candidates[i] - 1) {
+            if note_transitions.was_used_last(prev, next, self.candidates[i]) {
                 self.candidates[i] = 0;
             }
         }
@@ -136,15 +136,19 @@ struct ChordStates {
 impl ChordStates {
     pub fn add_chord(&mut self, chord: &Chord) -> usize {
         self.chords.push(*chord);
-        self.chords.len() - 1
+        self.chords.len()
+    }
+
+    pub fn get_chord(&self, chord_ref: usize) -> &Chord {
+        &self.chords[chord_ref - 1]
     }
 
     pub fn add_transition(&mut self, from_chord: usize, to_chord: usize) -> Option<usize> {
-        if from_chord >= self.chords.len() {
+        if from_chord > self.chords.len() {
             return None;
         }
 
-        if to_chord >= self.chords.len() {
+        if to_chord > self.chords.len() {
             return None;
         }
 
@@ -163,6 +167,7 @@ impl ChordStates {
             Some(chordlist.len() - 1)
         } else {
             transitions.insert(from_chord, vec![to_chord]);
+            // Confusing, but these are zero-indexed
             Some(0)
         }
     }
@@ -174,7 +179,7 @@ impl ChordStates {
 
         candidates.reset();
 
-        if curchord >= self.chords.len() {
+        if curchord > self.chords.len() {
             return;
         }
 
@@ -189,7 +194,8 @@ impl ChordStates {
         // let ncandidates = &mut candidates.ncandidates;
         // let candidates = &mut candidates.candidates;
         for chord_idx in potentials {
-            let chord: &Chord = &self.chords[*chord_idx];
+            //let chord: &Chord = &self.chords[*chord_idx];
+            let chord: &Chord = self.get_chord(*chord_idx);
 
             if chord.contains(&scale_degree) {
                 candidates.append_chord(*chord_idx);
@@ -206,11 +212,11 @@ mod tests {
     fn test_add_chord_transitions() {
         let mut states = ChordStates::default();
         let tonic = states.add_chord(&[DO, MI, SO]);
-        assert_eq!(tonic, 0);
+        assert_eq!(tonic, 1);
         let subdominant = states.add_chord(&[DO, FA, LA]);
-        assert_eq!(subdominant, 1);
+        assert_eq!(subdominant, 2);
         let dominant = states.add_chord(&[RE, SO, TI]);
-        assert_eq!(dominant, 2);
+        assert_eq!(dominant, 3);
 
         let result = states.add_transition(tonic, dominant);
         assert!(result.is_some());
@@ -284,8 +290,8 @@ mod tests {
             ..Default::default()
         };
 
-        let tonic = 0;
-        let subdominant = 1;
+        let tonic = 1;
+        let subdominant = 2;
 
         // transition chord from D4 -> C4 is C major
         nt.insert(62, 60, tonic);
