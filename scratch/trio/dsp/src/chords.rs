@@ -3,7 +3,7 @@ use std::collections::HashMap;
 #[allow(dead_code)]
 const DO: u8 = 0;
 #[allow(dead_code)]
-const RE: u8 = 4;
+const RE: u8 = 2;
 #[allow(dead_code)]
 const MI: u8 = 4;
 #[allow(dead_code)]
@@ -68,6 +68,51 @@ struct CandidatesTable {
     ncandidates: u8,
 }
 
+impl CandidatesTable {
+    pub fn reset(&mut self) {
+        self.ncandidates = 0;
+    }
+
+    pub fn append_chord(&mut self, chord_ref: usize) {
+        self.candidates[self.ncandidates as usize] = chord_ref + 1;
+        self.ncandidates += 1;
+    }
+
+    #[allow(dead_code)]
+    pub fn get_chord(&self, pos: usize) -> Option<usize> {
+        let chord = self.candidates[pos] - 1;
+
+        if chord == 0 {
+            return None;
+        }
+
+        Some(chord)
+    }
+
+    #[allow(dead_code)]
+    pub fn get_first_chord(&self) -> Option<usize> {
+        if self.ncandidates == 0 {
+            return None;
+        }
+
+        self.get_chord(0)
+    }
+
+    #[allow(dead_code)]
+    pub fn remove_previous_transition(
+        &mut self,
+        note_transitions: &NoteTransitionTable,
+        prev: u8,
+        next: u8,
+    ) {
+        for i in 0..self.ncandidates as usize {
+            if note_transitions.was_used_last(prev, next, self.candidates[i]) {
+                self.candidates[i] = 0;
+            }
+        }
+    }
+}
+
 #[derive(Default)]
 #[allow(dead_code)]
 struct ChordStates {
@@ -118,7 +163,7 @@ impl ChordStates {
         // TODO: this won't work for most notes <12, problem?
         let scale_degree = (next_note - key) % 12;
 
-        candidates.ncandidates = 0;
+        candidates.reset();
 
         if curchord >= self.chords.len() {
             return;
@@ -132,14 +177,13 @@ impl ChordStates {
 
         let potentials = potentials.unwrap();
 
-        let ncandidates = &mut candidates.ncandidates;
-        let candidates = &mut candidates.candidates;
+        // let ncandidates = &mut candidates.ncandidates;
+        // let candidates = &mut candidates.candidates;
         for chord_idx in potentials {
             let chord: &Chord = &self.chords[*chord_idx];
 
             if chord.contains(&scale_degree) {
-                candidates[*ncandidates as usize] = *chord_idx;
-                *ncandidates += 1;
+                candidates.append_chord(*chord_idx);
             }
         }
     }
@@ -210,13 +254,13 @@ mod tests {
         let mut contains_supertonic = false;
 
         for i in 0..candidates.ncandidates as usize {
-            let chord_idx = candidates.candidates[i];
-            if chord_idx == subdominant {
-                contains_subdominant = true;
-            }
-
-            if chord_idx == supertonic {
-                contains_supertonic = true;
+            if let Some(c) = candidates.get_chord(i) {
+                if c == subdominant {
+                    contains_subdominant = true;
+                }
+                if c == supertonic {
+                    contains_supertonic = true;
+                }
             }
         }
 
@@ -266,6 +310,20 @@ mod tests {
         states.add_transition(subdominant, tonic);
         states.add_transition(supertonic, tonic);
 
+        // expect dominant to be top result
         states.query(tonic, 62, KEY_C, &mut candidates);
+        assert_eq!(candidates.ncandidates, 2);
+        candidates.remove_previous_transition(&states.note_transitions, 60, 62);
+
+        let chord = candidates.get_first_chord().unwrap();
+        assert_eq!(chord, dominant);
+
+        // expect supertonic to be top result
+        states.query(tonic, 62, KEY_C, &mut candidates);
+        candidates.remove_previous_transition(&states.note_transitions, 60, 62);
+        assert_eq!(candidates.ncandidates, 2);
+
+        let chord = candidates.get_first_chord().unwrap();
+        assert_eq!(chord, supertonic);
     }
 }

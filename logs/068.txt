@@ -23,3 +23,17 @@ note, find all the valid chords to transition to.
 
 @13:50 Going to rework query to be immutable
 This requires moving the mutable stateful stuff out.
+
+@14:06 Something is wrong with the query. #demo-trio-chords
+I am trying to transition D4 in the key of C. This
+should give me two chords (G and Dm). But I'm getting
+no chords.
+---
+Ah, my "RE" constant was miscoded. Phew.
+
+@14:13 Need a way to remove candidate chords in place #demo-trio-chords
+Chords need to be removed.
+
+@14:23 I'm running into overflow issues. Why? #demo-trio-chords
+Oh just figured it out. I was using "chord index" instead
+of "index".
