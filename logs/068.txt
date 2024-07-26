@@ -20,3 +20,6 @@ Query: given a current chord, and a new lead
 note, find all the valid chords to transition to.
 
 @12:57 transition tracker #demo-trio-chords
+
+@13:50 Going to rework query to be immutable
+This requires moving the mutable stateful stuff out.
