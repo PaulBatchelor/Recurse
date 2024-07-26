@@ -20,6 +20,46 @@ const KEY_C: u8 = 0;
 
 type Chord = [u8; 3];
 
+#[allow(dead_code)]
+struct NoteTransitionTable {
+    transitions: [usize; 42],
+    pub key: u8,
+}
+
+impl Default for NoteTransitionTable {
+    fn default() -> Self {
+        NoteTransitionTable {
+            transitions: [0; 42],
+            key: 0,
+        }
+    }
+}
+
+#[allow(dead_code)]
+impl NoteTransitionTable {
+    fn insert(&mut self, curnote: u8, nxtnote: u8, chord_ref: usize) {
+        let curnote = (curnote - self.key) % 12;
+        let nxtnote = (nxtnote - self.key) % 12;
+
+        let pos = (7 * curnote + nxtnote) as usize;
+
+        // adding 1 allows zero to be an empty value
+        // I'm not using Option<T> because I don't know
+        // what the overhead is like (not that that is
+        // terribly important).
+        self.transitions[pos] = chord_ref + 1;
+    }
+
+    fn was_used_last(&self, curnote: u8, nxtnote: u8, chord_ref: usize) -> bool {
+        let curnote = (curnote - self.key) % 12;
+        let nxtnote = (nxtnote - self.key) % 12;
+
+        let pos = (7 * curnote + nxtnote) as usize;
+
+        self.transitions[pos] == chord_ref + 1
+    }
+}
+
 #[derive(Default)]
 #[allow(dead_code)]
 struct ChordStates {
@@ -27,6 +67,7 @@ struct ChordStates {
     transitions: HashMap<usize, Vec<usize>>,
     candidates: [usize; 16],
     ncandidates: u8,
+    note_transitions: NoteTransitionTable,
 }
 
 #[allow(dead_code)]
@@ -170,5 +211,24 @@ mod tests {
 
         assert!(contains_supertonic);
         assert!(contains_subdominant);
+    }
+
+    #[test]
+    fn test_note_transition_table() {
+        let mut nt = NoteTransitionTable::default();
+
+        let tonic = 0;
+        let subdominant = 1;
+
+        // transition chord from D4 -> C4 is C major
+        nt.insert(62, 60, tonic);
+
+        assert!(nt.was_used_last(62, 60, tonic));
+        assert!(!nt.was_used_last(62, 60, subdominant));
+
+        // transition chord from D4 -> C4 is F major
+        nt.insert(62, 60, subdominant);
+
+        assert!(nt.was_used_last(62, 60, subdominant));
     }
 }

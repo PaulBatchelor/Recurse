@@ -18,3 +18,5 @@ I can test it out in Poke
 @09:51 Implement query. #demo-trio-chords #timelog:00:59:53
 Query: given a current chord, and a new lead
 note, find all the valid chords to transition to.
+
+@12:57 transition tracker #demo-trio-chords
