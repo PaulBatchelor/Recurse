@@ -22,6 +22,8 @@ qrt = {1, 1}
 qrt2 = {1, 2}
 gliss = 4
 linear = 1
+zero = 7
+gate = 8
 
 gpath = {
     {2, qrt, gliss},
@@ -42,8 +44,6 @@ end
 gesture.done(g)
 gesture.loop(g)
 
-
-
 lil([[
 tsmp zz zz zz
 
@@ -53,6 +53,49 @@ mul zz zz
 
 buthp zz 2000
 ]])
+
+lil([[loadwav "snare.wav"]])
+
+-- lil([[
+-- regget 0
+-- tdiv zz 3 2
+-- ]])
+
+lil([[regget 1]])
+
+snare_clock = gesture.new()
+gesture.loop(snare_clock)
+gesture.alpha(snare_clock)
+
+dotq = {1, 3}
+
+snare_pat = {
+    {qrt2, zero},
+    {qrt2, gate},
+    {dotq, gate},
+
+    {dotq, gate},
+    {qrt2, zero},
+    {qrt2, zero},
+}
+
+for _, v in pairs(snare_pat) do
+    local dur = v[1]
+    local bhvr = v[2]
+    local val = 0
+    gesture.append(snare_clock, val, dur[1], dur[2], bhvr) 
+end
+
+gesture.done(snare_clock)
+
+lil("gtick zz")
+
+lil([[
+param 1.0
+tsmp zz zz zz
+add zz zz
+]])
+
 
 lil([[
 wavout zz "clicker.wav"

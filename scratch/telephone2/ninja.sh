@@ -52,5 +52,6 @@ build pulsereps.wav: repeat pulse.wav
     nreps = 8
 build pulsetest.wav: lil pulsetest.lil | pulsereps.wav finetrim_subgroove.wav
 build bassgroove.wav: lil bassgroove.lil | pulsereps.wav finetrim_subgroove.wav
-build clicker.wav: lua clicker.lua| pulsereps.wav finetrim_click.wav
+build clicker.wav: lua clicker.lua| pulsereps.wav finetrim_click.wav snare.wav
+build snare.wav: lua snare.lua| finetrim_noise.wav
 EOM
