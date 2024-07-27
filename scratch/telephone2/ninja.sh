@@ -38,6 +38,10 @@ rule lua
 
 rule cfloop
     command = mnolth cfloop \$in \$out \$crossfade
+
+rule reverse
+    command = sox \$in \$out reverse
+
 EOM
 
 LIL="mnolth lil"
@@ -60,4 +64,5 @@ build snare.wav: lua snare.lua | finetrim_noise.wav
 build swarm.wav: lua swarm.lua | cf_pulse.wav pulsereps.wav
 build cf_pulse.wav: cfloop finetrim_pulse.wav
     crossfade = 0.3
+build rev_music.wav: reverse trim_music2.wav
 EOM

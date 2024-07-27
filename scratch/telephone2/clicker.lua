@@ -23,7 +23,7 @@ qrt2 = {1, 2}
 gliss = 4
 linear = 1
 zero = 7
-gate = 8
+gate = 9
 
 gpath = {
     {2, qrt, gliss},
