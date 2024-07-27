@@ -13,3 +13,4 @@ finetrim trim_music2.wav majorstab 3.836 3.936
 finetrim trim_music2.wav majorstab2 4.788 5.135
 finetrim trim_sine.wav click 8856s 10045s
 finetrim trim_noise.wav noise 0.143 2.098
+finetrim trim_pulse.wav pulse 0.580 3.614

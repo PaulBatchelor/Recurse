@@ -10,7 +10,7 @@ rule trimmer
     command = sox \$input_wav -c 1 \$out trim \$start =\$end
 
 rule trimmer2
-    command = sox \$in -c 1 \$out trim \$start =\$end
+    command = sox \$in -c 1 -b 32 -e floating-point \$out trim \$start =\$end
 
 rule paulstretch
     command = \$stretcher_util \$windowsize \$stretch \$in \$out && sox \$out tmp.wav norm -1 && mv tmp.wav \$out
@@ -35,6 +35,9 @@ rule lil
 
 rule lua
     command = mnolth lua \$in
+
+rule cfloop
+    command = mnolth cfloop \$in \$out \$crossfade
 EOM
 
 LIL="mnolth lil"
@@ -53,5 +56,8 @@ build pulsereps.wav: repeat pulse.wav
 build pulsetest.wav: lil pulsetest.lil | pulsereps.wav finetrim_subgroove.wav
 build bassgroove.wav: lil bassgroove.lil | pulsereps.wav finetrim_subgroove.wav
 build clicker.wav: lua clicker.lua| pulsereps.wav finetrim_click.wav snare.wav
-build snare.wav: lua snare.lua| finetrim_noise.wav
+build snare.wav: lua snare.lua | finetrim_noise.wav
+build swarm.wav: lua swarm.lua | cf_pulse.wav pulsereps.wav
+build cf_pulse.wav: cfloop finetrim_pulse.wav
+    crossfade = 0.3
 EOM
