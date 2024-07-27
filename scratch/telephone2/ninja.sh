@@ -32,6 +32,9 @@ rule repeat
 
 rule lil
     command = mnolth lil \$in
+
+rule lua
+    command = mnolth lua \$in
 EOM
 
 LIL="mnolth lil"
@@ -48,5 +51,6 @@ build pulse.wav: raw2wav pulse.bin
 build pulsereps.wav: repeat pulse.wav
     nreps = 8
 build pulsetest.wav: lil pulsetest.lil | pulsereps.wav finetrim_subgroove.wav
-build bassgroove.wav: lil bassgroove.lil | finetrim_subgroove.wav
+build bassgroove.wav: lil bassgroove.lil | pulsereps.wav finetrim_subgroove.wav
+build clicker.wav: lua clicker.lua| pulsereps.wav finetrim_click.wav
 EOM

@@ -1,0 +1,19 @@
+metro 16
+
+hold zz
+regset zz 0
+
+loadwav "finetrim_click.wav"
+regget 0
+param 2.0
+tsmp zz zz zz
+
+regget 0
+env zz 0.001 0.0001 0.001
+mul zz zz
+
+buthp zz 1000
+
+wavout zz "clicker.wav"
+
+computes 10
