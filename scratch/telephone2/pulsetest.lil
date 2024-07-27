@@ -1,0 +1,24 @@
+wavin "pulsereps.wav"
+phsclk zz 1
+hold zz
+regset zz 0
+
+regget 0
+env zz 0.001 0.001 0.001
+sine 1000 0.5
+mul zz zz
+
+# wavin "finetrim_grooveloop.wav"
+
+loadwav "finetrim_subgroove.wav"
+regget 0
+tdiv zz 7 0
+param 1.0
+tsmp zz zz zz
+# mul zz 0
+
+add zz zz
+
+wavout zz "pulsetest.wav"
+
+computes 10

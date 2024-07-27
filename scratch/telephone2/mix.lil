@@ -1,0 +1,10 @@
+func mix2 {out in1 in2} {
+    print build "mix_"$out".wav": mix $in1 $in2
+}
+
+mix2 menacing_pads ps_minorstab.wav ps_lowdrone.wav
+mix2 menacing_pads2 ps_majorstab.wav ps_lowdrone.wav
+mix2 menacing_pads3 ps_diminishedstab.wav ps_lowdrone.wav
+mix2 menacing_pads4 ps_majorstab2.wav ps_lowdrone.wav
+mix2 menacing_groove mix_menacing_pads.wav bassgroove.wav
+mix2 menacing_groove2 mix_menacing_pads4.wav bassgroove.wav

@@ -1,0 +1,11 @@
+func paulstretch {in out windowsize stretch} {
+    print build "ps_"$out".wav": paulstretch $in
+    print "    " windowsize=$windowsize
+    print "    " stretch=$stretch
+}
+
+paulstretch finetrim_minorstab.wav minorstab 0.5 50
+paulstretch finetrim_lowdrone.wav lowdrone 0.5 10
+paulstretch finetrim_diminishedstab.wav diminishedstab 0.5 50
+paulstretch finetrim_majorstab.wav majorstab 0.5 50
+paulstretch finetrim_majorstab2.wav majorstab2 0.5 50

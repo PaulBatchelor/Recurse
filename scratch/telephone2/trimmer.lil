@@ -1,0 +1,27 @@
+func trimmer {name start end} {
+    # print $name $start $end
+    print build "trim_"$name".wav": trimmer || "\$input_wav"
+    print "    " start=$start
+    print "    " end=$end
+}
+
+trimmer none_exist 3.785 6.181
+trimmer sine 26.227 29.505
+trimmer called_sawtooth 29.459 32.188
+trimmer looks_like_sawtooth 35.302 36.806
+trimmer sawtooth 43.249 45.796
+trimmer useful_sound 47.587 49.252
+trimmer triangular 50.308 51.261
+trimmer triangle 53.787 55.671
+trimmer pulse 83.278 88.499
+trimmer noise 101.309 103.579
+trimmer patch_this_up 104.173 105.576
+trimmer filtsaw 140.349 141.543
+trimmer pwm 158.207 159.905
+trimmer groove 166.259 173.957
+trimmer quite_a_surprise 180.235 181.882
+trimmer splat 182.001 182.829
+trimmer mleh 186.310 187.053
+trimmer music1 208.768 221.476
+trimmer music2 221.493 233.001
+trimmer coda 233.035 236.212

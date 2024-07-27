@@ -1,0 +1,13 @@
+func finetrim {wavin name start end} {
+    print build "finetrim_"$name".wav": trimmer2 $wavin
+    print "    " start=$start
+    print "    " end=$end
+}
+
+finetrim trim_groove.wav grooveloop 3.497 7.235
+finetrim trim_music1.wav lowdrone 0.169 1.140
+finetrim trim_music1.wav minorstab 2.096 2.420
+finetrim finetrim_grooveloop.wav subgroove 0.991 2.594 
+finetrim trim_music1.wav diminishedstab 4.464 4.648
+finetrim trim_music2.wav majorstab 3.836 3.936
+finetrim trim_music2.wav majorstab2 4.788 5.135
