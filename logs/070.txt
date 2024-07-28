@@ -111,3 +111,21 @@ Firstly, make sure the low-level chord measurement mechanics
 are in place and working properly. Then, simulate a chord change.
 
 @16:57 Implement measure movement core logic #demo-trio-chords #timelog:00:04:33
+
+@17:02 Work out least movement heuristic test #demo-trio-chords
+
+@17:10 Staggered voices complicate things #demo-trio-chords
+You need to store what the pitch actually is
+somewhat reliably. There isn't currently a caching
+mechanism in place for this.
+---
+The entry points for this happen when a pitch is actually
+scheduled.
+
+@17:20 What happens if you schedule a note that is the same? #demo-trio-chords
+Minimal movement means lots of situations where a note
+stays the same.
+---
+Shouldn't really matter, for now. It'll cause more complication
+if a check is introduced (for example, handle what happens
+if there is no previous note).

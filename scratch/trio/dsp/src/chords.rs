@@ -1,10 +1,12 @@
 use std::collections::HashMap;
 
 #[derive(Default)]
+#[allow(dead_code)]
 pub enum SelectionHeuristic {
     #[default]
     NoteTransition,
     LeastUsed,
+    LeastMovement,
 }
 
 #[allow(dead_code)]
@@ -439,6 +441,9 @@ impl ChordManager {
 
                 //note_transitions.insert(self.pitch as u8, pitch as u8, self.chord);
             }
+            SelectionHeuristic::LeastMovement => {
+                todo!();
+            }
         }
     }
 
@@ -473,6 +478,9 @@ impl ChordManager {
         println!("lower find from chord {}", self.chord);
         find_nearest_lower(chord, lead_pitch, key)
     }
+
+    pub fn cache_upper(&mut self, pitch: u16) {}
+    pub fn cache_lower(&mut self, pitch: u16) {}
 }
 
 #[cfg(test)]
@@ -795,5 +803,40 @@ mod tests {
         let prev_lower = 60;
         let movement = measure_movement(&supertonic, next_lead, prev_upper, prev_lower, key);
         assert_eq!(movement, 4);
+    }
+
+    #[test]
+    fn test_least_movement() {
+        let mut cm = ChordManager::default();
+        cm.populate();
+        cm.chord_behavior = SelectionHeuristic::LeastMovement;
+
+        // Lead: C4 -> Cmaj
+        cm.change(64);
+        assert_eq!(cm.find_lower_pitch(), 60);
+        assert_eq!(cm.find_upper_pitch(), 67);
+        cm.cache_lower(60);
+        cm.cache_upper(67);
+
+        // Cmaj -> (E4, F4) -> Fmin
+        cm.change(65);
+        assert_eq!(cm.find_lower_pitch(), 60);
+        assert_eq!(cm.find_upper_pitch(), 68);
+        cm.cache_lower(60);
+        cm.cache_upper(68);
+
+        // Fmin -> (F4, E4) -> Cmaj
+        cm.change(64);
+        assert_eq!(cm.find_lower_pitch(), 60);
+        assert_eq!(cm.find_upper_pitch(), 67);
+        cm.cache_lower(60);
+        cm.cache_upper(67);
+
+        // Cmaj -> (E4, D4) -> Gmaj
+        cm.change(62);
+        assert_eq!(cm.find_lower_pitch(), 59);
+        assert_eq!(cm.find_upper_pitch(), 67);
+        cm.cache_lower(59);
+        cm.cache_upper(67);
     }
 }
