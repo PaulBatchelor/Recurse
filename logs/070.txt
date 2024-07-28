@@ -90,4 +90,6 @@ These are two different heuristics for selection, and
 I can imagine there would be a way to choose one over
 the other.
 
-@15:27 Implement the "least used chord" heuristic #demo-trio-chords
+@15:27 Implement the "least used chord" heuristic #demo-trio-chords #timelog:00:58:01
+
+@16:24 Heuristic implemented in tests, now to try it out #demo-trio-chords

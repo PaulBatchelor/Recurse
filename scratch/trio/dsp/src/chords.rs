@@ -1,9 +1,10 @@
 use std::collections::HashMap;
 
 #[derive(Default)]
-enum SelectionHeuristic {
+pub enum SelectionHeuristic {
     #[default]
     NoteTransition,
+    LeastUsed,
 }
 
 #[allow(dead_code)]
@@ -135,6 +136,36 @@ impl CandidatesTable {
                 self.candidates[i] = 0;
             }
         }
+    }
+
+    #[allow(dead_code)]
+    pub fn get_least_used(&mut self, chord_freqs: &HashMap<usize, usize>) -> usize {
+        if self.ncandidates == 0 {
+            panic!("Shouldn't have called this function");
+        }
+
+        // only attempt if there is more than one candidate
+        if self.ncandidates < 2 {
+            return self.candidates[0];
+        }
+
+        let mut least_used: Option<usize> = None;
+        let mut least_used_chord: usize = 0;
+
+        for i in 0..self.ncandidates as usize {
+            if i == 0 {
+                least_used = Some(*chord_freqs.get(&self.candidates[i]).unwrap());
+                least_used_chord = self.candidates[i];
+            } else {
+                let used = *chord_freqs.get(&self.candidates[i]).unwrap();
+                if least_used.is_some() && used < least_used.unwrap() {
+                    least_used = Some(used);
+                    least_used_chord = self.candidates[i];
+                }
+            }
+        }
+
+        least_used_chord
     }
 }
 
@@ -278,7 +309,8 @@ pub struct ChordManager {
     key: u8,
     chord: usize,
     candidates: CandidatesTable,
-    chord_behavior: SelectionHeuristic,
+    pub chord_behavior: SelectionHeuristic,
+    pub chord_frequency: HashMap<usize, usize>,
 }
 
 #[allow(dead_code)]
@@ -356,6 +388,12 @@ impl ChordManager {
         states.add_transition(minor4, tonic);
         states.add_transition(subdominant, minor4);
         states.add_transition(supertonic, minor4);
+
+        // set up initial chord frequency table
+        // chord references are vector indices + 1
+        for i in 0..self.states.chords.len() {
+            self.chord_frequency.insert(i + 1, 0);
+        }
     }
 
     fn select_next_chord(&mut self, pitch: u16) {
@@ -376,6 +414,16 @@ impl ChordManager {
                 self.chord = candidates.get_first_chord().unwrap();
                 note_transitions.insert(self.pitch as u8, pitch as u8, self.chord);
             }
+            SelectionHeuristic::LeastUsed => {
+                let states = &self.states;
+                let candidates = &mut self.candidates;
+
+                candidates.reset();
+                states.query(self.chord, pitch as u8, self.key, candidates);
+                self.chord = candidates.get_least_used(&self.chord_frequency);
+
+                //note_transitions.insert(self.pitch as u8, pitch as u8, self.chord);
+            }
         }
     }
 
@@ -389,6 +437,10 @@ impl ChordManager {
             self.chord = self.states.get_fallback_chord(pitch, self.key);
             println!("fallback chord: {}", self.chord);
         }
+        // Update chord frequency
+        let count = self.chord_frequency.get(&self.chord).unwrap();
+        self.chord_frequency.insert(self.chord, count + 1);
+
         self.pitch = pitch;
     }
     pub fn find_upper_pitch(&self) -> u16 {
@@ -669,6 +721,7 @@ mod tests {
     fn test_least_used() {
         let mut cm = ChordManager::default();
         cm.populate();
+        cm.chord_behavior = SelectionHeuristic::LeastUsed;
 
         // Lead: C4 -> Cmaj
         cm.change(60);
@@ -682,14 +735,26 @@ mod tests {
 
         // Gmaj -> (D4, C4) -> Amin
         cm.change(60);
-        assert_eq!(cm.find_lower_pitch(), 59);
+        assert_eq!(cm.find_lower_pitch(), 57);
         assert_eq!(cm.find_upper_pitch(), 64);
 
         // Amin -> (C4, D4) -> Dmin
-        // Dmin -> (D4, C4) -> Fmaj
-        // Fmaj -> (C4, D4) -> Gmaj
-        // Gmaj -> (D4, C4) -> Fmaj
-        // Fmaj -> (C4, D4) -> Gmaj
-        // Gmaj -> (D4, C4) -> Amin
+        cm.change(62);
+        assert_eq!(cm.find_lower_pitch(), 57);
+        assert_eq!(cm.find_upper_pitch(), 65);
+
+        // Dmin -> (D4, C4) -> Fmin
+        cm.change(60);
+        assert_eq!(cm.find_lower_pitch(), 56);
+        assert_eq!(cm.find_upper_pitch(), 65);
+
+        // No chords available, fallback to G
+        // Fmin -> (C4, D4) -> Gmaj
+        cm.change(62);
+        assert_eq!(cm.find_lower_pitch(), 59);
+        assert_eq!(cm.find_upper_pitch(), 67);
+
+        // No chords available, fallback to G
+        // Gmaj -> (D4, C4) -> Cmaj
     }
 }
