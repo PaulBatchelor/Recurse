@@ -287,8 +287,19 @@ fn find_nearest_upper(chord: &Chord, lead_pitch: u16, key: u8) -> u16 {
     lead_pitch
 }
 
-fn measure_movement(chord: &Chord, lead_pitch: u16, prev_upper: u16, prev_lower: u16) -> u16 {
-    0
+fn measure_movement(
+    chord: &Chord,
+    lead_pitch: u16,
+    prev_upper: u16,
+    prev_lower: u16,
+    key: u8,
+) -> u16 {
+    let next_upper = find_nearest_upper(chord, lead_pitch, key);
+    let next_lower = find_nearest_lower(chord, lead_pitch, key);
+
+    let upper_dist = (next_upper as i16 - prev_upper as i16).abs();
+    let lower_dist = (next_lower as i16 - prev_lower as i16).abs();
+    (upper_dist + lower_dist) as u16
 }
 
 #[allow(dead_code)]
@@ -763,7 +774,7 @@ mod tests {
     fn test_measure_movement() {
         let subdominant: Chord = [DO, FA, LA];
         let supertonic: Chord = [RE, FA, LA];
-
+        let key = KEY_C;
         // (Key of C)
         // Cmaj:(E4) -> (C4, E4, G4)
         // Cmaj -> (E4, F4) -> Fmaj (C4, F4, A4) ->
@@ -772,7 +783,7 @@ mod tests {
         let next_lead = 65;
         let prev_upper = 67;
         let prev_lower = 60;
-        let movement = measure_movement(&subdominant, next_lead, prev_upper, prev_lower);
+        let movement = measure_movement(&subdominant, next_lead, prev_upper, prev_lower, key);
         assert_eq!(movement, 2);
 
         // Cmaj:(E4) -> (C4, E4, G4)
@@ -782,7 +793,7 @@ mod tests {
         let next_lead = 65;
         let prev_upper = 67;
         let prev_lower = 60;
-        let movement = measure_movement(&supertonic, next_lead, prev_upper, prev_lower);
+        let movement = measure_movement(&supertonic, next_lead, prev_upper, prev_lower, key);
         assert_eq!(movement, 4);
     }
 }
