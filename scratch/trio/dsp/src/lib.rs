@@ -176,7 +176,7 @@ impl VoxData {
             self.last_pitch = pitch;
             self.pitch_last_changed = self.time;
             self.voice_manager.change(pitch as u32);
-            // TODO: tell chord manager to change chords
+            // tell chord manager to change chords
             self.chord_manager.change(pitch as u16);
         }
 
@@ -186,24 +186,25 @@ impl VoxData {
         if self.please_reset {
             //println!("resetting THE LEAD PITCH");
             self.lead.reset();
+            self.chord_manager.change(pitch as u16);
         }
     }
 
     // TODO: I know, a bit repetitive...
-    pub fn upper_pitch_lookup(&self, pitch: f32) -> f32 {
-        let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
-        self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32
+    pub fn upper_pitch_lookup(&self, _pitch: f32) -> f32 {
+        //let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+        //self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32
 
-        // TODO: This should be retrieved from the voice state manager
-        //self.chord_manager.find_upper_pitch(pitch as u16) as f32
+        // This should be retrieved from the voice state manager
+        self.chord_manager.find_upper_pitch() as f32
     }
 
-    pub fn lower_pitch_lookup(&self, pitch: f32) -> f32 {
-        let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
-        self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32
+    pub fn lower_pitch_lookup(&self, _pitch: f32) -> f32 {
+        //let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+        //self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32
 
-        // TODO: This should be retrieved from the voice state manager
-        //self.chord_manager.find_upper_pitch(pitch as u16) as f32
+        // This should be retrieved from the voice state manager
+        self.chord_manager.find_lower_pitch() as f32
     }
 
     pub fn tick(&mut self) -> f32 {

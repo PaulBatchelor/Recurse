@@ -182,6 +182,11 @@ impl ChordStates {
         self.fallback_chords[scale_degree as usize] = chord_ref;
     }
 
+    pub fn get_fallback_chord(&mut self, pitch: u16, key: u8) -> usize {
+        let scale_degree = (pitch - key as u16) % 12;
+        self.fallback_chords[scale_degree as usize]
+    }
+
     pub fn query(&self, curchord: usize, next_note: u8, key: u8, candidates: &mut CandidatesTable) {
         // extract scale degree from note and key
         // TODO: this won't work for most notes <12, problem?
@@ -256,18 +261,114 @@ fn find_nearest_lower(chord: &Chord, lead_pitch: u16, key: u8) -> u16 {
 
 #[derive(Default)]
 pub struct ChordManager {
-    //states: ChordStates,
+    states: ChordStates,
+    pitch: u16,
+    key: u8,
+    chord: usize,
+    candidates: CandidatesTable,
 }
 
 #[allow(dead_code)]
 impl ChordManager {
-    pub fn populate(&mut self) {}
-    pub fn change(&mut self, _pitch: u16) {}
-    pub fn find_upper_pitch(&self) -> u16 {
-        0
+    /// Populate the chord state transitions
+    /// This is fairly subjective, and can be changed
+    /// to taste
+    pub fn populate(&mut self) {
+        self.key = KEY_C;
+        let states = &mut self.states;
+        // Diatonic triadic chords: everything but 7 (leading tone) diminished
+        let tonic = states.add_chord(&[DO, MI, SO]);
+        let supertonic = states.add_chord(&[RE, FA, LA]);
+        let mediant = states.add_chord(&[MI, SO, TI]);
+        let subdominant = states.add_chord(&[FA, LA, DO]);
+        let dominant = states.add_chord(&[SO, TI, RE]);
+        let submediant = states.add_chord(&[LA, DO, MI]);
+
+        // Set up fallback chords in case state machine doesn't cover it
+        // Only worry about diatonic notes. Non-diatonic
+        // notes aren't expected to be used in this
+        // Sticking to donic/subdominant/tonic is
+        // a safe bet
+        states.add_fallback_chord(DO, tonic);
+        states.add_fallback_chord(RE, dominant);
+        states.add_fallback_chord(MI, tonic);
+        states.add_fallback_chord(FA, subdominant);
+        states.add_fallback_chord(SO, dominant);
+        states.add_fallback_chord(LA, subdominant);
+        states.add_fallback_chord(TI, dominant);
+
+        // Populate the state transition table
+        // Each chord can transition to a finite number
+        // of chords. The ranking is first in first out.
+        // This part is very subjective.
+
+        // Tonic (I)
+        states.add_transition(tonic, dominant);
+        states.add_transition(tonic, subdominant);
+        states.add_transition(tonic, submediant);
+        states.add_transition(tonic, supertonic);
+        states.add_transition(tonic, mediant);
+
+        // Supertonic (ii)
+        states.add_transition(supertonic, dominant);
+        states.add_transition(supertonic, mediant);
+        states.add_transition(supertonic, tonic);
+        states.add_transition(supertonic, mediant);
+
+        // Mediant (iii)
+        states.add_transition(mediant, subdominant);
+        states.add_transition(mediant, submediant);
+        states.add_transition(mediant, supertonic);
+
+        // Subdominant (IV)
+        states.add_transition(subdominant, tonic);
+        states.add_transition(subdominant, submediant);
+        states.add_transition(subdominant, dominant);
+
+        // Dominant (V)
+        states.add_transition(dominant, tonic);
+        states.add_transition(dominant, submediant);
+        states.add_transition(dominant, subdominant);
+        states.add_transition(dominant, supertonic);
+
+        // Submediant (vi)
+        states.add_transition(submediant, dominant);
+        states.add_transition(submediant, subdominant);
+        states.add_transition(submediant, mediant);
+        states.add_transition(submediant, supertonic);
     }
+    pub fn change(&mut self, pitch: u16) {
+        if self.pitch > 0 && self.chord > 0 {
+            // Choose a chord from transition table
+            let states = &self.states;
+            let candidates = &mut self.candidates;
+
+            candidates.reset();
+            states.query(self.chord, pitch as u8, self.key, candidates);
+
+            let note_transitions = &mut self.states.note_transitions;
+            candidates.remove_previous_transition(note_transitions, self.pitch as u8, pitch as u8);
+            self.chord = candidates.get_first_chord().unwrap();
+            note_transitions.insert(self.pitch as u8, pitch as u8, self.chord);
+        } else {
+            // Choose a chord from fallbacks
+            self.chord = self.states.get_fallback_chord(pitch, self.key);
+            println!("fallback: {}", self.chord);
+        }
+        self.pitch = pitch;
+    }
+    pub fn find_upper_pitch(&self) -> u16 {
+        let chord = self.states.get_chord(self.chord);
+        let lead_pitch = self.pitch;
+        let key = self.key;
+        find_nearest_upper(chord, lead_pitch, key)
+    }
+
     pub fn find_lower_pitch(&self) -> u16 {
-        0
+        let chord = self.states.get_chord(self.chord);
+        let lead_pitch = self.pitch;
+        let key = self.key;
+        find_nearest_lower(chord, lead_pitch, key)
     }
 }
 
@@ -501,13 +602,30 @@ mod tests {
 
         // Lead: C4
         cm.change(60);
-
         // Lower: G3
         assert_eq!(cm.find_lower_pitch(), 55, "Expected lower to be G3");
-
         // upper: E4
         assert_eq!(cm.find_upper_pitch(), 64, "Expected upper to be E4");
 
-        // TODO: Do some more pitch changes to make sure state machine seems functional
+        // Lead change D4, expect G chord next
+        cm.change(62);
+        // Lower: B3
+        assert_eq!(cm.find_lower_pitch(), 59, "Expected lower to be G4");
+        // Upper: G4
+        assert_eq!(cm.find_upper_pitch(), 67, "Expected upper to be B3");
+
+        // Back to C4, expect C chord
+        cm.change(60);
+        // Lower: G3
+        assert_eq!(cm.find_lower_pitch(), 55, "Expected lower to be G3");
+        // Upper: E4
+        assert_eq!(cm.find_upper_pitch(), 64, "Expected upper to be E4");
+
+        // Going back to D4, the chord should be Dmin
+        cm.change(62);
+        // Lower: A3
+        assert_eq!(cm.find_lower_pitch(), 57, "Expected lower to be A3");
+        // Upper: F4
+        assert_eq!(cm.find_upper_pitch(), 65, "Expected upper to be F4");
     }
 }
