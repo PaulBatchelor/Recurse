@@ -1,5 +1,11 @@
 use std::collections::HashMap;
 
+#[derive(Default)]
+enum SelectionHeuristic {
+    #[default]
+    NoteTransition,
+}
+
 #[allow(dead_code)]
 const DO: u8 = 0;
 #[allow(dead_code)]
@@ -272,6 +278,7 @@ pub struct ChordManager {
     key: u8,
     chord: usize,
     candidates: CandidatesTable,
+    chord_behavior: SelectionHeuristic,
 }
 
 #[allow(dead_code)]
@@ -350,19 +357,32 @@ impl ChordManager {
         states.add_transition(subdominant, minor4);
         states.add_transition(supertonic, minor4);
     }
+
+    fn select_next_chord(&mut self, pitch: u16) {
+        match self.chord_behavior {
+            SelectionHeuristic::NoteTransition => {
+                let states = &self.states;
+                let candidates = &mut self.candidates;
+
+                candidates.reset();
+                states.query(self.chord, pitch as u8, self.key, candidates);
+
+                let note_transitions = &mut self.states.note_transitions;
+                candidates.remove_previous_transition(
+                    note_transitions,
+                    self.pitch as u8,
+                    pitch as u8,
+                );
+                self.chord = candidates.get_first_chord().unwrap();
+                note_transitions.insert(self.pitch as u8, pitch as u8, self.chord);
+            }
+        }
+    }
+
     pub fn change(&mut self, pitch: u16) {
         if self.pitch > 0 && self.chord > 0 {
             // Choose a chord from transition table
-            let states = &self.states;
-            let candidates = &mut self.candidates;
-
-            candidates.reset();
-            states.query(self.chord, pitch as u8, self.key, candidates);
-
-            let note_transitions = &mut self.states.note_transitions;
-            candidates.remove_previous_transition(note_transitions, self.pitch as u8, pitch as u8);
-            self.chord = candidates.get_first_chord().unwrap();
-            note_transitions.insert(self.pitch as u8, pitch as u8, self.chord);
+            self.select_next_chord(pitch);
             println!("transition chord: {}", self.chord);
         } else {
             // Choose a chord from fallbacks
@@ -643,5 +663,33 @@ mod tests {
         assert_eq!(cm.find_lower_pitch(), 57, "Expected lower to be A3");
         // Upper: F4
         assert_eq!(cm.find_upper_pitch(), 65, "Expected upper to be F4");
+    }
+
+    #[test]
+    fn test_least_used() {
+        let mut cm = ChordManager::default();
+        cm.populate();
+
+        // Lead: C4 -> Cmaj
+        cm.change(60);
+        assert_eq!(cm.find_lower_pitch(), 55);
+        assert_eq!(cm.find_upper_pitch(), 64);
+
+        // Cmaj -> (C4,D4) -> Gmaj
+        cm.change(62);
+        assert_eq!(cm.find_lower_pitch(), 59);
+        assert_eq!(cm.find_upper_pitch(), 67);
+
+        // Gmaj -> (D4, C4) -> Amin
+        cm.change(60);
+        assert_eq!(cm.find_lower_pitch(), 59);
+        assert_eq!(cm.find_upper_pitch(), 64);
+
+        // Amin -> (C4, D4) -> Dmin
+        // Dmin -> (D4, C4) -> Fmaj
+        // Fmaj -> (C4, D4) -> Gmaj
+        // Gmaj -> (D4, C4) -> Fmaj
+        // Fmaj -> (C4, D4) -> Gmaj
+        // Gmaj -> (D4, C4) -> Amin
     }
 }

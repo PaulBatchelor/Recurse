@@ -45,7 +45,49 @@ the previous chord for some reason.
 
 @13:16 Pulling myself away. #demo-trio-chords
 
-@14:49 Fixing the weird initial chord bug #demo-trio-chords
+@14:49 Fixing the weird initial chord bug #demo-trio-chords #timelog:00:07:32
 Retriggering the lowest note causes it to alternate
 between a major chord (correct) and a sustained chord (incorrect)
 The upper note is correct, while the lower note is incorrect.
+
+@14:59 It never chooses anything but the top 2 right now #demo-trio-chords
+
+@15:06 Minimal movement, and better choices #demo-trio-chords #timelog:00:19:50
+The state transitions aren't shuffling through the
+states as well as I'd like. Also, there's too much unnecessary
+voice movement.
+---
+How can the system choose interesting chords and also minimize
+movement?
+---
+Specifically: I want the system to be introduced to the minor
+4 (without resorting to randomness), and I want the voices
+to resolve in an expected way.
+---
+It is a constraint problem. Each voice has different behavior.
+---
+Upper voice should move as little as possible while still
+being above the lead voice.
+---
+Lower voice should move the minimum number of steps
+required to complete the chord, based on what the current
+upper and lead pitches are.
+---
+New heuristic idea: of the candidates, choose the least
+used chord so far. Probably keep a running heat map. This
+solves the chord selection problem, but not the voice
+leading issue
+---
+Another heuristic for chord selection is to find
+a candidate chord that requires the least amount
+of movement, given the current upper/lower pitches.
+This would require storing the current pitches of upper/lower,
+calculating the upper/lower pitches for each chord, and
+getting the combined step change for each chord.
+The one with the lowest score wins.
+---
+These are two different heuristics for selection, and
+I can imagine there would be a way to choose one over
+the other.
+
+@15:27 Implement the "least used chord" heuristic #demo-trio-chords
