@@ -493,12 +493,12 @@ impl ChordManager {
     pub fn change(&mut self, pitch: u16) {
         if self.pitch > 0 && self.chord > 0 {
             // Choose a chord from transition table
-            self.select_next_chord(pitch);
             println!("transition chord: {}", self.chord);
+            self.select_next_chord(pitch);
         } else {
             // Choose a chord from fallbacks
-            self.chord = self.states.get_fallback_chord(pitch, self.key);
             println!("fallback chord: {}", self.chord);
+            self.chord = self.states.get_fallback_chord(pitch, self.key);
         }
         // Update chord frequency
         let count = self.chord_frequency.get(&self.chord).unwrap();

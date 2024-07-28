@@ -152,7 +152,8 @@ impl VoxData {
         vd.lower.pitch.smoother.set_smooth(0.09);
 
         vd.chord_manager.populate();
-        vd.chord_manager.chord_behavior = SelectionHeuristic::LeastUsed;
+        vd.chord_manager.chord_behavior = SelectionHeuristic::LeastMovement;
+        //vd.chord_manager.chord_behavior = SelectionHeuristic::LeastUsed;
         vd
     }
 
@@ -169,7 +170,7 @@ impl VoxData {
             self.pitch_last_changed = self.time;
             self.voice_manager.change(pitch as u32);
             // tell chord manager to change chords
-            self.chord_manager.change(pitch as u16);
+            //self.chord_manager.change(pitch as u16);
         }
 
         // instantaneous update of lead pitch
@@ -178,6 +179,10 @@ impl VoxData {
         if self.please_reset {
             //println!("resetting THE LEAD PITCH");
             self.lead.reset();
+            //self.chord_manager.change(pitch as u16);
+        }
+
+        if self.please_reset || did_pitch_change {
             self.chord_manager.change(pitch as u16);
         }
     }
@@ -228,7 +233,8 @@ impl VoxData {
                         //     self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
                         let pitch = self.lower_pitch_lookup(pitch);
                         self.lower.schedule_pitch(pitch);
-                        // TODO cache lower pitch in chord manager
+                        // cache lower pitch in chord manager
+                        self.chord_manager.cache_lower(pitch as u16);
                         self.lower.reset();
                     }
                     EventType::LowerChange => {
@@ -240,7 +246,8 @@ impl VoxData {
                         //    self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
                         let pitch = self.lower_pitch_lookup(pitch);
                         self.lower.schedule_pitch(pitch);
-                        // TODO cache lower pitch in chord manager
+                        // cache lower pitch in chord manager
+                        self.chord_manager.cache_lower(pitch as u16);
                     }
                     EventType::UpperOn => {
                         println!("Upper On!");
@@ -251,7 +258,8 @@ impl VoxData {
                         //    self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
                         let pitch = self.upper_pitch_lookup(pitch);
                         self.upper.schedule_pitch(pitch);
-                        // TODO cache upper pitch in chord manager
+                        // cache upper pitch in chord manager
+                        self.chord_manager.cache_upper(pitch as u16);
                         self.upper.reset();
                     }
                     EventType::UpperChange => {
@@ -259,11 +267,9 @@ impl VoxData {
                         self.upper.gain.value = 0.8;
                         let pitch = self.lead.pitch.value;
                         let pitch = self.upper_pitch_lookup(pitch);
-                        // let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
-                        // let pitch =
-                        //     self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
                         self.upper.schedule_pitch(pitch);
-                        // TODO cache upper pitch in chord manager
+                        // cache upper pitch in chord manager
+                        self.chord_manager.cache_upper(pitch as u16);
                     }
                 }
             }

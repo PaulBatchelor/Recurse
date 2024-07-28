@@ -132,4 +132,12 @@ if there is no previous note).
 
 @17:26 Implement least movement heuristic #demo-trio-chords #timelog:00:23:20
 
-@17:50 Hook it up into the system #demo-trio-chords
+@17:50 Hook it up into the system #demo-trio-chords #timelog:00:19:03
+
+@18:05 why is it crashing now? #demo-trio-chords
+
+@18:21 It works! Next steps #demo-trio-chords
+Lazy Least Frequent Heuristic, Y-axis expression.
+---
+Nice thing to have: some way to go from staggered to
+instantaneous behavior.
