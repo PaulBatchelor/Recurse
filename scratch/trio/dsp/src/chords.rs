@@ -11,6 +11,8 @@ const FA: u8 = 5;
 #[allow(dead_code)]
 const SO: u8 = 7;
 #[allow(dead_code)]
+const LE: u8 = 8;
+#[allow(dead_code)]
 const LA: u8 = 9;
 #[allow(dead_code)]
 const TI: u8 = 11;
@@ -42,6 +44,10 @@ impl NoteTransitionTable {
     fn insert(&mut self, curnote: u8, nxtnote: u8, chord_ref: usize) {
         let curnote = (curnote - self.key) % 12;
         let nxtnote = (nxtnote - self.key) % 12;
+
+        if curnote == nxtnote {
+            return;
+        }
 
         let pos = (12 * curnote + nxtnote) as usize;
 
@@ -336,6 +342,13 @@ impl ChordManager {
         states.add_transition(submediant, subdominant);
         states.add_transition(submediant, mediant);
         states.add_transition(submediant, supertonic);
+
+        // minor 4
+        let minor4 = states.add_chord(&[FA, LE, DO]);
+        states.add_transition(tonic, minor4);
+        states.add_transition(minor4, tonic);
+        states.add_transition(subdominant, minor4);
+        states.add_transition(supertonic, minor4);
     }
     pub fn change(&mut self, pitch: u16) {
         if self.pitch > 0 && self.chord > 0 {
@@ -350,10 +363,11 @@ impl ChordManager {
             candidates.remove_previous_transition(note_transitions, self.pitch as u8, pitch as u8);
             self.chord = candidates.get_first_chord().unwrap();
             note_transitions.insert(self.pitch as u8, pitch as u8, self.chord);
+            println!("transition chord: {}", self.chord);
         } else {
             // Choose a chord from fallbacks
             self.chord = self.states.get_fallback_chord(pitch, self.key);
-            println!("fallback: {}", self.chord);
+            println!("fallback chord: {}", self.chord);
         }
         self.pitch = pitch;
     }

@@ -18,7 +18,7 @@ DSPLIB=$(DSPLIBPATH)/libvoxdsp.a
 trio: $(OBJ) $(DSPLIB)
 	$(CC) $(CFLAGS) $(OBJ) -o $@ $(LDFLAGS) $(LIBS)
 
-RUST_FILES=dsp/src/lib.rs
+RUST_FILES=dsp/src/lib.rs dsp/src/chords.rs dsp/src/voice.rs
 
 $(DSPLIB): $(RUST_FILES)
 	cd dsp; cargo build --release
