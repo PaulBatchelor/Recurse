@@ -112,7 +112,7 @@ are in place and working properly. Then, simulate a chord change.
 
 @16:57 Implement measure movement core logic #demo-trio-chords #timelog:00:04:33
 
-@17:02 Work out least movement heuristic test #demo-trio-chords
+@17:02 Work out least movement heuristic test #demo-trio-chords #timelog:00:23:06
 
 @17:10 Staggered voices complicate things #demo-trio-chords
 You need to store what the pitch actually is
@@ -129,3 +129,7 @@ stays the same.
 Shouldn't really matter, for now. It'll cause more complication
 if a check is introduced (for example, handle what happens
 if there is no previous note).
+
+@17:26 Implement least movement heuristic #demo-trio-chords #timelog:00:23:20
+
+@17:50 Hook it up into the system #demo-trio-chords

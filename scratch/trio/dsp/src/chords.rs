@@ -140,7 +140,6 @@ impl CandidatesTable {
         }
     }
 
-    #[allow(dead_code)]
     pub fn get_least_used(&mut self, chord_freqs: &HashMap<usize, usize>) -> usize {
         if self.ncandidates == 0 {
             panic!("Shouldn't have called this function");
@@ -168,6 +167,39 @@ impl CandidatesTable {
         }
 
         least_used_chord
+    }
+
+    pub fn get_least_movement(
+        &mut self,
+        chords: &ChordStates,
+        lead_pitch: u16,
+        last_upper: u16,
+        last_lower: u16,
+        key: u8,
+    ) -> usize {
+        if self.ncandidates == 0 {
+            panic!("oops");
+        }
+
+        // only attempt if there is more than one candidate
+        if self.ncandidates < 2 {
+            return self.candidates[0];
+        }
+
+        let mut min_mvmt: Option<u16> = None;
+        let mut min_chord = self.candidates[0];
+
+        for i in 0..self.ncandidates as usize {
+            let chord_ref = self.candidates[i];
+            let chord = chords.get_chord(chord_ref);
+            let mvmt = measure_movement(chord, lead_pitch, last_upper, last_lower, key);
+            if i == 0 || (mvmt < min_mvmt.unwrap()) {
+                min_mvmt = Some(mvmt);
+                min_chord = chord_ref;
+            }
+        }
+
+        min_chord
     }
 }
 
@@ -328,6 +360,8 @@ pub struct ChordManager {
     candidates: CandidatesTable,
     pub chord_behavior: SelectionHeuristic,
     pub chord_frequency: HashMap<usize, usize>,
+    last_upper: Option<u16>,
+    last_lower: Option<u16>,
 }
 
 #[allow(dead_code)]
@@ -438,11 +472,20 @@ impl ChordManager {
                 candidates.reset();
                 states.query(self.chord, pitch as u8, self.key, candidates);
                 self.chord = candidates.get_least_used(&self.chord_frequency);
-
-                //note_transitions.insert(self.pitch as u8, pitch as u8, self.chord);
             }
             SelectionHeuristic::LeastMovement => {
-                todo!();
+                let states = &self.states;
+                let candidates = &mut self.candidates;
+
+                candidates.reset();
+                states.query(self.chord, pitch as u8, self.key, candidates);
+                self.chord = candidates.get_least_movement(
+                    &self.states,
+                    pitch,
+                    self.last_upper.unwrap(),
+                    self.last_lower.unwrap(),
+                    self.key,
+                );
             }
         }
     }
@@ -479,8 +522,13 @@ impl ChordManager {
         find_nearest_lower(chord, lead_pitch, key)
     }
 
-    pub fn cache_upper(&mut self, pitch: u16) {}
-    pub fn cache_lower(&mut self, pitch: u16) {}
+    pub fn cache_upper(&mut self, pitch: u16) {
+        self.last_upper = Some(pitch);
+    }
+
+    pub fn cache_lower(&mut self, pitch: u16) {
+        self.last_lower = Some(pitch);
+    }
 }
 
 #[cfg(test)]
