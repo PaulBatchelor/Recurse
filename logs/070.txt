@@ -1,0 +1,51 @@
+@2024-07-28
+
+@11:00 Implement upper/lower voice finder. #demo-trio-chords #timelog:00:09:43
+
+@11:11 Plan out how to insert chords #demo-trio-chords #timelog:00:34:42
+
+@11:41 I have built an initial "Chord Manager" #demo-trio-chords
+I believe I have identified the entry points for
+the chord manager in the existing code, and I have
+built an initial dummy interface for it. There is
+a failing test now with the methods.
+---
+If I can implement this interface, I think it'll be
+ready for actual integration.
+
+@11:47 Implementing chord manager #demo-trio-chords #timelog:00:49:00
+
+@11:49 Populating the chord table. #demo-trio-chords
+
+@12:22 Upper/lower movement could be different #demo-trio-chords
+Upper/lower voice selection is based on minimal distance
+from lead voice. This could also change to be based on
+the minimal distance from the voice it is currently at
+while also being above/below the lead.
+---
+Writing this down, I'm realizing there's potential for
+chaos (an upper voice that somehow keeps drifting upwards,
+for instance). Could be a cool thing though.
+
+@12:36 tests seem to pass for the initial chord manager #demo-trio-chords
+
+@12:37 Let's see if I can make this work #demo-trio-chords #timelog:00:17:39
+
+@12:56 I want a minor VI in there #demo-trio-chords #timelog:00:20:00
+
+@13:03 Harmonic continuinity is coming through, but better voice leading needed #demo-trio-chords
+Also running into a bug with chord harmonies. I get
+wrong chords. If I keep tapping on Do, I'll land on
+sustained chords, which aren't correct.
+
+@13:07 Oh right, I think I need to make sure duplicates are ignored #demo-trio-chords
+Still not fixing the bug I described above.
+The lower note is incorrectly holding onto the note of
+the previous chord for some reason.
+
+@13:16 Pulling myself away. #demo-trio-chords
+
+@14:49 Fixing the weird initial chord bug #demo-trio-chords
+Retriggering the lowest note causes it to alternate
+between a major chord (correct) and a sustained chord (incorrect)
+The upper note is correct, while the lower note is incorrect.

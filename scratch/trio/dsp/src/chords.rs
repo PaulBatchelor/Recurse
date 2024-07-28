@@ -375,6 +375,7 @@ impl ChordManager {
         let chord = self.states.get_chord(self.chord);
         let lead_pitch = self.pitch;
         let key = self.key;
+        println!("upper find from chord {}", self.chord);
         find_nearest_upper(chord, lead_pitch, key)
     }
 
@@ -382,6 +383,7 @@ impl ChordManager {
         let chord = self.states.get_chord(self.chord);
         let lead_pitch = self.pitch;
         let key = self.key;
+        println!("lower find from chord {}", self.chord);
         find_nearest_lower(chord, lead_pitch, key)
     }
 }

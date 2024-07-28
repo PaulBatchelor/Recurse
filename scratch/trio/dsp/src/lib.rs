@@ -105,7 +105,7 @@ pub struct VoxData {
 //0  1  2  3  4  5  6  7  8  9 10  11
 //0  0  1  1  2  3  3  4  4  5  5  6
 //do di re ri mi fa fi so si la te ti
-const PITCH_TO_DIATONIC: [i16; 12] = [0, 0, 1, 1, 2, 3, 3, 4, 4, 5, 5, 6];
+// const PITCH_TO_DIATONIC: [i16; 12] = [0, 0, 1, 1, 2, 3, 3, 4, 4, 5, 5, 6];
 
 impl VoxData {
     pub fn new(sr: usize) -> Self {
@@ -155,14 +155,14 @@ impl VoxData {
         vd
     }
 
-    fn get_scale_degree(&self, pitch: u16, base: u16) -> (usize, f32) {
-        //let pitch = self.lead.pitch.value as u16 - self.base;
-        let pitch = pitch - base;
-        let octave = pitch / 12;
-        let pitch = pitch % 12;
-        let pitch = PITCH_TO_DIATONIC[pitch as usize];
-        (pitch as usize, octave as f32)
-    }
+    // fn get_scale_degree(&self, pitch: u16, base: u16) -> (usize, f32) {
+    //     //let pitch = self.lead.pitch.value as u16 - self.base;
+    //     let pitch = pitch - base;
+    //     let octave = pitch / 12;
+    //     let pitch = pitch % 12;
+    //     let pitch = PITCH_TO_DIATONIC[pitch as usize];
+    //     (pitch as usize, octave as f32)
+    // }
 
     fn check_for_pitch_changes(&mut self) {
         let pitch = (self.x_axis * self.pitches.len() as f32) as usize;
@@ -231,9 +231,10 @@ impl VoxData {
                         println!("Lower on!");
                         self.lower.gain.value = 0.8;
                         let pitch = self.lead.pitch.value;
-                        let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
-                        let pitch =
-                            self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+                        // let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+                        // let pitch =
+                        //     self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+                        let pitch = self.lower_pitch_lookup(pitch);
                         self.lower.schedule_pitch(pitch);
                         self.lower.reset();
                     }
