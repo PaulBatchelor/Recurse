@@ -287,6 +287,10 @@ fn find_nearest_upper(chord: &Chord, lead_pitch: u16, key: u8) -> u16 {
     lead_pitch
 }
 
+fn measure_movement(chord: &Chord, lead_pitch: u16, prev_upper: u16, prev_lower: u16) -> u16 {
+    0
+}
+
 #[allow(dead_code)]
 fn find_nearest_lower(chord: &Chord, lead_pitch: u16, key: u8) -> u16 {
     for i in 1..12 {
@@ -753,8 +757,32 @@ mod tests {
         cm.change(62);
         assert_eq!(cm.find_lower_pitch(), 59);
         assert_eq!(cm.find_upper_pitch(), 67);
+    }
 
-        // No chords available, fallback to G
-        // Gmaj -> (D4, C4) -> Cmaj
+    #[test]
+    fn test_measure_movement() {
+        let subdominant: Chord = [DO, FA, LA];
+        let supertonic: Chord = [RE, FA, LA];
+
+        // (Key of C)
+        // Cmaj:(E4) -> (C4, E4, G4)
+        // Cmaj -> (E4, F4) -> Fmaj (C4, F4, A4) ->
+        // (C4 - C4, A4 - G4) -> (0, 2) -> Score of 2
+
+        let next_lead = 65;
+        let prev_upper = 67;
+        let prev_lower = 60;
+        let movement = measure_movement(&subdominant, next_lead, prev_upper, prev_lower);
+        assert_eq!(movement, 2);
+
+        // Cmaj:(E4) -> (C4, E4, G4)
+        // Cmaj -> (E4, F4) -> Dmin (D4, F4, A4) ->
+        // (D4 - C4, A4 - G4) -> (2, 2) -> Score of 4
+
+        let next_lead = 65;
+        let prev_upper = 67;
+        let prev_lower = 60;
+        let movement = measure_movement(&supertonic, next_lead, prev_upper, prev_lower);
+        assert_eq!(movement, 4);
     }
 }

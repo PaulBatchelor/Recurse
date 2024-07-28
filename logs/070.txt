@@ -92,4 +92,20 @@ the other.
 
 @15:27 Implement the "least used chord" heuristic #demo-trio-chords #timelog:00:58:01
 
-@16:24 Heuristic implemented in tests, now to try it out #demo-trio-chords
+@16:24 Heuristic implemented in tests, now to try it out #demo-trio-chords #timelog:00:09:35
+
+@16:36 Least Movement Heuristic thoughts, test building #demo-trio-chords
+Least movement: for each candidates, get the working
+upper and lower notes of those chords given the current
+lead pitch. Get the absolute differences between those
+and the current lower/upper. The one with the lowest
+score wins.
+---
+A good hybrid could be something called "Lazy Least Used".
+Go for the least used, but only if the movement required
+is under a certain score. Otherwise, choose the one with
+least movement
+
+@16:42 Working out a least movement test. #demo-trio-chords #timelog:00:18:34
+Firstly, make sure the low-level chord measurement mechanics
+are in place and working properly. Then, simulate a chord change.

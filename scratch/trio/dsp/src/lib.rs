@@ -3,7 +3,7 @@ use voice::{EventType, VoiceScheduler};
 use voxbox::*;
 
 mod chords;
-use chords::ChordManager;
+use chords::{ChordManager, SelectionHeuristic};
 
 struct SmoothParam {
     pub value: f32,
@@ -152,17 +152,9 @@ impl VoxData {
         vd.lower.pitch.smoother.set_smooth(0.09);
 
         vd.chord_manager.populate();
+        vd.chord_manager.chord_behavior = SelectionHeuristic::LeastUsed;
         vd
     }
-
-    // fn get_scale_degree(&self, pitch: u16, base: u16) -> (usize, f32) {
-    //     //let pitch = self.lead.pitch.value as u16 - self.base;
-    //     let pitch = pitch - base;
-    //     let octave = pitch / 12;
-    //     let pitch = pitch % 12;
-    //     let pitch = PITCH_TO_DIATONIC[pitch as usize];
-    //     (pitch as usize, octave as f32)
-    // }
 
     fn check_for_pitch_changes(&mut self) {
         let pitch = (self.x_axis * self.pitches.len() as f32) as usize;
