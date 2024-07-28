@@ -135,6 +135,7 @@ struct ChordStates {
     // ncandidates: u8,
     // TODO: pull this out of ChordStates?
     pub note_transitions: NoteTransitionTable,
+    pub fallback_chords: [usize; 12],
 }
 
 #[allow(dead_code)]
@@ -177,6 +178,10 @@ impl ChordStates {
         }
     }
 
+    pub fn add_fallback_chord(&mut self, scale_degree: u8, chord_ref: usize) {
+        self.fallback_chords[scale_degree as usize] = chord_ref;
+    }
+
     pub fn query(&self, curchord: usize, next_note: u8, key: u8, candidates: &mut CandidatesTable) {
         // extract scale degree from note and key
         // TODO: this won't work for most notes <12, problem?
@@ -204,6 +209,16 @@ impl ChordStates {
 
             if chord.contains(&scale_degree) {
                 candidates.append_chord(*chord_idx);
+            }
+        }
+
+        // Attempt a fallback chord if there aren't any
+        // candidates
+
+        if candidates.ncandidates == 0 {
+            let chord = self.fallback_chords[scale_degree as usize];
+            if chord > 0 {
+                candidates.append_chord(chord);
             }
         }
     }
@@ -370,5 +385,35 @@ mod tests {
         let chord = chord.unwrap();
         states.note_transitions.insert(65, 60, chord);
         assert_eq!(chord, tonic);
+    }
+
+    #[test]
+    fn test_fallback_chords() {
+        let mut states = ChordStates::default();
+        let tonic = states.add_chord(&[DO, MI, SO]);
+        let subdominant = states.add_chord(&[DO, FA, LA]);
+        let dominant = states.add_chord(&[RE, SO, TI]);
+        let supertonic = states.add_chord(&[RE, FA, LA]);
+        let mut candidates = CandidatesTable::default();
+
+        states.add_transition(tonic, subdominant);
+        states.add_transition(tonic, dominant);
+        states.add_transition(tonic, supertonic);
+        states.add_transition(dominant, tonic);
+        states.add_transition(subdominant, tonic);
+        states.add_transition(supertonic, tonic);
+
+        // add a fallback for B
+        states.add_fallback_chord(TI, dominant);
+
+        // The current state machine does not have an option for
+        // B (scale degree TI)
+        states.query(supertonic, 59, KEY_C, &mut candidates);
+
+        assert!(candidates.ncandidates > 0);
+
+        let chord = candidates.get_first_chord().unwrap();
+
+        assert_eq!(chord, dominant);
     }
 }

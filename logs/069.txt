@@ -7,3 +7,11 @@
 @17:13 Uploading to drive
 Write permission issues.
 @17:19 Comitting changes
+@20:18 implementing fallback chords #demo-trio-chords
+It occured to me yesterday that I am actually
+close to a proof-of-concept system. I already
+have one heuristic working. I don't need to
+build out the others yet.
+---
+I do need to build a fallback set of chords in
+case a chord isn't found for a particular note.
