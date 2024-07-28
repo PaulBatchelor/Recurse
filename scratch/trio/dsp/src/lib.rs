@@ -3,6 +3,7 @@ use voice::{EventType, VoiceScheduler};
 use voxbox::*;
 
 mod chords;
+use chords::ChordManager;
 
 struct SmoothParam {
     pub value: f32,
@@ -98,6 +99,7 @@ pub struct VoxData {
     please_reset: bool,
 
     voice_manager: VoiceScheduler,
+    chord_manager: ChordManager,
 }
 
 //0  1  2  3  4  5  6  7  8  9 10  11
@@ -134,6 +136,7 @@ impl VoxData {
             lead_playing: true,
             please_reset: false,
             voice_manager: VoiceScheduler::default(),
+            chord_manager: ChordManager::default(),
         };
 
         vd.voice_manager.populate_hooks();
@@ -147,6 +150,8 @@ impl VoxData {
         vd.lower.voice.vibrato_rate(6.0);
         vd.lower.gain.smoother.set_smooth(0.02);
         vd.lower.pitch.smoother.set_smooth(0.09);
+
+        vd.chord_manager.populate();
         vd
     }
 
@@ -171,6 +176,8 @@ impl VoxData {
             self.last_pitch = pitch;
             self.pitch_last_changed = self.time;
             self.voice_manager.change(pitch as u32);
+            // TODO: tell chord manager to change chords
+            self.chord_manager.change(pitch as u16);
         }
 
         // instantaneous update of lead pitch
@@ -186,11 +193,17 @@ impl VoxData {
     pub fn upper_pitch_lookup(&self, pitch: f32) -> f32 {
         let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
         self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32
+
+        // TODO: This should be retrieved from the voice state manager
+        //self.chord_manager.find_upper_pitch(pitch as u16) as f32
     }
 
     pub fn lower_pitch_lookup(&self, pitch: f32) -> f32 {
         let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
         self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32
+
+        // TODO: This should be retrieved from the voice state manager
+        //self.chord_manager.find_upper_pitch(pitch as u16) as f32
     }
 
     pub fn tick(&mut self) -> f32 {
@@ -256,62 +269,6 @@ impl VoxData {
                     }
                 }
             }
-            //self.time += 1;
-            //self.pitch_changed = false;
-
-            // let did_pitch_change =
-            //self.last_pitch > 0. && self.cached_lead_pitch != self.last_pitch;
-
-            // let held_long_enough_low = (self.time - self.pitch_last_changed) > 0;
-            // let held_long_enough_upper = (self.time - self.pitch_last_changed) > 1;
-
-            // if did_pitch_change && held_long_enough_low {
-            //     //self.lead.pitch.value = self.last_pitch;
-            //     //println!("lower: pitch changed and held long enough");
-            //     self.cached_lead_pitch = self.last_pitch;
-            //     //self.update_pitches();
-
-            //     let pitch = self.lead.pitch.value;
-            //     let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
-
-            //     let pitch = self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
-            //     //self.lower.pitch.value = pitch;
-            //     self.lower.schedule_pitch(pitch);
-            //     //self.upper.pitch.value =
-            //     //    self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
-            //     self.lower_has_changed = true;
-
-            //     if self.lead_playing {
-            //         if self.lower.gain.value == 0. {
-            //             self.lower.reset();
-            //         }
-            //         self.lower.gain.value = 0.8;
-            //     }
-            // }
-
-            // if self.lower_has_changed && held_long_enough_upper {
-            //     //self.lead.pitch.value = self.last_pitch;
-            //     //println!("upper: pitch changed and held long enough");
-            //     self.cached_lead_pitch = self.last_pitch;
-            //     //self.update_pitches();
-
-            //     let pitch = self.lead.pitch.value;
-            //     let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
-
-            //     // self.lower.pitch.value =
-            //     //     self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
-            //     let pitch = self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
-            //     //self.upper.pitch.value = pitch;
-            //     self.upper.schedule_pitch(pitch);
-            //     self.lower_has_changed = false;
-
-            //     if self.lead_playing {
-            //         if self.upper.gain.value == 0. {
-            //             self.upper.reset();
-            //         }
-            //         self.upper.gain.value = 0.8;
-            //     }
-            // }
             self.last_pitch = self.lead.pitch.value;
         }
 

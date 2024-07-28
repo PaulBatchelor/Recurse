@@ -225,13 +225,50 @@ impl ChordStates {
 }
 
 #[allow(dead_code)]
-fn find_nearest_upper(_chord: &Chord, _pitch: u16, _key: u8) -> u16 {
-    0
+fn find_nearest_upper(chord: &Chord, lead_pitch: u16, key: u8) -> u16 {
+    for i in 1..12 {
+        let test_pitch = lead_pitch + i;
+        let scale_degree = ((test_pitch - key as u16) % 12) as u8;
+
+        if chord.contains(&scale_degree) {
+            return test_pitch;
+        }
+    }
+
+    // As a fallback, return itself.
+    lead_pitch
 }
 
 #[allow(dead_code)]
-fn find_nearest_lower(_chord: &Chord, _pitch: u16, _key: u8) -> u16 {
-    0
+fn find_nearest_lower(chord: &Chord, lead_pitch: u16, key: u8) -> u16 {
+    for i in 1..12 {
+        let test_pitch = lead_pitch - i;
+        let scale_degree = ((test_pitch - key as u16) % 12) as u8;
+
+        if chord.contains(&scale_degree) {
+            return test_pitch;
+        }
+    }
+
+    // As a fallback, return itself.
+    lead_pitch
+}
+
+#[derive(Default)]
+pub struct ChordManager {
+    //states: ChordStates,
+}
+
+#[allow(dead_code)]
+impl ChordManager {
+    pub fn populate(&mut self) {}
+    pub fn change(&mut self, _pitch: u16) {}
+    pub fn find_upper_pitch(&self) -> u16 {
+        0
+    }
+    pub fn find_lower_pitch(&self) -> u16 {
+        0
+    }
 }
 
 #[cfg(test)]
@@ -454,5 +491,23 @@ mod tests {
         // Lower/upper pitch should be MI (E4)
         assert_eq!(lower_pitch, 60, "Wrong lower voice found");
         assert_eq!(upper_pitch, 64, "Wrong upper voice failed");
+    }
+
+    #[test]
+    fn test_chord_manager() {
+        let mut cm = ChordManager::default();
+
+        cm.populate();
+
+        // Lead: C4
+        cm.change(60);
+
+        // Lower: G3
+        assert_eq!(cm.find_lower_pitch(), 55, "Expected lower to be G3");
+
+        // upper: E4
+        assert_eq!(cm.find_upper_pitch(), 64, "Expected upper to be E4");
+
+        // TODO: Do some more pitch changes to make sure state machine seems functional
     }
 }
