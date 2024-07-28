@@ -140,7 +140,7 @@ impl VoxData {
         };
 
         vd.voice_manager.populate_hooks();
-        vd.clk.set_freq(1.1);
+        vd.clk.set_freq(1.3);
         vd.upper.voice.vibrato_depth(0.1);
         vd.upper.voice.vibrato_rate(6.2);
         vd.upper.gain.smoother.set_smooth(0.03);
@@ -170,7 +170,7 @@ impl VoxData {
             self.pitch_last_changed = self.time;
             self.voice_manager.change(pitch as u32);
             // tell chord manager to change chords
-            //self.chord_manager.change(pitch as u16);
+            self.chord_manager.change(pitch as u16);
         }
 
         // instantaneous update of lead pitch
@@ -179,12 +179,12 @@ impl VoxData {
         if self.please_reset {
             //println!("resetting THE LEAD PITCH");
             self.lead.reset();
-            //self.chord_manager.change(pitch as u16);
-        }
-
-        if self.please_reset || did_pitch_change {
             self.chord_manager.change(pitch as u16);
         }
+
+        // if self.please_reset || did_pitch_change {
+        //     self.chord_manager.change(pitch as u16);
+        // }
     }
 
     // TODO: I know, a bit repetitive...

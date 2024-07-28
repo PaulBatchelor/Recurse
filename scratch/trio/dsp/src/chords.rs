@@ -491,7 +491,14 @@ impl ChordManager {
     }
 
     pub fn change(&mut self, pitch: u16) {
-        if self.pitch > 0 && self.chord > 0 {
+        // first selected chord will crash on least movement
+        // heuristic will crash because the upper/lower
+        // voices haven't been cached get. This check
+        // makes it use the fallback.
+        let use_cached_voices = matches!(&self.chord_behavior, SelectionHeuristic::LeastMovement)
+            && self.last_upper.is_some()
+            && self.last_lower.is_some();
+        if self.pitch > 0 && self.chord > 0 && use_cached_voices {
             // Choose a chord from transition table
             println!("transition chord: {}", self.chord);
             self.select_next_chord(pitch);

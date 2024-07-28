@@ -141,3 +141,5 @@ Lazy Least Frequent Heuristic, Y-axis expression.
 ---
 Nice thing to have: some way to go from staggered to
 instantaneous behavior.
+
+@18:26 LeastMovement crashes due to unwrap still #demo-trio-chords #timelog:06:33
