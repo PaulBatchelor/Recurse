@@ -7,7 +7,7 @@
 @17:13 Uploading to drive
 Write permission issues.
 @17:19 Comitting changes
-@20:18 implementing fallback chords #demo-trio-chords
+@20:18 implementing fallback chords #demo-trio-chords #timelog:00:17:27
 It occured to me yesterday that I am actually
 close to a proof-of-concept system. I already
 have one heuristic working. I don't need to
@@ -15,3 +15,15 @@ build out the others yet.
 ---
 I do need to build a fallback set of chords in
 case a chord isn't found for a particular note.
+
+@20:44 Figuring out how to actually hook this up #demo-trio-chords #timelog:00:28:53
+
+@21:42 Find upper/lower voices of chord... how to? #demo-trio-chords
+Instead of a lookup table, dynamically find the
+closest voices above and below a lead note given
+a chord.
+
+@21:52 Note to self: chord select needs to reset on note off some how #demo-trio-chords
+
+@21:57 Initial tests made. That's all I can do. #demo-trio-chords
+I am incredibly exhausted today. What a long day.

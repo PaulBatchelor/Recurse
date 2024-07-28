@@ -224,6 +224,16 @@ impl ChordStates {
     }
 }
 
+#[allow(dead_code)]
+fn find_nearest_upper(_chord: &Chord, _pitch: u16, _key: u8) -> u16 {
+    0
+}
+
+#[allow(dead_code)]
+fn find_nearest_lower(_chord: &Chord, _pitch: u16, _key: u8) -> u16 {
+    0
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -415,5 +425,34 @@ mod tests {
         let chord = candidates.get_first_chord().unwrap();
 
         assert_eq!(chord, dominant);
+    }
+
+    #[test]
+    fn test_voice_finder() {
+        let tonic = [DO, MI, SO];
+        let lead_pitch = 60;
+        let key = KEY_C;
+
+        let upper_pitch = find_nearest_upper(&tonic, lead_pitch, key);
+        let lower_pitch = find_nearest_lower(&tonic, lead_pitch, key);
+
+        // Upper should be MI (E4)
+        assert_eq!(upper_pitch, 64, "Upper voice failed");
+
+        // Lower shold be So (G3)
+        assert_eq!(lower_pitch, 55, "Lower voice failed");
+
+        // If lead pitch is part of the chord, just chose closest
+        // notes for upper and lower
+
+        // C#4/Db4: di or ra, b2, etc. This is not in a major chord
+        let lead_pitch = 61;
+
+        let upper_pitch = find_nearest_upper(&tonic, lead_pitch, key);
+        let lower_pitch = find_nearest_lower(&tonic, lead_pitch, key);
+
+        // Lower/upper pitch should be MI (E4)
+        assert_eq!(lower_pitch, 60, "Wrong lower voice found");
+        assert_eq!(upper_pitch, 64, "Wrong upper voice failed");
     }
 }

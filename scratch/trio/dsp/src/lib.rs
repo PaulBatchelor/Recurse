@@ -137,7 +137,7 @@ impl VoxData {
         };
 
         vd.voice_manager.populate_hooks();
-        vd.clk.set_freq(1.0);
+        vd.clk.set_freq(1.1);
         vd.upper.voice.vibrato_depth(0.1);
         vd.upper.voice.vibrato_rate(6.2);
         vd.upper.gain.smoother.set_smooth(0.03);
@@ -182,6 +182,17 @@ impl VoxData {
         }
     }
 
+    // TODO: I know, a bit repetitive...
+    pub fn upper_pitch_lookup(&self, pitch: f32) -> f32 {
+        let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+        self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32
+    }
+
+    pub fn lower_pitch_lookup(&self, pitch: f32) -> f32 {
+        let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+        self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32
+    }
+
     pub fn tick(&mut self) -> f32 {
         if self.please_reset {
             //println!("RESETTING");
@@ -216,18 +227,20 @@ impl VoxData {
                         println!("Lower change!");
                         self.lower.gain.value = 0.8;
                         let pitch = self.lead.pitch.value;
-                        let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
-                        let pitch =
-                            self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+                        //let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+                        //let pitch =
+                        //    self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
+                        let pitch = self.lower_pitch_lookup(pitch);
                         self.lower.schedule_pitch(pitch);
                     }
                     EventType::UpperOn => {
                         println!("Upper On!");
                         self.upper.gain.value = 0.8;
                         let pitch = self.lead.pitch.value;
-                        let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
-                        let pitch =
-                            self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+                        //let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+                        //let pitch =
+                        //    self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+                        let pitch = self.upper_pitch_lookup(pitch);
                         self.upper.schedule_pitch(pitch);
                         self.upper.reset();
                     }
@@ -235,9 +248,10 @@ impl VoxData {
                         println!("Upper Change!");
                         self.upper.gain.value = 0.8;
                         let pitch = self.lead.pitch.value;
-                        let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
-                        let pitch =
-                            self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
+                        let pitch = self.upper_pitch_lookup(pitch);
+                        // let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
+                        // let pitch =
+                        //     self.base as f32 + 12.0 * octave + self.upper_lookup[idx] as f32;
                         self.upper.schedule_pitch(pitch);
                     }
                 }
