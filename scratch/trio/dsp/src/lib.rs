@@ -152,8 +152,9 @@ impl VoxData {
         vd.lower.pitch.smoother.set_smooth(0.09);
 
         vd.chord_manager.populate();
-        vd.chord_manager.chord_behavior = SelectionHeuristic::LeastMovement;
+        //vd.chord_manager.chord_behavior = SelectionHeuristic::LeastMovement;
         //vd.chord_manager.chord_behavior = SelectionHeuristic::LeastUsed;
+        vd.chord_manager.chord_behavior = SelectionHeuristic::LazyLeastUsed;
         vd
     }
 

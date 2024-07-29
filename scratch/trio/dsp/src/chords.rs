@@ -4,9 +4,17 @@ use std::collections::HashMap;
 #[allow(dead_code)]
 pub enum SelectionHeuristic {
     #[default]
+    /// Initial Note Transition Logic... not great
     NoteTransition,
+    /// Pick the least used chord
     LeastUsed,
+    /// Pick the chord that uses the least amount of movement
     LeastMovement,
+
+    /// Hybrid of LeastMovement and LeastUsed: pick the least used
+    /// chord, but only if there isn't a lot of movement required
+    /// otherwise, grab the one with least movement
+    LazyLeastUsed,
 }
 
 #[allow(dead_code)]
@@ -487,6 +495,34 @@ impl ChordManager {
                     self.key,
                 );
             }
+            SelectionHeuristic::LazyLeastUsed => {
+                let states = &self.states;
+                let candidates = &mut self.candidates;
+
+                candidates.reset();
+                states.query(self.chord, pitch as u8, self.key, candidates);
+                let least_used_chord = candidates.get_least_used(&self.chord_frequency);
+                let mvt = measure_movement(
+                    &self.states.get_chord(least_used_chord),
+                    pitch,
+                    self.last_upper.unwrap(),
+                    self.last_lower.unwrap(),
+                    self.key,
+                );
+
+                if mvt <= 3 {
+                    println!("lazily selected least used chord!");
+                    self.chord = least_used_chord;
+                } else {
+                    self.chord = candidates.get_least_movement(
+                        &self.states,
+                        pitch,
+                        self.last_upper.unwrap(),
+                        self.last_lower.unwrap(),
+                        self.key,
+                    );
+                }
+            }
         }
     }
 
@@ -495,9 +531,13 @@ impl ChordManager {
         // heuristic will crash because the upper/lower
         // voices haven't been cached get. This check
         // makes it use the fallback.
-        let use_cached_voices = matches!(&self.chord_behavior, SelectionHeuristic::LeastMovement)
-            && self.last_upper.is_some()
-            && self.last_lower.is_some();
+
+        let uses_cached = matches!(&self.chord_behavior, SelectionHeuristic::LeastMovement)
+            || matches!(&self.chord_behavior, SelectionHeuristic::LazyLeastUsed);
+
+        let use_cached_voices =
+            uses_cached && self.last_upper.is_some() && self.last_lower.is_some();
+
         if self.pitch > 0 && self.chord > 0 && use_cached_voices {
             // Choose a chord from transition table
             println!("transition chord: {}", self.chord);
