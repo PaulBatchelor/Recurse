@@ -4,3 +4,16 @@
 This past weekend was very heads down. I didn't do
 my usual morning triage.
 @08:54 Morning triage.
+
+@09:40 How does this sound today? #demo-trio
+Added a new shape. Really expressive now. Vibrato not
+as bad as I remembered (with headphones on now instead of speakers).
+---
+Should resolve to tonic more often. There should be a built
+in bias to choose tonic.
+---
+I'm desiring the instantaneous mode again.
+---
+The chord changes are happening too quickly.
+If I select a pitch, go down quickly, and og back up,
+the chord shouldn't change. But it does.

@@ -18,7 +18,8 @@ struct VoiceWithSmoother {
 }
 
 const SHAPE1: [f32; 8] = [1.011, 0.201, 0.487, 0.440, 1.297, 2.368, 1.059, 2.225];
-const SHAPE2: [f32; 8] = [1.011, 0.201, 0.487, 0.440, 1.297, 0.368, 1.059, 1.225];
+//const SHAPE2: [f32; 8] = [1.011, 0.201, 0.487, 0.440, 1.297, 0.368, 1.059, 1.225];
+const SHAPE2: [f32; 8] = [0.502, 2.807, 0.105, 0.431, 3.005, 0.784, 0.360, 2.326];
 
 impl VoiceWithSmoother {
     pub fn new(sr: usize, tract_len_cm: f32, oversample: u16) -> Self {
@@ -37,7 +38,7 @@ impl VoiceWithSmoother {
         v.voice.tract.drm(&shape1);
         v.voice.vibrato_depth(0.3);
         v.voice.vibrato_rate(6.1);
-        v.voice.glottis.set_aspiration(0.3);
+        v.voice.glottis.set_aspiration(0.1);
 
         v
     }
@@ -154,7 +155,7 @@ impl VoxData {
 
         vd.reverb.size = 0.91;
         vd.voice_manager.populate_hooks();
-        vd.clk.set_freq(1.3);
+        vd.clk.set_freq(1.0);
         vd.upper.voice.vibrato_depth(0.1);
         vd.upper.voice.vibrato_rate(6.2);
         vd.upper.gain.smoother.set_smooth(0.08);
