@@ -75,7 +75,7 @@ algorithm, the core work is done.
 
 @15:17 Begin initial web port #demo-trio-web
 
-@15:20 Writing out boilerplate HTML/js #demo-trio
+@15:20 Writing out boilerplate HTML/js #demo-trio-web #timelog:00:36:46
 Doing this by hand, as a learning experience. Poke
 used as reference.
 ---
@@ -83,3 +83,17 @@ I am using "modules" now to help me better break
 up my code ahead of time.
 
 @15:42 working on some initial p5 work.
+
+@16:07 initial webaudio scaffolding #demo-trio-web #timelog:00:38:01
+
+@16:31 What's a good way to get sound/visuals to talk? #demo-trio-web
+Trying to do this the mildly correct way.
+---
+I'm making a new class off of p5, adding my own
+data to it.
+
+@16:41 Adding intial processor code #demo-trio-web
+No WASM bits yet, though there should be placeholder
+
+@16:45 That's all we have time for. #demo-trio-web
+Wrapping up this session.
