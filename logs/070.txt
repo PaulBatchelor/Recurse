@@ -156,4 +156,4 @@ wouldn't be worth it.
 @20:03 It appears to be working. #demo-trio-chords
 This is a good stopping point for my chords engine.
 
-@20:04 More reverb, predelay too. #demo-trio
+@20:04 More reverb, predelay too. #demo-trio #timelog:00:14:42

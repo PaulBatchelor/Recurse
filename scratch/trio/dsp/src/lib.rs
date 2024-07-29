@@ -27,7 +27,7 @@ impl VoiceWithSmoother {
             gest: EventfulGesture::default(),
         };
 
-        v.gain.smoother.set_smooth(0.005);
+        v.gain.smoother.set_smooth(0.04);
         v.pitch.smoother.set_smooth(0.04);
         v.voice.pitch = 60.;
         v.voice.tract.drm(&shape1);
@@ -77,6 +77,7 @@ pub struct VoxData {
     lower: VoiceWithSmoother,
     upper: VoiceWithSmoother,
     reverb: BigVerb,
+    delay: Delay,
     dcblk: DCBlocker,
 
     is_running: bool,
@@ -137,18 +138,20 @@ impl VoxData {
             please_reset: false,
             voice_manager: VoiceScheduler::default(),
             chord_manager: ChordManager::default(),
+            delay: Delay::new(sr, 0.2),
         };
 
+        vd.reverb.size = 0.91;
         vd.voice_manager.populate_hooks();
         vd.clk.set_freq(1.3);
         vd.upper.voice.vibrato_depth(0.1);
         vd.upper.voice.vibrato_rate(6.2);
-        vd.upper.gain.smoother.set_smooth(0.03);
+        vd.upper.gain.smoother.set_smooth(0.08);
         vd.upper.pitch.smoother.set_smooth(0.08);
 
         vd.lower.voice.vibrato_depth(0.1);
         vd.lower.voice.vibrato_rate(6.0);
-        vd.lower.gain.smoother.set_smooth(0.02);
+        vd.lower.gain.smoother.set_smooth(0.09);
         vd.lower.pitch.smoother.set_smooth(0.09);
 
         vd.chord_manager.populate();
@@ -292,10 +295,13 @@ impl VoxData {
         //let upper = self.upper.tick();
 
         let voices = (lead + lower + upper) * 0.33;
-        let (r, _) = self.reverb.tick(voices, voices);
-        let r = self.dcblk.tick(r);
 
-        (voices + r * 0.1) * 0.6
+        let voices_send = voices;
+        let (r, _) = self.reverb.tick(voices_send, voices_send);
+        let r = self.dcblk.tick(r);
+        let del = self.delay.tick(r);
+
+        (voices + del * 0.2) * 0.6
     }
 
     pub fn running(&mut self) -> u8 {
