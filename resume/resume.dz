@@ -34,18 +34,23 @@ ln Boomy, Music Automation Engineer (July 2022 - January 2023)
 co $ experience
 
 nn python_test_coverage
-ln Refactored Python codebases, improved test
-ln coverage, yielding easier to spot regression bugs.
+ln Used Pytest to built out unit tests and integratoin
+ln tests for Flask. Improved regression tests and helped
+ln catch many bugs that were otherwise undetected.
 co $ boomy
 
 nn benchmarking
-ln Created benchmarking and profiling utilities to improve
-ln overall throughput performance in audio rendering.
+zz ln Created benchmarking and profiling utilities to improve
+zz ln overall throughput performance in audio rendering.
+ln Optimzed audio file generation in core rendering engine
+ln through building out benchmarking utilities that measured
+ln overall throughput.
 co $ boomy
 
 nn prototyping_DSP
-ln Built out musical instrument DSP prototypes for internal
-ln sound engine.
+ln Built out interactive rapid prototyping tools using
+ln using JUCE, Csound, and Python. Designed new DSP algorithms
+ln for musical synthesizers and effects processors.
 co $ boomy
 
 sn boomy
@@ -74,8 +79,17 @@ ln Designed audio-visual stimuli for use in clinical
 ln research trials.
 co $ muvik
 
+nn intellectual_property
+ln TODO: add patent
+co $ muvik
+
+nn clinical_studies
+ln TODO: add clinical study
+co $ muvik
+
 sn muvik
-ol leader_research audiovisual_engine android_prototypes designed_stimuli
+zz ol leader_research audiovisual_engine android_prototypes designed_stimuli
+ol leader_research audiovisual_engine android_prototypes intellectual_property clinical_studies
 
 nn electrosmith
 ln Electrosmith, Consultant (September 2017 - December 2017)
