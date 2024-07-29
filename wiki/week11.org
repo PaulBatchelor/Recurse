@@ -1,0 +1,11 @@
+#+TITLE: Week 11
+
+* Saturday, July 27th
+
+Logs: @!(ref "logs" "logs" "2024_07_27")!@
+
+Audio Telephone Composition.
+
+* Sunday, July 28th
+
+Tasks: @!(tasks "demo-trio")!@, @!(taskref "demo-trio-chords")!@.

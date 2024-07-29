@@ -65,3 +65,6 @@ logs/064.txt
 logs/065.txt
 logs/066.txt
 logs/067.txt
+logs/068.txt
+logs/069.txt
+logs/070.txt

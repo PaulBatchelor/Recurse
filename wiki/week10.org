@@ -150,3 +150,12 @@ usually in the evenings for about 45 minutes to
 an hour. I just arrived at chapter 5. I am not
 doing any of the exercises, which is why I've
 been able to arrive there so quickly. 
+
+* Friday, July 26th
+
+Logs: @!(ref "logs" "logs" "2024_07_26")!@
+
+Tasks: @!(taskref "demo-trio-chords")!@.
+
+Implemented some initial parts of my chord selection
+algorithm. Specifically, the note transition selection.
