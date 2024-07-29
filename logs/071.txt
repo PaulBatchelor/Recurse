@@ -36,7 +36,7 @@ table.
 ---
 Oh my god this is consensus in a distributed system.
 
-@10:25 Tweaking the resume. #resume-follow-up
+@10:25 Tweaking the resume. #resume-follow-up #timelog:00:52:00
 What are the changes?
 ---
 Talk about Recurse Center. Looking at other resumes,
@@ -64,3 +64,5 @@ detail.
 oh hey, it looks like I already had some details for this one.
 ---
 Okay no details.
+
+@11:17 Pack up. Off to lunch.
