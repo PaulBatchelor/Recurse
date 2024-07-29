@@ -130,7 +130,7 @@ impl VoxData {
             dcblk: DCBlocker::new(sr),
             x_axis: 0.,
             px_axis: -1.,
-            pitches: vec![0, 2, 4, 5, 7, 9, 11, 12, 14, 16, 17, 19],
+            pitches: vec![0, 2, 4, 5, 7, 9, 11, 12, 14, 16, 17, 19, 21],
             base: 60,
             lower_lookup: [-5, -3, -1, 0, 2, 4, 5],
             upper_lookup: [4, 5, 7, 9, 11, 12, 14],
