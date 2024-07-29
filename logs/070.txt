@@ -157,3 +157,5 @@ wouldn't be worth it.
 This is a good stopping point for my chords engine.
 
 @20:04 More reverb, predelay too. #demo-trio #timelog:00:14:42
+
+@21:02 Some expression control #demo-trio #timelog:00:43:36

@@ -17,9 +17,13 @@ struct VoiceWithSmoother {
     pub gest: EventfulGesture,
 }
 
+const SHAPE1: [f32; 8] = [1.011, 0.201, 0.487, 0.440, 1.297, 2.368, 1.059, 2.225];
+const SHAPE2: [f32; 8] = [1.011, 0.201, 0.487, 0.440, 1.297, 0.368, 1.059, 1.225];
+
 impl VoiceWithSmoother {
     pub fn new(sr: usize, tract_len_cm: f32, oversample: u16) -> Self {
         let shape1 = [1.011, 0.201, 0.487, 0.440, 1.297, 2.368, 1.059, 2.225];
+        //let shape1 = [1.011, 0.201, 0.487, 0.440, 1.297, 0.368, 1.059, 2.225];
         let mut v = VoiceWithSmoother {
             voice: Voice::new(sr, tract_len_cm, oversample),
             pitch: SmoothParam::new(sr, 60.),
@@ -33,6 +37,7 @@ impl VoiceWithSmoother {
         v.voice.tract.drm(&shape1);
         v.voice.vibrato_depth(0.3);
         v.voice.vibrato_rate(6.1);
+        v.voice.glottis.set_aspiration(0.3);
 
         v
     }
@@ -83,6 +88,8 @@ pub struct VoxData {
     is_running: bool,
     pub x_axis: f32,
     px_axis: f32,
+    pub y_axis: f32,
+    py_axis: f32,
     pitches: Vec<i16>,
     base: u16,
     upper_lookup: [i16; 7],
@@ -101,6 +108,7 @@ pub struct VoxData {
 
     voice_manager: VoiceScheduler,
     chord_manager: ChordManager,
+    shape: [f32; 8],
 }
 
 //0  1  2  3  4  5  6  7  8  9 10  11
@@ -115,8 +123,8 @@ impl VoxData {
         let mut vd = VoxData {
             testvar: 12345.0,
             lead: VoiceWithSmoother::new(sr, tract_len_cm, oversample),
-            lower: VoiceWithSmoother::new(sr, tract_len_cm * 1.05, oversample),
-            upper: VoiceWithSmoother::new(sr, tract_len_cm * 0.95, oversample),
+            lower: VoiceWithSmoother::new(sr, tract_len_cm * 1.1, oversample),
+            upper: VoiceWithSmoother::new(sr, tract_len_cm * 0.9, oversample),
             is_running: true,
             reverb: BigVerb::new(sr),
             dcblk: DCBlocker::new(sr),
@@ -139,6 +147,9 @@ impl VoxData {
             voice_manager: VoiceScheduler::default(),
             chord_manager: ChordManager::default(),
             delay: Delay::new(sr, 0.2),
+            y_axis: 0.,
+            py_axis: 0.,
+            shape: [0.; 8],
         };
 
         vd.reverb.size = 0.91;
@@ -288,20 +299,41 @@ impl VoxData {
         self.please_reset = false;
         self.lphs = clk;
 
-        let lead = self.lead.tick();
-        let lower = self.lower.tick_with_gesture(clk);
-        let upper = self.upper.tick_with_gesture(clk);
+        let expmap = (1.0 - (3. * self.y_axis).exp()) / (1.0 - (3f32).exp());
+        self.lead.voice.vibrato_depth(0.1 + 0.8 * expmap);
+        self.lead.voice.vibrato_rate(6.01 + 0.4 * expmap);
+
+        self.lower.voice.vibrato_depth(0.1 + 0.4 * expmap);
+        self.lower.voice.vibrato_rate(6.1 + 0.4 * expmap);
+        self.upper.voice.vibrato_depth(0.1 + 0.4 * expmap);
+        self.upper.voice.vibrato_rate(5.97 + 0.4 * expmap);
+
+        for i in 0..8 {
+            self.shape[i] = self.y_axis * SHAPE1[i] + (1.0 - self.y_axis) * SHAPE2[i];
+        }
+
+        self.lead.voice.tract.drm(&self.shape);
+        self.upper.voice.tract.drm(&self.shape);
+        self.lower.voice.tract.drm(&self.shape);
+
+        self.lead.voice.glottis.set_shape(self.y_axis * 0.2 + 0.3);
+        self.upper.voice.glottis.set_shape(self.y_axis * 0.2 + 0.3);
+        self.lower.voice.glottis.set_shape(self.y_axis * 0.2 + 0.3);
+
+        let gain = db2lin(0. - 1. * (1. - self.y_axis));
+        let lead = self.lead.tick() * gain;
+        let lower = self.lower.tick_with_gesture(clk) * gain;
+        let upper = self.upper.tick_with_gesture(clk) * gain;
         //let lower = self.lower.tick();
         //let upper = self.upper.tick();
 
-        let voices = (lead + lower + upper) * 0.33;
-
+        let voices = (lead + lower * 0.8 + upper * 0.8) * 0.33;
         let voices_send = voices;
         let (r, _) = self.reverb.tick(voices_send, voices_send);
         let r = self.dcblk.tick(r);
         let del = self.delay.tick(r);
 
-        (voices + del * 0.2) * 0.6
+        (voices + del * 0.1) * 0.6
     }
 
     pub fn running(&mut self) -> u8 {
@@ -313,6 +345,10 @@ impl VoxData {
 
         state
     }
+}
+
+fn db2lin(db: f32) -> f32 {
+    10_f32.powf(db / 20.0)
 }
 
 impl Drop for VoxData {
@@ -403,4 +439,9 @@ pub extern "C" fn vox_tongue_shape(vd: &mut VoxData, x: f32, y: f32) {
 #[no_mangle]
 pub extern "C" fn vox_x_axis(vd: &mut VoxData, x: f32) {
     vd.x_axis = x;
+}
+
+#[no_mangle]
+pub extern "C" fn vox_y_axis(vd: &mut VoxData, y: f32) {
+    vd.y_axis = y;
 }
