@@ -35,3 +35,32 @@ then does that chord get registered in the chord frequency
 table.
 ---
 Oh my god this is consensus in a distributed system.
+
+@10:25 Tweaking the resume. #resume-follow-up
+What are the changes?
+---
+Talk about Recurse Center. Looking at other resumes,
+should go into "education section". What did I learn about?
+Some topics, ordered by time investment: Rust, React,
+Typescript, Low Level Computer Architecture,
+(elements of computer systems), Gameboy Development.
+---
+More notes on Boomy: "Optimized WAV file generation using X
+and built method for measuring throughput". Prototypes:
+Describe what was built, intended functionality, tools used.
+It's okay if they weren't actually used.
+---
+Muvik: "Designed and implemented core audiovisual rendering
+pipeline in C and Lua". Also include bullet for study and
+link to patent.
+---
+I'm not consistent about ending bullet points with a full
+stop.
+
+@10:37 RC should be in experience, not education #resume-follow-up
+The education section is just bullet points. Not much
+detail.
+---
+oh hey, it looks like I already had some details for this one.
+---
+Okay no details.
