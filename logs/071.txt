@@ -5,7 +5,7 @@ This past weekend was very heads down. I didn't do
 my usual morning triage.
 @08:54 Morning triage.
 
-@09:40 How does this sound today? #demo-trio
+@09:40 How does this sound today? #demo-trio #timelog:00:40:00
 Added a new shape. Really expressive now. Vibrato not
 as bad as I remembered (with headphones on now instead of speakers).
 ---
@@ -17,3 +17,21 @@ I'm desiring the instantaneous mode again.
 The chord changes are happening too quickly.
 If I select a pitch, go down quickly, and og back up,
 the chord shouldn't change. But it does.
+
+@10:11 Sounding chords are different from hypothetical ones #demo-trio
+Right now, a changing pitch triggers a set of chord progressions.
+But if they move too quickly, only the last one is heard.
+Which means effectively an arbitrary chord transition.
+---
+How to prevent this? A chord isn't a chord until all 3 voices
+commit. If the lead changes pitch, it uses the stored chord
+as a reference point. As it continues to change, this chord
+will continue to be used. The upper voice is the last
+person to commit to a chord, so only then should the
+reference chord be updated.
+---
+When the chord is officially committed for selection, only
+then does that chord get registered in the chord frequency
+table.
+---
+Oh my god this is consensus in a distributed system.
