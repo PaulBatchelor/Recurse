@@ -254,3 +254,6 @@ link: [[https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-developmen
 @demo-trio-voice-scheduler implement proper voice schedule
 
 @dagzet-rust Port dagzet to rust
+
+@demo-trio-chords Implement chord selection algorithm
+
