@@ -46,7 +46,11 @@ function sendMoveEvent(xpos, ypos) {
     let xpos_norm = clamp(xpos / canvas.width, 0, 1);
     let ypos_norm = clamp(ypos / canvas.height, 0, 1);
 
-    trioNode.move(xpos_norm, ypos_norm);
+    if (portraitMode) {
+        trioNode.move(ypos_norm, xpos_norm);
+    } else {
+        trioNode.move(xpos_norm, ypos_norm);
+    }
 }
 
 function sendGateEvent(turnOn) {
@@ -131,11 +135,7 @@ function move(event) {
     circX = event.clientX;
     circY = event.clientY;
 
-    if (portraitMode) {
-        sendMoveEvent(circY, circX);
-    } else {
-        sendMoveEvent(circX, circY);
-    }
+    sendMoveEvent(circX, circY);
 }
 
 // canvas.addEventListener('mousedown', down);
