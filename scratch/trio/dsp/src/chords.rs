@@ -538,7 +538,22 @@ impl ChordManager {
         let use_cached_voices =
             uses_cached && self.last_upper.is_some() && self.last_lower.is_some();
 
-        if self.pitch > 0 && self.chord > 0 && use_cached_voices {
+        let found_last_pitch = self.pitch > 0 && self.chord > 0;
+
+        // TODO: this state could be managed better I think
+        // Esesntially: heuristics that rely on cached lower/upper values
+        // need to check that there are cached values to begin with
+        if uses_cached {
+            if found_last_pitch && use_cached_voices {
+                // Choose a chord from transition table
+                println!("transition chord: {}", self.chord);
+                self.select_next_chord(pitch);
+            } else {
+                // Choose a chord from fallbacks
+                println!("fallback chord: {}", self.chord);
+                self.chord = self.states.get_fallback_chord(pitch, self.key);
+            }
+        } else if found_last_pitch {
             // Choose a chord from transition table
             println!("transition chord: {}", self.chord);
             self.select_next_chord(pitch);

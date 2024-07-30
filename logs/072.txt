@@ -81,3 +81,6 @@ out all the panics.
 
 @13:50 broke the tests last night with more notes I think #demo-trio-web
 Nope, that wasn't it. Sigh. Gotta bisect.
+---
+Bisect tracked down the quick bugfix I made that checked
+for valid lower/upper values.
