@@ -10,11 +10,10 @@ class TrioProcessor extends AudioWorkletProcessor {
     }
 
     onmessage(event) {
-        // TODO
-    }
+        console.log('hello');
+        console.log(event.type);
 
-    onmessage(event) {
-        if (event.type = "move") {
+        if (event.type == "move") {
             console.log("processor move", event.x, event.y);
         }
     }

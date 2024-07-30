@@ -9,9 +9,11 @@ class TrioWorkletNode extends AudioWorkletNode {
 
 
     on() {
+        this.port.postMessage({type: "on"});
     }
 
     off() {
+        this.port.postMessage({type: "off"});
     }
 }
 

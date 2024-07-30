@@ -44,3 +44,8 @@ nn mini_wasm_renderer
 hl https://github.com/sedson/mini-wasm-render
 ln mini wasm renderer
 tg wasm rust graphics
+
+nn wasm_ops
+hl https://pengowray.github.io/wasm-ops/
+ln wasm ops: interactive table showing wasm opcodes
+rm used while debugging

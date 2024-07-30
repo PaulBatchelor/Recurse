@@ -55,3 +55,29 @@ Solution: encapsulate in =then=.
 
 @10:51 initial message passing implemented #demo-trio-web
 I'll have to do the rest later.
+
+@12:00 Audio Hang
+
+@13:17 More audioworklet stuff #demo-trio-web
+
+@13:21 Why is gate not being read in chromium #demo-trio-web
+I'm mouse events are happening either way
+---
+Logic bug. And should have been an or. Struggled to clear
+cache on Chromium too.
+
+@13:27 Get wasm stuff working #demo-trio-web
+
+@13:29 My println stuff is causing issues I think. #demo-trio-web
+I'm not going to do macros, I'm just going to comment
+things out.
+
+@13:37 Huh. it's not generating a wasm at all actually, even though there is no error. #demo-trio-web
+Had to generate cdylib.
+
+@13:43 More unknown opcodes in wasm-gc. I wonder if there's a way to get more info on that #demo-trio-web
+It went from unknown opcode 192 to 193, after I commented
+out all the panics.
+
+@13:50 broke the tests last night with more notes I think #demo-trio-web
+Nope, that wasn't it. Sigh. Gotta bisect.

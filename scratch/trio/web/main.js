@@ -9,7 +9,7 @@ canvas.width = 500;
 canvas.height = 500;
 const ctx = canvas.getContext('2d');
 
-let gate=false
+let gate = false
 let circX = -1;
 let circY = -1;
 let totalSteps = 8;
@@ -33,7 +33,7 @@ function clamp(x, mn, mx) {
 }
 
 function sendMoveEvent(xpos, ypos) {
-    if (trioNode == null && !gate) {
+    if (trioNode == null || !gate) {
         return;
     }
 
