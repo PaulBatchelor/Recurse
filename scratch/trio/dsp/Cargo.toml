@@ -5,7 +5,7 @@ edition = "2021"
 
 [lib]
 name = "voxdsp"
-crate-type = ["staticlib"]
+crate-type = ["cdylib", "staticlib"]
 
 [dependencies]
 voxbox = { path = "../../../../voxbox" }

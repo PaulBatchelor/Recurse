@@ -84,3 +84,13 @@ Nope, that wasn't it. Sigh. Gotta bisect.
 ---
 Bisect tracked down the quick bugfix I made that checked
 for valid lower/upper values.
+
+@14:21 A messy fix for now, but things don't panic and tests pass #demo-trio-web
+
+@14:27 A very odd opcode was generated in wasm #demo-trio-web
+Opcode 193 is something that extends a signed opcode, which
+caused wasm-gc to panic. The lines that do that are in
+the =measure_movement= function. It was quick to find because
+it's the only time I deliberately cast from unsigned to
+signed. I happened to use i16 which caused the panic to
+happen. However, changing to i32 made things work just fine.

@@ -339,8 +339,8 @@ fn measure_movement(
     let next_upper = find_nearest_upper(chord, lead_pitch, key);
     let next_lower = find_nearest_lower(chord, lead_pitch, key);
 
-    let upper_dist = (next_upper as i16 - prev_upper as i16).abs();
-    let lower_dist = (next_lower as i16 - prev_lower as i16).abs();
+    let upper_dist = (next_upper as i32 - prev_upper as i32).abs();
+    let lower_dist = (next_lower as i32 - prev_lower as i32).abs();
     (upper_dist + lower_dist) as u16
 }
 
