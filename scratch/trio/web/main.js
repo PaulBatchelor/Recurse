@@ -18,6 +18,7 @@ let audioStarted = false;
 
 let trioNode = null;
 
+let portraitMode = false;
 
 function getStepWidth(portraitMode, width, height) {
     if (portraitMode) {
@@ -82,7 +83,7 @@ function draw() {
     ctx.strokeStyle = '#FFF';
 
 
-    let portraitMode = canvas.height > canvas.width;
+    portraitMode = canvas.height > canvas.width;
 
     let stepWidth = getStepWidth(portraitMode, canvas.width, canvas.height);
 
@@ -129,7 +130,12 @@ function up(event) {
 function move(event) {
     circX = event.clientX;
     circY = event.clientY;
-    sendMoveEvent(circX, circY);
+
+    if (portraitMode) {
+        sendMoveEvent(circY, circX);
+    } else {
+        sendMoveEvent(circX, circY);
+    }
 }
 
 // canvas.addEventListener('mousedown', down);
