@@ -1,3 +1,7 @@
+import { startAudio } from "./audio.js";
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioContext = new AudioContext();
+
 const canvas = document.getElementById('canvas');
 const html = document.getElementsByTagName('html')[0];
 
@@ -9,6 +13,10 @@ let gate=false
 let circX = -1;
 let circY = -1;
 let totalSteps = 8;
+let audioStarted = false;
+
+let trioNode = null;
+
 
 function getStepWidth(portraitMode, width, height) {
     if (portraitMode) {
@@ -18,22 +26,36 @@ function getStepWidth(portraitMode, width, height) {
     return canvas.width / totalSteps;
 }
 
+
 function draw() {
     //canvas.width = window.innerWidth;
     //canvas.height = window.innerHeight;
+    //
     canvas.width = html.clientWidth;
     canvas.height = html.clientHeight;
     ctx.fillStyle = '#008080';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+    if (!audioStarted) {
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#FFF';
+        ctx.font = "bold 48px sans-serif";
+        ctx.fillText("TAP TO BEGIN",
+            canvas.width / 2,
+            canvas.height / 2);
+        let raf = window.requestAnimationFrame(draw);
+        return;
+    }
+
     ctx.lineWidth = 3;
     ctx.strokeStyle = '#FFF';
+
 
     let portraitMode = canvas.height > canvas.width;
 
     let stepWidth = getStepWidth(portraitMode, canvas.width, canvas.height);
 
-    for (i = 1; i < totalSteps; i++) {
+    for (let i = 1; i < totalSteps; i++) {
         if (portraitMode) {
             ctx.beginPath();
             ctx.moveTo(0, i*stepWidth);
@@ -58,7 +80,7 @@ function draw() {
     }
 
 
-    raf = window.requestAnimationFrame(draw);
+    let raf = window.requestAnimationFrame(draw);
 }
 
 function down(event) {
@@ -82,6 +104,15 @@ function move(event) {
 // canvas.addEventListener('mousedown', down);
 // canvas.addEventListener('mousemove', move);
 // canvas.addEventListener('mouseup', up);
+
+canvas.addEventListener('click', async (event) => {
+    if (!audioStarted) {
+        console.log("starting!");
+        trioNode = startAudio(audioContext);
+        audioStarted = true;
+    }
+});
+
 
 canvas.addEventListener('pointerdown', down, false);
 canvas.addEventListener('pointermove', move, false);

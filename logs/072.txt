@@ -27,3 +27,19 @@ CSS to set =touch-actions= to be =none=.
 @09:35 Setting up dynamic lines layout #demo-trio-web
 
 @09:43 Okay visuals are off to a good start now. #demo-trio-web
+
+@09:48 Begin work making audioworklet stuff #demo-trio-web
+Once again...
+
+@09:50 turning things into a module #demo-trio-web
+Interesting, the parser becomes stricter. I need
+to formally declare "i" in my for loop. All done
+by simply add "type=module" to my HTML script element.
+
+@10:13 click to start mechanics not behaving for some reason #demo-trio-web
+Figured it out: it was the callback mechanics of
+requestAnimationFrame.
+
+@10:16 adding "TAP TO BEGIN" text. #demo-trio-web
+
+@10:27 setting up message passing to worklet
