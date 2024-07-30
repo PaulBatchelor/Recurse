@@ -13,7 +13,7 @@ const ctx = canvas.getContext('2d');
 let gate = false
 let circX = -1;
 let circY = -1;
-let totalSteps = 8;
+let totalSteps = 13;
 let audioStarted = false;
 
 let trioNode = null;
