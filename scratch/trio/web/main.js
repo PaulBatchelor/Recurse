@@ -61,9 +61,6 @@ function sendGateEvent(turnOn) {
 
 
 function draw() {
-    //canvas.width = window.innerWidth;
-    //canvas.height = window.innerHeight;
-    //
     canvas.width = html.clientWidth;
     canvas.height = html.clientHeight;
     ctx.fillStyle = '#008080';

@@ -28,7 +28,7 @@ CSS to set =touch-actions= to be =none=.
 
 @09:43 Okay visuals are off to a good start now. #demo-trio-web
 
-@09:48 Begin work making audioworklet stuff #demo-trio-web
+@09:48 Begin work making audioworklet stuff #demo-trio-web #timelog:01:02:25
 Once again...
 
 @09:50 turning things into a module #demo-trio-web
@@ -50,3 +50,8 @@ requestAnimationFrame.
 Solution: encapsulate in =then=.
 
 @10:43 move message works! #demo-trio-web
+
+@10:47 send to processor via messages now #demo-trio-web
+
+@10:51 initial message passing implemented #demo-trio-web
+I'll have to do the rest later.

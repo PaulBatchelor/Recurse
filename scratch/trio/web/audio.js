@@ -1,10 +1,10 @@
 class TrioWorkletNode extends AudioWorkletNode {
     constructor(context, name, options) {
         super(context, name, options);
-
     }
 
     move(x, y) {
+        this.port.postMessage({type: "move", x: x, y: y});
     }
 
 
@@ -13,7 +13,6 @@ class TrioWorkletNode extends AudioWorkletNode {
 
     off() {
     }
-
 }
 
 async function startAudio(context) {

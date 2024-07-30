@@ -1,7 +1,8 @@
 class TrioProcessor extends AudioWorkletProcessor {
     constructor(options) {
         super(options);
-        // TODO
+        this.port.onmessage =
+            (event) => this.onmessage(event.data);
     }
 
     process(inputs, outputs, parameters) {
@@ -10,6 +11,12 @@ class TrioProcessor extends AudioWorkletProcessor {
 
     onmessage(event) {
         // TODO
+    }
+
+    onmessage(event) {
+        if (event.type = "move") {
+            console.log("processor move", event.x, event.y);
+        }
     }
 }
 
