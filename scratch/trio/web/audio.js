@@ -1,3 +1,5 @@
+var GlobalTrio = null
+
 class TrioWorkletNode extends AudioWorkletNode {
     constructor(context, name, options) {
         super(context, name, options);
@@ -24,19 +26,27 @@ async function startAudio(context) {
         throw new Error(`Could not load processor: ${e.message}`);
     }
 
-    // TODO load wasm 
+    const wasmFile = await fetch('dsp.wasm');
+    const wasmBuffer = await wasmFile.arrayBuffer();
 
     const options = {
-        wasmBytes: [],
+        wasmBytes: wasmBuffer
     }
 
-    let nd = new TrioWorkletNode(context, 'trio', {
+    const nd = new TrioWorkletNode(context, 'trio', {
         processorOptions: options
     });
 
     nd.connect(context.destination);
 
-    return nd
+    console.log("done!");
+
+    GlobalTrio = nd
+    //return nd
 }
 
-export { startAudio };
+function getGlobalTrio() {
+    return GlobalTrio
+}
+
+export { startAudio, getGlobalTrio };

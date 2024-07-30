@@ -1,9 +1,10 @@
-import { startAudio } from "./audio.js";
+import { startAudio, getGlobalTrio } from "./audio.js";
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioContext = new AudioContext();
 
 const canvas = document.getElementById('canvas');
 const html = document.getElementsByTagName('html')[0];
+const container = document.getElementById('container');
 
 canvas.width = 500;
 canvas.height = 500;
@@ -117,13 +118,11 @@ function down(event) {
     circX = event.clientX;
     circY = event.clientY;
     gate = true;
-    console.log('down');
     sendGateEvent(true);
 }
 
 function up(event) {
     gate = false;
-    console.log('up');
     sendGateEvent(false);
 }
 
@@ -137,13 +136,18 @@ function move(event) {
 // canvas.addEventListener('mousemove', move);
 // canvas.addEventListener('mouseup', up);
 
-canvas.addEventListener('click', async (event) => {
+container.addEventListener('click', async () => {
     if (!audioStarted) {
         console.log("starting!");
-        startAudio(audioContext).then((result) => {
-            trioNode = result;
-            audioStarted = true;
-        });
+        //startAudio(audioContext).then((result) => {
+        //    trioNode = result;
+        //});
+        
+        await startAudio(audioContext);
+        console.log("started!");
+        audioStarted = true;
+        audioContext.resume();
+        trioNode = getGlobalTrio();
     }
 });
 

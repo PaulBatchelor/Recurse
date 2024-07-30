@@ -94,3 +94,11 @@ the =measure_movement= function. It was quick to find because
 it's the only time I deliberately cast from unsigned to
 signed. I happened to use i16 which caused the panic to
 happen. However, changing to i32 made things work just fine.
+
+@14:31 right. Now I need to get the wasm in. #demo-trio-web
+The exports and the interface are already there from the
+C prototype. It should mostly drop right in.
+
+@15:00 There should be sound. But there is no sound. #demo-trio-web
+
+@15:25 Still not sure where there isn't sound. #demo-trio-web
