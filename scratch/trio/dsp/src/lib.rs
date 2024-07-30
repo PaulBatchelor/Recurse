@@ -346,6 +346,13 @@ impl VoxData {
 
         state
     }
+
+    pub fn process(&mut self, outbuf: *mut f32, sz: usize) {
+        let outbuf: &mut [f32] = unsafe { std::slice::from_raw_parts_mut(outbuf, sz) };
+        for n in 0..sz {
+            outbuf[n] = self.tick();
+        }
+    }
 }
 
 fn db2lin(db: f32) -> f32 {
@@ -452,18 +459,19 @@ pub extern "C" fn alloc(size: usize) -> *mut f32 {
     let mut buf = Vec::<f32>::with_capacity(size);
     let ptr = buf.as_mut_ptr();
     std::mem::forget(buf);
-    ptr
+    ptr as *mut f32
 }
 
 #[no_mangle]
 pub extern "C" fn process(vd: &mut VoxData, outbuf: *mut f32, sz: usize) {
-    let outbuf: &mut [f32] = unsafe { std::slice::from_raw_parts_mut(unsafe { outbuf }, sz) };
+    //let outbuf: &mut [f32] = unsafe { std::slice::from_raw_parts_mut(unsafe { outbuf }, sz) };
 
-    for n in 0..sz {
-        outbuf[n] = vd.tick();
-    }
+    //for n in 0..sz {
+    //    outbuf[n] = vd.tick();
+    //}
 
     // for smp in outbuf.iter_mut().take(sz) {
     //     *smp = vd.tick();
     // }
+    vd.process(outbuf, sz);
 }

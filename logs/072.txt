@@ -102,3 +102,8 @@ C prototype. It should mostly drop right in.
 @15:00 There should be sound. But there is no sound. #demo-trio-web
 
 @15:25 Still not sure where there isn't sound. #demo-trio-web
+
+@15:28 I forgot to return true, but there still ain't any sound. #demo-trio-web
+
+@15:46 Okay, now there's sound. #demo-trio-web
+I wasn't passing in the dsp parameter.
