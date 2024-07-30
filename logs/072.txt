@@ -58,7 +58,7 @@ I'll have to do the rest later.
 
 @12:00 Audio Hang
 
-@13:17 More audioworklet stuff #demo-trio-web
+@13:17 More audioworklet stuff #demo-trio-web #timelog:02:51:07
 
 @13:21 Why is gate not being read in chromium #demo-trio-web
 I'm mouse events are happening either way
@@ -109,3 +109,5 @@ C prototype. It should mostly drop right in.
 I wasn't passing in the dsp parameter.
 
 @15:47 Attempting to run on phone. #demo-trio-web
+
+@16:11 Good enough. Taking a break. #demo-trio-web
