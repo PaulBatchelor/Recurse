@@ -112,3 +112,7 @@ ln Stately documentation
 rm DF mentioned this when we were talking
 rm about state machines, thinks the concepts
 rm are solid.
+
+nn digitalocean_typescript_new_project
+ln How to set up a new typescript project (DigitalOcean)
+hl https://www.digitalocean.com/community/tutorials/typescript-new-project

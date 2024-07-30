@@ -97,3 +97,37 @@ No WASM bits yet, though there should be placeholder
 
 @16:45 That's all we have time for. #demo-trio-web
 Wrapping up this session.
+
+@19:07 More web porting #demo-trio-web #timelog:01:51:28
+
+@19:09 I'm turning this into a typescript project. #demo-trio-web
+Using this guide: @!(dzref "digitalocean_typescript_new_project")!@.
+---
+npm -i typescript --save-dev
+---
+@19:17 I am fighting the code formatter #demo-trio-web
+---
+npm i gts --save-dev
+---
+npx gts init
+---
+This seems to solve the formatter
+---
+npx tsc
+
+@19:32 you know what on second thought, just keep on doing JS I'm tired #demo-trio-web
+
+@19:49 I just lost my main work. This sucks. #demo-trio-web
+Accidentally deleted sketch.js.
+---
+Might as well try typescript again.
+
+@20:20 p5 does not want to play nice with typescript #demo-trio-web
+
+@20:28 great, now I'm looking at the p5 codebase #demo-trio-web
+
+@20:50 "npm test" generates the p5.min.js file great #demo-trio-web
+There is literally one line that is the issue. I am going
+to attempt to patch this on my end.
+
+@21:08 let the record show: we tried to get p5 working. #demo-trio-web
