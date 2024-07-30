@@ -47,7 +47,7 @@ function sendMoveEvent(xpos, ypos) {
     let ypos_norm = clamp(ypos / canvas.height, 0, 1);
 
     if (portraitMode) {
-        trioNode.move(ypos_norm, xpos_norm);
+        trioNode.move(1 - ypos_norm, xpos_norm);
     } else {
         trioNode.move(xpos_norm, ypos_norm);
     }
