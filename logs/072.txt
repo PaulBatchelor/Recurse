@@ -1,0 +1,19 @@
+@2024-07-30 Day 72.
+10 days left of batch
+---
+Prev: attempts to port to web, some more chord manager
+ideas.
+---
+Next: @!(taskref "demo-trio-web")!@: Get an initial
+prototype working, basically.
+
+@07:50 Morning Triage
+
+@08:01 Just do the graphics in canvas instead of p5? #demo-trio-web
+R mentioned this, and it's been a sentiment that others
+have mentioned as well. p5 just makes canvas calls
+anyways.
+
+@08:06 Publish.
+
+@08:07 Get something working using canvas API #demo-trio-web

@@ -8,4 +8,23 @@ Audio Telephone Composition.
 
 * Sunday, July 28th
 
-Tasks: @!(tasks "demo-trio")!@, @!(taskref "demo-trio-chords")!@.
+Logs: @!(ref "logs" "logs" "2024_07_28")!@
+
+Tasks: @!(taskref "demo-trio")!@, @!(taskref "demo-trio-chords")!@.
+
+* Monday, July 29th
+Logs: @!(ref "logs" "logs" "2024_07_29")!@
+
+Tasks: @!(taskref "demo-trio-chords")!@, @!(taskref "demo-trio-web")!@.
+
+More Trio work.
+
+I sketched out a new way to think about chord
+changes ("committing chords") that should make
+the chords more coherent.
+
+I did an initial attempt to port stuff to the web.
+Got side-tracked. Attempted to use Typescript with p5.
+It didn't go well. I'm going to start from scratch
+(again).
+

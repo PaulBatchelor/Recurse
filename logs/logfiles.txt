@@ -68,3 +68,4 @@ logs/067.txt
 logs/068.txt
 logs/069.txt
 logs/070.txt
+logs/071.txt
