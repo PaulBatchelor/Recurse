@@ -17,3 +17,11 @@ anyways.
 @08:06 Publish.
 
 @08:07 Get something working using canvas API #demo-trio-web
+
+@08:56 Trying to get pointer logic working. #demo-trio-web
+Following @!(dzref "webdev/using_pointer_events")!@.
+---
+Issue was a chrome mobile related issue. Had to use
+CSS to set =touch-actions= to be =none=.
+
+@09:35 Setting up dynamic lines layout #demo-trio-web
