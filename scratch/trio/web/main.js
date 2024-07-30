@@ -26,6 +26,39 @@ function getStepWidth(portraitMode, width, height) {
     return canvas.width / totalSteps;
 }
 
+function clamp(x, mn, mx) {
+    x = x < mn ? mn : x;
+    x = x > mx ? mx : x;
+    return x;
+}
+
+function sendMoveEvent(xpos, ypos) {
+    if (trioNode == null && !gate) {
+        return;
+    }
+
+    if (canvas.width == 0 || canvas.height == 0) {
+        return;
+    }
+
+    let xpos_norm = clamp(xpos / canvas.width, 0, 1);
+    let ypos_norm = clamp(ypos / canvas.height, 0, 1);
+
+    trioNode.move(xpos_norm, ypos_norm);
+}
+
+function sendGateEvent(turnOn) {
+    if (trioNode == null) {
+        return;
+    }
+
+    if (turnOn) {
+        trioNode.on();
+    } else {
+        trioNode.off();
+    }
+}
+
 
 function draw() {
     //canvas.width = window.innerWidth;
@@ -88,17 +121,19 @@ function down(event) {
     circY = event.clientY;
     gate = true;
     console.log('down');
+    sendGateEvent(true);
 }
 
 function up(event) {
     gate = false;
     console.log('up');
-        
+    sendGateEvent(false);
 }
 
 function move(event) {
     circX = event.clientX;
     circY = event.clientY;
+    sendMoveEvent(circX, circY);
 }
 
 // canvas.addEventListener('mousedown', down);
@@ -108,8 +143,10 @@ function move(event) {
 canvas.addEventListener('click', async (event) => {
     if (!audioStarted) {
         console.log("starting!");
-        trioNode = startAudio(audioContext);
-        audioStarted = true;
+        startAudio(audioContext).then((result) => {
+            trioNode = result;
+            audioStarted = true;
+        });
     }
 });
 

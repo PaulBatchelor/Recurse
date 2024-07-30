@@ -42,4 +42,11 @@ requestAnimationFrame.
 
 @10:16 adding "TAP TO BEGIN" text. #demo-trio-web
 
-@10:27 setting up message passing to worklet
+@10:27 setting up message passing to worklet #demo-trio-web
+
+@10:30 first getting the input events to the node #demo-trio-web
+
+@10:38 startAudio returns a promise I guess? #demo-trio-web
+Solution: encapsulate in =then=.
+
+@10:43 move message works! #demo-trio-web

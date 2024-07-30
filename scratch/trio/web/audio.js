@@ -3,6 +3,17 @@ class TrioWorkletNode extends AudioWorkletNode {
         super(context, name, options);
 
     }
+
+    move(x, y) {
+    }
+
+
+    on() {
+    }
+
+    off() {
+    }
+
 }
 
 async function startAudio(context) {
