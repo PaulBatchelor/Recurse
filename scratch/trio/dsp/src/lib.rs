@@ -173,7 +173,7 @@ impl VoxData {
         //vd.chord_manager.chord_behavior = SelectionHeuristic::LeastUsed;
         vd.chord_manager.chord_behavior = SelectionHeuristic::LazyLeastUsed;
 
-        vd.y_axis_smooth.set_smooth(0.005);
+        vd.y_axis_smooth.set_smooth(0.01);
         vd
     }
 
