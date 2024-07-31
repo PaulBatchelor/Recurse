@@ -74,4 +74,8 @@ with an envelope. That's amazing. Good idea, past me.
 
 @15:01 Test out this balloon. In chatter example? #voxbox-balloon
 
-@15:25 Attempts to hook up balloon to poke #poke-evolving-sounds
+@15:25 Attempts to hook up balloon to poke #poke-evolving-sounds #timelog:00:32:52
+
+@15:42 Our little guy keeps rising, but not falling. Balloon issue? #poke-evolving-sound
+
+@15:59 Okay some evolving sounds now. #poke-evolving-sound

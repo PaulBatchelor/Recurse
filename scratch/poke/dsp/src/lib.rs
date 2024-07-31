@@ -35,6 +35,9 @@ pub struct ChatterBox {
     pub mouth_open: f32,
     hpfilt: ButterworthHighPass,
     reverb: BigVerb,
+    pressure: Envelope,
+    pressure_gate: TriggerGate,
+    balloon: Balloon,
 }
 
 impl ChatterBox {
@@ -61,6 +64,9 @@ impl ChatterBox {
             jit_velum: Jitter::new(sr),
             hpfilt: ButterworthHighPass::new(sr),
             reverb: BigVerb::new(sr),
+            pressure: Envelope::new(sr),
+            balloon: Balloon::new(sr),
+            pressure_gate: TriggerGate::new(sr),
         };
 
         cb.shape_morpher.min_freq = 3.0;
@@ -85,6 +91,12 @@ impl ChatterBox {
         cb.reverb.size = 0.6;
         cb.reverb.cutoff = 4000.;
 
+        cb.pressure.set_attack(0.01);
+        cb.pressure.set_release(1.5);
+        cb.balloon.inflation = 5.0;
+        cb.balloon.deflation = 6.0;
+        cb.pressure_gate.duration = 0.4;
+
         cb
     }
 
@@ -99,7 +111,7 @@ impl ChatterBox {
         let chooser = &mut self.chooser;
         let drm = &mut self.drm;
         let jit_freq = &mut self.jit_freq;
-        let jit_velum= &mut self.jit_velum;
+        let jit_velum = &mut self.jit_velum;
         let tgate = &mut self.tgate;
         let env = &mut self.env;
 
@@ -114,19 +126,19 @@ impl ChatterBox {
         let hpfilt = &mut self.hpfilt;
         let reverb = &mut self.reverb;
 
-        let t = if *pgate != *gate {
-            1.0
-        } else {
-            0.0
-        };
+        let t = if *pgate != *gate { 1.0 } else { 0.0 };
         let gt = tgate.tick(t);
         let ev = env.tick(gt);
         let gtp = tgate_pitch.tick(t);
         let evpch = env_pitch.tick(gtp);
 
+        let pg = self.pressure_gate.tick(t);
+        let pr = self.pressure.tick(pg);
+        self.balloon.pressure = pr;
+        let bal = self.balloon.tick();
 
-        shape_morpher.min_freq = 2.0 + 6.*evpch;
-        shape_morpher.max_freq = 3.0 + 6.*evpch;
+        shape_morpher.min_freq = 2.0 + 6. * evpch;
+        shape_morpher.max_freq = 3.0 + 6. * evpch;
 
         let phs = shape_morpher.tick();
         if phs < *pphs {
@@ -139,28 +151,27 @@ impl ChatterBox {
         let shp_a = shapes[*cur];
         let shp_b = shapes[*nxt];
 
-        jit_freq.range_amplitude(-3., 3. + 5.*evpch);
-        jit_freq.range_rate(3. + 9.*evpch, 10. + 7.*evpch);
+        jit_freq.range_amplitude(-3., 3. + 5. * evpch);
+        jit_freq.range_rate(3. + 9. * evpch, 10. + 7. * evpch);
 
         let jf = jit_freq.tick();
         let jv = jit_velum.tick();
 
-        voice.pitch = 62.0 + jf + 12.0*evpch;
+        voice.pitch = 62.0 + jf + 7.0 * evpch + 12. * bal;
+        //voice.pitch = 62.0 + 16. * bal;
 
         let alpha = gliss_it(phs, 0.8);
         for i in 0..8 {
-            drm[i] =
-                (1. - alpha) * shp_a[i] +
-                alpha * shp_b[i];
+            drm[i] = (1. - alpha) * shp_a[i] + alpha * shp_b[i];
         }
 
         voice.nose.set_velum(jv);
         voice.tract.drm(drm);
         let out = voice.tick() * 0.5 * ev;
+        //let out = voice.tick() * 0.5;
         let out = hpfilt.tick(out);
         let (rvb, _) = reverb.tick(out, out);
         let out = out + rvb * 0.1;
-
 
         *pphs = phs;
         *pgate = *gate;
@@ -170,69 +181,23 @@ impl ChatterBox {
     }
 
     pub fn process(&mut self, outbuf: *mut f32, sz: usize) {
-        let outbuf: &mut [f32] = unsafe {
-            std::slice::from_raw_parts_mut(outbuf, sz)
-        };
+        let outbuf: &mut [f32] = unsafe { std::slice::from_raw_parts_mut(outbuf, sz) };
 
         for n in 0..sz {
             outbuf[n] = self.tick();
         }
-
     }
 }
 
 fn generate_shape_table() -> Vec<[f32; 8]> {
-    let tiny_ah = [
-        0.77,
-        0.855,
-        1.435,
-        0.728,
-        1.067,
-        3.217,
-        0.671,
-        2.892
-    ];
+    let tiny_ah = [0.77, 0.855, 1.435, 0.728, 1.067, 3.217, 0.671, 2.892];
 
-    let tiny_ieh = [
-        0.6,
-        1.081,
-        4.,
-        3.741,
-        0.954,
-        0.572,
-        0.487,
-        1.704
-    ];
+    let tiny_ieh = [0.6, 1.081, 4., 3.741, 0.954, 0.572, 0.487, 1.704];
 
-    let tiny_r4mod1 = [
-        0.53,
-        1.435,
-        0.303,
-        3.798,
-        2.383,
-        0.374,
-        2.807,
-        0.685
+    let tiny_r4mod1 = [0.53, 1.435, 0.303, 3.798, 2.383, 0.374, 2.807, 0.685];
 
-    ];
-
-    let tiny_r4mod2 = [
-        0.53,
-        1.435,
-        0.303,
-        0.1,
-        2.383,
-        0.374,
-        2.807,
-        0.685
-
-    ];
-    let shapes = vec![
-        tiny_ah,
-        tiny_ieh,
-        tiny_r4mod2,
-        tiny_r4mod1,
-    ];
+    let tiny_r4mod2 = [0.53, 1.435, 0.303, 0.1, 2.383, 0.374, 2.807, 0.685];
+    let shapes = vec![tiny_ah, tiny_ieh, tiny_r4mod2, tiny_r4mod1];
 
     shapes
 }
@@ -273,7 +238,6 @@ pub extern "C" fn mouth_curshape(dsp: &mut ChatterBox) -> u8 {
 #[no_mangle]
 pub extern "C" fn mouth_nxtshape(dsp: &mut ChatterBox) -> u8 {
     dsp.nxt as u8
-
 }
 #[no_mangle]
 pub extern "C" fn mouth_pos(dsp: &mut ChatterBox) -> f32 {
