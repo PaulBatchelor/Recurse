@@ -94,3 +94,7 @@ weird about WASM stuff specifically, was  apain.
 If I were to do this again,
 I'd build a native version before getting it working
 on the web.
+
+@16:57 Picking up where I left off. #resume-follow-up #timelog:00:51:09
+I am putting it in google docs and fitting it manually
+into the resume template. it is slow.

@@ -8,8 +8,8 @@ ln Recurse Center, Participant (May 2024 - August 2024)
 co $ experience
 
 nn vocalsynth_rust_dsp
-ln Implemented physically based signal processing algorithms
-ln modelling human voice in Rust.
+ln Implemented realtime simulations of the human
+ln singing voice in Rust.
 co $ recurse_center
 
 nn prototypes_wasm_webaudio_react_p5
@@ -23,7 +23,7 @@ ln Gameboy ROMs.
 co $ recurse_center
 
 nn knowledgegraph_port
-ln Ported my knowledge graph system from Lua to Rust.
+ln Ported personal knowledge graph and notetaking system from Lua to Rust.
 co $ recurse_center
 
 sn recurse_center
@@ -34,9 +34,8 @@ ln Boomy, Music Automation Engineer (July 2022 - January 2023)
 co $ experience
 
 nn python_test_coverage
-ln Used Pytest to built out unit tests and integratoin
-ln tests for Flask. Improved regression tests and helped
-ln catch many bugs that were otherwise undetected.
+ln Used Pytest to built out unit tests, as well as integration
+ln tests using Flask. 
 co $ boomy
 
 nn benchmarking
@@ -80,11 +79,15 @@ ln research trials.
 co $ muvik
 
 nn intellectual_property
-ln TODO: add patent
+ln Co-authored Patent: "Entrainment sonification techniques" US11690530B2
 co $ muvik
 
 nn clinical_studies
-ln TODO: add clinical study
+ln Clinical study:
+ln "The impact of a guided paced breathing audiovisual
+ln intervention on anxiety symptoms in Palestinian
+ln children: a pilot randomized controlled trial"
+ln doi 10.1111/camh.12613
 co $ muvik
 
 sn muvik
