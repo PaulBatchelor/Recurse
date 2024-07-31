@@ -1,6 +1,6 @@
 import { startAudio, getGlobalTrio } from "./audio.js";
 const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioContext = new AudioContext();
+const audioContext = new AudioContext({sampleRate: 44100});
 
 const canvas = document.getElementById('canvas');
 const html = document.getElementsByTagName('html')[0];
