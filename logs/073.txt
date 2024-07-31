@@ -62,3 +62,16 @@ to "zoom in".
 @11:14 Uploaded. #demo-trio
 
 @12:55 Safari troubleshooting. #demo-trio #timelog:00:11:13
+
+@13:30 Talking about chords and practice apps with RN
+
+@14:31 Balloon! Initial port attempt. #voxbox-balloon #timelog:00:51:52
+
+@14:42 I'm confused. I thought balloon took an input. #voxbox-balloon
+---
+Oh wait, I made presure the input, which you would vary
+with an envelope. That's amazing. Good idea, past me.
+
+@15:01 Test out this balloon. In chatter example? #voxbox-balloon
+
+@15:25 Attempts to hook up balloon to poke #poke-evolving-sounds
