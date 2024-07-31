@@ -34,11 +34,11 @@ class TrioProcessor extends AudioWorkletProcessor {
 
     onmessage(event) {
         if (event.type == "move") {
-            console.log("processor move 2", event.x, event.y);
+            //console.log("processor move 2", event.x, event.y);
             this.wasm.exports.vox_x_axis(this.dsp, event.x);
             this.wasm.exports.vox_y_axis(this.dsp, 1.0 - event.y);
         } else if (event.type == "off") {
-            console.log("proc up 2");
+            //console.log("proc up 2");
             this.wasm.exports.vox_gate(this.dsp, 0.0);
         } else if (event.type == "on") {
             console.log("proc down 2");

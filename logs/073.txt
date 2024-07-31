@@ -37,4 +37,20 @@ I've just been noodling on this thing for the past
 @10:02 shoot I am having too much fun with this thing it's working it's really working #demo-trio
 That's how I know this is close.
 
-@10:04 Okay for real, smoothing.
+@10:04 Okay for real, smoothing. #demo-trio
+
+@10:18 My phone is almost definitely running at a higher sampling rate #demo-trio
+I want to see if I can get the webaudio API to request
+a sampling rate (44.1kHz) because the voices are just
+going to sound better.
+---
+I am now coming to understand why gnuspeech decided to
+go the route of resampling from 16kHz to the host sampling
+rate. It's just going to sound better that way. The changes
+sound too weird.
+
+@10:46 Getting caught up in tweaking the "ooo" vocal shape #demo-trio
+I'm finding it's very hard to find in my interface, because
+the sliders end up being very close to zero. I almost
+feel the urge to have a min/max slider too to be able
+to "zoom in".

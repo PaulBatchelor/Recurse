@@ -119,23 +119,33 @@ function draw() {
     let raf = window.requestAnimationFrame(draw);
 }
 
+var curPointer = -1;
 function down(event) {
+    console.log(event.pointerId);
     circX = event.clientX;
     circY = event.clientY;
     gate = true;
     sendGateEvent(true);
+    sendMoveEvent(circX, circY);
+    curPointer = event.pointerId;
 }
 
 function up(event) {
+    console.log(event.pointerId);
     gate = false;
     sendGateEvent(false);
+
+    if (event.pointerId == curPointer) {
+        curPointer = -1;
+    }
 }
 
 function move(event) {
-    circX = event.clientX;
-    circY = event.clientY;
-
-    sendMoveEvent(circX, circY);
+    if (event.pointerId == curPointer) {
+        circX = event.clientX;
+        circY = event.clientY;
+        sendMoveEvent(circX, circY);
+    }
 }
 
 // canvas.addEventListener('mousedown', down);
