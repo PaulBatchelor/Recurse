@@ -119,13 +119,13 @@ pub struct VoxData {
 
 impl VoxData {
     pub fn new(sr: usize) -> Self {
-        let tract_len_cm = 13.0;
+        let tract_len_cm = 14.0;
         let oversample = 2;
         let mut vd = VoxData {
             testvar: 12345.0,
             lead: VoiceWithSmoother::new(sr, tract_len_cm, oversample),
             lower: VoiceWithSmoother::new(sr, tract_len_cm * 1.1, oversample),
-            upper: VoiceWithSmoother::new(sr, tract_len_cm * 0.9, oversample),
+            upper: VoiceWithSmoother::new(sr, tract_len_cm * 0.99, oversample),
             is_running: true,
             reverb: BigVerb::new(sr),
             dcblk: DCBlocker::new(sr),
@@ -186,7 +186,7 @@ impl VoxData {
             self.pitch_last_changed = self.time;
             self.voice_manager.change(pitch as u32);
             // tell chord manager to change chords
-            self.chord_manager.change(pitch as u16);
+            //self.chord_manager.change(pitch as u16);
         }
 
         // instantaneous update of lead pitch
@@ -195,7 +195,7 @@ impl VoxData {
         if self.please_reset {
             //println!("resetting THE LEAD PITCH");
             self.lead.reset();
-            self.chord_manager.change(pitch as u16);
+            //self.chord_manager.change(pitch as u16);
         }
 
         // if self.please_reset || did_pitch_change {
@@ -244,6 +244,7 @@ impl VoxData {
                         println!("Lower on!");
                         self.lower.gain.value = 0.8;
                         let pitch = self.lead.pitch.value;
+                        self.chord_manager.change(pitch as u16);
                         // let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
                         // let pitch =
                         //     self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;
@@ -257,6 +258,7 @@ impl VoxData {
                         println!("Lower change!");
                         self.lower.gain.value = 0.8;
                         let pitch = self.lead.pitch.value;
+                        self.chord_manager.change(pitch as u16);
                         //let (idx, octave) = self.get_scale_degree(pitch as u16, self.base);
                         //let pitch =
                         //    self.base as f32 + 12.0 * octave + self.lower_lookup[idx] as f32;

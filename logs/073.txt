@@ -21,3 +21,13 @@ triggers rather than the lead.
 Also, I want tonic bias. Every 4 non-tonic chords or so,
 there should be a switch that puts tonic as priority,
 it if it is available as a candidate.
+
+@09:25 Publish
+
+@09:27 Attempts to get better chords working. #demo-trio-chord-improvements
+
+@09:48 The quick fix makes things sound MUCH better now. #demo-trio-chord-improvements #timelog:00:18:34
+I've just been noodling on this thing for the past
+15 minutes.
+
+@09:52 Tweaked the tract lengths too #demo-trio
