@@ -121,17 +121,18 @@ function draw() {
 
 var curPointer = -1;
 function down(event) {
-    console.log(event.pointerId);
-    circX = event.clientX;
-    circY = event.clientY;
-    gate = true;
-    sendGateEvent(true);
-    sendMoveEvent(circX, circY);
-    curPointer = event.pointerId;
+    if (curPointer == -1) {
+        console.log(event.pointerId);
+        circX = event.clientX;
+        circY = event.clientY;
+        gate = true;
+        sendGateEvent(true);
+        sendMoveEvent(circX, circY);
+        curPointer = event.pointerId;
+    }
 }
 
 function up(event) {
-    console.log(event.pointerId);
     gate = false;
     sendGateEvent(false);
 
