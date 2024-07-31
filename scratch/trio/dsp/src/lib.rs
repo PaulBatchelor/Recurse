@@ -90,6 +90,7 @@ pub struct VoxData {
     pub x_axis: f32,
     px_axis: f32,
     pub y_axis: f32,
+    y_axis_smooth: Smoother,
     py_axis: f32,
     pitches: Vec<i16>,
     base: u16,
@@ -151,6 +152,7 @@ impl VoxData {
             y_axis: 0.,
             py_axis: 0.,
             shape: [0.; 8],
+            y_axis_smooth: Smoother::new(sr),
         };
 
         vd.reverb.size = 0.91;
@@ -170,6 +172,8 @@ impl VoxData {
         //vd.chord_manager.chord_behavior = SelectionHeuristic::LeastMovement;
         //vd.chord_manager.chord_behavior = SelectionHeuristic::LeastUsed;
         vd.chord_manager.chord_behavior = SelectionHeuristic::LazyLeastUsed;
+
+        vd.y_axis_smooth.set_smooth(0.005);
         vd
     }
 
@@ -302,7 +306,13 @@ impl VoxData {
         self.please_reset = false;
         self.lphs = clk;
 
-        let expmap = (1.0 - (3. * self.y_axis).exp()) / (1.0 - (3f32).exp());
+        let y_axis = self.y_axis;
+
+        let y_axis = self.y_axis_smooth.tick(y_axis);
+
+        // some exponential scaling for vibrato
+        // an attempt to "save" the vibrato for the upper region
+        let expmap = (1.0 - (3. * y_axis).exp()) / (1.0 - (3f32).exp());
         self.lead.voice.vibrato_depth(0.1 + 0.8 * expmap);
         self.lead.voice.vibrato_rate(6.01 + 0.4 * expmap);
 
@@ -312,18 +322,18 @@ impl VoxData {
         self.upper.voice.vibrato_rate(5.97 + 0.4 * expmap);
 
         for i in 0..8 {
-            self.shape[i] = self.y_axis * SHAPE1[i] + (1.0 - self.y_axis) * SHAPE2[i];
+            self.shape[i] = y_axis * SHAPE1[i] + (1.0 - y_axis) * SHAPE2[i];
         }
 
         self.lead.voice.tract.drm(&self.shape);
         self.upper.voice.tract.drm(&self.shape);
         self.lower.voice.tract.drm(&self.shape);
 
-        self.lead.voice.glottis.set_shape(self.y_axis * 0.2 + 0.3);
-        self.upper.voice.glottis.set_shape(self.y_axis * 0.2 + 0.3);
-        self.lower.voice.glottis.set_shape(self.y_axis * 0.2 + 0.3);
+        self.lead.voice.glottis.set_shape(y_axis * 0.2 + 0.3);
+        self.upper.voice.glottis.set_shape(y_axis * 0.2 + 0.3);
+        self.lower.voice.glottis.set_shape(y_axis * 0.2 + 0.3);
 
-        let gain = db2lin(0. - 1. * (1. - self.y_axis));
+        let gain = db2lin(0. - 1. * (1. - y_axis));
         let lead = self.lead.tick() * gain;
         let lower = self.lower.tick_with_gesture(clk) * gain;
         let upper = self.upper.tick_with_gesture(clk) * gain;

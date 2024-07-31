@@ -31,3 +31,10 @@ I've just been noodling on this thing for the past
 15 minutes.
 
 @09:52 Tweaked the tract lengths too #demo-trio
+
+@09:55 revisit mobile, add smoothing #demo-trio
+
+@10:02 shoot I am having too much fun with this thing it's working it's really working #demo-trio
+That's how I know this is close.
+
+@10:04 Okay for real, smoothing.
