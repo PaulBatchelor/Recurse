@@ -1,4 +1,4 @@
-@2024-07-30 Day 72.
+@2024-07-30 Day 72. Trio Initial Web Port made
 10 days left of batch
 ---
 Prev: attempts to port to web, some more chord manager
@@ -111,3 +111,14 @@ I wasn't passing in the dsp parameter.
 @15:47 Attempting to run on phone. #demo-trio-web
 
 @16:11 Good enough. Taking a break. #demo-trio-web
+
+@19:30 Back to the hub. Didn't actually get anything planned done.
+I did, however, manage to get jackdaw running on my
+computer @!(dzref "misc/jackdaw")!@. I was very impressed
+with project, and didn't realize just how much tooling
+was built for it. Things like a layout editor, a YAML parser,
+and an XMl parser.
+---
+The audio devices weren't querying correctly on my computer,
+and we discovered that it was most likely a problem with
+SDL on my computer.

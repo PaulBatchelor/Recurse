@@ -168,3 +168,9 @@ nn libevdev_get_abs_maximum
 hl https://www.freedesktop.org/software/libevdev/doc/latest/group__bits.html#ga97a3411ae85f1f3b5c5eb1d5351b11ca]]
 ln libevdev_get_abs_maximum(): how to get max res of tablet
 ln automaticaly.
+
+nn jackdaw
+hl https://github.com/chvolow24/jackdaw
+ln JackDAW: A keyboard focused Digital Audio Workstation,
+ln taking some cues from non-linear editors
+rm Made by Recurser CV

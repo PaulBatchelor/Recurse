@@ -257,3 +257,4 @@ link: [[https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-developmen
 
 @demo-trio-chords Implement chord selection algorithm
 
+@demo-trio-web Build initial web port of trio

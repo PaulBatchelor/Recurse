@@ -1,0 +1,23 @@
+@2024-07-31 Day 73.
+9 days left of batch.
+---
+I stayed up too late again. I am tired. I did
+try sleeping in a little bit though. Going to have to pace
+myself.
+---
+I have just signed up for a presentation slot.
+So, I gotta enough working for that today.
+
+@08:34 Morning Triage
+
+@09:00 Hoping to improve chord selection today #demo-trio-chord-improvements
+It chooses chords too quickly (when the lead changes),
+and should only think about changing chords when
+the lower/upper notes happen. I had a concept of
+"committing" to a chord. A faster thing might be to
+just move the chord changes to when the lower note
+triggers rather than the lead.
+---
+Also, I want tonic bias. Every 4 non-tonic chords or so,
+there should be a switch that puts tonic as priority,
+it if it is available as a candidate.

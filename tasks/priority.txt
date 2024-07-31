@@ -16,4 +16,4 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 
 @resume-follow-up Follow-up on resume suggestions
 
-@demo-trio-web Build initial web port of trio
+@demo-trio-chord-improvements improve  chord selection
