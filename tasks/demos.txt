@@ -4,8 +4,6 @@
 
 @poke-collision-sounds Add collision sounds to poke
 
-@poke-evolving-sounds Add evolving sounds to poke
-
 @poke-pellets Add the ability to have pellets
 
 @tic80-voxbox hello voxbox in tic80

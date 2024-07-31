@@ -6,16 +6,4 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 
 @read-elem-compsys Read: Elements of Computer Systems
 
-@demo-trio Create "trio" demo
-
-@poke-laughter-chitter implement laughter and chitter
-
-@demo-trio-low-timing Investigate low voice timing issues
-
-@voxbox-balloon Port balloon signal generator to voxbox
-
 @resume-follow-up Follow-up on resume suggestions
-
-@demo-trio-chord-improvements improve  chord selection
-
-@poke-evolving-sounds Add evolving sounds to poke

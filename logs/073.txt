@@ -79,3 +79,18 @@ with an envelope. That's amazing. Good idea, past me.
 @15:42 Our little guy keeps rising, but not falling. Balloon issue? #poke-evolving-sound
 
 @15:59 Okay some evolving sounds now. #poke-evolving-sound
+
+@16:28 listening do guinea pig noises on freesound for inspiration #poke-laughter-chitter
+
+@16:49 I'm not hearing much of a difference for poke #poke-evolving-sound
+I think it's time to move on.
+---
+It takes way too much time to try out sounds in the
+webaudio workflow I have. Having to recompile the wasm,
+go to the web browser, refresh the page, and have it
+maybe not reload because browsers can sometimes be
+weird about WASM stuff specifically, was  apain.
+---
+If I were to do this again,
+I'd build a native version before getting it working
+on the web.
