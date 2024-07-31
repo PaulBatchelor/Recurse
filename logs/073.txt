@@ -54,3 +54,9 @@ I'm finding it's very hard to find in my interface, because
 the sliders end up being very close to zero. I almost
 feel the urge to have a min/max slider too to be able
 to "zoom in".
+
+@11:04 Reqeusted sample rate of 44.khz. Sounds better now #demo-trio
+
+@11:08 Time to upload this thing. #demo-trio
+
+@11:14 Uploaded. #demo-trio
