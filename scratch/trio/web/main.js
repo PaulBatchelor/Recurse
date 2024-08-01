@@ -70,7 +70,7 @@ function sendGateEvent(turnOn) {
 function draw() {
     canvas.width = html.clientWidth;
     canvas.height = html.clientHeight;
-    ctx.fillStyle = '#008080';
+    ctx.fillStyle = '#006262';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     if (!audioStarted) {
@@ -107,7 +107,7 @@ function draw() {
             ctx.stroke();
         }
     }
-   
+
     ctx.fillStyle = '#FFFFFF';
     if (gate && circX >= 0 && circY >= 0) {
         ctx.beginPath();

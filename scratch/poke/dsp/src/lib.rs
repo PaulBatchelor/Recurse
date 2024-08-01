@@ -177,7 +177,7 @@ impl ChatterBox {
         *pgate = *gate;
 
         self.mouth_open = ev;
-        out
+        out * 0.5
     }
 
     pub fn process(&mut self, outbuf: *mut f32, sz: usize) {
