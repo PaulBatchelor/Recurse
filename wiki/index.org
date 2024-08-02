@@ -9,6 +9,9 @@ in the web browswer.
 
 Here are some things to check out:
 
+@!(ref "demos")!@: various web demos I made during my
+batch.
+
 @!(ref "logs")!@: daily journals I make during
 the day that allow me to remember what I did.
 

@@ -50,4 +50,4 @@ Logs: @!(ref "logs" "logs" "2024_07_31")!@
 
 Tasks: @!(taskref "demo-trio-web")!@.
 
-
+Got Trio published as a demo.
