@@ -12,10 +12,14 @@ var originPoint = [-1, -1];
 var avatarPos = [-1, -1];
 var travelVector = [-1, -1];
 var isMoving = false;
+var movementPos = 0;
 
 function validPoint(point) {
     return point[0] >= 0 && point[1] >= 0;
 }
+
+var incrementAmount = 0;
+var incrementSpeed = 1.0;
 
 
 function calcDist(pointA, pointB) {
@@ -36,6 +40,33 @@ function calcProgress(origin, current, target) {
 
     return distOrigCurr/distOrigTarg;
 }
+
+function lerp(pointA, pointB, amount) {
+    return [
+        (1-amount)*pointA[0] + amount*pointB[0],
+        (1-amount)*pointA[1] + amount*pointB[1],
+    ];
+}
+
+function cubicEaseIn(x) {
+    return x * x * x;
+}
+
+function cubicEaseOut(x) {
+    return 1.0 - Math.pow(1.0 - x, 3);
+}
+
+function linear(x) {
+    return x;
+}
+
+let movementBehaviors = [
+    cubicEaseIn,
+    cubicEaseOut,
+    linear,
+];
+
+var currentBehavior = movementBehaviors[0];
 
 var lastTimeStamp;
 
@@ -92,12 +123,22 @@ function draw(timeStamp) {
         let prog = calcProgress(originPoint, avatarPos, clickPoint);
         prog = prog * prog * prog;
         let speed = prog*500 + (1 - prog)*200;
-        avatarPos[0] += travelVector[0]*dt*speed;
-        avatarPos[1] += travelVector[1]*dt*speed;
+        //avatarPos[0] += travelVector[0]*dt*speed;
+        //avatarPos[1] += travelVector[1]*dt*speed;
+        //let behavior = cubicEaseIn;
+        //let behavior = linear;
+        //let behavior = cubicEaseOut;
+        avatarPos = lerp(originPoint, clickPoint, currentBehavior(movementPos));
 
-        if (closeEnough(avatarPos, clickPoint)) {
+        movementPos += dt * incrementSpeed;
+
+        if (movementPos > 1.0) {
             isMoving = false;
         }
+
+        // if (closeEnough(avatarPos, clickPoint)) {
+        //     isMoving = false;
+        // }
     }
 
     let raf = window.requestAnimationFrame(draw);
@@ -107,6 +148,8 @@ function down(event) {
     clickPoint = [event.clientX, event.clientY];
     originPoint = avatarPos.slice();
 
+    let dist = calcDist(originPoint, clickPoint);
+
     let distX = clickPoint[0] - originPoint[0];
     let distY = clickPoint[1] - originPoint[1];
 
@@ -115,8 +158,16 @@ function down(event) {
 
     let largestDist = absDistX > absDistY ? absDistX : absDistY;
 
+    console.log(dist);
+
+    incrementSpeed = (Math.random() * 500 + 500.0) / dist;
+
+    movementPos = 0;
     travelVector = [distX / largestDist, distY / largestDist];
     isMoving = true;
+
+    let behaviorIdx = Math.floor(movementBehaviors.length * Math.random());
+    currentBehavior = movementBehaviors[behaviorIdx];
 }
 
 canvas.addEventListener('pointerdown', down, false);
