@@ -18,6 +18,8 @@ var waitTimer = 0;
 var blobScale = 1.0;
 var blobScaleTarget = 1.0;
 var pleaseShrink = false;
+var idleTimer = 0;
+var pleaseDigest = false;
 
 function validPoint(point) {
     return point[0] >= 0 && point[1] >= 0;
@@ -141,12 +143,18 @@ function draw(timeStamp) {
         if (blobScale > 3.0) {
             pleaseShrink = true;
         }
+
+        idleTimer = 0;
+    } else if (!isMoving) {
+        idleTimer += dt;
     }
 
-    if (pleaseShrink) {
-        blobScale = lerper(blobScale, blobScaleTarget, 0.9*dt);
-    } else {
-        blobScale = lerper(blobScale, blobScaleTarget, 0.2*dt);
+    pleaseDigest = idleTimer > 2;
+
+    blobScale = lerper(blobScale, blobScaleTarget, 0.9*dt);
+
+    if (blobScale < 1.0) {
+        blobScale = 1.0;
     }
 
     canvas.width = html.clientWidth;
@@ -199,6 +207,10 @@ function draw(timeStamp) {
         }
     } else if (waitTimer > 0) {
         waitTimer -= dt;
+    }
+
+    if (pleaseDigest && blobScaleTarget > 1.0) {
+        blobScaleTarget -= 3*dt;
     }
 
     if (pleaseShrink) {
