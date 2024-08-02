@@ -15,6 +15,9 @@ var avatarPos = [-1, -1];
 var isMoving = false;
 var movementPos = 0;
 var waitTimer = 0;
+var blobScale = 1.0;
+var blobScaleTarget = 1.0;
+var pleaseShrink = false;
 
 function validPoint(point) {
     return point[0] >= 0 && point[1] >= 0;
@@ -106,13 +109,17 @@ function drawAvatar() {
     ctx.arc(
         avatarPos[0],
         avatarPos[1],
-        100,
+        50 * blobScale,
         0, 2.0 * Math.PI, true
     );
     ctx.closePath();
     ctx.fill();
     ctx.stroke()
 
+}
+
+function lerper(a, b, t) {
+    return (a + (b - a)*t);
 }
 
 function draw(timeStamp) {
@@ -129,6 +136,17 @@ function draw(timeStamp) {
         clickPoint = pointPool.pop();
         originPoint = avatarPos.slice();
         updateTrajectory(originPoint, clickPoint);
+        blobScaleTarget *= 1.1;
+
+        if (blobScale > 3.0) {
+            pleaseShrink = true;
+        }
+    }
+
+    if (pleaseShrink) {
+        blobScale = lerper(blobScale, blobScaleTarget, 0.9*dt);
+    } else {
+        blobScale = lerper(blobScale, blobScaleTarget, 0.2*dt);
     }
 
     canvas.width = html.clientWidth;
@@ -163,7 +181,7 @@ function draw(timeStamp) {
         //ctx.closePath();
         //ctx.fill();
 
-    if (isMoving) {
+    if (isMoving && !pleaseShrink) {
         let prog = calcProgress(originPoint, avatarPos, clickPoint);
         prog = prog * prog * prog;
         let speed = prog*500 + (1 - prog)*200;
@@ -183,6 +201,16 @@ function draw(timeStamp) {
         waitTimer -= dt;
     }
 
+    if (pleaseShrink) {
+        if (blobScaleTarget > 1.0) {
+            blobScaleTarget -= 2*dt;
+        }
+        if (blobScale <= 1.0) {
+            pleaseShrink = false;
+            waitTimer = 1.0;
+        }
+    }
+
     drawAvatar();
 
     let raf = window.requestAnimationFrame(draw);
@@ -194,7 +222,9 @@ function down(event) {
     //originPoint = avatarPos.slice();
     //updateTrajectory(originPoint, clickPoint);
 
-    pointPool.push([event.clientX, event.clientY]);
+    if (pointPool.length < 16) {
+        pointPool.push([event.clientX, event.clientY]);
+    }
 }
 
 canvas.addEventListener('pointerdown', down, false);

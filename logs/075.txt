@@ -85,3 +85,9 @@ speeds.
 @18:18 Insert more pellets, eat pellets #demo-coax #timelog:00:36:16
 
 @18:47 Now to add a wait timer #demo-coax
+
+@18:56 Blob should get bigger everytime there are pellets #demo-coax
+When they get too big, there should be a forced pause, and
+the Blob should shrink again.
+
+@19:23 If pellets aren't around for a while, digest #demo-coax
