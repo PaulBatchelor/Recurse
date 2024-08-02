@@ -8,6 +8,6 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 
 @resume-follow-up Follow-up on resume suggestions
 
-@blob-eat Create "blob" eat mechanics program
+@blob-coax Create "blob" eat/coax mechanics program
 
 @demo-blob Demo: a Blob Named Bucket

@@ -7,7 +7,7 @@
 
 @09:27 Catching up on logs
 
-@09:34 I want to try a mini bucket named blob #demo-blob #blob-eat
+@09:34 I want to try a mini bucket named blob #demo-blob #blob-coax
 So, poke is really bumming me out. It's too much abuse.
 ---
 Using no sound, just circles, to try out this initial
@@ -41,3 +41,22 @@ bit more cruelty in the world, which was the exact opposite
 of my intention.
 
 @11:05 Finally publishing.
+
+@12:45 Inking out some ideas. #demo-coax #timelog:00:22:24
+
+@13:19 Attempts to code up the ideas in Canvas #demo-coax
+
+@13:35 We have a circle. #demo-coax
+
+But, weird stroke bug in firefox. The line has
+variable thickness, and some dots. In chromium,
+this is a non-issue.
+
+@14:10 Trying to get an initial journey mechanic working #demo-coax
+
+@14:16 trying to get a constant velocity now #demo-coax
+Somehow need to convert times to be pixels per second.
+
+@14:30 Inking some ideas #demo-coax
+
+@14:44 Attempting to implement those ideas #demo-coax
