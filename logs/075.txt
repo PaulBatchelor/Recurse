@@ -60,3 +60,8 @@ Somehow need to convert times to be pixels per second.
 @14:30 Inking some ideas #demo-coax
 
 @14:44 Attempting to implement those ideas #demo-coax
+
+@14:55 I might not need trig actually #demo-coax
+It's traveling on a line, so maybe just the line equation.
+It can be a normalized slope velocity too. Something to
+add to a point until it reaches a target.

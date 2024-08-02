@@ -22,7 +22,7 @@ function closeEnough(pointA, pointB) {
     let distY = pointB[1] - pointA[1];
 
     let dist = Math.sqrt(distX*distX + distY*distY);
-    return dist < 2;
+    return dist <= 5;
 }
 
 var lastTimeStamp;
@@ -76,8 +76,8 @@ function draw(timeStamp) {
     }
 
     if (isMoving) {
-        avatarPos[0] += travelVector[0]*dt;
-        avatarPos[1] += travelVector[1]*dt;
+        avatarPos[0] += travelVector[0]*dt*300;
+        avatarPos[1] += travelVector[1]*dt*300;
 
         if (closeEnough(avatarPos, clickPoint)) {
             isMoving = false;
@@ -94,7 +94,12 @@ function down(event) {
     let distX = clickPoint[0] - originPoint[0];
     let distY = clickPoint[1] - originPoint[1];
 
-    travelVector = [distX, distY];
+    let absDistX = Math.abs(distX);
+    let absDistY = Math.abs(distY);
+
+    let largestDist = absDistX > absDistY ? absDistX : absDistY;
+
+    travelVector = [distX / largestDist, distY / largestDist];
     isMoving = true;
 }
 
