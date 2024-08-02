@@ -81,3 +81,5 @@ interpolating between two points would be better.
 Behaviors now have different interpolation schemes.
 They are also randomized now, and can have randomized 
 speeds.
+
+@18:18 Insert more pellets, eat pellets #demo-coax

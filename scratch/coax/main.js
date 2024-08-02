@@ -7,10 +7,11 @@ canvas.height = 400;
 
 let ctx = canvas.getContext('2d');
 
+//var clickPoint = [-1, -1];
 var clickPoint = [-1, -1];
+let pointPool = [];
 var originPoint = [-1, -1];
 var avatarPos = [-1, -1];
-var travelVector = [-1, -1];
 var isMoving = false;
 var movementPos = 0;
 
@@ -70,6 +71,49 @@ var currentBehavior = movementBehaviors[0];
 
 var lastTimeStamp;
 
+function updateTrajectory(origin, point) {
+    let dist = calcDist(origin, point);
+
+    incrementSpeed = (Math.random() * 500 + 500.0) / dist;
+
+    movementPos = 0;
+    isMoving = true;
+
+    let behaviorIdx = Math.floor(movementBehaviors.length * Math.random());
+    currentBehavior = movementBehaviors[behaviorIdx];
+}
+
+function drawPellet(point) {
+    ctx.fillStyle = '#000';
+    ctx.beginPath();
+    ctx.arc(
+        point[0],
+        point[1],
+        25,
+        0, 2.0 * Math.PI, true
+    );
+    ctx.closePath();
+    ctx.fill();
+}
+
+function drawAvatar() {
+
+    ctx.fillStyle = '#FFF'
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = '#000';
+    ctx.beginPath();
+    ctx.arc(
+        avatarPos[0],
+        avatarPos[1],
+        100,
+        0, 2.0 * Math.PI, true
+    );
+    ctx.closePath();
+    ctx.fill();
+    ctx.stroke()
+
+}
+
 function draw(timeStamp) {
     var dt = 0;
 
@@ -79,6 +123,12 @@ function draw(timeStamp) {
     }
 
     lastTimeStamp = timeStamp;
+
+    if (isMoving == false && pointPool.length > 0) {
+        clickPoint = pointPool.pop();
+        originPoint = avatarPos.slice();
+        updateTrajectory(originPoint, clickPoint);
+    }
 
     canvas.width = html.clientWidth;
     canvas.height = html.clientHeight;
@@ -94,80 +144,50 @@ function draw(timeStamp) {
         avatarPos[1] = canvas.height / 2;
     }
 
-    ctx.beginPath();
-    ctx.arc(
-        avatarPos[0],
-        avatarPos[1],
-        100,
-        0, 2.0 * Math.PI, true
-    );
-    ctx.closePath();
-    ctx.stroke()
-    ctx.fill();
-
     if (validPoint(clickPoint)) {
-        ctx.fillStyle = '#000';
-        ctx.beginPath();
-        ctx.arc(
-            clickPoint[0],
-            clickPoint[1],
-            25,
-            0, 2.0 * Math.PI, true
-        );
-        ctx.closePath();
-        ctx.fill();
+        drawPellet(clickPoint);
+
+        for (let i = 0; i < pointPool.length; i++) {
+            drawPellet(pointPool[i]);
+        }
+        //ctx.fillStyle = '#000';
+        //ctx.beginPath();
+        //ctx.arc(
+        //    clickPoint[0],
+        //    clickPoint[1],
+        //    25,
+        //    0, 2.0 * Math.PI, true
+        //);
+        //ctx.closePath();
+        //ctx.fill();
     }
 
     if (isMoving) {
-
         let prog = calcProgress(originPoint, avatarPos, clickPoint);
         prog = prog * prog * prog;
         let speed = prog*500 + (1 - prog)*200;
-        //avatarPos[0] += travelVector[0]*dt*speed;
-        //avatarPos[1] += travelVector[1]*dt*speed;
-        //let behavior = cubicEaseIn;
-        //let behavior = linear;
-        //let behavior = cubicEaseOut;
         avatarPos = lerp(originPoint, clickPoint, currentBehavior(movementPos));
 
         movementPos += dt * incrementSpeed;
 
         if (movementPos > 1.0) {
             isMoving = false;
+            clickPoint = [-1, -1];
         }
-
-        // if (closeEnough(avatarPos, clickPoint)) {
-        //     isMoving = false;
-        // }
     }
+
+    drawAvatar();
 
     let raf = window.requestAnimationFrame(draw);
 }
 
+
 function down(event) {
-    clickPoint = [event.clientX, event.clientY];
-    originPoint = avatarPos.slice();
+    //clickPoint = [event.clientX, event.clientY];
+    //originPoint = avatarPos.slice();
+    //updateTrajectory(originPoint, clickPoint);
 
-    let dist = calcDist(originPoint, clickPoint);
-
-    let distX = clickPoint[0] - originPoint[0];
-    let distY = clickPoint[1] - originPoint[1];
-
-    let absDistX = Math.abs(distX);
-    let absDistY = Math.abs(distY);
-
-    let largestDist = absDistX > absDistY ? absDistX : absDistY;
-
-    console.log(dist);
-
-    incrementSpeed = (Math.random() * 500 + 500.0) / dist;
-
-    movementPos = 0;
-    travelVector = [distX / largestDist, distY / largestDist];
-    isMoving = true;
-
-    let behaviorIdx = Math.floor(movementBehaviors.length * Math.random());
-    currentBehavior = movementBehaviors[behaviorIdx];
+    pointPool.push([event.clientX, event.clientY]);
 }
 
 canvas.addEventListener('pointerdown', down, false);
