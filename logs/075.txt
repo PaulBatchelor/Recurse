@@ -91,3 +91,6 @@ When they get too big, there should be a forced pause, and
 the Blob should shrink again.
 
 @19:23 If pellets aren't around for a while, digest #demo-coax
+
+@19:30 It should begin jiggling at the larger scales #demo-coax
+Like it's about to burst.

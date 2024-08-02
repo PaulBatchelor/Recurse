@@ -20,6 +20,7 @@ var blobScaleTarget = 1.0;
 var pleaseShrink = false;
 var idleTimer = 0;
 var pleaseDigest = false;
+let blobScaleMax = 3.0;
 
 function validPoint(point) {
     return point[0] >= 0 && point[1] >= 0;
@@ -102,8 +103,18 @@ function drawPellet(point) {
     ctx.fill();
 }
 
-function drawAvatar() {
+var lfoPhase = 0;
+function drawAvatar(dt) {
+    var wiggle = 1.0;
+    if (!pleaseDigest && !pleaseShrink && blobScale >= blobScaleMax * 0.8) {
+        let lfo = Math.sin(2.0*Math.PI*lfoPhase);
+        lfoPhase += dt * 6;
+        if (lfoPhase > 1.0) {
+            lfoPhase -= 1.0;
+        }
+        wiggle += 0.05*lfo;
 
+    }
     ctx.fillStyle = '#FFF'
     ctx.lineWidth = 10;
     ctx.strokeStyle = '#000';
@@ -111,13 +122,12 @@ function drawAvatar() {
     ctx.arc(
         avatarPos[0],
         avatarPos[1],
-        50 * blobScale,
+        50 * blobScale * wiggle,
         0, 2.0 * Math.PI, true
     );
     ctx.closePath();
     ctx.fill();
     ctx.stroke()
-
 }
 
 function lerper(a, b, t) {
@@ -140,7 +150,7 @@ function draw(timeStamp) {
         updateTrajectory(originPoint, clickPoint);
         blobScaleTarget *= 1.1;
 
-        if (blobScale > 3.0) {
+        if (blobScale > blobScaleMax) {
             pleaseShrink = true;
         }
 
@@ -223,7 +233,7 @@ function draw(timeStamp) {
         }
     }
 
-    drawAvatar();
+    drawAvatar(dt);
 
     let raf = window.requestAnimationFrame(draw);
 }
