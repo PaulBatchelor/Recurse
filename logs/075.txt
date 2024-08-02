@@ -65,3 +65,14 @@ Somehow need to convert times to be pixels per second.
 It's traveling on a line, so maybe just the line equation.
 It can be a normalized slope velocity too. Something to
 add to a point until it reaches a target.
+
+@15:01 I'd like to add different movement behaviors #demo-coax
+So, calculate progress, and then use an easing function
+to make it so it can slow down or speed up to a target.
+
+@15:13 behavior... kind of? #demo-coax
+It's not quit what I wanted it be. I'd need to rework
+it to make it work with easings. The current implementation
+just calculates an relative trajectory, and I'm adjusting
+how fast that trajectory goes based on the position.
+interpolating between two points would be better.

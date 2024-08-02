@@ -17,12 +17,24 @@ function validPoint(point) {
     return point[0] >= 0 && point[1] >= 0;
 }
 
-function closeEnough(pointA, pointB) {
+
+function calcDist(pointA, pointB) {
     let distX = pointB[0] - pointA[0];
     let distY = pointB[1] - pointA[1];
 
     let dist = Math.sqrt(distX*distX + distY*distY);
+    return dist;
+}
+function closeEnough(pointA, pointB) {
+    let dist = calcDist(pointA, pointB);
     return dist <= 5;
+}
+
+function calcProgress(origin, current, target) {
+    let distOrigTarg = calcDist(origin, target);
+    let distOrigCurr= calcDist(origin, current);
+
+    return distOrigCurr/distOrigTarg;
 }
 
 var lastTimeStamp;
@@ -76,8 +88,12 @@ function draw(timeStamp) {
     }
 
     if (isMoving) {
-        avatarPos[0] += travelVector[0]*dt*300;
-        avatarPos[1] += travelVector[1]*dt*300;
+
+        let prog = calcProgress(originPoint, avatarPos, clickPoint);
+        prog = prog * prog * prog;
+        let speed = prog*500 + (1 - prog)*200;
+        avatarPos[0] += travelVector[0]*dt*speed;
+        avatarPos[1] += travelVector[1]*dt*speed;
 
         if (closeEnough(avatarPos, clickPoint)) {
             isMoving = false;
