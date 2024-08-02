@@ -82,4 +82,6 @@ Behaviors now have different interpolation schemes.
 They are also randomized now, and can have randomized 
 speeds.
 
-@18:18 Insert more pellets, eat pellets #demo-coax
+@18:18 Insert more pellets, eat pellets #demo-coax #timelog:00:36:16
+
+@18:47 Now to add a wait timer #demo-coax

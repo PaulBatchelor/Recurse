@@ -14,6 +14,7 @@ var originPoint = [-1, -1];
 var avatarPos = [-1, -1];
 var isMoving = false;
 var movementPos = 0;
+var waitTimer = 0;
 
 function validPoint(point) {
     return point[0] >= 0 && point[1] >= 0;
@@ -124,7 +125,7 @@ function draw(timeStamp) {
 
     lastTimeStamp = timeStamp;
 
-    if (isMoving == false && pointPool.length > 0) {
+    if (waitTimer <= 0 && !isMoving && pointPool.length > 0) {
         clickPoint = pointPool.pop();
         originPoint = avatarPos.slice();
         updateTrajectory(originPoint, clickPoint);
@@ -147,9 +148,10 @@ function draw(timeStamp) {
     if (validPoint(clickPoint)) {
         drawPellet(clickPoint);
 
-        for (let i = 0; i < pointPool.length; i++) {
-            drawPellet(pointPool[i]);
-        }
+    }
+    for (let i = 0; i < pointPool.length; i++) {
+        drawPellet(pointPool[i]);
+    }
         //ctx.fillStyle = '#000';
         //ctx.beginPath();
         //ctx.arc(
@@ -160,7 +162,6 @@ function draw(timeStamp) {
         //);
         //ctx.closePath();
         //ctx.fill();
-    }
 
     if (isMoving) {
         let prog = calcProgress(originPoint, avatarPos, clickPoint);
@@ -173,7 +174,13 @@ function draw(timeStamp) {
         if (movementPos > 1.0) {
             isMoving = false;
             clickPoint = [-1, -1];
+            let waitAndDigestPellet = Math.random() > 0.6;
+            if (waitAndDigestPellet) {
+                waitTimer = Math.random() * 1;
+            }
         }
+    } else if (waitTimer > 0) {
+        waitTimer -= dt;
     }
 
     drawAvatar();
