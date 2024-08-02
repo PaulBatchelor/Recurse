@@ -44,7 +44,7 @@ of my intention.
 
 @12:45 Inking out some ideas. #demo-coax #timelog:00:22:24
 
-@13:19 Attempts to code up the ideas in Canvas #demo-coax
+@13:19 Attempts to code up the ideas in Canvas #demo-coax #timelog:02:27:57
 
 @13:35 We have a circle. #demo-coax
 
@@ -76,3 +76,8 @@ it to make it work with easings. The current implementation
 just calculates an relative trajectory, and I'm adjusting
 how fast that trajectory goes based on the position.
 interpolating between two points would be better.
+
+@15:46 I got behaviors the way I want now #demo-coax
+Behaviors now have different interpolation schemes.
+They are also randomized now, and can have randomized 
+speeds.
