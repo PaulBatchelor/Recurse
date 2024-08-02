@@ -1,5 +1,16 @@
+@2024-08-01 Day 74. Presentation on Trio
+8 days left of batch.
+---
+Demo: [[http//pbat.ch/recurse/demos/trio]].
+---
+Yeah, this was a bit of a log-free today. Doing the
+presentation was surprisingly draining. I swear, I used
+to be better at this.
+
 @09:00 Slides and Prep
 
 @11:34 Lunch
 
 @12:51 Resume Stuff
+
+@16:00 Presentations

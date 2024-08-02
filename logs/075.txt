@@ -1,0 +1,43 @@
+@2024-08-02 Day 75.
+7 days left of batch.
+---
+@08:30 Play piano
+
+@09:00 Chats at Table
+
+@09:27 Catching up on logs
+
+@09:34 I want to try a mini bucket named blob #demo-blob #blob-eat
+So, poke is really bumming me out. It's too much abuse.
+---
+Using no sound, just circles, to try out this initial
+idea.
+---
+There is a big white circle on the page. You click
+to place other smaller black circles (pellets). The
+circle waits, then moves to each circle to "eat" them,
+then repeats the process until there aren't any other
+circles.
+
+@10:09 retrospection #demo-poke
+Yesterday I showed another person my Poke demo [0]. Another 
+very visceral response: "why did you make me do that to 
+him?"
+---
+On the one hand, I guess I should be pleased that I am 
+getting strong reactions to my art. On the other hand, no, 
+not like this :(
+---
+I find myself agreeing with the reactions. It's very hard 
+to make the "poke" action feel consensual. Even a "tickle" 
+is an invasion. I wanted to build something whimsical, but 
+I didn't really consider the implications of the mechanic. 
+No matter how cute or whimsical the design is, the poke 
+negates all of this.
+---
+I feel a little more deflated than usual about this. With 
+"Poke", it sometimes feels like I've accidentally added a 
+bit more cruelty in the world, which was the exact opposite 
+of my intention.
+
+@11:05 Finally publishing.

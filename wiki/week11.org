@@ -29,8 +29,9 @@ It didn't go well. I'm going to start from scratch
 (again).
 
 * Tuesday July 30th
+Logs: @!(ref "logs" "logs" "2024_07_30")!@
 
-Tasks @!(taskref "demo-trio-web")!@.
+Tasks: @!(taskref "demo-trio-web")!@.
 
 Spent the better part of the day just trying to
 get Trio ported to the web. First time using
@@ -43,3 +44,10 @@ mobile feels like flying blind without seeing
 any logs. Fortunately, Google still works well
 enough to look up vague things like "why is my
 pointer only moving a little bit on chrome?"
+
+* Wednesday July 31st
+Logs: @!(ref "logs" "logs" "2024_07_31")!@
+
+Tasks: @!(taskref "demo-trio-web")!@.
+
+

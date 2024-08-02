@@ -7,3 +7,7 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 @read-elem-compsys Read: Elements of Computer Systems
 
 @resume-follow-up Follow-up on resume suggestions
+
+@blob-eat Create "blob" eat mechanics program
+
+@demo-blob Demo: a Blob Named Bucket

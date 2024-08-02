@@ -1,5 +1,10 @@
 #+TITLE: Demos
-A collection of web demos. TBD.
+A collection of web demos I built during my
+time at RC.
+
+@!(pagelink "/demos/trio" "Trio")!@: An interactive
+singing synthesizer with computer-assisted 3-part
+harmony.
 
 @!(pagelink "/demos/vocal_chords" "Vocal Chords")!@: Experiments
 in making singing vocal ensembles. The key thing I was
