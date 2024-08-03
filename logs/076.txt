@@ -105,4 +105,7 @@ wii shop: ~170 BPM, ipanema: ~140 BPM, severance: ~125BPM.a
 Desafinado Gilberto/Jobim/Getz ~140 BPM. This one
 also is very playful juxtaposition.
 
-@15:56 rework blob to go over closest #blob-coax
+@15:56 rework blob to go over closest #blob-coax #timelog:00:08:38
+
+@16:41 Got sidetracked trying to build Bun on alpine. #blob-coax
+Didn't actually get anything done. Heading out.

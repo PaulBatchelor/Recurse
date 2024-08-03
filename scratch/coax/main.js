@@ -133,6 +133,14 @@ function lerper(a, b, t) {
     return (a + (b - a)*t);
 }
 
+function getPoint(origin) {
+    return pointPool.pop();
+}
+
+function insertPoint(x, y) {
+
+}
+
 function draw(timeStamp) {
     var dt = 0;
 
@@ -144,8 +152,8 @@ function draw(timeStamp) {
     lastTimeStamp = timeStamp;
 
     if (waitTimer <= 0 && !isMoving && pointPool.length > 0) {
-        clickPoint = pointPool.pop();
         originPoint = avatarPos.slice();
+        clickPoint = getPoint(originPoint);
         updateTrajectory(originPoint, clickPoint);
         blobScaleTarget *= 1.1;
 
