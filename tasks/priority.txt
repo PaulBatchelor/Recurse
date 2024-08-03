@@ -15,3 +15,5 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 @investigate-c2rust Investigate c2rust
 I want to see if I can get the XM file player
 I like using working.
+
+@investigate-xmrsplayer Investigate XMrsPlayer

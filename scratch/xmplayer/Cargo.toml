@@ -1,0 +1,9 @@
+[package]
+name = "xmplayer"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+voxbox = { path = "../../../voxbox" }
+xmrs = "0.6.2"
+xmrsplayer = "0.6.2"

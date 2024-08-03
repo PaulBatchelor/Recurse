@@ -50,3 +50,41 @@ The most promising command so far:
 #+BEGIN_SRC c
 LLVM_CONFIG_PATH=llvm-config-18 cargo install c2rust
 #+END_SRC
+
+@13:51 I don't need c2rust afterall! #investigate-c2rust
+Someone already made it. See @!(dzref "rust/crates/xmrsplayer")!@.
+
+@13:55 Testing xmrsplayer #investigate-xmrsplayer
+See: @!(dzref "rust/crates/xmrsplayer")!@.
+---
+Well it builds, but once again I run into the usual
+snags with CPal and ALSA.
+---
+People, add a fallback offline wav writer. Jeez.
+
+@14:03 There's a "bufferedsource" example #investigate-xmrsplayer
+Wonder how hard it would be to work that into a
+my monwav voxbox writer.
+
+@14:07 Create a new xmplayer project in my scratch #investigate-xmrsplayer #timelog:01:07:06
+Did not know you coul do the thing with
+"cargo add xmrsplayer". That was so easy.
+---
+But ah yes, now the infamous build time.
+
+@14:20 sidetracked: nectarine in mplayer?
+It works!
+
+@14:27 back to it now. #investigate-xmrsplayer
+
+@14:58 Some sound, but it's very faint. #investigate-xmrsplayer
+
+@15:05 Clicks. Clicks in the output. #investigate-xmrsplayer
+I am not getting a warm feeling about this one.
+
+@15:07 Trying another XM file (acid-jazzed evening) #investigate-xmrsplayer
+No clicks, but this one is out of tune. Also very soft
+gain.
+
+@15:11 Nevermind. #investigate-xmrsplayer
+Not worth the time investment here.

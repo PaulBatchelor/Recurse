@@ -21,3 +21,10 @@ hl https://crates.io/crates/cpal
 rm Didn't work on my Alpine Box (had trouble linking libasound, which
 rm was clearly there. might have needed libasound2, which
 rm alpine doesn't ship with)
+
+
+nn xmrsplayer
+hl https://crates.io/crates/xmrsplayer/0.1.0
+ln XMrsPlayer is a safe soundtracker music player
+rm Googled "xm player rust crate" and this is exactly
+rm what I wanted: libxm manually ported to Rust.
