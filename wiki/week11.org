@@ -28,7 +28,7 @@ Got side-tracked. Attempted to use Typescript with p5.
 It didn't go well. I'm going to start from scratch
 (again).
 
-* Tuesday July 30th
+* Tuesday, July 30th
 Logs: @!(ref "logs" "logs" "2024_07_30")!@
 
 Tasks: @!(taskref "demo-trio-web")!@.
@@ -45,9 +45,34 @@ any logs. Fortunately, Google still works well
 enough to look up vague things like "why is my
 pointer only moving a little bit on chrome?"
 
-* Wednesday July 31st
+* Wednesday, July 31st
 Logs: @!(ref "logs" "logs" "2024_07_31")!@
 
 Tasks: @!(taskref "demo-trio-web")!@.
 
 Got Trio published as a demo.
+
+* Thursday, August 1st
+Logs: @!(ref "logs" "logs" "2024_08_01")!@
+
+Presented my "Trio" demo. Spent the day working on
+that. A sound demo in front of a live audience AND
+over zoom with a strict 5 minute time limit AND
+slides is stressful. Even with all the prep and
+sound hecks, I still ran into echoing issues which
+cut precious seconds away.
+
+* Friday, August 2nd
+Logs: @!(ref "logs" "logs" "2024_08_02")!@
+
+Tasks: @!(taskref "blob-coax")!@.
+
+A bit of an aimless day at the beginning. I was
+reflecting on @!(taskref "demo-poke")!@, and
+how disappointed I was in the outcome. "Poke",
+as it turns out, is a terrible verb for an
+experience involving an anthropomorphic blobby guy.
+
+I started working out another concept of a mechanic
+where you'd be able to feed a blobby guy pellets,
+and came up with the project name "coax".

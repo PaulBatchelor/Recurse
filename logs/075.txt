@@ -1,6 +1,5 @@
-@2024-08-02 Day 75.
+@2024-08-02 Day 75. Silly idea. Project name: "Coax"
 7 days left of batch.
----
 @08:30 Play piano
 
 @09:00 Chats at Table
@@ -42,55 +41,55 @@ of my intention.
 
 @11:05 Finally publishing.
 
-@12:45 Inking out some ideas. #demo-coax #timelog:00:22:24
+@12:45 Inking out some ideas. #blob-coax #timelog:00:22:24
 
-@13:19 Attempts to code up the ideas in Canvas #demo-coax #timelog:02:27:57
+@13:19 Attempts to code up the ideas in Canvas #blob-coax #timelog:02:27:57
 
-@13:35 We have a circle. #demo-coax
+@13:35 We have a circle. #blob-coax
 
 But, weird stroke bug in firefox. The line has
 variable thickness, and some dots. In chromium,
 this is a non-issue.
 
-@14:10 Trying to get an initial journey mechanic working #demo-coax
+@14:10 Trying to get an initial journey mechanic working #blob-coax
 
-@14:16 trying to get a constant velocity now #demo-coax
+@14:16 trying to get a constant velocity now #blob-coax
 Somehow need to convert times to be pixels per second.
 
-@14:30 Inking some ideas #demo-coax
+@14:30 Inking some ideas #blob-coax
 
-@14:44 Attempting to implement those ideas #demo-coax
+@14:44 Attempting to implement those ideas #blob-coax
 
-@14:55 I might not need trig actually #demo-coax
+@14:55 I might not need trig actually #blob-coax
 It's traveling on a line, so maybe just the line equation.
 It can be a normalized slope velocity too. Something to
 add to a point until it reaches a target.
 
-@15:01 I'd like to add different movement behaviors #demo-coax
+@15:01 I'd like to add different movement behaviors #blob-coax
 So, calculate progress, and then use an easing function
 to make it so it can slow down or speed up to a target.
 
-@15:13 behavior... kind of? #demo-coax
+@15:13 behavior... kind of? #blob-coax
 It's not quit what I wanted it be. I'd need to rework
 it to make it work with easings. The current implementation
 just calculates an relative trajectory, and I'm adjusting
 how fast that trajectory goes based on the position.
 interpolating between two points would be better.
 
-@15:46 I got behaviors the way I want now #demo-coax
+@15:46 I got behaviors the way I want now #blob-coax
 Behaviors now have different interpolation schemes.
 They are also randomized now, and can have randomized 
 speeds.
 
-@18:18 Insert more pellets, eat pellets #demo-coax #timelog:00:36:16
+@18:18 Insert more pellets, eat pellets #blob-coax #timelog:00:36:16
 
-@18:47 wait timer, get larger #demo-coax #timelog:00:53:44
+@18:47 wait timer, get larger #blob-coax #timelog:00:53:44
 
-@18:56 Blob should get bigger everytime there are pellets #demo-coax
+@18:56 Blob should get bigger everytime there are pellets #blob-coax
 When they get too big, there should be a forced pause, and
 the Blob should shrink again.
 
-@19:23 If pellets aren't around for a while, digest #demo-coax
+@19:23 If pellets aren't around for a while, digest #blob-coax
 
-@19:30 It should begin jiggling at the larger scales #demo-coax
+@19:30 It should begin jiggling at the larger scales #blob-coax
 Like it's about to burst.

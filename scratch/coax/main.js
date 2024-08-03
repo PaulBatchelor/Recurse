@@ -7,7 +7,6 @@ canvas.height = 400;
 
 let ctx = canvas.getContext('2d');
 
-//var clickPoint = [-1, -1];
 var clickPoint = [-1, -1];
 let pointPool = [];
 var originPoint = [-1, -1];
@@ -44,7 +43,7 @@ function closeEnough(pointA, pointB) {
 
 function calcProgress(origin, current, target) {
     let distOrigTarg = calcDist(origin, target);
-    let distOrigCurr= calcDist(origin, current);
+    let distOrigCurr = calcDist(origin, current);
 
     return distOrigCurr/distOrigTarg;
 }
@@ -188,16 +187,6 @@ function draw(timeStamp) {
     for (let i = 0; i < pointPool.length; i++) {
         drawPellet(pointPool[i]);
     }
-        //ctx.fillStyle = '#000';
-        //ctx.beginPath();
-        //ctx.arc(
-        //    clickPoint[0],
-        //    clickPoint[1],
-        //    25,
-        //    0, 2.0 * Math.PI, true
-        //);
-        //ctx.closePath();
-        //ctx.fill();
 
     if (isMoving && !pleaseShrink) {
         let prog = calcProgress(originPoint, avatarPos, clickPoint);
@@ -240,10 +229,6 @@ function draw(timeStamp) {
 
 
 function down(event) {
-    //clickPoint = [event.clientX, event.clientY];
-    //originPoint = avatarPos.slice();
-    //updateTrajectory(originPoint, clickPoint);
-
     if (pointPool.length < 16) {
         pointPool.push([event.clientX, event.clientY]);
     }

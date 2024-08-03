@@ -1,0 +1,52 @@
+@2024-08-03 Day 76.
+@10:40 Late morning triage.
+@11:05 Publishing
+@11:10 Taking a fresh look at this thing. #blob-coax #timelog:00:13:04
+It really should aim to choose the closest pellet.
+---
+The only sound I have in mind right now are the
+sounds of placing pellets. One of those bubble
+popping sounds. Like the sounds on the switch.
+---
+The "consume and become larger" mechanic was
+an interesting ad-hoc idea. But it's Katamari
+Damacy. I should look into that game. They
+have a crazy soundtrack from what I remember.
+---
+I want to play with better colors here. Manic
+Japanese pastel colors. Think Kirby and Mario.
+---
+I think this game soundtrack should feel very
+tactile.
+
+@11:21 Doing some code cleanup. #blob-coax
+
+@11:22 I still want cheezy bossa nova somehow. #blob-coax
+Maybe try to get this working in a tracker?
+
+@11:23 compiling c2rust #investigate-c2rust
+Looks like you can just do "cargo install c2rust",
+which is pretty awesome if it just works.
+---
+LLVM issues. Installed llvm-dev, trying again
+---
+another error: libLLVMDemangle.a does not exist
+
+@11:30 Ugh. maybe a dead end. #investigate-c2rust
+
+@11:34 oooh. there's an llvm17-static #investigate-c2rust
+Let's see if this works.
+---
+Restarting, then trying again. The library *does*
+seem to be there.
+
+@11:42 libLLVMTestingAnnotations.a missing now
+I found an arch page that has it in LLVM18. I installed
+LLVM17. Let's see if that does anything.
+
+@11:52 Same deal. Giving up. #investigate-c2rust
+The most promising command so far:
+---
+#+BEGIN_SRC c
+LLVM_CONFIG_PATH=llvm-config-18 cargo install c2rust
+#+END_SRC
