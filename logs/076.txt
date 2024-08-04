@@ -96,7 +96,7 @@ getz/gilberto girl from ipanema: there's something
 more playful about this pairing. I think it's cuz
 there's a bit more of film cliche happening.
 ---
-Severance OST THeodire Shapiro "Labor of Love":
+Severance OST Theodire Shapiro "Labor of Love":
 The triangle makes this very funny. It's definitely
 a matter of tempo.
 ---
@@ -109,3 +109,8 @@ also is very playful juxtaposition.
 
 @16:41 Got sidetracked trying to build Bun on alpine. #blob-coax
 Didn't actually get anything done. Heading out.
+
+@19:37 Back to trying to get "eat closest" working #blob-coax #timelog:00:33:01
+Had a nice high-level chat with RB about a possible
+implementation. He called it an "object pool", which is
+pretty much exactly what I'm going after.

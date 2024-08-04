@@ -20,6 +20,8 @@ var pleaseShrink = false;
 var idleTimer = 0;
 var pleaseDigest = false;
 let blobScaleMax = 3.0;
+const MAX_PELLETS = 16;
+var numPoints = 0;
 
 function validPoint(point) {
     return point[0] >= 0 && point[1] >= 0;
@@ -28,6 +30,24 @@ function validPoint(point) {
 var incrementAmount = 0;
 var incrementSpeed = 1.0;
 
+function poolHasRoom() {
+    return numPoints < MAX_PELLETS;
+}
+
+function addPoint(x, y) {
+    numPoints++;
+
+    if (pointPool.length < MAX_PELLETS) {
+        pointPool.push([x, y]);
+    } else {
+        for (let i = 0; i < MAX_PELLETS; i++) {
+            if (!validPoint(pointPool[i])) {
+                pointPool[i] = [x, y];
+                break;
+            }
+        }
+    }
+}
 
 function calcDist(pointA, pointB) {
     let distX = pointB[0] - pointA[0];
@@ -134,11 +154,34 @@ function lerper(a, b, t) {
 }
 
 function getPoint(origin) {
+    numPoints--;
     return pointPool.pop();
 }
 
-function insertPoint(x, y) {
+function getNearestPoint(origin) {
+    var minDist;
+    var minDistIdx;
 
+    for (let i = 0; i < MAX_PELLETS; i++) {
+        if (i < pointPool.length && validPoint(pointPool[i])) {
+            let curDist = calcDist(origin, pointPool[i]);
+            if (!minDist || (minDist && (curDist < minDist))) {
+                minDist = curDist;
+                minDistIdx = i;
+            }
+        }
+    }
+
+    let nextPoint = [
+        pointPool[minDistIdx][0],
+        pointPool[minDistIdx][1]
+    ];
+
+
+    pointPool[minDistIdx] = [-1, -1];
+    //return getPoint(origin);
+    numPoints--;
+    return nextPoint;
 }
 
 function draw(timeStamp) {
@@ -151,9 +194,9 @@ function draw(timeStamp) {
 
     lastTimeStamp = timeStamp;
 
-    if (waitTimer <= 0 && !isMoving && pointPool.length > 0) {
+    if (waitTimer <= 0 && !isMoving && numPoints > 0) {
         originPoint = avatarPos.slice();
-        clickPoint = getPoint(originPoint);
+        clickPoint = getNearestPoint(originPoint);
         updateTrajectory(originPoint, clickPoint);
         blobScaleTarget *= 1.1;
 
@@ -192,8 +235,10 @@ function draw(timeStamp) {
         drawPellet(clickPoint);
 
     }
-    for (let i = 0; i < pointPool.length; i++) {
-        drawPellet(pointPool[i]);
+    for (let i = 0; i < MAX_PELLETS; i++) {
+        if (i < pointPool.length && validPoint(pointPool[i])) {
+            drawPellet(pointPool[i]);
+        }
     }
 
     if (isMoving && !pleaseShrink) {
@@ -235,10 +280,10 @@ function draw(timeStamp) {
     let raf = window.requestAnimationFrame(draw);
 }
 
-
 function down(event) {
-    if (pointPool.length < 16) {
-        pointPool.push([event.clientX, event.clientY]);
+    if (poolHasRoom()) {
+        //pointPool.push([event.clientX, event.clientY]);
+        addPoint(event.clientX, event.clientY);
     }
 }
 
