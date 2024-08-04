@@ -80,3 +80,5 @@ for me for portability.
 @16:06 dragging this into mnolth #investigate-ft2play
 
 @16:45 imported to mnolth. #investigate-ft2play
+
+@16:50 Add some colors #blob-coax #timelog:00:17:00

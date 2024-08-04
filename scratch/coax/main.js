@@ -1,3 +1,12 @@
+const BGCOLOR='#a8f8f8';
+//const COLOR_AVATAR='#f8a0d8';
+const COLOR_AVATAR='#ffffff';
+//const COLOR_PELLET='#f8d000';
+//const COLOR_PELLET='#f83830';
+//
+const AVATAR_LINE_THICKNESS = 5;
+const PELLET_LINE_THICKNESS = 5;
+const COLOR_PELLET='#f8a0d8';
 const canvas = document.getElementById('canvas');
 const html = document.getElementsByTagName('html')[0];
 const container = document.getElementById('container');
@@ -110,7 +119,8 @@ function updateTrajectory(origin, point) {
 }
 
 function drawPellet(point) {
-    ctx.fillStyle = '#000';
+    ctx.fillStyle = COLOR_PELLET;
+    ctx.lineWidth = PELLET_LINE_THICKNESS;
     ctx.beginPath();
     ctx.arc(
         point[0],
@@ -120,6 +130,7 @@ function drawPellet(point) {
     );
     ctx.closePath();
     ctx.fill();
+    ctx.stroke();
 }
 
 var lfoPhase = 0;
@@ -134,8 +145,8 @@ function drawAvatar(dt) {
         wiggle += 0.05*lfo;
 
     }
-    ctx.fillStyle = '#FFF'
-    ctx.lineWidth = 10;
+    ctx.fillStyle = COLOR_AVATAR;
+    ctx.lineWidth = AVATAR_LINE_THICKNESS;
     ctx.strokeStyle = '#000';
     ctx.beginPath();
     ctx.arc(
@@ -220,8 +231,8 @@ function draw(timeStamp) {
     canvas.width = html.clientWidth;
     canvas.height = html.clientHeight;
 
-    ctx.fillStyle = '#FFF'
-    ctx.lineWidth = 10;
+    ctx.fillStyle = BGCOLOR;
+    ctx.lineWidth = AVATAR_LINE_THICKNESS;
     ctx.strokeStyle = '#000';
 
     ctx.fillRect(0, 0, canvas.width, canvas.height);
