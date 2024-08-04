@@ -1,0 +1,41 @@
+#+TITLE: Week 12
+
+* Saturday, July 27th
+
+Logs: @!(ref "logs" "logs" "2024_08_03")!@
+
+Tasks: @!(taskref "blob-coax")!@, @!(taskref "investigate-xmrsplayer")!@, @!(taskref "investigate-c2rust")!@.
+
+Started the day looking into c2rust. In theory, it
+installing it should have been as simple as
+"cargo install c2rust". But. I ran into some
+snags related to CMake and LLVM.
+
+Why did I want to use c2rust? Right. Because I wanted
+to automatically port libxm to rust so I could play
+small music files in the browser for some of my
+sound toys. Good news, this was already done
+already! @!(dzref "rust/crates/xmrsplayer")!@.
+Bad news: it didn't sound all that great: very
+low amplitude, and lots of clicks. I'm willing
+to believe this was due to mistakes I made, but
+it's not like libxm was a perfect XM player library
+to begin with.
+
+I also got sidetracked trying to
+compile Bun @!(dzref "webdev/bun_js")!@ on my Alpine
+machine. It was mentioned by like 3 people over
+the past few days. Being a musl-based system, I couldn't
+use the pre-built glibc binaries. So I rolled
+up my sleeves and gave it a go at building
+from source. Funniliy enough, I also ran into
+CMake and LLVM problems here as well. I got
+pretty far, but had to stop when there was a build
+stop that required Bun in order to build Bun.
+I'll just use a chroot, thanks.
+
+I changed Coax a little bit so that it goes
+after the closest pellets. Very effective. I also
+started playing it while listening to various
+kinds of music, a sort of spotting sessions. I
+really want a quirky Bossa Nova.

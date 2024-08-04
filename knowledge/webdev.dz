@@ -125,3 +125,10 @@ nn touch_action
 hl https://developer.mozilla.org/en-US/docs/Web/CSS/touch-action
 ln touch action
 rm had to set this to be none for it to work in chrome
+
+nn bun_js
+hl https://bun.sh/
+ln Bun: A fast all-in-one javascript runtime.
+rm This was mentioned by 3 different people in the span of a few days
+rm at RC. So, I thought it'd be worth checking out. Also,
+rm parts of it are written in Zig.

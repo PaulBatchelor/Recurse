@@ -1,9 +1,6 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@LC75 Leetcode 75
-Link: [[https://leetcode.com/studyplan/leetcode-75/]].
-
 @read-elem-compsys Read: Elements of Computer Systems
 
 @resume-follow-up Follow-up on resume suggestions
@@ -11,9 +8,3 @@ Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 @blob-coax Create "blob" eat/coax mechanics program
 
 @demo-blob Demo: a Blob Named Bucket
-
-@investigate-c2rust Investigate c2rust
-I want to see if I can get the XM file player
-I like using working.
-
-@investigate-xmrsplayer Investigate XMrsPlayer

@@ -14,3 +14,12 @@ pipeline is too slow.
 Nevermind. It's still there, but the problem feels
 negligible at this point.
 
+@investigate-c2rust Investigate c2rust
+NEVERMIND. Couldn't get it to build, also there
+are already XM player crates in Rust.
+I want to see if I can get the XM file player
+I like using working.
+
+@investigate-xmrsplayer Investigate XMrsPlayer
+NEVERMIND. this didn't end up sounding all
+that good.

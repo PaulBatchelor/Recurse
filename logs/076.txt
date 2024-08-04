@@ -1,4 +1,5 @@
-@2024-08-03 Day 76.
+@2024-08-03 Day 76. c2rust, XM Players in Rust, More Coax
+6 days left of batch.
 @10:40 Late morning triage.
 @11:05 Publishing
 @11:10 Taking a fresh look at this thing. #blob-coax #timelog:00:13:04

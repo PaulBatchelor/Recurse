@@ -9,3 +9,7 @@ should be pretty trivial to get at and store.
 @dzgraph-hyperlinks make it possible to link dzgraphs
 
 @voxsculpt-preset-manager create preset manager for voxsculpt
+
+@LC75 Leetcode 75
+Link: [[https://leetcode.com/studyplan/leetcode-75/]].
+
