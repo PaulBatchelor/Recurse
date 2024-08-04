@@ -1,0 +1,12 @@
+ns trackers
+gr Stuff related to music trackers.
+
+nn ft2play
+hl https://github.com/8bitbubsy/ft2play
+ln ft2play: Accurate C port of Fasttracer 2's replayer
+
+nn dirtywave
+hl https://dirtywave.com/
+ln DirtyWave: a portable tracker, sequencer, and synthesizer
+rm Got to try one at audio hang last week. Heavier than I
+rm expected. Great keys. Pretty much LSDJ on steroids.

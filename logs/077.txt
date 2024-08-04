@@ -2,3 +2,46 @@
 5 days left of batch.
 @10:30 Late Morning Triage.
 @10:59 Publishing.
+@11:03 Investigate ftplay again. #investigate-ft2play
+Looked into this a while back. Going to give
+it another look today. @!(dzref "trackers/ft2play")!@.
+
+@11:12 Let's look into ft2play #investigate-ft2play #timelog:00:42:46
+I want to see if I can get this working
+on my machine without any modificatoins.
+From there, my hope is to try and remove
+the SDL dependencies. Then, I'll re-assess the
+codebase and see if there's anything else I
+can do to simplify it.
+
+@11:18 Builds and runs! #investigate-ft2play
+
+@11:24 Studying the entry point. Isolate the wav renderer. #investigate-ft2play
+I've also created a test file that renders and compares
+outputs.
+
+@11:31 I am making a Makefile. #investigate-ft2play
+
+@11:34 There's a README on how to make drivers #investigate-ft2play
+It might be quite easy actually to rip out SDL.
+
+@11:37 makefile works. #investigate-ft2play
+
+@11:39 Working on a dummy driver #investigate-ft2play
+
+@11:40 Actually, before that, how does the wav rendering work? #investigate-ft2play
+
+@11:44 WAVDump_Record is the entry point #investigate-ft2play
+The thread is now gone. The code comments actually planned
+for people like me.
+
+@11:47 Let's see if I can get this dummy driver working quickly #investigate-ft2play
+Dummy driver surprisingly straight forward. Really
+seems unnecessary since we're just using WAV renderer.
+SDL2 deps are gone it seems. I've also flattened the
+directory a bit.
+---
+Much smoother than I expected it to be, really. Next up,
+I'd love to rework the command line so it just something
+like "ft2play in.xm out.wav". From there, import it into
+mnolth?
