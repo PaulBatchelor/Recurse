@@ -1,0 +1,15 @@
+@2024-08-05 Day 78.
+4 days left of batch.
+---
+Friday will be the 0th day, because there are no
+days left after that.
+@08:38 Morning triage.
+
+@09:15 Want to see how hard this is to do #itparser-rust
+I think I know enough Rust where the "it's in Rust"
+part isn't all that challenging anymore. There
+is one definitive spec file for IT.
+
+@09:26 Publish.
+
+@09:33 taking a look at ITTECH.TXT #itparser-rust

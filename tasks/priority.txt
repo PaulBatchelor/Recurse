@@ -8,3 +8,5 @@ tasks that I intend to work on in the next few days or so.
 @blob-coax Create "blob" eat/coax mechanics program
 
 @demo-blob Demo: a Blob Named Bucket
+
+@itparser-rust Implement IT parser in Rust

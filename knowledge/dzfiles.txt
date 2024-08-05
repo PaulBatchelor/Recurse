@@ -29,4 +29,5 @@ knowledge/compeng.dz
 knowledge/sys.dz
 knowledge/tablets.dz
 knowledge/gameboy.dz
+knowledge/trackers.dz
 knowledge/zzz.dz

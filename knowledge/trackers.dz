@@ -10,3 +10,12 @@ hl https://dirtywave.com/
 ln DirtyWave: a portable tracker, sequencer, and synthesizer
 rm Got to try one at audio hang last week. Heavier than I
 rm expected. Great keys. Pretty much LSDJ on steroids.
+
+nn ft2_wiki
+hl https://en.wikipedia.org/wiki/FastTracker_2
+ln FastTracker 2 (Wikipedia)
+
+nn schism
+hl https://schismtracker.org/
+ln Schism Tracker: an open-source re-implementation of
+ln Impulse Tracker.

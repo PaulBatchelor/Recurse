@@ -1,6 +1,6 @@
 #+TITLE: Week 12
 
-* Saturday, July 27th
+* Saturday, August 3rd
 
 Logs: @!(ref "logs" "logs" "2024_08_03")!@
 
@@ -39,3 +39,32 @@ after the closest pellets. Very effective. I also
 started playing it while listening to various
 kinds of music, a sort of spotting sessions. I
 really want a quirky Bossa Nova.
+
+* Sunday, August 4th
+
+Logs: @!(ref "logs" "logs" "2024_08_04")!@
+
+Tasks: @!(taskref "investigate-ft2play")!@,
+@!(taskref "
+
+Today was spent looking
+into @!(dzref "trackers/ft2play")!@, a highly accurate
+player for files made in FastTracker 2 @!(dzref "trackers/ft2_wiki")!@, known as XM modules (using the
+extension .xm).  My goal was to try to get a version
+of it working without the SDL dependency, so
+it could be used as simple WAV file renderer for XM files.
+
+It was a very pleasant experience. 8bitbubsy designed
+this codebase for people like me who wanted to
+hack on it. Stripping the SDL dependency was a straightforward ordeal, and since I was only using it to make
+WAV files, I could remove a lot of code.
+
+Not listed here, but late last night on a whim
+I looked into Schism Tracker @!(dzref
+"trackers/schism")!@ again. For whatever reason,
+it just clicked. Things felt really good. It
+was able to build and run on all my nearby
+devices: my m1 mac, and my thinkpad running alpine
+linux and JACK. So now all of a sudden I really
+want to do investigate the world of Schism Tracker
+and Impulse Tracker module files (IT).
