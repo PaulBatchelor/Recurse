@@ -1,0 +1,7 @@
+blsaw [mtof 60]
+mul zz 0.8
+butlp zz 3000
+env [tick] 0.01 0.1 0.1
+mul zz zz
+wavout zz blip.wav
+computes 1

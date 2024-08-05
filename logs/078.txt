@@ -13,3 +13,10 @@ is one definitive spec file for IT.
 @09:26 Publish.
 
 @09:33 taking a look at ITTECH.TXT #itparser-rust
+
+@09:48 browsing IT files #itparser-rust
+
+@10:25 Found an interesting IT file. adding. #itparser-rust
+
+@10:29 Baby's first IT file. #itparser-rust
+Just some sine pulses.
