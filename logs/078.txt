@@ -12,7 +12,7 @@ is one definitive spec file for IT.
 
 @09:26 Publish.
 
-@09:33 taking a look at ITTECH.TXT #itparser-rust
+@09:33 taking a look at ITTECH.TXT #itparser-rust #timelog:01:08:43
 
 @09:48 browsing IT files #itparser-rust
 
@@ -20,3 +20,5 @@ is one definitive spec file for IT.
 
 @10:29 Baby's first IT file. #itparser-rust
 Just some sine pulses.
+
+@11:04 Okay. that was kinda fun. #itparser-rust
