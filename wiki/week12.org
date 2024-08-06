@@ -45,7 +45,7 @@ really want a quirky Bossa Nova.
 Logs: @!(ref "logs" "logs" "2024_08_04")!@
 
 Tasks: @!(taskref "investigate-ft2play")!@,
-@!(taskref "
+@!(taskref "blob-coax")!@.
 
 Today was spent looking
 into @!(dzref "trackers/ft2play")!@, a highly accurate
@@ -68,3 +68,20 @@ devices: my m1 mac, and my thinkpad running alpine
 linux and JACK. So now all of a sudden I really
 want to do investigate the world of Schism Tracker
 and Impulse Tracker module files (IT).
+
+* Monday, August 5th
+
+Logs: @!(ref "logs" "logs" "2024_08_05")!@
+
+Tasks: @!(taskref "itparser-rust")!@
+
+Was a very "sidequest" day.
+
+Went for a walk to the park, played around with
+Schismtracker with RB. They showed me some sound
+design tricks.
+
+I did start some brief work on this IT parser.
+I was going to just do it in C, but I reached
+for Rust instead. It's nice to have an expressive
+language for a change for this kind of thing.
