@@ -132,3 +132,9 @@ ln Bun: A fast all-in-one javascript runtime.
 rm This was mentioned by 3 different people in the span of a few days
 rm at RC. So, I thought it'd be worth checking out. Also,
 rm parts of it are written in Zig.
+
+nn 12factor
+hl https://12factor.net/
+ln The 12-factor app is a methodlogy for building
+ln software-as-a-service apps.
+rm found via zulip.

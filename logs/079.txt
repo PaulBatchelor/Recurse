@@ -16,3 +16,15 @@ don't think I was feeling much before this.
 
 @10:26 I think we're done with niceties.
 Might go back and check at some point.
+
+@11:00 Lunch
+
+@12:00 Audio Hang
+
+@13:00 Troubleshooting Phone with PK
+
+@15:50 Snack
+
+@16:04 More stabs at the parser #itparser-rust #timelog:00:50:13
+Got far enough to do some initial parsing of pattern
+data. Good enough for me for now.
