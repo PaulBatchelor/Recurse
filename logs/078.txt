@@ -22,3 +22,8 @@ is one definitive spec file for IT.
 Just some sine pulses.
 
 @11:04 Okay. that was kinda fun. #itparser-rust
+
+@14:52 Attempts at an IT parser #itparser-rust #timelog:00:12:08
+Didn't get far at all.
+
+@19:37 Another attempt? Another attempt. #itparser-rust
