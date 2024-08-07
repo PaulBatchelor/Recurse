@@ -1,4 +1,4 @@
-@2024-08-06 Day 79.
+@2024-08-06 Day 79. ALSA and CPAL troubleshooting.
 3 days left of batch.
 ---
 I'm feeling pretty raw today. I've been processing a lot

@@ -1,4 +1,4 @@
-@2024-07-26 Day 68.
+@2024-07-26 Day 68. ChordSelector work.
 14 days left of batch.
 ---
 Prev: Poke facial expressions, ChordSelector Planning,

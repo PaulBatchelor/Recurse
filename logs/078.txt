@@ -1,4 +1,4 @@
-@2024-08-05 Day 78.
+@2024-08-05 Day 78. Initial IT parser attempt.
 4 days left of batch.
 ---
 Friday will be the 0th day, because there are no

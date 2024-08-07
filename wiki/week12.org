@@ -85,3 +85,17 @@ I did start some brief work on this IT parser.
 I was going to just do it in C, but I reached
 for Rust instead. It's nice to have an expressive
 language for a change for this kind of thing.
+
+* Tuesday, August 6th
+
+Logs: @!(ref "logs" "logs" "2024_08_06")!@
+
+Tasks: @!(taskref "itparser-rust")!@.
+
+Low-energy day. Processed a lot of thoughts and
+feelings.
+
+Spent the morning working on niceties. Helped
+PK with some ALSA troubleshooting after the audiohang.
+Got some note information to print in my IT parsing
+experiments.
