@@ -1,0 +1,24 @@
+@2024-08-08 Day 81.
+1 day left of batch.
+
+@09:22 Morning Triage.
+
+@09:26 Probably not going to finish this. #blob-coax
+But I have a working demo that I think I can
+post today.
+
+@09:27 I've read enough of this book #read-elem-compsys
+I think it'd be a good exercise at some point
+to go back and try working through the exercises.
+But, for now, I think I'm at a decent enough
+stopping point.
+
+@09:30 What's a good stopping point for this #itparser-rust
+I think it would be nice to work this out in such a way
+that it exports JSON data for the patterns. Probably
+just low-level row information for now (Serde?).
+Later that can data can be analyzed by other programs
+to do things like extract notes and durations and
+so on.
+
+@09:50 Publishing.

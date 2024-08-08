@@ -1,12 +1,8 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@read-elem-compsys Read: Elements of Computer Systems
-
-@resume-follow-up Follow-up on resume suggestions
-
 @blob-coax Create "blob" eat/coax mechanics program
 
-@demo-blob Demo: a Blob Named Bucket
-
 @itparser-rust Implement IT parser in Rust
+
+@retrospective work on retrospective

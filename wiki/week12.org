@@ -99,3 +99,29 @@ Spent the morning working on niceties. Helped
 PK with some ALSA troubleshooting after the audiohang.
 Got some note information to print in my IT parsing
 experiments.
+
+* Wednesday, August 7th
+
+Logs: @!(ref "logs" "logs" "2024_08_07")!@
+
+Tasks: @!(taskref "read-elem-compsys")!@.
+
+Not a whole lot of structure today. Did some reading.
+I read chapter 6 of "The Elements of Computer Systems".
+This seems to be a good enough stopping point. It's
+the last chapter that Teach Yourself CS recommends
+reading. Also, I feel diminishing returns without
+having actually done any of the exercises.
+
+I also re-read Knuths interview in "Coders At Work",
+something I hadn't looked at in over a decade.
+Having done a significant amount of literate
+programming in systems like Org and CWEB, I felt
+like I could relate more to those conversations.
+Also having skimmed through more of TAOCP,
+I found those topics to resonate more. I guess
+Knuth was working on his combinatorial algorithms
+volume when this interview happened. I believe
+some of that is out now.
+
+Nice conversations today.

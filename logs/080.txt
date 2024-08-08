@@ -1,7 +1,18 @@
-@2024-08-07 Day 80.
+@2024-08-07 Day 80. Some reading.
 2 days left of batch.
 ---
 Feeling tired and groggy. Just like the weather.
 @08:51 Arrival. Triage.
 
 @09:00 Publishing.
+
+@09:11 Chapter 6: Assembler #read-elem-compsys #timelog:00:54:55
+I read the chapter in one sitting. I imagine it's
+much easier to read about implementing an assembler
+than it is to actually implement one. At
+some point, I'll try to find time to actually
+work this all out.
+---
+Teach Yourself Computer Science (TYCS) recommends
+reading the first six chapters of this book. I have
+done this. I think this is good enough.

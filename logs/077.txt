@@ -82,3 +82,5 @@ for me for portability.
 @16:45 imported to mnolth. #investigate-ft2play
 
 @16:50 Add some colors #blob-coax #timelog:00:17:00
+
+@18:52 Finish chapter 5. #read-elem-compsys #timelog:00:30:22
