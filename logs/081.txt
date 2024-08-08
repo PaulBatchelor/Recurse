@@ -29,7 +29,7 @@ show I just started watching. I really like this show!
 
 @10:51 start curating some ink #curate-ink #timelog:00:15:00
 @11:00 Lunch
-@13:30 More ink curation #curate-ink #
+@13:30 More ink curation #curate-ink #timelog:00:52:26
 @14:23 Curated and uploaded. #curate-ink
 It's too bad there isn't a good way to display
 this right now. I'll have to get an ink dagzet
