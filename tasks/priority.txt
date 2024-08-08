@@ -7,4 +7,4 @@ tasks that I intend to work on in the next few days or so.
 
 @retrospective work on retrospective
 
-@curate-ink curate ink from the past few weeks/months
+@dagzet-ink Get ink set up on dagzet

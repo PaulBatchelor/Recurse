@@ -268,3 +268,6 @@ link: [[https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-developmen
 @resume-follow-up Follow-up on resume suggestions
 
 @read-elem-compsys Read: Elements of Computer Systems
+
+@curate-ink curate ink from the past few weeks/months
+
