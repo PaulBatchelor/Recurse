@@ -6,3 +6,5 @@ tasks that I intend to work on in the next few days or so.
 @itparser-rust Implement IT parser in Rust
 
 @retrospective work on retrospective
+
+@curate-ink curate ink from the past few weeks/months
