@@ -1,4 +1,4 @@
-@2024-07-28 Trio Chord Selection Heuristics.
+@2024-07-28 Day 70: Trio Chord Selection Heuristics.
 12 days left of batch.
 ---
 @11:00 Implement upper/lower voice finder. #demo-trio-chords #timelog:00:09:43

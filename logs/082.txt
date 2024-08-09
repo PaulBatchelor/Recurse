@@ -1,0 +1,29 @@
+@2024-08-09 Day 82.
+last day of batch.
+---
+I am overwhelmed. I don't have all the words yet, but
+I think I have a few. I think I might work on my reflection/retrospective.
+I've been really into the writing style "I MISS LORINA BULWER",
+so I think I might try to do something like that.
+Something along the lines of "I RECURSER PAUL BATCHELOR".
+---
+Reflections: @!(ref "retrospective")!@.
+@08:37 Morning Triage.
+
+@08:38 Generate a page using basic HTML and a list #dagzet-ink
+And then it'll be done.
+
+@08:41 Sunsetting. I got far enough on this. #itparser-rust
+It's a good proof of concept for a proof of concept. I can
+return to it later, if I need it.
+
+@08:44 re-reading lorina bulwer. #retrospective
+See: @!(dzref "misc/i_miss_lorina_bulwer")!@.
+---
+On second thought. This might be a little too intense
+for the RC crowd. But, I might give it a go anyways.
+
+@08:53 Writing some things down. #retrospective #timelog:00:45:15
+I might turn this into tamer prose we'll see.
+
+@09:35 Publishing?

@@ -3,8 +3,6 @@ tasks that I intend to work on in the next few days or so.
 
 @blob-coax Create "blob" eat/coax mechanics program
 
-@itparser-rust Implement IT parser in Rust
-
 @retrospective work on retrospective
 
 @dagzet-ink Get ink set up on dagzet

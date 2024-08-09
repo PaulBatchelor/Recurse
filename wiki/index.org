@@ -2,6 +2,8 @@
 
 Hello. Welcome to my Recurse Center Personal Wiki!
 
+My batch is over. See my @!(ref "retrospective")!@.
+
 My name is Paul (he/him). I like to make computers sing!
 During my batch (Summer 1 2024),
 I'll be exploring ways to get vocal synthesis working
