@@ -79,3 +79,4 @@ logs/078.txt
 logs/079.txt
 logs/080.txt
 logs/081.txt
+logs/082.txt
