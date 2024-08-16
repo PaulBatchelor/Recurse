@@ -48,6 +48,9 @@ Design Manual.
 
 @14:04 Trees and Graphs in TADM #read-TADM #timelog:00:55:41
 
+@15:10 Leetcode #LC75 #timelog:01:30:13
+104, 872, 1448 (partially, going to revisit soon)
+
 @2024-08-12 Leetcode Day.
 @08:50 Leetcode #LC75 #timelog:02:08:51
 1768, 1071, 1431, 605, 345, 151, 238
