@@ -13,4 +13,4 @@ should be pretty trivial to get at and store.
 @LC75 Leetcode 75
 Link: [[https://leetcode.com/studyplan/leetcode-75/]].
 
-@dbint Read Database Internals
+@reading-dbint Read Database Internals

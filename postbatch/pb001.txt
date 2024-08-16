@@ -31,6 +31,23 @@ I'm still logging time for long-term things, and
 that still seems worthwhile.
 @09:04 Logging things. #LC75
 
+@13:30 Read: An Algorithm For Passing Interviews. #read-algorithm-interviews #timelog:00:13:29
+Summary: The "Algorithm": there are usually 8 different
+kinds of things you can use to solve a given
+technical problem: Hash Tables, Linked Lists,
+Binary Trees, Depth First Search, Sorting, Dynamic
+Programming, Recursion. By asking about the runtime and
+seeing what the problem is asking for, things can usually
+be reduced to about 2-3 options.
+
+@13:48 Read section on Trees and Graphs #read-cracking-coding-interview #timelog:00:07:34
+This was a pretty short overview. Going to need
+to find more books/resources on the subject
+of Trees and Graph traversal. Off to The Algorithm
+Design Manual.
+
+@14:04 Trees and Graphs in TADM #read-TADM #timelog:00:55:41
+
 @2024-08-12 Leetcode Day.
 @08:50 Leetcode #LC75 #timelog:02:08:51
 1768, 1071, 1431, 605, 345, 151, 238
