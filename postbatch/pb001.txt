@@ -1,0 +1,70 @@
+@2024-08-16 Interrupting the Circle
+Years ago, I helped a friend of mine with their
+art installation. One of the things I helped out
+with was assembling a wall of glass shards from
+handblown orbs. The instructions given to me were:
+create a circle of glue, interrupt the circle, and
+place the shard.
+---
+Interrupt the circle. That was what she said. Where
+did she come up with that? The phrase left an
+impression on me, and I still think about it.
+---
+I think a large chunk of my adult life can be described
+in terms of circle-building and circle-interrupting.
+I show
+up somewhere, build a small routine that I follow
+religiously, then intentionally break that routine.
+The circle I made during RC was satisfying to build,
+its edges were perfectly round, the grooves etched
+in deep. Now, that beautiful circle is ready for
+interruption.
+---
+I've been trying to figure out how to continue
+to log things after my batch, or even if I should
+log things. I'm slowly transitioning to "job-hunt"
+mode. Is it even worth talking about? I'm doing
+very boring very tedious things, starting with
+a leetcode speedrun.
+---
+I'm still logging time for long-term things, and
+that still seems worthwhile.
+@09:04 Logging things. #LC75
+
+@2024-08-12 Leetcode Day.
+@08:50 Leetcode #LC75 #timelog:02:08:51
+1768, 1071, 1431, 605, 345, 151, 238
+@12:51 leetcode #LC75 #timelog:02:11:21
+334, 443, 283, 392, 11, 1679
+
+@19:36 B Tree Basics #reading-dbint #timelog:00:32:57
+
+@2024-08-13 Leetcode Day.
+@09:26 Leetcode #LC75 #timelog:00:27:55
+643.
+
+@10:00 Read up on Prefix Sum. #LC75 #timelog:00:18:09
+
+@12:14 Leetcode. #LC75 #timelog:01:58:57
+1456, 1004.
+
+@14:22 Leetcode. #LC75 #timelog:00:58:38
+1493, 1732, 724, 2215.
+
+@18:58 Reading. #reading-dbint #00:24:28
+
+@2024-08-14 Leetcode Day.
+@09:24 Leetcode. #LC75 #timelog:01:27:06
+1657, 2352, 2390, 735, 394
+
+@15:33 Leetcode. #LC75 #timelog:01:01:32
+933, 649
+
+@2024-08-15 Leetcode Day.
+@09:17 Leetcode. #LC75 #timelog:01:25:07
+2095, 328
+
+@13:15 Leetcode. #LC75 #timelog:02:10:46
+206, 2130
+
+@18:20 Reading. #reading-dbint #timelog:00:34:33
