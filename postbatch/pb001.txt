@@ -51,6 +51,16 @@ Design Manual.
 @15:10 Leetcode #LC75 #timelog:01:30:13
 104, 872, 1448 (partially, going to revisit soon)
 
+@19:38 Leetcode #LC75 #timelog:00:23:14
+1448. I gave up and looked it up. I was in the right
+direction with the recursive answer. C++ classes in the
+solution made it much easier. count was essentially kept
+as a global. When I didn't have to think about keeping
+track of that varibale in a recursive function, the problem
+and code got a lot easier to reason with. Lesson learned.
+
+@20:15 Started chapter 3: file formats. #reading-dbint #timelog:00:38:16
+
 @2024-08-12 Leetcode Day.
 @08:50 Leetcode #LC75 #timelog:02:08:51
 1768, 1071, 1431, 605, 345, 151, 238
