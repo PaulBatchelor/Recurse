@@ -23,3 +23,9 @@ I like using working.
 @investigate-xmrsplayer Investigate XMrsPlayer
 NEVERMIND. this didn't end up sounding all
 that good.
+
+@voxsculpt-preset-manager create preset manager for voxsculpt
+NEVERMIND. Ran out of time.
+
+@test-dz-log-task-linking proof of concept: link dagzet node to task via log entry
+NEVERMIND. Too much work, very little payoff.

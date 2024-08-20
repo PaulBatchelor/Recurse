@@ -273,3 +273,4 @@ link: [[https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-developmen
 
 @itparser-rust Implement IT parser in Rust
 
+@redblack-trees research red-black trees

@@ -1,0 +1,40 @@
+@2024-08-20 Another bookkeeping day.
+@08:57 Morning Bookkeeping
+Adding in time logs up to this point.
+@08:58 Check-in #LC75
+At this point, I have attempted about half the problems
+of LC75. I think I've chewed through most of the easy
+problems that I could do quickly. What remains are the
+sorts of problems I'll need to do more research into.
+I'm ready to slow down with these and change gears a
+little bit.
+
+@2024-08-17 Redblack tree day
+@10:11 trees #redblack-trees #timelog:01:01:21
+@13:30 even more trees. #redblack-trees #timelog:01:20:35
+@15:41 AVL trees (Knuth) #redblack-trees #timelog:00:45:12
+@18:52 DB Reading #reading-dbint #timelog:00:32:20
+cell layout, slotted pages, checksumming, managing
+variable-sized data
+
+@2024-08-18 Leetcode Day.
+@10:22 Leetcode. #LC75 #timelog:00:23:33
+437 (partial)
+@12:00 Leetcode. #LC75 #timelog:00:40:37
+437 (continued)
+@15:20 Leetcode #LC75 #timelog:01:17:53
+Even more 437.
+@19:10 Started Chapter 4: Implementing B-Trees #reading-dbint #timelog:00:41:35
+
+@2024-08-19 Leetcode Day.
+@09:47 Leetcode. #LC75 #timelog:01:21:30
+1372, 236
+
+@13:36 Leetcode. #LC75 #timelog:01:01:33
+199
+
+@16:06 Leetcode #LC75 #timelog:00:37:16
+1161, 700
+
+@19:45 End of chapter 4, beginning chapter 5: Transaction Processing and Recovery #reading-dbint #timelog:00:58:42
+

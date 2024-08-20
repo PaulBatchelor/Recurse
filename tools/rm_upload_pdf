@@ -1,11 +1,12 @@
+IP_ADDRESS=10.11.99.1
 if [ "$#" -eq 0 ]
 then
 echo "Usage: $0 filename.pdf"
 exit 1
 fi
-curl 'http://10.11.99.1/upload'\
-     -H 'Origin: http://10.11.99.1'\
+curl 'http://'$IP_ADDRESS'/upload'\
+     -H 'Origin: http://'$IP_ADDRESS \
      -H 'Accept: */*'\
-     -H 'Referer: http://10.11.99.1/'\
+     -H 'Referer: http://'$IP_ADDRESS'/'\
      -H 'Connection: keep-alive'\
-     -F "file=@$1;filename=$1;type=application/pdf"
+     -F "file=@$1;filename="$1";type=application/pdf"

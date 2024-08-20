@@ -81,3 +81,4 @@ logs/080.txt
 logs/081.txt
 logs/082.txt
 postbatch/pb001.txt
+postbatch/pb002.txt

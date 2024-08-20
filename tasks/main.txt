@@ -4,11 +4,7 @@
 where they are in the task list can be something that
 should be pretty trivial to get at and store.
 
-@test-dz-log-task-linking proof of concept: link dagzet node to task via log entry
-
 @dzgraph-hyperlinks make it possible to link dzgraphs
-
-@voxsculpt-preset-manager create preset manager for voxsculpt
 
 @LC75 Leetcode 75
 Link: [[https://leetcode.com/studyplan/leetcode-75/]].
