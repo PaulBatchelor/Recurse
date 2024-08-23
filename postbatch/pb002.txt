@@ -9,6 +9,8 @@ sorts of problems I'll need to do more research into.
 I'm ready to slow down with these and change gears a
 little bit.
 
+@19:22 Small bit of reading #reading-dbint #timelog:00:11:09
+
 @2024-08-17 Redblack tree day
 @10:11 trees #redblack-trees #timelog:01:01:21
 @13:30 even more trees. #redblack-trees #timelog:01:20:35
