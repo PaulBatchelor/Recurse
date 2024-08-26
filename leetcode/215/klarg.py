@@ -25,5 +25,22 @@ def kmax(nums, k):
 
     return kmax
 
+# This is adapted from the editorial. A little bit
+# cleaner than the guess I made
+
+def kmax2(nums, k):
+    h = []
+    heapq.heapify(h)
+
+    for n in nums:
+        heapq.heappush(h, n)
+        if len(h) == k:
+            heapq.heappop(h)
+
+    return heapq.heappop(h)
+
 out = kmax([3, 2, 1, 5, 6, 4], 2)
+assert(out == 5)
+
+out = kmax2([3, 2, 1, 5, 6, 4], 2)
 assert(out == 5)
