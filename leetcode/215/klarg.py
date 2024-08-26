@@ -34,7 +34,7 @@ def kmax2(nums, k):
 
     for n in nums:
         heapq.heappush(h, n)
-        if len(h) == k:
+        if len(h) > k:
             heapq.heappop(h)
 
     return heapq.heappop(h)
