@@ -1,4 +1,6 @@
 from pprint import pprint
+import bisect
+import math
 
 def potions_and_spells(spells, potions, success):
     potions.sort()
@@ -34,5 +36,25 @@ def potions_and_spells(spells, potions, success):
 
     return results
 
+# editorial version is a little fancier for binary
+# search, making use of built-in functions
+def potions_and_spells_v2(spells, potions, success):
+    potions.sort()
+    results = []
+    max_potion = potions[-1]
+    m = len(potions)
+    for s in spells:
+        min_potion = math.ceil(success / s)
+        if min_potion > max_potion:
+            results.append(0)
+        else:
+            idx = bisect.bisect_left(potions, min_potion)
+            results.append(m - idx)
+
+    return results
+
 out = potions_and_spells([5, 1, 3], [1, 2, 3, 4, 5], 7)
+assert(out == [4, 0, 3])
+
+out = potions_and_spells_v2([5, 1, 3], [1, 2, 3, 4, 5], 7)
 assert(out == [4, 0, 3])
