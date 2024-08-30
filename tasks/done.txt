@@ -276,3 +276,5 @@ link: [[https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-developmen
 @redblack-trees research red-black trees
 
 @adaptive-filtering-research Adaptive filtering research
+
+@priority-queue-heap-research Research: Priority Queue / Heap

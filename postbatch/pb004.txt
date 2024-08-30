@@ -1,0 +1,50 @@
+@2024-08-30 Bookkeeping
+@08:58 Bookkeeping
+This leetcode crap is taking so much longer than
+I expected. Ugh. I spend the most time working
+on problems related to data structures and algorithms
+I never actually looked at. The most effective
+strategy is to put the time into doing some research
+and studying sample problems before attempting
+the leetcode problems.
+
+@2024-08-25 Research: Priority Queue / Heap
+@12:55 Priority Heap Queue Research/Study #priority-queue-heap-research #timelog:01:16:09
+
+@2024-08-26 Leetcode Day
+
+@08:59 Leetcode #LC75 #timelog:01:03:03
+215, 2336, 2542
+
+@12:58 Leetcode #LC75 #timelog:01:28:42
+2542
+
+@19:15 Reading #reading-dbint #timelog:00:40:43
+
+@2024-08-27 Leetcode
+@10:06 Leetcode #LC75 #timelog:01:24:26
+2542 (continued), 2462, 
+
+@16:06 Leetcode #LC75 #timelog:00:26:35
+
+@19:40 Reading #reading-dbint #timelog:00:41:02
+
+@2024-08-28 Leetcode
+@09:56 Leetcode #LC75 #timelog:01:34:19
+374, 2300
+
+@13:20 Leetcode #LC75 #timelog:01:11:00
+2300, 162, 875
+
+@19:47 Leetcode #LC75 #timelog:01:14:35
+
+@2024-08-29 Leetcode Day, Dynamic Programming Resesarch
+@09:38 Leetcode #LC75 #timelog:01:30:15
+875, Reading about backtracking.
+
+@12:35 Leetcode #LC75 #timelog:01:08:15
+
+@14:06 Dynamic Programming Research #timelog:01:15:26
+Reading Skiena on Dynamic Programming.
+
+@19:05 Reading #reading-dbint #timelog:00:39:07

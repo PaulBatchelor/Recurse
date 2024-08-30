@@ -14,3 +14,5 @@ Link:
 @read-cracking-coding-interview Read Cracking The Coding Interview
 
 @read-TADM Read The Algorithm Design Manual
+
+@dynamic-programming-research Dynamic programming research
