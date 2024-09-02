@@ -8,6 +8,17 @@ strategy is to put the time into doing some research
 and studying sample problems before attempting
 the leetcode problems.
 
+@09:27 Leetcode #LC75 #timelog:01:52:19
+359, transcribed skiena string compare to Python
+
+@13:05 Leetcode #LC75 #timelog:02:20:29
+1137, 746
+
+@16:23 Leetcode #LC75 #timelog:00:54:56
+790
+
+@20:20 Reading: B-tree variants #reading-dbint #timelog:00:20:22
+
 @2024-08-25 Research: Priority Queue / Heap
 @12:55 Priority Heap Queue Research/Study #priority-queue-heap-research #timelog:01:16:09
 
