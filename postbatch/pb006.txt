@@ -1,0 +1,26 @@
+@2024-09-03 Nighthub
+
+@19:27 Back to this IT parser? #itparser-rust
+Do I still remember any Rust? I've got leetcode brainrot.
+---
+I never really finished this one. So, now I'm going to
+put some more effort into this one.
+
+@19:30 So many magic constants. yay. #itparser-rust
+
+@19:32 we are going to do it right now. #itparser-rust
+going to load things into a struct, create incremental
+unit tests. Maybe just one test is all that is needed
+right now.
+
+@19:56 Well, now I am taking some steps back. #itparser-rust
+Looking into burntsushi regex library in order to figure
+out how *they* set up tests.
+
+@20:08 Ugh. What a rabbit hole #itparser-rust
+I feel like I temporarily avoided this problem before.
+Now, I'm going to address it slightly more head-on.
+
+@21:03 More cargo fighting #itparser-rust
+
+@21:07 We got a test working in main. good enough #itparser-rust

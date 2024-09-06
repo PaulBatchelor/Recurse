@@ -16,3 +16,6 @@ Link:
 @read-TADM Read The Algorithm Design Manual
 
 @dynamic-programming-research Dynamic programming research
+
+@itparser-rust Implement IT parser in Rust
+

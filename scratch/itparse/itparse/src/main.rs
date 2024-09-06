@@ -3,6 +3,12 @@ use std::io;
 use std::io::prelude::*;
 use std::str;
 
+struct ImpulseTrackerModule {}
+
+impl ImpulseTrackerModule {
+    pub fn load_from_buffer(buffer: &[f32]) -> Self {}
+}
+
 fn main() -> io::Result<()> {
     let mut f = File::open("../small2.it")?;
     let mut buffer = Vec::new();
@@ -76,7 +82,7 @@ fn main() -> io::Result<()> {
 
         if channel_variable == 0 {
             row_pos += 1;
-            println!("new row: {}", row_pos);
+            //println!("new row: {}", row_pos);
             continue;
         }
 
@@ -139,4 +145,12 @@ fn main() -> io::Result<()> {
     }
 
     Ok(())
+}
+
+#[test]
+fn test_load_buffer() {
+    let mut f = File::open("../small2.it").unwrap();
+    let mut buffer = Vec::new();
+    f.read_to_end(&mut buffer).unwrap();
+    let it = ImpulseTrackerModule::load_from_buffer(&buffer);
 }
