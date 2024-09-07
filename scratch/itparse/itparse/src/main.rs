@@ -3,10 +3,39 @@ use std::io;
 use std::io::prelude::*;
 use std::str;
 
-struct ImpulseTrackerModule {}
+struct ImpulseTrackerModule {
+    title: String,
+    ninstr: u16,
+    nsamps: u16,
+    npatts: u16,
+    cwt: u16,
+    cmwt: u16,
+}
+
+pub fn mknum(buffer: &[u8], pos: usize) -> u16 {
+    u16::from_le_bytes(buffer[pos..(pos + 2)].try_into().unwrap())
+}
 
 impl ImpulseTrackerModule {
-    pub fn load_from_buffer(buffer: &[f32]) -> Self {}
+    pub fn load_from_buffer(buffer: &[u8]) -> Self {
+        // TODO: check header, validate for valid IT module
+        let title = str::from_utf8(&buffer[0x4..0xf]).unwrap();
+        let ord_num: u16 = buffer[0x20] as u16 | ((buffer[0x21] as u16) << 8);
+        //let ninstr: u16 = u16::from_le_bytes(buffer[0x22..0x24].try_into().unwrap());
+        let ninstr: u16 = mknum(buffer, 0x22);
+        let nsamps: u16 = mknum(buffer, 0x24);
+        let npatts: u16 = mknum(buffer, 0x26);
+        let cwt: u16 = mknum(buffer, 0x28);
+        let cmwt: u16 = mknum(buffer, 0x2a);
+        ImpulseTrackerModule {
+            title: title.to_string(),
+            ninstr,
+            nsamps,
+            npatts,
+            cwt,
+            cmwt,
+        }
+    }
 }
 
 fn main() -> io::Result<()> {
@@ -153,4 +182,9 @@ fn test_load_buffer() {
     let mut buffer = Vec::new();
     f.read_to_end(&mut buffer).unwrap();
     let it = ImpulseTrackerModule::load_from_buffer(&buffer);
+    dbg!(&it.title);
+    assert!(it.title == "pauls song\0");
+    assert!(it.ninstr == 2);
+    assert!(it.nsamps == 1);
+    assert!(it.npatts == 1);
 }
