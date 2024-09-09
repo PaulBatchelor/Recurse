@@ -3,6 +3,7 @@ use std::io;
 use std::io::prelude::*;
 use std::str;
 
+#[allow(dead_code)]
 struct ImpulseTrackerModule {
     title: String,
     ninstr: u16,
@@ -10,6 +11,15 @@ struct ImpulseTrackerModule {
     npatts: u16,
     cwt: u16,
     cmwt: u16,
+}
+
+#[allow(dead_code)]
+#[derive(Default, Debug)]
+struct PatternCell {
+    note: Option<u8>,
+    instr: Option<u8>,
+    volpan: Option<u8>,
+    cmd: Option<u8>,
 }
 
 pub fn mknum(buffer: &[u8], pos: usize) -> u16 {
@@ -100,18 +110,32 @@ fn main() -> io::Result<()> {
     let pat_start = pat_off + 8;
     let mut prev_mask_variable = 0;
 
+    // TODO: last_note should be sized based
+    // on numbre of channels. I don't think this
+    // is explicitely stated anywhere, so it might
+    // have to be a growing vector.
     let mut last_note: [u8; 4] = [0; 4];
+    // TODO: these "last" values are on a per-channel
+    // basis
     let mut last_instr = 0;
     let mut last_volpan = 0;
     let mut last_command = 0;
     let mut row_pos = 0;
+
+    // TODO: create PatternCell vector
+    // TODO: sparse way to represent pattern data?
+    // maybe it could be some kind of lookup table
+    // structure?
+
     while i < pat_len as usize {
+        // Each iteration in this loop corresponds
+        // to a single "cell" in the loop
         let channel_variable = buffer[pat_start + i];
         i += 1;
 
         if channel_variable == 0 {
             row_pos += 1;
-            //println!("new row: {}", row_pos);
+            println!("new row: {}", row_pos);
             continue;
         }
 
@@ -170,6 +194,7 @@ fn main() -> io::Result<()> {
             dbg!(last_command);
         }
 
+        // TODO: append pattern cell
         prev_mask_variable = mask_variable;
     }
 
@@ -187,4 +212,15 @@ fn test_load_buffer() {
     assert!(it.ninstr == 2);
     assert!(it.nsamps == 1);
     assert!(it.npatts == 1);
+}
+
+#[test]
+fn test_pattern_cell_init() {
+    let mut pc = PatternCell::default();
+    assert!(pc.note.is_none());
+    assert!(pc.instr.is_none());
+    assert!(pc.volpan.is_none());
+    assert!(pc.cmd.is_none());
+
+    pc.note = Some(60);
 }
