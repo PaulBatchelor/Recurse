@@ -266,6 +266,7 @@ in HTML.
 (ww-add-link "week11" "wiki/week11.org")
 (ww-add-link "week12" "wiki/week12.org")
 (ww-add-link "retrospective" "wiki/retrospective.org")
+(ww-add-link "my_bass" "wiki/my_bass.org")
 
 # sync and close
 

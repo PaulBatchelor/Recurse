@@ -1,0 +1,136 @@
+#+TITLE: The Story of My Bass
+(Typos and all.)
+
+* This is My Bass
+This is my Bass in Massachusetts on August 31st, 2024.
+I asked my Dad to take this picture on my behalf so I would
+have a good picture to show. "One without the creepy chair"
+my Dad says.
+
+@!(img "/res/recurse/my_bass/my_bass.jpg" "my bass")!@
+* We've been to places together
+** A recording studio
+I am 21 years old. I am playing my bass in an EPD recording studio
+at the Berklee College of Music in Boston, MA. We are filming a promotional
+video for a spectral audio effects app for the iPad.
+
+This video is on youtube, if you know where to look.
+@!(img "/res/recurse/my_bass/csspectral_cropped.jpg" "csspectral")!@
+
+** Another kind of recording studio
+Here I am in another recording studio of sorts. I am 22 years old,
+and I am playing my bass in an abadoned train tunnel in
+Boston. I am part of a team helping my friend with her final
+project at Berklee: an art installation using the medium of
+glass and sound, exploring themes of decay and time.
+
+This video is also on youtube, if you know where to look.
+
+@!(img "/res/recurse/my_bass/things_over_time.jpg" "things over time")!@
+* I've known my bass since before it was born
+I am 17 years old. I am in a small violin shop in Cambridge, England
+planing wood that
+would eventually turn into the neck of my bass, years later.
+I have no idea what I'm doing.
+
+I'm thinking about music as a career, and
+looking at music schools. "I'm not insane, only half insane",
+I think to myself, and think audio engineering could be
+a good compromise. I also have been making electronic music
+with computers, so maybe there's something to that as well...
+@!(img "/res/recurse/my_bass/paul_with_plane_1.jpg" "paul with the plane")!@
+I am not the one in charge here. My responsibility was simple:
+"You do grunt work". The one calling the shots is my Aunt Marj:
+@!(img "/res/recurse/my_bass/marj_with_plane.jpg" "marj with the plane")!@
+* The Luthier
+A luthier is one who builds stringed instruments such as
+violin, viola, cello, or even bass. My Aunt started making
+instruments at a local violin making shop for her children
+to play, but gradually started making instruments for friends
+and extended family.
+
+@!(img "/res/recurse/my_bass/front_with_marj.jpg" "front with Marj")!@
+
+My Aunt also made me a violin, right before I dropped it
+and switched to bass. She told me in no uncertain terms that
+she would not be building a bass for me.
+* How to measure time in a violin shop
+Time in a violin shop is measured in shavings, one fraction
+of a millimeter at a time. It is demarcated with planes,
+gouges, and chisels. No power tools.
+
+@!(img "/res/recurse/my_bass/bag_of_shavings.jpg" "")!@
+@!(img "/res/recurse/my_bass/back_with_shavings.jpg" "")!@
+
+@!(img "/res/recurse/my_bass/tools.jpg" "tools")!@
+@!(img "/res/recurse/my_bass/big_plane.jpg" "")!@
+@!(img "/res/recurse/my_bass/thumb_plane_1.jpg" "")!@
+* ...they let me carve the scroll
+It turns out with the proper supervision, this is the sort
+of thing that's hard to screw up.
+@!(img "/res/recurse/my_bass/carving_scroll.jpg" "Carving the Scroll")!@
+@!(img "/res/recurse/my_bass/chiseling_the_scroll.jpg" "Chiseling the Scroll")!@
+@!(img "/res/recurse/my_bass/scroll_some_progress.jpg" "Some progress with the Scroll")!@
+@!(img "/res/recurse/my_bass/scroll_with_pegbox.jpg" "Scroll with the pegbox")!@
+
+One of the brass tuning mechanisms for my bass. These were
+custom built.
+
+@!(img "/res/recurse/my_bass/tuning_machine.jpg" "")!@
+* The Character of Wood
+My bass is made out of various kinds of wood, each
+chosen for their particular material properties.
+
+This is the front of my bass. It is made of Spruce. Spruce is a curious
+kind of wood, whose grain is a striped layer cake of very
+dense material followed by a soft material with the consistency
+of marshmallow. The result is a lightweight and flexible
+wood. The "flappability" of Spruce is ideal for resonance
+and vibration.
+
+@!(img "/res/recurse/my_bass/front.jpg" "front")!@
+
+This back of my bass. It is made of maple. Maple is a hard
+wood. It is robust and solid. It is used for the back for
+its reflective qualities.
+
+@!(img "/res/recurse/my_bass/back.jpg" "back")!@
+
+These are the nut and fingerboard of my bass. They are made of
+Ebony. Ebony is an even harder wood than maple. It is the
+traditional material used for black piano keys and fingerboards
+on stringed instruments.
+
+@!(img "/res/recurse/my_bass/nut.jpg" "nut")!@
+
+Note the light swirls in the wood. This actually makes it
+a lower quality piece of Ebony. I think it's pretty, and
+we were happy to find a large enough chunk of it.
+
+@!(img "/res/recurse/my_bass/fingerboard_1.jpg" "fingerboard 1")!@
+
+@!(img "/res/recurse/my_bass/fingerboard_2.jpg" "fingerboard 2")!@
+* The stressful bits
+Note how the back is sticking up in this picture as it is
+resting on the ribs. We're about to score and cut the back,
+effectively cracking it a little bit.
+@!(img "/res/recurse/my_bass/aligning_the_back.jpg" "aligning the back")!@
+
+Cutting the f-holes. After all that work getting the front
+right, and suddenly we had to use a saw.
+
+@!(img "/res/recurse/my_bass/cutting_f_holes.jpg" "cutting the f-holes")!@
+
+Bending the ribs were by far the most stressful part. It
+required bending millimeter-thick strips of wood on an iron.
+Cracking was a big risk, and there were no backups.
+
+@!(img "/res/recurse/my_bass/ribs.jpg" "ribs")!@
+* Varnishing and Departure
+@!(img "/res/recurse/my_bass/varnishing.jpg" "")!@
+
+How does one transport a Bass from England to the United
+States? We decided to go by boat! My Aunt took the Queen Mary
+2 from London to New York City.
+
+@!(img "/res/recurse/my_bass/marj_queen_mary.jpg" "Marj on The Queen Mary")!@
