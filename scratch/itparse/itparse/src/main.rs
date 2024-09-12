@@ -1,3 +1,4 @@
+use serde::Serialize;
 use std::fs::File;
 use std::io;
 use std::io::prelude::*;
@@ -14,15 +15,19 @@ struct ImpulseTrackerModule {
 }
 
 #[allow(dead_code)]
-#[derive(Default, Debug)]
+#[derive(Default, Debug, Serialize)]
 struct PatternCell {
+    #[serde(skip_serializing_if = "Option::is_none")]
     note: Option<u8>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     instr: Option<u8>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     volpan: Option<u8>,
+    #[serde(skip_serializing_if = "Option::is_none")]
     cmd: Option<u8>,
 }
 
-#[derive(Debug)]
+#[derive(Debug, Serialize)]
 struct PatternCellData {
     channel: u8,
     row: u8,
@@ -226,7 +231,9 @@ fn main() -> io::Result<()> {
         patterns.push(pat);
     }
 
-    dbg!(patterns.len());
+    let serialized = serde_json::to_string(&patterns).unwrap();
+    dbg!(serialized);
+    //dbg!(patterns.len());
 
     Ok(())
 }
