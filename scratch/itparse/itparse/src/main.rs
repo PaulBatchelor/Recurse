@@ -38,12 +38,12 @@ pub fn mknum(buffer: &[u8], pos: usize) -> u16 {
     u16::from_le_bytes(buffer[pos..(pos + 2)].try_into().unwrap())
 }
 
+#[allow(dead_code)]
 impl ImpulseTrackerModule {
     pub fn load_from_buffer(buffer: &[u8]) -> Self {
         // TODO: check header, validate for valid IT module
         let title = str::from_utf8(&buffer[0x4..0xf]).unwrap();
-        let ord_num: u16 = buffer[0x20] as u16 | ((buffer[0x21] as u16) << 8);
-        //let ninstr: u16 = u16::from_le_bytes(buffer[0x22..0x24].try_into().unwrap());
+        let _ord_num: u16 = buffer[0x20] as u16 | ((buffer[0x21] as u16) << 8);
         let ninstr: u16 = mknum(buffer, 0x22);
         let nsamps: u16 = mknum(buffer, 0x24);
         let npatts: u16 = mknum(buffer, 0x26);
@@ -73,7 +73,7 @@ fn parse_pattern(
     let pat_off = u32::from_le_bytes(buffer[pat_off..(pat_off + 4)].try_into().unwrap()) as usize;
 
     let pat_len = buffer[pat_off] as u16 | ((buffer[pat_off + 1] as u16) << 8);
-    let pat_rows = buffer[pat_off + 2] as u16 | ((buffer[pat_off + 3] as u16) << 8);
+    let _pat_rows = buffer[pat_off + 2] as u16 | ((buffer[pat_off + 3] as u16) << 8);
     let mut i = 0;
     let pat_start = pat_off + 8;
     let mut prev_mask_variable = 0;
@@ -92,7 +92,6 @@ fn parse_pattern(
     let mut row_pos = 0;
 
     let mut max_chan = 0;
-    let mut ncells = 0;
     let mut pat: Vec<PatternCellData> = vec![];
 
     while i < pat_len as usize {
@@ -107,7 +106,6 @@ fn parse_pattern(
             row_pos += 1;
             continue;
         }
-        ncells += 1;
 
         let mask_variable;
 
@@ -131,8 +129,6 @@ fn parse_pattern(
             }
             last_note[channel] = note;
             i += 1;
-            //dbg!(channel, note);
-            println!("NOTE {} {} {}", row_pos, channel, note);
             pc.note = Some(note);
         }
 
@@ -144,7 +140,6 @@ fn parse_pattern(
             last_instr[channel] = instr;
             i += 1;
             pc.instr = Some(instr);
-            dbg!(instr);
         }
 
         if (mask_variable & 4) > 0 {
@@ -154,7 +149,6 @@ fn parse_pattern(
             }
             last_volpan[channel] = volpan;
             i += 1;
-            //dbg!(volpan);
         }
 
         if (mask_variable & 8) > 0 {
@@ -164,7 +158,6 @@ fn parse_pattern(
             }
             i += 1;
             last_command[channel] = command;
-            //dbg!(command);
         }
 
         if (mask_variable & 16) > 0 {
@@ -183,7 +176,6 @@ fn parse_pattern(
             pc.cmd = Some(last_command[channel]);
         }
 
-        dbg!(&pc);
         prev_mask_variable = mask_variable;
         pat.push(PatternCellData {
             channel: channel as u8,
@@ -201,29 +193,16 @@ fn main() -> io::Result<()> {
 
     f.read_to_end(&mut buffer)?;
 
-    println!("{}", buffer.len());
+    let _str = str::from_utf8(&buffer[0..4]).unwrap();
 
-    //dbg!(&buffer[0..4]);
-
-    let str = str::from_utf8(&buffer[0..4]).unwrap();
-    //dbg!(str);
-
-    let title = str::from_utf8(&buffer[0x4..0xf]).unwrap();
-    //dbg!(title);
+    let _title = str::from_utf8(&buffer[0x4..0xf]).unwrap();
 
     // OrdNum
-    //dbg!(&buffer[0x20..0x22]);
     let ord_num: u16 = buffer[0x20] as u16 | ((buffer[0x21] as u16) << 8);
-    //dbg!(ord_num);
     let ins_num: u16 = buffer[0x22] as u16 | ((buffer[0x23] as u16) << 8);
-    //dbg!(ins_num);
     let smp_num: u16 = buffer[0x24] as u16 | ((buffer[0x25] as u16) << 8);
-    //dbg!(smp_num);
     let pat_num: u16 = buffer[0x26] as u16 | ((buffer[0x27] as u16) << 8);
-    //dbg!(pat_num);
-    let cwt_v: u16 = buffer[0x28] as u16 | ((buffer[0x29] as u16) << 8);
-    //dbg!(cwt_v);
-    //let ord_num = &buffer[0x20..0x22].from_le();
+    let _cwt_v: u16 = buffer[0x28] as u16 | ((buffer[0x29] as u16) << 8);
 
     let mut patterns = vec![];
     for i in 0..pat_num {
@@ -232,8 +211,8 @@ fn main() -> io::Result<()> {
     }
 
     let serialized = serde_json::to_string(&patterns).unwrap();
-    dbg!(serialized);
-    //dbg!(patterns.len());
+
+    println!("{}", serialized);
 
     Ok(())
 }
