@@ -1,0 +1,18 @@
+8/12:334:try ou tmy solution
+8/12:238:understand their solution better
+8/12:443:pretty much the same, they used built-in str2num
+8/12:283:Figured out suboptimal, optimal with swaps worth study
+8/12:393:Almost got 2-pointer right. This editorial is ridiculous though, but covers more fancy algos
+8/12:11:looked at this one before
+8/12:1679:Struggled figuring it out 2 pointer, worth looking into more (many solutions)
+8/13:643:Unintuitive solutions. prefix sum
+8/13:1456:Better intuition for efficient sliding window needed
+8/13:1004:Revist. Reference and attempt failed.
+8/13:1493:Seems like 1004, wait on it
+8/13:1732:Trivial
+8/13:724:Trivial
+9/19:121:Two-pointer solution. Implementation seems to work.
+9/19:1:hashmap solution
+9/19:238:Tricky. Ended up using 2 product sum tables together. I attempted this one before?
+9/19:226:Used recursive DFS approach to invert binary tree.
+9/19:3:It seems to work using a hashmap and linear sweep, though I am skeptical about correctness.
