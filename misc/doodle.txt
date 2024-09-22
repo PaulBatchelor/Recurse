@@ -1,0 +1,43 @@
+@2024-09-22 Notes
+@14:11 Tilt: something to do with Kubernetes
+"Are your servers running locally? In Kubernetes? Both?
+Tilt gives you smart rebuilds and live updates everywhere
+so that you can make progress." [[https://tilt.dev/]].
+
+@14:14 Flask backend, entry point: server/index.py
+
+@14:17 flask_socketio, web socket stuff?
+I actually don't really know much about websockets. Every
+time I've heard about them, they've been used as a way to
+shove data into a browser from an unusual source.
+---
+Looking up things on wikipedia.
+
+@14:20 Going right to the RFC because I'm a grown-up. RFC 6455.
+"The goal of this technology is to provide a mechanism for browser-based
+applications that need two-way communication with servers that does
+not rely on opening multiple HTTP connections (e.g., using
+XMLHttpRequest or <iframe>s and long polling)."
+---
+In other words, this is probably a faster way to communicate
+with a backend. So, if you're doing things like setting up
+an editor that involves constantly sending many commands,
+you'd probably want this.
+
+@14:32 What is double star in python again?
+When used to populate a dictionary, it kind of acts like
+spread syntax. Got it. It's also seems to be used for
+variadic functions (single-star: variadic args,
+double-star: variadic named args)
+
+@14:49 Client sockets done on frontend in typescript using socket.io
+"Socket.IO is a library that enables low-latency, bidirectional
+and event-based communication between a client and a server."
+---
+see: [[https://socket.io/docs/v4/]].
+---
+Looks like they cover a few different transport layer types,
+not just websockets. They also do HTTP long-polling (is this the "old school"
+way to do it?) and WebTransport (this seems "new school")
+@14:51 Web transport is indeed very new.
+See: [[https://developer.mozilla.org/en-US/docs/Web/API/WebTransport_API]].
