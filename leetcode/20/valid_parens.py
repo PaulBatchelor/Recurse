@@ -8,11 +8,11 @@ def valid_parens(s):
             if len(stack) == 0:
                 return False
             p = stack[-1]
-            if p == '{' and s[n] == '}':
-                stack.pop()
-            elif p == '(' and s[n] == ')':
-                stack.pop()
-            elif p == '[' and s[n] == ']':
+            matching = \
+                p == '{' and s[n] == '}' or \
+                p == '(' and s[n] == ')' or \
+                p == '[' and s[n] == ']'
+            if matching:
                 stack.pop()
             else:
                 return False
