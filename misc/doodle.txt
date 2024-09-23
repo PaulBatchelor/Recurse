@@ -41,3 +41,36 @@ not just websockets. They also do HTTP long-polling (is this the "old school"
 way to do it?) and WebTransport (this seems "new school")
 @14:51 Web transport is indeed very new.
 See: [[https://developer.mozilla.org/en-US/docs/Web/API/WebTransport_API]].
+
+@2024-09-23 Future merge conflicts yay.
+
+@17:03 Digging into Canvas more.
+
+@17:10 Exclamation is a way to declare that value cannot be null in typescript
+It's a way of helping the typescript checker, from the
+looks of it. Or at least keeping it from complaining.
+---
+Context, Getting the current HTMLCanvasElement from ref: =ref.current!=
+---
+https://stackoverflow.com/questions/42273853/in-typescript-what-is-the-exclamation-mark-bang-operator-when-dereferenci
+
+@17:14 React docs on working with effects
+"Synchronizing with Effects" 
+[[https://react.dev/learn/synchronizing-with-effects]]
+
+@17:39 fillPixel() is the actual "draw the pixel" in TS
+
+@17:48 fillPixel makes websocket call to backend with type of "pixelPainted".
+This seems to update internal state in the canvas in Flask.
+It looks like the data structure used is a hashmap with the
+2d coordinate specified as a "x,y" key.
+
+@17;57 fillPixel2: also used with fillPixel
+This one seems to be used with websockets to update the
+canvas. fillPixel() sends a message from the client
+to the server. The server receives the message, and then
+broadcasts a message with that payload data in it (x, y,
+colour). The message is then received by the client,
+and makes a call to fillPixel2() with that new data.
+
+@18:03 I do not know what the lambda code is doing
