@@ -1,0 +1,99 @@
+@2024-09-24
+@16:51 Grind75 has literature to go with it. reading some of that.
+Link [[https://github.com/yangshun/tech-interview-handbook]].
+---
+Dagezt ref: @!(dzref "prep/tech_interview_handbook")!@.
+---
+Found @!(dzref "prep/frontend_interview_handbook")!@ as well.
+
+@17:02 I've done a fair bit of LC questions from LC75, strategize next steps
+I don't know how much time I'm going to give myself. I do feel
+a bit more confident about the leetcode stuff.
+---
+Not that I'm a bit more settled, I'm trying to get the
+hours in. It's tough being in a new place and settling.
+---
+I think what I need to do is be particular about which
+problems I work on, and why. Will follow up on this at
+some point.
+
+@17:04 Reading bits of the frontend interview handbook
+I think I'm going to be going into more fullstack jobs,
+so this seems like something to read. I am going to read
+the table of contents and try ot get a sense for how long
+this book actually is.
+
+@17:09 Frontend Interview Handbook thoughts
+There's a lot I don't know, but these feel like attainable
+unknowns.
+
+@17:22 Going to just manually write some notes on jobs
+
+@17:38 Walrus operator? Walrus Operator.
+@!(dzref "python/walrus_operator")!@.
+
+@18:02 Well, the numbers are in.
+I went to the jobs search page, filtered by "new york city",
+and hand typed the tags for all the jobs that showed up.
+I then wrote a python program to parse the data and give
+me count aggregates. JavaScript and TypeScript tied with
+21 instances. The runner-up was react, followed by python.
+---
+
+@18:11 The high-level conclusions.
+flexibility on employability is
+going to involve a fair bit of front-end experience. My guess
+is that this is due to a number of these being startups that
+need a shiny looking product.
+---
+I think I need to pursue frontend. Learning typescript
+is a safe bet. Learning javascript is a safe bet. React
+is still a reasonable enough thing to be learning.
+---
+I think my full-stack learning path is going to be top-down.
+Starting with making pretty things in the browser, then
+gradually getting those pretty things hooked up to
+backend things. It's the most distant from my skillset
+right now.
+
+@18:21 The plan
+Resources to look into first: @!(dzref "prep/frontend_mentor")!@
+as well as @!(dzref "prep/frontend_interview_handbook")!@.
+I want to get comfortable enough building conventional industry
+standard things.
+---
+I'm trying to see the forest from the trees. What exactly
+are we doing here? I don't need to "learn to code". I've
+been doing that. I need to learn to think differently about
+software. In my work, I touch computers differently than
+how web developers touch computers.
+So yes, I'm learning "tools" instead of "code"
+right now, but only to the point that I can understand
+how people approach computers.
+---
+Frontend UI stuff seems to have a language and grammar to it.
+They are the building blocks that go into building what we see
+as a "product" for "users". Tools in this ecosystem are ultimately
+built in the name of a commercial "product". Learning how to
+go along the grain of these tools will help be better form
+project ideas that are distinct as well as educational.
+---
+For example: A software synthesizer, in many ways, goes
+against the grain of a typical web app. It has a interactive
+visual vocabulary that was developed independently of the web.
+When you try to build a synth for the web the way you
+build a VST, you get something that feels out of place.
+My Trio demo feels out of place. It was built based on
+my experience designing for tablets and mobile phones. The
+only "webby" thing it has going for is that it has a URL.
+The rest of it blindly copies conventions from a different
+medium.
+---
+I have my qualms about web audio, but sound design and
+music composition are areas of distinction for me. I should
+probably use some of those chops for another web-based
+project. This next web project needs to go with the grain
+of the web zeitgest. It'll have a "frontend", not just
+a canvas. It will feel like a "product". It could have
+"users". There will be sound, yes. But that sound will
+be driven by some kind of data.
