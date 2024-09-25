@@ -11,4 +11,17 @@ Going through the "Getting Started" bits on Frontend Mentor.
 @13:28 First challenge sort of done?
 
 @13:37 Back to Grind75
-Onto a medium problem.
+53, 57
+
+@14:56 How to run small chunks of typescript code?
+This is the only way I'm going to be able to grok
+typescript.
+---
+Nevermind. Just typing code is good enough.
+
+@15:27 Currently just typing in typescript code
+
+@15:35 "typescript in 5 minutes" finished (in more than 5 minutes)
+Now, onto reading bits of the typescript handbook.
+
+@15:56 Finished reading "the basics" from typescript handbook
