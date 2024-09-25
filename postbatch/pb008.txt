@@ -1,0 +1,11 @@
+@2024-09-25
+@10:28 Beginning Grind75
+125, 242, 704, 733
+@11:31 I need to filter out easy problems
+For the most part, they don't feel helpful enough.
+Turns out there's a button to filter these.
+
+@12:18 Frontend Mentor Diving
+Going through the "Getting Started" bits on Frontend Mentor.
+
+@13:28 First challenge sort of done?
