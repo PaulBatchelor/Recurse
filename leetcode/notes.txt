@@ -20,3 +20,5 @@
 9/22:1456:Sliding window solution implemented.
 9/23:20:Feels like a pretty standard linear time solution, what's a clean way in python to handle tedious chain of conditions?
 9/23:21:I still get confused about when to use logical OR vs AND. This linked list problem was fine other than that
+9/25:125:solved using built-in python3 preprocessing, and also two-pointer
+9/25:242:solved using hashmap comparisons, as well as sorting and comparing strings
