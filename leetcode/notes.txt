@@ -22,3 +22,4 @@
 9/23:21:I still get confused about when to use logical OR vs AND. This linked list problem was fine other than that
 9/25:125:solved using built-in python3 preprocessing, and also two-pointer
 9/25:242:solved using hashmap comparisons, as well as sorting and comparing strings
+9/25:704:It took me a while to coordinate the binary search incantation correctly
