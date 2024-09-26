@@ -12,3 +12,7 @@ tasks that I intend to work on in the next few days or so.
 @grind75 Grind75
 
 @read-typescript-handbook Read the typescript handbook
+
+@read-js-triva frontend guide: js trivia initial read
+
+@frontend-mentor Frontend Mentor
