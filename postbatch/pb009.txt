@@ -4,3 +4,5 @@
 Tasking this out now, as well as timing it.
 ---
 542, 973
+
+@11:12 Going to try to implement quickselect in python
