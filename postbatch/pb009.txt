@@ -21,3 +21,5 @@ attempting to overcome a weak language people are
 forced to write stuff in.
 
 @15:32 Frontend Mentor stuff #frontend-mentor #timelog:01:02:52
+
+@17:07 DB internals reading #reading-dbint #timelog:00:45:24

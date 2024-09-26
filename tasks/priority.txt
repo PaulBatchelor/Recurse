@@ -18,3 +18,5 @@ tasks that I intend to work on in the next few days or so.
 @frontend-mentor Frontend Mentor
 
 @flashcard-mvp Create MVP for flashcard system
+
+@reading-dbint Read Database Internals

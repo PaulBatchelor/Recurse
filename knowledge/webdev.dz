@@ -138,3 +138,7 @@ hl https://12factor.net/
 ln The 12-factor app is a methodlogy for building
 ln software-as-a-service apps.
 rm found via zulip.
+
+nn mdxjs
+ln MDX lets you use JSX in your markdown content.
+hl https://mdxjs.com/
