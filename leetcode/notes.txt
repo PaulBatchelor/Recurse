@@ -27,3 +27,4 @@
 9/25:53:I knew the solution involved sliding window and 2-pointer, but it took me a while to get it right.
 9/25:57:The problem intimidated me, but I think I came up with a decent enough 2-step approach.
 9/26:542:Treated this as a BFS problem with a double queue.
+9/26:973:Solved it using a mix of a hashmap and a max-heap. The main approach was simpler, used less data structures and had similar time complexity (though distance was computed more times).
