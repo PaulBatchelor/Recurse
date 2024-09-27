@@ -24,7 +24,7 @@ updated.
 
 @13:41 Grind75 #grind75 #timelog:01:41:23
 
-@16:47 3summing research #grind75 #timelog:00:10:23
+@16:47 3summing research #grind75 #timelog:00:47:50
 What's tough here is the acceptance criteria. It needs to be
 3 unique indices and the combination itself needs to be
 unique. Having the nested 3-loop is cleaner because the variables
