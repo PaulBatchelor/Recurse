@@ -1,0 +1,48 @@
+@2024-09-25
+@10:28 Beginning Grind75
+125, 242, 704, 733
+@11:31 I need to filter out easy problems
+For the most part, they don't feel helpful enough.
+Turns out there's a button to filter these.
+
+@12:18 Frontend Mentor Diving
+Going through the "Getting Started" bits on Frontend Mentor.
+
+@13:28 First challenge sort of done?
+
+@13:37 Back to Grind75
+53, 57
+
+@14:56 How to run small chunks of typescript code?
+This is the only way I'm going to be able to grok
+typescript.
+---
+Nevermind. Just typing code is good enough.
+
+@15:27 Currently just typing in typescript code
+
+@15:35 "typescript in 5 minutes" finished (in more than 5 minutes)
+Now, onto reading bits of the typescript handbook.
+
+@15:56 Finished reading "the basics" from typescript handbook
+
+@16:16 Front End Interview Handbook time?
+I've already peaked at the intor pages. Now, to begin
+the initial dive.
+---
+Starting with: "Trivia Questions"
+---
+uh oh. I don't know anything about javascript.
+
+@17:01 ouch my head hurts
+Losing energy and focus. May Need another break.
+
+@17:18 Attempting to read more about database internals
+I'm trying to do less notetaking, get the reading to be
+faster.
+
+@17:52 That's enough reading. I'm tired.
+I managed to get about 30min in. And I finished up what
+ended up being a very academic chapter. I am now on
+"Log Structured Storage", which is familiar territory since
+I read abou tit in DDIA.

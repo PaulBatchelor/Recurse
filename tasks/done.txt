@@ -276,3 +276,14 @@ link: [[https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-developmen
 @adaptive-filtering-research Adaptive filtering research
 
 @priority-queue-heap-research Research: Priority Queue / Heap
+
+@retrospective work on retrospective
+
+@read-algorithm-interviews Read "An Algorithm For Passing Interviews"
+Link: 
+[[https://malisper.me/an-algorithm-for-passing-programming-interviews/]].
+
+@dynamic-programming-research Dynamic programming research
+
+@blob-coax Create "blob" eat/coax mechanics program
+

@@ -1,0 +1,18 @@
+ns javascript
+gr things related to the javascript programming language
+
+nn js_questions
+ln Front End Interview: JavaScript Questions
+hl https://www.frontendinterviewhandbook.com/javascript-questions
+
+nn how_event_delegation_works
+hl https://davidwalsh.name/event-delegate
+ln how event delegation works
+co $ js_questions
+cr found via
+
+nn simple_rules_to_this
+hl https://codeburst.io/the-simple-rules-to-this-in-javascript-35d97f31bde3
+ln The Simple Rules to "this" in JavaScript
+co $ js_questions
+cr found via

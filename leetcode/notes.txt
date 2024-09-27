@@ -20,3 +20,11 @@
 9/22:1456:Sliding window solution implemented.
 9/23:20:Feels like a pretty standard linear time solution, what's a clean way in python to handle tedious chain of conditions?
 9/23:21:I still get confused about when to use logical OR vs AND. This linked list problem was fine other than that
+9/25:125:solved using built-in python3 preprocessing, and also two-pointer
+9/25:242:solved using hashmap comparisons, as well as sorting and comparing strings
+9/25:704:It took me a while to coordinate the binary search incantation correctly
+9/25:733:Went with recursive flood fill solution. Hardest part was making sure my test scaffolding was correct.
+9/25:53:I knew the solution involved sliding window and 2-pointer, but it took me a while to get it right.
+9/25:57:The problem intimidated me, but I think I came up with a decent enough 2-step approach.
+9/26:542:Treated this as a BFS problem with a double queue.
+9/26:973:Solved it using a mix of a hashmap and a max-heap. The main approach was simpler, used less data structures and had similar time complexity (though distance was computed more times).

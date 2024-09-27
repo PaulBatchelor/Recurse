@@ -1,0 +1,23 @@
+@2024-09-26
+
+@09:33 Grind75 #grind75 #timelog:01:25:41
+Tasking this out now, as well as timing it.
+---
+542, 973
+
+@11:12 Going to try to implement quickselect in python
+@12:00 Off to lunch
+@13:14 typescript handbook #read-typescript-handbook #timelog:01:13:05
+Reading: "Everyday Types"
+@14:32 JS trivia reading #read-js-trivia #timelog:00:41:10
+This is a little meandering because the trivia
+has a ton of things I have no clue about and need
+to read about elsewhere.
+---
+There seems to be a lot of "coding for codings sake"
+in JS. I'm reading about IIFEs on wikipedia,
+and it seems to be one of those engineered construct
+attempting to overcome a weak language people are
+forced to write stuff in.
+
+@15:32 Frontend Mentor stuff #frontend-mentor #timelog:01:02:52
