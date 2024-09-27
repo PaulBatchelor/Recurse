@@ -22,5 +22,24 @@ randomly selected from a weighted distribution based on priority.
 Based on how I answer, priority for each flashcard gets
 updated.
 
-@13:41 Grind75 #grind75
+@13:41 Grind75 #grind75 #timelog:01:41:23
 
+@16:47 3summing research #grind75 #timelog:00:10:23
+What's tough here is the acceptance criteria. It needs to be
+3 unique indices and the combination itself needs to be
+unique. Having the nested 3-loop is cleaner because the variables
+are in scope. Doing it with the backtracking approach requires
+cramming data in the recursive function.
+---
+dead end. Moving on
+
+@17:17 3sum: looking at the editorial #grind75
+The loops are moved around and hidden, but there still
+seems to be 3 distinct loops. The thing that's interesting
+(ish) here is that they are treating the problem as an
+extension of twosum, and re-using that logic, calling
+a version of twosum inside of 3sum.
+
+@17:25 wait wikipedia has a whole page on 3sum #grind75
+I like their algorithm, which looks the two-pointer in
+the editorial.
