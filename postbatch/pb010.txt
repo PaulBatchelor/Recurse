@@ -1,5 +1,6 @@
-@2024-09-27
+@2024-09-27 Friday, Sep 27th
 @10:30 Late start. Updating my website a little bit.
+
 @11:04 Thinking about flashcards... #flashcard-mvp #timelog:00:15:00
 There's a lot of information I need to ingest, and I am
 starting to think having a system in place is going to
@@ -20,3 +21,6 @@ randomly selected from a weighted distribution based on priority.
 ---
 Based on how I answer, priority for each flashcard gets
 updated.
+
+@13:41 Grind75 #grind75
+
