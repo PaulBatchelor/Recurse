@@ -17,3 +17,6 @@ I imagine most of the heavy lifting will be done with SQLite.
 A small CLI (prototype in python?) could be used to present
 a set of (up to) N flashcards from a given set of namespaces,
 randomly selected from a weighted distribution based on priority.
+---
+Based on how I answer, priority for each flashcard gets
+updated.
