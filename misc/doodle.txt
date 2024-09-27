@@ -1,4 +1,4 @@
-@2024-09-22 Notes
+@2024-09-22 Notes for Doodle
 @14:11 Tilt: something to do with Kubernetes
 "Are your servers running locally? In Kubernetes? Both?
 Tilt gives you smart rebuilds and live updates everywhere
@@ -41,3 +41,21 @@ not just websockets. They also do HTTP long-polling (is this the "old school"
 way to do it?) and WebTransport (this seems "new school")
 @14:51 Web transport is indeed very new.
 See: [[https://developer.mozilla.org/en-US/docs/Web/API/WebTransport_API]].
+
+@2024-09-23 More Doodle
+Yesterday, I took a glance at some of the backend code
+in Python/flask, read up a bit on websockets, and started
+a little peak at the frontend code in typescript and React.
+
+@13:47 Examining the canvas element
+
+@13:52 I have not familiar with effect hooks in react
+I do know it has something to do with getting react to
+work with data from the outside world. The documentation
+is very specific for when useEffect hooks should be used.
+
+@14:00 fell into neovim whirlpool
+
+@14:27 crawled out of neovim whirlpool
+Worth the time. It is so much faster to navigate the code
+base with a language server.
