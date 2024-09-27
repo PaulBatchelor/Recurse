@@ -30,7 +30,7 @@ unknowns.
 @17:22 Going to just manually write some notes on jobs
 
 @17:38 Walrus operator? Walrus Operator.
-@!(dzref "python/walrus_operator")!@.
+See: @!(dzref "python/walrus_operator")!@.
 
 @18:02 Well, the numbers are in.
 I went to the jobs search page, filtered by "new york city",

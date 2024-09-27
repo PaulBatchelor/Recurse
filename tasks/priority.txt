@@ -16,3 +16,5 @@ tasks that I intend to work on in the next few days or so.
 @read-js-triva frontend guide: js trivia initial read
 
 @frontend-mentor Frontend Mentor
+
+@flashcard-mvp Create MVP for flashcard system

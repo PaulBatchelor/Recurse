@@ -1,0 +1,19 @@
+@2024-09-27
+@10:30 Late start. Updating my website a little bit.
+@11:04 Thinking about flashcards... #flashcard-mvp #timelog:00:15:00
+There's a lot of information I need to ingest, and I am
+starting to think having a system in place is going to
+be necessary.
+---
+I already have a data format figured out. It's built into my dagzet
+system. I'll need to get it working with the rust implementation,
+but that shouldn't take too long.
+---
+What I don't have figured out is a spaced repetition system.
+Something that allows me to go through a set flashcards and update
+their frequency depending on how I answer.
+---
+I imagine most of the heavy lifting will be done with SQLite.
+A small CLI (prototype in python?) could be used to present
+a set of (up to) N flashcards from a given set of namespaces,
+randomly selected from a weighted distribution based on priority.

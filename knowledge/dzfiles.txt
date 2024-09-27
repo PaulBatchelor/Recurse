@@ -30,4 +30,8 @@ knowledge/sys.dz
 knowledge/tablets.dz
 knowledge/gameboy.dz
 knowledge/trackers.dz
+knowledge/python.dz
+knowledge/neovim.dz
+knowledge/javascript.dz
+knowledge/typescript.dz
 knowledge/zzz.dz
