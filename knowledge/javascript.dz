@@ -16,3 +16,41 @@ hl https://codeburst.io/the-simple-rules-to-this-in-javascript-35d97f31bde3
 ln The Simple Rules to "this" in JavaScript
 co $ js_questions
 cr found via
+
+nn dom_event_delegation_stack_overflow
+hl https://stackoverflow.com/questions/1687296/what-is-dom-event-delegation
+ln Stack overflow: what is event delegation?
+
+nn js_objects
+hl https://davidwalsh.name/javascript-objects
+ln JavaScript Objects: Inherited a Mess
+
+nn the_core
+hl http://dmitrysoshnikov.com/ecmascript/javascript-the-core/
+ln JavaScript: The Core
+
+nn mdn_prototype_chain
+ln Inheritance and the Prototype change
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
+
+nn IIFE
+ln Immediately Invoked Function Expression
+hl https://en.wikipedia.org/wiki/Immediately_invoked_function_expression
+ff What is an IIFE?
+fb An Immediately Invoked Function Expression, or IIFE, is a
+fb programming language idiom which produces a lexical scope
+fb using function scoping. Example =(function () { })();=.
+fb It was a popular way to do modular programming in JS
+fb before ES modules and CommonJS.
+
+nn this
+ln this
+ff explain "this" in JavaScript
+fb 1. new keyword used: brand new object.
+fb 2. apply/call/bind: object passed in as argument.
+fb 3. obj.method(): object that function is property of
+fb 4. free function invocation: global object. window in
+fb the browser, undefined in strict mode.
+fb 5. multiple rules apply: higher rule wins.
+fb 6. arrow function in ES2015: ignore previous rules, use
+fb encapsulating scope.

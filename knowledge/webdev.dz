@@ -35,6 +35,10 @@ nn single_responsibility_principle
 ln Single Responsibility Principle: A module should be responsible to one, and only one, actor.
 hl https://en.wikipedia.org/wiki/Single-responsibility_principle
 rm found while reading the "Thinking In React" page
+ff what is the Single Responsibility principle?
+fb The single-responsibility principle (SRP) is a computer
+fb programming principle that states that a module should
+fb be responsible to one, and only one, actor.
 
 nn class_selectors
 ln Class Selectors

@@ -1,0 +1,31 @@
+ns frontend_interview_handbook/trivia/js
+gr Javascript trivia questions from the front end interview
+gr handbook.
+
+nn event_delegation
+ln event delegation
+ff explain event delegation
+fb event delegation is a technique involving adding
+fb event listeners to a parent element instead of adding
+fb them to the descendent elements. The listener will
+fb fire whenever the event is triggered on the descendent
+fb elements due to event bubbling on the DOM.
+
+nn this
+ln this
+ff explain "this" in JavaScript
+fb 1. new keyword used: brand new object.
+fb 2. apply/call/bind: object passed in as argument.
+fb 3. obj.method(): object that function is property of
+fb 4. free function invocation: global object. window in
+fb the browser, undefined in strict mode.
+fb 5. multiple rules apply: higher rule wins.
+fb 6. arrow function in ES2015: ignore previous rules, use
+fb encapsulating scope.
+
+nn prototypal_inheritance
+ln prototypal inheritance
+ff Explain how "prototypal inheritance" works
+fb Objects have a =__proto__= field. When a property is
+fb accessed from an object, it will recursively look through
+fb the =__proto__= field to try to find it.
