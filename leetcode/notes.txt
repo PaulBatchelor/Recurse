@@ -29,3 +29,4 @@
 9/26:542:Treated this as a BFS problem with a double queue.
 9/26:973:Solved it using a mix of a hashmap and a max-heap. The main approach was simpler, used less data structures and had similar time complexity (though distance was computed more times).
 9/27:3:Revisted. My initial solution was broken, fixed it. Looked up editorial and implemented the other solutions.
+9/30:102:Typical BFS binary tree problem, with some extra details out the return output
