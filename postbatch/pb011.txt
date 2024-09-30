@@ -1,0 +1,46 @@
+@2024-09-30 Monday, September 30th
+@09:25 Grind75 #grind75 #timelog:01:30:00
+
+@12:16 This is kind of garbage #frontend-mentor
+I've been trying to, in good faith, read through the the
+"javascript trivia" section. I wanted to make flashcards
+because it felt like a rote memorization. But like,
+most of the time, the questions aren't focused enough,
+and answers meander a little bit.
+---
+The nice thing about these questions is that there are
+references and resources. Most of these are stack overflow
+and blog posts, and while I've been saving some of these
+to read, I'm kind of done with the casual long-winded
+almost correct answers that come from blog posts.
+
+@12:19 Flashcards added to rust DZ parser #flashcard-mvp
+I was trying to make some flashcards to test, and I realized
+making well-scoped and well organized flashcards from what
+I've been reading takes more work than making the MVP
+program that displays them. So, pausing on this until I
+figure that out more.
+
+@12:22 Typescript handbook #read-typescript-handbook #timelog:00:26:53
+This just turned into more neovim troubleshooting. Sigh.
+
+@12:38 I'm back in the neovim config hell #read-typescript-handbook
+I want to get tsserver working in my neovim setup on my
+box now.
+
+@12:50 neovim needs updating #read-typescript-handbook
+I consolidated everything into one git repo, and it works
+on 2/3 machines. My box has nvim 0.9, everywhere else
+0.10. I'm guessing that is the issue.
+
+@14:46 Trying to build nvim 0.10 apk from source
+@15:26 A good enough nvim config hack was made
+APKBUILD route wouldn't work due to incorrect versions
+in deps. So I just wrote a little hack. Tooltips in
+the typescript LSP do not seem to work on my box.
+
+@15:29 Back to typescript. #read-typescript-handbook #timelog:00:28:41
+
+@16:00 Pairing with Dan
+
+@18:33 Done pairing. Dinner
