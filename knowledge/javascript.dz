@@ -54,3 +54,24 @@ fb the browser, undefined in strict mode.
 fb 5. multiple rules apply: higher rule wins.
 fb 6. arrow function in ES2015: ignore previous rules, use
 fb encapsulating scope.
+
+nn coercion
+ln coercion: an automatic conversion of values from one
+ln data type to another. Ex: having 0 coerce itself to be
+ln false.
+ff What is coercion in javascript?
+fb An automatic conversion of values from one data type
+fb to another. (ex: 0 to false)
+
+nn truthiness
+ln truthiness: When value is considered true when encountered
+ln in a boolean context.
+td define truthiness
+hl https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+co coercion $
+cr A value is said to be coerced to a boolean value
+
+nn type_coercion_mdn
+ln MDN: type coercion
+hl https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion
+co $ coercion
