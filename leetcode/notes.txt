@@ -31,3 +31,4 @@
 9/27:3:Revisted. My initial solution was broken, fixed it. Looked up editorial and implemented the other solutions.
 9/30:102:Typical BFS binary tree problem, with some extra details out the return output
 9/30:133:BFS graph traversal problem. I wrote some scaffolding to test some of it out. It looks mostly correct?
+9/30:150:Couldn't resist doing this one. I love RPN.
