@@ -75,3 +75,14 @@ nn type_coercion_mdn
 ln MDN: type coercion
 hl https://developer.mozilla.org/en-US/docs/Glossary/Type_coercion
 co $ coercion
+
+nn instanceof
+ln instanceof: tests to see if the prototype property of a
+ln constructor appears anywhere in the prototype chain of
+ln an object.
+ff what does instanceof of?
+fb instanceof is a javascript operator that checks to see
+fb if a prototype property exists anywhere in the prototype
+fb chain of an object
+co $ mdn_prototype_chain
+cr checks prototype chain

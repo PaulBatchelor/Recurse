@@ -3,3 +3,16 @@ ns webdev/typescript
 nn declaration_files
 hl https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html
 ln Declaration Files in Typescript
+
+nn discriminated_union
+ln Discriminated Union: When every type in a union contains
+ln a common property, and can narrow out the fields in the union.
+ff What is a discriminated union?
+fb A discriminated union happens when every type in a union contains
+fb a common property.
+hl https://www.typescriptlang.org/docs/handbook/2/narrowing.html#discriminated-unions
+
+nn discriminant_property
+ln Discriminant Property: a common property found amongst
+ln types in a discriminated union.
+co $ discriminated_union
