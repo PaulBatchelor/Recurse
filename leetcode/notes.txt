@@ -34,3 +34,4 @@
 9/30:150:Couldn't resist doing this one. I love RPN.
 10/1:207:Knew it was a DFS directed graph problem, took me a while to get details right. Still not sure if it's correct.
 10/1:208:Most of the time was debugging my incorrect test inputs.
+10/1:322:NOT DONE. I think I remember hearing that this was a dynamic programming problem?
