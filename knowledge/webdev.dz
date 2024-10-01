@@ -146,3 +146,10 @@ rm found via zulip.
 nn mdxjs
 ln MDX lets you use JSX in your markdown content.
 hl https://mdxjs.com/
+
+nn rxjs
+ln RxJS is a library for composing asynchronous and event-based
+ln programs by using observable sequences.
+hl https://rxjs.dev/guide/observable
+rm DF was trying this out in his granular synth app, mostly
+rm as way to manipulate events.
