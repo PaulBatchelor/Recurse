@@ -32,3 +32,4 @@
 9/30:102:Typical BFS binary tree problem, with some extra details out the return output
 9/30:133:BFS graph traversal problem. I wrote some scaffolding to test some of it out. It looks mostly correct?
 9/30:150:Couldn't resist doing this one. I love RPN.
+10/1:207:Knew it was a DFS directed graph problem, took me a while to get details right. Still not sure if it's correct.
