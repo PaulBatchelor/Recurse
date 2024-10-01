@@ -1,0 +1,21 @@
+@2024-10-01 Tuesday, October 1st
+@11:01 Grind75 #grind75 #timelog:01:08:04
+I hate when people talk in the library. I can't focus.
+---
+This graph problem isn't clicking for me yet (LC 207).
+Grr. Taking a break.
+
+@12:45 Refreshing myself on cycle detection in graphs.
+Reading 7.9.1 "Finding Cycles" in the Algorithm Design
+Manual.
+---
+There's a mention of using back edges for an undirected
+graph by checking the ancestor, and it's mentioned in
+edge classification for directed graphs. Going to try
+and take another swing at this.
+
+@13:20 Grind75-ing #grind75 #timelog:01:50:13
+
+@15:26 typescript reading #read-typescript-handbook #timelog:00:59:00
+
+@17:10 Database reading. #reading-dbint #timelog:00:33:21
