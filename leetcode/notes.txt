@@ -35,3 +35,4 @@
 10/1:207:Knew it was a DFS directed graph problem, took me a while to get details right. Still not sure if it's correct.
 10/1:208:Most of the time was debugging my incorrect test inputs.
 10/1:322:NOT DONE. I think I remember hearing that this was a dynamic programming problem?
+10/2:322:Got something mostly working the brute-force recursive way. This is good enough.

@@ -1,64 +1,50 @@
-# WIP: NOT DONE
-
 from pprint import pprint
 
-# okay this isn't correct, but I'm trying to frame this
-# in recursive terms
-# say you have coins 0..N in sorted in ascending order
-# the total number of coins can be represented as a sum
-# of x_{n - 1} ... x_0 where
-# x_{n - 1}*coins[n - 1] + x_{n - 2}*coins[n - 2] and so
-# on equal exactly the target amount.
-# You can find the exact amount of each by gradually peeling
-# away larger currencies, which should be able to be
-# found recursively.
+# fewest number of coins: use larger denominations
+# find the combination with the maximum number of large
+# denominations
+#
+# first find the combination, then add up the number
+# ncoins(coin_n, amount) +
+# ncoins(coin_{n - 1}, amount - ncoins(coin_n, amount)*coin_n) +
+# ncoins(coin_{n - 2}, amount - ncoins(coin_{n - 1}, amount)*coin_{n - 1}) +
 
-# Try to see if 
+# this is the recursive solution, it probably should
+# be memoized somehow to make it a dynamic programming problem
 
-def find_ncoins(coins, start, amount):
-    if start < 0:
+def ncoins(coins, coin_idx, amount, count):
+    if amount == 0:
+        return count
+
+    if coin_idx == len(coins):
         return -1
 
-    ncoins = amount // coins[start]
+    max_coins = amount // coins[coin_idx]
 
-    if amount <= 0:
-        return 0
+    if max_coins == 0:
+        return ncoins(coins, coin_idx + 1, amount, count)
 
-    if ncoins * coins[start] == amount:
-        return ncoins
+    if (max_coins * coins[coin_idx]) == amount:
+        print(f"found {max_coins} of {coins[coin_idx]} equals {amount}")
+        return count + max_coins
 
-    if ncoins == 1:
-        return -1
+    for i in range(max_coins, 0, -1):
+        print(f"trying {i} of {coins[coin_idx]}")
+        total = i * coins[coin_idx]
+        newcount = ncoins(coins, coin_idx + 1, amount - total, count + i)
+        if newcount > 0:
+            return newcount
 
-    return (ncoins - 1) + find_ncoins(coins, start - 1, amount - coins[start])
-
+    return -1
 
 def coin_change(coins, amount):
-    if amount == 0:
-        return 0
-    total_coins = -1
-
     coins = sorted(coins, reverse=True)
-
-    # start with the largest denomination of currency, which
-    # will yield the smallest number of coins, then gradually
-    # shift to the smaller coins to find a fit.
-    # for c in coins:
-    #     # assuming this is a floor divide, which means
-    #     # amount will be less than or equal to amount
-    #     ncoins = amount // c
-    #     coin_amt = ncoins * c 
-    #     if coin_amt == amount:
-    #         # we are done, return number of coins
-    #     elif coin_amt < amount:
-    #         # attempt to find combination of remainder
-    #         # from lower coins
-
-
-    # return total_coins
+    x = ncoins(coins, 0, amount, 0)
+    print(x)
+    return x
 
 rc = coin_change([1, 2, 5], 11)
-assert(rc == 11)
+assert(rc == 3)
 
 rc = coin_change([2], 3)
 assert(rc == -1)
