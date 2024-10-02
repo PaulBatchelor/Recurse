@@ -4,3 +4,4 @@ Attempting that coin change problem again, among
 other things.
 @11:15 Mock interview with Dan
 @12:31 Lunch
+@14:53 Typescript reading #read-typescript-handbook #timelog:01:16:52

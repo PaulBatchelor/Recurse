@@ -16,3 +16,27 @@ nn discriminant_property
 ln Discriminant Property: a common property found amongst
 ln types in a discriminated union.
 co $ discriminated_union
+
+nn function_overloading
+ln Function Overloading
+
+nn overload_signature
+ln overload signature: in function overloading, these are
+ln function signatures that specify the various overloads
+ff What is an overload signature?
+fb Overload signatures are used in the context of function
+fb overloading in typescript. They refer to the function
+fb signatures that define the various input parameter
+fb combinations.
+co $ function_overloading
+
+nn implementation_signature
+ln Implementation Signature: the function signature below
+ln the overload signatures
+ff What is an implementation signature?
+fb In function overloading, the implementation signature
+fb is the function signature below the overload signatures.
+co $ function_overloading
+co $ overload_signature
+cr overload signatures must be compatible with the
+cr implementation signature

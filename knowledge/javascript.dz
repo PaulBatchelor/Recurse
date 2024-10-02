@@ -86,3 +86,13 @@ fb if a prototype property exists anywhere in the prototype
 fb chain of an object
 co $ mdn_prototype_chain
 cr checks prototype chain
+
+nn rest_parameter
+ln Rest Parameter: syntax that allows a function to
+ln accept an indefinite number of arguments as an array,
+ln providing a way to represent variadic functions in
+ln javascript. ex: =function sum(...theArgs)=
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+ff What are rest parameters?
+fb Rest parameter syntax in JS allows for variadic functions
+fb to be represented as an array. Ex: =function sum(..theArgs)=.
