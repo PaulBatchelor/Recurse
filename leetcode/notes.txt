@@ -36,3 +36,5 @@
 10/1:208:Most of the time was debugging my incorrect test inputs.
 10/1:322:NOT DONE. I think I remember hearing that this was a dynamic programming problem?
 10/2:322:Got something mostly working the brute-force recursive way. This is good enough.
+10/2:238:Revisiting. WIP constant space solution involving using repeated subtraction. Lots of edge cases to address still.
+10/2:1184:Done in mock interview with DF. Managed a linear time solution, then optimized it slightly by conoslidating loops and breaking early.

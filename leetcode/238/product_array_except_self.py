@@ -28,8 +28,34 @@ def prod_minus_self(x):
 
     return out
 
-out = prod_minus_self([1, 2, 3, 4])
-assert(out == [24, 12, 8, 6])
+# WIP: do this the way you'd expect by getting
+# total product and dividing by current item
+# use repeated subtracted instead of division
+def prod_minus_self_constant(x):
+    total = 1
+    out = []
+    for val in x:
+        total *= val
 
-out = prod_minus_self([-1, 1, 0, -3, 3])
-assert(out == [0, 0, 9, 0, 0])
+    for i in range(0, len(x)):
+        ans = 0
+        amt = total
+        while amt > 0:
+            ans += 1
+            amt -= x[i]
+        out.append(ans)
+
+    pprint(out)
+    return out
+
+def test(f):
+    out = f([1, 2, 3, 4])
+    assert(out == [24, 12, 8, 6])
+
+    out = f([-1, 1, 0, -3, 3])
+    assert(out == [0, 0, 9, 0, 0])
+
+test(prod_minus_self)
+
+# Work in progress
+# test(prod_minus_self_constant)
