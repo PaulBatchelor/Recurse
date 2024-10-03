@@ -40,3 +40,14 @@ co $ function_overloading
 co $ overload_signature
 cr overload signatures must be compatible with the
 cr implementation signature
+
+nn excess_property_checking
+ln Excess Property Checking: an special check that typescript
+ln performs on object literals. If there are properties that
+ln the "target type" object literal doesn't have, an error
+ln will be produced. This sort of error would typically
+ln fail silently in JavaScript.
+ff What is excess property checking in typescript?
+fb excess property checking is a check performed on object
+fb literals, and will check for properties not in the
+fb target object literal.
