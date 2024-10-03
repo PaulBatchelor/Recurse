@@ -38,3 +38,6 @@
 10/2:322:Got something mostly working the brute-force recursive way. This is good enough.
 10/2:238:Revisiting. WIP constant space solution involving using repeated subtraction. Lots of edge cases to address still.
 10/2:1184:Done in mock interview with DF. Managed a linear time solution, then optimized it slightly by conoslidating loops and breaking early.
+10/3:155:I had to look up how to do this. Once I knew the "trick", it was trivial to implement. Terrible.
+10/3:98:I did this one again in the LC browser. I didn't check root for None, so now I'm not sure how well the validatoionline works.
+10/3:200:I don't love my solution because I am keeping track of visited nodes. I wanted something more elegant.

@@ -178,3 +178,10 @@ rm Made by Recurser CV
 nn i_miss_lorina_bulwer
 hl https://news.lettersofnote.com/p/i-miss-lorina-bulwer
 ln I MISS LORINA BULWER
+
+nn readline_shortcuts
+ln Readline keyboard shortcuts
+hl https://github.com/chzyer/readline/blob/master/doc/shortcut.md
+rm Recommended to me as a way to become more proficient at
+rm web-based text editors used in interviews. These are
+rm apparently supported by default in most OSX interfaces.
