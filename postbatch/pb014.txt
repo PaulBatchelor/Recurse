@@ -1,0 +1,11 @@
+@2024-10-03 Thursday October 3rd
+@12:58 Damn. I guess today I will get some stuff done.
+The moment I woke up, this day was going wrong. I was
+really looking forward to just letting the entire day
+derail. Yet, here I am at the library.
+
+@13:00 Grind75 #grind75 #timelog:01:33:13
+Per the recommendation of several people, I am going to
+just the Leetcode website to write code. It has the
+verification and eveything, and will help me pick up
+on weird edge cases.
