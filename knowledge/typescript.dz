@@ -51,3 +51,4 @@ ff What is excess property checking in typescript?
 fb excess property checking is a check performed on object
 fb literals, and will check for properties not in the
 fb target object literal.
+hl https://www.typescriptlang.org/docs/handbook/2/objects.html#excess-property-checks

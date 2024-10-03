@@ -10,4 +10,4 @@ just the Leetcode website to write code. It has the
 verification and eveything, and will help me pick up
 on weird edge cases.
 
-@14:46 typescript handbook #read-typescript-handbook #timelog:01:14:31
+@14:46 typescript handbook: object types #read-typescript-handbook #timelog:01:14:31
