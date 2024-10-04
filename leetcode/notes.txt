@@ -41,3 +41,4 @@
 10/3:155:I had to look up how to do this. Once I knew the "trick", it was trivial to implement. Terrible.
 10/3:98:I did this one again in the LC browser. I didn't check root for None, so now I'm not sure how well the validatoionline works.
 10/3:200:I don't love my solution because I am keeping track of visited nodes. I wanted something more elegant.
+10/4:994:I tried this problem before on paper. This was the first time coding it up. It took me a while to think up the solution.
