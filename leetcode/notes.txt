@@ -45,3 +45,4 @@
 10/4:33:Another one I did before on paper. Did this one untimed. Binary search with a twist.
 10/5:39:UNFINISHED. I got stuck. Can't figure out the backtracking logic correctly.
 10/5:46:Permutations. Had to nap on this one before coming up with this subpar recursive solution with lots of copying.
+10/5:39:FINISHED. I turned this into a priority queue problem. Damn.
