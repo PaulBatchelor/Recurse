@@ -2,5 +2,6 @@
 @10:17 Grind75 #grind75 #timelog:01:23:34
 39 (combination sum) is a backtracking problem that
 I am not understanding properly.
-@14:53 The grind continues. #grind75
-I did 46, poorly. I am trying 39 again.
+@14:53 The grind continues. #grind75 #timelog:02:18:10
+I did 46, poorly. 39 passed when I used a different
+data structure.
