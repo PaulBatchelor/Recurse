@@ -5,3 +5,4 @@ I am not understanding properly.
 @14:53 The grind continues. #grind75 #timelog:02:18:10
 I did 46, poorly. 39 passed when I used a different
 data structure.
+@16:33 Flashcard planning #flashcard-mvp #timelog:00:45:32
