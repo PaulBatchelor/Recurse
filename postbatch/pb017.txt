@@ -7,3 +7,8 @@ wrong.
 56, 981
 
 @12:46 Grind75 #grid75 #timelog:02:37:49
+
+@16:09 Typescript Handbook #read-typescript-handbook #timelog:00:44:28
+Finished the Generics chapter. Variance annotations,
+covariance, and contravariance are taking a while to
+sink in.

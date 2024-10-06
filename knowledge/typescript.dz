@@ -64,3 +64,27 @@ nn generic_constraint
 ln Generic Constraint =function stuff<Type extends foo>(arg: Type)=
 ff what does generic constraint syntax look like?
 fb =function stuff<Type extends foo>(arg: Type)=.
+
+nn generic_parameter_default
+ln Generic Parameter Default: by providing default values,
+ln generic parameters can be optional.
+ff What is an example of using default generic parameters?
+fb function foo<T = number, U = number>(a: T, b: T) { return [a, b]; }
+
+nn covariance_contravariance_wiki
+hl https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)
+ln Covariance and Contravariance: wikipedia
+rm found while reading typescript handbook
+
+nn covariance_contravariance
+ln Covariance and contravariance: type theory terms describing
+ln the relationship between two generic types.
+co covariance_contravariance_wiki $
+cr more information
+ff what is an example of covariance and contravariance?
+fb Producer<Cat> where Producer<Animal> expected: Cat is an Animal,
+fb covariance. Consumer<Animal> where Consumer<Cat> expected:
+fb any function that is capable of accepting a Cat must also
+fb be capable of accepting an animal, contravariance.
+hl https://www.typescriptlang.org/docs/handbook/2/generics.html#variance-annotations
+

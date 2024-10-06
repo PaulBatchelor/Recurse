@@ -60,4 +60,124 @@ function loggingIdentity2<Type extends lengthWise>(arg: Type): Type {
 loggingIdentity2([3]);
 
 // Using type parameters in Generic Constraints
-// TBD.
+
+function getProperty<Type, Key extends keyof Type>(obj: Type, key: Key) {
+  return obj[key];
+}
+
+let x = { a: 1, b: 2, c: 3 };
+
+let y = getProperty(x, 'a');
+// let a = getProperty(x, 'm');
+
+// Using Class Types in Generics
+
+function create<Type>(c: { new(): Type }): Type {
+  return new c();
+}
+
+class BeeKeeper {
+  hasMask: boolean = true;
+}
+
+class ZooKeeper {
+  nametag: string = "Mikle";
+}
+
+class Animal {
+  numLegs: number = 4;
+}
+
+class Bee extends Animal {
+  numLegs = 6;
+  keeper: BeeKeeper = new BeeKeeper();
+}
+
+class Lion extends Animal {
+  keeper: ZooKeeper = new ZooKeeper();
+}
+
+function createInstance<A extends Animal>(c: new () => A): A {
+  return new c();
+}
+
+createInstance(Lion).keeper.nametag;
+createInstance(Bee).keeper.hasMask;
+
+// Generic Parameter Defaults
+
+interface Container<_A, _B> {
+
+}
+
+// previously
+declare function create1(): Container<HTMLDivElement, HTMLDivElement[]>;
+declare function create1<T extends HTMLElement>(element: T): Container<T, T[]>;
+declare function create1<T extends HTMLElement, U extends HTMLElement>(
+  element: T,
+  children: U[],
+): Container<T, U[]>;
+
+
+// using defaults to make optional generic parameters
+declare function create2<T extends HTMLElement = HTMLDivElement, U extends HTMLElement[] = T[]>(
+  element?: T,
+  children?: U,
+): Container<T, U>;
+
+function foo<T = number, U = number>(a: T, b: U) {
+  return [a, b];
+}
+
+let bar = foo<number, number>;
+let bar2 = foo<number, string>;
+
+let aa = bar(1, 2);
+
+//let bb = bar(1, "2");
+let bb = bar2(1, "2");
+
+// Variance Annotations
+
+interface Producer<T> {
+  make(): T;
+}
+
+interface Consumer<T> {
+  consume: (arg: T) => void;
+}
+
+interface Animal2 {
+
+}
+
+interface AnimalProducer {
+  make(): Animal2;
+}
+
+interface Cat {
+
+}
+
+interface CatProducer {
+  make(): Cat;
+}
+
+
+// Contravariant annotation
+interface Consumer2<in T> {
+  consume: (arg: T) => void;
+}
+
+// Covariant annotation
+
+interface Producer2<out T> {
+  make(): T;
+}
+
+// Invariant annotation
+
+interface ProducerConsumer<in out T> {
+  consume: (arg: T) => void;
+  make(): T;
+}
