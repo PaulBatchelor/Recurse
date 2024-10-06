@@ -52,3 +52,15 @@ fb excess property checking is a check performed on object
 fb literals, and will check for properties not in the
 fb target object literal.
 hl https://www.typescriptlang.org/docs/handbook/2/objects.html#excess-property-checks
+
+nn identity_function
+ln Identity Function: "hello world" of generics, a function that
+ln will return back whatever it is passed in.
+hl https://www.typescriptlang.org/docs/handbook/2/generics.html#hello-world-of-generics
+ff What is the identity function?
+fb A function that will return back whatever it is passed in.
+
+nn generic_constraint
+ln Generic Constraint =function stuff<Type extends foo>(arg: Type)=
+ff what does generic constraint syntax look like?
+fb =function stuff<Type extends foo>(arg: Type)=.

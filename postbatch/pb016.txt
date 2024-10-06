@@ -6,3 +6,4 @@ I am not understanding properly.
 I did 46, poorly. 39 passed when I used a different
 data structure.
 @16:33 Flashcard planning #flashcard-mvp #timelog:00:45:32
+@21:22 Some typescript-ing #read-typescript-handbook #timelog:00:30:58
