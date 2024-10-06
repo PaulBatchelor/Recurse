@@ -48,3 +48,4 @@
 10/5:39:FINISHED. I turned this into a priority queue problem. Damn.
 10/6:56:Learned I have to submit to subject it to all the tests. I don't love my solution, but it took it. I think it wanted something more clever.
 10/6:981:My first approach was correct but too slow for submission. They wanted a O(log(n)) lookup time, which was tricky to implement correctly
+10/6:236:Solved, but slow. Took me a long time to get this answer.
