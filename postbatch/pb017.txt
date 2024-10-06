@@ -12,3 +12,7 @@ wrong.
 Finished the Generics chapter. Variance annotations,
 covariance, and contravariance are taking a while to
 sink in.
+
+@17:14 See if I can re-implement 236 #grind75 #timelog:01:02:24
+Even with the editorial in my face, it still took me an
+hour to implement. jeez.

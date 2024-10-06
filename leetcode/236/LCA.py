@@ -1,7 +1,3 @@
-# This took me forever to arrive at. This is a little
-# clunky. It uses a an explicit stack to do the backtracking
-# instead of using an implicit one with recursion
-
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -12,14 +8,47 @@
 class Solution:
     def __init__(self):
         self.stack = []
+        self.lca_node = None
+
     def dfs(self, node, target):
         if node is None:
             return False
         if node.val == target.val:
             return True
         return self.dfs(node.left, target) or self.dfs(node.right, target)
+        
+    def lca_dfs(self, root, p, q):
+        if root is None:
+            return False
+
+        print(root.val)
+        mid = root.val in (p.val, q.val)
+
+        if mid:
+            print(f"found: {root.val}")
+            left = self.lca_dfs(root.left, p, q)
+            right = self.lca_dfs(root.right, p, q)
+            total = sum((mid, left, right))
+            if total >= 2:
+                self.lca_node = root
+            return True
+        
+        left = self.lca_dfs(root.left, p, q)
+        right = self.lca_dfs(root.right, p, q)
     
+        if sum((left, right)) == 2:
+            self.lca_node = root
+
+        return left or right
+    
+    # recursive DFS after reading editorial
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        self.lca_node = root
+        self.lca_dfs(root, p, q)
+        return self.lca_node
+
+    # OLD VERSION with stack trace
+    def lowestCommonAncestor2(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         if root is None:
             return None
         
