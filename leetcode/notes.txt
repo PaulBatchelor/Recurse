@@ -46,3 +46,4 @@
 10/5:39:UNFINISHED. I got stuck. Can't figure out the backtracking logic correctly.
 10/5:46:Permutations. Had to nap on this one before coming up with this subpar recursive solution with lots of copying.
 10/5:39:FINISHED. I turned this into a priority queue problem. Damn.
+10/6:56:Learned I have to submit to subject it to all the tests. I don't love my solution, but it took it. I think it wanted something more clever.
