@@ -1,3 +1,7 @@
+# This took me forever to arrive at. This is a little
+# clunky. It uses a an explicit stack to do the backtracking
+# instead of using an implicit one with recursion
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
