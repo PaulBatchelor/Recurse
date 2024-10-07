@@ -17,4 +17,4 @@ sink in.
 Even with the editorial in my face, it still took me an
 hour to implement. jeez.
 
-@20:57 Some boilerplate python code #flashcard-mvp
+@20:57 Some boilerplate python code #flashcard-mvp #timelog:01:06:59
