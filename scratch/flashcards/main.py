@@ -8,11 +8,12 @@ def main():
     ncards = 10
 
     # load some potential values from disk into memory
-    flashcards.fill_caches(ncards)
+    flashcards.fill_caches(ncards*2, min_cache_size=ncards)
+    #flashcards.fill_caches(ncards*2)
 
     # generate a deck from the internal cache of values
     # this will read more data from disk, and load metadata
-    deck = flashcards.generate_deck()
+    deck = flashcards.generate_deck(ncards)
 
     # run through the program, return results
     results = flashcards.present(deck)

@@ -20,4 +20,3 @@ class TestFlashCards(unittest.TestCase):
         
         for _ in range(3): card.update(True)
         assert(card.level == 5)
-        
