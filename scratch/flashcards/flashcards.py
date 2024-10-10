@@ -16,10 +16,12 @@ class Card:
 
     def update(self, result):
         if result and self.level < 5:
-            self.correct += 1
-            if self.correct >= 3:
-                self.correct = 0
+            self.num_correct += 1
+            if self.num_correct >= 3:
+                self.num_correct = 0
                 self.level += 1
+        else:
+            self.num_correct = 0
 
 class FlashCards:
     def __init__(self, path="a.db"):
