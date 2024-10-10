@@ -48,7 +48,6 @@ class FlashCards:
         return []
 
     def fill_caches(self, total_cache_size, min_cache_size=None):
-        print("(WIP) filling caches")
         # load cards of the 4 levels into separate
         # caches. Load more than needed to compensate
         # for randomness: 2N cards ought to do it
@@ -147,6 +146,7 @@ class FlashCards:
         if metadata:
             card.level = metadata[0]
             card.num_correct = metadata[1]
+
         return card
 
     def generate_deck(self, ncards):
@@ -197,6 +197,7 @@ class FlashCards:
         results = []
         result_lookup = {"y":True, "n":False}
         for card in deck:
+            print("Card: " + card.name)
             print("Front: " + card.front)
             input()
             print("Back: " + card.back)
@@ -206,12 +207,12 @@ class FlashCards:
             while answer != "y" and answer != "n":
                 print("Please answer y or n.")
                 answer = input()
-                results.append(result_lookup[answer])
+
+            results.append(result_lookup[answer])
 
         return results
 
     def update(self, results, deck):
-        print("(WIP) updating... ")
         new_deck = []
         # Go through each of the results, and apply
         # result to the card deck. This will update the
@@ -225,10 +226,19 @@ class FlashCards:
         return new_deck
 
     def save(self, deck):
-        print("(WIP) saving... ")
-        # Write the deck back to disk. This is just the
-        # metadata table
+        # self.db.execute("INSERT into flashcard_metadata(name, level, num_correct) VALUES('foo', 22, 22)")
+        for card in deck:
+            print(f"saving {card.name}")
+            query = [
+                "INSERT OR REPLACE INTO",
+                "flashcard_metadata(name, level, num_correct)",
+                "VALUES(",
+                ",".join(["'" + card.name + "'", str(card.level), str(card.num_correct)]),
+                ");"
+            ]
+            query = " ".join(query)
+            res = self.db.execute(query)
+        self.db.commit();
 
     def close(self):
-        print("closing...")
         self.db.close()

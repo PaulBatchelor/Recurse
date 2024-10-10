@@ -1,12 +1,13 @@
 import sys
 from flashcards import FlashCards
+from pprint import pprint
 
 def main():
     flashcards = FlashCards()
     flashcards.open("../../a.db")
 
     # TODO: have this be a CLI parameter
-    ncards = 10
+    ncards = 3
 
     # load some potential values from disk into memory
     flashcards.fill_caches(ncards*2, min_cache_size=ncards)
