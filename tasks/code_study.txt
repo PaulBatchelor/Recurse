@@ -9,3 +9,9 @@ link: [[https://github.com/binhrobles/rusty-bikes]]
 
 @study-ripgrep code study: ripgrep
 link: [[https://github.com/BurntSushi/ripgrep]].
+
+@study-excalidraw code study: excalidraw
+link: [[https://github.com/excalidraw/excalidraw]].
+
+@study-tldraw code study: tldraw
+link: [[https://github.com/tldraw/tldraw]].

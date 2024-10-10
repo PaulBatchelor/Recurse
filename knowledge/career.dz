@@ -15,3 +15,9 @@ hl https://github.com/donnemartin/interactive-coding-challenges
 ln Interactive coding challenges
 co $ system_design_primer
 cr same author
+
+nn execute_program
+ln Execute Program: spaced repetition exercises for various
+ln programming languages.
+hl https://www.executeprogram.com/
+rm mentioned to me by IC while I was working on my flashcard app

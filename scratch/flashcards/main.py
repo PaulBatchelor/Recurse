@@ -2,7 +2,8 @@ import sys
 from flashcards import FlashCards
 
 def main():
-    flashcards = FlashCards("../../a.db")
+    flashcards = FlashCards()
+    flashcards.open("../../a.db")
 
     # TODO: have this be a CLI parameter
     ncards = 10

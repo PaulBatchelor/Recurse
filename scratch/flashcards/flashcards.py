@@ -5,6 +5,7 @@ import random
 from pprint import pprint
 from pathlib import Path
 import json
+from copy import deepcopy
 
 class Card:
     def __init__(self, level=1, front=None, back=None, num_correct=0, name=None):
@@ -24,16 +25,18 @@ class Card:
             self.num_correct = 0
 
 class FlashCards:
-    def __init__(self, path="a.db"):
+    def __init__(self):
+        self.cache = [None]*4
+        self.bucket = []
+        self.total_cache_size = 0
+
+    def open(self, path="a.b"):
         if not Path(path).is_file():
             return error(f"Could not file databse f{path}")
 
         self.db = sqlite3.connect(path)
         self.db.execute("CREATE TABLE IF NOT EXISTS flashcard_metadata(name STRING UNIQUE, level INTEGER, num_correct INTEGER)")
-        self.cache = [None]*4
-        self.bucket = []
-        self.total_cache_size = 0
-        
+
     def read_cards_from_disk(self, ncards, level=1):
         query = " ".join([
             "SELECT name FROM dz_flashcards",
@@ -191,7 +194,8 @@ class FlashCards:
 
     def present(self, deck):
         print("(WIP) presenting")
-
+        results = []
+        result_lookup = {"y":True, "n":False}
         for card in deck:
             print("Front: " + card.front)
             input()
@@ -202,12 +206,23 @@ class FlashCards:
             while answer != "y" and answer != "n":
                 print("Please answer y or n.")
                 answer = input()
+                results.append(result_lookup[answer])
+
+        return results
 
     def update(self, results, deck):
         print("(WIP) updating... ")
+        new_deck = []
         # Go through each of the results, and apply
         # result to the card deck. This will update the
         # state properly
+
+        for i in range(0, len(results)):
+            card = deepcopy(deck[i])
+            card.update(results[i])
+            new_deck.append(card)
+
+        return new_deck
 
     def save(self, deck):
         print("(WIP) saving... ")
