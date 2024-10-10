@@ -4,6 +4,7 @@ import math
 import random
 from pprint import pprint
 from pathlib import Path
+import json
 
 class Card:
     def __init__(self, level=1, front=None, back=None, num_correct=0, name=None):
@@ -134,8 +135,8 @@ class FlashCards:
             f"WHERE name IS '{name}'"
         ])).fetchone()
 
-        front = data[0]
-        back = data[1]
+        front = " ".join(json.loads(data[0]))
+        back = " ".join(json.loads(data[1]))
         card = Card(name=name, front=front, back=back)
 
         if metadata:
@@ -188,13 +189,17 @@ class FlashCards:
 
     def present(self, deck):
         print("(WIP) presenting")
-        # this will start ncurses
-        # event loop:
-        # present front of card
-        # hit space
-        # present front and back of card
-        # correct answer? Y/N
-        # mark response, go to next card
+
+        for card in deck:
+            print("Front: " + card.front)
+            input()
+            print("Back: " + card.back)
+            print("Got it right? [y/n]")
+            answer = input()
+            print("answer", answer)
+            while answer != "y" and answer != "n":
+                print("Please answer y or n.")
+                answer = input()
 
     def update(self, results, deck):
         print("(WIP) updating... ")
