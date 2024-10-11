@@ -50,3 +50,5 @@
 10/6:981:My first approach was correct but too slow for submission. They wanted a O(log(n)) lookup time, which was tricky to implement correctly
 10/6:236:Solved, but slow. Took me a long time to get this answer, a bit clunky kind of DFS with explicit stack
 10/10:733:Solved using queue. Whitespace sensitivity took up time.
+10/11:226:My second attempt was a little less elegant than my previous attempt, but same recursive approach.
+10/11:721:UNFINISHED. Really thought this was just simple set manipulation, but there's an edge case where users become split
