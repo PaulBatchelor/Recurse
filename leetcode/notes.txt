@@ -52,3 +52,4 @@
 10/10:733:Solved using queue. Whitespace sensitivity took up time.
 10/11:226:My second attempt was a little less elegant than my previous attempt, but same recursive approach.
 10/11:721:UNFINISHED. Really thought this was just simple set manipulation, but there's an edge case where users become split
+10/14:206:Completed again the linear way.
