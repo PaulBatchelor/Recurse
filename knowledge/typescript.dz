@@ -88,3 +88,11 @@ fb any function that is capable of accepting a Cat must also
 fb be capable of accepting an animal, contravariance.
 hl https://www.typescriptlang.org/docs/handbook/2/generics.html#variance-annotations
 
+nn keyof
+ln keyof: operator that takes in an object type and produces
+ln a string or numeric union of its keys.
+rm ex: Point = {x: number; y: number}; type P = keyof Point;
+rm P is equivalent to Type P = "x" | "y";
+ff What is the "keyof" operator?
+fb The keyof operator in typescript takes in an object,
+fb and produces a union of its keys.

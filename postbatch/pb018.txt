@@ -36,3 +36,5 @@ I delete a node. So far, this databse has been mostly
 append-only.
 
 @16:32 Break? What to do next?
+
+@16:40 Lost and Safe
