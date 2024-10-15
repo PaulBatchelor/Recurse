@@ -30,7 +30,7 @@ class FlashCards:
         self.bucket = []
         self.total_cache_size = 0
 
-    def open(self, path="a.b"):
+    def open(self, path="a.db"):
         if not Path(path).is_file():
             return error(f"Could not file databse f{path}")
 
@@ -41,11 +41,16 @@ class FlashCards:
         query = " ".join([
             "SELECT name FROM dz_flashcards",
             "INNER JOIN dz_nodes ON node=id",
-            "order by RANDOM() limit f{ncards}"
+            f"order by RANDOM() limit {ncards}"
         ])
+        cards = []
 
-        # TODO: implement
-        return []
+        res = self.db.execute(query)
+        pprint(res)
+        for row in res:
+            cards.append(row[0])
+
+        return cards
 
     def fill_caches(self, total_cache_size, min_cache_size=None):
         # load cards of the 4 levels into separate
@@ -92,8 +97,6 @@ class FlashCards:
             self.cache[lvl] = self.read_cards_from_disk(ncards[lvl], lvl)
             ncached += len(self.cache[lvl])
         
-        # TODO: if the total number of cards falls short,
-        # how to compensate?
         if ncached < total_cache_size:
             needed = total_cache_size - ncached
             print(f"Attempting to bucket {needed} more cards")
@@ -113,6 +116,7 @@ class FlashCards:
             self.bucket = bucket
 
         total_loaded = len(self.bucket) + ncached
+        # fatal error if minimum cache size not met
         if total_loaded < min_cache_size:
             print(f"Could not load cache of size {min_cache_size}, got {total_loaded} instead")
             exit(1)
