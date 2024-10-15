@@ -89,3 +89,10 @@ postbatch/pb006.txt
 postbatch/pb007.txt
 postbatch/pb008.txt
 postbatch/pb009.txt
+postbatch/pb010.txt
+postbatch/pb011.txt
+postbatch/pb012.txt
+postbatch/pb013.txt
+postbatch/pb014.txt
+postbatch/pb016.txt
+postbatch/pb017.txt
