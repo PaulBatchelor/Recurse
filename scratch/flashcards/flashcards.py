@@ -24,6 +24,17 @@ class Card:
         else:
             self.num_correct = 0
 
+    def save(self, db):
+        query = [
+            "INSERT OR REPLACE INTO",
+            "flashcard_metadata(name, level, num_correct)",
+            "VALUES(",
+            ",".join(["'" + self.name + "'", str(self.level), str(self.num_correct)]),
+            ");"
+        ]
+        query = " ".join(query)
+        db.execute(query)
+
 class FlashCards:
     def __init__(self):
         self.cache = [None]*4
@@ -37,6 +48,47 @@ class FlashCards:
         self.db = sqlite3.connect(path)
         self.db.execute("CREATE TABLE IF NOT EXISTS flashcard_metadata(name STRING UNIQUE, level INTEGER, num_correct INTEGER)")
 
+    def preload(self):
+        # check and see if there are more cards
+        # in the dagzet flashcards table.
+        # skip if they are the same
+
+        carddiff = int(self.db.execute(" ".join([
+            "SELECT",
+            "(SELECT COUNT(*) FROM dz_flashcards) -",
+            "(SELECT COUNT(*) FROM flashcard_metadata)"
+        ])).fetchone()[0])
+
+        if carddiff == 0:
+            return
+
+        print("Preloading")
+
+        # find missing flash cards
+        query = " ".join([
+            "SELECT name FROM dz_flashcards",
+            "INNER JOIN dz_nodes ON",
+            "dz_nodes.id = dz_flashcards.node",
+            "WHERE name not in"
+            "(SELECT name from flashcard_metadata)",
+        ])
+
+        res = self.db.execute(query)
+        
+        # load results into card structure
+
+        new_cards = []
+
+        for row in res:
+            new_cards.append(Card(name=row[0]))
+
+        # save cards to metadata
+        for card in new_cards:
+            print(f"saving: {card.name}")
+            card.save(self.db)
+
+        self.db.commit()
+
     def read_cards_from_disk(self, ncards, level=1):
         query = " ".join([
             "SELECT name FROM dz_flashcards",
@@ -46,7 +98,6 @@ class FlashCards:
         cards = []
 
         res = self.db.execute(query)
-        pprint(res)
         for row in res:
             cards.append(row[0])
 
@@ -122,6 +173,7 @@ class FlashCards:
             exit(1)
 
         self.total_cache_size = total_loaded
+
         # TODO: how/when to recycle cards from level 5?
 
         # TODO: how to ignore cards?
@@ -154,7 +206,6 @@ class FlashCards:
         return card
 
     def generate_deck(self, ncards):
-        print("(WIP) generating deck...")
         # ncards is the requested amount, but that might
         # not be guaranteed if there aren't that many cards
         # to choose from
@@ -197,7 +248,6 @@ class FlashCards:
         return deck
 
     def present(self, deck):
-        print("(WIP) presenting")
         results = []
         result_lookup = {"y":True, "n":False}
         for card in deck:
@@ -233,15 +283,17 @@ class FlashCards:
         # self.db.execute("INSERT into flashcard_metadata(name, level, num_correct) VALUES('foo', 22, 22)")
         for card in deck:
             print(f"saving {card.name}")
-            query = [
-                "INSERT OR REPLACE INTO",
-                "flashcard_metadata(name, level, num_correct)",
-                "VALUES(",
-                ",".join(["'" + card.name + "'", str(card.level), str(card.num_correct)]),
-                ");"
-            ]
-            query = " ".join(query)
-            res = self.db.execute(query)
+            card.save(self.db)
+            # print(f"saving {card.name}")
+            # query = [
+            #     "INSERT OR REPLACE INTO",
+            #     "flashcard_metadata(name, level, num_correct)",
+            #     "VALUES(",
+            #     ",".join(["'" + card.name + "'", str(card.level), str(card.num_correct)]),
+            #     ");"
+            # ]
+            # query = " ".join(query)
+            # self.db.execute(query)
         self.db.commit();
 
     def close(self):

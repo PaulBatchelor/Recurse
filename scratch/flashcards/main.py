@@ -6,6 +6,9 @@ def main():
     flashcards = FlashCards()
     flashcards.open("../../a.db")
 
+    # check for new cards and load them into flashcard memory
+    flashcards.preload()
+
     # TODO: have this be a CLI parameter
     ncards = 3
 
