@@ -96,3 +96,12 @@ rm P is equivalent to Type P = "x" | "y";
 ff What is the "keyof" operator?
 fb The keyof operator in typescript takes in an object,
 fb and produces a union of its keys.
+
+nn branded_types
+hl https://www.learningtypescript.com/articles/branded-types
+ln Branded Types
+td make branded types flashcard
+
+nn typefest
+hl https://github.com/sindresorhus/type-fest/
+ln typefest: A collection of essential TypeScript types
