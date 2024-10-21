@@ -105,3 +105,24 @@ td make branded types flashcard
 nn typefest
 hl https://github.com/sindresorhus/type-fest/
 ln typefest: A collection of essential TypeScript types
+
+nn typeof
+hl https://www.typescriptlang.org/docs/handbook/2/typeof-types.html
+ln typeof operator: previously defined in javascript, typeof
+ln extends this operator so it can be used in a type context
+ln to refer to the type of a variable or property
+ff what is the "typeof" operator (in TypeScript)?
+fb The typeof operator can be used to refer to the type of
+fb variable or property. (ex: let s = "hello"; let n: typeof s;)
+
+nn indexed_access_type
+hl https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html
+ln indexed access type: used to look up the specific property
+ln of a type. ex: Age = Person["age"].
+ff What is indexed access type?
+fb In typescript, is notation used to look up a specific property of a type
+
+nn conditional_types
+hl https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
+ln Conditional Types: help describe the relation between the
+ln types of inputs and outputs.

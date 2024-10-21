@@ -181,3 +181,79 @@ interface ProducerConsumer<in out T> {
   consume: (arg: T) => void;
   make(): T;
 }
+
+// keyof type operator
+
+type Point = { x: number, y: number }
+type P = keyof Point;
+
+type Arrayish = { [n: number]: unknown }
+type A = keyof Arrayish;
+
+type Mapish = { [k: string]: unknown }
+
+// M is string | number, object keys are always coerced to a string
+type M = keyof Mapish;
+
+// typeof operator
+console.log(typeof "Hello world");
+let s = "hello";
+let n: typeof s;
+
+type Predicate = (type: unknown) => boolean;
+type K = ReturnType<Predicate>;
+
+function f() {
+  return { x: 10, y: 3 }
+}
+
+type P2 = ReturnType<typeof f>;
+
+// Indexed access types
+
+type Person = { age: number; name: string; alive: boolean }
+type Age = Person["age"];
+
+type I1 = Person["age" | "name"];
+
+type I2 = Person [keyof Person];
+
+type AliveOrName = "alive" | "name";
+type I3 = Person[AliveOrName];
+
+const MyArray = [
+  {name: "Alice", age: 15},
+  {name: "Alice", age: 15},
+  {name: "Alice", age: 15},
+];
+
+type Person2 = typeof MyArray[number];
+type Age2 = typeof MyArray[number]["age"];
+type Age3 = Person["age"];
+
+const key = "age";
+type Age4 = Person[key];
+
+// Conditional Types
+
+interface Animal3 {
+  live(): void;
+}
+
+interface Dog extends Animal3 {
+  woof(): void;
+}
+
+type ex1 = Dog extends Animal ? number : string;
+type ex2 = RegExp extends Animal ? number : string;
+
+interface IdLabel {
+  id: number;
+}
+interface NameLabel {
+  name: string;
+}
+
+type NameOrId<T extends number | string> = T extends number
+  ? IdLabel
+  : NameLabel;
