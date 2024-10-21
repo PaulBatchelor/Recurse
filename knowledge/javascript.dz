@@ -80,7 +80,7 @@ nn instanceof
 ln instanceof: tests to see if the prototype property of a
 ln constructor appears anywhere in the prototype chain of
 ln an object.
-ff what does instanceof of?
+ff what does instanceof do?
 fb instanceof is a javascript operator that checks to see
 fb if a prototype property exists anywhere in the prototype
 fb chain of an object

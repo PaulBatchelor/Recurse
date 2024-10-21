@@ -120,7 +120,8 @@ hl https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html
 ln indexed access type: used to look up the specific property
 ln of a type. ex: Age = Person["age"].
 ff What is indexed access type?
-fb In typescript, is notation used to look up a specific property of a type
+fb In typescript, is notation used to look up a specific property of a type.
+fb ex: Age = Person["age"].
 
 nn conditional_types
 hl https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
