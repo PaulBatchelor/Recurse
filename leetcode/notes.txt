@@ -56,3 +56,6 @@
 10/14:721:Feels messy, but it works, technic
 10/14:72:I gave a workable but brute-force answer. Did not do the follow-up which would make it harder.
 10/20:416:Dynamic programming problem, knapsack-aligned. I just looked up the answer on wikipedia (and the code was still slightly incorrect as well!)
+10/21:70:Turned it into a dynamic programming problem with memoization.
+10/21:409:A hashmap problem. Edge case to process was how to handle the center (keep track of max odd, store halfcount)
+10/21:54:Spiral. I came up with a procedural solution that was tedious to code, but quite performant. Maybe it would have been easier to think of it as a constrained graph traversal problem?

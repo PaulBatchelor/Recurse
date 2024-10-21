@@ -37,5 +37,8 @@ s = Solution()
 
 rc = s.canPartition([1, 2, 3, 5])
 pprint(rc)
-# rc = s.canPartition([3, 1, 1, 2, 2, 1])
-# pprint(rc)
+rc = s.canPartition([3, 1, 1, 2, 2, 1])
+pprint(rc)
+
+rc = s.canPartition([1, 2, 3])
+pprint(rc)
