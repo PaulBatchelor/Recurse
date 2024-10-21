@@ -55,3 +55,4 @@
 10/14:206:Completed again the linear way.
 10/14:721:Feels messy, but it works, technic
 10/14:72:I gave a workable but brute-force answer. Did not do the follow-up which would make it harder.
+10/20:416:Dynamic programming problem, knapsack-aligned. I just looked up the answer on wikipedia (and the code was still slightly incorrect as well!)
