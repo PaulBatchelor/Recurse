@@ -59,3 +59,4 @@
 10/21:70:Turned it into a dynamic programming problem with memoization.
 10/21:409:A hashmap problem. Edge case to process was how to handle the center (keep track of max odd, store halfcount)
 10/21:54:Spiral. I came up with a procedural solution that was tedious to code, but quite performant. Maybe it would have been easier to think of it as a constrained graph traversal problem?
+10/22:1011:Binary Search. Did not follow the hint exactly (use boolean function), which cost me time. Working out the tester was key.
