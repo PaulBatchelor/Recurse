@@ -1,3 +1,17 @@
 @2024-10-24 Thursday, October 24th
 @10:05 Grind75 #grind75 #timelog:02:02:58
 @13:32 typescript handbook #read-typescript-handbook #timelog:00:45:25
+@15:00 Break
+@16:05 Tailwind components browsing
+@17:01 Found some NextJS tutorials/guides
+I've seen this keyword flash up way more times than
+tailwind, though the tailwind ui components do look
+nice. Might be worth segmenting my time into.
+@17:16 NextJS and Vite seem to be very common
+Seems like it's an either/or thing? Whatever, going to
+dip my toes into both.
+---
+Current job I'm looking at has NextJS/React/Typescript
+combo.
+@17:26 I have once again found myself on LinkedIn
+I think I need to get off my computer now.

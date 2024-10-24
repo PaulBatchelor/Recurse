@@ -153,3 +153,23 @@ ln programs by using observable sequences.
 hl https://rxjs.dev/guide/observable
 rm DF was trying this out in his granular synth app, mostly
 rm as way to manipulate events.
+
+nn tailwindui
+hl https://tailwindui.com/
+ln Tailwind UI components
+
+nn headlessui
+hl headlessui: components designed to integrate with tailwindcss
+co $ tailwindui
+
+nn inter_typeface
+hl https://rsms.me/inter/
+ln inter typeface
+co $ tailwindui
+cr used by tailwindui components
+
+nn radix_ui
+hl https://www.radix-ui.com/
+ln Radix UI: open source component library optimized for
+ln fast development, easy maintenance, an accessibility.
+rm Found on a job posting, also seen elsewhere I think.

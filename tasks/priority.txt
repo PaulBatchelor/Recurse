@@ -19,4 +19,7 @@ tasks that I intend to work on in the next few days or so.
 
 @flashcard-mvp Create MVP for flashcard system
 
-@reading-dbint Read Database Internals
+@reading-dbint Read Database Internala
+
+@nextjs-react-guide Read nextjs react foundations guide
+@!(dzref "webdev/nextjs/react_foundations")!@

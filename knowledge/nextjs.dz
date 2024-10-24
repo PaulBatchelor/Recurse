@@ -1,0 +1,13 @@
+ns webdev/nextjs
+gr Things related to the next.js framework
+
+nn learn_dashboard_app
+hl https://nextjs.org/learn/dashboard-app
+ln Tutorial for how to make a full-stack web application with
+ln next.js
+
+nn react_foundations
+hl https://nextjs.org/learn/react-foundations
+ln React Foundations course
+co $ learn_dashboard_app
+cr suggested prereq course before dashboard app
