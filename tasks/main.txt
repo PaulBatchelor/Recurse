@@ -8,3 +8,6 @@ should be pretty trivial to get at and store.
 
 @LC75 Leetcode 75
 Link: [[https://leetcode.com/studyplan/leetcode-75/]].
+
+@flashcard-duplication-bug figure out why flashcard system is producing duplicate cards
+I believe it may be a uniqueness issue.

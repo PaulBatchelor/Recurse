@@ -10,7 +10,7 @@ def main():
     flashcards.preload()
 
     # TODO: have this be a CLI parameter
-    ncards = 3
+    ncards = 10
 
     # load some potential values from disk into memory
     flashcards.fill_caches(ncards*2, min_cache_size=ncards)
