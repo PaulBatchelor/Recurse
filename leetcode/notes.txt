@@ -61,3 +61,5 @@
 10/21:54:Spiral. I came up with a procedural solution that was tedious to code, but quite performant. Maybe it would have been easier to think of it as a constrained graph traversal problem?
 10/22:1011:Binary Search. Did not follow the hint exactly (use boolean function), which cost me time. Working out the tester was key.
 10/24:78:Combinatorial problem. Size was small enough to solve it using recursion.
+10/24:199:Double queue. Recalled this solution from a few months ago.
+10/24:5:After a few attempts at elegance, I went with a brute force solution
