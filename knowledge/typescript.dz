@@ -127,3 +127,27 @@ nn conditional_types
 hl https://www.typescriptlang.org/docs/handbook/2/conditional-types.html
 ln Conditional Types: help describe the relation between the
 ln types of inputs and outputs.
+ff What is a conditional type?
+fb Conditional types help describe the relation between types
+fb of inputs and outputs. Syntax: Dog extends Animal ? number : string;
+
+nn infer
+hl https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#inferring-within-conditional-types
+ln Infer keyword: can be used with conditional types to infer from
+ln types compared against in the true branch. ex:
+ln type Flatten<T> = T extends Array<infer Item> ? Item : T;
+ff What is the infer keyword?
+fb The infer keyword can be used to infer types in conditional
+fb type expressions. Ex: type Flatten<T> = T extends Array<infer Item> ? Item : T;
+co $ conditional_types
+cr used with
+
+nn distributive_conditional_types
+ln Distributive Conditional Types: Occurs a union is passed
+ln into a conditional type. It maps over each member type
+ln in the union.
+hl https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types
+
+nn mapped_types
+ln mapped types
+hl https://www.typescriptlang.org/docs/handbook/2/mapped-types.html

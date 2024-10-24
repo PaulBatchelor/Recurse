@@ -257,3 +257,71 @@ interface NameLabel {
 type NameOrId<T extends number | string> = T extends number
   ? IdLabel
   : NameLabel;
+
+// can be used to simplify overloads to single function with no overloads
+
+function createLabel<T extends number | string>(_idOrName: T): NameOrId<T> {
+  throw "unimplmented";
+}
+
+let a = createLabel("typescript");
+let b = createLabel(2.8);
+let c = createLabel(Math.random() ? "hello" : 42);
+
+// type MessageOf<T> = T["message"];
+
+type MessageOf<T> = T extends { message: unknown } ? T["message"] : never;
+
+interface Email {
+  message: string;
+}
+
+interface EmailNumber {
+  message: number;
+}
+
+interface Dog {
+  bark(): void;
+}
+
+type EmailMessageContents = MessageOf<Email>;
+type DogMessageContents = MessageOf<Dog>;
+type EmailMessageContents2 = MessageOf<EmailNumber>;
+
+type Flatten<T> = T extends any[] ? T[number] : T;
+
+type c = Flatten<string []>;
+type d = Flatten<number>;
+
+// inferring within conditional types
+
+// infer flatten implicitely instead of explicitely using indexed access type
+type Flatten2<T> = T extends Array<infer Item> ? Item: T;
+
+type GetReturnType<T> = T extends (...args: never[]) => infer Return ? Return : never;
+
+type num = GetReturnType<() => number>;
+type strfun = GetReturnType<(x: string) => string>s
+
+// Distributive Conditional Types
+
+type ToArray<T> = T extends any ? T[] : never;
+
+type StrArrOrNumArr = ToArray<string | number>
+
+// Mapped types
+
+interface Horse {};
+
+type OnlyBoolsAndHorses = {
+  [key: string]:  boolean | Horse;
+}
+
+const conforms: OnlyBoolsAndHorses = {
+  del: true,
+  foo: false,
+};
+
+type OptionsFlag<Type> = {
+  [Property in keyof Type]: boolean;
+};
