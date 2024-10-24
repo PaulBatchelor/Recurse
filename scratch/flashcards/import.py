@@ -1,7 +1,7 @@
 from pprint import pprint
 import sqlite3
 
-fp = open("cards.sql", "r")
+fp = open("cards.tsv", "r")
 db_path = "../../a.db"
 db = sqlite3.connect(db_path)
 
