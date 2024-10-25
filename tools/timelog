@@ -21,7 +21,10 @@ GROUP by taskname
 )
 
 
-SELECT taskname, time(seconds, 'unixepoch') FROM totalsecs 
+SELECT taskname,
+--time(seconds, 'unixepoch'),
+(seconds / 3600) || ':' || strftime('%M:%S', seconds / 86400.0)
+FROM totalsecs 
 -- ORDER by seconds DESC
 ;
 
