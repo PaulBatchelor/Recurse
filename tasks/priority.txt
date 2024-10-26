@@ -1,21 +1,9 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@dagzet-ink Get ink set up on dagzet
-
-@read-cracking-coding-interview Read Cracking The Coding Interview
-
-@read-TADM Read The Algorithm Design Manual
-
-@itparser-rust Implement IT parser in Rust
-
 @grind75 Grind75
 
 @read-typescript-handbook Read the typescript handbook
-
-@read-js-triva frontend guide: js trivia initial read
-
-@frontend-mentor Frontend Mentor
 
 @flashcard-mvp Create MVP for flashcard system
 
@@ -23,3 +11,5 @@ tasks that I intend to work on in the next few days or so.
 
 @nextjs-react-guide Read nextjs react foundations guide
 @!(dzref "webdev/nextjs/react_foundations")!@
+
+@reading-software-dynamics Read "Understanding Software Dynamics"

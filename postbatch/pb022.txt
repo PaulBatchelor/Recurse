@@ -1,5 +1,34 @@
 @2024-10-25 Friday, October 25th
+
 @10:54 Fix my timelog utility
 it's not doing HH:MM:SS properly, the hours are rolling
 over.
+
 @11:26 Grind75 #grind75 #timelog:00:21:58
+
+@14:24 Grind75 #grind75 #timelog:01:38:51
+
+@16:44 Task curation
+
+@16:45 Future of this? #itparser-rust
+It's kind of ad-hoc right now, and I don't have a defined
+purpose for this at the moment. Getting into schismtracker
+would be cool, and this could be a way to work with that
+data. But to what end?
+
+@16:47 this was crap #read-js-trivia
+I'm sorry. I can only read so much bad writing. This had
+knowledge, but it was presented in a really unthoughtful
+way. I appreciated the references, but most of them were
+blog posts soft-summarizing the better official references.
+I'm just done with that.
+
+@16:48 Too unbounded of a task #frontend-mentor
+And it's too design-y for me. I'd rather have a task be
+more defined like, "okay we want to get a look and feel
+like this app".
+---
+Looking at things like tailwind ui components @(dzref "webdev/tailwindui")!@ and Radix @!(dzref "webdev/radix_ui")!@ are more of a targeted
+thing.
+
+@17:42 Software Dynamics #reading-software-dynamics #timelog:00:36:38

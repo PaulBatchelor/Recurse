@@ -29,3 +29,10 @@ NEVERMIND. Ran out of time.
 
 @test-dz-log-task-linking proof of concept: link dagzet node to task via log entry
 NEVERMIND. Too much work, very little payoff.
+
+@read-js-triva frontend guide: js trivia initial read
+NEVERMIND. This wasn't a great resource.
+
+@frontend-mentor Frontend Mentor
+Nevermind.
+

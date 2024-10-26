@@ -18,3 +18,5 @@ I think I need to get off my computer now.
 @17:39 There's a flashcard duplication bug #flashcard-duplication-bug
 This must have something to do with cache loading logic.
 Hopefully not too much of a nightmare to fix.
+@20:50 Database internals reading #reading-dbint #timelog:00:45:26
+Finally finished part one. Started part two (distributed systems).
