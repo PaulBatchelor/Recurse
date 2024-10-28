@@ -65,3 +65,4 @@
 10/24:5:After a few attempts at elegance, I went with a brute force solution
 10/25:8:atoi. used a lot of python mechanims for trivial stuff like lstrip() and isnumeric(). got caught up in the many edgecases. trivial, but still tricky.
 10/25:62:started with graph traversal, then memory issues pushed me to dynamic programming. I apparently did this already in august? probably looked it up. I figured it out after looking up pascals triangle from TADM.
+10/28:105:Binary tree construction. This one took me many many hours over a few days, and required reviewing preorder and inorder traversals, but I figured it out by myself.
