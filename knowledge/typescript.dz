@@ -149,5 +149,29 @@ ln in the union.
 hl https://www.typescriptlang.org/docs/handbook/2/conditional-types.html#distributive-conditional-types
 
 nn mapped_types
-ln mapped types
+ln mapped types: generic type which uses a union of PropertyKeys
+ln (frequently via a keyof) to iterate through keys to create a type
 hl https://www.typescriptlang.org/docs/handbook/2/mapped-types.html
+co $ keyof
+cr typically uses a union of PropertyKey's made via keyof
+ff What is a mapped type?
+fb A generic type which uses a union of PropertyKeys (via keyof usually)
+fb to iterate through keys to create a type.
+fb ex type OptionsFlag<Type> = { [Property in keyof Type]: boolean; };
+hl https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#mapping-modifiers
+
+nn as
+ln as keyword: used to remap keys in mapped types.
+ln ex: type MappedTypeWithNewProperties<Type> = {
+ln [Property in keyof Type as NewKeyType]: Type[Property];
+ln }
+hl https://www.typescriptlang.org/docs/handbook/2/mapped-types.html#key-remapping-via-as
+ff what is the 'as' keyword?
+fb The 'as' keyword is used to remap keys in mapped types.
+co $ mapped_types
+
+nn template_literal_types
+ln template literal types
+ff what are template literal type?
+fb TBD.
+hl https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html

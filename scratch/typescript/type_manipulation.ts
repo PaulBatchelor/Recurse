@@ -322,6 +322,88 @@ const conforms: OnlyBoolsAndHorses = {
   foo: false,
 };
 
-type OptionsFlag<Type> = {
+type OptionFlags<Type> = {
   [Property in keyof Type]: boolean;
 };
+
+type Features  = {
+  darkMode: () => void;
+  newUserProfile: () => void;
+};
+
+type FeatureOptions = OptionFlags<Features>;
+
+// mapping modifiers
+
+type CreateMutable<Type> = {
+  -readonly [Property in keyof Type]: Type[Property];
+};
+
+type LockedAccount = {
+  readonly id: string;
+  readonly name: string;
+};
+
+type UnlockedAccount = CreateMutable<LockedAccount>;
+
+type Concrete<Type> = {
+  [Property in keyof Type]-?: Type[Property];
+};
+
+type MaybeUser = {
+  id: string;
+  name?: string;
+  age?: number;
+};
+
+type NoMaybe<Type> = {
+  [Property in keyof Type]?: Type[Property];
+};
+
+type User = Concrete<MaybeUser>;
+
+// Key remapping via as
+
+// type MappedTypeWithNewProperties<Type> = {
+//   [Property in keyof Type as NewKeyType]: Type[Property];
+// }
+
+type Getters<Type> = {
+  [Property in keyof Type as `get${Capitalize<string & Property>}`]: () => Type[Property];
+};
+
+type LazyUser = Getters<User>;
+
+type RemoveKindField<Type> = {
+  [Property in keyof Type as Exclude<Property, "kind">]: Type[Property];
+}
+
+interface Circle {
+  kind: "Circle";
+  radius: number;
+}
+
+type KindlessCircle = RemoveKindField<Circle>;
+
+type EventConfig<Events extends {kind: string}> = {
+  [E in Events as E["kind"]]: (event: E) => void;
+};
+
+type SquareEvent = { kind: "square", x: number, y: number };
+type CircleEvent = { kind: "circle", radius: number };
+
+type Config = EventConfig<SquareEvent | CircleEvent>;
+
+// Template Literal Types
+
+type World = "world";
+
+type Hello = `Hello ${World}!`;
+
+type EmailLocaleIDs = "welcome_email" | "email_heading";
+type FooterLocaleIDs = "footer_title" | "footer_endoff";
+
+type AllLocaleIDs = `${EmailLocaleIDs | FooterLocaleIDs}_id`;
+type Lang = "en" | "ja" | "pt";
+
+type LocalMessageIDs = `${Lang}_${AllLocaleIDs}`;
