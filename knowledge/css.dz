@@ -6,7 +6,7 @@ hl https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-inner-spin-button
 ln webkit-inner-spin-button: pseudo-element that is used to
 ln style the inner part of the spinner button of number picker
 ln input elements
-co $ pseudo-element
+co $ pseudo_element
 
 nn pseudo_element
 ln Pseudo-element: keyword added to a selector that lets you
