@@ -204,3 +204,23 @@ ln ORM that emphasizes SQL-like syntax and zero
 ln abstractions, offering direct database operations 
 ln with minimal overhead and maximum performance for 
 ln Node.js applications.
+
+nn clsx_github
+hl https://github.com/lukeed/clsx
+ln clsx: github
+co $ clsx
+cr github
+
+nn core_web_values_affect_seo
+hl https://vercel.com/blog/how-core-web-vitals-affect-seo
+ln How Core Web Values affect SEO
+
+nn cumulative_layout_shift
+ln Cumulative Layout Shift: Metric used by Google to
+ln evaluate the performance and user experience of a website.
+ff What is Cumulative Layout Shift?
+fb Cumulative layout shift is a metric used by google to
+fb evalulate the performance and user experience of a
+fb website.
+co $ core_web_values_affect_seo
+cr nextjs linked to this article with this term
