@@ -280,10 +280,12 @@ link: [[https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-developmen
 @retrospective work on retrospective
 
 @read-algorithm-interviews Read "An Algorithm For Passing Interviews"
-Link: 
+Link:
 [[https://malisper.me/an-algorithm-for-passing-programming-interviews/]].
 
 @dynamic-programming-research Dynamic programming research
 
 @blob-coax Create "blob" eat/coax mechanics program
 
+@nextjs-react-guide Read nextjs react foundations guide
+@!(dzref "webdev/nextjs/react_foundations")!@

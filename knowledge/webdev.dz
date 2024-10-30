@@ -173,3 +173,34 @@ hl https://www.radix-ui.com/
 ln Radix UI: open source component library optimized for
 ln fast development, easy maintenance, an accessibility.
 rm Found on a job posting, also seen elsewhere I think.
+
+nn pnpm
+hl https://pnpm.io/
+ln A package manager that's faster and more efficient than
+ln npm or yarn.
+
+nn clsx
+hl https://www.npmjs.com/package/clsx
+ln Utility for constructing class names conditionally
+
+nn mockapi
+hl https://mockapi.io/
+ln mockAPI: A third-party service that can be used to mock
+ln REST APIs
+
+nn prisma
+hl https://www.prisma.io/
+ln Prisma: a modern database toolkit and object-relational
+ln model (ORM) that simplifies database operations by providing
+ln typesafe database access, schema management, and query
+ln building for Node.js and TypeScript applications. In
+ln typescript, It will automatically create types based on your
+ln schema.
+
+nn drizzle
+hl https://orm.drizzle.team/
+ln Drizzle is a lightweight, type-safe TypeScript 
+ln ORM that emphasizes SQL-like syntax and zero 
+ln abstractions, offering direct database operations 
+ln with minimal overhead and maximum performance for 
+ln Node.js applications.

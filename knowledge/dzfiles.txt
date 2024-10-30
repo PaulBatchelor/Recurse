@@ -35,4 +35,5 @@ knowledge/neovim.dz
 knowledge/javascript.dz
 knowledge/typescript.dz
 knowledge/nextjs.dz
+knowledge/css.dz
 knowledge/zzz.dz

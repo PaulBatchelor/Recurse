@@ -9,7 +9,7 @@ tasks that I intend to work on in the next few days or so.
 
 @reading-dbint Read Database Internala
 
-@nextjs-react-guide Read nextjs react foundations guide
-@!(dzref "webdev/nextjs/react_foundations")!@
-
 @reading-software-dynamics Read "Understanding Software Dynamics"
+
+@nextjs-dashboard-app Complete nextjs dashboard app tutorial
+@!(dzref "webdev/nextjs/learn_dashboard_app")!@

@@ -11,3 +11,34 @@ hl https://nextjs.org/learn/react-foundations
 ln React Foundations course
 co $ learn_dashboard_app
 cr suggested prereq course before dashboard app
+
+nn network_boundary
+hl https://nextjs.org/learn/react-foundations/server-and-client-components#network-boundary
+ln Network Boundary: a conceptual line that separates
+ln the server and client environments
+ff What is a network boundary?
+fb A conceptual line that separtes the server and client
+fb environments
+
+nn RSC_payload
+ln RSC Payload: The React Server Component Payload is a
+ln special data format that contains the rendered results
+ln of the server components, as well as placeholders where
+ln client components should be rendered and their
+ln javascript files. It is sent to the client.
+ff What is an RSC payload?
+fb The React Server Component (RSC) payload is a data format
+fb sent to the client in a NextJS setup. It represents the
+fb the rendered results of the server components, and has
+fb placeholders for the client components.
+
+nn fast_refresh
+ln fast refresh: React feature integrate into Next.js that
+ln allows you to live reload the browser page while
+ln maintaining temporary client-side state when you save
+ln changes to a file.
+hl https://nextjs.org/docs/architecture/fast-refresh
+
+nn typescript_plugin
+ln typescript plugin for nextjs
+hl https://nextjs.org/docs/app/building-your-application/configuring/typescript#typescript-plugin

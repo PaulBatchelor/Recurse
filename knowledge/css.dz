@@ -1,0 +1,63 @@
+ns webdev/css
+gr Things related to CSS
+
+nn webkit_inner_spin_button
+hl https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-inner-spin-button
+ln webkit-inner-spin-button: pseudo-element that is used to
+ln style the inner part of the spinner button of number picker
+ln input elements
+co $ pseudo-element
+
+nn pseudo_element
+ln Pseudo-element: keyword added to a selector that lets you
+ln style a specific part of the selected elements. Double
+ln colons are used for pseudo-elements.
+hl https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+ff what is a pseudo-element?
+fb A keyword added to a selector that lets you
+fb style a specific part of the selected elements.
+fb ex: p::first-line 
+
+nn pseudo_class
+hl https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+ln pseudo-class: a keyword added to a selector that specifies
+ln a special state of the selected elements. ex: :hover.
+ff What is a pseudo-class?
+fb A keyword added to a selector that specifies
+fb a special state of the selected elements.
+
+nn selector
+hl https://developer.mozilla.org/en-US/docs/Glossary/CSS_Selector
+ln selector: is the part of a CSS rule that describes what
+ln elements in a document the rule will match.
+ff What is a selector?
+fb A CSS selector is the part of a CSS rule that describes
+fb what elements in a document the rule will match.
+
+nn selector_module
+ln CSS selectors (module reference)
+hl https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors
+co $ selector
+cr More in-depth explanation of CSS modules
+
+nn specificity
+hl https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+ln Specificity: an algorithm used by browsers used to
+ln determine the CSS declaration that is most relevant to
+ln an element.
+ff What is specificity?
+fb Specificity is an algorithm used by web browsers to
+fb determine the CSS declaration that is most relevant to
+fb an element.
+
+nn utility_classes
+hl https://tailwindcss.com/docs/utility-first
+ln Utility Classes: single-purposes CSS classes that handle
+ln one specific styling task, allowing developers to style
+ln elements by combining these classes in HTML directly
+ln instead of writing custom CSS.
+rm Most notably used by Tailwind.
+ff What are utility classes?
+fb Utility classes are single-purpose CSS classes typically
+fb designed to be combined together in inline HTML to
+fb produce styling (see: tailwind).
