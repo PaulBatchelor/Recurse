@@ -42,3 +42,28 @@ hl https://nextjs.org/docs/architecture/fast-refresh
 nn typescript_plugin
 ln typescript plugin for nextjs
 hl https://nextjs.org/docs/app/building-your-application/configuring/typescript#typescript-plugin
+
+nn partial_rendering
+hl https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating#4-partial-rendering
+ln partial rendering: only the route segments that change on
+ln navigation re-render on the client, and any shared segments
+ln are preserved.
+ff What is partial rendering?
+fb In NextJS, partial rendering occurs in the context of navigation.
+fb Only segments that change on navigation re-render on the client.
+fb Any shared segments are preserved.
+
+nn partial_rendering_ex
+ln Ex: when navigating between sibling routes that have
+ln a shared layout such as =/dashboard/settings= and
+ln =/dashboard/analytics=, only the individual pages will be
+ln rendered.
+co $ partial_rendering_ex
+cr example
+co $ learn_dashboard_app
+cr mentioned in dashboard app tutorial
+
+nn root_layout
+ln root layout: required. placed at top-level of your app.
+ln must contain =<html>= and =<body>= tags.
+hl https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates#root-layout-required
