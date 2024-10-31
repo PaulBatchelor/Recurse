@@ -3,3 +3,4 @@
 @14:41 NextJS dashboard app tutorial #nextjs-dashboard-app #timelog:00:51:37
 @16:31 more NextJS dashboard-ing #nextjs-dashboard-app #timelog:00:59:07
 @17:44 Can dagzet tell me the unknown nodes?
+@20:10 Software dynamics #reading-software-dynamics #timelog:00:20:10
