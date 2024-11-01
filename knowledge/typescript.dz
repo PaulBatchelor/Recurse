@@ -171,8 +171,10 @@ fb The 'as' keyword is used to remap keys in mapped types.
 co $ mapped_types
 
 nn template_literal_types
-ln template literal types
-zz ff what are template literal types?
-zz fb TBD.
+ln template literal types: types built on string literal
+ln types, using the same syntax as 
+ln template literal strings in javascript.
+ff what are template literal types?
+fb Types built on string literal types, using the same
+fb syntax as javascript template literal strings
 hl https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html
-

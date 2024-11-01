@@ -96,3 +96,21 @@ hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/r
 ff What are rest parameters?
 fb Rest parameter syntax in JS allows for variadic functions
 fb to be represented as an array. Ex: =function sum(..theArgs)=.
+
+nn template_literals
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+ln Template Literals: literals delimited with backticks (`).
+ln used for multi-line strings, string interpolation with
+ln embedded expressions, and special constructs called
+ln tagged templates.
+ff What are template literals in javascript?
+fb Template literals are literals denoted with backtick ('`'),
+fb and allow for multi-line strings, string interpolation
+fb with embedded expressions, and special constructs
+fb called tagged templates.
+
+nn tagged_templates
+ln tagged templates
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates
+co $ template_literals
+cr template literals are used with tagged templates

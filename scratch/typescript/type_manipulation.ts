@@ -431,3 +431,26 @@ type PropEventSource2<Type> = {
   on<Key extends string & keyof Type>
     (eventName: `${Key}Changed`, callback: (newValue: Type[Key]) => void): void;
 }
+
+declare function makeWatchedObject2<Type>(obj: Type): Type & PropEventSource2<Type>;
+
+const person2 = makeWatchedObject2({
+  firstName: "Saoirse",
+  lastName: "Ronan",
+  age: 26
+});
+
+person2.on("firstNameChanged", newName => {console.log(`newName: ${newName}`)})
+person2.on("ageChanged", _newAge => {})
+
+// Intrinsic String Manipulation Types
+
+type Greeting = "Hello, world";
+type ShoutyGreeting = Uppercase<Greeting>;
+
+type ASCIICacheKey<Str extends string> = `ID-${Uppercase<Str>}`;
+type MainID = ASCIICacheKey<"my_app">;
+
+type QuietGreeting = Lowercase<Greeting>;
+type Greeting2 = Capitalize<QuietGreeting>;
+type Greeting3 = Uncapitalize<ShoutyGreeting>;

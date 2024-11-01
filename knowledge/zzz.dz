@@ -41,3 +41,7 @@ cr cceckman has heard good things about this
 
 cx webdev/clsx webdev/nextjs/learn_dashboard_app
 cr clsx library used in nextjs dashboard tutorial
+
+cx javascript/template_literals webdev/typescript/template_literal_types
+cr typescript template literals use the same
+cr javascript syntax for string template literals
