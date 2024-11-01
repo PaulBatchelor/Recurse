@@ -39,5 +39,5 @@ cx FPGA/fomu compeng/cceckman_resources
 cx FPGA/ULX3S compeng/cceckman_resources
 cr cceckman has heard good things about this
 
-cx webdev/css/clsx webdev/nextjs/learn_dashboard_app
+cx webdev/clsx webdev/nextjs/learn_dashboard_app
 cr clsx library used in nextjs dashboard tutorial

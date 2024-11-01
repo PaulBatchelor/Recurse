@@ -58,7 +58,7 @@ ln Ex: when navigating between sibling routes that have
 ln a shared layout such as =/dashboard/settings= and
 ln =/dashboard/analytics=, only the individual pages will be
 ln rendered.
-co $ partial_rendering_ex
+co $ partial_rendering
 cr example
 co $ learn_dashboard_app
 cr mentioned in dashboard app tutorial

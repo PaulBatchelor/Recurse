@@ -20,6 +20,15 @@ end
 
 function insert_connections_from_stmt(connections, stmt, nodes)
     for row in stmt:nrows() do
+        if row.left == nil then
+            right_node = "[unknown]"
+            if row.right ~= nil then
+                right_node = nodes[row.right] or right_node
+            end
+
+            error("Left connection empty for right node: " .. right_node)
+        end
+
         if connections[row.left] == nil then
             connections[row.left] = {}
         end

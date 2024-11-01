@@ -288,4 +288,4 @@ Link:
 @blob-coax Create "blob" eat/coax mechanics program
 
 @nextjs-react-guide Read nextjs react foundations guide
-@!(dzref "webdev/nextjs/react_foundations")!@
+link: @!(dzref "webdev/nextjs/react_foundations")!@

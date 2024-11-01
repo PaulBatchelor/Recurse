@@ -96,3 +96,13 @@ postbatch/pb013.txt
 postbatch/pb014.txt
 postbatch/pb016.txt
 postbatch/pb017.txt
+postbatch/pb018.txt
+postbatch/pb019.txt
+postbatch/pb020.txt
+postbatch/pb021.txt
+postbatch/pb022.txt
+postbatch/pb023.txt
+postbatch/pb024.txt
+postbatch/pb025.txt
+postbatch/pb026.txt
+postbatch/pb027.txt

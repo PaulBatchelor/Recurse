@@ -12,4 +12,4 @@ tasks that I intend to work on in the next few days or so.
 @reading-software-dynamics Read "Understanding Software Dynamics"
 
 @nextjs-dashboard-app Complete nextjs dashboard app tutorial
-@!(dzref "webdev/nextjs/learn_dashboard_app")!@
+Link: @!(dzref "webdev/nextjs/learn_dashboard_app")!@
