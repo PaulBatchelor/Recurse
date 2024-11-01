@@ -1,0 +1,7 @@
+@2024-11-01 Friday, November 1st
+@08:05 Grind75 #grind75 #timelog:00:24:30
+@11:01 Logging and admin
+@11:02 dagzet: more descriptive loops please?
+@11:31 my HTML renderer is crashing too quietly
+@14:05 typescripting #read-typescript-handbook #timelog:00:21:42
+@15:22 nextjs-ing #nextjs-dashboard-app #timelog:01:04:25
