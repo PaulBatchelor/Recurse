@@ -67,3 +67,16 @@ nn root_layout
 ln root layout: required. placed at top-level of your app.
 ln must contain =<html>= and =<body>= tags.
 hl https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates#root-layout-required
+
+nn vercel_postgres
+hl https://vercel.com/docs/storage/vercel-postgres/sdk
+ln Vercel Postgres SDK
+
+nn route_handler
+hl https://nextjs.org/docs/app/building-your-application/routing/route-handlers
+ln Route Handlers: allow you to create custom request
+ln handlers for a given route using the Web Request
+ln and Response APIs
+ff What is a route handler?
+fb Route handlers in NextJS enable the creation of custom
+fb request handlers for a given route.

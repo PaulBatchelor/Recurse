@@ -114,3 +114,14 @@ ln tagged templates
 hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates
 co $ template_literals
 cr template literals are used with tagged templates
+
+nn await
+ln The await operator is used to wait for a Promise and 
+ln get its fulfillment value. It can only be used inside 
+ln an async function or at the top level of a module.
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await
+ff what does the 'await' keyword do?
+fb The await keyword is an operator that is used to wait
+fb for a promise and get its fulfillment value. It can
+fb only be used inside an async function or at the top
+fb level of a module.

@@ -235,3 +235,35 @@ ff What is a SPA?
 fb A Single-page page application loads a single web
 fb document, then updates the document via Javascript when
 fb different content is to be shown.
+
+nn request_api
+ln Request API: The Request interface of the Fetch API
+ln represents a resource request.
+hl https://developer.mozilla.org/en-US/docs/Web/API/Request
+
+nn response_api
+ln The Response API interface of the Fetch API represents the
+ln response to a request.
+hl https://developer.mozilla.org/en-US/docs/Web/API/Response
+
+nn fetch_api
+hl https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+ln Fetch API: an interface for fetching resources
+ln (including across the network). It is a more powerful
+ln and flexible replacement for XMLHttpRequest.
+ff What is the fetch API?
+fb The Fetch API is an interface for fetching resources
+fb (including across the network). It is a more powerful
+fb and flexible replacement for XMLHttpRequest.
+co request_api $
+co response_api $
+
+nn xmlhttprequest
+hl https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+ln XMLHttpRequest (XHR) objects are used to interact with 
+ln servers. You can retrieve data from a URL without 
+ln having to do a full page refresh. This enables a Web 
+ln page to update just part of a page without disrupting 
+ln what the user is doing.
+co $ fetch_api
+cr fetch is a more powerful replacement for XMLHttpRequest

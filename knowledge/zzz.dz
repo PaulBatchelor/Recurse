@@ -45,3 +45,12 @@ cr clsx library used in nextjs dashboard tutorial
 cx javascript/template_literals webdev/typescript/template_literal_types
 cr typescript template literals use the same
 cr javascript syntax for string template literals
+
+cx webdev/response_api webdev/nextjs/route_handler
+cr route handlers use the response API to make
+cr custom requests for the given route
+
+cx webdev/request_api webdev/nextjs/route_handler
+cr route handlers use the request API to make
+cr custom requests for the given route
+
