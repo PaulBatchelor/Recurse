@@ -172,6 +172,7 @@ co $ mapped_types
 
 nn template_literal_types
 ln template literal types
-ff what are template literal type?
-fb TBD.
+zz ff what are template literal types?
+zz fb TBD.
 hl https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html
+

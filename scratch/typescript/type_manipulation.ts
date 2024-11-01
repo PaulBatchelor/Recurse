@@ -407,3 +407,27 @@ type AllLocaleIDs = `${EmailLocaleIDs | FooterLocaleIDs}_id`;
 type Lang = "en" | "ja" | "pt";
 
 type LocalMessageIDs = `${Lang}_${AllLocaleIDs}`;
+
+// String Unions in Types
+
+type PropEventSource<Type> = {
+  on(eventname: `${string & keyof Type}Changed`, callback: (newValue: any) => void): void;
+}
+
+declare function makeWatchedObject<Type>(obj: Type): Type & PropEventSource<Type>;
+
+const person = makeWatchedObject({
+  firstName: "Saoirse",
+  lastName: "Ronan",
+  age: 26
+});
+
+//person.on("firstName", () => {})
+person.on("firstNameChanged", () => {})
+
+// inference with template literals
+
+type PropEventSource2<Type> = {
+  on<Key extends string & keyof Type>
+    (eventName: `${Key}Changed`, callback: (newValue: Type[Key]) => void): void;
+}
