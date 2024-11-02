@@ -67,3 +67,4 @@
 10/25:62:started with graph traversal, then memory issues pushed me to dynamic programming. I apparently did this already in august? probably looked it up. I figured it out after looking up pascals triangle from TADM.
 10/28:105:Binary tree construction. This one took me many many hours over a few days, and required reviewing preorder and inorder traversals, but I figured it out by myself.
 10/28:11:Did this one in under 4 minutes. I think I know this one pretty well.
+11/01:17:Managed to do this one again in about 25min, not sure I like how I did it.
