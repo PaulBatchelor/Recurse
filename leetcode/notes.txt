@@ -70,3 +70,4 @@
 11/1:17:Managed to do this one again in about 25min, not sure I like how I did it.
 11/3:79:I struggled figuring out the right pattern to apply for this. I eventually settled on an okay recursive DFS solution.
 11/3:438:Sliding window using Counter. LC tells me it's slow, probably cuz I'm doing a comparison each time. This could probably be improved. Also smells like a memoization/dynamic programming problem too.
+11/6:310:Got it working the slow way, but the answer they wanted was extremely clever (topological sort)
