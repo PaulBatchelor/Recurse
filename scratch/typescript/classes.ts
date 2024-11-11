@@ -144,3 +144,97 @@ class Sonar implements Pingable {
 // }
 
 // Cautions
+
+interface Checkable {
+    check(name: string): boolean;
+}
+
+class NameChecker implements Checkable {
+    check(s) {
+        return s.toLowerCase() === "ok";
+    }
+}
+
+interface A2 {
+    x: number,
+    y?: number,
+}
+
+class C2 implements A2 {
+    x = 0;
+}
+
+const c = new C2();
+// c.y = 3;
+
+// extends clauses
+
+class Animal2 {
+    move() {
+        console.log("moving along");
+    }
+}
+
+class Dog extends Animal2 {
+    bark() {
+        console.log("woof")
+    }
+}
+
+const dog = new Dog();
+dog.move()
+dog.bark()
+
+// overriding methods
+
+class Base2 {
+    greet() {
+        console.log("hello world");
+    }
+}
+
+class Derived2 extends Base2 {
+    greet(name?: string) {
+        if (name === undefined) {
+            super.greet();
+        } else {
+            console.log(`hello {name.toUpperCase()}!`);
+        }
+    }
+}
+
+const d = new Derived2()
+d.greet();
+d.greet("paul");
+
+// type-only field declarations
+
+interface Animal4 {
+    dateOfBirth: any;
+}
+
+interface Dog4 extends Animal4 {
+    breed: any;
+}
+
+class AnimalHouse {
+    resident: Animal4;
+    constructor(animal: Animal4) {
+        this.resident = animal;
+    }
+}
+
+class DogHouse extends AnimalHouse {
+    declare resident: Dog4;
+    constructor(dog: Dog4) {
+        super(dog);
+    }
+}
+
+// initialization order
+
+// Inheriting built-in types
+
+// Member Visibility
+
+// Static Members

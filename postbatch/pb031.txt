@@ -5,3 +5,4 @@ better. Also, LC 739 (Daily Temperatures)
 @12:55 More Daily Temperatures (LC 739) #timelog:01:49:48
 @15:27 Even more Daily Temperature (LC 739) #timelog:00:43:06
 @16:24 Create daily timelog aggregate
+@17:40 Typescript Handbook #read-typescript-handbook #timelog:00:27:59
