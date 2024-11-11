@@ -1,0 +1,6 @@
+@2024-11-11 Monday Nov. 11th
+@10:38 Grind75 #grind75 #timelog:01:03:56
+I'm trying to grok this findMinHeightTrees problem
+better. Also, LC 739 (Daily Temperatures)
+@12:55 More Daily Temperatures (LC 739) #timelog:01:49:48
+@15:27 Even more Daily Temperature (LC 739) #timelog:00:43:06
