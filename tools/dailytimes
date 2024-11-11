@@ -1,0 +1,14 @@
+sqlite3 a.db <<EOM
+WITH daily as
+(SELECT
+logs.day as day,
+sum(strftime('%s', substr(tag,9)) - strftime('%s', '00:00:00')) as seconds
+FROM logtags
+INNER JOIN logs on logs.rowid = logtags.logid
+WHERE tag LIKE "timelog:%"
+GROUP by logs.day)
+SELECT
+day,
+(seconds / 3600) || ':' || strftime('%M:%S', seconds / 86400.0)
+FROM daily
+EOM
