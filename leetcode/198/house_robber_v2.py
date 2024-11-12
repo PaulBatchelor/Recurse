@@ -1,3 +1,9 @@
+# 2024-11-12 This one actually works. My previous attempt
+# I did a few months ago doesn't pass all the edge cases.
+# Approach: start with recursive approach, then add
+# caching/memoization. The recursive function encapsulates
+# the recurrance relation
+
 class Solution:
     def rob_r(self, nums: List[int], pos: int)->int:
         if pos >= len(nums):

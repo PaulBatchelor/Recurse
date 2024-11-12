@@ -73,4 +73,4 @@
 11/6:310:Got it working the slow way, but the answer they wanted was extremely clever (topological sort)
 11/10:621:Managed to get something working only after looking at hints.
 11/11:739:Brute force was too slow, spent hours trying to get priority queues to fit the problem, but it was a monotonically increasing stack problem (which I had to learn about)
-11/11:198:Attempted this before, but not without tests. My old version failed, this new one did okay with memoization.
+11/12:198:Attempted this before, but not without tests. My old version failed, this new one did okay with memoization.
