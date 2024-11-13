@@ -14,7 +14,7 @@ tasks that I intend to work on in the next few days or so.
 @nextjs-dashboard-app Complete nextjs dashboard app tutorial
 Link: @!(dzref "webdev/nextjs/learn_dashboard_app")!@
 
-@bitrune-web-demo Create web-demo of bitrune parser #timelog:00:51:59
+@bitrune-web-demo Create web-demo of bitrune parser
 This is a thing I've been mostly working out in Rust,
 but it should be easy enough to port to JavaScript. Build
 an interface with a grid of 8x8 checkboxes.
