@@ -238,3 +238,33 @@ class DogHouse extends AnimalHouse {
 // Member Visibility
 
 // Static Members
+
+// Generic Classes
+
+// Doesn't work with static values
+// class Box<Type> {
+//     static defaultValue: Type;
+// }
+
+// this-based type guards
+
+// Parameter Properties
+
+class Params {
+    constructor (
+        public readonly x: number,
+        protected y: number,
+        private z: number
+    ) {
+
+    }
+}
+
+const p = new Params();
+p.x;
+p.y;
+p.z;
+
+// Class Expressions
+
+// Abtract Classes and Members

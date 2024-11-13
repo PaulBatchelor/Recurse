@@ -125,3 +125,19 @@ fb The await keyword is an operator that is used to wait
 fb for a promise and get its fulfillment value. It can
 fb only be used inside an async function or at the top
 fb level of a module.
+
+nn static
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static
+ln Static: defines a method or field for a class, or a static
+ln initialization block. They are accessed on the class itself,
+ln rather than an instance of the class.
+
+nn static_initialization_blocks
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks
+ln static initialization blocks: contains statements tobe
+ln evaluated during class initialization
+co $ static
+
+nn class_expression
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class
+ln class expression

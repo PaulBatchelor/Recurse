@@ -178,3 +178,8 @@ ff what are template literal types?
 fb Types built on string literal types, using the same
 fb syntax as javascript template literal strings
 hl https://www.typescriptlang.org/docs/handbook/2/template-literal-types.html
+
+nn instance_type
+hl https://www.typescriptlang.org/docs/handbook/utility-types.html#instancetypetype
+ln InstanceType<Type>: constructs a type of a constructor
+ln function in =Type=.
