@@ -11,3 +11,7 @@ Watching the neetcode video.
 
 @12:49 152: Maximum Product Subarray #grind75 #timelog:00:51:16
 152: maximum product subarray
+
+@14:51 Typescript Handbook #read-typescript-handbook #timelog:00:45:23
+
+@15:43 Bitrune web-demo: initial steps. #bitrune-web-demo
