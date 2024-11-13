@@ -1,0 +1,15 @@
+.container {
+    width: auto;
+    min-width: 0;
+    min-height: 0;
+}
+.grid {
+    display: inline-grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    /*
+    background: red;
+    grid-gap: 2px;
+    min-height: 0;
+    min-width: 0;
+    */
+}
