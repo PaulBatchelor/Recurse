@@ -75,3 +75,5 @@
 11/11:739:Brute force was too slow, spent hours trying to get priority queues to fit the problem, but it was a monotonically increasing stack problem (which I had to learn about)
 11/12:198:Attempted this before, but not without tests. My old version failed, this new one did okay with memoization.
 11/12:134:Only managed to get brute force, but got TLE.
+11/13:134:Greedy algorithm. Found solution on youtube via neetcode.
+11/13:36:"Valid" doesn't mean "solveable". "Sudoku" is a misnomer.
