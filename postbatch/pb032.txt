@@ -1,2 +1,14 @@
 @2024-11-12 November 12th
 @09:45 Grind75 #grind75 #timelog:00:24:40
+198: House Robber
+@10:37 Grind75 #grind75 #timelog:00:40:00
+134: Gas Station
+@12:53 Grind75 #grind75 #timelog:00:39:44
+134: Gas Station (Continued) #grind75
+@14:26 Grind75 #grind75 #timelog:00:41:26
+More Gas Station (134)
+@17:35 Grind75 #grind75 #timelog:00:58:25
+Gas Station, again (134).
+I thought it was dynamic programming. It was not.
+Another day wasted.
+I will have to look at this: [[https://www.youtube.com/watch?v=lJwbPZGo05A]].
