@@ -77,3 +77,5 @@
 11/12:134:Only managed to get brute force, but got TLE.
 11/13:134:Greedy algorithm. Found solution on youtube via neetcode.
 11/13:36:"Valid" doesn't mean "solveable". "Sudoku" is a misnomer.
+11/13:49:Got this one pretty quickly. Hashtable. Sort keys.
+11/13:152:Brute-forced it (TLE), then tried two-pointer (nope), then looked up answer (dynamic programming)
