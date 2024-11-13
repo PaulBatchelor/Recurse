@@ -1,0 +1,12 @@
+if [ "$#" -lt 1 ]
+then
+    echo "Usage: $0 log.txt"
+    exit 1
+fi
+
+LOGFILE=$1
+
+grep "#timelog" < $LOGFILE |\
+    sed "s/.*\(#timelog:[0-9][0-9]:[0-9][0-9]:[0-9][0-9]\).*/\1/" |\
+    awk -F : \
+    'BEGIN{sum=0} {sum += $2*3600 + $3*60 + $4} END{h=int(sum / 3600); m=int((sum - h*3600) / 60); s=sum - h*3600 - m*60; ts = sprintf("%d:%02d:%02d", h, m, s); print ts;}'
