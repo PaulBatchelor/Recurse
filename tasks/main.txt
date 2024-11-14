@@ -19,3 +19,12 @@ I believe it may be a uniqueness issue.
 @read-TADM Read The Algorithm Design Manual
 
 @itparser-rust Implement IT parser in Rust
+
+@reading-dbint Read Database Internals
+
+@reading-software-dynamics Read "Understanding Software Dynamics"
+
+@bitrune-web-demo Create web-demo of bitrune parser
+This is a thing I've been mostly working out in Rust,
+but it should be easy enough to port to JavaScript. Build
+an interface with a grid of 8x8 checkboxes.

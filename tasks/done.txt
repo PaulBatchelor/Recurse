@@ -289,3 +289,6 @@ Link:
 
 @nextjs-react-guide Read nextjs react foundations guide
 link: @!(dzref "webdev/nextjs/react_foundations")!@
+
+@flashcard-mvp Create MVP for flashcard system
+

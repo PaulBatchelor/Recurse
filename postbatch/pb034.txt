@@ -14,3 +14,8 @@ huge edge case).
 I'm breaking out too early.
 ---
 Nevermind. I'm not getting it right. Time to stop.
+
+@16:38 Re-examine priority tasks
+
+@16:39 Completed? #flashcard-mvp #timelog:00:01:48
+I mean, it's got a bug, but it works.
