@@ -5,3 +5,7 @@ I think it's a Trie problem. Spent most of this time
 just getting the Trie structure the way I imagined it. Have not
 implemented the search yet, which I believe will be a DFS
 using a stack (for backtracking when a '.' is encountered).
+@12:56 211 continued #grind75 #timelog:01:12:21
+Ran out of time. Right data struture (trie), but my
+search doesn't work properly ('..' is a problem on the
+huge edge case).

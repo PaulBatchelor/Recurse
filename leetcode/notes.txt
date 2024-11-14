@@ -79,3 +79,4 @@
 11/13:36:"Valid" doesn't mean "solveable". "Sudoku" is a misnomer.
 11/13:49:Got this one pretty quickly. Hashtable. Sort keys.
 11/13:152:Brute-forced it (TLE), then tried two-pointer (nope), then looked up answer (dynamic programming)
+11/14:211:My Trie problem isn't working on a huge edge case. It's the correct data structure according to the solution, but my implementation is wrong.
