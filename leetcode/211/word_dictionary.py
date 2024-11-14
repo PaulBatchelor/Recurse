@@ -11,7 +11,7 @@ class WordDictionary:
         self.trie = []
 
     def addWord(self, word: str) -> None:
-        #print("adding " + word)
+        print("adding " + word)
         for i in range(len(word)):
             if i >= len(self.trie):
                 self.trie.append(dict())
@@ -48,26 +48,32 @@ class WordDictionary:
         else:
             stk.append((word[0], 0))
 
-        print(f"searching {word} {len(stk)}")
+        print(f"searching: {word} {len(stk)}")
         while len(stk) > 0:
+            pprint(stk)
             elem = stk.pop()
             s = elem[0]
             i = elem[1]
 
             # end of string, check for terminal (in case of substring, eg bat vs bate)
-            print(s, i)
+            print("popped:", s, i, len(stk))
             if i == N - 1:
-                return "!" in self.trie[i][s]
-
+                print(s, i)
+                pprint(self.trie[i][s])
+                if "!" in self.trie[i][s]:
+                    return True
+                continue
             nxt = word[i + 1]
 
             if nxt == '.':
                 # wildcard, check all values at this level
                 for x in sorted(self.trie[i][s]):
-                    if x != "!":
+                    # if x != "!":
+                    #     stk.append((x, i + 1))
+                    if x != "!" and x in self.trie[i][s]:
                         stk.append((x, i + 1))
             else:
-                if nxt in sorted(self.trie[i][s]):
+                if nxt in self.trie[i][s]:
                     stk.append((nxt, i + 1))
 
         return False
@@ -77,7 +83,7 @@ def solve(op, data, expected):
     for i in range(1, len(op)):
         f = getattr(wd, op[i])
         res = f(*data[i])
-        print(op[i], data[i], res, expected[i])
+        # print(op[i], data[i], res, expected[i])
         assert(res == expected[i])
     return wd
 
@@ -86,9 +92,9 @@ def solve(op, data, expected):
 # obj.addWord(word)
 # param_2 = obj.search(word)
 
-op = ["WordDictionary","addWord","addWord","addWord","search","search","search","search"]
-data = [[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]]
-expected = [None,None,None,None,False,True,True,True]
+# op = ["WordDictionary","addWord","addWord","addWord","search","search","search","search", "addWord", "search"]
+# data = [[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."],["fn"],[".."]]
+# expected = [None,None,None,None,False,True,True,True,None,True]
 
 # solve(op, data, expected)
 

@@ -9,3 +9,8 @@ using a stack (for backtracking when a '.' is encountered).
 Ran out of time. Right data struture (trie), but my
 search doesn't work properly ('..' is a problem on the
 huge edge case).
+
+@14:23 wait wait, one idea to try. #grind75 #timelog:00:28:15
+I'm breaking out too early.
+---
+Nevermind. I'm not getting it right. Time to stop.
