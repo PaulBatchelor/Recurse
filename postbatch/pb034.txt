@@ -1,0 +1,7 @@
+@2024-11-14 Thursday, November 14th
+@10:31 Grind75 #grind75 #timelog:01:27:44
+211: Design and Search Words Data Structure.
+I think it's a Trie problem. Spent most of this time
+just getting the Trie structure the way I imagined it. Have not
+implemented the search yet, which I believe will be a DFS
+using a stack (for backtracking when a '.' is encountered).
