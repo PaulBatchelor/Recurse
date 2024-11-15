@@ -25,3 +25,6 @@ Even with pointers, "mog" could be valid with this path.
 ===
 ([m:[o] d:[o i]] [o:[g p] i:[g]] [g p])
 ===
+
+@12:38 NextJS dashboard #nextjs-dashboard-app #timelog:00:48:14
+Just finished chapter 9. Chapter 10 will be another time.
