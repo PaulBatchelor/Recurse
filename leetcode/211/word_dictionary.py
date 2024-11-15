@@ -2,116 +2,44 @@
 # order, sorting them yields an edge case such as '..',
 # where '..' should be any two letter word, but AFAIK,
 # I'm not handling this properly
-from pprint import pprint
-from typing import List
+
+# 2024-11-15: Looked up the answer. What
+# you see is below. I was trying to be
+# clever with my Trie, and it shot me in the foot. Tries
+# need to explicitely be tries because they need to contain
+# unique paths] (bad, dad, mad) don't have any prefixes
+# in common, so they are each their own paths.
+
+class Trie:
+    def __init__(self):
+        self.children = {}
+        self.word = False
 
 class WordDictionary:
-
     def __init__(self):
-        self.trie = []
+        self.root = Trie()
 
     def addWord(self, word: str) -> None:
-        print("adding " + word)
+        node = self.root
+        for w in word:
+            if w not in node.children:
+                node.children[w] = Trie()
+            node = node.children[w]
+        node.word = True
+    def wordSearch(self, word: str, node: Trie) -> bool:
         for i in range(len(word)):
-            if i >= len(self.trie):
-                self.trie.append(dict())
-            if word[i] not in self.trie[i]:
-                self.trie[i][word[i]] = set()
-
-            if i > 0:
-                self.trie[i - 1][word[i - 1]].add(word[i])
-
-            if i == len(word) - 1:
-                self.trie[i][word[i]].add("!")
-
-        # pprint(self.trie)
-
-
-    def search_r(self, word: str, pos: int) -> bool:
-        for i in range(pos, len(word)):
-            if word[i] == '.':
-                # recursively check words
-                return self.search_r(word[1:], i + 1)
-            if word[i] not in self.trie[i]:
+            ch = word[i]
+            if ch not in node.children:
+                if ch == '.':
+                    for k in node.children.keys():
+                        child = node.children[k]
+                        if self.wordSearch(word[i + 1:], child):
+                            return True
                 return False
-        return True
-    def search(self, word: str) -> bool:
-        return self.search_r(word, 0)
-
-    def search2(self, word: str) -> bool:
-        N = len(word)
-
-        if N > len(self.trie):
-            return False
-
-        if word[0] != '.' and word[0] not in self.trie[0]:
-            return False
-
-
-        stk = []
-
-        # populate stack
-
-        if word[0] == '.':
-            for x in sorted(self.trie[0].keys()):
-                if x != "!":
-                    stk.append((x, 0))
-        else:
-            stk.append((word[0], 0))
-
-        print(f"searching: {word} {len(stk)}")
-        while len(stk) > 0:
-            pprint(stk)
-            elem = stk.pop()
-            s = elem[0]
-            i = elem[1]
-
-            # end of string, check for terminal (in case of substring, eg bat vs bate)
-            print("popped:", s, i, len(stk))
-            if i == N - 1:
-                print(s, i)
-                pprint(self.trie[i][s])
-                if "!" in self.trie[i][s]:
-                    return True
-                continue
-            nxt = word[i + 1]
-
-            if nxt == '.':
-                # wildcard, check all values at this level
-                for x in sorted(self.trie[i][s]):
-                    # if x != "!":
-                    #     stk.append((x, i + 1))
-                    if x != "!" and x in self.trie[i][s]:
-                        stk.append((x, i + 1))
             else:
-                if nxt in self.trie[i][s]:
-                    stk.append((nxt, i + 1))
+                node = node.children[ch]
+        return node.word
 
-        return False
-
-def solve(op, data, expected):
-    wd = WordDictionary()
-    for i in range(1, len(op)):
-        f = getattr(wd, op[i])
-        res = f(*data[i])
-        # print(op[i], data[i], res, expected[i])
-        assert(res == expected[i])
-    return wd
-
-# Your WordDictionary object will be instantiated and called as such:
-# obj = WordDictionary()
-# obj.addWord(word)
-# param_2 = obj.search(word)
-
-op = ["WordDictionary","addWord","addWord","addWord","search","search","search","search", "addWord", "search"]
-data = [[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."],["fn"],[".."]]
-expected = [None,None,None,None,False,True,True,True,None,True]
-
-solve(op, data, expected)
-
-# code = open("data.py").read()
-# obj = eval(code)
-# # pprint(obj)
-# 
-# wd = solve(obj[0], obj[1], obj[2])
-# assert(wd.search(".."))
+    def search(self, word: str) -> bool:
+        # print(f"Searching {word}")
+        return self.wordSearch(word, self.root)

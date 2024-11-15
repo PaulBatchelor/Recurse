@@ -28,3 +28,6 @@ Even with pointers, "mog" could be valid with this path.
 
 @12:38 NextJS dashboard #nextjs-dashboard-app #timelog:00:48:14
 Just finished chapter 9. Chapter 10 will be another time.
+
+@15:51 Grind75 #timelog:00:21:45
+Finally finishing up 211.
