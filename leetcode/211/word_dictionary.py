@@ -27,7 +27,18 @@ class WordDictionary:
         # pprint(self.trie)
 
 
+    def search_r(self, word: str, pos: int) -> bool:
+        for i in range(pos, len(word)):
+            if word[i] == '.':
+                # recursively check words
+                return self.search_r(word[1:], i + 1)
+            if word[i] not in self.trie[i]:
+                return False
+        return True
     def search(self, word: str) -> bool:
+        return self.search_r(word, 0)
+
+    def search2(self, word: str) -> bool:
         N = len(word)
 
         if N > len(self.trie):
@@ -92,15 +103,15 @@ def solve(op, data, expected):
 # obj.addWord(word)
 # param_2 = obj.search(word)
 
-# op = ["WordDictionary","addWord","addWord","addWord","search","search","search","search", "addWord", "search"]
-# data = [[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."],["fn"],[".."]]
-# expected = [None,None,None,None,False,True,True,True,None,True]
+op = ["WordDictionary","addWord","addWord","addWord","search","search","search","search", "addWord", "search"]
+data = [[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."],["fn"],[".."]]
+expected = [None,None,None,None,False,True,True,True,None,True]
 
-# solve(op, data, expected)
+solve(op, data, expected)
 
-code = open("data.py").read()
-obj = eval(code)
-# pprint(obj)
-
-wd = solve(obj[0], obj[1], obj[2])
-assert(wd.search(".."))
+# code = open("data.py").read()
+# obj = eval(code)
+# # pprint(obj)
+# 
+# wd = solve(obj[0], obj[1], obj[2])
+# assert(wd.search(".."))

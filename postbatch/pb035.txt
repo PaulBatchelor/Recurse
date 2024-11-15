@@ -1,0 +1,27 @@
+@2024-11-15 Friday, November 15th
+@10:32 Read up on 211 #grind75 #timelog:01:18:31
+Ah. I was not making a Trie in my original implementation.
+I only kept track of possible combinations for each
+position, which was more efficience memory-wise, but
+it did not keep track of paths between unique words.
+---
+Example: "dig" and "dog" show up as (d (o (g)) (i (g)))
+There are two g's here. My structure represented the set
+as ([d], [o i], [g]).
+---
+If I were to add "mop" to the the structure.
+A trie would look like:
+===
+((m (o (p))
+ (d (o (g)) (i (g))))
+===
+My structure would look like:
+===
+([m d] [o i] [g p])
+===
+There's no way to tell if "mip" is a valid path or not
+---
+Even with pointers, "mog" could be valid with this path.
+===
+([m:[o] d:[o i]] [o:[g p] i:[g]] [g p])
+===

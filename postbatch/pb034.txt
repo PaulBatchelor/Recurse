@@ -1,4 +1,4 @@
-@2024-11-14 Thursday, November 14th
+@2024-11-14 Thursday, November 14th (Stopping Practice)
 @10:31 Grind75 #grind75 #timelog:01:27:44
 211: Design and Search Words Data Structure.
 I think it's a Trie problem. Spent most of this time
