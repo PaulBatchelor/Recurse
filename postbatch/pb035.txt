@@ -31,3 +31,9 @@ Just finished chapter 9. Chapter 10 will be another time.
 
 @15:51 Grind75 #timelog:00:21:45
 Finally finishing up 211.
+
+@16:55 Grind75 #timelog:01:07:04
+417: Pacific Island Water Problem. I think I am close. It
+seems to lend itself well to a dynamic programming problem,
+but I turned up an edge case where I wasn't checking
+in all the available directions. Will look into that later.
