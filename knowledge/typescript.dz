@@ -183,3 +183,20 @@ nn instance_type
 hl https://www.typescriptlang.org/docs/handbook/utility-types.html#instancetypetype
 ln InstanceType<Type>: constructs a type of a constructor
 ln function in =Type=.
+
+nn abstract
+hl https://www.typescriptlang.org/docs/handbook/2/classes.html#abstract-classes-and-members
+ln An abstract method or abstract field is one that hasn't
+ln had an implementation yet, and much exist inside of an
+ln abstract class
+ff What is abstract typescript?
+fb An abstract method or abstract field is one that hasn't
+fb had an implementation yet, and much exist inside of an
+fb abstract class
+td Is an abstract class the same as a virtual class in c++?
+
+nn declaration_files
+hl https://en.wikipedia.org/wiki/TypeScript#Declaration_files
+ln Declaration Files
+rm AKA .d.ts
+

@@ -3,7 +3,8 @@ tasks that I intend to work on in the next few days or so.
 
 @grind75 Grind75
 
-@read-typescript-handbook Read the typescript handbook
-
 @nextjs-dashboard-app Complete nextjs dashboard app tutorial
 Link: @!(dzref "webdev/nextjs/learn_dashboard_app")!@
+
+@reading-dbint Read Database Internals
+

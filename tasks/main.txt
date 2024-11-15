@@ -20,8 +20,6 @@ I believe it may be a uniqueness issue.
 
 @itparser-rust Implement IT parser in Rust
 
-@reading-dbint Read Database Internals
-
 @reading-software-dynamics Read "Understanding Software Dynamics"
 
 @bitrune-web-demo Create web-demo of bitrune parser

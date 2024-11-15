@@ -292,3 +292,5 @@ link: @!(dzref "webdev/nextjs/react_foundations")!@
 
 @flashcard-mvp Create MVP for flashcard system
 
+@read-typescript-handbook Read the typescript handbook
+

@@ -19,3 +19,16 @@ Nevermind. I'm not getting it right. Time to stop.
 
 @16:39 Completed? #flashcard-mvp
 I mean, it's got a bug, but it works.
+
+@16:41 Typescript Handbook #read-typescript-handbook #timelog:00:24:07
+Finally done with the reading.
+
+@18:40 database internals #reading-dbint #timelog:00:18:08
+Ordering, operations, invocatoin/completion, shared memory,
+registers, safe/atomic/regular, consistency models
+
+@21:12 databse internals #reading-db-int #timelog:00:13:18
+consistency models, single-operation, strict consistency
+(theoretical), all possible histories vs histories
+permissable under X, linearizablility, total ordering of
+events
