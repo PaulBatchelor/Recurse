@@ -16,3 +16,13 @@ Remove Nth node from linked list
 I've been just tackling medium problems, and it looks
 like I'm wrapping up. We have 3 mediums left. Looks like
 I might be able to get them done by the end of the week.
+
+@10:55 LC1730 #grind75 #timelog:00:19:54
+Shortest path to get food.
+Note that the time here is for implementation. Took me about
+3-5 extra minutes to get the implementation, but I casually
+timed that one.
+
+@11:24 LC287 #grind75 #timelog:00:35:21
+Find the duplicate number. Did brute force, then looked
+up the answer.

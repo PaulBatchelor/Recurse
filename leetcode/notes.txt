@@ -113,3 +113,5 @@
 11/15:211:Finished. My Trie wasn't actually a Trie because it wasn't actually a tree structure. Even with the answer, this took me a while to get right.
 11/16:417:My dynamic programming solution was the wrong approach. Looked up the answer for BFS. Hello LeetCode Premium.
 11/16:19:Managed to remember how linked lists worked all by myself
+11/16:1730:BFS, similar to the pacific/atlantic water flow one (417).
+11/16:287:Brute force was trivial. O(n) with constant space I needed to look up. See: floyd's algorithm. Small, but clever.
