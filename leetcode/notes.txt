@@ -1,4 +1,4 @@
-8/12:334:try ou tmy solution
+8/12:334:try out my solution
 8/12:238:understand their solution better
 8/12:443:pretty much the same, they used built-in str2num
 8/12:283:Figured out suboptimal, optimal with swaps worth study
@@ -11,6 +11,36 @@
 8/13:1493:Seems like 1004, wait on it
 8/13:1732:Trivial
 8/13:724:Trivial
+8/13:2215:Got it
+8/13:1207:Got it. Alt solution was weird (counting sort)
+8/14:1657:Grokked. Alt solutions are sily. DS optmiziation. I don't care.
+8/14:2352: used a set instead of histmap. edit: also has trie solution
+8/14:735:Implemented in python. I know this pretty well.
+8/14:394:braindead too tired to figure out
+8/14:933:Got the logic right. learned about deque in python (did not impl tho)
+8/14:649:I misunderstood the problem. it looks more involved. revisit.
+8/15:2095:mostly got simple approach, but missed a few details. fast/slow I mostly guessed correctly.
+8/15:2130:Bonkers solution of mine was incomplete, more complex than approaches used
+8/16:104:mainly grokked recursive approach, other solutions prevented stack overflow
+8/16:1448:want to take another pass before checking. feels close.
+8/18:437:Grokked the idea of it. Could probably stand to look at smaller subproblems.
+8/19:1372:Nailed it.
+8/19:236:My answer is suboptimal. Probably correct. Editorial misread the the problem and is incorrect.
+8/19:199:Initially approached like DFS, incorrectly. Editorial has good BFS recap.
+8/19:1161:Kinda half-assed this based on two-queue approach in 199. I liked the given solution.
+8/19:700:Nailed it.
+8/21:450:I think my DFS with swap could have worked, the canonical approach in editorial using BST/pred/succ better
+8/21:841:Got the recursive solution correct, stack would have been more elegant/better
+8/22:547:I think I got this one right using BFS approach
+8/22:1466:I do not understand solution fully. Revsit.
+8/23:399:Hard problem. Figured out the crux of the DFS pathfinding problem, but missed important details (using product of division accum instead of union-find, LC-952)
+8/23:1926:I thinik my approach works? I used double queue isntead of single queue. cleaner than editorial.
+8/23:994:Lazy. ONly worked ou tgist. probably deserves more thought.
+8/26:215:Almost figurd out. Working impl but forgot to zddress edge case.
+8/25:2336:missed most of small details. problem is harder than it looks.
+8/26:2542:revist. I exhausted myself with this one.
+8/27:2542:revisted. This was very tricky, even with the answers in front of me.
+8/27:374:Mostly right I think. I will double check.
 9/19:121:Two-pointer solution. Implementation seems to work.
 9/19:1:hashmap solution
 9/19:238:Tricky. Ended up using 2 product sum tables together. I attempted this one before?
@@ -81,3 +111,5 @@
 11/13:152:Brute-forced it (TLE), then tried two-pointer (nope), then looked up answer (dynamic programming)
 11/14:211:WIP. My Trie problem isn't working on a huge edge case. It's the correct data structure according to the solution, but my implementation is wrong.
 11/15:211:Finished. My Trie wasn't actually a Trie because it wasn't actually a tree structure. Even with the answer, this took me a while to get right.
+11/16:417:My dynamic programming solution was the wrong approach. Looked up the answer for BFS. Hello LeetCode Premium.
+11/16:19:Managed to remember how linked lists worked all by myself

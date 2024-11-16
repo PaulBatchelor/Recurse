@@ -1,0 +1,18 @@
+@2024-11-16 Saturday, November 16th
+@08:53 Finishing up LC417 #grind75 #timelog:00:41:32
+I'm hoping I just need to code up an edge case and
+that my overall solution is solid.
+
+@09:06 LC417: They wanted you to use BFS or DFS, not dynamic programming #grind75
+My edge case isn't working.
+
+@09:14 I just bought a year of premium. #grind75
+If I do 6 months, it'll be cheaper than the monthly rate.
+
+@09:36 Onto LC19 #grind75 #timelog:00:28:14
+Remove Nth node from linked list
+
+@10:35 Examinining what's left of grind75 #timelog:00:18:40
+I've been just tackling medium problems, and it looks
+like I'm wrapping up. We have 3 mediums left. Looks like
+I might be able to get them done by the end of the week.
