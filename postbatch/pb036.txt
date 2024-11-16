@@ -26,3 +26,7 @@ timed that one.
 @11:24 LC287 #grind75 #timelog:00:35:21
 Find the duplicate number. Did brute force, then looked
 up the answer.
+
+@13:00 nextjs dashboard #nextjs-dashboard-app #timelog:00:23:35
+
+@14:47 more nextjs #nextjs-dashboard-app #timelog:01:11:09

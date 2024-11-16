@@ -267,3 +267,12 @@ ln page to update just part of a page without disrupting
 ln what the user is doing.
 co $ fetch_api
 cr fetch is a more powerful replacement for XMLHttpRequest
+
+nn urlsearchparams
+hl https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+ln URLSearchParams: interface that provides utility methods
+ln to work with the query string of a URL
+
+nn use_debounce
+hl https://www.npmjs.com/package/use-debounce
+ln use-debounce: react libraries for debouncing

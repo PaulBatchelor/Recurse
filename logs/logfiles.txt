@@ -112,3 +112,5 @@ postbatch/pb030.txt
 postbatch/pb031.txt
 postbatch/pb032.txt
 postbatch/pb033.txt
+postbatch/pb034.txt
+postbatch/pb035.txt
