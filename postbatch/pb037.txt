@@ -17,3 +17,8 @@ already? Was I supposed to know that?
 Follow-up problem 347 Top K frequent elements. Apparently
 this follows a similar pattern:
 [[https://leetcode.com/problems/top-k-frequent-elements/description/]]
+
+@12:00 NextJS-ing #nextjs-dashboard-app #timelog:00:52:49
+
+@13:11 Watching a NextJS video on forms in Next.JS #timelog:00:20:46
+video: [[https://www.youtube.com/watch?v=dDpZfOQBMaU]]

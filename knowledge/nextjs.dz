@@ -80,3 +80,9 @@ ln and Response APIs
 ff What is a route handler?
 fb Route handlers in NextJS enable the creation of custom
 fb request handlers for a given route.
+
+nn create_next_app
+hl https://nextjs.org/docs/app/api-reference/cli/create-next-app
+ln create-next-app: CLI that allows you to create a new Next.JS
+ln application using the default template or an example from
+ln a public GH repository.

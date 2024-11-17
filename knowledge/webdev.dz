@@ -276,3 +276,51 @@ ln to work with the query string of a URL
 nn use_debounce
 hl https://www.npmjs.com/package/use-debounce
 ln use-debounce: react libraries for debouncing
+
+nn formdata
+hl https://developer.mozilla.org/en-US/docs/Web/API/FormData
+ln FormData interface: provides a way to construct a set
+ln of key/value pairs representing form fields and their
+ln values, which can be sent using the fetch(),
+ln XMLHttpRequest.send(), or navigator.sendBeacon() methods.
+co $ xmlhttprequest
+cr can be sent via XMLHttpRequest.send() method
+co $ fetch_api
+cr can be sent via fetch() method
+co $ navigator
+cr can be sent via the navigator.sendBeacon() method
+
+nn navigator
+hl https://developer.mozilla.org/en-US/docs/Web/API/Navigator
+ln Navigator interface: represents state and identify of
+ln the user agent.
+
+nn progressive_enhancement
+hl https://developer.mozilla.org/en-US/docs/Glossary/Progressive_Enhancement
+ln Progressive Enhancement: a design philosophy that provides
+ln a baseline of essential content and functionality to as
+ln many users as possible, while delivering the best possible
+ln experience only to users of the most modern browsers that
+ln can run all the required code.
+rm "best possible experience only to users of the most modern
+rm browsers" is a very corporate tech sentence.
+
+nn progressive_enhancement_wikipedia
+ln Progressive Enhancement (wikipedia): a strategy in
+ln web design that puts emphasis on web content first,
+ln allowing everyone to access the basic content and functionality
+ln of a web page, whilst users with additional browsers or
+ln features or faster internet access receive the enhanced
+ln version instead.
+co $ progressive_enhancement
+cr further elaboration and context. The writing in the
+cr definition is also a bit more mellow. More of a "semantic web"
+cr bias perhaps?
+
+nn progressive_enhancement_uk
+ln Building a robust frontend using progresive enhancement
+hl https://www.gov.uk/service-manual/technology/using-progressive-enhancement
+hl https://en.wikipedia.org/wiki/Progressive_enhancement
+co $ progressive_enhancement
+rm Recommended by alcinnz, where they link when discussing
+rm the concept

@@ -54,3 +54,9 @@ cx webdev/request_api webdev/nextjs/route_handler
 cr route handlers use the request API to make
 cr custom requests for the given route
 
+cx webdev/formdata webdev/nextjs/learn_dashboard_app
+cr FormData mentioned in chapter 12 (mutating data), for
+cr using forms with server actions
+
+cx webdev/zod webdev/nextjs/learn_dashboard_app
+cr zod used for validation in chapter 12
