@@ -115,3 +115,5 @@
 11/16:19:Managed to remember how linked lists worked all by myself
 11/16:1730:BFS, similar to the pacific/atlantic water flow one (417).
 11/16:287:Brute force was trivial. O(n) with constant space I needed to look up. See: floyd's algorithm. Small, but clever.
+11/17:334:I don't think I understood this problem before. Solution probably wouldn't have been something I'd have known how to do then.
+11/17:347:Lexicographic ordering threw me off. Python structures for this (Counter, Heap) seem to handle this for you implicitely.

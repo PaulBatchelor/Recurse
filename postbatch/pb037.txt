@@ -1,0 +1,19 @@
+@2024-11-17 Sunday, November 17th
+@08:47 334: increasing triplet subsequence #leetcode-review #timelog:00:45:10
+I glanced at this one I think. I don't think I ever
+actually tested it.
+---
+Well, I didn't understand this problem when I first read it.
+A subsequence doesn't have to be consecutive. Before I looked
+at the answer, I tried making it a sliding window problem,
+and it failed the edge cases.
+
+@09:37 692: top K frequent words #grind75 #timelog:00:31:54
+Lexicographic order threw me off. It turns out the built-in
+structures in Python used to solve this
+problem (Counter, heapify) seem to handle this for you
+already? Was I supposed to know that?
+---
+Follow-up problem 347 Top K frequent elements. Apparently
+this follows a similar pattern:
+[[https://leetcode.com/problems/top-k-frequent-elements/description/]]
