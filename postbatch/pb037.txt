@@ -25,3 +25,13 @@ video: [[https://www.youtube.com/watch?v=dDpZfOQBMaU]]
 
 @14:36 LC347: top k frequent elements #leetcoding #timelog:00:17:32
 This is a variation of top K frequent words
+
+@14:57 LC53: Maximum Subarray #grind75 #timelog:00:25:16
+I did this already I think. But I didn't submit it, so
+it's a redo now.
+---
+Note to self: a subarray is different from a subsequence.
+Subarrays are continguous.
+---
+Wow, I did not get this right the first time. I gave up
+early and looked at the answer.

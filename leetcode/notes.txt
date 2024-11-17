@@ -118,3 +118,4 @@
 11/17:334:I don't think I understood this problem before. Solution probably wouldn't have been something I'd have known how to do then.
 11/17:692:Lexicographic ordering threw me off. Python structures for this (Counter, Heap) seem to handle this for you implicitely.
 11/17:347:Basically 692, same pattern. Editorial had slick python solutions using built-in heap method nlargest()
+11/17:53:Kadane's algorithm. Attempted before (without checking) using two-pointer, then sliding window. It was wrong. Funnily enough, I reached for those again when I attempted this.
