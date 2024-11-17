@@ -35,3 +35,9 @@ Subarrays are continguous.
 ---
 Wow, I did not get this right the first time. I gave up
 early and looked at the answer.
+
+@15:30 I have to redo the first 3 weeks #grind75
+I didn't submit. So, I didn't really learn anything. yay.
+
+@15:31 LC57: Insert Interval #grind75 #timelog:01:18:50
+Got something working, but I want to review this tomorrow

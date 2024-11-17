@@ -1,31 +1,52 @@
+# 2024-11-17: stumbled into this solution, will want
+# to look at the editorial for something more elegant
 from pprint import pprint
+class Solution:
+    def overlap(self, a, b):
+        # make sure a starts before b
+        if a[0] > b[0]:
+            tmp = a
+            a = b
+            b = tmp
 
-def insert_interval(intervals, new_interval):
-    out = []
-    ni = new_interval
-    start = 0
-    end = 0
+        return (b[0] >= a[0] and b[0] <= a[1])
 
-    for i in range(1, len(intervals)):
-        if ni[0] >= intervals[i - 1][0]:
-            start = i - 1
-        if ni[1] < intervals[i][0]:
-            end = i
-    
-    for i in range(0, len(intervals)):
-        if i > start and i < end:
-            continue
-        elif i == start:
-            iv = [intervals[start][0], max(intervals[end - 1][1], ni[1])]
-            out.append(iv)
-        else:
-            out.append(intervals[i])
+    def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
+        out = []
+        for ivl in intervals:
+            # check for overlap between lastInterval and newInterval
+            # merge if there is overlap, and continue without appending
 
-    print(start, end)
-    return out
+            #print(f"new interval: {newInterval[0], newInterval[1]}, ivl: {ivl[0], ivl[1]}")
+            # look for overlap in start times
 
-rc = insert_interval([[1, 3], [6, 9]], [2, 5])
-assert(rc == [[1, 5], [6, 9]])
+            if (newInterval is not None and self.overlap(newInterval, ivl)):
+                # merge intervals
+                newInterval[0] = min(ivl[0], newInterval[0])
+                newInterval[1] = max(ivl[1], newInterval[1])
+            else:
+                if newInterval is not None and newInterval[1] < ivl[0]:
+                    out.append(newInterval)
+                    newInterval = None
+                out.append(ivl)
 
-rc = insert_interval([[1, 2], [3, 5], [6, 7], [8, 10], [12, 16]], [4, 8])
-assert(rc == [[1, 2], [3, 10], [12, 16]])
+        if newInterval is not None:
+            out.append(newInterval)
+            # if there isn't any overlap, append lastInterval
+        #out.append(newInterval)
+        return out
+
+# name of the game: insert a new interval into a set of non-overlapping intervals,
+# and make sure the resulting set of intervals do not overlap as well
+
+# check for overlap. If there is any overlap, these intervals need to be merged
+# and possibly create new merged interval from the current interval and the to-be
+# merged interval
+# if there is no overlap between the current interval, and the new interval,
+# the current interval can be inserted without any trouble
+# if the new interval comes before the current interval, insert the new
+# interval, then the current interval. Setting the current interval to the "new interval"
+# should make it so the logic works above, because the remaining intervals will
+# be non-overlapping
+
+
