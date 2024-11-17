@@ -1,5 +1,5 @@
 @2024-11-17 Sunday, November 17th
-@08:47 334: increasing triplet subsequence #leetcode-review #timelog:00:45:10
+@08:47 334: increasing triplet subsequence #leetcoding #timelog:00:45:10
 I glanced at this one I think. I don't think I ever
 actually tested it.
 ---
@@ -22,3 +22,6 @@ this follows a similar pattern:
 
 @13:11 Watching a NextJS video on forms in Next.JS #timelog:00:20:46
 video: [[https://www.youtube.com/watch?v=dDpZfOQBMaU]]
+
+@14:36 LC347: top k frequent elements #leetcoding #timelog:00:17:32
+This is a variation of top K frequent words
