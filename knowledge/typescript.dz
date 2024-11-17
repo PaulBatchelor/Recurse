@@ -172,7 +172,7 @@ co $ mapped_types
 
 nn template_literal_types
 ln template literal types: types built on string literal
-ln types, using the same syntax as 
+ln types, using the same syntax as
 ln template literal strings in javascript.
 ff what are template literal types?
 fb Types built on string literal types, using the same
@@ -195,8 +195,9 @@ fb had an implementation yet, and much exist inside of an
 fb abstract class
 td Is an abstract class the same as a virtual class in c++?
 
-nn declaration_files
+nn declaration_files_wikipedia
 hl https://en.wikipedia.org/wiki/TypeScript#Declaration_files
-ln Declaration Files
+ln Declaration Files (wikipedia article)
 rm AKA .d.ts
+co $ declaration_files
 
