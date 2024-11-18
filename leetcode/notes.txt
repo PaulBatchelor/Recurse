@@ -123,3 +123,4 @@
 11/18:542:BFS problem on a grid. pretty standard pattern.
 11/18:973:I know more python now, so my heap-based solution was better
 11/18:3:Repeated. Looks like I remembered the solution from before.
+11/18:15:I did only the bruteforce version of this. I had to look up the answer (variation of 2sum)

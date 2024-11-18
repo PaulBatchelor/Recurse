@@ -1,87 +1,58 @@
-# 3sum: this feels like a backtracking problem. How to
-# avoid O(n^3) time? Sorting the list might do something.
-from pprint import pprint
+# 2024-11-18: I only knew how to do the brute-force version,
+# which triggered a TLE. This is from the editorial.
 
-def approach1(nums):
-    N = len(nums)
-    out = []
-
-    # to make backtracking work
-    # make sure i < j < k
-    # make sure nums[i] <= nums[j] <= nums[k]
-
-    # sort the list to make sure ordering holds
-    nums = sorted(nums)
-
-    # set of target k values -(nums[i] + nums[j])
-    h = set()
-
-    # fundamentally, this is more or less written
-    # as a bruteforce loop with lots of escape hatches
-    # I don't love the nested loops
-    for i in range(0, N):
-        for j in range(1, N):
-            if i >= j:
-                continue
-            target = -(nums[j] + nums[i])
-            if target in h:
-                continue
-            h.add(target)
-            for k in range(2, N):
-                if j >= k:
-                    continue
-                if nums[k] == target:
-                    out.append([nums[i], nums[j], nums[k]])
-                    continue
-    return out
-
-# transcribed from pseudo-code in wikipedia,
-# modified with set for uniqueness combinations
-def twopointer(nums):
-    nums = sorted(nums)
-    N = len(nums)
-    out = []
-    h = set()
-
-    for i in range(0, N - 2):
-        a = nums[i]
-        start = i + 1
-        end = N - 1
-
-        while (start < end):
-            b = nums[start]
-            c = nums[end]
-            if (a + b + c) == 0:
-                target = -(a + b)
-                if target not in h:
-                    out.append([a, b, c])
-                h.add(target)
-                start += 1
-                end -= 1
-            elif (a + b + c) > 0:
-                end -= 1
+class Solution:
+    def twoSum(self, nums: List[int], i: int, res: List[List[int]]):
+        lo, hi = i + 1, len(nums) - 1
+        while lo < hi:
+            triple = nums[i], nums[lo], nums[hi]
+            sm = sum(triple)
+            if sm < 0:
+                lo += 1
+            elif sm > 0:
+                hi -= 1
             else:
-                start += 1
+                res.append(triple)
+                lo += 1
+                hi -= 1
+                while lo < hi and nums[lo] == nums[lo - 1]:
+                    lo += 1
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        nums = sorted(nums)
+        res = []
+        for i in range(len(nums)):
+            # since the array is sorted, and the numbers
+            # are checked after the index position,
+            # there are no combinations that work after the numbers
+            # become positive
+            if nums[i] > 0:
+                break
+            if i == 0 or nums[i - 1] != nums[i]:
+                self.twoSum(nums, i, res)
+        return res
 
-    return out
+    # brute force
+    def threeSumV1(self, nums: List[int]) -> List[List[int]]:
+        sz = len(nums)
+        out = []
+        visited = {}
+        nums = sorted(nums)
 
-def flatten(triplets):
-    out = []
+        for i in range(sz):
+            for j in range(i + 1, sz):
+                needed = -(nums[i] + nums[j])
+                for k in range(j + 1, sz):
+                    if nums[k] > needed:
+                        break
+                    if nums[k] != needed:
+                        continue
+                    triple = (nums[i], nums[j], nums[k])
+                    if sum(triple) == 0:
+                        if nums[i] not in visited:
+                            visited[nums[i]] = set()
+                        if nums[j] in visited[nums[i]]:
+                            continue
+                        out.append(triple)
+                        visited[nums[i]].add(nums[j])
 
-    for row in triplets:
-        out.extend(row)
-    return sorted(out)
-
-def test(f):
-    nums = [-1, 0, 1, 2, -1, 4]
-    expected = flatten([[-1, -1, 2], [-1, 0, 1]])
-    output = flatten(f(nums))
-    assert(expected == output)
-
-    nums = [0, 1, 1]
-    expected = []
-    output = f(nums)
-    assert(expected == output)
-
-test(approach1)
-test(twopointer)
+        return out

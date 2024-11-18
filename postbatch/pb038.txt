@@ -3,3 +3,4 @@ Sick and in bed.
 @11:48 LC 542. 01 Matrix #grind75 #timelog:00:13:30
 @12:05 LC 973. K Closest Points To Origin #grind75 #timelog:00:09:45
 @12:21 LC 3. Longest substring without repeating characters #grind75 #timelog:00:24:19
+@12:53 LC 15: 3sum #grind75 #timelog:00:42:44
