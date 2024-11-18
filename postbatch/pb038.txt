@@ -1,4 +1,4 @@
 @2024-11-18 Monday, November 18th
 Sick and in bed.
-@11:48 LC 542. 01 Matrix #grind75 #timelog:13:30
-
+@11:48 LC 542. 01 Matrix #grind75 #timelog:00:13:30
+@12:05 LC 973. K Closest Points To Origin #grind75 #timelog:00:09:45

@@ -121,3 +121,4 @@
 11/17:53:Kadane's algorithm. Attempted before (without checking) using two-pointer, then sliding window. It was wrong. Funnily enough, I reached for those again when I attempted this.
 11/17:57:My solution passes, but is a little ugly because I kept coding up safeguards against edge cases. I am going to want to revisit.
 11/18:542:BFS problem on a grid. pretty standard pattern.
+11/18:973:I know more python now, so my heap-based solution was better
