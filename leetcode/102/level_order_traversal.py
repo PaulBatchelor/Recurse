@@ -1,69 +1,47 @@
+# 2024-11-19: Pretty run of the mill BFS stuff. The output
+# was misleading in the examples. It looked like they wanted
+# pairs for each node (my original untested solution did this),
+# but really they wanted one for each level.
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+
 from collections import deque
-from pprint import pprint
 
-class Node:
-    def __init__(self, val, left=None, right=None):
-        self.left = left
-        self.right = right
-        self.val = val
+class Solution:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+        out = []
 
-def level_order_trav(root):
-    res = []
+        q = deque()
 
-    if root == None:
-        return []
+        if root is None:
+            return []
 
-    q = deque()
+        q.append(root)
 
-    q.append(root)
-    res.append([root.val])
+        while len(q) > 0:
+            new_q = deque()
+            level = []
+            while len(q) > 0:
+                node = q.popleft()
+                level.append(node.val)
+                # check left/right, append to new queue and append to level
+                if node.left:
+                    #level.append(node.left.val)
+                    new_q.append(node.left)
 
-    while len(q) > 0:
-        node = q.popleft()
-        pair = []
-        if node.left is not None:
-            q.append(node.left)
-            pair.append(node.left.val)
-        if node.right is not None:
-            q.append(node.right)
-            pair.append(node.right.val)
+                if node.right:
+                    #level.append(node.right.val)
+                    new_q.append(node.right)
 
-        if len(pair) > 0:
-            res.append(pair)
+            # append level to the output
+            out.append(level)
 
-    return res
+            # update new queue to be outer queue
+            q = new_q
 
-def tree1():
-    root = Node(3)
-    root.left = Node(9)
-    root.right = Node(20)
-    root.right.left = Node(15)
-    root.right.right = Node(7)
-
-    return root
-
-def tree2():
-    root = Node(1)
-    return root
-
-def tree3():
-    root = Node(3)
-    root.left = Node(9)
-    root.left.right = Node(8)
-    root.right = Node(20)
-    root.right.left = Node(15)
-    root.right.right = Node(7)
-
-    return root
-
-tree = tree1()
-res = level_order_trav(tree)
-assert(res == [[3], [9, 20], [15, 7]])
-
-tree = tree2()
-res = level_order_trav(tree)
-assert(res == [[1]])
-
-tree = tree3()
-res = level_order_trav(tree)
-assert(res == [[3], [9, 20], [8], [15, 7]])
+        return out

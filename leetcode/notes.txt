@@ -124,3 +124,4 @@
 11/18:973:I know more python now, so my heap-based solution was better
 11/18:3:Repeated. Looks like I remembered the solution from before.
 11/18:15:I did only the bruteforce version of this. I had to look up the answer (variation of 2sum)
+11/19:102:Did this before, but probably untested. BFS binary tree, but misread how they wanted the results outputted (I initially thought pairs, but they wanted to group things by level). The simple test cases could be misinterpretted. Minor thing, but it looks like my previous attempt did the same thing.
