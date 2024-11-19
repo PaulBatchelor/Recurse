@@ -1,44 +1,32 @@
-# I couldn't resist doing this one
+# 2024-11-19: I was very excited to do this one since
+# I like stack-based languages. The thing that tripped
+# me were the truncate-to-zero division rules, which
+# were an issue whenever signed things were involved.
+# (-6//132) goes to -1, while the asnwer should have been
+# 0. I had an initial hack that extracts the sign, performs
+# unsigned division, then re-introduces the sign, but it
+# turns out that (int(x/y)) does the proper truncation
+# behavior in Python. After looking at the editorial,
+# I also did some refactoring and moved the pops out
+# of each of the branches.
 
-def op_add(stk):
-    a = stk.pop()
-    b = stk.pop()
-    stk.append(a + b)
+class Solution:
+    def evalRPN(self, tokens: List[str]) -> int:
+        stk = []
 
-def op_div(stk):
-    b = stk.pop()
-    a = stk.pop()
-    stk.append(a // b)
+        for tk in tokens:
+            if tk not in "+-/*":
+                stk.append(int(tk))
+                continue
+            a = stk.pop()
+            b = stk.pop()
+            if tk == "+":
+                stk.append(b + a)
+            elif tk == "/":
+                stk.append(int(b/a))
+            elif tk == "*":
+                stk.append(a * b)
+            elif tk == "-":
+                stk.append(b - a)
 
-def op_sub(stk):
-    b = stk.pop()
-    a = stk.pop()
-    stk.append(a - b)
-
-def op_mul(stk):
-    b = (stk.pop())
-    a = stk.pop()
-    stk.append(a * b)
-
-def rpn(tokens):
-    stk = []
-    ops = {
-        "+": op_add,
-        "/": op_div,
-        "-": op_sub,
-        "*": op_mul
-    }
-    for t in tokens:
-        if t.isnumeric():
-            stk.append(int(t))
-        elif t in ops:
-            ops[t](stk)
-    return stk.pop()
-
-tk = "2 1 + 3 *".split(' ')
-rc = rpn(tk)
-assert(rc == 9)
-
-tk = "4 13 5 / +".split(' ')
-rc = rpn(tk)
-assert(rc == 6)
+        return stk.pop()
