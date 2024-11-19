@@ -1,98 +1,72 @@
-# mostly untested, but I bet it's at least 90% correct.
-# this is graph traversal problem (BFS or DFS could work,
-# but BFS makes more sense). Some bookkeeping required
-# to manage previous allocated and visited nodes.
-
-from copy import deepcopy
-from collections import deque
-from pprint import pprint
-
+# 2024-11-19 I came up with a two-step BFS process for this.
+# the editorial had something a little bit more slick, which
+# I also included here.
+"""
+# Definition for a Node.
 class Node:
     def __init__(self, val = 0, neighbors = None):
         self.val = val
         self.neighbors = neighbors if neighbors is not None else []
+"""
 
-def clone_graph(node):
-    # use queue for BFS
-    q = deque()
+from typing import Optional
+from collections import deque
 
-    # hashmap to keep track of allocated nodes
-    # lookup table h[id] -> node
-    h = dict()
+class Solution:
+    # version 2 (based on editorial): BFS that appends neighbors as it goes
+    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+        q = deque()
+        visited = {}
+        if node is None:
+            return None
 
-    # a set to keep track of which nodes have been traversed
-    # each node should be visited exactly once
-    visited = set()
+        q.append(node)
 
-    # add the first node to the queue, and make an initial
-    # copy. neighbors will be added later
-    q.append(node)
-    visited.add(node.val)
-    h[node.val] = Node(node.val)
+        visited[node.val] = Node(val=node.val, neighbors = [])
+        while len(q) > 0:
+            node = q.popleft()
 
-    while len(q) > 0:
-        node = q.popleft()
+            for neighbor in node.neighbors:
+                if neighbor.val not in visited:
+                    visited[neighbor.val] = Node(val=neighbor.val, neighbors=[])
+                    q.append(neighbor)
+                visited[node.val].neighbors.append(visited[neighbor.val])
 
-        # the new node is always going to be allocated
-        # when the old node is added to the queue
-        newnode = h[node.val]
-        path = []
+        return visited[1]
 
-        # iterate over the neighbors and traverse
-        for n in node.neighbors:
-            # a neighbor will be seen as a neighbor
-            # before it is visited, and may be a neighbor
-            # to more than one node. keep track which
-            # nodes have been allocated in the hashmap
-            if n.val not in h:
-                h[n.val] = Node(n.val)
+    # my first attempt without help: a two-step BFS process, first finding
+    # the nodes, then updating the links to the nodes
+    def cloneGraphV1(self, node: Optional['Node']) -> Optional['Node']:
+        nodelist = {}
 
-            # update the neighbors field with the new
-            # node reference
-            newnode.neighbors.append(h[n.val])
+        if node is None:
+            return None
 
-            # add to queue if neighborly node hasn't been
-            # visisted yet
-            if n.val not in visited:
+        # first, allocate all the nodes using BFS, using the
+        # old neighbors
+
+        q = deque()
+
+        q.append(node)
+
+        while len(q) > 0:
+            node = q.popleft()
+            if node.val in nodelist:
+                continue
+
+            nodelist[node.val] = Node(val=node.val, neighbors=node.neighbors)
+
+            for n in node.neighbors:
                 q.append(n)
-                visited.add(n.val)
 
-    return h[1]
+        # then, once all the nodes have been created,
+        # update all the neighbors for every node
 
-def graph1():
-    nodes = [Node(i + 1) for i in range(4)]
+        for _,node in nodelist.items():
+            copied_neighbors = []
+            for nd in node.neighbors:
+                copied_neighbors.append(nodelist[nd.val])
+            node.neighbors = copied_neighbors
 
-    nodes[0].neighbors = [nodes[1], nodes[3]]
-    nodes[1].neighbors = [nodes[0], nodes[2]]
-    nodes[2].neighbors = [nodes[1], nodes[3]]
-    nodes[3].neighbors = [nodes[0], nodes[2]]
-
-    return nodes[0]
-
-# generate adjacency list, made using a hashmap instead of
-# an array.
-def adjlist(gr):
-    visited = set()
-    adj = {}
-    q = deque()
-
-    q.append(gr)
-
-    while len(q) > 0:
-        node = q.popleft()
-        adj[node.val] = []
-        for n in node.neighbors:
-            adj[node.val].append(n.val)
-            if n.val not in visited:
-                q.append(n)
-                visited.add(n.val)
-
-    return adj
-
-graph = graph1()
-graph2 = clone_graph(graph)
-
-a1 = adjlist(graph)
-a2 = adjlist(graph2)
-
-assert(a1 == a2)
+        # return the top node (node with value 1)
+        return nodelist[1]

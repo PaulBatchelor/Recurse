@@ -1,0 +1,19 @@
+ns leetcode
+gr things related to the leetcode and leetcode strategy
+
+nn grokking_notes
+ln Grokking Notes
+hl https://gist.github.com/tykurtz/3548a31f673588c05c89f9ca42067bc4
+
+nn grind75
+ln grind75: a collection of leetcode problems that you can
+ln customize
+hl https://www.techinterviewhandbook.org/grind75/
+
+nn blind75
+ln blind75: a curated collection of leetcod problems
+hl https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-questions
+
+nn leetcode75
+ln leetcode75: a curated study guide of 75 leetcode problems
+hl https://leetcode.com/studyplan/leetcode-75/
