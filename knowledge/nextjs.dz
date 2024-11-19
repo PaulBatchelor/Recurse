@@ -86,3 +86,68 @@ hl https://nextjs.org/docs/app/api-reference/cli/create-next-app
 ln create-next-app: CLI that allows you to create a new Next.JS
 ln application using the default template or an example from
 ln a public GH repository.
+
+nn redirect
+hl https://nextjs.org/docs/app/api-reference/functions/redirect
+ln redirect: allows you to redirect the user to another URL.
+ff What does redirect() do in NextJS?
+fb Redirect is a function that allows you to redirect the
+fb user to another URL.
+
+nn revalidate_path
+hl https://nextjs.org/docs/app/api-reference/functions/revalidatePath
+ln revalidatePath: allows you to purge cached data on-demand
+ln for a specific path
+ff What does revalidatePath() do in NextJS?
+fb revalidatePath() is a function that allows you to you to
+fb purge cached data on-demand for a specific path.
+
+nn dynamic_routes
+hl https://nextjs.org/docs/app/building-your-application/routing/dynamic-routes
+ln Dynamic Routes: when you don't know the exact segment names
+ln ahead of time, and want to create routes from dynamic
+ln data, you can use Dynamic Segments that are filled in at
+ln request time or prerendered at build time
+co $ routing
+
+nn routing
+hl https://nextjs.org/docs/app/building-your-application/routing
+ln Routing: Routes are the skeleton of a NextJS application. 
+ln Routes are related to URL routes, and correspond to a
+ln specific fire hierarchy in the project.
+
+nn routing_terminology
+hl https://nextjs.org/docs/app/building-your-application/routing#terminology
+ln Routing Terminology
+co $ routing
+
+nn URL_segment
+ln URL segment: The part of the URL path, delimited by slashes
+co $ routing_terminolgy
+co $ dynamic_routes
+cr Dynamic Segments of a route are filled in at request time
+ff What is a URL segment?
+fb A URL segment is the part of the URL path, delimited by
+fb slashes.
+
+nn URL_path 
+ln URL path: Part of the URL that comes after the domain (composed of segments)
+co $ routing_terminology
+
+nn tree
+ln tree: A convention for visualizing a hierarchical structure.
+ln For example, a component tree with parent and
+ln children components, a folder structure, etc.
+co $ routing_terminology
+
+nn subtree
+ln subtree: Part of a tree, starting at a new root (first) and ending at the leaves (last).
+co $ routing_terminology
+
+nn root
+ln Root: The first node in a tree or subtree, such as a root layout.
+co $ routing_terminology
+
+nn leaf
+ln Leaf: Nodes in a subtree that have no children, such as the last segment in a URL path.
+co $ routing_terminology
