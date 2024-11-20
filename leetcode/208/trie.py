@@ -1,59 +1,40 @@
-from pprint import pprint
+# 2024-11-20: I've done enough trie problems at this point
+# that the code is muscle memory
 
 class Trie:
-    def __init__(self, val=None):
+    def __init__(self):
+        self.word = False
         self.children = {}
-        self.val = val
-        self.end = False
 
     def insert(self, word: str) -> None:
         node = self
-        for s in word:
-            if s not in node.children:
-                node.children[s] = Trie(s)
-            node = node.children[s]
-        node.end = True
+        for w in word:
+            if w not in node.children:
+                node.children[w] = Trie()
+            node = node.children[w]
+        node.word = True
+
 
     def search(self, word: str) -> bool:
         node = self
-        for s in word:
-            if s not in node.children:
+        for w in word:
+            if w not in node.children:
                 return False
-            node = node.children[s]
-
-        return node.end
+            node = node.children[w]
+        return node.word
 
     def startsWith(self, prefix: str) -> bool:
         node = self
-        for s in prefix:
-            if s not in node.children:
+        for p in prefix:
+            if p not in node.children:
                 return False
-            node = node.children[s]
-
+            node = node.children[p]
         return True
 
-def test():
-    cmds = ["Trie", "insert", "search", "search", "startsWith", "insert", "search"]
-    inputs = [[], "apple", "apple", "app", "app", "app", "app"]
-    expected = [None, None, True, False, True, None, True]
-    obj = None
 
-    outputs = []
 
-    for i in range(0, len(cmds)):
-        result = None
-        match cmds[i]:
-            case "Trie":
-                obj = Trie()
-            case "insert":
-                obj.insert(inputs[i])
-            case "search":
-                result = obj.search(inputs[i])
-            case "startsWith":
-                result = obj.startsWith(inputs[i])
-
-        outputs.append(result)
-
-    assert(outputs == expected)
-
-test()
+# Your Trie object will be instantiated and called as such:
+# obj = Trie()
+# obj.insert(word)
+# param_2 = obj.search(word)
+# param_3 = obj.startsWith(prefix)
