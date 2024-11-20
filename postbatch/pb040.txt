@@ -64,3 +64,5 @@ and terms.
 @12:56 208: Implement Trie #grind75 #timelog:00:06:32
 
 @16:36 NextJS-ing: finished up chapter 12 #nextjs-dashboard-app #timelog:00:28:15
+
+@16:32 NextJS dashboard: starting chapter 13 #nextjs-dashboard-app #timelog:00:22:53

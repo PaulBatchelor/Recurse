@@ -156,3 +156,6 @@ nn dashboard-app-pass-id-server-action
 hl https://nextjs.org/learn/dashboard-app/mutating-data#4-pass-the-id-to-the-server-action
 ln In this part of the tutorial, a variable id is passed to
 ln the server action via bind.
+
+nn dashboard-app/13-handling-errors
+ln Chapter 13: Handling Errors

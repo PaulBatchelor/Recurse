@@ -61,5 +61,8 @@ cr using forms with server actions
 cx webdev/zod webdev/nextjs/learn_dashboard_app
 cr zod used for validation in chapter 12
 
-cx javascript/bind webdev/dashboard-app-pass-id-server-action
+cx javascript/bind webdev/nextjs/dashboard-app-pass-id-server-action
 cr bind() is somehow needed here for some reason
+
+cx javascript/error webdev/nextjs/dashboard-app/13-handling-errors
+cr error component makes use of the native error object in javascript

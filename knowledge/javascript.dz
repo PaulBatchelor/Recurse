@@ -149,3 +149,7 @@ ln function that, when called, calls this function with
 ln its this keyword set to the provided value, and a
 ln given sequence of arguments preceding any provided when
 ln the new function is called.
+
+nn error
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
+ln Error Object
