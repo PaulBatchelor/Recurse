@@ -123,7 +123,7 @@ co $ routing
 
 nn URL_segment
 ln URL segment: The part of the URL path, delimited by slashes
-co $ routing_terminolgy
+co $ routing_terminology
 co $ dynamic_routes
 cr Dynamic Segments of a route are filled in at request time
 ff What is a URL segment?
