@@ -141,3 +141,11 @@ co $ static
 nn class_expression
 hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/class
 ln class expression
+
+nn bind
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+ln bind:  method of Function instances creates a new
+ln function that, when called, calls this function with
+ln its this keyword set to the provided value, and a
+ln given sequence of arguments preceding any provided when
+ln the new function is called.

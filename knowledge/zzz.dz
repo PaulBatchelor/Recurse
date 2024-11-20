@@ -60,3 +60,6 @@ cr using forms with server actions
 
 cx webdev/zod webdev/nextjs/learn_dashboard_app
 cr zod used for validation in chapter 12
+
+cx javascript/bind webdev/dashboard-app-pass-id-server-action
+cr bind() is somehow needed here for some reason

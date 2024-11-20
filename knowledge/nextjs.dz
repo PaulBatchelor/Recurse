@@ -151,3 +151,8 @@ co $ routing_terminology
 nn leaf
 ln Leaf: Nodes in a subtree that have no children, such as the last segment in a URL path.
 co $ routing_terminology
+
+nn dashboard-app-pass-id-server-action
+hl https://nextjs.org/learn/dashboard-app/mutating-data#4-pass-the-id-to-the-server-action
+ln In this part of the tutorial, a variable id is passed to
+ln the server action via bind.
