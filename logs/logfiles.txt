@@ -114,3 +114,7 @@ postbatch/pb032.txt
 postbatch/pb033.txt
 postbatch/pb034.txt
 postbatch/pb035.txt
+postbatch/pb036.txt
+postbatch/pb037.txt
+postbatch/pb038.txt
+postbatch/pb039.txt

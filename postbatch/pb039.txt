@@ -17,3 +17,5 @@ some additional checks using SQLite in the test.sh shell
 script.
 ---
 Added au and im commands
+
+@21:23 DB internals (225-229) #reading-dbint #timelog:00:21:44
