@@ -7,3 +7,13 @@
 @11:30 LC150: Evaluate Reverse Polish Notation #grind75 #timelog:00:34:10
 
 @14:05 nextjs #nextjs-dashboard-app #timelog:01:10:22
+
+@17:54 port some easy commands #dagzet-port-commands #timelog:01:04:21
+Most of them are more of the same, so that's a good
+starting point
+---
+Improved testing: moved unit tests to separate file, added
+some additional checks using SQLite in the test.sh shell
+script.
+---
+Added au and im commands
