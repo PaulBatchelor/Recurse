@@ -1,76 +1,72 @@
-# Some intuition:
-# - The structure here is a dependency graph (aka a DAG)
-# - Depth-First traversal. Can you traverse N nodes?
-# - It's a cycles check which a topological sort can check,
-# - but hopefully DFS by itself can solve this?
+# 2024-11-20: I've done this problem, and new about Kahn's
+# algorithm for cycle detection. For some reason, I have
+# trouble getting the adjacency list working correctly.
+# the input pairs feel backward. I managed to get it working
+# thinking about it as a problem to remove leaves.
+# In the editorial, I took their solution and renamed
+# the generic graph variables to ones appropriate to
+# the domain so I could keep track of what I was doing
 
-from pprint import pprint
+from collections import deque
+class Solution:
+    # Editorial: Kahn's algorithm: use of indegree to keep track of incoming edges
+    # reworked the variables in the code to have more domain-specfic language
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        nrequirements = [0] * numCourses
+        needed_for = [[] for _ in range(numCourses)]
 
-# 2024-10-01. I don't have this one yet.
-# I know there needs to be traversal, and it should be
-# depth-first. The number of unique nodes visited should
-# equal to the number of courses.
+        for pre in prerequisites:
+            needed_for[pre[1]].append(pre[0])
+            nrequirements[pre[0]] += 1
 
-# follow-up: I did an initial step where I found all
-# the nodes without prereqs, then iterated through
-# those depth-first using a stack, and using a set to
-# keep track of nodes. Processed is used to keep track
-# of cycles
+        queue = deque()
+        for i in range(numCourses):
+            if nrequirements[i] == 0:
+                queue.append(i)
+        coursesTaken = 0
 
-def course_schedule(ncourses, prerequisites):
-    processed = set()
-    edges = prerequisites
+        while queue:
+            curCourse = queue.popleft()
+            coursesTaken += 1
+            for course in needed_for[curCourse]:
+                nrequirements[course] -= 1
+                if nrequirements[course] == 0:
+                    queue.append(course)
 
-    stk = []
+        return coursesTaken == numCourses
+    # Initial approach: find leaves, and remove leaves
+    def canFinishV1(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        # design a structure where it's easy to find leaves
+        # find initial leaves
+        # remove leaves from graph
+        # get new leaves
+        # repeat until there are no more leaves
+        # if the number of nodes visited is the number of courses, it's acylic and
+        # possible to complete the courses
 
-    # [A, B] means course B needs to be taken before A
+        adj = [set() for _ in range(numCourses)]
+        courses_left = numCourses
 
-    # find all nodes that do not have any prereqs at all
-    for node in range(0, ncourses):
-        no_prereqs = True
-        for edge in edges:
-            if edge[1] == node:
-                no_prereqs = False
-                break
-        if no_prereqs:
-            stk.append(node)
+        for p in prerequisites:
+            adj[p[0]].add(p[1])
 
-    # Starting with the courses without prereqs, find
-    # courses that rely on those, and work down.
-    while len(stk) > 0:
-        node = stk.pop()
-        processed.add(node)
+        # find initial leaves
 
-        for edge in edges:
-            if edge[0] == node:
-                if edge[1] not in processed:
-                    stk.append(edge[1])
-                else:
-                    # if a node has been previously processed,
-                    # there is a circular dependency
-                    return False
+        leaves = []
 
-    return len(processed) == ncourses
+        for course, pre in enumerate(adj):
+            if len(pre) == 0:
+                leaves.append(course)
 
-rc = course_schedule(2, [[1,0]])
-assert(rc)
+        while len(leaves) > 0:
+            courses_left -= len(leaves)
+            new_leaves = []
+            for leaf in leaves:
+                for course, pre in enumerate(adj):
+                    if leaf in pre:
+                        pre.remove(leaf)
+                        if len(pre) == 0:
+                            new_leaves.append(course)
+            leaves = new_leaves
 
-rc = course_schedule(2, [[1,0], [0, 1]])
-assert(not rc)
-
-rc = course_schedule(3, [[1,0], [2, 1]])
-assert(rc)
-
-rc = course_schedule(4, [[1,0], [2, 1], [3, 2]])
-assert(rc)
-
-rc = course_schedule(4, [[1,0], [2, 1], [3, 2], [2, 3]])
-assert(not rc)
-
-# implicit course 4
-rc = course_schedule(5, [[1,0], [2, 1], [3, 2]])
-assert(rc)
-
-# loop 
-rc = course_schedule(5, [[1,0], [2, 1], [3, 2], [1, 4], [4, 2]])
-assert(not rc)
+        return courses_left == 0
