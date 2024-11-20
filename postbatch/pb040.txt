@@ -1,2 +1,62 @@
 @2024-11-20 Wednesday, November 20th
 @09:36 207: Course Schedule #grind75 #timelog:01:15:13
+@12:23 Rethink DDIA reading strategy #timelog:00:22:03
+I'm trying to be smart about approaching this book, because
+it seems to be an important book to read. However,
+just reading cover-to-cover may not be the best way to
+retain this information (source: tried this already).
+I also want to use my knowledge graph system more
+effectively.
+---
+Before my approach involved making a local knowledge graph
+as I went to keep track of things. But this approach
+is probably too meandering. A better approach would be
+to build a graph from the table of contents of DDIA as
+an initially, gradually fill out the outline, and then
+connect those as references to key concepts which get
+created inside of a more generic "distributed systems"
+node.
+---
+append-only style: graphs are more of a cognitive burden
+to work out when you're in the thick of reading and
+getting information. It's hard to draw one out on paper
+because things can dynamically change. Instead, the emphasis
+should try to encourage a top-down append-only model, such
+as appending lines to a dagzet file, which has already proven
+to be effective for appending links.
+---
+Emergent graph structures: using an loosely append-only
+system, one think in terms of nodes and their connections.
+For any given node, does it directly connect to larger concepts?
+A smaller concepts? From these connections, a directed graph
+forms (which will also be acyclic), and big picture concepts
+bubble up to the surface.
+---
+BFS knowledge acquisition: Instead of thinking in terms
+of pages, think in terms of larger sections and chapters.
+In a given chapter, go to the summary, which I've noticed
+tend to be very keyword driven. Add these keywords as
+nodes in another graph. If keywords are defined in
+terms of other keywords, connect those nodes.
+---
+Dagzet consists of several namespaced subgraphs using paths
+for names. The more nodes exist on a given subgraph, the
+more likely emergent hierarchies will emerge.
+---
+Namespaces in dagzet should be easier to use. For example,
+something like =co a b/c= should be able to figure out
+that "g/a => g/b/c", assuming those nodes exist in the
+parsed file (otherwise cx would need to be used). It
+would be also a good idea to have namespaces be implicitely
+made: "nn b/c" should be able to create a subgraph "g/b"
+with a node called "c". (This might already work?)
+---
+Oh, cool. namespacing works.
+---
+So, in conclusion: be more active with the knowledge graph.
+Start with making a graph of the authors structure (table
+of contents). Fill this out with details, connect those
+to another more open-ened graph to dynamically build
+hierarchical knowledge structures by piecing together
+concepts and terms, and making connections other concepts
+and terms.
