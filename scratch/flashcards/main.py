@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import sys
 from flashcards import FlashCards
 from pprint import pprint
