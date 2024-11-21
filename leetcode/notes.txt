@@ -131,3 +131,4 @@
 11/20:208:Did this before. This Trie code was mostly just muscle memory.
 11/21:322:I had a fuzzy notion of how to solve this (which was correct intuition), but ultimately had to look up the solution and see the implementation
 11/21:238:Familiar already, so I had to recall what I did to come up with the answer. Reminds me of a prefix sum problem. Optimized version turned out to be the same solution, but "clever".
+11/21:155:One of those confusing puzzles that is forever tedious when you know the answer. The slightly space-optimized version using min-tracker was new to me and mildly interesting.

@@ -1,36 +1,93 @@
-# verified as working in LC editor
-# I looked up the answer because I had no idea how I'd
-# be able to do this in O(1) time. This is one of those
-# prolems where you either know the "trick" or you don't.
-# And if you know the trick, the code is trivial.
+# 2024-11-21: Again, not a very satisfying problem. I
+# remember needing to look up the answer and being kind
+# of disappointed by it
 
+# The clever-er solution using a "min-tracker" stack
 class MinStack:
+
     def __init__(self):
-        self.min_val = None
-        self.min_idx = -1
         self.stack = []
-        self.pos = -1
-        self.mins = []
-        
+        self.min_tracker = []
 
     def push(self, val: int) -> None:
-        self.pos += 1
-        if self.min_val is None or val <= self.min_val:
-            self.min_val = val
-            self.min_idx = self.pos
         self.stack.append(val)
-        self.mins.append(self.min_idx)
+        if len(self.min_tracker) == 0 or val <= self.min_tracker[-1]:
+            self.min_tracker.append(val)
 
     def pop(self) -> None:
-        self.stack.pop()
-        self.mins.pop()
-        self.pos -= 1
-        
+        v = self.stack.pop()
+        if v == self.min_tracker[-1]:
+            self.min_tracker.pop()
 
     def top(self) -> int:
-        return self.stack[self.pos]
-        
+        return self.stack[-1]
 
     def getMin(self) -> int:
-        return self.stack[self.mins[self.pos]]
+        return self.min_tracker[-1]
 
+class MinStack1:
+
+    def __init__(self):
+        self.stk = []
+        self.min_stk = []
+
+    def push(self, val: int) -> None:
+        self.stk.append(val)
+        min_val = val if len(self.min_stk) == 0 else min(self.min_stk[-1], val)
+        self.min_stk.append(min_val)
+
+    def pop(self) -> None:
+        self.stk.pop()
+        self.min_stk.pop()
+
+
+    def top(self) -> int:
+        return self.stk[-1]
+
+
+    def getMin(self) -> int:
+        return self.min_stk[-1]
+
+
+
+# Your MinStack object will be instantiated and called as such:
+# obj = MinStack()
+# obj.push(val)
+# obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.getMin()
+
+
+# This uses two stacks, which is similar the tuple-stack
+# used in one of the solutions in the editorial
+class MinStackV1:
+
+    def __init__(self):
+        self.stk = []
+        self.min_stk = []
+
+    def push(self, val: int) -> None:
+        self.stk.append(val)
+        min_val = val if len(self.min_stk) == 0 else min(self.min_stk[-1], val)
+        self.min_stk.append(min_val)
+
+    def pop(self) -> None:
+        self.stk.pop()
+        self.min_stk.pop()
+
+
+    def top(self) -> int:
+        return self.stk[-1]
+
+
+    def getMin(self) -> int:
+        return self.min_stk[-1]
+
+
+
+# Your MinStack object will be instantiated and called as such:
+# obj = MinStack()
+# obj.push(val)
+# obj.pop()
+# param_3 = obj.top()
+# param_4 = obj.getMin()

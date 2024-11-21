@@ -1,5 +1,13 @@
 @2024-11-21 Thursday, November 21st
+
 @09:29 322: Coin Change #grind75 #timelog:01:55:22
+
 @10:24 Coin change editorial and research #grind75
-@12:43 LC238 Product of Array Except Self #grind75 #timelog:00:21:19
+
+@12:43 LC238: Product of Array Except Self #grind75 #timelog:00:21:19
+
 @13:11 LC238 Editorial and Research #grind75 #timelog:00:16:37
+
+@13:33 LC155: Min Stack #grind75 #timelog:00:06:54
+
+@13:40 LC155 Editorial and Research #grind75 #timelog:00:09:30

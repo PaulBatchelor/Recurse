@@ -119,3 +119,8 @@ hl https://en.wikipedia.org/wiki/Prefix_sum
 ln Prefix Sum
 co $ problems/238_product_of_array_except_self
 cr Left/right product sum solution reminds me of prefix sum tables
+
+nn problems/155_min_stack
+hl https://leetcode.com/problems/min-stack
+ln 155: Min Stack
+co $ grind75
