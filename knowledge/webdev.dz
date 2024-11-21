@@ -324,3 +324,20 @@ hl https://en.wikipedia.org/wiki/Progressive_enhancement
 co $ progressive_enhancement
 rm Recommended by alcinnz, where they link when discussing
 rm the concept
+
+nn web_dev_learn_accessibility
+hl https://web.dev/learn/accessibility/
+ln Learn Accessibility: An evergreen accessibility course
+ln and reference to level up your web development.
+
+nn eslint_plugin_jsx_a11y
+hl https://www.npmjs.com/package/eslint-plugin-jsx-a11y
+ln eslint-plugin-jsx-a11y: Static AST checker for
+ln accessibility rules on JSX elements.
+
+nn zod/safeParse
+hl https://zod.dev/?id=safeparse
+ln safeParse: This method returns an object containing 
+ln either the successfully parsed data or a ZodError instance 
+ln containing detailed information about the validation 
+ln problems.
