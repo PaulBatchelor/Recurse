@@ -12,4 +12,4 @@
 
 @13:40 LC155 Editorial and Research #grind75 #timelog:00:09:30
 
-@14:05 Make it easier to update flash cards
+@14:05 Make it easier to update flash cards #timelog:00:09:50
