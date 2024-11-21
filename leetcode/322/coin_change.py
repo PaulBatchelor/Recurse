@@ -1,53 +1,54 @@
-from pprint import pprint
+# 2024-11-21 Identified quickly that it was dynamic
+# programming, but I didn't really grok it enough to get
+# it correctly on my own.
 
-# fewest number of coins: use larger denominations
-# find the combination with the maximum number of large
-# denominations
-#
-# first find the combination, then add up the number
-# ncoins(coin_n, amount) +
-# ncoins(coin_{n - 1}, amount - ncoins(coin_n, amount)*coin_n) +
-# ncoins(coin_{n - 2}, amount - ncoins(coin_{n - 1}, amount)*coin_{n - 1}) +
+from functools import lru_cache
 
-# this is the recursive solution, it probably should
-# be memoized somehow to make it a dynamic programming problem
+class Solution:
+    # bottom-up dynamic programming
+    def coinChange(self, coins: List[int], amount: int) -> int:
+        dp = [float('inf')] * (amount + 1)
+        dp[0] = 0
 
-def ncoins(coins, coin_idx, amount, count):
-    if amount == 0:
-        return count
+        for coin in coins:
+            for x in range(coin, amount + 1):
+                dp[x] = min(dp[x], dp[x - coin] + 1)
 
-    if coin_idx == len(coins):
-        return -1
+        return dp[amount] if dp[amount] != float('inf') else -1
 
-    max_coins = amount // coins[coin_idx]
+    # dynamic programming: top-down
+    def coinChange_dp_topdown(self, coins: List[int], amount: int) -> int:
+        @lru_cache(None)
+        def dfs(rem):
+            if rem < 0:
+                return -1
 
-    if max_coins == 0:
-        return ncoins(coins, coin_idx + 1, amount, count)
+            if rem == 0:
+                return 0
 
-    if (max_coins * coins[coin_idx]) == amount:
-        print(f"found {max_coins} of {coins[coin_idx]} equals {amount}")
-        return count + max_coins
+            min_cost = float('inf')
 
-    for i in range(max_coins, 0, -1):
-        print(f"trying {i} of {coins[coin_idx]}")
-        total = i * coins[coin_idx]
-        newcount = ncoins(coins, coin_idx + 1, amount - total, count + i)
-        if newcount > 0:
-            return newcount
+            for coin in coins:
+                res = dfs(rem - coin)
+                if res != -1:
+                    min_cost = min(min_cost, res + 1)
 
-    return -1
+            return min_cost if min_cost != float('inf') else -1
+        return dfs(amount)
+    # brute force
+    def coinChange_brute_force(self, coins: List[int], amount: int) -> int:
+        n = len(coins)
 
-def coin_change(coins, amount):
-    coins = sorted(coins, reverse=True)
-    x = ncoins(coins, 0, amount, 0)
-    print(x)
-    return x
+        def dfs(idx, amount):
+            if amount == 0:
+                return 0
+            if idx < n and amount > 0:
+                min_cost = float('inf')
+                for x in range(amount // coins[idx] + 1):
+                    res = dfs(idx + 1, amount-x * coins[idx])
+                    if res != -1:
+                        min_cost = min(min_cost, res + x)
+                return -1 if min_cost == float('inf') else min_cost
+            return -1
 
-rc = coin_change([1, 2, 5], 11)
-assert(rc == 3)
-
-rc = coin_change([2], 3)
-assert(rc == -1)
-
-rc = coin_change([1], 0)
-assert(rc == 0)
+        return dfs(0, amount)

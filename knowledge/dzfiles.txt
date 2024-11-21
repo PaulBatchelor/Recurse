@@ -36,4 +36,5 @@ knowledge/javascript.dz
 knowledge/typescript.dz
 knowledge/nextjs.dz
 knowledge/css.dz
+knowledge/leetcode.dz
 knowledge/zzz.dz

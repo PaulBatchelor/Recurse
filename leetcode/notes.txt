@@ -129,3 +129,4 @@
 11/19:150:Subtle things related to divide-to-zero truncation. I used an actual stack, I was not clever enough to think of the in-place solution.
 11/20:207:Solved it okay without because I know these problems with audio work, but processing the input correctly was tricky for me. It felt flipped? Ended up rewriting the editorial answer with domain-specific language instead of the generic graph terms.
 11/20:208:Did this before. This Trie code was mostly just muscle memory.
+11/21:322:I had a fuzzy notion of how to solve this (which was correct intuition), but ultimately had to look up the solution and see the implementation

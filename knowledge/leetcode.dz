@@ -17,3 +17,93 @@ hl https://leetcode.com/discuss/general-discussion/460599/blind-75-leetcode-ques
 nn leetcode75
 ln leetcode75: a curated study guide of 75 leetcode problems
 hl https://leetcode.com/studyplan/leetcode-75/
+
+nn problems/322_coin_change
+ln 322: Coin Change
+hl https://leetcode.com/problems/coin-change
+co references/optimization_problem $
+cr can be modeled as an optimization problem
+cr using the "standard form"
+co $ paradigms/dynamic_programming
+
+nn references/optimization_problem
+hl https://en.wikipedia.org/wiki/Optimization_problem
+ln Optimization Problem (Computer Science): the problem
+ln of finding the best solution from all feasible solutions.
+ff What is an optimization problem?
+fb the problem of finding the best solution from all feasible
+fb solutions.
+
+nn references/candidate_solution
+ln Candidate solution: member of the set of possible solutions
+ln in the feasible region of given problems.
+co $ references/optimization_problem
+cr the "best solution" is a candidate solution
+ff What is a candidate solution?
+fb A candidate solution is a solution in the feasible region
+fb of given problems.
+
+nn references/optimal_substructure
+ln Optimal Substructure: in computer sience, a problem is
+ln said to have optimal substructure if an optimal solution
+ln can be constructed from optimal solutions of its
+ln subproblems.
+hl https://en.wikipedia.org/wiki/Optimal_substructure
+co $ problems/322_coin_change
+cr the coin change problem has an optimal substructure property
+co $ paradigms/dynamic_programming
+cr optimal substructure key piece in solving dynamic programming problems
+ff What is optimal substructure?
+fb Optimal substructure is a property of a problem where
+fb an optimal solution can be constructed from optimal
+fb solutions of its subproblems.
+
+nn paradigms/dynamic_programming
+ln Dynamic Programming
+
+nn references/recurrence_relation
+hl https://en.wikipedia.org/wiki/Recurrence_relation
+ln Recurrence Relation: In mathematics, a recurrence
+ln relation is an equation according to which the n 
+ln nth term of a sequence of numbers is equal 
+ln to some combination of the previous terms.
+co $ references/optimal_substructure
+cr used to represent optimal substructure
+co $ problems/322_coin_change
+cr Editorial: "the following recurrence relation holds"
+
+nn python/lru_cache
+hl https://docs.python.org/3/library/functools.html#functools.lru_cache
+ln lru_cache(): Decorator to wrap a function with a
+ln memoizing callable that saves up to the maxsize most recent calls. 
+co $ problems/322_coin_change
+cr used in top-down dynamic programming solution to avoid TLE
+
+nn references/bottom_up_top_down
+hl https://en.wikipedia.org/wiki/Bottom%E2%80%93up_and_top%E2%80%93down_design
+ln Bottom-up and Top-down design: are both strategies of 
+ln information processing and ordering knowledge, used in a 
+ln variety of fields including software, humanistic and 
+ln scientific theories (see systemics), and management and 
+ln organization. In practice they can be seen as a style of 
+ln thinking, teaching, or leadership. 
+co $ paradigms/dynamic_programming
+cr Dynamic programming can come in top-down or bottoms-up approaches
+co $ problems/322_coin_change
+cr DP solutions for top-down and bottoms-up
+
+nn references/dynamic_programming
+hl https://en.wikipedia.org/wiki/Dynamic_programming
+ln Dynamic Programming: A mathematicl optimization method
+ln and an algorithmic paradigm.
+co $ paradigms/dynamic_programming
+
+nn references/algorithmic_paradigm
+hl https://en.wikipedia.org/wiki/Algorithmic_paradigm
+ln Algorithmic Paradigm: An algorithmic paradigm is a
+ln generic model or framework which underlies the design
+ln of a class of algorithms.
+co $ paradigms/algorithmic_paradigm
+
+nn paradigms/algorithmic_paradigm
+ln Algorithmic Paradigms
