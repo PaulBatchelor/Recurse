@@ -25,6 +25,7 @@ co references/optimization_problem $
 cr can be modeled as an optimization problem
 cr using the "standard form"
 co $ paradigms/dynamic_programming
+co $ grind75
 
 nn references/optimization_problem
 hl https://en.wikipedia.org/wiki/Optimization_problem
@@ -107,3 +108,14 @@ co $ paradigms/algorithmic_paradigm
 
 nn paradigms/algorithmic_paradigm
 ln Algorithmic Paradigms
+
+nn problems/238_product_of_array_except_self
+ln 238: Product of array except self
+hl https://leetcode.com/problems/product-of-array-except-self
+co $ grind75
+
+nn references/prefix_sum
+hl https://en.wikipedia.org/wiki/Prefix_sum
+ln Prefix Sum
+co $ problems/238_product_of_array_except_self
+cr Left/right product sum solution reminds me of prefix sum tables
