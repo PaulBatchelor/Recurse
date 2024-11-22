@@ -1,0 +1,15 @@
+@2024-11-22 Friday, November 22nd
+@08:58 Introducing a new shorthand for cx in dagzet #timelog:00:16:29
+cx tends to be pretty verbose, since paths
+have to be full paths. I tend to be writing
+a lot of =cx A B=, where 'B' is some node I am
+connecting things to.
+---
+I propose that '^' indicate the string of the last item
+connected to for left/right position, respectively. That
+is, assuming I can't get '$' to work the way I want to.
+
+@09:17 LC89: validate binary search tree #grind75 #timelog:00:59:02
+Initial attmpts. Program hit edge cases quickly.
+
+@10:31 LC89 editorial and research

@@ -124,3 +124,30 @@ nn problems/155_min_stack
 hl https://leetcode.com/problems/min-stack
 ln 155: Min Stack
 co $ grind75
+
+nn problems/89_validate_binary_search_tree
+hl https://leetcode.com/problems/validate-binary-search-tree
+ln 89: Validate Binary Search Tree
+
+nn references/binary_search_tree
+hl https://en.wikipedia.org/wiki/Binary_search_tree
+ln Binary Search Tree
+co $ data_structures/binary_search_tree
+
+nn data_structures/binary_search_tree
+ln Binary Search Tree
+co $ problems/89_validate_binary_search_tree
+
+nn references/tree_traversal
+hl https://en.wikipedia.org/wiki/Tree_traversal
+ln tree traversal
+
+nn references/tree_traversal/in_order
+ln in-order tree traversal
+co $ problems/89_validate_binary_search_tree
+cr one solution for validating BST is using in-order traversal
+co $ data_structures/binary_search_tree
+cr in-order tree traversal on BST retrieves keys in ascending
+cr order. I'd be most likely to try to implement a solution
+cr this way in an interview setting because this property
+cr is pretty well established for BSTs
