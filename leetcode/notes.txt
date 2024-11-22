@@ -134,3 +134,4 @@
 11/21:155:One of those confusing puzzles that is forever tedious when you know the answer. The slightly space-optimized version using min-tracker was new to me and mildly interesting.
 11/22:89:I had a hunch about using ranges recursively, but I couldn't quite articulate it as code. The in-order traversal solution felt more intuitive once I looked it up.
 11/22:200:I identified it as a BFS problem, couldn't get the code quite right, even to get all the base test cases to pass.
+11/22:994:Got tripped up with the BFS because I forgot oranges would rot things simultaneously, but managed to fix this without help

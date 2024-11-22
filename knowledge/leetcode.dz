@@ -156,6 +156,7 @@ cr is pretty well established for BSTs
 nn problems/200_number_of_islands
 ln LC 200: number of islands
 co $ grind75
+hl https://leetcode.com/problems/number-of-islands
 
 nn references/depth_first_search
 hl https://en.wikipedia.org/wiki/Depth-first_search
@@ -164,7 +165,7 @@ co $ paradigms/depth_first_search
 
 nn paradigms/depth_first_search
 ln Depth-First Search
-co $ problems/200_number_of_islands
+co problems/200_number_of_islands $
 
 nn references/disjoint_data_set
 hl https://en.wikipedia.org/wiki/Disjoint-set_data_structure
@@ -182,3 +183,8 @@ co $ paradigms/breadth_first_search
 nn paradigms/breadth_first_search
 ln Breadth-First Search
 co $ problems/200_number_of_islands
+
+nn problems/994_rotting_oranges
+hl https://leetcode.com/problems/rotting-oranges/description/
+ln 994: number of islands
+co $ paradigms/breadth_first_search
