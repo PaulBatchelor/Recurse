@@ -12,4 +12,4 @@ is, assuming I can't get '$' to work the way I want to.
 @09:17 LC89: validate binary search tree #grind75 #timelog:00:59:02
 Initial attmpts. Program hit edge cases quickly.
 
-@10:31 LC89 editorial and research
+@10:31 LC89 editorial and research #timelog:00:38:42
