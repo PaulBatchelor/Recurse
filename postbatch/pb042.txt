@@ -13,3 +13,9 @@ is, assuming I can't get '$' to work the way I want to.
 Initial attmpts. Program hit edge cases quickly.
 
 @10:31 LC89 editorial and research #timelog:00:38:42
+
+@15:08 LC200: Number of islands #grind75 #timelog:00:37:44
+@15:48 LC200 Continued #grind75 #timelog:00:41:33
+@16:30 LC200 Editorial and Research #grind75 #timelog:00:38:45
+I was close to getting BFS right. I didn't think
+to simply erase islands as I went.

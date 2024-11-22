@@ -128,6 +128,7 @@ co $ grind75
 nn problems/89_validate_binary_search_tree
 hl https://leetcode.com/problems/validate-binary-search-tree
 ln 89: Validate Binary Search Tree
+co $ grind75
 
 nn references/binary_search_tree
 hl https://en.wikipedia.org/wiki/Binary_search_tree
@@ -151,3 +152,33 @@ cr in-order tree traversal on BST retrieves keys in ascending
 cr order. I'd be most likely to try to implement a solution
 cr this way in an interview setting because this property
 cr is pretty well established for BSTs
+
+nn problems/200_number_of_islands
+ln LC 200: number of islands
+co $ grind75
+
+nn references/depth_first_search
+hl https://en.wikipedia.org/wiki/Depth-first_search
+ln Depth-First-Search (DFS)
+co $ paradigms/depth_first_search
+
+nn paradigms/depth_first_search
+ln Depth-First Search
+co $ problems/200_number_of_islands
+
+nn references/disjoint_data_set
+hl https://en.wikipedia.org/wiki/Disjoint-set_data_structure
+ln Disjoint Data Set: a data structure that stores a
+ln collection of disjoint (non-overlapping) sets.
+co $ problems/200_number_of_islands
+cr One of the esoteric solutions involves using a union find
+cr disjoint data set
+
+nn references/breadth_first_search
+hl https://en.wikipedia.org/wiki/Breadth-first_search
+ln Bread-first search (BFS)
+co $ paradigms/breadth_first_search
+
+nn paradigms/breadth_first_search
+ln Breadth-First Search
+co $ problems/200_number_of_islands

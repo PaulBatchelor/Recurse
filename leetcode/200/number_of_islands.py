@@ -1,62 +1,121 @@
-# 2024-10-03: Is there a way to do traverse a grid like
-# this without keeping track of visited nodes?
+# 2024-11-22 I knew pretty well you could use BFS to solve
+# this, but I couldn't get the code together for it.
+# I've included the very weird disjoint set solution here.
+# I do not understand it.
+
 from collections import deque
+
+class UnionFind:
+    def __init__(self, grid):
+        self.count = 0
+        m, n = len(grid), len(grid[0])
+        self.parent = []
+        self.rank = []
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j] == "1":
+                    self.parent.append(i * n + j)
+                    self.count += 1
+                else:
+                    self.parent.append(-1)
+                self.rank.append(0)
+
+    def find(self, i):
+        if self.parent[i] != i:
+            self.parent[i] = self.find(self.parent[i])
+        return self.parent[i]
+
+    def union(self, x, y):
+        rootx = self.find(x)
+        rooty = self.find(y)
+
+        if rootx != rooty:
+            if self.rank[rootx] > self.rank[rooty]:
+                self.parent[rooty] = rootx
+            elif self.rank[rootx] < self.rank[rooty]:
+                self.parent[rootx] = rooty
+            else:
+                self.parent[rooty] = rootx
+                self.rank[rootx] += 1
+            self.count -= 1
+
+    def getCount(self):
+        return self.count
+
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-        # this is a breadth-first traversal problem, ideally one
-        # where each node is visited exactly once 
+        if not grid:
+            return 0
 
-        # use a queue for BFS
-        q = deque()
-        m = len(grid)
-        n = len(grid[0])
+        nrows = len(grid)
+        ncols = len(grid[0])
 
-        # traversal goes top to down, left to right
+        uf = UnionFind(grid)
 
-        q.append((0, 0))
+        for r in range(nrows):
+            for c in range(ncols):
+                if grid[r][c] == "1":
+                    grid[r][c] = "0"
+                    for ro, co in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
+                        nxtrow = ro + r
+                        nxtcol = co + c
 
-        nislands = 0
+                        if nxtrow < 0 or nxtrow >= nrows or nxtcol < 0 or nxtcol >= ncols:
+                            continue
 
-        # keep track of visited islands in a set.
-        # I do not love this. It would be nice to be able to come up with a traverse
-        # pattern that goes top-left to bottom-right reaching in the grid, reaching
-        # every node exactly once
-        visited = set()
+                        if grid[nxtrow][nxtcol] == "1":
+                            uf.union(r * ncols + c, nxtrow * ncols + nxtcol)
 
-        while len(q) > 0:
-            pos = q.popleft()
+        return uf.getCount()
+    def numIslands_bfs(self, grid: List[List[str]]) -> int:
+        if not grid:
+            return 0
+        num_islands = 0
 
-            # TODO: use row/col instead of x/y
-            x = pos[0]
-            y = pos[1]
-            next_x = x + 1
-            next_y = y + 1
-            prev_x = x - 1
-            prev_y = y - 1
-            val = grid[y][x]
+        nrows = len(grid)
+        ncols = len(grid[0])
 
-            # islands are discovered in the top-left corner. so check and see if
-            # there is one at (0, 0)
+        for r in range(nrows):
+            for c in range(ncols):
+                if grid[r][c] == "1":
+                    num_islands += 1
+                    q = deque()
+                    q.append((r, c))
+                    while q:
+                        currow, curcol = q.popleft()
+                        grid[currow][curcol] = "0"
+                        for ro, co in [(0, 1), (0, -1), (1, 0), (-1, 0)]:
+                            nxtrow = ro + currow
+                            nxtcol = co + curcol
+                            if nxtrow < 0 or nxtrow >= nrows or nxtcol < 0 or nxtcol >= ncols:
+                                continue
+                            if grid[nxtrow][nxtcol] == "1":
+                                grid[nxtrow][nxtcol] = "0"
+                                q.append((nxtrow, nxtcol))
+        return num_islands
+    def numIslands_dfs(self, grid: List[List[str]]) -> int:
+        if not grid:
+            return 0
+        num_islands = 0
+        for i in range(len(grid)):
+            for j in range(len(grid[0])):
+                if grid[i][j] == "1":
+                    self.dfs(grid, i, j)
+                    num_islands += 1
 
-            coord = x * n + y * m
-            if coord in visited:
-                continue
-            visited.add(coord)
+        return num_islands
+    def dfs(self, grid, r, c):
+        if (
+            r < 0
+            or c < 0
+            or r >= len(grid)
+            or c >= len(grid[0])
+            or grid[r][c] != "1"
+        ):
+            return
+        grid[r][c] = "0"
 
-            if x == 0 and y == 0 and val == "1":
-                nislands += 1
-            # the top-left corner of a new island is found if the upper and left neighbors are zero, and the current value is 1
-            elif val == "1":
-                upper_zero = prev_y < 0 or grid[prev_y][x] == "0"
-                left_zero = prev_x < 0 or grid[y][prev_x] == "0"
-
-                if upper_zero and left_zero:
-                    nislands += 1
-
-            if next_x < n:
-                q.append((next_x, y))
-
-            if next_y < m:
-                q.append((x, next_y))
-
-        return nislands
+        self.dfs(grid, r - 1, c)
+        self.dfs(grid, r + 1, c)
+        self.dfs(grid, r, c - 1)
+        self.dfs(grid, r, c + 1)
