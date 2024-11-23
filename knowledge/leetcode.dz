@@ -263,3 +263,44 @@ ln feasible solutions is discrete or can be reduced to a
 ln discrete set.
 co references/knapsack_problem $
 cr knapsack problem is a problem in combinatorial optimization
+
+nn paradigms/binary_search/upper_bound
+ln Upper bound binary search problems
+rm EV: upper bound problems are rarer but are part of
+rm "find a range" problems
+
+nn paradigms/binary_search/lower_bound
+ln Lower bound binary search problems
+
+nn references/binary_search_leetcode
+hl https://leetcode.com/explore/learn/card/binary-search/
+ln Binary Search Leetcode explore card
+co $ paradigms/binary_search
+
+nn problems/34_first_last_sorted_array
+hl https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+ln 34: Find first and last element in sorted array
+rm "find a range" problem
+co $ paradigms/binary_search/upper_bound
+co $ paradigms/binary_search
+td work on LC 34: first/last element in sorted array
+
+nn problems/278_first_bad_version
+hl https://leetcode.com/problems/first-bad-version
+ln 278: First Bad Version
+co $ paradigms/binary_search/lower_bound
+zz TODO: can we treat this as implicit?
+co $ paradigms/binary_search
+td Work on LC 278: First Bad Version
+
+nn problems/875_koko_eating_bananas
+ln 875: Koko eating bananas
+hl https://leetcode.com/problems/koko-eating-bananas
+co $ paradigms/binary_search/lower_bound
+co $ paradigms/binary_search
+td Work on LC 875: koko eating bananas
+
+nn problems/1011_capacity_ship_packages_d_days
+ln 1011: Capacity to ship packages within D days
+hl https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
+co $ paradigms/binary_search/lower_bound
