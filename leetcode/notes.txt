@@ -138,3 +138,4 @@
 11/23:33:Fought this one for many hours before giving up. As per usual, I was less close than I thought. Also, I think my left/right dyslexia made this difficult. Binary search isn't sticking for me. I feel like I keep missing details.
 11/23:39:Managed to get this one reasonably quickly. The editorial used a "remaining" variable which was a little bit more clever than my "exceeds bounds" logic
 11/23:1:Pretty straight forward.
+11/23:20:Knew the pattern and got it mostly correct on the first attempt, but I forgot the edge case with too many open parens

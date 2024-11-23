@@ -30,3 +30,5 @@ There are 24 such problems.
 @14:34 NextJS #nextjs-dashboard-app #timelog:01:11:50
 
 @17:20 LC 1: two-sum #grind75 #timelog:00:09:00
+
+@17:39 LC 20: valid parentheses #grind75 #timelog:00:13:44
