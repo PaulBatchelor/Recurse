@@ -221,3 +221,45 @@ nn references/opionated_guide_binary_search
 hl https://leetcode.com/discuss/study-guide/2371234/An-opinionated-guide-to-binary-search-
 ln An opinionated guide to binary search
 co $ paradigms/binary_search
+
+nn paradigms/backtracking
+ln Backtracking
+
+nn references/backtracking
+ln Backtracking
+hl https://en.wikipedia.org/wiki/Backtracking
+co $ paradigms/backtracking
+
+nn problems/39_combination_sum
+hl https://leetcode.com/problems/combination-sum/
+ln 39: Combination sum
+co $ grind75
+co $ paradigms/backtracking
+
+nn references/knapsack_problem
+hl https://en.wikipedia.org/wiki/Knapsack_problem
+ln Knapsack problem: given a set of items, each with a 
+ln weight and a value, determine which items to include in 
+ln the collection so that the total weight is less than or 
+ln equal to a given limit and the total value is as large 
+ln as possible.
+co $ problems/39_combination_sum
+cr this problem initially reminded me of a knapsack problem,
+cr except that this problem enumerating all possibilities
+cr instead of finding an optimal one
+ff What is the knapsack problem?
+fb The knapsack problem can be described as: given a set
+fb of items, each with a weight and a value, determine
+fb which items to include in the collection so that the
+fb total weight is less than or equal to a given limit and
+fb the total value is as large as possible.
+
+nn references/combinatorial_optimization
+hl https://en.wikipedia.org/wiki/Combinatorial_optimization
+ln Combinatorial optimization is a subfield of mathematical 
+ln optimization that consists of finding an optimal object 
+ln from a finite set of objects,[1] where the set of 
+ln feasible solutions is discrete or can be reduced to a 
+ln discrete set.
+co references/knapsack_problem $
+cr knapsack problem is a problem in combinatorial optimization

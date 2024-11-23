@@ -136,3 +136,4 @@
 11/22:200:I identified it as a BFS problem, couldn't get the code quite right, even to get all the base test cases to pass.
 11/22:994:Got tripped up with the BFS because I forgot oranges would rot things simultaneously, but managed to fix this without help
 11/23:33:Fought this one for many hours before giving up. As per usual, I was less close than I thought. Also, I think my left/right dyslexia made this difficult. Binary search isn't sticking for me. I feel like I keep missing details.
+11/23:39:Managed to get this one reasonably quickly. The editorial used a "remaining" variable which was a little bit more clever than my "exceeds bounds" logic
