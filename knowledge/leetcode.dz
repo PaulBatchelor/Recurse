@@ -196,6 +196,8 @@ co $ grind75
 
 nn references/binary_search
 hl https://en.wikipedia.org/wiki/Binary_search
+ln Binary Search: algorithm that finds the position of
+ln a target value in a sorted array.
 co $ paradigms/binary_search
 
 nn paradigms/binary_search
@@ -207,3 +209,15 @@ hl https://algs4.cs.princeton.edu/11model/BinarySearch.java.html
 ln Binary Search code snippet in Java, with with code comments
 co $ paradigms/binary_search
 rm Recommended by EV
+
+nn references/sorted_array
+hl https://en.wikipedia.org/wiki/Sorted_array
+ln Sorted Array: an array data structure where each element
+ln is sorted in numerical, alphabetical, or some other order.
+co $ references/binary_search
+cr sorted array is the data structure used in binary search
+
+nn references/opionated_guide_binary_search
+hl https://leetcode.com/discuss/study-guide/2371234/An-opinionated-guide-to-binary-search-
+ln An opinionated guide to binary search
+co $ paradigms/binary_search
