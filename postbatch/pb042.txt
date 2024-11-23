@@ -20,4 +20,7 @@ Initial attmpts. Program hit edge cases quickly.
 I was close to getting BFS right. I didn't think
 to simply erase islands as I went.
 
-@17:11 LC994 Rotting Oranges #grind75 #timelog:00:30:56
+@17:11 LC994: Rotting Oranges #grind75 #timelog:00:30:56
+
+@21:09 LC33: Search in rotated sorted array #timelog:01:26:34
+Giving up for the night.

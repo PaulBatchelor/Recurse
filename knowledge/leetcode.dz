@@ -188,3 +188,8 @@ nn problems/994_rotting_oranges
 hl https://leetcode.com/problems/rotting-oranges/description/
 ln 994: number of islands
 co $ paradigms/breadth_first_search
+
+nn problems/33_search_in_rotated_sorted_array
+hl https://leetcode.com/problems/search-in-rotated-sorted-array
+ln 33: search in rotated sorted array
+co $ grind75
