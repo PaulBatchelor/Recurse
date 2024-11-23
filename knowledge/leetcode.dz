@@ -304,3 +304,34 @@ nn problems/1011_capacity_ship_packages_d_days
 ln 1011: Capacity to ship packages within D days
 hl https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/
 co $ paradigms/binary_search/lower_bound
+
+nn problems/1_two_sum
+hl https://leetcode.com/problems/two-sum/
+ln 1: two-sum
+co $ data_structures/hash_table
+co $ grind75
+
+nn data_structures/hash_table
+ln Hash Table
+
+nn references/hash_table
+hl https://en.wikipedia.org/wiki/Hash_table
+ln A hash table is a data structure that implements an
+ln associative array, also called a dictionary or map.
+co $ data_structures/hash_table
+
+nn references/associative_array
+hl https://en.wikipedia.org/wiki/Associative_array
+ln associative array: an abstract data type that stores a
+ln collection of key-value pairs, such that each possible
+ln key appears at most once in the collection.
+co references/hash_table $
+cr a hash table implements an associative array
+
+nn references/abstract_data_type
+hl https://en.wikipedia.org/wiki/Abstract_data_type
+ln abstract data type: mathematical model for data types,
+ln defined by its behavior (semantics) from the point of
+ln view of a user of the data, specifically in terms of
+ln possible values, possible operations on the data of
+ln this type, and the behavior of these operations.

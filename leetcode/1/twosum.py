@@ -1,3 +1,26 @@
+# 2024-11-23: answer whipped up. I wanted a structure
+# that had only one return
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        pair = []
+        # hashmap dictionary
+        hm = {}
+
+        # iterate through indices 0 .. N -1
+        for i in range(len(nums)):
+            x = nums[i]
+            # is current number a match for a previously found number?
+            if x in hm:
+                pair = [hm[x], i]
+                break
+            ideal = target - x
+            # our ideal value points to the indices
+            # of the previous value
+            hm[ideal] = i
+
+        return pair
+
+# old version
 def twosum(x, target):
     h = {}
 
