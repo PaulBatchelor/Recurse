@@ -12,3 +12,7 @@ hl https://en.wikipedia.org/wiki/Timsort
 ln Timsort: the underlying algorithm used by Python for
 ln =sort= and =sorted=.
 rm Found via Fluent Python, via EV
+
+nn heapsort_examples
+hl https://docs.python.org/3/library/heapq.html#basic-examples
+ln heapsort examples
