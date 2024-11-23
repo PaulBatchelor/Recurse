@@ -193,3 +193,17 @@ nn problems/33_search_in_rotated_sorted_array
 hl https://leetcode.com/problems/search-in-rotated-sorted-array
 ln 33: search in rotated sorted array
 co $ grind75
+
+nn references/binary_search
+hl https://en.wikipedia.org/wiki/Binary_search
+co $ paradigms/binary_search
+
+nn paradigms/binary_search
+ln Binary Search
+co $ problems/33_search_in_rotated_sorted_array
+
+nn references/binary_search_java
+hl https://algs4.cs.princeton.edu/11model/BinarySearch.java.html
+ln Binary Search code snippet in Java, with with code comments
+co $ paradigms/binary_search
+rm Recommended by EV

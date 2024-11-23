@@ -1,0 +1,18 @@
+@2024-11-23 Saturday, November 23rd
+@09:21 33: Search in Rotated Sorted Array (cont.) #grind75 #timelog:01:01:31
+Another swing and a miss. Turns out I don't even
+grok vanilla binary search terribly well. I got a lot of
+things to pass, but I kept running into edge cases. Details,
+or maybe patches to things I don't fully get.
+---
+Giving up on trying to get this right. I've put in about 2.5 hours
+of struggle, where I developed some insights. Looking at the
+answer now.
+@10:35 33: LC33 editorial, research #timelog:00:26:42
+I was farther off than I thought, but I managed to code
+something up reading the instructions for approach 1.
+---
+Binary search isn't sticking with me. I feel little bit
+of my left/right dyslexia with these problems. There's just
+a bit of a cognitive gap. It just felt like I was missing
+small details that needed to be flipped.
