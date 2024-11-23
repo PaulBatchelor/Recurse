@@ -341,3 +341,47 @@ ln safeParse: This method returns an object containing
 ln either the successfully parsed data or a ZodError instance 
 ln containing detailed information about the validation 
 ln problems.
+
+nn html/aria_describedby
+hl https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby
+ln aria-describedby: identifies the element (or elements)
+ln that describes the element on which the attribute is set
+co $ aria
+co $ aria/attributes
+
+nn aria
+hl https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA
+ln ARIA: Accessible Rich Internet Applications, is a set of
+ln roles and attributes that define ways to make web content
+ln and web applications more accessible to those with
+ln disabilites.
+
+nn aria/attributes
+hl https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes
+ln ARIA attributes
+co $ aria
+
+nn aria/roles
+ln ARIA roles provide semantic meaning to content, 
+ln allowing screen readers and other tools to present and 
+ln support interaction with an object in a way that is 
+ln consistent with user expectations of that type of 
+ln object. 
+hl https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles
+co $ aria
+
+nn html/aria_live
+hl https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live
+ln aria-live: indicates that an element will be update, and
+ln describes the types of updates the user agents,
+ln assistive technologies, and user can expect from the live
+ln region
+co $ aria
+co $ aria/attributes
+
+nn html/aria_live/polite
+hl https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-live#polite
+ln when "aria-live" is set to be polite, it indicates
+ln that updates to the region should be presented at the
+ln next graceful opportunity
+co $ html/aria_live

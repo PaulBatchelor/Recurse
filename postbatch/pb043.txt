@@ -26,3 +26,5 @@ small details that needed to be flipped.
 @12:57 At this point, I've officially solved all the mediums in my grind75 "no-easy" list
 My next goal here will be to do all the easy problems now.
 There are 24 such problems.
+
+@14:34 NextJS #nextjs-dashboard-app #timelog:01:11:50

@@ -75,3 +75,12 @@ cx webdev/web_dev_learn_accessibility ^
 cx webdev/eslint_plugin_jsx_a11y ^
 
 cx webdev/zod/safeParse ^
+
+cx webdev/html/aria_describedby ^
+
+cx webdev/html/aria_live ^
+cr aria-live="polite" used to indicate the screen reader
+cr should politely notify the user when the error inside
+cr the div element is updated
+
+cx webdev/html/aria_live/polite ^
