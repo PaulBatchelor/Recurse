@@ -385,3 +385,26 @@ ln when "aria-live" is set to be polite, it indicates
 ln that updates to the region should be presented at the
 ln next graceful opportunity
 co $ html/aria_live
+
+nn authentication
+hl https://developer.mozilla.org/en-US/docs/Glossary/Authentication
+ln Authentication: is in general the process of 
+ln proving that some fact is genuine. More specifically, 
+ln in web security, it is the process of verifying the 
+ln claimed identity of some entity, such as a user.
+ff What is authentication (in the context of the web)?
+fb Authentication is the process of verifying the claimed
+fb identity of some entity, such as a suer
+
+nn RFC4949_internet_security_glossary
+hl https://datatracker.ietf.org/doc/html/rfc4949
+ln RFC 4949: Internet Security Glossary
+co $ authentication
+cr for more elaboration on authentication and similar terms
+
+nn authorization
+ln Authorization: Once a user's identity is confirmed,
+ln authorization decides what parts of the application they
+ln are allowed to use.
+co $ authentication
+cr authorization happens after authentication

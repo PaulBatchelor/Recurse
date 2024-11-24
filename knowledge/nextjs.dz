@@ -163,3 +163,12 @@ ln Chapter 13: Handling Errors
 nn dashboard_app/14_improving_accessibility
 ln Chapter 14: Improving Accessibility
 hl https://nextjs.org/learn/dashboard-app/improving-accessibility
+
+nn dashboard_app/15_adding_authentication
+hl https://nextjs.org/learn/dashboard-app/adding-authentication
+ln Chapter 15: Adding authentication
+
+nn nextauthjs
+hl https://authjs.dev/reference/nextjs
+ln NextAuthJS
+co $ dashboard_app/15_adding_authentication

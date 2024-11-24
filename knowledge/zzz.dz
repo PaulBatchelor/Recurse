@@ -119,3 +119,6 @@ cx ^ leetcode/data_structures/hash_table
 cr Convenient to use with many hash table problems in Python,
 cr to the point where Counter() is imported by default in the leetcode
 cr environment.
+
+cx webdev/authentication webdev/nextjs/dashboard_app/15_adding_authentication
+cx webdev/authorization ^

@@ -201,3 +201,6 @@ ln Declaration Files (wikipedia article)
 rm AKA .d.ts
 co $ declaration_files
 
+nn satisfies
+ln satisfies operator
+hl https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-9.html#the-satisfies-operator
