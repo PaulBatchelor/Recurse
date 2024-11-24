@@ -143,3 +143,4 @@
 11/23:121:Accomplished with very little fuss. It made sense intuitively, but I wish I could explain how it works better.
 11/24:125:Solution was quite fast to come up with, spent a good deal of time studying the python code instead
 11/24:242:Python one-liner using Counter==Counter.
+11/24:704:We've done a lot of binary search already.

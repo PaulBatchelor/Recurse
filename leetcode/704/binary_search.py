@@ -1,3 +1,22 @@
+# 2024-11-24: Same thing, only just using the leetcode
+# template
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        left, right = 0, len(nums) - 1
+
+        while left <= right:
+            mid = left + (right - left) // 2
+
+            if nums[mid] < target:
+                left = mid + 1
+            elif nums[mid] > target:
+                right = mid - 1
+            else:
+                return mid
+
+        return -1
+
+# old
 def binary_search(nums, target):
     start = 0
     end = len(nums) - 1

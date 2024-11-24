@@ -411,3 +411,9 @@ hl https://leetcode.com/problems/valid-anagram
 ln 242: valid anagram
 co $ grind75
 co $ data_structures/hash_table
+
+nn problems/704_binary_search
+hl https://leetcode.com/problems/binary-search/
+ln 704: binary search
+co $ grind75
+co $ paradigms/binary_search

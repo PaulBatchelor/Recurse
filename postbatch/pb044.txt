@@ -10,3 +10,10 @@ happening that I wanted to add to my knowledge graph.
 @10:21 242: Editorial and research #grind75 #timelog:00:15:00
 Note to self: Counter doesn't need to be imported explicitely
 in the leetcode python environment.
+
+@10:37 704: Binary Search #grind75 #timelog:00:04:32
+We've done a lot of binary search.
+
+@10:43 235: Lowest Common Ancestor of a Binary Search Tree #grind75 #timelog:00:44:50
+Initial attempt. I'm just patching edge cases, so I missed
+the point of it.
