@@ -417,3 +417,16 @@ hl https://leetcode.com/problems/binary-search/
 ln 704: binary search
 co $ grind75
 co $ paradigms/binary_search
+
+nn problems/235_lowest_common_ancestor_BST
+ln 235: Lowest Common Ancestor (LCA) of a Binary Search Tree
+co $ grind75
+co $ data_structures/binary_search_tree
+
+nn references/lowest_common_ancestor
+hl https://en.wikipedia.org/wiki/Lowest_common_ancestor
+ln Lowest Common Ancestor: the LCA of two nodes v and w
+ln in a tree or DAG is the lowest node that has both v and
+ln w as descendants, where we define each node to be
+ln a descendant of itself
+co $ problems/235_lowest_common_ancestor_BST
