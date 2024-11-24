@@ -363,3 +363,32 @@ nn references/linked_list
 hl https://en.wikipedia.org/wiki/Linked_list
 ln linked list
 co $ data_structures/linked_list
+
+nn problems/121_best_time_to_sell_and_buy_stock
+ln 121: Best Time to Sell and Buy Stock
+co $ paradigms/greedy
+cr I'm pretty sure this is a greedy algorithm? ("locally optimal choices")
+co $ grind75
+
+nn paradigms/greedy
+ln Greedy
+
+nn references/maximum_subarray_problem
+hl https://en.wikipedia.org/wiki/Maximum_subarray_problem
+ln Maximum Subarray problem
+co $ problems/121_best_time_to_sell_and_buy_stock
+cr reminds me of this problem
+
+nn references/kadanes
+hl https://en.wikipedia.org/wiki/Maximum_subarray_problem#Kadane's_algorithm
+ln Kadane's algorithm
+co $ references/maximum_subarray_problem
+cr used to solve maximum subarray problem
+co $ problems/121_best_time_to_sell_and_buy_stock
+cr I thought of Kadane's while working through this, though
+cr I'm not sure how related they are
+
+nn references/greedy_algorithm
+hl https://en.wikipedia.org/wiki/Greedy_algorithm
+ln Greedy Algorithm
+co $ paradigms/greedy

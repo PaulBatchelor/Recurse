@@ -1,31 +1,32 @@
-def stock_max_profit(prices):
-    left = 0
-    right = len(prices) - 1
-    min_val = prices[left]
-    max_val = prices[right]
+# 2024-11-23: The solution came together pretty intuitively,
+# especially since working on similar problems like
+# maximum subarray. I wish I could explain why it works.
+# INterestingly, the claude code-golfed solution is slower,
+# most likely because it makes calls to min/max every loop
+# while my version has conditions in place to minimize
+# those calls
 
-    while left < right:
-        lval = prices[left]
-        rval = prices[right]
+class Solution:
+    # code golf answer from claude, it's slower, probably
+    # because of the two calls to min/max
+    def maxProfit(self, prices: List[int]) -> int:
+        min_price = inf
+        max_profit = 0
 
-        if lval < min_val:
-            min_val = lval
+        for price in prices:
+            min_price = min(price, min_price)
+            max_profit = max(max_profit, price - min_price)
 
-        if rval > max_val:
-            max_val = rval
+        return max_profit
 
-        left += 1
-        right -= 1
+    # this is my answer
+    def maxProfitV1(self, prices: List[int]) -> int:
+        min_so_far = inf
+        max_profit = 0
+        for price in prices:
+            if price < min_so_far:
+                min_so_far = price
+                continue
+            max_profit = max(max_profit, price - min_so_far)
 
-    max_profit = max_val - min_val
-
-    if max_profit < 0:
-        return 0
-
-    return max_profit
-
-out = stock_max_profit([7, 1, 5, 3, 6, 4])
-assert(out == 5)
-
-out = stock_max_profit([7, 6, 3, 1])
-assert(out == 0)
+        return max_profit
