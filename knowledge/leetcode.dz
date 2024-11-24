@@ -392,3 +392,16 @@ nn references/greedy_algorithm
 hl https://en.wikipedia.org/wiki/Greedy_algorithm
 ln Greedy Algorithm
 co $ paradigms/greedy
+
+nn problems/125_valid_palindrome
+ln 125: valid palindrome
+hl https://leetcode.com/problems/valid-palindrome
+co $ grind75
+co $ paradigms/two_pointer
+
+nn paradigms/two_pointer
+ln Two Pointer
+
+nn references/two_pointer_technique
+hl https://leetcode.com/articles/two-pointer-technique/
+ln Two-Pointer Technique (leetcode)

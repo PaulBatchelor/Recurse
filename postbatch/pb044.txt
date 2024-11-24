@@ -1,0 +1,6 @@
+@2024-11-24 Sunday, November 24th
+@09:00 125: valid palindrome #grind75 #timelog:00:11:56
+
+@09:13 125: Editorial and research #grind75 #timelog:00:51:52
+The approach in the editorial had some slick python things
+happening that I wanted to add to my knowledge graph.

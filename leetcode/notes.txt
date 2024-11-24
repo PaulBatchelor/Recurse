@@ -141,3 +141,4 @@
 11/23:20:Knew the pattern and got it mostly correct on the first attempt, but I forgot the edge case with too many open parens
 11/23:21:Did it, but I definitely could have refined it. Ended up looking at the editorial, then claude for some really gross code golfing.
 11/23:121:Accomplished with very little fuss. It made sense intuitively, but I wish I could explain how it works better.
+11/24:125:Solution was quite fast to come up with, spent a good deal of time studying the python code instead

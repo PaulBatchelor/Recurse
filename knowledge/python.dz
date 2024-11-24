@@ -16,3 +16,132 @@ rm Found via Fluent Python, via EV
 nn heapsort_examples
 hl https://docs.python.org/3/library/heapq.html#basic-examples
 ln heapsort examples
+
+nn docs/stdtypes
+hl https://docs.python.org/3/library/stdtypes.html
+ln Standard Types
+
+nn docs/stdtypes/str
+hl https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
+
+nn docs/stdtypes/str/isalnum
+hl https://docs.python.org/3/library/stdtypes.html#str.isalnum
+ln str.isalnum(): Return True if all characters in the 
+ln string are alphanumeric and there is at least one 
+ln character, False otherwise. A character c is 
+ln alphanumeric if one of the following returns True: 
+ln c.isalpha(), c.isdecimal(), c.isdigit(), or 
+ln c.isnumeric().
+co $ docs/stdtypes/str
+
+nn flashcards/alphanumeric
+zz TODO: make ln an optional type in html output
+zz ln Alphanumeric Flashcard
+ff What method is used to tell if a string is only alphanumeric?
+fb isalnum()
+co $ docs/stdtypes/str/isalnum
+
+nn docs/stdtypes/str/isalpha
+hl https://docs.python.org/3/library/stdtypes.html#str.isalpha
+ln str.isalpha(): Return True if all characters in the 
+ln string are alphabetic and there is at least one 
+ln character, False otherwise.
+co $ docs/stdtypes/str
+
+nn flashcards/alphabetic
+ff What method is used to tell if a string contains only alphabetic characters?
+fb isalpha()
+co $ docs/stdtypes/str/isalpha
+
+nn docs/stdtypes/str/isnumeric
+hl https://docs.python.org/3/library/stdtypes.html#str.isnumeric
+ln str.isalpha(): Return True if all characters in the 
+ln string are alphabetic and there is at least one 
+ln character, False otherwise. 
+co $ docs/stdtypes/str
+
+nn flashcards/numeric
+ff What method is used to tell if a string contains only numeric characters?
+fb isnumeric()
+co $ docs/stdtypes/str/isnumeric
+
+nn docs/stdtypes/str/lower
+hl https://docs.python.org/3/library/stdtypes.html#str.lower
+ln Return a copy of the string with all the cased characters
+ln converted to lowercase.
+co $ docs/stdtypes/str
+
+nn flashcards/lowercase
+ff How does one convert a string to lowercase in python?
+fb str.lower()
+co $ docs/stdtypes/str/lower
+
+nn docs/stdtypes/str/upper
+hl https://docs.python.org/3/library/stdtypes.html#str.upper
+ln Return a copy of the string with all the cased characters
+ln converted to uppercase.
+co $ docs/stdtypes/str
+co $ docs/stdtypes/str/lower
+
+nn flashcards/uppercase
+ff How does one convert a string to uppercase in python?
+fb str.upper()
+co $ docs/stdtypes/str/upper
+
+nn docs/stdlib/filter
+hl https://docs.python.org/3/library/functions.html#filter
+ln filter(function, iterable): Construct an iterator from those elements 
+ln of iterable for which function is true. iterable may 
+ln be either a sequence, a container which supports 
+ln iteration, or an iterator. 
+co $ docs/stdlib
+
+nn docs/stdlib
+ln Python standard library
+
+nn docs/stdlib/map
+hl https://docs.python.org/3/library/functions.html#map
+ln map(function, iterable, *iterables): Return an 
+ln iterator that applies function to every item of 
+ln iterable, yielding the results. If additional 
+ln iterables arguments are passed, function must take 
+ln that many arguments and is applied to the items from 
+ln all iterables in parallel.
+co $ docs/stdlib/filter
+cr map/filter pairing
+co $ docs/stdlib
+
+nn docs/reference
+hl https://docs.python.org/3/reference/index.html
+ln Language reference
+
+nn docs/references/expressions
+ln Chapter 6: expressions
+co $ docs/reference
+
+nn docs/reference/expressions/lambda
+ln Lambda expressions (sometimes called lambda forms) are
+ln used to create anonymous functions. 
+hl https://docs.python.org/3/reference/expressions.html#lambda
+co $ docs/references/expressions
+co $ docs/stdlib/map
+co $ docs/stdlib/filter
+
+nn docs/stdtypes/list
+ln List
+hl https://docs.python.org/3/library/stdtypes.html#list
+co $ docs/stdtypes
+
+nn docs/stdtypes/common_sequence_ops
+ln Common sequence operations
+hl https://docs.python.org/3/library/stdtypes.html#list
+co $ docs/stdtypes/list
+
+nn double_colon_reverse
+ln x[::-1] can be used to reverse items in a list
+co $ double_colon_operator
+td What's the difference between this and reverse()?
+
+nn double_colon_operator
+ln double colon operator: x[start:stop:step]
+co $ docs/stdtypes/common_seqeunce_ops

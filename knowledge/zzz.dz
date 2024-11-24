@@ -84,3 +84,30 @@ cr should politely notify the user when the error inside
 cr the div element is updated
 
 cx webdev/html/aria_live/polite ^
+
+cx python/docs/stdtypes/str/isalnum leetcode/problems/125_valid_palindrome
+cr used to detect if string is alphanumeric
+
+cx python/docs/stdtypes/str/isalpha ^
+cr I used this initially because I didn't know about isalnum
+
+cx python/docs/stdtypes/str/isnumeric ^
+cr I used this initially because I didn't know about isalnum
+
+cx python/docs/stdtypes/str/lower ^
+cr Converted to all lowercase to make string case-insensitive
+
+cx python/docs/stdlib/filter ^
+cr In reversed approach, filter is used to whittle down the
+cr input string to only contain alphanumeric characters
+
+cx python/docs/stdlib/map ^
+cr In reversed approach, map is used to converted characters
+cr to be lowercase
+
+cx python/docs/reference/expressions/lambda ^
+cr used with map/filter in reverse approach
+
+cx python/double_colon_reverse ^
+cr trick used in reverse approach to do reversing. Not sure
+cr why it didn't use reverse()
