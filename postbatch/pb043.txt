@@ -34,3 +34,5 @@ There are 24 such problems.
 @17:39 LC 20: valid parentheses #grind75 #timelog:00:13:44
 
 @18:20 LC 21: Merge two sorted lists #grind75 #timelog:00:10:29
+
+@20:59 LC 21: some cleanup attempts? #timelog:00:10:36

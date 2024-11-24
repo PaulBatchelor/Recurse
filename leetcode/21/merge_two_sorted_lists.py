@@ -1,58 +1,58 @@
-from pprint import pprint
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    # fed into claude
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = out = ListNode()
 
-class LinkedList:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = None
+        while list1 and list2:
+            if list1.val <= list2.val: out.next, list1 = list1, list1.next
+            else: out.next, list2 = list2, list2.next
+            out = out.next
 
-def mklist(vals):
-    dummy = LinkedList()
-    entry = dummy
-    for x in vals:
-        entry.next = LinkedList(x)
-        entry = entry.next
-    return dummy.next
+        out.next = list1 or list2
+        return dummy.next
 
-def to_array(lst):
-    a = []
-    entry = lst
-    while (entry is not None):
-        a.append(entry.val)
-        entry = entry.next
-    return a
+    # peeked at solution to loook for ways to clean it up
+    def mergeTwoListsV2(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = ListNode()
+        out = dummy
 
-def merge_sorted(list1, list2):
-    node1 = list1
-    node2 = list2
-    dummy = LinkedList()
-    curnode = dummy
-
-    while node1 is not None or node2 is not None:
-        # which one to choose next?
-        if node1 is None:
-            curnode.next = node2
-            node2 = node2.next
-        elif node2 is None:
-            curnode.next = node1
-            node1 = node1.next
-        else:
-            v1 = node1.val
-            v2 = node2.val
-            if v1 < v2:
-                curnode.next = node1
-                node1 = node1.next
+        while list1 and list2:
+            if list1.val <= list2.val:
+                out.next = list1
+                list1 = list1.next
             else:
-                curnode.next = node2
-                node2 = node2.next
+                out.next = list2
+                list2 = list2.next
+            out = out.next
 
-        curnode = curnode.next
-    return dummy.next
+        out.next = list1 if list1 else list2
 
-out = to_array(merge_sorted(mklist([1, 3, 4]), mklist([1, 2, 4])))
-assert(out == [1, 1, 2, 3, 4, 4])
+        return dummy.next
 
-out = to_array(merge_sorted(mklist([]), mklist([])))
-assert(out == [])
+    def mergeTwoListsV1(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        dummy = ListNode()
+        out = dummy
 
-out = to_array(merge_sorted(mklist([]), mklist([0])))
-assert(out == [0])
+        while list1 or list2:
+            # if any of the two lists are empty, just append the other list
+            if not list1:
+                out.next = list2
+                list2 = list2.next
+            elif not list2:
+                out.next = list1
+                list1 = list1.next
+            # otherwise, append the smallest value
+            elif list1.val < list2.val:
+                out.next = list1
+                list1 = list1.next
+            else:
+                out.next = list2
+                list2 = list2.next
+            out = out.next
+
+        return dummy.next

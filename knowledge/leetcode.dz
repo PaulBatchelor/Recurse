@@ -349,3 +349,17 @@ nn references/stack
 hl https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
 ln Stack (abstract data type)
 co $ references/abstract_data_type
+
+nn problems/21_merge_two_sorted_lists
+hl https://leetcode.com/problems/merge-two-sorted-lists/
+ln 21: Merge two sorted lists
+co $ data_structures/linked_list
+co $ grind75
+
+nn data_structures/linked_list
+ln linked list
+
+nn references/linked_list
+hl https://en.wikipedia.org/wiki/Linked_list
+ln linked list
+co $ data_structures/linked_list

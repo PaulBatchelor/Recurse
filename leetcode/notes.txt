@@ -139,3 +139,4 @@
 11/23:39:Managed to get this one reasonably quickly. The editorial used a "remaining" variable which was a little bit more clever than my "exceeds bounds" logic
 11/23:1:Pretty straight forward.
 11/23:20:Knew the pattern and got it mostly correct on the first attempt, but I forgot the edge case with too many open parens
+11/23:21:Did it, but I definitely could have refined it. Ended up looking at the editorial, then claude for some really gross code golfing.
