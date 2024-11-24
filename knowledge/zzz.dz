@@ -111,3 +111,11 @@ cr used with map/filter in reverse approach
 cx python/double_colon_reverse ^
 cr trick used in reverse approach to do reversing. Not sure
 cr why it didn't use reverse()
+
+cx python/docs/stdlib/data_types/collections/counter leetcode/problems/242_valid_anagram
+cr built-in counter() turns this problem into a one-liner solution
+
+cx ^ leetcode/data_structures/hash_table
+cr Convenient to use with many hash table problems in Python,
+cr to the point where Counter() is imported by default in the leetcode
+cr environment.

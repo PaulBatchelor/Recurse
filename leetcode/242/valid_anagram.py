@@ -1,3 +1,9 @@
+# 2024-11-24: Boom. Python one-liner.
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return Counter(s) == Counter(t)
+
 # valid anagram:
 # approach 1: compare count maps of s and t
 # approach 2: sort and compare strings

@@ -405,3 +405,9 @@ ln Two Pointer
 nn references/two_pointer_technique
 hl https://leetcode.com/articles/two-pointer-technique/
 ln Two-Pointer Technique (leetcode)
+
+nn problems/242_valid_anagram
+hl https://leetcode.com/problems/valid-anagram
+ln 242: valid anagram
+co $ grind75
+co $ data_structures/hash_table

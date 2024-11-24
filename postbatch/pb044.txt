@@ -4,3 +4,9 @@
 @09:13 125: Editorial and research #grind75 #timelog:00:51:52
 The approach in the editorial had some slick python things
 happening that I wanted to add to my knowledge graph.
+
+@10:19 242: Valid anagram #grind75 #timelog:00:02:20
+
+@10:21 242: Editorial and research #grind75 #timelog:00:15:00
+Note to self: Counter doesn't need to be imported explicitely
+in the leetcode python environment.

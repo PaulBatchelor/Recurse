@@ -144,4 +144,19 @@ td What's the difference between this and reverse()?
 
 nn double_colon_operator
 ln double colon operator: x[start:stop:step]
-co $ docs/stdtypes/common_seqeunce_ops
+co $ docs/stdtypes/common_sequence_ops
+
+nn docs/stdlib/data_types
+ln Data types modules
+hl https://docs.python.org/3/library/datatypes.html
+co $ docs/stdlib
+
+nn docs/stdlib/data_types/collections
+ln Collections
+hl https://docs.python.org/3/library/collections.html
+co $ docs/stdlib/data_types
+
+nn docs/stdlib/data_types/collections/counter
+ln Counter()
+hl https://docs.python.org/3/library/collections.html#collections.Counter
+co $ docs/stdlib/data_types/collections
