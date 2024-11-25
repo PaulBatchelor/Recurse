@@ -180,3 +180,13 @@ cr work with a set
 nn docs/stdtypes/frozenset
 hl https://docs.python.org/3/library/stdtypes.html#frozenset
 co $ docs/stdtypes/set
+
+nn docs/stdtypes/generator
+hl https://docs.python.org/3/library/stdtypes.html#generator-types
+ln generator type
+
+nn docs/glossary/generator
+hl https://docs.python.org/3/glossary.html#term-generator
+ln generator: function which returns a generator iterator
+co $ docs/stdtypes/generator
+cr definition

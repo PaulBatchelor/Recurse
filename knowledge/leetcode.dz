@@ -483,13 +483,28 @@ cr one solution this problem uses a variant on floyd's algorithm
 nn problems/232_implement_queue_using_stacks
 hl https://leetcode.com/problems/implement-queue-using-stacks
 ln Implement Queue using stacks
-co $ data_structures/stacks
-co $ data_structures/queues
+co $ data_structures/stack
+co $ data_structures/queue
 
-nn data_structures/queues
+nn data_structures/queue
 ln Queues
 
 nn references/queues
 hl https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
-ln Queue (Abstract Data TYpe)
-co $ data_structures/queues
+ln Queue (Abstract Data Type)
+co $ data_structures/queue
+
+nn problems/169_majority_element
+ln 169: Majority Element
+hl https://leetcode.com/problems/majority-element
+co $ grind75
+co $ data_structures/hash_table
+cr hash table was most straight forward
+rm lots of weird solutions for this one, but hash map 
+
+nn references/boyer_moore_majority_vote_algorithm
+hl https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm
+ln Boyer-Moore majority vote algorithm
+co $ problems/169_majority_element
+cr A way to solve in linear time with O(1) space
+
