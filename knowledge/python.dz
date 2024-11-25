@@ -160,3 +160,23 @@ nn docs/stdlib/data_types/collections/counter
 ln Counter()
 hl https://docs.python.org/3/library/collections.html#collections.Counter
 co $ docs/stdlib/data_types/collections
+
+nn docs/glossary/hashable
+hl https://docs.python.org/3/glossary.html#term-hashable
+ln An object is hashable if it has a hash value which 
+ln never changes during its lifetime (it needs a 
+ln __hash__() method), and can be compared to other 
+ln objects (it needs an __eq__() method). Hashable 
+ln objects which compare equal must have the same hash 
+ln value.
+
+nn docs/stdtypes/set
+hl https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset
+ln Sets and frozensets
+co docs/glossary/hashable $
+cr it turns out many can be hashable in python, and therefore
+cr work with a set
+
+nn docs/stdtypes/frozenset
+hl https://docs.python.org/3/library/stdtypes.html#frozenset
+co $ docs/stdtypes/set

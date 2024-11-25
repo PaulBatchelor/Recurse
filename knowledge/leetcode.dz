@@ -455,3 +455,28 @@ hl https://en.wikipedia.org/wiki/Binary_tree
 ln Binary Tree: tree data structure in which a node has at most
 ln two children: a left child and a right child.
 co $ data_structures/binary_tree
+
+nn problems/141_linked_list_cycle
+hl https://leetcode.com/problems/linked-list-cycle/
+ln 141: Linked List Cycle
+co $ grind75
+co $ data_structures/linked_list
+
+nn references/floyds_algorithm
+ln Floyd's Cycle Finding Algorithm
+hl https://en.wikipedia.org/wiki/Cycle_detection#Floyd's_tortoise_and_hare
+co $ data_structures/linked_list
+co $ problems/141_linked_list_cycle
+cr Elegant solution with O(n) time and O(1) space
+ff Describe Floyd's algorithm
+fb Floyd's algorithm can be used for cycle detection in
+fb linked lists (think tortois and hare). You a slow pointer
+fb a fast pointer. If there's a cycle, the fast pointer will
+fb eventually lap the fast pointer.
+
+nn problems/287_find_the_duplicate_number
+hl https://leetcode.com/problems/find-the-duplicate-number/
+ln 287: Find the duplicate number
+co $ grind75
+co references/floyds_algorithm $
+cr one solution this problem uses a variant on floyd's algorithm

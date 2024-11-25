@@ -122,3 +122,8 @@ cr environment.
 
 cx webdev/authentication webdev/nextjs/dashboard_app/15_adding_authentication
 cx webdev/authorization ^
+
+cx python/docs/glossary/hashable leetcode/problems/141_linked_list_cycle
+cr "Objects which are instances of user-defined classes are hashable by default". This would have been good to know while attempting to solve this problem.
+cx python/docs/stdtypes/set ^
+cr useful data structure in python for simple case
