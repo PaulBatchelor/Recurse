@@ -430,3 +430,13 @@ ln in a tree or DAG is the lowest node that has both v and
 ln w as descendants, where we define each node to be
 ln a descendant of itself
 co $ problems/235_lowest_common_ancestor_BST
+
+nn problems/2034_stock_price_fluctuation
+hl https://leetcode.com/problems/stock-price-fluctuation
+ln 2034: Stock Price Fluctuation
+td Work on LC 2034: Stock Price Fluctuation
+
+nn problems/635_design_log_storage_system
+ln 635: Design Log Storage System
+hl https://leetcode.com/problems/design-log-storage-system
+td Work on LC 635: Design Log Storage System
