@@ -440,3 +440,18 @@ nn problems/635_design_log_storage_system
 ln 635: Design Log Storage System
 hl https://leetcode.com/problems/design-log-storage-system
 td Work on LC 635: Design Log Storage System
+
+nn problems/110_balanced_binary_tree
+ln 110: balanced binary tree
+hl https://leetcode.com/problems/balanced-binary-tree
+co $ grind75
+co $ data_structures/binary_tree
+
+nn data_structures/binary_tree
+ln binary tree
+
+nn references/binary_tree
+hl https://en.wikipedia.org/wiki/Binary_tree
+ln Binary Tree: tree data structure in which a node has at most
+ln two children: a left child and a right child.
+co $ data_structures/binary_tree
