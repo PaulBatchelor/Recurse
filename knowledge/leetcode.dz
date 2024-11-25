@@ -291,7 +291,6 @@ ln 278: First Bad Version
 co $ paradigms/binary_search/lower_bound
 zz TODO: can we treat this as implicit?
 co $ paradigms/binary_search
-td Work on LC 278: First Bad Version
 
 nn problems/875_koko_eating_bananas
 ln 875: Koko eating bananas

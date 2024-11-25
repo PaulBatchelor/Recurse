@@ -15,3 +15,7 @@ I don't know how to do this problem.
 LOOK AT MY HACKS, YE MIGHTY, AND DESPAIR
 
 @12:24 LC 232 Editorial and research #grind75 #timelog:00:35:18
+
+@12:58 LC 237 First bad version #grind75 #timelog:00:05:14
+
+@13:04 LC 237 notes #grind75
