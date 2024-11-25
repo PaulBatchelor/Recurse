@@ -19,3 +19,8 @@ LOOK AT MY HACKS, YE MIGHTY, AND DESPAIR
 @12:58 LC 237 First bad version #grind75 #timelog:00:05:14
 
 @13:04 LC 237 notes #grind75
+
+@13:07 LC 169 Majority element #grind75 #timelog:00:16:45
+WIP. Got brute force answer. Working out what I think
+is a greedy solution that takes advantage of majority
+property.
