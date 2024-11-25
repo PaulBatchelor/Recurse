@@ -10,3 +10,8 @@
 I don't know how to do this problem.
 
 @11:14 LC 141 Editorial and research #grind75 #timelog:00:16:53
+
+@11:47 LC 232 Implement Queue Using Stacks #grind75 #timelog:00:35:15
+LOOK AT MY HACKS, YE MIGHTY, AND DESPAIR
+
+@12:24 LC 232 Editorial and research #grind75 #timelog:00:35:18

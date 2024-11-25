@@ -480,3 +480,17 @@ ln 287: Find the duplicate number
 co $ grind75
 co references/floyds_algorithm $
 cr one solution this problem uses a variant on floyd's algorithm
+
+nn problems/232_implement_queue_using_stacks
+hl https://leetcode.com/problems/implement-queue-using-stacks
+ln Implement Queue using stacks
+co $ data_structures/stacks
+co $ data_structures/queues
+
+nn data_structures/queues
+ln Queues
+
+nn references/queues
+hl https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
+ln Queue (Abstract Data TYpe)
+co $ data_structures/queues
