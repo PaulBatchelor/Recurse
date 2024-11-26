@@ -586,3 +586,9 @@ ln of a procedure
 co $ problems/104_max_depth_binary_tree
 cr an optimzed solution involves tail recursion and BFS,
 cr where the tail call is the recursive function
+
+nn problems/217_contains_duplicate
+hl https://leetcode.com/problems/contains-duplicate/
+ln 217: Contains duplicate
+co $ data_structures/hash_table
+cr python set structure
