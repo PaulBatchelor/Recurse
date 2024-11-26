@@ -1,8 +1,6 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@grind75 Grind75
-
 @leetcoding Leetcode Problems
 
 @nextjs-dashboard-app Complete nextjs dashboard app tutorial
