@@ -131,7 +131,7 @@ cr useful data structure in python for simple case
 cx python/docs/stdtypes/generator leetcode/problems/169_majority_element
 cr divide-and-conquer solution, made use of iterator generators in sum() object
 
-cx python/docs/stdypes/str/format leetcode/problems/67_add_binary
+cx python/docs/stdtypes/str/format leetcode/problems/67_add_binary
 cr One-liner: "{0:b}".format(int(a, 2) + int(b, 2))
 
 cx python/docs/stdlib/int ^
