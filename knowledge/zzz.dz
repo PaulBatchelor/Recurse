@@ -143,3 +143,7 @@ cr in bit-by-bit manipulation problem, zfill is used to leftpad with 0s
 cx python/docs/stdlib/bin ^
 cr used by bitwise manipulation solution to convert number to binary string
 cr at the end.
+
+cx python/docs/reference/simple_statements/nonlocal leetcode/problems/543_diameter_of_binary_tree
+cr used in the editorial example, when a "global", declared inside
+cr of a function, was used inside of nested function

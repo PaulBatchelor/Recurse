@@ -115,7 +115,7 @@ nn docs/reference
 hl https://docs.python.org/3/reference/index.html
 ln Language reference
 
-nn docs/references/expressions
+nn docs/reference/expressions
 ln Chapter 6: expressions
 co $ docs/reference
 
@@ -123,7 +123,7 @@ nn docs/reference/expressions/lambda
 ln Lambda expressions (sometimes called lambda forms) are
 ln used to create anonymous functions. 
 hl https://docs.python.org/3/reference/expressions.html#lambda
-co $ docs/references/expressions
+co $ docs/reference/expressions
 co $ docs/stdlib/map
 co $ docs/stdlib/filter
 
@@ -211,3 +211,14 @@ nn docs/stdlib/bin
 hl https://docs.python.org/3/library/functions.html#bin
 ln bin(): convert an integer number to a binary string
 ln prefixed with "0b".
+
+nn docs/reference/simple_statements
+hl https://docs.python.org/3/reference/simple_stmts.html
+ln Chapter 7: simple statements
+co $ docs/reference
+
+nn docs/reference/simple_statements/nonlocal
+hl https://docs.python.org/3/reference/simple_stmts.html#the-nonlocal-statement
+co $ docs/reference/simple_statements
+ln nonlocal: causes listed identifiers to refer to names
+ln previously bound in nonlocal scope

@@ -540,3 +540,26 @@ nn problems/318_max_product_word_lengths
 hl https://leetcode.com/problems/maximum-product-of-word-lengths
 ln 318: Maximum product of word lengths
 co $ paradigms/bit_manipulation
+td work on LC 318
+
+nn problems/543_diameter_of_binary_tree
+hl https://leetcode.com/problems/diameter-of-binary-tree
+ln 543: Diameter of Binary Tree
+co $ data_structures/binary_tree
+co $ data_structures/binary_tree/depth_first_traversal
+
+nn data_structures/binary_tree/depth_first_traversal
+ln Depth-First Traversal of binary tree
+
+nn references/binary_tree/terminology
+hl https://en.wikipedia.org/wiki/Tree_(abstract_data_type)#Terminology
+ln Terminology
+
+nn references/binary_tree/terminology/degree
+ln Degree: for a given node, its number of children.
+rm A leaf, by definition, has degree 0.
+ff In a binary tree structure, what is a degree?
+fb Degree refers to the number of children for any given node.
+co $ problems/543_diameter_of_binary_tree
+cr Article refers to a leaf as any node having 1 degree,
+cr including the root node if it has 1 degree or less
