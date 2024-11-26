@@ -190,3 +190,24 @@ hl https://docs.python.org/3/glossary.html#term-generator
 ln generator: function which returns a generator iterator
 co $ docs/stdtypes/generator
 cr definition
+
+nn docs/stdtypes/str/format
+hl https://docs.python.org/3/library/stdtypes.html#str.format
+ln str.format(): produces formatted string
+co $ docs/stdtypes/str
+
+nn docs/stdlib/int
+hl https://docs.python.org/3/library/functions.html#int
+ln int() constructor
+rm 2 args is base. int("11", 2) would be a value in binary,
+ln base 2.
+
+nn docs/stdtypes/str/zfill
+hl https://docs.python.org/3/library/stdtypes.html#str.zfill
+ln str.zfill(widht): return copy of the string left-filled
+ln with ascii '0' digits to make string of lenght =width=.
+
+nn docs/stdlib/bin
+hl https://docs.python.org/3/library/functions.html#bin
+ln bin(): convert an integer number to a binary string
+ln prefixed with "0b".

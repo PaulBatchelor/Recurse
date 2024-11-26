@@ -130,3 +130,16 @@ cr useful data structure in python for simple case
 
 cx python/docs/stdtypes/generator leetcode/problems/169_majority_element
 cr divide-and-conquer solution, made use of iterator generators in sum() object
+
+cx python/docs/stdypes/str/format leetcode/problems/67_add_binary
+cr One-liner: "{0:b}".format(int(a, 2) + int(b, 2))
+
+cx python/docs/stdlib/int ^
+cr int(a,2) will convert a base 2 represented string value a to number
+
+cx python/docs/stdtypes/str/zfill ^
+cr in bit-by-bit manipulation problem, zfill is used to leftpad with 0s
+
+cx python/docs/stdlib/bin ^
+cr used by bitwise manipulation solution to convert number to binary string
+cr at the end.

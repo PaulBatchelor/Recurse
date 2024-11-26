@@ -150,3 +150,4 @@
 11/25:232:I had a very stupid solution which technically worked, and was in line with what you were supposed to do.
 11/25:278:Did this one already. Helped that I reviewed binary search.
 11/25:169:Hashmap was straight forward. Lots of weird answers to this problem in editorial. Boyer-moore is surprisingly simple.
+11/25:67:Solved it the typical way, though the code's a bit clumsy. Bitwise manipulation solution was clever.

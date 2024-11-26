@@ -508,3 +508,35 @@ ln Boyer-Moore majority vote algorithm
 co $ problems/169_majority_element
 cr A way to solve in linear time with O(1) space
 
+
+nn problems/67_add_binary
+hl https://leetcode.com/problems/add-binary/description/
+ln 67: Add Binary
+co $ grind75
+co $ paradigms/bit_manipulation
+
+nn paradigms/bit_manipulation
+ln Bit manipulation
+
+nn problems/137_single_number_2
+hl https://leetcode.com/problems/single-number-ii
+ln 137: Single number 2
+co $ paradigms/bit_manipulation
+td work on LC 137
+
+nn problems/260_single_number_3
+hl https://leetcode.com/problems/single-number-iii
+ln 260: single number 3
+co $ paradigms/bit_manipulation
+td work on LC 421
+
+nn problems/187_repeated_DNA_sequences
+ln 187: repeated DNA sequences
+hl https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array
+co $ paradigms/bit_manipulation
+td work on LC 187
+
+nn problems/318_max_product_word_lengths
+hl https://leetcode.com/problems/maximum-product-of-word-lengths
+ln 318: Maximum product of word lengths
+co $ paradigms/bit_manipulation
