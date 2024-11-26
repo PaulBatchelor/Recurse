@@ -12,3 +12,7 @@
 @12:10 876: Middle of linked list. #grind75 #timelog:00:27:11
 
 @12:39 876: Editorial #grind75 #timelog:00:10:00
+
+@12:50 104: Maximum Depth of Binary Tree #grind75 #timelog:00:06:46
+
+@12:57 104 Editorial and notes #grind75 #timelog:00:17:30

@@ -572,3 +572,17 @@ co $ data_structures/linked_list
 rm Fast/slow pointer
 co $ references/floyds_algorithm
 cr the fast/slow pointer trick made me think of floyd's algorithm
+
+nn problems/104_max_depth_binary_tree
+ln 104: maximum depth of binary tree
+hl https://leetcode.com/problems/maximum-depth-of-binary-tree
+co $ grind75
+co $ data_structures/binary_tree
+
+nn references/tail_call
+hl https://en.wikipedia.org/wiki/Tail_call
+ln tail call: subroutine performed as the final action
+ln of a procedure
+co $ problems/104_max_depth_binary_tree
+cr an optimzed solution involves tail recursion and BFS,
+cr where the tail call is the recursive function
