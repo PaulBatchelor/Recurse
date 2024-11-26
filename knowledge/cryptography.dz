@@ -1,0 +1,6 @@
+ns cryptography
+gr crypto related things
+
+nn bcrypt
+hl https://en.wikipedia.org/wiki/Bcrypt
+ln bcrypt: password-hashing function 

@@ -149,3 +149,29 @@ cr used in the editorial example, when a "global", declared inside
 cr of a function, was used inside of nested function
 
 cx python/docs/stdtypes/set leetcode/problems/217_contains_duplicate
+
+cx javascript/regex webdev/nextjs/matcher
+cr matcher uses full regex for matching paths
+
+cx javascript/regex/lookahead_assertion webdev/nextjs/dashboard_app/15_adding_authentication
+cr the "(?! pattern)" syntax was used in the middleware.ts file
+
+cx javascript/bcrypt ^
+cr used to compare that password entered by the user matches
+cr the one in the database
+cx ^ cryptography/bcrypt
+
+cx javascript/spread_syntax ^
+cr used in auth.ts file to spread the authConfig object
+
+cx webdev/nextjs/nextauthjs/credentials_provider ^
+cr in auth.ts, providers is an array that can list many
+cr login options such as google, or github, but for this
+cr tutorial, only the credentials provider will be used
+
+cx webdev/oauth ^
+cr while credentials provider is used here, oauth is
+cr generally recommended
+
+cx webdev/nextjs/nextauthjs/credentials_provider webdev/oauth
+cr oauth generally recommended over credentials provider

@@ -172,3 +172,30 @@ nn nextauthjs
 hl https://authjs.dev/reference/nextjs
 ln NextAuthJS
 co $ dashboard_app/15_adding_authentication
+
+nn middleware
+hl https://nextjs.org/docs/app/building-your-application/routing/middleware
+ln Middleware allows you to run code before a request is 
+ln completed. Then, based on the incoming request, you 
+ln can modify the response by rewriting, redirecting, 
+ln modifying the request or response headers, or 
+ln responding directly.
+co $ dashboard_app/15_adding_authentication
+cr In nextauthjs config, the "authorized" callback is used
+cr to verify if user is authorized to verify the request
+cr via nextjs middleware
+co $ nextauthjs
+cr authorized callback uses middleware in nextjs config
+
+nn matcher
+ln matcher: runs middleware on specific paths
+hl https://nextjs.org/docs/app/building-your-application/routing/middleware#matcher
+co $ middleware
+
+nn nextauthjs/credentials_provider
+hl https://authjs.dev/getting-started/providers/credentials
+ln The Credentials provider allows you to handle signing 
+ln in with arbitrary credentials, such as a username and 
+ln password, domain, two factor authentication or 
+ln hardware device (e.g. YubiKey U2F / FIDO).
+co $ nextauthjs

@@ -408,3 +408,11 @@ ln authorization decides what parts of the application they
 ln are allowed to use.
 co $ authentication
 cr authorization happens after authentication
+
+nn oauth
+hl https://en.wikipedia.org/wiki/OAuth
+ln OAuth: Open Authorization (OAuth) is an open standard
+ln for access delegation, commonly used as a way for
+ln internet users to grant websites or applications access
+ln to their information on other websites but without
+ln giving them their passwords.

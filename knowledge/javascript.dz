@@ -153,3 +153,31 @@ ln the new function is called.
 nn error
 hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error
 ln Error Object
+
+nn regex
+ln Regex Reference
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions
+
+nn regex/lookahead_assertion
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion
+ln Lookahead Assertion
+co $ regex
+
+nn regex/regexp
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
+ln regexp constructor
+co $ regex
+
+nn bcrypt
+hl https://www.npmjs.com/package/bcrypt
+ln bcrypt package
+
+nn spread_syntax
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+ln spread syntax: (...) syntax allows an iterable, 
+ln such as an array or string, to be expanded in places 
+ln where zero or more arguments (for function calls) or 
+ln elements (for array literals) are expected.
+ff What is spread syntax?
+fb Spread syntax (...) allows things like arrays to be
+fb expanded in functions where arguments are expected.
