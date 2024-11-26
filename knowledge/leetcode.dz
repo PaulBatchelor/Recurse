@@ -563,3 +563,12 @@ fb Degree refers to the number of children for any given node.
 co $ problems/543_diameter_of_binary_tree
 cr Article refers to a leaf as any node having 1 degree,
 cr including the root node if it has 1 degree or less
+
+nn problems/876_middle_of_linked_list
+hl https://leetcode.com/problems/middle-of-the-linked-list
+ln 876: Middle of Linked List
+co $ grind75
+co $ data_structures/linked_list
+rm Fast/slow pointer
+co $ references/floyds_algorithm
+cr the fast/slow pointer trick made me think of floyd's algorithm
