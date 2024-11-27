@@ -592,3 +592,8 @@ hl https://leetcode.com/problems/contains-duplicate/
 ln 217: Contains duplicate
 co $ data_structures/hash_table
 cr python set structure
+
+nn problems/1768_merge_strings_alternately
+hl https://leetcode.com/problems/merge-strings-alternately
+ln 1768: merge strings alternative
+co $ LC75

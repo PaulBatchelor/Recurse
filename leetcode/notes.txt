@@ -154,3 +154,4 @@
 11/26:876:my fast/slow pointer logic was off, but I worked something together after failing edge cases
 11/26:104:My recursive solution could have been more elegant, but I got it working quickly. Also worth thinking about tail recursion BFS.
 11/26:217:Python one-liner. Editorial didn't have anything much more clever than that.
+11/27:1768:My brain solved it in a two-step process, when it could have been more simply solved in a loop. For simple problems like this one, these details matter

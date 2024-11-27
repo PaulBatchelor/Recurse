@@ -3,6 +3,11 @@ tasks that I intend to work on in the next few days or so.
 
 @leetcoding Leetcode Problems
 
+@LC75-review Leetcode 75 problem review
+For each problem on the list, I want to make sure they
+in my dagzet database @!(dzref "leetcode")!@, and that
+solutions are submitted to LC.
+
 @nextjs-dashboard-app Complete nextjs dashboard app tutorial
 Link: @!(dzref "webdev/nextjs/learn_dashboard_app")!@
 
