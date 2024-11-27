@@ -5,6 +5,9 @@
 @10:21 1768: Merge strings alternately #LC75-review #timelog:00:10:54
 @10:21 1768 study #LC75-review #timelog:00:08:11
 
-@10:43 1071: greatest common diviser of strings #LC75-review #timelog:00:19:14
+@10:43 1071: greatest common diviser of strings #LC75-review #timelog:00:22:34
 Edge case: my brute force doesn't account that the GCD also
 needs to divide into the smaller string. Will need to rethink.
+---
+Okay, I added some extra code in there and now it seems
+to work. The code is sloppy and should be refined.
