@@ -181,3 +181,17 @@ ln elements (for array literals) are expected.
 ff What is spread syntax?
 fb Spread syntax (...) allows things like arrays to be
 fb expanded in functions where arguments are expected.
+
+nn bcrypt/source
+hl https://github.com/kelektiv/node.bcrypt.js
+ln Source code (github)
+co $ bcrypt
+rm Bcrypt and blowfish are written in C, are included in
+rm the code, and appear to have some special native node
+rm glue code to make JS bindings
+
+nn node-gyp
+hl https://www.npmjs.com/package/node-gyp/v/3.8.0
+ln node-gyp: native addon build tool
+co $ bcrypt/source
+cr Used to get bcrypt and blowfish native code (C) working as node js package

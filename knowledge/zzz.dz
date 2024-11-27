@@ -173,5 +173,13 @@ cx webdev/oauth ^
 cr while credentials provider is used here, oauth is
 cr generally recommended
 
+cx webdev/html/aria_disabled ^
+cr used for the login button. isPending determines the state.
+cr it is generated from a action state react web hook.
+
+cx webdev/react/ref/useActionState ^
+
+cx webdev/html/aria_atomic ^
+
 cx webdev/nextjs/nextauthjs/credentials_provider webdev/oauth
 cr oauth generally recommended over credentials provider

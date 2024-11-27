@@ -416,3 +416,31 @@ ln for access delegation, commonly used as a way for
 ln internet users to grant websites or applications access
 ln to their information on other websites but without
 ln giving them their passwords.
+
+nn html/aria_disabled
+hl https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-disabled
+ln aria-disabled: when set to true, indicates that the element upon 
+ln which it is set and all of its focusable descendants 
+ln are meant to be in the disabled state.
+ln This declaration will inform people using assistive 
+ln technologies, such as screen readers, that such 
+ln elements are not meant to be editable or otherwise 
+ln operable.
+
+nn html/aria_atomic
+hl https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-atomic
+ln in ARIA live regions, the global aria-atomic attribute 
+ln indicates whether assistive technologies such as a 
+ln screen reader will present all, or only parts of, the 
+ln changed region based on the change notifications 
+ln defined by the aria-relevant attribute.
+rm when true, present the entire region as a whole, including
+rm the author-defined label if one exists
+
+nn aria/live_regions
+hl https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions
+ln Live regions provide a way to programmatically expose
+ln dynamic content changes in a way that can be announced
+ln by assistive technologies.
+co $ html/aria_atomic
+co $ html/aria_live
