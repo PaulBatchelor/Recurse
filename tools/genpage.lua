@@ -1,4 +1,5 @@
 genpage = {}
+treesorter = require("tools/treesorter")
 
 function generate_nodes(db, namespace)
     local stmt = db:prepare(
@@ -125,7 +126,6 @@ function topsort(nodes, connections)
 
     for left, rcons in pairs(connections) do
         for right, _ in pairs(rcons) do
-
             if nodes[left] == nil then
                 table.insert(edges, {left, right})
             end
@@ -642,6 +642,8 @@ function genpage.pagedata(db, namespace, nodes)
     output.namespace = namespace
     tree, xnodes =
         generate_tree(nodes, connections, namespace, db)
+    -- sort the tree in alphabetical order
+    tree = treesorter.treesorter(tree)
     output.tree = tree
     output.xnodes = xnodes
     output.remarks = get_graph_remarks(db, namespace)

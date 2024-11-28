@@ -17,3 +17,5 @@ to work. The code is sloppy and should be refined.
 @19:42 Transcribe TOC to dagzet #read-DDIA #timelog:00:09:00
 
 @19:51 Try to get nodes in order in dz renderer #timelog:00:17:45
+
+@21:24 More attempts at ordering nodes.
