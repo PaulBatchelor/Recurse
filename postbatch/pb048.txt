@@ -1,2 +1,6 @@
 @2024-11-28 Happy Thanksgiving.
-@09:06 Get subgraphs that are also nodes to be included in nodelist
+@09:06 Get subgraphs that are also nodes to be included in nodelist #timelog:00:43:05
+Solution: the node lookup table needed to add a check before
+being passed into the JSON generator (genpage.lua)
+
+@09:59 The nodes are showing up now, but, the external children are not

@@ -44,7 +44,7 @@ function treesorter.treesorter(tree)
             --- tree syntax: [name, [children]], where
             --- children are more trees.
             --- recursively sort the trees
-            node[2] = treesorter(node[2])
+            node[2] = treesorter.treesorter(node[2])
         end
         table.insert(new_tree, node)
     end
@@ -52,72 +52,13 @@ function treesorter.treesorter(tree)
     return new_tree
 end
 
--- tree = {
---   {
---     "double_colon_operator",
---     {
---       "double_colon_reverse"
---     }
---   },
---   "walrus_operator",
---   "heapsort_examples",
---   "timsort"
--- }
--- 
--- tree = {
---   "the_core",
---   "spread_syntax",
---   {
---     "static",
---     {
---       "static_initialization_blocks"
---     }
---   },
---   "node-gyp",
---   "IIFE",
---   {
---     "truthiness",
---     {
---       {
---         "coercion",
---         {
---           "type_coercion_mdn"
---         }
---       }
---     }
---   },
---   "rest_parameter",
---   "await",
---   "class_expression",
---   "dom_event_delegation_stack_overflow",
---   {
---     "js_questions",
---     {
---       "simple_rules_to_this",
---       "how_event_delegation_works"
---     }
---   },
---   "error",
---   "js_objects",
---   "this",
---   "bind",
---   {
---     "mdn_prototype_chain",
---     {
---       "instanceof"
---     }
---   },
---   {
---     "template_literals",
---     {
---       "tagged_templates"
---     }
---   }
--- }
-
 -- json = require("tools/json")
 -- 
--- new_tree = treesorter(tree)
+-- tree = io.open("tree.json")
+-- tree = tree:read("*all")
+-- tree = json.decode(tree)
+-- 
+-- new_tree = treesorter.treesorter(tree)
 -- print(json.encode(new_tree))
 
 setmetatable(treesorter, {
