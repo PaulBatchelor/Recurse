@@ -1,4 +1,4 @@
-ns DDIA
+ns DDIA/toc
 gr Reading Notes: Designing Data-Intensive Applications
 
 nn 1_foundations_of_data_systems
@@ -10,7 +10,7 @@ ln Part 2: Distributed Data
 nn 3_derived_data
 ln Part 3: Derived Data
 
-ns DDIA/1_foundations_of_data_systems
+ns DDIA/toc/1_foundations_of_data_systems
 
 nn 01_reliable_scalable_maintainable
 ln Chapter 1: reliable, scalable, and maintainable applications
@@ -24,7 +24,7 @@ ln Chapter 3: storage and retrieval
 nn 04_encoding_evolution
 ln Chapter 4: encoding and evolution
 
-ns DDIA/2_distributed_data
+ns DDIA/toc/2_distributed_data
 
 nn 05_replication
 ln Chapter 5: Replication
@@ -41,7 +41,7 @@ ln Chapter 8: the trouble with distribtued systems
 nn 09_consistency_consensus
 ln Chapter 9: Consistency and consensus
 
-ns DDIA/3_derived_data
+ns DDIA/toc/3_derived_data
 
 nn 10_batch_processing
 ln Chapter 10: Batch Processing
