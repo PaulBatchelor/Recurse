@@ -640,7 +640,7 @@ function genpage.pagedata(db, namespace, nodes)
     tree, xnodes =
         generate_tree(nodes, connections, namespace, db)
     -- sort the tree in alphabetical order
-    -- tree = treesorter.treesorter(tree)
+    tree = treesorter.treesorter(tree)
     output.tree = tree
     output.xnodes = xnodes
     output.remarks = get_graph_remarks(db, namespace)

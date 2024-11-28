@@ -298,15 +298,16 @@
 
   (defn get-node-name [nd] (if (string? nd) nd (nd 0)))
 
-  (defn generate-node-list [top-node]
+  (defn generate-node-list [top-node namespace]
     #(print "<ul>")
     (print "<li>")
-    (html-link namespace (get-node-name top-node))
+    (def node-name (get-node-name top-node))
+    (html-link namespace node-name)
 
     (if (array? top-node)
       (do
         (print "<ul>")
-        (each nd (top-node 1) (generate-node-list nd))
+        (each nd (top-node 1) (generate-node-list nd (string namespace "/" node-name)))
         (print "</ul>")))
 
     (print "</li>")
@@ -373,7 +374,7 @@
       (print (string "<h2>Node Tree</h2>"))
       (print "<ul>")
       (each nd tree
-            (generate-node-list nd))
+            (generate-node-list nd namespace))
       (print "</ul>")))
 
   (defn sort-nodes-by-pos [nodes]

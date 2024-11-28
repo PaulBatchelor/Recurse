@@ -3,4 +3,8 @@
 Solution: the node lookup table needed to add a check before
 being passed into the JSON generator (genpage.lua)
 
-@09:59 The nodes are showing up now, but, the external children are not
+@09:59 The nodes are showing up now, but, the external children are not #timelog:00:15:40
+That was a treesorter problem
+
+@10:15 Make the names less verbose in HTML output
+Needed for better looking TOCs making heavy use of paths
