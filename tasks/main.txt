@@ -26,3 +26,5 @@ I believe it may be a uniqueness issue.
 This is a thing I've been mostly working out in Rust,
 but it should be easy enough to port to JavaScript. Build
 an interface with a grid of 8x8 checkboxes.
+
+@read-system-design-interview Read System Design Interview: An Insiders Guide

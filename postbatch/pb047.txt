@@ -11,3 +11,5 @@ needs to divide into the smaller string. Will need to rethink.
 ---
 Okay, I added some extra code in there and now it seems
 to work. The code is sloppy and should be refined.
+
+@19:30 Transcribe TOC to dagzet #read-system-design-interview #timelog:00:07:17

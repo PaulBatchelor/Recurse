@@ -38,4 +38,5 @@ knowledge/nextjs.dz
 knowledge/css.dz
 knowledge/leetcode.dz
 knowledge/cryptography.dz
+knowledge/system_design_interview.dz
 knowledge/zzz.dz

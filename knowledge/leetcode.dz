@@ -596,4 +596,4 @@ cr python set structure
 nn problems/1768_merge_strings_alternately
 hl https://leetcode.com/problems/merge-strings-alternately
 ln 1768: merge strings alternative
-co $ LC75
+co $ leetcode75

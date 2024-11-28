@@ -1,0 +1,44 @@
+ns system_design_interview
+gr reading notes: system design interview
+
+ns system_design_interview/toc
+gr Table of Contents
+
+nn 01_proximity_service
+ln Chapter 1: proximity Service
+
+nn 02_nearby_friends
+ln Chapter 2: Nearby Friends
+
+nn 03_google_maps
+ln Chapter 3: Google Maps
+
+nn 04_distributed_message_queue
+ln Chapter 4: Distribtued Message Queue
+
+nn 05_metrics_monitoring_and_alert_system
+ln Chapter 5: Metrics monitoring and alert system
+
+nn 06_ad_click_event_aggregation
+ln Chapter 6: ad click event aggreegation
+
+nn 07_hotel_reservation_system
+ln Chapter 7: Hotel reservation system
+
+nn 08_distributed_email_service
+ln Chapter 8: Distributed Email Service
+
+nn 09_s3_object_storage
+ln Chapter 09: S3-like object storage
+
+nn 10_real_time_gaming_leaderboard
+ln Chapter 10: real-time gaming leaderboard
+
+nn 11_payment_system
+ln Chapter 11: payment system
+
+nn 12_digital_wallet
+ln Chapter 12: digital wallet
+
+nn 13_stock_exchange
+ln Chapter 13: stock exchange
