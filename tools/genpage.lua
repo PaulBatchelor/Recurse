@@ -317,7 +317,7 @@ function get_image(db, nid)
     end
 
     stmt:finalize()
-    return img 
+    return img
 end
 
 function get_audio(db, nid)
@@ -333,7 +333,7 @@ function get_audio(db, nid)
     end
 
     stmt:finalize()
-    return audio 
+    return audio
 end
 
 function lookup_name_from_id(db, id)
@@ -447,7 +447,6 @@ function generate_node_data(nodes, connections, namespace, db, nid)
     end
 
     if nodes[nid] == nil then
-
         node.name = lookup_name_from_id(db, nid)
         assert(node.name ~= nil,
             "could not find node with id " .. nid)
@@ -612,8 +611,6 @@ function genpage.pagedata(db, namespace, nodes)
     -- keeps track of nodes that have been traversed already
     local traversed = {}
 
-    -- TODO topological sort doesn't end up including all
-    -- local nodes
     local sorted = topsort(nodes, connections)
 
     -- shove stuff into a table

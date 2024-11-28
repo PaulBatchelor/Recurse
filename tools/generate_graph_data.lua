@@ -87,6 +87,19 @@ function generate_page_data(db, h, lookup, namespace, pglist)
             table.insert(subgraphs, name)
             table.insert(namespace, name)
             generate_page_data(db, children, lookup, namespace, pglist)
+
+            -- subgraph may sometimes be a node
+            local fullpath = name
+            if #namespace > 0 then
+                fullpath =
+                    table.concat(namespace, "/")
+            end
+            local nid = lookup[fullpath]
+
+            if nid ~= nil then
+                nodes[nid] = fullpath
+            end
+
             table.remove(namespace)
         else
             local fullpath = name
