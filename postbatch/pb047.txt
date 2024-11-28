@@ -14,4 +14,6 @@ to work. The code is sloppy and should be refined.
 
 @19:30 Transcribe TOC to dagzet #read-system-design-interview #timelog:00:07:17
 
-@19:42 Transcribe TOC to dagzet #read-DDIA
+@19:42 Transcribe TOC to dagzet #read-DDIA #timelog:00:09:00
+
+@19:51 Try to get nodes in order in dz renderer #timelog:00:17:45
