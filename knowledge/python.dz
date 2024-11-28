@@ -222,3 +222,29 @@ hl https://docs.python.org/3/reference/simple_stmts.html#the-nonlocal-statement
 co $ docs/reference/simple_statements
 ln nonlocal: causes listed identifiers to refer to names
 ln previously bound in nonlocal scope
+
+nn repeat_strings
+ln x = "hello", x*3 would be "hellohellohello"
+
+nn docs/stdlib/re
+ln re: regular expressions
+hl https://docs.python.org/3/library/re.html
+
+nn docs/stdlib/re/sub
+hl https://docs.python.org/3/library/re.html#re.sub
+ln re.sub(pattern, repl, string, count=0, flags=0):
+ln Return the string obtained by replacing the leftmost 
+ln non-overlapping occurrences of pattern in string by 
+ln the replacement repl.
+zz this should work someday
+zz co $ ../re
+
+nn docs/stdlib/math
+hl https://docs.python.org/3/library/math.html
+ln math
+
+nn docs/stdlib/math/gcd
+hl https://docs.python.org/3/library/math.html#math.gcd
+ln gcd(*integers): get greatest common divisor of two integers
+zz this should work someday
+zz co $ ../math

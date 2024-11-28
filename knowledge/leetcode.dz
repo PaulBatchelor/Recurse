@@ -597,3 +597,13 @@ nn problems/1768_merge_strings_alternately
 hl https://leetcode.com/problems/merge-strings-alternately
 ln 1768: merge strings alternative
 co $ leetcode75
+co $ paradigms/array_string
+
+nn problems/1071_GCD_of_strings
+hl https://leetcode.com/problems/greatest-common-divisor-of-strings
+ln 1071: greatest common divisor of strings
+co $ leetcode75
+co $ paradigms/array_string
+
+nn paradigms/array_string
+ln array/string manipulation

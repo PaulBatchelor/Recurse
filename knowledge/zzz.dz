@@ -183,3 +183,14 @@ cx webdev/html/aria_atomic ^
 
 cx webdev/nextjs/nextauthjs/credentials_provider webdev/oauth
 cr oauth generally recommended over credentials provider
+
+cx python/repeat_strings leetcode/problems/1071_GCD_of_strings
+cr Really helpful to use this operator in brute force solution to this problem
+
+cx python/docs/stdlib/re/sub ^
+cr The C++ brute force solution uses string substitution, which
+cr can be reproduced with re.sub()
+
+cx python/docs/stdlib/math/gcd ^
+cr there's this really proof-y math-y solution that is quite
+cr short in python because it uses the built-in gcd() function
