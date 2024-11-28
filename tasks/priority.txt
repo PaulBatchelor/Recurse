@@ -12,3 +12,5 @@ Link: @!(dzref "webdev/nextjs/learn_dashboard_app")!@
 @read-system-design-interview Read System Design Interview: An Insiders Guide
 
 @read-DDIA read designing data intensive applications
+
+@dagzet-double-dot Add double dot operator
