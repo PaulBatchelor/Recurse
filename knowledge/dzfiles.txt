@@ -39,4 +39,5 @@ knowledge/css.dz
 knowledge/leetcode.dz
 knowledge/cryptography.dz
 knowledge/system_design_interview.dz
+knowledge/ddia.dz
 knowledge/zzz.dz

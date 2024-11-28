@@ -1,8 +1,6 @@
 @!desc high-priority tasks. This should ideally be
 tasks that I intend to work on in the next few days or so.
 
-@leetcoding Leetcode Problems
-
 @LC75-review Leetcode 75 problem review
 For each problem on the list, I want to make sure they
 in my dagzet database @!(dzref "leetcode")!@, and that
@@ -11,8 +9,6 @@ solutions are submitted to LC.
 @nextjs-dashboard-app Complete nextjs dashboard app tutorial
 Link: @!(dzref "webdev/nextjs/learn_dashboard_app")!@
 
-@reading-dbint Read Database Internals
+@read-system-design-interview Read System Design Interview: An Insiders Guide
 
-@dagzet-port-commands port remaining commands to dagzet
-The goal is making things compatible with my larger
-dagzet database (using the lua implementation)
+@read-DDIA read designing data intensive applications

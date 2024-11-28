@@ -27,4 +27,10 @@ This is a thing I've been mostly working out in Rust,
 but it should be easy enough to port to JavaScript. Build
 an interface with a grid of 8x8 checkboxes.
 
-@read-system-design-interview Read System Design Interview: An Insiders Guide
+@reading-dbint Read Database Internals
+
+@leetcoding Leetcode Problems
+
+@dagzet-port-commands port remaining commands to dagzet
+The goal is making things compatible with my larger
+dagzet database (using the lua implementation)
