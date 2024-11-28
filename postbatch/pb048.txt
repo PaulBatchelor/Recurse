@@ -7,4 +7,6 @@ being passed into the JSON generator (genpage.lua)
 That was a treesorter problem
 
 @10:15 Make the names less verbose in HTML output
-Needed for better looking TOCs making heavy use of paths
+Needed for better looking TOCs making heavy use of paths #timelog:00:12:37
+
+@10:28 More TOC setup for DDIA #timelog:00:03:34 #read-DDIA

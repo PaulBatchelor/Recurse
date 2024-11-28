@@ -18,38 +18,49 @@ co $ ../1_foundations_of_data_systems
 
 nn 02_data_models_query_languages
 ln Chapter 2: data models and query languages
+co $ ../1_foundations_of_data_systems
 
 nn 03_storage_and_retrieval
 ln Chapter 3: storage and retrieval
+co $ ../1_foundations_of_data_systems
 
 nn 04_encoding_evolution
 ln Chapter 4: encoding and evolution
+co $ ../1_foundations_of_data_systems
 
 ns DDIA/toc/2_distributed_data
 
 nn 05_replication
 ln Chapter 5: Replication
+co $ ../2_distributed_data
 
 nn 06_partitioning
 ln Chapter 6: partitioning
+co $ ../2_distributed_data
 
 nn 07_transactions
 ln Chapter 7: transactions
+co $ ../2_distributed_data
 
 nn 08_trouble_distributed_systems
 ln Chapter 8: the trouble with distribtued systems
+co $ ../2_distributed_data
 
 nn 09_consistency_consensus
 ln Chapter 9: Consistency and consensus
+co $ ../2_distributed_data
 
 ns DDIA/toc/3_derived_data
 
 nn 10_batch_processing
 ln Chapter 10: Batch Processing
+co $ ../3_derived_data
 
 nn 11_stream_processing
 ln Chapter 11: Stream Processing
+co $ ../3_derived_data
 
 nn 12_future_data_systems
 ln Chapter 12: The future of Data Systems
+co $ ../3_derived_data
 
