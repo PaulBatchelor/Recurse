@@ -156,4 +156,5 @@
 11/26:217:Python one-liner. Editorial didn't have anything much more clever than that.
 11/27:1768:My brain solved it in a two-step process, when it could have been more simply solved in a loop. For simple problems like this one, these details matter
 11/28:1071:the math-y proof-y solution is interested. learned about the built-in gcd() function in python
-11/38:1431:huh. well, I guess that was it.
+11/28:1431:huh. well, I guess that was it.
+11/28:605:A straightforward problem which I made a clumsy working solution for. I feel I lack craft.

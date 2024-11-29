@@ -611,5 +611,11 @@ ln array/string manipulation
 nn problems/1431_kids_with_greatest_number_of_candies
 hl https://leetcode.com/problems/kids-with-the-greatest-number-of-candies
 ln 1431: Kids with greatest number of candies
-co $ array/string manipulation
+co $ paradigms/array_string
 co $ leetcode75
+
+nn problems/605_can_place_flowers
+hl https://leetcode.com/problems/can-place-flowers
+ln 605: Can place flowers
+co $ leetcode75
+co $ paradigms/array_string

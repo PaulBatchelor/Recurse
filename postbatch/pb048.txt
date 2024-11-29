@@ -23,4 +23,7 @@ I feel like I'm missing something with this one.
 
 @20:46 1431 study #LC75-review #timelog:00:02:00
 
-@20:50 605 can place flowers #LC75-review
+@20:50 605 can place flowers #LC75-review #timelog:00:32:00
+I don't like what I've done, but it works.
+
+@21:23 605 research #LC75-review #timelog:00:06:44
