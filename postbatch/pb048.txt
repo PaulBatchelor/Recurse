@@ -17,3 +17,10 @@ Needed for better looking TOCs making heavy use of paths #timelog:00:12:37
 If I have a node "abc/def/ghi" and I connect it "../jkl",
 it should connect to "abc/def/jkl" regardless of what
 the global namespace is currently set to
+
+@20:41 1431: kids with greatest number of candies #LC75-review #timelog:00:04:23
+I feel like I'm missing something with this one.
+
+@20:46 1431 study #LC75-review #timelog:00:02:00
+
+@20:50 605 can place flowers #LC75-review

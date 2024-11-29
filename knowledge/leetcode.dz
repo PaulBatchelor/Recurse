@@ -607,3 +607,9 @@ co $ paradigms/array_string
 
 nn paradigms/array_string
 ln array/string manipulation
+
+nn problems/1431_kids_with_greatest_number_of_candies
+hl https://leetcode.com/problems/kids-with-the-greatest-number-of-candies
+ln 1431: Kids with greatest number of candies
+co $ array/string manipulation
+co $ leetcode75
