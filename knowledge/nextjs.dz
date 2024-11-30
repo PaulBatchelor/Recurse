@@ -199,3 +199,8 @@ ln in with arbitrary credentials, such as a username and
 ln password, domain, two factor authentication or 
 ln hardware device (e.g. YubiKey U2F / FIDO).
 co $ nextauthjs
+
+nn dashboard_app/16_adding_metadata
+ln Chapter 16: adding metadata
+hl https://nextjs.org/learn/dashboard-app/adding-metadata
+co $ ..

@@ -1,0 +1,7 @@
+@2024-11-30 Saturday, November 30th
+More packing today. Hopefully will finally finish up
+the NextJS dashboord app.
+
+@12:33 Chapter 16: adding metadata #nextjs-dashboard-app #timelog:00:31:20
+
+@13:06 Okay done. #nextjs-dashboard-app
