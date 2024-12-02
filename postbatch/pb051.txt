@@ -1,3 +1,4 @@
 @2024-12-02 travel day
-@10:16 151: reverse words in string #LC75-review
+@10:16 151: reverse words in string #LC75-review #timelog:00:08:00
+@10:24 334: 334 Increasing triplet subsequence
 
