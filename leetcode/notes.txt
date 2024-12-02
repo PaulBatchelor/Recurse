@@ -159,3 +159,4 @@
 11/28:1431:huh. well, I guess that was it.
 11/28:605:A straightforward problem which I made a clumsy working solution for. I feel I lack craft.
 11/28:345:two-pointer. pleased I remembered the clever swap trick in python. I keep forgetting strings need to be converted to lists and then joined again
+12/02:151:Built-in way had subtlims with split(), looked up manual way

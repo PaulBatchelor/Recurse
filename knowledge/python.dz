@@ -247,3 +247,9 @@ nn docs/stdlib/math/gcd
 hl https://docs.python.org/3/library/math.html#math.gcd
 ln gcd(*integers): get greatest common divisor of two integers
 co $ ..
+
+nn docs/stdtypes/str/split
+hl https://docs.python.org/3/library/stdtypes.html#str.split
+ln split
+rm if no delimiter provided, the algorithm changes and
+rm will split on variable whitespace
