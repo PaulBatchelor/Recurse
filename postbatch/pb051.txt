@@ -1,5 +1,6 @@
 @2024-12-02 travel day
-@10:16 151: reverse words in string #LC75-review #timelog:00:08:00
+@10:16 151: 151 reverse words in string #LC75-review #timelog:00:08:00
 @10:24 334: 334 Increasing triplet subsequence #LC75-review #timelog:00:29:00
-@10:52 443: String Compression #LC75-review
-
+@10:52 443: 443 String Compression #LC75-review #timelog:01:00:00
+@11:52 282: 282 Move zeroes #LC75-review #timelog:00:18:00
+@12:12 392: 392 Is subsequence #LC75-review #timelog:00:08:00

@@ -162,3 +162,4 @@
 12/02:151:Built-in way had subtlims with split(), looked up manual way
 12/02:334:Simple answer, my brain didn't remember. But I did bang out brute force.
 12/02:443:Tricky problem. Easy to mess up.
+12/02:282:Got it right after fiddling with it.

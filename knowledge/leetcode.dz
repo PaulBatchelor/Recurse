@@ -642,3 +642,15 @@ hl https://leetcode.com/problems/string-compression/description
 ln 443: String Compression
 co $ leetcode75
 co $ paradigms/array_string
+
+nn problems/282_move_zeros
+hl https://leetcode.com/problems/move-zeroes
+ln 282: move zeros
+co $ leetcode75
+co $ paradigms/two_pointer
+
+nn problems/392_is_subsequence
+hl https://leetcode.com/problems/is-subsequence
+ln 392: is subsequence
+co $ leetcode75
+co $ paradigms/two_pointer
