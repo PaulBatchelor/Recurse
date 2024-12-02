@@ -636,3 +636,9 @@ nn problems/334_increasing_triplet_subseq
 hl https://leetcode.com/problems/increasing-triplet-subsequence
 ln 334: Increasing triplet subsequence
 co $ leetcode75
+
+nn problems/443_string_compression
+hl https://leetcode.com/problems/string-compression/description
+ln 443: String Compression
+co $ leetcode75
+co $ paradigms/array_string
