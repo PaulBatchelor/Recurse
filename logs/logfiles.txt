@@ -121,3 +121,10 @@ postbatch/pb039.txt
 postbatch/pb040.txt
 postbatch/pb041.txt
 postbatch/pb042.txt
+postbatch/pb043.txt
+postbatch/pb044.txt
+postbatch/pb045.txt
+postbatch/pb046.txt
+postbatch/pb047.txt
+postbatch/pb048.txt
+postbatch/pb049.txt

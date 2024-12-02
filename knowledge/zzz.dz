@@ -64,10 +64,10 @@ cr zod used for validation in chapter 12
 cx javascript/bind webdev/nextjs/dashboard_app_pass_id_server_action
 cr bind() is somehow needed here for some reason
 
-cx javascript/error webdev/nextjs/dashboard_app/13_handling_errors
+cx javascript/error webdev/nextjs/learn_dashboard_app/13_handling_errors
 cr error component makes use of the native error object in javascript
 
-cx webdev/react/ref/useActionState webdev/nextjs/dashboard_app/14_improving_accessibility
+cx webdev/react/ref/useActionState webdev/nextjs/learn_dashboard_app/14_improving_accessibility
 cr show form errors in NextJS via useActionState hook
 
 cx webdev/web_dev_learn_accessibility ^
@@ -120,7 +120,7 @@ cr Convenient to use with many hash table problems in Python,
 cr to the point where Counter() is imported by default in the leetcode
 cr environment.
 
-cx webdev/authentication webdev/nextjs/dashboard_app/15_adding_authentication
+cx webdev/authentication webdev/nextjs/learn_dashboard_app/15_adding_authentication
 cx webdev/authorization ^
 
 cx python/docs/glossary/hashable leetcode/problems/141_linked_list_cycle
@@ -153,7 +153,7 @@ cx python/docs/stdtypes/set leetcode/problems/217_contains_duplicate
 cx javascript/regex webdev/nextjs/matcher
 cr matcher uses full regex for matching paths
 
-cx javascript/regex/lookahead_assertion webdev/nextjs/dashboard_app/15_adding_authentication
+cx javascript/regex/lookahead_assertion webdev/nextjs/learn_dashboard_app/15_adding_authentication
 cr the "(?! pattern)" syntax was used in the middleware.ts file
 
 cx javascript/bcrypt ^

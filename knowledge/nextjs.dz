@@ -157,21 +157,21 @@ hl https://nextjs.org/learn/dashboard-app/mutating-data#4-pass-the-id-to-the-ser
 ln In this part of the tutorial, a variable id is passed to
 ln the server action via bind.
 
-nn dashboard_app/13_handling_errors
+nn learn_dashboard_app/13_handling_errors
 ln Chapter 13: Handling Errors
 
-nn dashboard_app/14_improving_accessibility
+nn learn_dashboard_app/14_improving_accessibility
 ln Chapter 14: Improving Accessibility
 hl https://nextjs.org/learn/dashboard-app/improving-accessibility
 
-nn dashboard_app/15_adding_authentication
+nn learn_dashboard_app/15_adding_authentication
 hl https://nextjs.org/learn/dashboard-app/adding-authentication
 ln Chapter 15: Adding authentication
 
 nn nextauthjs
 hl https://authjs.dev/reference/nextjs
 ln NextAuthJS
-co $ dashboard_app/15_adding_authentication
+co $ learn_dashboard_app/15_adding_authentication
 
 nn middleware
 hl https://nextjs.org/docs/app/building-your-application/routing/middleware
@@ -180,7 +180,7 @@ ln completed. Then, based on the incoming request, you
 ln can modify the response by rewriting, redirecting, 
 ln modifying the request or response headers, or 
 ln responding directly.
-co $ dashboard_app/15_adding_authentication
+co $ learn_dashboard_app/15_adding_authentication
 cr In nextauthjs config, the "authorized" callback is used
 cr to verify if user is authorized to verify the request
 cr via nextjs middleware
@@ -200,7 +200,7 @@ ln password, domain, two factor authentication or
 ln hardware device (e.g. YubiKey U2F / FIDO).
 co $ nextauthjs
 
-nn dashboard_app/16_adding_metadata
+nn learn_dashboard_app/16_adding_metadata
 ln Chapter 16: adding metadata
 hl https://nextjs.org/learn/dashboard-app/adding-metadata
 co $ ..
