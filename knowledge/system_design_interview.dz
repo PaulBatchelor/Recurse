@@ -42,3 +42,186 @@ ln Chapter 12: digital wallet
 
 nn 13_stock_exchange
 ln Chapter 13: stock exchange
+
+zz Steps 1 and 2
+
+ns system_design_interview/toc/01_proximity_service
+
+nn step1
+ln step 1
+co $ ..
+
+nn step1/func_reqs
+ln function requirements
+co $ ..
+
+nn step1/func_reqs/return_nearby_business
+ln return nearby businesses
+co $ ..
+
+nn step1/func_reqs/view_business
+ln view a business
+co $ ..
+
+nn step1/func_reqs/add_del_update_business
+ln Add/delete/update a business
+co $ ..
+
+nn step1/nonfunc_reqs
+ln non-functional requirements
+co $ ..
+
+nn step1/nonfunc_reqs/low_latency
+ln low latency
+co $ ..
+
+nn step1/nonfunc_reqs/data_privacy
+ln Data Privacy
+co $ ..
+
+nn step1/nonfunc_reqs/5k_search_qps
+ln 5000 search sqps
+co $ ..
+
+nn step2
+ln step2
+co $ ..
+
+nn step2/api_design
+ln API Design
+co $ ..
+
+nn step2/high_level_design
+ln High level design diagram
+co $ ..
+
+nn step2/data_model
+ln Data Model
+co $ ..
+
+nn step2/algorithms
+ln Algorithms
+co $ ..
+
+ns system_design_interview/toc/02_nearby_friends
+
+nn step1
+ln step 1
+co $ ..
+
+nn step1/func_reqs
+ln functional requirements
+co $ ..
+
+nn step1/func_reqs/view_nearby_friends
+ln View nearby friends
+co $ ..
+
+nn step1/func_reqs/udpate_nearby_friend_list
+ln Update nearby friend list
+co $ ..
+
+nn step1/nonfunc_reqs
+ln non-functional requirements
+co $ ..
+
+nn step1/nonfunc_reqs/low_latency
+ln Low-latency
+co $ ..
+
+nn step1/estimation/radius_5_mile
+ln 5-mile radius
+co $ ..
+
+nn step1/estimation/location_refresh_interval_30s
+ln Location refresh interval: 30s
+co $ ..
+
+nn step1/estimation/locate_update_334k_qps
+ln Locate update: 334k qps
+
+nn step1/estimation
+ln estimation
+co $ ..
+
+nn step2
+ln step2
+co $ ..
+
+nn step2/api_design
+ln API Design
+co $ ..
+
+nn step2/high_level_design
+ln High level design diagram
+co $ ..
+
+nn step2/data_model
+ln Data Model
+co $ ..
+
+nn step2/periodic_location_update
+ln Periodic location update
+co $ ..
+
+ns system_design_interview/toc/03_google_maps
+
+nn step1
+ln step 1
+co $ ..
+
+nn step1/func_reqs
+ln functional requirements
+co $ ..
+
+nn step1/func_reqs/user_location_update
+ln User Location Update
+co $ ..
+
+nn step1/func_reqs/navigation_service
+ln Navigation Service
+co $ ..
+
+nn step1/func_reqs/map_rendering
+ln Map Rendering
+co $ ..
+
+nn step1/nonfunc_reqs
+ln non-functional requirements
+co $ ..
+
+nn step1/nonfunc_reqs/highly_accurate
+ln Highly accurate
+co $ ..
+
+nn step1/nonfunc_reqs/smooth_navigation
+ln Smooth navigation
+co $ ..
+
+nn step1/nonfunc_reqs/data_usage
+ln Data Usage
+co $ ..
+
+nn step1/estimation
+ln estimation
+co $ ..
+
+nn step1/estimation/storage
+ln Storage
+co $ ..
+
+nn step1/estimation/server_traffic
+ln Server Traffic
+co $ ..
+
+nn step2
+ln step2
+co $ ..
+
+nn step2/high_level_design
+ln High level design diagram
+co $ ..
+
+nn step2/map_101
+ln map 101
+co $ ..

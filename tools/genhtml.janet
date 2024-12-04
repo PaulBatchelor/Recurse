@@ -1,4 +1,4 @@
-(def css-path 
+(def css-path
   (if (ww-server?)
     "/css/code.css"
     (string webroot "/css/code.css")))
