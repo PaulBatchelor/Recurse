@@ -7,7 +7,7 @@ well, I don't know what happened here. Things either
 got overwritten, or I was imagining things. I don't see
 any code doing what I thought I did.
 
-@13:42 Transcribing initial notes #read-system-design-interview
+@13:42 Transcribing initial notes #read-system-design-interview #timelog:00:31:19
 Concept: perform bread-first search of this book, looking
 at the helpful graphs at the end, and working backwards,
 filling in gaps and builing up emergent knowledge
