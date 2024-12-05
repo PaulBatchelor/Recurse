@@ -41,3 +41,4 @@ knowledge/cryptography.dz
 knowledge/system_design_interview.dz
 knowledge/ddia.dz
 knowledge/zzz.dz
+knowledge/zzz_ddia.dz

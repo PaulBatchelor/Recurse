@@ -2,3 +2,5 @@
 @10:43 System design #read-system-design-interview #timelog:01:22:23
 
 @12:31 Adding a few more tools #read-system-design-interview
+
+@12:36 DDIA chapter 1 skimming #read-DDIA #timelog:00:10:54

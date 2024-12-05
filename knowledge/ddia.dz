@@ -64,3 +64,34 @@ nn 12_future_data_systems
 ln Chapter 12: The future of Data Systems
 co $ ..
 
+ns DDIA
+
+nn glossary
+ln Glossary
+
+nn glossary/functional_requirements
+ln Functional requirements: what it should do, such as
+ln allowing data to be sored, retrieved, searched, and
+ln processed in various ways.
+co $ ../../toc/1_foundations_of_data_systems/01_reliable_scalable_maintainable
+
+nn glossary/nonfunctional_requirements
+ln nonfunctional requirements: general properties like
+ln security, reliablity, compliance, scalability,
+ln compatability, maintainability
+co $ ../../toc/1_foundations_of_data_systems/01_reliable_scalable_maintainable
+
+nn glossary/reliability
+ln Reliability: making systems work correctly, even when
+ln faults occur.
+co $ ../../toc/1_foundations_of_data_systems/01_reliable_scalable_maintainable
+
+nn glossary/scalability
+ln Scalability: having strategies for keeping performance
+ln good, even when load increases.
+co $ ../../toc/1_foundations_of_data_systems/01_reliable_scalable_maintainable
+
+nn glossary/maintainability
+ln Maintainability: making life better for engineering and
+ln operations teams who need to work with the system.
+co $ ../../toc/1_foundations_of_data_systems/01_reliable_scalable_maintainable
