@@ -14,3 +14,5 @@ filling in gaps and builing up emergent knowledge
 graph structures.
 
 @21:19 1679: Max number of K-sum pairs #LC75-review #timelog:00:10:34
+
+@21:32 643: maximum average subarray 1 #LC75-review #timelog:00:24:18

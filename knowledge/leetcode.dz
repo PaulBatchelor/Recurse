@@ -657,6 +657,18 @@ co $ paradigms/two_pointer
 
 nn problems/1679_max_number_of_ksum_pairs
 hl https://leetcode.com/problems/max-number-of-k-sum-pairs
-ln 1679 Max number of ksum pairs
+ln 1679: Max number of ksum pairs
 co $ paradigms/two_pointer
 co $ leetcode75
+
+nn problems/643_maximum_average_subarray
+hl https://leetcode.com/problems/maximum-average-subarray-i
+ln 643: maximum average subarray
+co $ leetcode75
+co $ paradigms/sliding_window
+co references/prefix_sum $
+cr editorial used a cumulative sum to solve this,
+cr AKA prefix sum. It was a little strange.
+
+nn paradigms/sliding_window
+ln Sliding Window

@@ -163,3 +163,5 @@
 12/02:334:Simple answer, my brain didn't remember. But I did bang out brute force.
 12/02:443:Tricky problem. Easy to mess up.
 12/02:282:Got it right after fiddling with it.
+12/04:1679:Remembered this problem pretty quickly.
+12/04:643:Remembered this problem pretty quickly, though the cumulative sum editorial was weird.

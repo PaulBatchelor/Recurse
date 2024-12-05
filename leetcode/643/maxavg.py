@@ -1,62 +1,38 @@
-# one of the solutions in the editorial (sliding window)
-# 2024-08-13: 00:31:39
-def sliding_window(nums, k):
-    sum = 0
-    for i in range(0, k):
-        sum += nums[i]
+# 2024-12-04 My solution plus the editorial cumulative sum
+class Solution:
+    # cumulative sum version from editorial
+    def findMaxAverage(self, nums: List[int], k: int) -> float:
+        csum = [0]*len(nums)
+        csum[0] = nums[0]
 
-    res = sum
-    
-    for i in range(k, len(nums)):
-        #sum += nums[i] - nums[i - k]
-        sum += nums[i]
-        sum -= nums[i - k]
-        res = max(res, sum)
+        for i in range(1, len(nums)):
+            csum[i] = csum[i - 1] + nums[i]
 
-    return res / k
+        maxsum = csum[k - 1]
+        for i in range(k, len(nums)):
+            maxsum = max(csum[i] - csum[i - k], maxsum)
 
-# My initial brute-force solution
-def brute_force(nums, k):
-    maxsum = None
-    for i in range(k, len(nums)):
-        sum = 0
-        for j in range(0, k):
-            sum += nums[(i - k) + j]
+        return maxsum / k
+    # my version, sliding window
+    def findMaxAverageV1(self, nums: List[int], k: int) -> float:
+        window = 0
 
-        sum /= k
-        if maxsum == None:
-            maxsum = sum
-        else:
-            maxsum = max(maxsum, sum)
-    return maxsum
+        # our initial sum
+        for i in range(k):
+            window += nums[i]
 
-# cumulative sum (editorial)
-def cumsum(nums, k):
-    csum = []
-    csum.append(nums[0])
-    for i in range(1, len(nums)):
-        csum.append(csum[i - 1] + nums[i])
+        maxsum = window
+        # sliding window, subtract from left, add on right
+        for i in range(k, len(nums)):
+            # subtract leftmost value
+            # window -= nums[i - k]
+            # # add current value
+            # # TODO we could be fancy and consolidate
+            # window += nums[i]
+            window += nums[i] - nums[i - k]
+            maxsum = max(window, maxsum)
 
-    res = csum[k - 1] / k;
+        return maxsum / k
 
-    # in:  1 2 3 4  5  6
-    # out: 1 3 6 10 16 21
 
-    # out[4] - out[1] =
-    # (1 + 2 + 3 + 4 + 5) -
-    # (1 + 2)
-    # 16 - 3 = 13
 
-    for i in range(k, len(nums)):
-        res = max(res, (csum[i] - csum[i - k]) / k)
-
-    return res
-
-avg = sliding_window([1, 12, -5, -6, 50, 3], 4)
-assert(avg == 12.75)
-
-avg = brute_force([1, 12, -5, -6, 50, 3], 4)
-assert(avg == 12.75)
-
-avg = cumsum([1, 12, -5, -6, 50, 3], 4)
-assert(avg == 12.75)
