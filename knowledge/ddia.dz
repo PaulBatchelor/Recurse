@@ -202,3 +202,104 @@ ln Full Text Search: arguably a kind of data model used
 ln alongside databases.
 co $ ..
 co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+
+nn glossary/OLTP
+ln OLTP: Online Transaction Processing, optimized for
+ln transaction processing.
+ff What is an OLTP databse?
+fb Online transaction processing, optimized for transaction
+fb processing
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+co $ ../storage_engine
+
+nn glossary/OLAP
+ln OLAP: Online analytical processing, optimized for analytical
+ln processing
+ff What is an OLAP database?
+fb Online analytical processing.
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+co $ ../storage_engine
+
+nn glossary/storage_engine
+ln Storage Engine
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+
+nn glossary/data_warehouse
+ln Data Warehouse
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+co $ ../OLAP
+
+nn glossary/log_structured
+ln Log-structured storage engine: only permits appending to
+ln files and deleting obsolete files, but never updates
+ln a file that has been written.
+co $ ../OLTP
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+
+nn tools/bitcask
+ln Bitcask
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+co $ ../../glossary/log_structured
+
+nn glossary/SSTable
+ln SSTable: Sorted String Table
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+co $ ../log_structured
+
+nn glossary/LSM_tree
+ln LSM_tree: Log-Structured Merge Tree
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+co $ ../log_structured
+
+nn tools/levelDB
+ln LevelDB
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+co $ ../../glossary/log_structured
+
+nn tools/cassandra
+ln Cassandra
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+co $ ../../glossary/log_structured
+
+nn tools/hbase
+ln HBase
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+co $ ../../glossary/log_structured
+
+nn tools/lucene
+ln lucene
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+co $ ../../glossary/log_structured
+
+nn glossary/update_in_place
+ln Update-in-place storage engine: treats disk as set of
+ln fixed-size pages that can be overwritten
+co $ ../OLTP
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+
+nn glossary/btree
+ln B-Tree
+co $ ../update_in_place
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+
+nn glossary/column_oriented_storage
+ln column oriented storage: aims to encode data very
+ln compactly, and minimize amount of data query needs to
+ln read from disk
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
+co $ ../OLAP
