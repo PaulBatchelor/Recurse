@@ -134,6 +134,8 @@ cr good fit for read-heavy systems
 nn step2/algorithms
 ln Varous algorithms for exploring nearby businesses
 co $ ..
+co $ ../../../../tools/redis_geohash
+co $ ../../../../tools/postgres_postgis
 
 nn step2/algorithms/1_two_dimensional_search
 ln Option 1: two-dimensional search
@@ -446,3 +448,11 @@ co $ ..
 nn tools/s2_geometry
 hl http://s2geometry.io/
 ln Google s2: a library for spherical geometry
+
+nn tools/redis_geohash
+hl https://redis.io/docs/latest/commands/geohash/
+ln Redis Geohash
+
+nn tools/postgres_postgis
+hl https://postgis.net/
+ln PostGIS

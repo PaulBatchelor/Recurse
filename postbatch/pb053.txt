@@ -1,2 +1,4 @@
 @2024-12-05 Thursday, December 5th
 @10:43 System design #read-system-design-interview #timelog:01:22:23
+
+@12:31 Adding a few more tools #read-system-design-interview
