@@ -3,3 +3,7 @@ zz Connections to/from DDIA
 cx system_design_interview/glossary/functional_requirement DDIA/glossary/functional_requirements
 
 cx system_design_interview/glossary/non_functional_requirement DDIA/glossary/nonfunctional_requirements
+
+cx system_design_interview/glossary/RDBMS DDIA/glossary/relational_database
+
+cx system_design_interview/glossary/data_model DDIA/glossary/data_model

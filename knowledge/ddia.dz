@@ -73,25 +73,132 @@ nn glossary/functional_requirements
 ln Functional requirements: what it should do, such as
 ln allowing data to be sored, retrieved, searched, and
 ln processed in various ways.
+co $ ..
 co $ ../../toc/1_foundations_of_data_systems/01_reliable_scalable_maintainable
 
 nn glossary/nonfunctional_requirements
 ln nonfunctional requirements: general properties like
 ln security, reliablity, compliance, scalability,
 ln compatability, maintainability
+co $ ..
 co $ ../../toc/1_foundations_of_data_systems/01_reliable_scalable_maintainable
 
 nn glossary/reliability
 ln Reliability: making systems work correctly, even when
 ln faults occur.
+co $ ..
 co $ ../../toc/1_foundations_of_data_systems/01_reliable_scalable_maintainable
 
 nn glossary/scalability
 ln Scalability: having strategies for keeping performance
 ln good, even when load increases.
+co $ ..
 co $ ../../toc/1_foundations_of_data_systems/01_reliable_scalable_maintainable
 
 nn glossary/maintainability
 ln Maintainability: making life better for engineering and
 ln operations teams who need to work with the system.
+co $ ..
 co $ ../../toc/1_foundations_of_data_systems/01_reliable_scalable_maintainable
+
+nn glossary/relational_database
+ln Relational Database: invented to solve "many-to-many" problem
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+
+nn glossary/nosql
+ln NoSQL Datastores
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+
+nn glossary/document_database
+co $ ../nosql
+ln Document Database: targets use cases where data comes in
+ln self contained documents and relationships between
+ln one document and another are rare.
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+
+nn glossary/graph_database
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+co $ ../nosql
+ln Graph Database: useful for cases where data where anything
+ln is potentially related to everything
+
+nn glossary/data_model
+ln Data Model
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+
+nn glossary/query_language
+ln Query Language
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+
+nn tools
+ln tools
+
+nn tools/SQL
+ln SQL
+co $ ../../glossary/query_language
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+
+nn tools/MapReduce
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+co $ ../../glossary/query_language
+ln MapReduce
+
+nn tools/monogdb_aggregration_pipeline
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+co $ ../../glossary/query_language
+ln MongoDB aggregation pipeline
+
+nn tools/cyper
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+co $ ../../glossary/query_language
+ln Cypher
+
+nn tools/SPARQL
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+co $ ../../glossary/query_language
+ln SPARQL
+
+nn tools/datalog
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+co $ ../../glossary/query_language
+ln Datalog
+
+
+nn tools/CSS
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+co $ ../../glossary/query_language
+cr not a DB query language, but intersting parallel
+ln CSS
+
+nn tools/XSL_XPath
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+co $ ../../glossary/query_language
+cr not a DB query language, but intersting parallel
+ln XSL/XPath
+
+nn glossary/sequence_similarity_search
+ln Sequence Similarity Search: taking one long string (such
+ln as a DNA molecule), and matching it against a large
+ln database of strings that are similar, but not identical
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+
+nn glossary/full_text_search
+ln Full Text Search: arguably a kind of data model used
+ln alongside databases.
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
