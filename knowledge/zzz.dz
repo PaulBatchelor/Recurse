@@ -194,3 +194,8 @@ cr can be reproduced with re.sub()
 cx python/docs/stdlib/math/gcd ^
 cr there's this really proof-y math-y solution that is quite
 cr short in python because it uses the built-in gcd() function
+
+cx python/boolean_value_coercion leetcode/problems/1456_max_vowels_in_substring
+cr coercing bools to ints shaves some lines off code
+
+cx ^ javascript/coercion

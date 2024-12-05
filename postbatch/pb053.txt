@@ -6,3 +6,5 @@
 @12:36 DDIA chapter 1 skimming #read-DDIA #timelog:00:10:54
 
 @14:05 DDIA chapter 2 + 3 skimming #read-DDIA #timelog:00:48:21
+
+@17:52 LC 1456: maximum number of vowels in a substring of given length #LC75-review #timelog:00:17:27

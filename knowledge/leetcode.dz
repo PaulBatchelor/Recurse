@@ -672,3 +672,9 @@ cr AKA prefix sum. It was a little strange.
 
 nn paradigms/sliding_window
 ln Sliding Window
+
+nn problems/1456_max_vowels_in_substring
+ln 1456 max vowels in a substring of given length
+hl https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length
+co $ leetcode75
+co $ paradigms/sliding_window
