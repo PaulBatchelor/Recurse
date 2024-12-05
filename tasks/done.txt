@@ -297,3 +297,7 @@ link: @!(dzref "webdev/nextjs/react_foundations")!@
 @grind75 Grind75: medium and easy problems
 
 @dagzet-double-dot Add double dot operator
+
+@nextjs-dashboard-app Complete nextjs dashboard app tutorial
+Link: @!(dzref "webdev/nextjs/learn_dashboard_app")!@
+

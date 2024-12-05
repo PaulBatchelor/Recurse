@@ -54,6 +54,7 @@ co $ ..
 nn step1/func_reqs
 ln function requirements
 co $ ..
+co $ ../../../../glossary/functional_requirement
 
 nn step1/func_reqs/return_nearby_business
 ln return nearby businesses
@@ -70,6 +71,7 @@ co $ ..
 nn step1/nonfunc_reqs
 ln non-functional requirements
 co $ ..
+co $ ../../../../glossary/non_functional_requirement
 
 nn step1/nonfunc_reqs/low_latency
 ln low latency
@@ -90,17 +92,82 @@ co $ ..
 nn step2/api_design
 ln API Design
 co $ ..
+co $ ../../../../glossary/REST
 
 nn step2/high_level_design
 ln High level design diagram
 co $ ..
 
+nn step2/high_level_design/load_balancer
+ln Load Balancer
+co $ ..
+co $ ../../../../../glossary/load_balancing
+
+nn step2/high_level_design/LBS
+ln LBS: location based service
+co ../load_balancer $
+co $ ..
+
+nn step2/high_level_design/business_service
+ln Business Service
+co ../load_balancer $
+co $ ..
+
+nn step2/high_level_design/database_cluster
+ln Database Cluster
+co ../business_service $
+co ../LBS $
+
 nn step2/data_model
 ln Data Model
 co $ ..
+co $ ../../../../glossary/data_model
+
+nn step2/data_model/rw_ratio
+ln R/W ratio: high read volume due to search
+ln and viewing details for business. Write volume
+ln is low because adding/removing businesses is
+ln infrequent
+co $ ../../../../../tools/mysql
+cr good fit for read-heavy systems
 
 nn step2/algorithms
-ln Algorithms
+ln Varous algorithms for exploring nearby businesses
+co $ ..
+
+nn step2/algorithms/1_two_dimensional_search
+ln Option 1: two-dimensional search
+co $ ..
+
+nn step2/algorithms/2_evenly_divided_grid
+ln Option 2: evenly divided grid
+co $ ..
+
+nn step2/algorithms/3_geohash
+ln Option 3: geohash
+co $ ../../../../../glossary/geohash
+co $ ..
+
+nn step2/algorithms/4_quadtree
+ln Option 4: quadtree
+co $ ..
+co $ ../../../../../glossary/quadtree
+
+nn step2/algorithms/5_google_s2
+ln Google S2
+co $ ..
+co $ ../../../../../tools/s2_geometry
+
+nn step2/api_design/search
+ln API for search
+co $ ..
+
+nn step2/api_design/businesses
+ln API for businesses
+co $ ..
+
+nn step2/api_design/pagination
+ln API for pagination
 co $ ..
 
 ns system_design_interview/toc/02_nearby_friends
@@ -225,3 +292,157 @@ co $ ..
 nn step2/map_101
 ln map 101
 co $ ..
+
+ns system_design_interview
+
+nn glossary/functional_requirement
+hl https://en.wikipedia.org/wiki/Functional_requirement
+ln Functional Requirement: defines a function of a
+ln system or component, where a function is described
+ln as a summary/specification/statement of behavior
+ln between inputs and outputs
+co $ ..
+ff What is a functional requirement?
+fb A functional requirement is a requirement of a system
+fb that defines a function of a component, a behavior
+fb between inputs and outputs
+rm Every system here begins with listing the functional
+rm and non-functional requirements
+co $ glossary/systems_engineering
+cr context of
+
+nn glossary
+ln Keywords found while studying this book
+
+nn glossary/systems_engineering
+hl https://en.wikipedia.org/wiki/Systems_engineering
+ln Systems engineering: an interdisciplinary field of
+ln engineering and engineering management that focuses
+ln on how to design, integrate, and manage complex
+ln systems
+
+nn glossary/non_functional_requirement
+hl https://en.wikipedia.org/wiki/Non-functional_requirement
+ln Non-functional requirement (NFR): a requirement that
+ln specifies criteria that can be used to judge the
+ln operation of a system, rather than specific behaviors.
+co $ glossary/functional_requirement
+ff what is non-functional requirement?
+fb A non-functional requirement is a requirement
+fb is used to judge the operation of a system, such
+fb as safety, security, performance, testability, etc.
+co $ ..
+
+nn references/NFR_examples
+hl https://en.wikipedia.org/wiki/Non-functional_requirement#Examples
+ln Examples of non-functional requirements
+co $ glossary/non_functional_requirement
+
+nn references
+ln Various references and sources about certain topics.
+ln this should ideally link to keywords defined in the
+ln glossary.
+co $ ../glossary
+cr references should attach to keywords in glossary
+
+nn glossary/requirements_engineering
+hl https://en.wikipedia.org/wiki/Requirements_engineering
+co glossary/functional_requirement $
+co glossary/non_functional_requirement $
+ln Requirements Engineering: the process of defining,
+ln documenting, and maintaining requirements in the
+ln engineering design process.
+ff What is requirements engineering?
+fb The process of definining, documenting, and maintaining
+fb requirements in the engineering design process
+co $ glossary/systems_engineering
+
+nn glossary/engineering_design_process
+hl https://en.wikipedia.org/wiki/Engineering_design_process
+co $ glossary/requirements_engineering
+ln Engineering Design Process, or Engineering Method:
+ln is a common series of steps that engineers use in
+ln creating functional products and processes.
+
+nn glossary/http_request_methods
+hl https://en.wikipedia.org/wiki/HTTP#Request_methods
+ln HTTP Request Methods: "verbs" in the HTTP protocol to
+ln indicate the desired action to be performed on the
+ln desired resource. Examples include GET, POST, PUT,
+ln and DELETE.
+
+nn references/RFC2616_http_methods
+hl https://datatracker.ietf.org/doc/html/rfc2616#section-9
+ln RFC2616 Section 9: http methods
+co $ glossary/http_request_methods
+cr Relevant section in RFC
+
+nn glossary/REST
+hl https://en.wikipedia.org/wiki/REST
+ln REST: Representational State Transfer, is a software
+ln architectural style that was created to guide the
+ln design and development 
+co ../http_request_methods $
+cr REST is commonly associated with HTTP-based APIs
+cr utilizing HTTP methods or "verbs"
+
+nn glossary/data_model
+hl https://en.wikipedia.org/wiki/Data_model
+ln Data Model: an abstract model that organizes data
+ln and standardizes how it relates to real world
+ln entities.
+
+nn glossary/software_architecture
+hl https://en.wikipedia.org/wiki/Software_architecture
+ln Software Architecture: set of structures needed
+ln to reason about a software system and the discipline
+ln of creating such structures and systems.
+
+nn tools/mysql
+hl https://en.wikipedia.org/wiki/MySQL
+ln MySQL: open source relational database management system
+co $ ..
+
+nn tools
+ln various tools and software used
+
+nn glossary/RDBMS
+ln RDBMS: relational database management system.
+co ../../tools/mysql $
+co $ ..
+
+nn glossary/load_balancing
+hl https://en.wikipedia.org/wiki/Load_balancing_(computing)
+ln Load balancing: the process of distributing a set of 
+ln tasks over a set of resources, with the aim of 
+ln optimizing response time and avoiding unevenly 
+ln overloading some compute nodes while others are left 
+ln idle.
+ff What does a load balancer do?
+fb A load balancer is a component in a system that
+fb distributes a set of tasks over a set of resources.
+co $ ..
+
+nn glossary/QPS
+ln QPS: queries per second
+co $ ..
+
+nn glossary/geohash
+hl https://en.wikipedia.org/wiki/Geohash
+ln Geohash: a string of letters and numbers used to 
+ln represent a geographic location. It is a simple way to 
+ln encode location data and is particularly useful for 
+ln pinpointing specific locations. 
+co $ ..
+
+nn glossary/quadtree
+hl https://en.wikipedia.org/wiki/Quadtree
+ff quadtree: a tree data structure that partitions a 
+ln two-dimensional space by recursively subdividing it 
+ln into four quadrants or regions. Each node in the tree 
+ln has at most four children, and leaf nodes store data. 
+co $ ..
+
+nn tools/s2_geometry
+hl http://s2geometry.io/
+ln Google s2: a library for spherical geometry
