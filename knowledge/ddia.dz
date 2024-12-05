@@ -303,3 +303,66 @@ ln read from disk
 co $ ..
 co $ ../../toc/1_foundations_of_data_systems/03_storage_and_retrieval
 co $ ../OLAP
+
+nn glossary/rolling_upgrade
+ln Rolling Upgrade: a new version of a service is gradually
+ln deployed to a few nodes at a time, rather
+ln than deploying to all nodes simultaneously.
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/04_encoding_evolution
+
+nn glossary/evolvability
+ln Evolvability: the ease of making changes in an application
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/04_encoding_evolution
+co ../rolling_upgrade $
+
+nn tools/JSON
+ln JSON
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/04_encoding_evolution
+
+nn tools/XML
+ln XML
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/04_encoding_evolution
+
+nn tools/CSV
+ln CSV
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/04_encoding_evolution
+
+nn glossary/binary_schema
+ln binary schema driven formats
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/04_encoding_evolution
+rm useful for documentation and code generation, but
+rm data needs to be decoded before it is human readable
+
+nn tools/thrift
+ln thrift
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/04_encoding_evolution
+co $ ../../glossary/binary_schema
+
+nn tools/protocol_buffers
+ln protocol_buffers
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/04_encoding_evolution
+co $ ../../glossary/binary_schema
+
+nn tools/avro
+ln avro
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/04_encoding_evolution
+co $ ../../glossary/binary_schema
+
+nn glossary/REST
+ln REST API
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/04_encoding_evolution
+
+nn glossary/RPC
+ln RPC API
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/04_encoding_evolution
