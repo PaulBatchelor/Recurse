@@ -683,3 +683,9 @@ nn problems/1004_max_consecutive_ones_iii
 ln 1001 Max consecutive ones iii
 hl https://leetcode.com/problems/max-consecutive-ones-iii
 co $ paradigms/sliding_window
+
+nn problems/1493_longest_subarray_ones_deleting_elem
+hl https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element
+ln 1493: Longest Subarray of Ones after deleting one element
+co $ leetcode75
+co $ paradigms/sliding_window

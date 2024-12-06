@@ -168,3 +168,4 @@
 12/05:1456:sliding window. learned you can coerce bools to be 1/0 using int(), which can shave off some lines of code
 12/05:1004:WIP. Will return later.
 12/06:1004:Worked out a solution using a queue. The editorial was better.
+12/06:1493:applied sliding window pattern found in 1004.

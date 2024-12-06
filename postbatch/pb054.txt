@@ -3,3 +3,5 @@
 @08:30 One more swing #LC75-review #timelog:00:05:00
 
 @08:35 1004 review and editorial #LC75-review #timelog:00:13:00
+
+@08:49 1493 Longest Subarray of 1s after deleting one element #LC75-review #timelog:00:15:00
