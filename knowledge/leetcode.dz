@@ -707,7 +707,7 @@ ln Prefix Sum
 
 nn problems/2215_difference_two_arrays
 hl https://leetcode.com/problems/find-the-difference-of-two-arrays
-ln 2215 Find the difference of two arrays
+ln 2215: Find the difference of two arrays
 co $ data_structures/set
 co $ leetcode75
 
@@ -719,4 +719,10 @@ hl https://leetcode.com/problems/unique-number-of-occurrences
 ln 1207: unique number of occurrences
 co $ leetcode75
 co $ data_structures/set
+co $ data_structures/hash_table
+
+nn problems/1657_close_strings
+hl https://leetcode.com/problems/determine-if-two-strings-are-close
+ln 1657: Determine if two strings are close
+co $ leetcode75
 co $ data_structures/hash_table
