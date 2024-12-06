@@ -217,20 +217,36 @@ nn step2
 ln step2
 co $ ..
 
-nn step2/api_design
-ln API Design
-co $ ..
-
 nn step2/high_level_design
 ln High level design diagram
 co $ ..
 
-nn step2/data_model
-ln Data Model
+nn step2/high_level_design/load_balancer
+ln Load Balancer
 co $ ..
+co $ ../../../../../glossary/load_balancing
+
+nn step2/high_level_design/RESTful_API_servers
+ln RESTful API servers
+co $ ..
+co $ ../../../../../glossary/REST
+co ../load_balancer $
+
+nn step2/high_level_design/websocket_servers
+ln WebSocket Servers
+co $ ..
+co $ ../../../../../glossary/websocket
 
 nn step2/periodic_location_update
 ln Periodic location update
+co $ ..
+
+nn step2/api_design
+ln API Design
+co $ ..
+
+nn step2/data_model
+ln Data Model
 co $ ..
 
 ns system_design_interview/toc/03_google_maps
@@ -456,3 +472,47 @@ ln Redis Geohash
 nn tools/postgres_postgis
 hl https://postgis.net/
 ln PostGIS
+
+nn glossary/websocket
+ln WebSocket: a computer communications protocol, that
+ln allows for two-way, realtime interaction between
+ln a web browser and a server.
+hl https://en.wikipedia.org/wiki/WebSocket
+ff What is a websocket?
+fb A websocket is a computer communications protocol,
+fb that allows for two-way, realtime interaction between
+fb a web browser and a server.
+
+nn glossary/redis
+ln Redis: Remote Dictionary Server.
+ln Redis is a versatile, in-memory key-value
+ln database storage system
+ln designed for fast data retrieval and manipulation. 
+ln It's used as a cache, message broker, and database, 
+ln offering low-latency operations and durability.
+hl https://en.wikipedia.org/wiki/Redis
+ff What is Redis?
+fb Redis is an in-memory storage system
+
+nn glossary/distributed_cache
+ln Distributed Cache: extension of a the traditional
+ln concept of a cache used in a single locale.
+ln A distributed cache may span multiple servers so that 
+ln it can grow in size and in transactional capacity.
+co $ ../redis
+ff What is a distributed cache?
+fb Extending on the concept of a traditional cache in
+fb a single locale, a distributed cache is a cache that
+fb may span multiple servers so that it can grow in size
+fb and capacity.
+fb A distributed cache 
+
+nn glossary/message_broker
+ln Message Broker: an intermediary computer program that
+ln translates messages from one formal messaging protocol
+ln to another, enabling communication between software
+ln applications that use different communications protocols
+co $ ../redis
+ff what is a message broker?
+fb A message broker is an intermediate program that
+fb granslates messages from one protocol to another.

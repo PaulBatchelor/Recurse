@@ -17,3 +17,5 @@
 @10:38 1657 Determine if Two Strings are Close #LC75-review #timelog:00:14:00
 
 @10:53 2352 Equal row and column pairs #LC75-review #timelog:00:38:00
+
+@12:17 System Design interview #read-system-design-interview #timelog:00:30:16
