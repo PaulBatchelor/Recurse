@@ -19,3 +19,5 @@
 @10:53 2352 Equal row and column pairs #LC75-review #timelog:00:38:00
 
 @12:17 System Design interview #read-system-design-interview #timelog:00:30:16
+
+@15:40 More System Design Interview #read-system-design-interview

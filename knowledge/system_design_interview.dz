@@ -237,12 +237,61 @@ ln WebSocket Servers
 co $ ..
 co $ ../../../../../glossary/websocket
 
+nn step2/high_level_design/location_cache
+ln Redis location cache
+co $ ..
+co ../websocket_servers $
+
+nn step2/high_level_design/redis_pub_sub
+ln Redis Pub/Sub server
+co $ ../../../../../tools/redis_pub_sub
+co ../websocket_servers $
+
 nn step2/periodic_location_update
 ln Periodic location update
 co $ ..
 
 nn step2/api_design
 ln API Design
+co $ ..
+
+nn step2/api_design/websocket
+ln API Design for the web socket protocol
+co $ ..
+
+nn step2/api_design/websocket/1_periodic_location_update
+ln Periodic Location Update
+co $ ..
+
+nn step2/api_design/websocket/2_client_receives_location_updates
+ln Client receives location updates
+co $ ..
+
+nn step2/api_design/websocket/3_websocket_initialization
+ln websocket initializaton
+co $ ..
+
+nn step2/api_design/websocket/4_subscribe_new_friend
+ln Subscribed to new friend
+co $ ..
+
+nn step2/api_design/websocket/5_unsubscribe_new_friend
+ln unsubscribe a friend
+co $ ..
+co $ ../4_subscribe_new_friend
+
+nn step2/api_design/http_requests
+ln http requests
+co $ ..
+rm this is pretty vague and adhoc, not an important
+rm aspect for this design
+
+nn step2/api_design/http_requests/add_remove_friends
+ln add/remove friends
+co $ ..
+
+nn step2/api_design/http_requests/update_user_profile
+ln update user profile
 co $ ..
 
 nn step2/data_model
@@ -516,3 +565,17 @@ co $ ../redis
 ff what is a message broker?
 fb A message broker is an intermediate program that
 fb granslates messages from one protocol to another.
+
+nn tools/redis_pub_sub
+hl https://redis.io/glossary/pub-sub/
+ln Redis Pub/Sub: messaging technology that faciliates
+ln communication between different components in a
+ln distributed system.
+rm Link has thorough explanations of pub/sub and usage
+rm within redis.
+
+nn glossary/publish_subscribe
+hl https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
+ln publish-subscribe: a messaging pattern where publishers
+ln categorize messages into classes that are received
+ln by subscribers.
