@@ -166,3 +166,4 @@
 12/04:1679:Remembered this problem pretty quickly.
 12/04:643:Remembered this problem pretty quickly, though the cumulative sum editorial was weird.
 12/05:1456:sliding window. learned you can coerce bools to be 1/0 using int(), which can shave off some lines of code
+12/05:1004:WIP. Will return later.
