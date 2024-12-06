@@ -695,3 +695,9 @@ hl https://leetcode.com/problems/find-the-highest-altitude
 ln 1732: find highest altitude
 co $ leetcode75
 co $ paradigms/prefix_sum
+
+nn problems/724_pivot_index
+hl https://leetcode.com/problems/find-pivot-index
+ln 724 Pivot Index
+co $ leetcode75
+co $ paradigms/prefix_sum

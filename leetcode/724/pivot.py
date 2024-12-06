@@ -1,25 +1,32 @@
-# Just double checking here. The editorial had an
-# implicit "rsum", possibly to shave off an operation
-# I am going to check and see if what I wrote down is
-# equivalent using both rsum and lsum.
+# 2024-12-06: My in-memory prefix sum cumulative sum worked
+# and I reached it pretty quickly. However, what I didn't
+# see was that the solution where you could get the
+# right sum from a growing leftsum and the total sum
+class Solution:
+    # editorial
+    def pivotIndex(self, nums: List[int]) -> int:
+        total = sum(nums)
+        leftsum = 0
+        for i in range(len(nums)):
+            if leftsum == (total - leftsum - nums[i]):
+                return i
+            leftsum += nums[i]
 
-def find_pivot(nums):
-    lsum = 0
-    rsum = 0
+        return -1
 
-    for x in nums:
-        rsum += x
+    def pivotIndexV1(self, nums: List[int]) -> int:
+        psum = []
+        for i in range(len(nums)):
+            if i == 0:
+                psum.append(nums[i])
+            else:
+                psum.append(nums[i] + psum[i - 1])
 
-    for i in range(0, len(nums)):
-        if lsum == rsum - nums[i]:
-            return i
-        lsum += nums[i]
-        rsum -= nums[i]
-
-    return -1
-
-nums = [1, 7, 3, 6, 5, 6]
-
-out = find_pivot(nums)
-
-assert(out == 3)
+        for i in range(len(nums)):
+            lsum = rsum = 0
+            if i > 0:
+                lsum = psum[i - 1]
+            rsum = psum[len(nums) - 1] - psum[i]
+            if rsum == lsum:
+                return i
+        return -1
