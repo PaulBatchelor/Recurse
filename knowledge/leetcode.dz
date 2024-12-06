@@ -689,3 +689,9 @@ hl https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-eleme
 ln 1493: Longest Subarray of Ones after deleting one element
 co $ leetcode75
 co $ paradigms/sliding_window
+
+nn problems/1732_find_highest_altitude
+hl https://leetcode.com/problems/find-the-highest-altitude
+ln 1732: find highest altitude
+co $ leetcode75
+co $ paradigms/prefix_sum

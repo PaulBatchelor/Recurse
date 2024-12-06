@@ -169,3 +169,4 @@
 12/05:1004:WIP. Will return later.
 12/06:1004:Worked out a solution using a queue. The editorial was better.
 12/06:1493:applied sliding window pattern found in 1004.
+12/06:1732:Pretty straightforward. Prefix sum sure yes, but you don't have to store the sequence
