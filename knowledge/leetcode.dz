@@ -682,3 +682,4 @@ co $ paradigms/sliding_window
 nn problems/1004_max_consecutive_ones_iii
 ln 1001 Max consecutive ones iii
 hl https://leetcode.com/problems/max-consecutive-ones-iii
+co $ paradigms/sliding_window
