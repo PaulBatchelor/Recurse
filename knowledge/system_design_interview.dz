@@ -364,7 +364,7 @@ co $ ../../../../glossary/geohash
 
 nn step2/map_101/road_data_processing_navigation
 ln Road data processing for navigation algorithms
-co $ ../../../../glossary/A_star_algorithm
+co $ ../../../../../glossary/A_star_algorithm
 
 nn step2/map_101/positioning_system
 ln Positioni System
