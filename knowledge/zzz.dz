@@ -199,3 +199,9 @@ cx python/boolean_value_coercion leetcode/problems/1456_max_vowels_in_substring
 cr coercing bools to ints shaves some lines off code
 
 cx ^ javascript/coercion
+
+cx python/docs/stdtypes/set leetcode/data_structures/set
+
+cx python/docs/stdtypes/set/intersection leetcode/problems/2215_difference_two_arrays
+cr Got familiar with intersection method for this problem
+cx python/docs/stdtypes/set/difference leetcode/problems/2215_difference_two_arrays

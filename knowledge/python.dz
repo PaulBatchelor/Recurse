@@ -257,3 +257,12 @@ rm will split on variable whitespace
 nn boolean_value_coercion
 ln Boolean values can be coerced to ints using int().
 ln int(True) is 1, int(False) is 0.
+
+nn docs/stdtypes/set/intersection
+hl https://docs.python.org/3/library/stdtypes.html#frozenset.intersection
+ln set.intersection(), set & other
+co $ ..
+
+nn docs/stdtypes/set/difference
+hl https://docs.python.org/3/library/stdtypes.html#frozenset.difference
+ln set.difference(), set - other

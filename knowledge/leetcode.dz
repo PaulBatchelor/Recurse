@@ -704,3 +704,12 @@ co $ paradigms/prefix_sum
 
 nn paradigms/prefix_sum
 ln Prefix Sum
+
+nn problems/2215_difference_two_arrays
+hl https://leetcode.com/problems/find-the-difference-of-two-arrays
+ln 2215 Find the difference of two arrays
+co $ data_structures/set
+co $ leetcode75
+
+nn data_structures/set
+ln Set
