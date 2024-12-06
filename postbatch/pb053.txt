@@ -13,3 +13,5 @@
 
 @19:36 LC 1004: Ouchie I keep falling into edge cases #LC75-review
 Time to pull out.
+
+@20:20 1004 a little bit more struggle. #LC75-review #timelog:00:31:18
