@@ -205,3 +205,6 @@ cx python/docs/stdtypes/set leetcode/data_structures/set
 cx python/docs/stdtypes/set/intersection leetcode/problems/2215_difference_two_arrays
 cr Got familiar with intersection method for this problem
 cx python/docs/stdtypes/set/difference leetcode/problems/2215_difference_two_arrays
+
+cx python/docs/stdlib/data_types/collections/counter leetcode/data_structures/hash_table
+cr Counter() is used so frequently in leetcode problems it's already imported by default in their python3 environemtn

@@ -713,3 +713,10 @@ co $ leetcode75
 
 nn data_structures/set
 ln Set
+
+nn problems/1207_unique_number_of_occurrences
+hl https://leetcode.com/problems/unique-number-of-occurrences
+ln 1207: unique number of occurrences
+co $ leetcode75
+co $ data_structures/set
+co $ data_structures/hash_table
