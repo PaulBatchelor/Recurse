@@ -1,0 +1,9 @@
+ns tools/excalidraw
+
+nn dev_setup
+hl https://docs.excalidraw.com/docs/introduction/development
+ln Development setup
+
+nn github
+hl https://github.com/excalidraw/excalidraw
+ln Git repo (github)

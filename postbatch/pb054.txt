@@ -20,4 +20,7 @@
 
 @12:17 System Design interview #read-system-design-interview #timelog:00:30:16
 
-@15:40 More System Design Interview #read-system-design-interview
+@15:40 More System Design Interview #read-system-design-interview #timelog:00:42:09
+
+@16:28 Brief Exalidraw exploration #timelog:00:03:51
+Can I get it running locally?

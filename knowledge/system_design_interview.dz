@@ -359,6 +359,16 @@ co $ ..
 nn step2/map_101
 ln map 101
 co $ ..
+co $ ../../../../glossary/geocoding
+co $ ../../../../glossary/geohash
+
+nn step2/map_101/road_data_processing_navigation
+ln Road data processing for navigation algorithms
+co $ ../../../../glossary/A_star_algorithm
+
+nn step2/map_101/positioning_system
+ln Positioni System
+co $ ..
 
 ns system_design_interview
 
@@ -579,3 +589,21 @@ hl https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
 ln publish-subscribe: a messaging pattern where publishers
 ln categorize messages into classes that are received
 ln by subscribers.
+
+nn glossary/geocoding
+hl https://en.wikipedia.org/wiki/Address_geocoding
+ln Geocoding: the process of converting addresses to
+ln geographic coordinates
+
+nn glossary/A_star_algorithm
+hl https://en.wikipedia.org/wiki/A*_search_algorithm
+ln A* algorithm: A* (pronounced "A-star") is a graph 
+ln traversal and pathfinding algorithm that is used in 
+ln many fields of computer science due to its 
+ln completeness, optimality, and optimal efficiency
+
+nn glossary/dijkstras_algorithm
+hl https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
+ln Dijkstra's algorithm is an algorithm for finding the 
+ln shortest paths between nodes in a weighted graph, 
+ln which may represent, for example, a road network.
