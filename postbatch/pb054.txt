@@ -15,3 +15,5 @@
 @10:27 1207 Unique number of occurrences #LC75-review #timelog:00:10:00
 
 @10:38 1657 Determine if Two Strings are Close #LC75-review #timelog:00:14:00
+
+@10:53 2352 Equal row and column pairs #LC75-review #timelog:00:38:00
