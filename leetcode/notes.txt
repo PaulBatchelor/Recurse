@@ -173,4 +173,4 @@
 12/06:724:My answer was correct, but used a lot of memory for prefix sum. I realize rightsum could be obtained from a running leftsum and total sum.
 12/06:2215:Most of this was spent stumbling through the docs
 12/06:1207:Set/Counter/Hashmap. This was more of a "do you know python" problem
-12/06:2352:Figured out brute force. hashmap solution I needed lookup. Tuples are hashable.
+12/06:2352:Figured out brute force. Tuples are hashable.
