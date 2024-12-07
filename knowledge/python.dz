@@ -266,3 +266,6 @@ co $ ..
 nn docs/stdtypes/set/difference
 hl https://docs.python.org/3/library/stdtypes.html#frozenset.difference
 ln set.difference(), set - other
+
+nn pop_on_empty_stack
+ln Pop on empty stack: stk.pop() if stk else None

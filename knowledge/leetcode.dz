@@ -732,3 +732,9 @@ hl https://leetcode.com/problems/equal-row-and-column-pairs
 ln 2352: Equal row and column pairs
 co $ data_structures/hash_table
 co $ leetcode75
+
+nn problems/2390_removing_stars_from_a_string
+ln 2390: removing stars from a string
+hl https://leetcode.com/problems/removing-stars-from-a-string
+co $ leetcode75
+co $ data_structures/stack
