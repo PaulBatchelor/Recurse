@@ -298,6 +298,19 @@ nn step2/data_model
 ln Data Model
 co $ ..
 
+nn step2/data_model/location_cache
+ln Location Cache
+co $ ..
+
+nn step2/data_model/location_history_database
+ln Location history database
+co $ ..
+rm needs a database that handles heavy-write
+rm workload well and can be horizontally scaled
+co $ ../../../../../tools/cassandra
+cr Cassandra is a suitable candidate for the high write
+cr workload.
+
 ns system_design_interview/toc/03_google_maps
 
 nn step1
@@ -622,3 +635,12 @@ hl https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
 ln Dijkstra's algorithm is an algorithm for finding the 
 ln shortest paths between nodes in a weighted graph, 
 ln which may represent, for example, a road network.
+
+nn tools/cassandra
+hl https://en.wikipedia.org/wiki/Apache_Cassandra
+ln Apache Cassandra is a highly-available, distributed 
+ln NoSQL database management system that can handle large 
+ln amounts of data across multiple commodity servers, 
+ln supporting computer clusters in multiple data centers. 
+ln It features asynchronous and masterless replication 
+ln and supports low-latency operations for clients.
