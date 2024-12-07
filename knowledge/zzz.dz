@@ -213,3 +213,8 @@ cx python/pop_on_empty_stack leetcode/problems/2390_removing_stars_from_a_string
 cr Figured out a clever way to pop on empty stacks to day
 
 cx ^ leetcode/data_structures/stack
+
+cx python/reference/while leetcode/problems/735_asteroid_collision
+cr I fed my solution into claude, and it used an "else"
+cr clause in the while loop, which I didn't know you could
+cr do.

@@ -738,3 +738,9 @@ ln 2390: removing stars from a string
 hl https://leetcode.com/problems/removing-stars-from-a-string
 co $ leetcode75
 co $ data_structures/stack
+
+nn problems/735_asteroid_collision
+ln 735: Asteroid Collision
+hl https://leetcode.com/problems/asteroid-collision
+co $ leetcode75
+co $ data_structures/stack
