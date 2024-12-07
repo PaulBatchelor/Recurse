@@ -744,3 +744,9 @@ ln 735: Asteroid Collision
 hl https://leetcode.com/problems/asteroid-collision
 co $ leetcode75
 co $ data_structures/stack
+
+nn problems/349_decode_string
+hl https://leetcode.com/problems/decode-string
+ln 394: Decode String
+co $ leetcode75
+co $ data_structures/stack
