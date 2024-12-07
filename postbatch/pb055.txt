@@ -6,4 +6,4 @@
 
 @10:16 394 decode string #LC75-review #timelog:01:00:00
 
-@12:20 System design notes #read-system-design-interview
+@12:20 System design notes #read-system-design-interview #timelog:01:07:01
