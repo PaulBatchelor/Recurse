@@ -7,3 +7,5 @@
 @10:16 394 decode string #LC75-review #timelog:01:00:00
 
 @12:20 System design notes #read-system-design-interview #timelog:01:07:01
+
+@16:16 Chapter 6 keyword skimming #read-DDIA #timelog:00:49:08

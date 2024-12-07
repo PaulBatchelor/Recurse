@@ -61,6 +61,14 @@ nn 06_partitioning
 ln Chapter 6: partitioning
 co $ ..
 
+nn 06_partitioning/main_approaches
+ln Main approaches to partitioning
+co $ ..
+
+nn 06_partitioning/secondary_indexes
+ln Partioning Secondary Indexes
+co $ ..
+
 nn 07_transactions
 ln Chapter 7: transactions
 co $ ..
@@ -478,3 +486,185 @@ ff What are "consistent prefix reads"?
 fb In replication consistency models, consistent prefix
 fb reads state that users should see data in a state
 fb that makes causal sense (ex: question then answer).
+
+nn glossary/partitioning
+ln Partitioning: splitting up a large dataset or
+ln computation that is too big for a single machine
+ln into smaller parts and spreading them
+ln across several machines.
+co $ ..
+co $ ../../toc/2_distributed_data/06_partitioning
+ff What is partitioning?
+fb Partitioning is the act of splitting up a large
+fb dataset or computation for a single machine into smaller
+fb parts and spreading them.
+
+nn glossary/sharding
+ln Sharding
+co $ ..
+co $ ../partitioning
+cr AKA
+
+nn glossary/region_hbase
+ln Region: a term for a partition in HBase
+co $ ..
+co $ ../../tools/hbase
+cr A region is a partition in hbase
+co $ ../partitioning
+cr AKA
+
+nn glossary/tablet_bigtable
+ln tablet: in Bigtable, a name for a partition
+co $ ../../tools/bigtable
+co $ ../partitioning
+cr AKA
+
+nn glossary/vnode
+ln vnode: a term for "partition" in cassandra and riak
+co $ ..
+co $ ../partitioning
+cr AKA
+co $ ../../tools/cassandra
+co $ ../../tools/riak
+
+nn tools/bigtable
+hl https://en.wikipedia.org/wiki/Bigtable
+ln Bigtable is a fully managed wide-column and key-value 
+ln NoSQL database service for large analytical and 
+ln operational workloads as part of the Google Cloud 
+ln portfolio. 
+co $ ..
+
+nn glossary/wide_column_store
+ln wide-column store:
+ln A wide-column store is a type of NoSQL database that 
+ln uses tables, rows, and columns but allows column names 
+ln and formats to vary. It can be considered a 
+ln two-dimensional key-value store. Google's Bigtable is 
+ln a classic example of a wide-column store.
+co $ ..
+co $ ../../tools/bigtable
+cr Bigtable is a prototypical example of a wide-column
+cr store.
+
+nn tools/riak
+hl https://en.wikipedia.org/wiki/Riak
+ln Riak is a distributed NoSQL key-value data store that 
+ln offers high availability, fault tolerance, simplicity, 
+ln and scalability. It follows Amazon's Dynamo principles 
+ln and has Erlang's fault-tolerant data replication and 
+ln automatic distribution for performance and resilience. 
+ln Riak moved to an open-source project in August 2017, 
+ln with many Enterprise Edition features incorporated.
+co $  ..
+
+nn glossary/vbucket
+ln vbucket: term for a partition in Couchbase
+co $ ..
+co $ ../../tools/couchbase
+co $ ../partitioning
+cr AKA
+
+nn tools/couchbase
+hl https://en.wikipedia.org/wiki/Couchbase_Server
+ln Couchbase Server is a source-available, distributed 
+ln NoSQL database software that optimizes interactive 
+ln applications for multiple concurrent users. It 
+ln provides easy scalability, low latency, and high 
+ln throughput for key-value access, JSON document 
+ln manipulation, and presentation. Designed to scale from 
+ln a single machine to large-scale deployments, Couchbase 
+ln Server supports clustering.
+co $ ..
+
+nn glossary/key_range_partitioning
+ln Key-range partitioning: involves sorting keys, with a 
+ln partition owning all keys between a minimum and 
+ln maximum value. This method enables efficient range 
+ln queries, but it can lead to hotspots if the 
+ln application frequently accesses keys near each other 
+ln in the sorted order.
+co $ ..
+co $ ../../toc/2_distributed_data/06_partitioning/main_approaches
+ff What is key-range partitioning?
+fb Key-range partitioning involves sorting keys, with a 
+fb partition owning all keys between a minimum and 
+fb maximum value. This method enables efficient range 
+fb queries, but it can lead to hotspots if the 
+fb application frequently accesses keys near each other 
+
+nn glossary/hash_partitioning
+co $ ..
+co $ ../../toc/2_distributed_data/06_partitioning/main_approaches
+ln Hash Partitioning: involves applying a hash function to 
+ln each key, resulting in a partition owning a range of 
+ln hashes. While this method can destroy the ordering of 
+ln keys and make range queries inefficient, it can also 
+ln help distribute load more evenly across the partitions.
+ff What is hash partitioning?
+fb Hash Partitioning: involves applying a hash function to 
+fb each key, resulting in a partition owning a range of 
+fb hashes.
+
+nn glossary/document_partitioned_indexes
+ln Document Partitioned Indexes (local indexes): involve 
+ln storing secondary indexes in the same partition as the 
+ln primary key and value. This approach reduces reduces
+ln updates to a single partition on write, but a read of the 
+ln secondary index requires a scatter/gather across all 
+ln partitions, increasing the overall operation's 
+ln complexity.
+co $ ..
+co $ ../../toc/2_distributed_data/06_partitioning/secondary_indexes
+ff What are document partitioned indexes?
+fb Document Partitioned Indexes (local indexes) store 
+fb secondary indexes in the same partition as the primary 
+fb key and value, reducing the need to update partitions 
+fb on write. However, reads of secondary indexes require 
+fb a scatter/gather across all partitions.
+
+nn glossary/term_partitioned_indexes
+ln Term-partioned indexes: store secondary indexes 
+ln separately, using the indexed value. An entry in the 
+ln secondary index may include records from all
+ln partitions of the primary key. When a document is 
+ln written, several partitions of the secondary index 
+ln need to be updated, but a read can be served from a 
+ln single partition.
+co $ ..
+co $ ../../toc/2_distributed_data/06_partitioning/secondary_indexes
+ff What is a term-partitioned index?
+fb Term-partioned indexes store secondary indexes in 
+fb separate partitions, using the indexed value. An entry 
+fb in the secondary index may include records from 
+fb multiple partitions of the primary key, and updates to 
+fb a document may require updating several partitions, 
+fb while reads can be served from a single partition.
+
+nn glossary/secondary_index
+ln Secondary Index: A database index created on one or 
+ln more columns that are not the primary key, designed to 
+ln improve query performance by enabling faster data 
+ln retrieval on non-primary key fields. Unlike the 
+ln primary index, multiple secondary indexes can exist on 
+ln a single table, allowing quick searches on various 
+ln columns at the cost of slight overhead during data 
+ln modifications.
+co $ ../../toc/2_distributed_data/06_partitioning/secondary_indexes
+
+nn tools/sqlite
+hl https://en.wikipedia.org/wiki/SQLite
+ln SQLite is an open-source database engine written in C 
+ln that is not a standalone app, but rather a library 
+ln embedded in software. It is widely used in various 
+ln embedded systems and web browsers, mobile phones, and 
+ln other devices. The SQLite library follows PostgreSQL 
+ln syntax and does not enforce type checking by default, 
+ln allowing for flexible data insertion.
+
+nn tools/sqlite/create_index
+hl https://www.sqlite.org/lang_createindex.html
+ln CREATE INDEX command
+co $ ..
+co $ ../../../glossary/secondary_index
+td experiment with CREATE INDEX in SQLite
