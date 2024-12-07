@@ -352,10 +352,6 @@ nn step2
 ln step2
 co $ ..
 
-nn step2/high_level_design
-ln High level design diagram
-co $ ..
-
 nn step2/map_101
 ln map 101
 co $ ..
@@ -367,7 +363,26 @@ ln Road data processing for navigation algorithms
 co $ ../../../../../glossary/A_star_algorithm
 
 nn step2/map_101/positioning_system
-ln Positioni System
+ln Positioning System
+co $ ..
+
+nn step2/high_level_design
+ln High-Level Design
+co $ ..
+
+nn step2/high_level_design/location_service
+ln Location Service: responsible for recording
+ln a user's location update
+co $ ..
+
+nn step2/high_level_design/navigation_service
+ln Navigation Service: responsible for finding
+ln a reasonably fast route from point A to
+ln point B.
+co $ ..
+
+nn step2/high_level_design/map_rendering
+ln Map Rendering
 co $ ..
 
 ns system_design_interview

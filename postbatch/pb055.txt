@@ -5,3 +5,5 @@
 @09:23 735 Asteroid Collision #LC75-review #timelog:00:45:00
 
 @10:16 394 decode string #LC75-review #timelog:01:00:00
+
+@12:20 System design notes #read-system-design-interview
