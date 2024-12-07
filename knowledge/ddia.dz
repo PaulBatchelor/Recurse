@@ -1,14 +1,23 @@
-ns DDIA/toc
+ns DDIA
 gr Reading Notes: Designing Data-Intensive Applications
+
+nn toc
+ln Table of Contents
+
+ns DDIA/toc
+gr Table of Contents
 
 nn 1_foundations_of_data_systems
 ln Part 1: Foundatoins of Data Systems
+co $ ..
 
 nn 2_distributed_data
 ln Part 2: Distributed Data
+co $ ..
 
 nn 3_derived_data
 ln Part 3: Derived Data
+co $ ..
 
 ns DDIA/toc/1_foundations_of_data_systems
 
@@ -33,6 +42,20 @@ ns DDIA/toc/2_distributed_data
 nn 05_replication
 ln Chapter 5: Replication
 co $ ..
+
+nn 05_replication/reasons_for_replication
+ln Reasons for Replication
+co $ ..
+
+nn 05_replication/approaches_to_replication
+ln three main approaches to replication
+co $ ..
+ff What are the three main approaches to replication?
+fb Single-leader, Multi-leader, and leaderless
+
+nn 05_replication/consistency_models
+ln consistency models for deciding how an application
+ln should behave under replication lag
 
 nn 06_partitioning
 ln Chapter 6: partitioning
@@ -366,3 +389,92 @@ nn glossary/RPC
 ln RPC API
 co $ ..
 co $ ../../toc/1_foundations_of_data_systems/04_encoding_evolution
+
+nn glossary/high_availability
+ln High Availability: keeping the system running,
+ln even one when machine (or several machines)
+ln goes down
+co $ ..
+co $ ../../toc/2_distributed_data/05_replication
+co $ ../../toc/2_distributed_data/05_replication/reasons_for_replication
+
+nn glossary/disconnected_operation
+ln Disconnected Operation: Allowing an application
+ln to continue working when there is a network
+ln interruption
+co $ ..
+co $ ../../toc/2_distributed_data/05_replication
+co $ ../../toc/2_distributed_data/05_replication/reasons_for_replication
+
+nn glossary/latency
+ln Latency
+co $ ..
+co $ ../../toc/2_distributed_data/05_replication
+co $ ../../toc/2_distributed_data/05_replication/reasons_for_replication
+
+sn glossary/scalability
+co $ ../../toc/2_distributed_data/05_replication
+co $ ../../toc/2_distributed_data/05_replication/reasons_for_replication
+
+nn glossary/single_leader_replication
+ln Single-leader replication: Clients send all writes
+ln to a single node (the leader), which sends a stream
+ln of data change events to the other replicas (followers).
+ln Reads can be performed on any replica, but reads from
+ln followers might be stale.
+co $ ..
+co $ ../../toc/2_distributed_data/05_replication/approaches_to_replication
+
+nn glossary/multi_leader_replication
+ln Multi-leader replication: clients send each write
+ln to one of several leader nodes, any of which can
+ln accept writes. The leaders send streams of data change
+ln events to each other and to any follower nodes.
+co $ ..
+co $ ../../toc/2_distributed_data/05_replication/approaches_to_replication
+
+nn glossary/leaderless_replication
+ln Leaderless Replication: clients send each write to
+ln several nodes, and read from several nodes in parallel
+ln in order to detect and correct nodes with stale data.
+
+nn glossary/replication_lag
+ln Replication Lag: the delay between a write happening
+ln on the leader and being reflected on the follower
+co $ ..
+co $ ../../toc/2_distributed_data/05_replication/consistency_models
+cr Consistency models are helpful for deciding how
+cr an application should behave under replication lag
+
+nn glossary/read_after_write_consistency
+ln Read-after-write consistency: users should always see
+ln data that they submitted themselves.
+co $ ..
+co $ ../../toc/2_distributed_data/05_replication/consistency_models
+ff What is "Read After Write Consistency"?
+fb In replication, read-after-write consistency is the
+fb idea that users should always see data that they
+fb submitted themselves.
+
+nn glossary/monotonic_reads
+co $ ..
+co $ ../../toc/2_distributed_data/05_replication/consistency_models
+ln Monotonic Reads: after users have seen the data at
+ln one point in time, they shouldn't later see the data
+ln from some earlier point in time
+ff What are "Monotonic Reads"?
+fb In replication, monotonic reads are the idea that
+fb if a user sees data from some point in time, they
+fb shouldn't later see the data from an earlier point
+fb in time (time monotonically increasing)
+
+nn glossary/consistent_prefix_reads
+ln Consistent prefix reads: users should see data in a
+ln state that makes causal sense: for example, seeing
+ln a question and its reply in the correct order.
+co $ ..
+co $ ../../toc/2_distributed_data/05_replication/consistency_models
+ff What are "consistent prefix reads"?
+fb In replication consistency models, consistent prefix
+fb reads state that users should see data in a state
+fb that makes causal sense (ex: question then answer).

@@ -24,3 +24,5 @@
 
 @16:28 Brief Exalidraw exploration #timelog:00:03:51
 Can I get it running locally?
+
+@19:02 Keywording Chapter 5: replication #read-DDIA
