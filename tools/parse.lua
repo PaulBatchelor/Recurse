@@ -12,10 +12,14 @@ num = lpeg.R("09")
 year = lpeg.Cg(num*num*num*num, "year")
 month = lpeg.Cg(num*num, "month")
 day = lpeg.Cg(num*num, "day")
+local t = lpeg.locale()
+category = (lpeg.P("#") * t.alnum^1)^0
+category = lpeg.Cg(category, "category")
 dash = "-"
 comment = lpeg.P(" ")^0 * lpeg.Cg(lpeg.Cp(), "comment_start")
 
-date = lpeg.Ct(year * dash * month * dash * day * comment)
+date = lpeg.Ct(year * dash * month * dash * day * category * comment)
+-- date = lpeg.Ct(year * dash * month * dash * day * comment)
 
 hours = lpeg.Cg(num*num, "hours")
 minutes = lpeg.Cg(num*num, "minutes")
@@ -34,7 +38,8 @@ function is_date(str)
             date =
                string.format("%04d-%02d-%02d",
                t.year, t.month, t.day),
-            title = string.sub(str, t.comment_start)
+            title = string.sub(str, t.comment_start),
+            category = string.sub(t.category, 2) or nil
         }
     end
 
@@ -78,6 +83,7 @@ for _,blk in pairs(data) do
         events[day].title = obj.title
         events[day].comment = extract_comment(blk)
         events[day].events = {}
+        events[day].category = obj.category
     else
         local obj = is_time(blk[1])
         assert(obj ~= nil, "invalid entry: " .. blk[1])
@@ -98,7 +104,8 @@ local logs_table = table.concat({
     "time TEXT, ",
     "title TEXT, ",
     "comment TEXT, ",
-    "position INTEGER);",
+    "position INTEGER, ",
+    "category TEXT);",
 }, "\n")
 
 local dayblurbs_table = table.concat({
@@ -177,9 +184,9 @@ for d,e in pairs(events) do
     end
 
     for pos,evt in pairs(e.events) do
-        print(fmt("INSERT INTO logs(day, time, title, comment, position) "..
-            "VALUES ('%s', '%s', '%s', '%s', %d);",
-            d, evt.time, evt.title:gsub("'", "''"), concat_comment(evt.comment), pos))
+        print(fmt("INSERT INTO logs(day, time, title, comment, position, category) "..
+            "VALUES ('%s', '%s', '%s', '%s', %d, '%s');",
+            d, evt.time, evt.title:gsub("'", "''"), concat_comment(evt.comment), pos, e.category))
         extract_tags(evt.title)
     end
 end

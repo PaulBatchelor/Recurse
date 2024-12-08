@@ -134,3 +134,4 @@ postbatch/pb052.txt
 postbatch/pb053.txt
 postbatch/pb054.txt
 postbatch/pb055.txt
+codestudy/logs/excalidraw.log

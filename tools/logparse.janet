@@ -10,6 +10,7 @@
     (string
       "SELECT day, time, title, comment, position "
       "FROM logs WHERE day is '" day "' "
+      "AND category is '' "
       "ORDER by position;"
       )))
 

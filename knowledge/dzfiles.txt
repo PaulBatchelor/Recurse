@@ -42,5 +42,6 @@ knowledge/system_design_interview.dz
 knowledge/ddia.dz
 knowledge/excalidraw.dz
 knowledge/dagzet.dz
+codestudy/dz/excalidraw.dz
 knowledge/zzz.dz
 knowledge/zzz_ddia.dz
