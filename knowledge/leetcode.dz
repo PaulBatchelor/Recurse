@@ -750,3 +750,9 @@ hl https://leetcode.com/problems/decode-string
 ln 394: Decode String
 co $ leetcode75
 co $ data_structures/stack
+
+nn problems/933_number_of_recent_cals
+hl https://leetcode.com/problems/number-of-recent-calls
+ln 933: Number of recent calls
+co $ leetcode75
+co $ data_structures/queue

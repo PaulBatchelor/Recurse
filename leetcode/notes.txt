@@ -177,3 +177,4 @@
 12/07:2390:Pretty straight forward stack problem, but understanding the problem was a little tricky at first. I still want list(stk) to behave like "".join(stk)
 12/07:735:Stack. Forgot to account that collisions won't happen if they are flying in opposite direction. Learned about option "else" clause in while loop today
 12/07:394:Stack. Definitely a tricky "details" problem. My solution was accepted, but used more recursion than explicit stack.
+12/08:933:Note to self: leftmost peak is x[0] not x[-1]. If you think it through, it makes sense.
