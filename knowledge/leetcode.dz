@@ -756,3 +756,9 @@ hl https://leetcode.com/problems/number-of-recent-calls
 ln 933: Number of recent calls
 co $ leetcode75
 co $ data_structures/queue
+
+nn problems/649_dota2_senate
+hl https://leetcode.com/problems/dota2-senate
+ln 649: Dota2 Senate
+co $ leetcode75
+co $ data_structures/queue
