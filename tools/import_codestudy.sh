@@ -17,7 +17,6 @@ import_code codestudy/potential potential/module_config.rs
 import_code codestudy/potential potential/plugin.cpp
 import_code codestudy/potential potential/rack.rs
 
-
 import_code codestudy/hello_ts_react hello_ts_react/App.css
 import_code codestudy/hello_ts_react hello_ts_react/App.test.tsx
 import_code codestudy/hello_ts_react hello_ts_react/App.tsx
