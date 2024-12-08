@@ -5,7 +5,7 @@ function import_code() {
     echo "codestudy $NAMESPACE $FILENAME"
     $LUA \
         tools/import_file.lua \
-        $NAMESPACE codestudy/$FILENAME | sqlite3 a.db
+        $NAMESPACE codestudy/code/$FILENAME | sqlite3 a.db
 }
 
 import_code codestudy/potential potential/plugin.hpp

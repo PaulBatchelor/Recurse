@@ -14,7 +14,7 @@ knowledge/voxbox.dz
 knowledge/recurse.dz
 knowledge/fpga.dz
 knowledge/ntsc.dz
-knowledge/potential.dz
+codestudy/dz/potential.dz
 knowledge/rusty_bikes.dz
 knowledge/sokol.dz
 knowledge/pixelart.dz
