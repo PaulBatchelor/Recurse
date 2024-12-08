@@ -207,6 +207,20 @@
                 (frdata "end")
                 "</a>"))))
 
+  (defn generate-comments [comments]
+    (each cmt comments
+      (print
+        (string
+          "<b> "
+          (cmt "day") " "
+          (cmt "time") " "
+          "</b> "
+          (cmt "title"))
+        )
+      (print "</p>")
+      (if (cmt "comment")
+        (print
+          (string "<p>" (cmt "comment") "</p>")))))
   (defn generate-node-card [nd namespace]
     (print "<table border=\"1px\">")
     (print "<tr>")
@@ -290,7 +304,11 @@
 
     (if (any-messages? namespace (nd "name"))
       (display-zet-messages
-        (get-zet-messages namespace (nd "name")))))
+        (get-zet-messages namespace (nd "name"))))
+
+    (if-not
+      (nil? (nd "comments"))
+        (generate-comments (nd "comments"))))
 
   (defn node-card [nd namespace]
     (if-not (is-external-node? (nd "name"))

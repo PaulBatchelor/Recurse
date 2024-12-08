@@ -496,7 +496,9 @@ function generate_node_data(nodes, connections, namespace, db, nid)
     node.nid = nid
     node.audio = audio
     node.file_ranges = franges
-    node.comments = comments
+    if #comments > 0 then
+        node.comments = comments
+    end
 
     return node, children
 end
