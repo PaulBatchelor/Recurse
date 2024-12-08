@@ -384,6 +384,37 @@ function get_file_ranges(db, nid)
     return fr
 end
 
+function get_comments(db, nodename)
+    if nodename == nil then
+        return {}
+    end
+
+    local stmt = db:prepare(
+        "SELECT " ..
+        "logs.day, " ..
+        "logs.time, " ..
+        "logs.title, " ..
+        "logs.comment, " ..
+        "logtags.logid, " ..
+        "substr(logtags.tag,4) as dznode " ..
+        "FROM logtags " ..
+        "INNER JOIN logs on logs.rowid = logtags.logid " ..
+        "WHERE tag LIKE 'dz/%'" ..
+        "AND dznode IS '" .. nodename .. "' " ..
+        "ORDER BY day ASC, time ASC" ..
+        ";"
+    )
+
+    local comments = {}
+    for row in stmt:nrows() do
+        row.title = row.title:gsub("%s*#[%w/_]*", "")
+        table.insert(comments, row)
+    end
+
+    stmt:finalize()
+    return comments
+end
+
 
 function generate_node_data(nodes, connections, namespace, db, nid)
     local children = get_children(connections, nid)
@@ -397,6 +428,7 @@ function generate_node_data(nodes, connections, namespace, db, nid)
     local pos = get_position(db, nid)
     local audio = get_audio(db, nid)
     local franges = get_file_ranges(db, nid)
+    local comments = get_comments(db, nodes[nid])
 
     local ns = namespace
     local node = {}
@@ -464,6 +496,7 @@ function generate_node_data(nodes, connections, namespace, db, nid)
     node.nid = nid
     node.audio = audio
     node.file_ranges = franges
+    node.comments = comments
 
     return node, children
 end
