@@ -109,3 +109,18 @@ hl https://doc.rust-lang.org/clippy/index.html
 nn phantom_types
 ln Phantom Types
 hl https://doc.rust-lang.org/rust-by-example/generics/phantom.html
+
+nn as_ref
+hl https://doc.rust-lang.org/std/convert/trait.AsRef.html#tymethod.as_ref
+ln as_ref(): Converts this type into a shared reference of
+ln the (usually inferred) input type.
+
+nn string
+ln Rust String
+hl https://doc.rust-lang.org/std/string/struct.String.html
+
+nn string/get
+hl https://doc.rust-lang.org/std/string/struct.String.html#method.get
+ln String.get()  can be used to get a slice of a string,
+ln something like =str.get(1..)= is like =s[1:]= in python.
+co $ ..

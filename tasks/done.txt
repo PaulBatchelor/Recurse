@@ -301,3 +301,7 @@ link: @!(dzref "webdev/nextjs/react_foundations")!@
 @nextjs-dashboard-app Complete nextjs dashboard app tutorial
 Link: @!(dzref "webdev/nextjs/learn_dashboard_app")!@
 
+@dagzet-namespace-tweaks Some Namespace tweaks
+First addition, using double-dot notation
+like "ns ../a". Second addition, using '+' to
+append paths to the current namespace, like "ns +b".
