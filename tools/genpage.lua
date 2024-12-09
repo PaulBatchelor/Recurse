@@ -407,7 +407,7 @@ function get_comments(db, nodename)
 
     local comments = {}
     for row in stmt:nrows() do
-        row.title = row.title:gsub("%s*#[%w/_]*", "")
+        row.title = row.title:gsub("%s*#[%w/_:-]*", "")
         table.insert(comments, row)
     end
 

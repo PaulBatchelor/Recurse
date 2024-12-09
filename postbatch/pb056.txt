@@ -4,6 +4,6 @@
 
 @14:35 649 Dota2 Senate #LC75-review #timelog:00:49:22
 
-@21:35 Chapter 7 glossary/summary skimming #read-DDIA #timelog:00:50:00
+@21:35 Chapter 7 glossary/summary skimming #read-DDIA #timelog:00:50:00 #dz/DDIA/toc/2_distributed_data/07_transactions
 
 @22:51 Chapter 7 continued #read-DDIA #timelog:00:12:00
