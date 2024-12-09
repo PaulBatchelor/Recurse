@@ -28,3 +28,6 @@ be done with something like label.get(1..).unwrap().
 
 @13:46 Back to chapter 4 #system_design_interview #dz/system_design_interview/toc/04_distributed_message_queue #timelog:01:02:00
 step 1 outlined with glossary terms.
+
+@15:24 LC 2095 Delete middle node of linked list #LC75-review #timelog:06:53
+Still need to add this to my dagzet
