@@ -26,9 +26,65 @@ nn step1/functional_requirements
 ln Functional Requirements
 co $ ..
 
+ns +step1/functional_requirements
+
+nn producers_send_messages
+ln Producers send messages to a message queue
+co $ ..
+
+nn consumers_consume_messges
+ln Consumers consume messages from message queue
+co $ ..
+co $ producers_send_messages
+
+nn messages_consumed_repeatedly_or_once
+ln messages can be consumed repeatedly or only once
+co $ ..
+
+nn message_size_kb_range
+ln Message size in kilobyte range
+co $ ..
+
+nn deliver_in_order
+ln Ability to deliver messages to consumers
+ln in the order they were added to the queue
+co $ ..
+
+nn delivery_semantics_configurable
+ln Data delivery semantics (at once, at most-once,
+ln or exactly once) can be configured by users
+co $ ..
+co $ messages_consumed_repeatedly_or_once
+
+nn history_can_be_truncated
+ln Historical data can be truncated
+co $ ..
+
+ns ../..
+
 nn step1/non_functional_requirements
 ln Non-Functional Requirements
 co $ ..
+
+ns +step1/non_functional_requirements
+
+nn high_throughput_or_low_latency
+ln High Throughput or Low Latency, configurable
+ln based on use cases
+co $ ..
+
+nn scalable
+ln Scalable: the system should be distributed.
+ln Should be able to support a sudden surge in message
+ln volume.
+co $ ..
+
+nn persistent_durable
+ln Persistant and durable: data should be persisted
+ln on disk and replicated across multiple nodes
+co $ ..
+
+ns ../..
 
 nn step2
 ln Step 2
@@ -715,3 +771,95 @@ ln amounts of data across multiple commodity servers,
 ln supporting computer clusters in multiple data centers. 
 ln It features asynchronous and masterless replication 
 ln and supports low-latency operations for clients.
+
+nn glossary/message_queue
+hl https://en.wikipedia.org/wiki/Message_queue
+ln Message Queue: In computer science, message queues 
+ln and mailboxes are software-engineering components 
+ln typically used for inter-process communication (IPC), 
+ln or for inter-thread communication within the same 
+ln process.
+co $ ..
+co $ ../../toc/04_distributed_message_queue
+
+nn tools/apache_kafka
+hl https://en.wikipedia.org/wiki/Apache_Kafka
+ln Apache Kafka: Apache Kafka is a distributed event 
+ln store and stream-processing platform designed for 
+ln handling real-time data feeds.
+co $ ..
+co $ ../../glossary/message_queue
+
+nn tools/apache_rocket_mq
+hl https://en.wikipedia.org/wiki/Apache_RocketMQ
+ln RocketMQ is a distributed messaging and streaming 
+ln platform with low latency, high performance, 
+ln reliability, and scalability. It is the 
+ln third-generation distributed messaging middleware 
+ln open-sourced by Alibaba in 2012. The platform supports 
+ln low-latency, high-performance, reliability, and 
+ln flexible scalability, making it suitable for real-time 
+ln data processing and high-throughput applications.
+co $ ..
+co $ ../../glossary/message_queue
+
+nn tools/rabbitmq
+hl https://en.wikipedia.org/wiki/RabbitMQ
+ln RabbitMQ is an open-source message-broker software 
+ln that implements the Advanced Message Queuing Protocol 
+ln (AMQP) and offers a plug-in architecture for support 
+ln of Streaming Text Oriented Messaging Protocol (STOMP) 
+ln and other protocols. Initially written in Erlang, the 
+ln RabbitMQ server is built on the Open Telecom Platform 
+ln framework for clustering and failover. Since November 
+ln 2020, commercial offerings of RabbitMQ have been 
+ln available, including support and enterprise features 
+ln from VMware.
+co $ ..
+co $ ../../glossary/message_queue
+
+nn tools/apache_pulsar
+hl https://pulsar.apache.org/
+ln Apache Pulsar
+co $ ..
+co $ ../../glossary/message_queue
+
+nn tools/apache_activemq
+co $ ..
+co $ ../../glossary/message_queue
+hl https://en.wikipedia.org/wiki/Apache_ActiveMQ
+ln Apache ActiveMQ is an open-source Java-based message 
+ln broker that supports JMS 1.1 and provides "Enterprise 
+ln Features" such as cross-client and server 
+ln communication. The broker is equipped with features 
+ln like computer clustering, database persistence, and 
+ln journaling. Another ActiveMQ project, Artemis, is a 
+ln code-named and experimental product that builds upon 
+ln ActiveMQ but with a focus on scalability and 
+ln reliability.
+
+nn tools/apache_zeromq
+co $ ..
+co $ ../../glossary/message_queue
+hl https://en.wikipedia.org/wiki/ZeroMQ
+ln ZeroMQ is a lightweight, asynchronous messaging 
+ln library designed for use in distributed or concurrent 
+ln applications. It provides a message queue without a 
+ln dedicated broker, and is built on the Berkeley sockets 
+ln API, making it easy to integrate with existing 
+ln systems. Developed by a community-driven team led by 
+ln iMatix, ZeroMQ has bindings for many programming 
+ln languages and is trademarked under the name ZeroMQ.
+
+nn glossary/event_streaming_platform
+ln Event Streaming Platform
+td Add more words to "event streaming platform"
+co ../../tools/apache_kafka $
+cr strictly speaking, apache kafka is an event streaming
+cr platform, but the lines blur in features between
+cr event streaming and message queues
+co ../../tools/apache_pulsar $
+cr strictly speaking, apache pulsar is an event streaming
+cr platform, but the lines blur in features between
+cr event streaming and message queues
+

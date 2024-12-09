@@ -26,4 +26,6 @@ This will make it easier to produce deeper hierarchies
 Context: needed to get "name" from "+name". in Dagzet Can
 be done with something like label.get(1..).unwrap().
 
-@13:46 Back to chapter 4 #system_design_interview #dz/system_design_interview/toc/04_distributed_message_queue
+@13:46 Back to chapter 4 #system_design_interview #dz/system_design_interview/toc/04_distributed_message_queue #timelog:01:02:00
+Chapter 1 outlined with glossary terms.
+
