@@ -232,3 +232,4 @@ cr when "type" is set to "module", it turns it into a JS
 cr module, which implicitely adds more strictness to
 cr the js docs
 
+

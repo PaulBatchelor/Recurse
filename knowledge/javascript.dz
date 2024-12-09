@@ -223,13 +223,13 @@ co $ ..
 
 nn webapi/node/textContent
 hl https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
-co $ ../../HTML_DOM/innerText
+co $ ../../HTML_DOM/HTMLElement/innerText
 cr similar, but used in different ways
 co $ ..
 
 nn webapi/node/textContent/vs_innerText
 hl https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent#differences_from_innertext
-co $ ../../HTML_DOM/innerText
+co $ ../../../HTML_DOM/HTMLElement/innerText
 ln textContent gets/sets all text content, including
 ln hidden elements. innerText is more aware of styling
 ln and won't return text of hidden elements.

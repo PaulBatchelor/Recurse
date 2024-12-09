@@ -5,3 +5,6 @@
 
 @09:40 Getting a chance to use the <details> tag #flashcards-web #dz/webdev/html/elements/details
 
+@12:47 Taking a look at Chapter 4 #system_design_interview #dz/system_design_interview/toc/04_distributed_message_queue #timelog:00:13:43
+
+@13:04 I need to add dots notation to namespaces, I need more brevity in the syntax
