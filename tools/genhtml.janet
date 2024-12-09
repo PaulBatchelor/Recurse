@@ -219,8 +219,7 @@
         )
       (print "</p>")
       (if (cmt "comment")
-        (print
-          (string "<p>" (cmt "comment") "</p>")))))
+          (org (cmt "comment")))))
   (defn generate-node-card [nd namespace]
     (print "<table border=\"1px\">")
     (print "<tr>")
