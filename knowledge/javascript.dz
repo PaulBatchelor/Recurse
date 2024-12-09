@@ -195,3 +195,49 @@ hl https://www.npmjs.com/package/node-gyp/v/3.8.0
 ln node-gyp: native addon build tool
 co $ bcrypt/source
 cr Used to get bcrypt and blowfish native code (C) working as node js package
+
+nn import_js_module_html
+ln Import javascript as JS module: <script src="main.js" type="module"></script>
+rm Usually put in <head>
+
+nn webapi
+hl https://developer.mozilla.org/en-US/docs/Web/API
+ln Web APIs
+
+nn webapi/HTML_DOM
+hl https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API
+ln HTML DOM API
+co $ ..
+
+nn webapi/HTML_DOM/HTMLElement
+hl https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement
+ln HTMLElement
+co $ ..
+
+nn webapi/HTML_DOM/HTMLElement/textContent
+co $ ..
+
+nn webapi/HTML_DOM/HTMLElement/innerText
+hl https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText
+co $ ..
+
+nn webapi/node/textContent
+hl https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
+co $ ../../HTML_DOM/innerText
+cr similar, but used in different ways
+co $ ..
+
+nn webapi/node/textContent/vs_innerText
+hl https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent#differences_from_innertext
+co $ ../../HTML_DOM/innerText
+ln textContent gets/sets all text content, including
+ln hidden elements. innerText is more aware of styling
+ln and won't return text of hidden elements.
+
+
+nn webapi/node
+hl https://developer.mozilla.org/en-US/docs/Web/API/Node
+ln node: The DOM Node interface is an abstract base 
+ln class upon which many other DOM API objects are based, 
+ln thus letting those object types to be used similarly 
+ln and often interchangeably.

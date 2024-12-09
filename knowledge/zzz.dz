@@ -221,3 +221,14 @@ cr do.
 
 cx javascript/spread_syntax python/unpacking_argument_lists
 cr similar concept
+
+cx vscode/autogen_templates webdev/html
+cr Useful for generating boilerplate HTML5 code
+
+cx javascript/import_js_module_html webdev/html/elements/script
+
+cx ^ webdev/html/elements/script/type
+cr when "type" is set to "module", it turns it into a JS
+cr module, which implicitely adds more strictness to
+cr the js docs
+

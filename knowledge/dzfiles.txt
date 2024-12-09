@@ -43,5 +43,6 @@ knowledge/ddia.dz
 knowledge/excalidraw.dz
 knowledge/dagzet.dz
 codestudy/dz/excalidraw.dz
+knowledge/vscode.dz
 knowledge/zzz.dz
 knowledge/zzz_ddia.dz

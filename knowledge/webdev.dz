@@ -444,3 +444,67 @@ ln dynamic content changes in a way that can be announced
 ln by assistive technologies.
 co $ html/aria_atomic
 co $ html/aria_live
+
+nn html
+ln HTML: hyper-text markup language
+hl https://developer.mozilla.org/en-US/docs/Web/HTML
+
+nn html/elements
+ln HTML elements
+hl https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+co $ ..
+
+nn html/elements/details
+hl https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+ln <details>: The <details> HTML element creates a 
+ln disclosure widget in which information is visible only 
+ln when the widget is toggled into an "open" state. A 
+ln summary or label must be provided using the <summary> 
+ln element.
+
+nn html/elements/summary
+hl https://developer.mozilla.org/en-US/docs/Web/HTML/Element/summary
+ln The <summary> HTML element specifies a summary, 
+ln caption, or legend for a <details> element's 
+ln disclosure box. Clicking the <summary> element toggles 
+ln the state of the parent <details> element open and 
+ln closed.
+co $ ../details
+cr <summary> must be used with <details> to provide a summary
+cr or label
+
+nn html/elements/input
+hl https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+ln <input>:
+ln The <input> HTML element is used to create interactive 
+ln controls for web-based forms in order to accept data 
+ln from the user; a wide variety of types of input data 
+ln and control widgets are available, depending on the 
+ln device and user agent. The <input> element is one of 
+ln the most powerful and complex in all of HTML due to 
+ln the sheer number of combinations of input types and 
+ln attributes.
+co $ ..
+
+nn html/elements/input/type
+hl https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#type
+ln input type: a string specifying the type of control to
+ln render
+co $ ..
+
+nn html/elements/script
+hl https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script
+ln <script>:
+ln The <script> HTML element is used to embed executable 
+ln code or data; this is typically used to embed or refer 
+ln to JavaScript code. The <script> element can also be 
+ln used with other languages, such as WebGL's GLSL shader 
+ln programming language and JSON.
+co $ ..
+
+nn html/elements/script/type
+hl https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type
+ln The type attribute of the <script> element indicates 
+ln the type of script represented by the element: a 
+ln classic script, an import map, a JavaScript module, 
+ln speculation rules, or a data block.

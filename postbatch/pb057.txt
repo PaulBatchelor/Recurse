@@ -1,2 +1,7 @@
 @2024-12-09 Monday, December 9th
-@07:51 Flashcards #timelog:00:20:00
+@07:51 Flashcards #timelog:00:20:00 #flashcards-december
+
+@09:22 HTML view for flashcards #flashcards-web #timelog:01:47:49
+
+@09:40 Getting a chance to use the <details> tag #flashcards-web #dz/webdev/html/elements/details
+

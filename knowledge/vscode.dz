@@ -1,0 +1,5 @@
+ns vscode
+gr Visual Studio Code
+
+nn autogen_templates
+ln Auto-generate templates: write '!' then hit tab

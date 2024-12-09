@@ -9,3 +9,7 @@ solutions are submitted to LC.
 @read-system-design-interview Read System Design Interview: An Insiders Guide
 
 @read-DDIA read designing data intensive applications
+
+@flashcards-december flashcarding december 2024
+
+@flashcards-web web view for flashcards
