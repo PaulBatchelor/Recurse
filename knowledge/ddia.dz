@@ -73,6 +73,23 @@ nn 07_transactions
 ln Chapter 7: transactions
 co $ ..
 
+nn 07_transactions/isolation_levels
+ln Isolation Levels
+co $ ..
+
+nn 07_transactions/race_conditions
+ln Race Conditions
+co $ ..
+
+nn 07_transactions/serializable_transactions
+ln Serializable Transactions
+co $ ..
+co $ ../race_conditions
+cr While weak isolation levels protect against
+cr some of the race condition anomalies, only
+cr serializable isolation protects against all of
+cr these issues.
+
 nn 08_trouble_distributed_systems
 ln Chapter 8: the trouble with distribtued systems
 co $ ..
@@ -668,3 +685,154 @@ ln CREATE INDEX command
 co $ ..
 co $ ../../../glossary/secondary_index
 td experiment with CREATE INDEX in SQLite
+
+nn glossary/transaction
+ln Transaction: Grouping together several reads and
+ln writes into a logical unit, in order to simplify
+ln error handling and concurrency issues.
+co $ ..
+co $ ../../toc/2_distributed_data/07_transactions
+ff What is a transaction?
+fb A transaction groups together several reads and
+fb writes into a logical unit, in order to simplify
+fb error handling and concurrency issues.
+
+nn glossary/transaction_abort
+ln Transaction abort: occurs when a database transaction
+ln is interrupted or terminated prematurely. A large
+ln class of errors related to software and hardware 
+ln can be reduced town to transaction aborts.
+co $ ../transaction
+co $ ..
+co $ ../../toc/2_distributed_data/07_transactions
+
+nn glossary/read_committed
+ln Read Committed
+td Elaborate on "Read Committed"
+co $ ..
+co $ ../../toc/2_distributed_data/07_transactions/isolation_levels
+
+nn glossary/snapshot_isolation
+ln Snapshot isolation
+td elaborated on snapshot isolation
+co $ ..
+co $ ../../toc/2_distributed_data/07_transactions/isolation_levels
+
+nn glossary/repeatable_read
+ln Repeatable Read
+co $ ..
+co $ ../snapshot_isolation
+cr AKA
+
+nn glossary/serializable_isolation
+ln Serializable Isolation
+co $ ..
+co $ ../../toc/2_distributed_data/07_transactions/isolation_levels
+
+nn glossary/dirty_reads
+ln Dirty Reads: One client reads another client's 
+ln uncommitted writes before they have been committed.
+co $ ../read_committed
+cr The read-committed isolation level and stronger 
+cr levels prevent dirty reads, ensuring that data is 
+cr consistent and accurate.
+co $ ..
+co $ ../../toc/2_distributed_data/07_transactions/race_conditions
+ff What are dirty reads?
+fb Dirty reads are a race conditoin that occurs when
+fb one client reads another client's uncomitted writes
+fb before they have been committed.
+
+nn glossary/dirty_writes
+ln Dirty Writes: one client overwrites data that
+ln another client has written, but not yet comitted.
+co $ ..
+co $ ../../toc/2_distributed_data/07_transactions/race_conditions
+co $ ../transaction
+cr Almost all transaction types prevent dirty writes.
+ff What are dirty writes?
+fb One client overwrites data that another client has
+fb written, but not yet comitted.
+
+nn glossary/read_skew
+ln Read Skew: a client sees different parts of the database
+ln at different points in time.
+co $ ..
+co $ ../../toc/2_distributed_data/07_transactions/race_conditions
+co $ ../snapshot_isolation
+cr Most commonly prevented with snapshot isolation, which
+cr allows a transaction to read froma consistent snapshot
+cr at one point in time.
+co $ ../MVCC
+cr snapshot isolation for fixing read skew is usually
+cr implemented using multi-version concurrency control
+
+nn glossary/MVCC
+ln MVCC: Multi-version concurrency control
+co $ ..
+
+nn glossary/non_repeatable_reads
+ln non-repeatable reads
+co $ ../read_skew
+cr AKA
+
+nn glossary/lost_updates
+ln Lost Update: two clients concurrenctly perform
+ln a read-modify-write-cycle. One overwrites the
+ln other's write without incorporating its changes,
+ln so data is lost.
+co $ ..
+co $ ../../toc/2_distributed_data/07_transactions/race_conditions
+co $ ../snapshot_isolation
+cr Some implemenations of snapshot isolation prevent
+cr this anomaly automatically, while others require
+cr a manual lock.
+
+nn glossary/write_skew
+ln Write Skew: A transaction reads something, makes a
+ln decision based on the value it saw, and writes the
+ln decision to the database. However, by the time the
+ln write is made, the premise of the decision is no
+ln longer true.
+co $ ..
+co $ ../../toc/2_distributed_data/07_transactions/race_conditions
+co $ ../serializable_isolation
+cr Only serializable isolation prevents write skew
+
+nn glossary/phantom_reads
+ln A transaction reads objects that match some search
+ln condition. Another client makes a write that affects
+ln the results of that search.
+co $ ../serializable_isolation
+cr Serializable isolation prevents only
+cr straightforward phantom reads
+co $ ../write_skew
+cr phantoms in the context of write skew require
+cr special treatment, such as index range locks
+
+nn glossary/index_range_lock
+ln Index Range Lock
+td Elaborate on "Index Range Lock"
+co $ ../phantom_reads
+cr Phantoms in the context of write skew require
+cr special treatment, such as index-range locks
+co $ ..
+
+nn glossary/two_phase_locking
+ln Two-phase locking
+co $ ../../toc/2_distributed_data/07_transactions/serializable_transactions
+cr for decades has been the standard way of implementing
+cr serializability, but many applications avoid using
+cr it because of its performance characteristifcs
+td elaborated on 2PL
+co $ ..
+
+nn glossary/serializable_snapshot_isolation
+ln Serializable Snapshot Isolation (SSI): a relatively 
+ln new algorithm that avoids many of the drawbacks of 
+ln previous approaches. It uses an optimistic approach, 
+ln allowing transactions to proceed without blocking. 
+ln When a transaction attempts to commit, it is checked, 
+ln and if it is not serializable, it is aborted.
+co $ ../../toc/2_distributed_data/07_transactions/serializable_transactions
+co $ ..
