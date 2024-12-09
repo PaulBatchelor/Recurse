@@ -16,74 +16,77 @@ ln Chapter 3: Google Maps
 nn 04_distributed_message_queue
 ln Chapter 4: Distribtued Message Queue
 
-nn 04_distributed_message_queue/step1
+ns +04_distributed_message_queue
+
+nn step1
 ln Step 1
 co $ ..
 
-nn 04_distributed_message_queue/step1/functional_requirements
+nn step1/functional_requirements
 ln Functional Requirements
 co $ ..
 
-nn 04_distributed_message_queue/step1/non_functional_requirements
+nn step1/non_functional_requirements
 ln Non-Functional Requirements
 co $ ..
 
-nn 04_distributed_message_queue/step2
+nn step2
 ln Step 2
 co $ ..
 
-nn 04_distributed_message_queue/step2/message_models
+nn step2/message_models
 ln Message Models
 co $ ..
 
-nn 04_distributed_message_queue/step2/message_models/point_to_point
+nn step2/message_models/point_to_point
 ln Point-to-point
 co $ ..
 
-nn 04_distributed_message_queue/step2/message_models/publish_subscribe
+nn step2/message_models/publish_subscribe
 ln Publish-subscribe
 co $ ..
 
-nn 04_distributed_message_queue/step2/topics_partitions_brokers
+nn step2/topics_partitions_brokers
 ln Topics, Partitions, Brokers
 co $ ..
 
-nn 04_distributed_message_queue/step2/consumer_group
+nn step2/consumer_group
 ln Consumer Group
 co $ ..
 
-nn 04_distributed_message_queue/step2/high_level_design
+nn step2/high_level_design
 ln High-Level Design
 co $ ..
 
-nn 04_distributed_message_queue/step2/high_level_design/producer
+nn step2/high_level_design/producer
 ln Producer
 co $ ..
 
-nn 04_distributed_message_queue/step2/high_level_design/consumer
+nn step2/high_level_design/consumer
 ln Consumer
 co $ ..
 
-nn 04_distributed_message_queue/step2/high_level_design/broker
+nn step2/high_level_design/broker
 ln Broker
 co $ ..
 
-nn 04_distributed_message_queue/step2/high_level_design/broker/data_storage
+nn step2/high_level_design/broker/data_storage
 ln Data Storage
 co $ ..
 
-nn 04_distributed_message_queue/step2/high_level_design/broker/state_storage
+nn step2/high_level_design/broker/state_storage
 ln Data Storage
 co $ ..
 
-nn 04_distributed_message_queue/step2/high_level_design/metadata_storage
+nn step2/high_level_design/metadata_storage
 ln Metadata Storage
 co $ ..
 
-nn 04_distributed_message_queue/step2/high_level_design/coordination_service
+nn step2/high_level_design/coordination_service
 ln Coordination Service
 co $ ..
 
+ns ..
 nn 05_metrics_monitoring_and_alert_system
 ln Chapter 5: Metrics monitoring and alert system
 
