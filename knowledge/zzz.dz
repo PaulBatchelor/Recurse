@@ -218,3 +218,6 @@ cx python/docs/reference/while leetcode/problems/735_asteroid_collision
 cr I fed my solution into claude, and it used an "else"
 cr clause in the while loop, which I didn't know you could
 cr do.
+
+cx javascript/spread_syntax python/unpacking_argument_lists
+cr similar concept

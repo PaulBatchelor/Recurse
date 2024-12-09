@@ -274,3 +274,7 @@ nn docs/reference/while
 hl https://docs.python.org/3/reference/compound_stmts.html#the-while-statement
 ln while statement
 rm while can have an extra "else" clause
+
+nn unpacking_argument_lists
+hl https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists
+ln Unpacking argument lits, aka "*x" (star operator)
