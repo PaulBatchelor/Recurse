@@ -17,7 +17,7 @@ for things unrelated to cycle detection, so I made this subnode.
 
 @12:12 827 Leaf Similar trees #LC75-review #timelog:01:15:16
 
-@13:31 827 research #LC75-review
+@13:31 827 research #LC75-review #timelog:00:20:18
 
 @13:36 Looks like my first solution was the approach #LC75-review #dz/leetcode/problems/872_leaf_similar_trees
 The editorial solution has something very slick with
