@@ -465,7 +465,7 @@ nn references/floyds_algorithm
 ln Floyd's Cycle Finding Algorithm
 hl https://en.wikipedia.org/wiki/Cycle_detection#Floyd's_tortoise_and_hare
 co $ data_structures/linked_list
-co $ problems/141_linked_list_cycle
+co problems/141_linked_list_cycle $
 cr Elegant solution with O(n) time and O(1) space
 ff Describe Floyd's algorithm
 fb Floyd's algorithm can be used for cycle detection in
@@ -477,7 +477,7 @@ nn problems/287_find_the_duplicate_number
 hl https://leetcode.com/problems/find-the-duplicate-number/
 ln 287: Find the duplicate number
 co $ grind75
-co references/floyds_algorithm $
+co $ references/floyds_algorithm
 cr one solution this problem uses a variant on floyd's algorithm
 
 nn problems/232_implement_queue_using_stacks
@@ -507,7 +507,6 @@ hl https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm
 ln Boyer-Moore majority vote algorithm
 co $ problems/169_majority_element
 cr A way to solve in linear time with O(1) space
-
 
 nn problems/67_add_binary
 hl https://leetcode.com/problems/add-binary/description/
@@ -773,12 +772,11 @@ cr fast/slow pointer as seen in floyd's algorithm used to find middle of list
 co $ problems/141_linked_list_cycle
 cr A simlar solution for this problem also uses fast/slow pointers
 
-nn paradigms/linked_list/fast_slow_pointer
+nn data_structures/linked_list/fast_slow_pointer
 ln Fast/Slow Pointer: a common technique in linked lists
 ln where two pointers are used to traverse through
 ln linked list at two different speeds, one usually 2x
 ln faster. This can be used for things like cycle detection,
-ln 
 co $ references/floyds_algorithm
 cr Floyd's algorithm for cycle detection is the algorithm 
 cr most often associated with fast/slow pointers.
@@ -790,4 +788,13 @@ nn problems/328_odd_even_linked_list
 ln 328: Odd/even linked list
 hl https://leetcode.com/problems/odd-even-linked-list
 co $ leetcode75
-co $ paradigms/linked_list
+co $ data_structures/linked_list
+
+nn problems/2130_max_twin_sum_linked_list
+hl https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list
+ln 2130: Maximum twin sum of a linked list
+co $ leetcode75
+co $ data_structures/linked_list
+co $ data_structures/linked_list/fast_slow_pointer
+cr one solution involved going to middle of list, then
+cr reversing the second half

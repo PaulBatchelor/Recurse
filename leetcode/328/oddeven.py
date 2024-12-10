@@ -1,6 +1,7 @@
 # 2024-12-10: in my first version, I didn't piece together
 # that even was the only value needed to be tracked.
-# linking logic is hard.
+# linking logic is hard
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, val=0, next=None):
