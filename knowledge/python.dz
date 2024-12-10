@@ -278,3 +278,21 @@ rm while can have an extra "else" clause
 nn unpacking_argument_lists
 hl https://docs.python.org/3/tutorial/controlflow.html#unpacking-argument-lists
 ln Unpacking argument lits, aka "*x" (star operator)
+
+nn docs/reference/expressions/yield
+hl https://docs.python.org/3/reference/expressions.html#yieldexpr
+ln Yield: used when defining a generator function
+co $ docs/glossary/generator
+cr used when defining a generator function
+
+nn docs/glossary/generator_iterator
+hl https://docs.python.org/3/glossary.html#term-generator-iterator
+ln Generator Iterator: an object created by a generator.
+co $ docs/glossary/generator
+co $ docs/reference/expressions/yield
+ln Each yield temporarily suspends processing, 
+ln remembering the location execution state (including 
+ln local variables and pending try-statements). When the 
+ln generator iterator resumes, it picks up where it left 
+ln off (in contrast to functions which start fresh on 
+ln every invocation).

@@ -232,4 +232,5 @@ cr when "type" is set to "module", it turns it into a JS
 cr module, which implicitely adds more strictness to
 cr the js docs
 
-
+cx leetcode/problems/872_leaf_similar_trees python/docs/glossary/generator_iterator
+cx ^ python/docs/reference/expressions/yield

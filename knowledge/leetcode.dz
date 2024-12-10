@@ -807,3 +807,8 @@ co $ data_structures/linked_list
 co $ problems/2130_max_twin_sum_linked_list
 cr One solution to 2130 involves reversing the second
 cr half of a linked list
+
+nn problems/872_leaf_similar_trees
+hl https://leetcode.com/problems/leaf-similar-trees
+ln 872 Leaf Simlar Trees
+co $ data_structures/binary_tree
