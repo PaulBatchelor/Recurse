@@ -234,3 +234,6 @@ cr the js docs
 
 cx leetcode/problems/872_leaf_similar_trees python/docs/glossary/generator_iterator
 cx ^ python/docs/reference/expressions/yield
+
+cx leetcode/problems/1448_count_good_nodes python/docs/reference/simple_statements/nonlocal
+cr Once again, the 'nonlocal' variable trick comes in handy for recursively defined functions used in DFS problems like these

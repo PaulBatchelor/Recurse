@@ -184,3 +184,4 @@
 12/10:2130:I worked out a recursive solution in about an hour after doing the array approach. Knowing how to reverse a linked list cold would be a good idea
 12/10:206:Really quick review of this one.
 12/10:872:My first attempt was fine. I wasted too much time trying to come up with a more clever solution. Learned about yield() and generator iterators in Python.
+12/10:1448:grokked this one pretty quickly
