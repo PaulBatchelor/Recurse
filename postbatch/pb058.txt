@@ -1,0 +1,6 @@
+@2024-12-10 Tuesday, December 10th
+@08:43 finish up LC 2095 #LC75-review #timelog:00:18:09
+
+@08:57 fast/slow pointer added to linked paradigm #dz/leetcode/paradigms/linked_list/fast_slow_pointer
+I didn't want to keep referencing @!(dzref "leetcode/references/floyds_algorithm")!@
+for things unrelated to cycle detection, so I made this subnode.

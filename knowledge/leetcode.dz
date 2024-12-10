@@ -762,3 +762,26 @@ hl https://leetcode.com/problems/dota2-senate
 ln 649: Dota2 Senate
 co $ leetcode75
 co $ data_structures/queue
+
+nn problems/2095_delete_middle_node
+ln 2095 Delete the middle of a node in linked list
+co $ leetcode75
+co $ data_structures/linked_list
+hl https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list
+co $ references/floyds_algorithm
+cr fast/slow pointer as seen in floyd's algorithm used to find middle of list
+co $ problems/141_linked_list_cycle
+cr A simlar solution for this problem also uses fast/slow pointers
+
+nn paradigms/linked_list/fast_slow_pointer
+ln Fast/Slow Pointer: a common technique in linked lists
+ln where two pointers are used to traverse through
+ln linked list at two different speeds, one usually 2x
+ln faster. This can be used for things like cycle detection,
+ln 
+co $ references/floyds_algorithm
+cr Floyd's algorithm for cycle detection is the algorithm 
+cr most often associated with fast/slow pointers.
+co problems/2095_delete_middle_node $
+co problems/141_linked_list_cycle $
+cr One solution involves using floyds algorithm using fast/slow pointers
