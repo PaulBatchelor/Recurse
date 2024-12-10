@@ -97,22 +97,52 @@ co $ ..
 ns +step2/message_models
 
 nn point_to_point
-ln Point-to-point
+ln Point-to-point: a message is sent to a queue
+ln and consumed by one and only one consumer
 co $ ..
+co $ ../../../../../glossary/consumer_group
+cr point-to-point model can be simulated by the
+cr concept of a consumer group
+co $ publish_subscribe
+cr While the design could simulate a point-to-point
+cr model, its capabilities map more naturally to
+cr the publish-subscribe model
 
 nn publish_subscribe
 ln Publish-subscribe
 co $ ..
+co $ ../../../../../glossary/topic
+co $ ../../../../../glossary/publish_subscribe
 
 ns ../..
 
 nn step2/topics_partitions_brokers
 ln Topics, Partitions, Brokers
 co $ ..
+co $ ../../../../glossary/partition
+cr Used to distribute load for topics.
+co $ ../../../../glossary/broker
+cr The distribution of partitions among brokers
+cr is key to scalability
+
+ns +step2/topics_partitions_brokers
+
+nn partition_topic
+ln Partition Topic: queue with FIFO used to keep
+ln order of messages inside partition
+co $ ..
+
+nn offset
+ln Offset: the possition of a message in a queue
+co $ ..
+co $ ../partition_topic
+
+ns ../..
 
 nn step2/consumer_group
 ln Consumer Group
 co $ ..
+co $ ../../../../glossary/consumer_group
 
 nn step2/high_level_design
 ln High-Level Design
@@ -872,3 +902,44 @@ cr platform, but the lines blur in features between
 cr event streaming and message queues
 co $ ..
 
+nn glossary/topic
+ln Topic: the categories used to organize
+ln messages. Each topic has a name that is unique
+ln across the entire message queue service. Messages
+ln are sent to and read from a specific topic.
+co $ ../publish_subscribe
+cr in the publish/subscribe model, a message is
+cr sent to a topic and received by the consumers
+cr subscribing to this topic.
+co $ ..
+
+nn glossary/partition
+ln Partition
+co $ ..
+
+nn glossary/broker
+ln Broker: the servers that hold partitions.
+co $ ../partition
+co $ ..
+ff What is a broker?
+fb A broker refers to the servers that hold partitions
+
+nn glossary/consumer_group
+ln Consumer Group: a set of consumers, working together
+ln to consume messages from topics.
+co $ ..
+
+nn glossary/event_streaming
+hl https://kafka.apache.org/documentation/#intro_streaming
+ln Event streaming involves capturing and storing 
+ln real-time data from various sources, such as 
+ln databases, sensors, and mobile devices, in the form of 
+ln streams of events. This data is stored durably for 
+ln later retrieval and manipulated, processed, and 
+ln reacted to in real-time. The event streams can also be 
+ln routed to different destinations as needed. The goal 
+ln of event streaming is to ensure continuous flow and 
+ln interpretation of data, providing the right 
+ln information at the right time.
+co $ ..
+co $ ../event_streaming_platform

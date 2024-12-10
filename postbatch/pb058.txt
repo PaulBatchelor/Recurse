@@ -28,3 +28,5 @@ yield() syntax.
 @14:26 1448 add to dagzet #LC75-review #timelog:00:06:15
 
 @15:45 System Design Interview #system_design_interview #timelog:00:13:22
+
+@16:32 System Design Interview #system_design_interview #timelog:00:25:00
