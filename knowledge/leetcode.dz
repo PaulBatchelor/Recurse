@@ -798,3 +798,12 @@ co $ data_structures/linked_list
 co $ data_structures/linked_list/fast_slow_pointer
 cr one solution involved going to middle of list, then
 cr reversing the second half
+
+nn problems/206_reverse_linked_list
+hl https://leetcode.com/problems/reverse-linked-list
+ln 206: reverse linked list
+co $ leetcode75
+co $ data_structures/linked_list
+co $ problems/2130_max_twin_sum_linked_list
+cr One solution to 2130 involves reversing the second
+cr half of a linked list
