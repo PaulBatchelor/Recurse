@@ -785,3 +785,9 @@ cr most often associated with fast/slow pointers.
 co problems/2095_delete_middle_node $
 co problems/141_linked_list_cycle $
 cr One solution involves using floyds algorithm using fast/slow pointers
+
+nn problems/328_odd_even_linked_list
+ln 328: Odd/even linked list
+hl https://leetcode.com/problems/odd-even-linked-list
+co $ leetcode75
+co $ paradigms/linked_list

@@ -4,3 +4,7 @@
 @08:57 fast/slow pointer added to linked paradigm #dz/leetcode/paradigms/linked_list/fast_slow_pointer
 I didn't want to keep referencing @!(dzref "leetcode/references/floyds_algorithm")!@
 for things unrelated to cycle detection, so I made this subnode.
+
+@09:03 328: odd/even linked list #LC75-review #timelog:00:37:44 #dz/leetcode/problems/328_odd_even_linked_list
+
+@09:43 328 review #LC75-review #timelog:00:09:45 #dz/leetcode/problems/328_odd_even_linked_list

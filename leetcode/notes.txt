@@ -180,3 +180,4 @@
 12/08:933:Note to self: leftmost peak is x[0] not x[-1]. If you think it through, it makes sense.
 12/08:649:Got it working with one queue and ban counts. Two-queue solution with index offsets was clever.
 12/10:2049:recalled this one pretty quickly.
+12/10:328:Still grokking linking logic. My initial solution had to be patched with awkward code for edge cases.
