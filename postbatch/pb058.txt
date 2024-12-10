@@ -29,4 +29,4 @@ yield() syntax.
 
 @15:45 System Design Interview #system_design_interview #timelog:00:13:22
 
-@16:32 System Design Interview #system_design_interview #timelog:00:25:00
+@16:32 System Design Interview #system_design_interview #timelog:00:37:00
