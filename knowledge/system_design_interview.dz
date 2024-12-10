@@ -94,13 +94,17 @@ nn step2/message_models
 ln Message Models
 co $ ..
 
-nn step2/message_models/point_to_point
+ns +step2/message_models
+
+nn point_to_point
 ln Point-to-point
 co $ ..
 
-nn step2/message_models/publish_subscribe
+nn publish_subscribe
 ln Publish-subscribe
 co $ ..
+
+ns ../..
 
 nn step2/topics_partitions_brokers
 ln Topics, Partitions, Brokers
@@ -261,7 +265,7 @@ cr good fit for read-heavy systems
 nn step2/algorithms
 ln Varous algorithms for exploring nearby businesses
 co $ ..
-co $ ../../../../tools/redis_geohash
+co $ ../../../../tools/redis/geohash
 co $ ../../../../tools/postgres_postgis
 
 nn step2/algorithms/1_two_dimensional_search
@@ -371,7 +375,7 @@ co ../websocket_servers $
 
 nn step2/high_level_design/redis_pub_sub
 ln Redis Pub/Sub server
-co $ ../../../../../tools/redis_pub_sub
+co $ ../../../../../tools/redis/pub_sub
 co ../websocket_servers $
 
 nn step2/periodic_location_update
@@ -679,7 +683,7 @@ nn tools/s2_geometry
 hl http://s2geometry.io/
 ln Google s2: a library for spherical geometry
 
-nn tools/redis_geohash
+nn tools/redis/geohash
 hl https://redis.io/docs/latest/commands/geohash/
 ln Redis Geohash
 
@@ -697,7 +701,7 @@ fb A websocket is a computer communications protocol,
 fb that allows for two-way, realtime interaction between
 fb a web browser and a server.
 
-nn glossary/redis
+nn tools/redis
 ln Redis: Remote Dictionary Server.
 ln Redis is a versatile, in-memory key-value
 ln database storage system
@@ -707,37 +711,41 @@ ln offering low-latency operations and durability.
 hl https://en.wikipedia.org/wiki/Redis
 ff What is Redis?
 fb Redis is an in-memory storage system
+co $ ..
 
 nn glossary/distributed_cache
 ln Distributed Cache: extension of a the traditional
 ln concept of a cache used in a single locale.
 ln A distributed cache may span multiple servers so that 
 ln it can grow in size and in transactional capacity.
-co $ ../redis
+co $ ../../tools/redis
 ff What is a distributed cache?
 fb Extending on the concept of a traditional cache in
 fb a single locale, a distributed cache is a cache that
 fb may span multiple servers so that it can grow in size
 fb and capacity.
 fb A distributed cache 
+co $ ..
 
 nn glossary/message_broker
 ln Message Broker: an intermediary computer program that
 ln translates messages from one formal messaging protocol
 ln to another, enabling communication between software
 ln applications that use different communications protocols
-co $ ../redis
+co $ ../../tools/redis
 ff what is a message broker?
 fb A message broker is an intermediate program that
 fb granslates messages from one protocol to another.
+co $ ..
 
-nn tools/redis_pub_sub
+nn tools/redis/pub_sub
 hl https://redis.io/glossary/pub-sub/
 ln Redis Pub/Sub: messaging technology that faciliates
 ln communication between different components in a
 ln distributed system.
 rm Link has thorough explanations of pub/sub and usage
 rm within redis.
+co $ ..
 
 nn glossary/publish_subscribe
 hl https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
@@ -862,4 +870,5 @@ co ../../tools/apache_pulsar $
 cr strictly speaking, apache pulsar is an event streaming
 cr platform, but the lines blur in features between
 cr event streaming and message queues
+co $ ..
 
