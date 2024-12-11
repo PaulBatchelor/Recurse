@@ -1,0 +1,45 @@
+@2024-12-11 Hub Day. Macro
+@12:00 Macro Talk
+
+@12:30 Futex term mentioned #dz/sys/futex
+I thought I had a node for that.
+
+@13:10 Planning #timelog:00:45:00
+At the time of writing, I've logged about 150 hours of
+leetcode prep. I've documented 125 problems, with 68
+of those being documented in my dagzet (see: @!(dzref
+"leetcode/problems")!@).
+---
+Systems design is still new. I started things at the
+beginning of the month, reading both DDIA and the systems
+design interview book, with the idea of using my dagzet
+to make connections between the two of them and reinforce
+what I'm learning. At the time of writing, I've logged
+3.5 hours into DDIA, and 6.5 hours into the system design
+interview. So 10 hours.
+---
+Leetcode is feeling close. I'm reviewing LC75 problems,
+and it would be nice to revisit some Grind75 problems
+as well. I'd like about 20-50 hours more time here before
+I feel confident, or as much as I can do before the new
+year.
+---
+Systems Design, at the clip and depth I am currently going
+at, needs about 30-40 more hours. This could easily be
+more, but my current goal is to be reasonably high level.
+---
+A chunk of my time has been spent studying more frontend web
+architecture. I've put 16.5 hours into reading NextJS
+material, and almost 12 hours into reading the typescript
+handbook. It still feels very far removed from my core
+set of skills, but I feel more empowered to jump into
+things.
+---
+My current velocity aims to be about 4 hours of work
+a day. I usually can't spend more than 2 hours on any
+one single task.
+---
+To feel really ready: I seem to want a total of 50-100
+hours more study. If I commit and put in the time, that's
+about 2-3 weeks minimum. Which is about the time between
+now and January.

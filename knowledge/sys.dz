@@ -1,9 +1,20 @@
 ns systems
 gr systems programming, low level
 
-
 nn systems
 
 nn nasm_tutorial
 hl https://cs.lmu.edu/~ray/notes/nasmtutorial/
 ln nasm tutorial
+
+nn futex
+hl https://en.wikipedia.org/wiki/Futex
+ln Futex: 
+ln In computing, a futex (short for "fast userspace 
+ln mutex") is a kernel system call that programmers can 
+ln use to implement basic locking, or as a building block 
+ln for higher-level locking abstractions such as 
+ln semaphores and POSIX mutexes or condition variables. 
+ff What is a Futex?
+fb Futex, or fast userspace mutex, is a kernel system call
+fb that programmers can use to implement basic locking.
