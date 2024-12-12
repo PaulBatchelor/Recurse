@@ -178,8 +178,111 @@ co $ ..
 
 ns ..
 nn 05_metrics_monitoring_and_alert_system
+zz pg 135-159
 ln Chapter 5: Metrics monitoring and alert system
 
+ns +05_metrics_monitoring_and_alert_system
+nn step1
+co $ ..
+
+ns +step1
+
+nn functional_requirements
+co $ ../../../../glossary/functional_requirement
+co $ ..
+
+ns +functional_requirements
+
+nn collect_variety_of_metrics
+co $ ..
+
+nn alert
+co $ ..
+
+nn visualization
+co $ ..
+
+ns ..
+
+nn non_functional_requirements
+co $ ../../../../glossary/non_functional_requirement
+co $ ..
+
+ns +non_functional_requirements
+
+nn large_scale_system
+co $ ..
+
+nn reliability
+co $ ..
+
+nn flexibility
+co $ ..
+
+ns ..
+
+ns ..
+
+nn step2
+co $ ..
+
+ns +step2
+
+nn five_components_of_system
+co $ ..
+
+ns +five_components_of_system
+
+nn data_collection
+co $ ..
+
+nn data_transmission
+co $ ..
+
+nn data_storage
+co $ ..
+
+nn alert
+co $ ..
+
+nn visualization
+co $ ..
+
+ns ..
+
+nn data_model
+co $ ../../../../glossary/data_model
+co $ ..
+
+ns +data_model
+nn data_access_pattern
+co $ ../../../../../glossary/access_pattern
+co $ ..
+
+ns +data_access_pattern
+nn read_heavy
+co $ ..
+
+nn write_heavy
+co $ ..
+
+ns ..
+
+nn data_storage_system
+co $ ..
+
+nn data_storage_system/time_series_database
+
+ns ..
+
+nn high_level_design
+co $ ../../../../glossary/high_level_design
+co $ ..
+
+
+ns ..
+
+ns ..
 nn 06_ad_click_event_aggregation
 ln Chapter 6: ad click event aggreegation
 
@@ -943,3 +1046,42 @@ ln interpretation of data, providing the right
 ln information at the right time.
 co $ ..
 co $ ../event_streaming_platform
+
+nn glossary/high_level_design
+hl https://en.wikipedia.org/wiki/High-level_design
+ln High-level Design: (HLD) explains the architecture
+ln that would be used to develop a system
+co $ ..
+
+nn glossary/system_development_lifecycle
+hl https://en.wikipedia.org/wiki/Systems_development_life_cycle
+co $ ..
+co $ ../high_level_design
+ln The systems development life cycle (SDLC) is a 
+ln structured process for planning, creating, testing, 
+ln and deploying an information system. It involves 
+ln stages such as requirement analysis, design, 
+ln development and testing, implementation, 
+ln documentation, and evaluation. The SDLC concept 
+ln applies to various hardware and software 
+ln configurations, including systems that consist only of 
+ln hardware or software, or a combination of both. In a 
+ln mature software development organization, the process 
+ln is well-defined and managed, and the focus is on 
+ln developing the software in a systematic and 
+ln disciplined manner.
+ff What is the systems development life cycle?
+fb The systems development life cycle (SDLC) is a 
+fb structured process for creating information systems, 
+fb involving stages such as requirement analysis, design, 
+fb development and testing, implementation, and 
+fb evaluation.
+
+nn glossary/access_pattern
+hl https://docs.aws.amazon.com/prescriptive-guidance/latest/dynamodb-data-modeling/step3.html
+ln access_pattern: defines how the users and the system
+ln access the data to satisfy business needs
+co $ ..
+ff What is an access pattern?
+fb An access pattern defines how the users and the
+fb system access the data to satisfy business needs

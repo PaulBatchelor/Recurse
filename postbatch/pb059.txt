@@ -43,3 +43,8 @@ To feel really ready: I seem to want a total of 50-100
 hours more study. If I commit and put in the time, that's
 about 2-3 weeks minimum. Which is about the time between
 now and January.
+
+@20:26 System Design #read-system-design-interview
+Chapter 5
+
+@20:27 Populating graph #read-system-design-interview #dz/system_design_interview/toc/05_metrics_monitoring_and_alert_system
