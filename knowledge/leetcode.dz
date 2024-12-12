@@ -820,3 +820,19 @@ ln 1448: Count good nodes
 co $ leetcode75
 co $ data_structures/binary_tree
 co $ paradigms/depth_first_search
+
+nn problems/437_path_sum_iii
+ln 432 path sum ii
+hl https://leetcode.com/problems/path-sum-iii
+co $ data_structures/binary_tree
+co $ paradigms/prefix_sum
+cr yes, the solution for 437 uses prefix sum
+co $ leetcode75
+
+nn problems/560_subarray_sum_equals_k
+hl https://leetcode.com/problems/subarray-sum-equals-k
+ln 560 Subarray Sum Equals K
+co $ ../437_path_sum_iii
+cr 560 helps to understand the solution in 437
+co $ paradigms/prefix_sum
+co $ data_structures/hash_table

@@ -296,3 +296,24 @@ ln local variables and pending try-statements). When the
 ln generator iterator resumes, it picks up where it left 
 ln off (in contrast to functions which start fresh on 
 ln every invocation).
+
+nn docs/stdtypes/mapping_types
+hl https://docs.python.org/3/library/stdtypes.html#mapping-types-dict
+co $ ..
+
+nn docs/stdtypes/mapping_types/setdefault
+ln setdefault: If key is in the dictionary, return its 
+ln value. If not, insert key with a value of default and 
+ln return default. default defaults to None.
+hl https://docs.python.org/3/library/stdtypes.html#dict.setdefault
+co $ ..
+
+nn docs/stdtypes/mapping_types/get
+ln get(key, default=None)
+hl https://docs.python.org/3/library/stdtypes.html#dict.get
+co $ ..
+
+nn docs/stdlib/data_types/collection/defaultdict
+hl https://docs.python.org/3/library/collections.html#collections.defaultdict
+ln defaultdict
+co $ ../../../../stdtypes/mapping_types

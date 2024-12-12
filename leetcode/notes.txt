@@ -185,3 +185,5 @@
 12/10:206:Really quick review of this one.
 12/10:872:My first attempt was fine. I wasted too much time trying to come up with a more clever solution. Learned about yield() and generator iterators in Python.
 12/10:1448:grokked this one pretty quickly
+12/12:560:Did this one to understand how to solve 437. The intuition for prefix is difficult to build intuition for.
+12/12:437:Looked at the smaller subproblems. It's essentially just DFS plus 560.

@@ -237,3 +237,9 @@ cx ^ python/docs/reference/expressions/yield
 
 cx leetcode/problems/1448_count_good_nodes python/docs/reference/simple_statements/nonlocal
 cr Once again, the 'nonlocal' variable trick comes in handy for recursively defined functions used in DFS problems like these
+
+cx leetcode/data_structures/hash_table python/docs/stdtypes/mapping_types/get
+cr useful for default keyword
+
+cx leetcode/data_structures/hash_table python/docs/stdtypes/mapping_types/setdefault
+cr useful for defaults
