@@ -31,4 +31,16 @@ dwell on this too long, this will have to do.
 
 @12:24 1161 study #LC75-review #timelog:00:01:28
 
-@12:27 700 Binary Search Tree #timelog:00:04:00
+@12:27 700 Binary Search Tree #LC75-review #timelog:00:04:00
+
+@12:54 450 Delete node in BST #LC75-review #timelog:00:38:41
+
+@13:34 450 Study #LC75-review #timelog:00:37:06
+
+@14:20 Solution here updates node values, but not the reference to the node #dz/leetcode/problems/450_delete_node_BST
+I was initially imagining a solution that involved moving
+the reference to the node itself. What this algorithm does
+instead is update the value of the node to be deleted with
+either the predecessor/successor, then delete the predecessor
+in the previous position. This happens recursively until
+leaves are found.

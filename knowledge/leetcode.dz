@@ -857,3 +857,40 @@ hl https://leetcode.com/problems/search-in-a-binary-search-tree
 ln 700 Binary Search Tree
 co $ data_structures/binary_search_tree
 co $ leetcode75
+
+nn problems/450_delete_node_BST
+hl https://leetcode.com/problems/delete-node-in-a-bst
+ln 450: Delete a node in a BST
+co $ leetcode75
+co $ data_structures/binary_search_tree
+
+nn references/binary_search_tree/deletion
+hl https://en.wikipedia.org/wiki/Binary_search_tree#Deletion
+ln Delete a node from a binary search tree
+co problems/450_delete_node_BST $
+cr This solution outlined seems different then the LC editorial
+co $ data_structures/binary_search_tree
+
+nn data_structures/binary_search_tree/successor
+ln Successor: next node in inorder traversal. To find,
+ln go right once, then as many times to the left as possible
+co $ ..
+
+nn data_structures/binary_search_tree/predecessor
+ln Predecessor: previous node in inorder traversal, To find,
+ln go left once, then as many times to the right as possibl
+co $ ..
+
+nn references/tree_rotation
+hl https://en.wikipedia.org/wiki/Tree_rotation
+ln Tree rotation: an operation on a binary tree that
+ln changes the structure without interfering with the
+ln order of the elements.
+co $ problems/450_delete_node_BST
+cr I initially approached this problem thinking I could
+cr do a tree rotation, but this turns out to not be correct
+ff What does a tree rotation do?
+fb A tree rotation is an operation on a binary tree
+fb that changes the structure without interfering with
+fb the order of the elements
+co $ data_structures/binary_tree
