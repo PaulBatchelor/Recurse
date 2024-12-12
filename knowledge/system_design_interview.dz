@@ -183,6 +183,7 @@ ns ..
 nn 05_metrics_monitoring_and_alert_system
 zz pg 135-159
 ln Chapter 5: Metrics monitoring and alert system
+co $ ../../glossary/event_monitoring
 
 ns +05_metrics_monitoring_and_alert_system
 nn step1
@@ -213,13 +214,25 @@ co $ ..
 
 ns +non_functional_requirements
 
-nn large_scale_system
+nn scalability
+ln Scalability: System should be able to accomodate
+ln growing metrics and alert volume.
 co $ ..
 
 nn reliability
+ln Reliability: System should be highly reliable to
+ln avoid missing critical alets
 co $ ..
 
 nn flexibility
+ln Flexibility: Technology keeps changing, so the
+ln pipeline should be flexible neough to
+ln easily integrate new technologies in the future.
+co $ ..
+
+nn low_latency
+ln low latency: the system needs to have low query
+ln latency for dashboard and alerts.
 co $ ..
 
 ns ..
@@ -1093,3 +1106,122 @@ co $ ..
 ff What is an access pattern?
 fb An access pattern defines how the users and the
 fb system access the data to satisfy business needs
+
+nn glossary/event_monitoring
+hl https://en.wikipedia.org/wiki/Event_monitoring
+ln Event monitoring: The process of collecting, 
+ln analyzing, and signaling event occurrences to 
+ln subscribers, including operating system processes, 
+ln active database rules, and human operators, from 
+ln arbitrary sources like operating systems, database 
+ln management systems, and application software, using a 
+ln time series database.
+ff What is event monitoring?
+fb Event monitoring involves collecting, analyzing, and 
+fb signaling event occurrences to subscribers from 
+fb sources like operating systems, database management 
+fb systems, and application software.
+co $ ..
+
+nn tools/datadog
+hl https://en.wikipedia.org/wiki/Datadog
+ln Datadog, Inc. is an American company that provides an 
+ln observability service for cloud-scale applications, 
+ln providing monitoring of servers, databases, tools, and 
+ln services, through a SaaS-based data analytics platform.
+co $ ../../glossary/event_monitoring
+co $ ..
+
+nn tools/influxdb
+hl https://en.wikipedia.org/wiki/InfluxDB
+ln InfluxDB is an open-source time series database for 
+ln storing and retrieving time series data, commonly used 
+ln in operations monitoring, application metrics, IoT 
+ln sensor data, and real-time analytics.
+co $ ../../glossary/event_monitoring
+co $ ..
+
+nn glossary/time_series_database
+hl https://en.wikipedia.org/wiki/Time_series_database
+ln Time series database: A software system optimized for 
+ln storing and serving time series data through 
+ln associated pairs of time(s) and value(s). Time-series 
+ln data is often referred to as profiles, curves, traces, 
+ln or trends. Early time series databases were used in 
+ln industrial applications to store measured values from 
+ln sensory equipment, but now are used in support of a 
+ln wide range of applications. Time-series data can be 
+ln efficiently stored and served using compression 
+ln algorithms in various database types, but the design 
+ln of time-series databases with time as a key index 
+ln differs significantly from relational databases.
+ff What is a time series database?
+fb A time series database is a software system optimized 
+fb for storing and serving time series data through 
+fb associated pairs of time(s) and value(s). Time-series 
+fb data is often referred to as profiles, curves, traces, 
+fb or trends.
+co $ ..
+co ../../tools/influxdb $
+
+nn tools/new_relic
+hl https://en.wikipedia.org/wiki/New_Relic
+ln New Relic Inc. is an American software company based 
+ln in San Francisco that offers cloud-based software 
+ln solutions for websites and mobile apps, as well as 
+ln tools for tracking user interactions and service 
+ln operator software and hardware performance.
+co $ ..
+co $ ../../glossary/event_monitoring
+
+nn tools/nagios
+hl https://en.wikipedia.org/wiki/Nagios
+ln Nagios is an event monitoring system that offers 
+ln monitoring and alerting services for servers, 
+ln switches, applications, and services. It alerts users 
+ln when issues occur, and then alerts them when the issue 
+ln has been resolved.
+co $ ..
+co $ ../../glossary/event_monitoring
+
+nn tools/prometheus
+hl https://en.wikipedia.org/wiki/Prometheus_(software)
+ln Prometheus is a free, open-source software application 
+ln used for event monitoring and alerting. It records 
+ln metrics in a time-series database and allows for high 
+ln dimensionality, with flexible queries and real-time 
+ln alerting. Prometheus uses an HTTP pull model and is 
+ln written in Go, licensed under the Apache 2 License, 
+ln and is a graduated project of the Cloud Native 
+ln Computing Foundation.
+co $ ..
+co $ ../../glossary/event_monitoring
+co $ ../../glossary/time_series_database
+
+nn tools/munin
+hl https://en.wikipedia.org/wiki/Munin_(software)
+ln Munin is a free and open-source computer system 
+ln monitoring, network monitoring, and infrastructure 
+ln monitoring software. It is written in Perl and uses 
+ln RRDtool to create graphs, which are accessible through 
+ln a web interface. Its goal is to make it easy to 
+ln determine what changed today and provide visibility 
+ln into capacity and utilization of resources.
+co $ ..
+co $ ../../glossary/event_monitoring
+
+nn tools/grafana
+ln Grafana is a multi-platform open-source analytics and 
+ln visualization web application that generates charts, 
+ln graphs, and alerts for the web when connected to 
+ln supported data sources.
+co $ ..
+co $ ../../glossary/event_monitoring
+
+nn tools/graphite
+hl https://en.wikipedia.org/wiki/Graphite_(software)
+ln Graphite is a free, open-source software tool that 
+ln monitors and graphs numeric time-series data, 
+ln particularly computer system performance.
+co $ ..
+co $ ../../glossary/event_monitoring
