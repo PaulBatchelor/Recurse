@@ -187,3 +187,5 @@
 12/10:1448:grokked this one pretty quickly
 12/12:560:Did this one to understand how to solve 437. The intuition for prefix is difficult to build intuition for.
 12/12:437:Looked at the smaller subproblems. It's essentially just DFS plus 560.
+12/12:1372:Did it the typical way, apparently. My solution pretty much matches the editorial.
+12/12:1161:Straight forward. Used the BFS pattern where you use a tuple and one queue instead of two queues.

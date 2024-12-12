@@ -828,6 +828,7 @@ co $ data_structures/binary_tree
 co $ paradigms/prefix_sum
 cr yes, the solution for 437 uses prefix sum
 co $ leetcode75
+co $ paradigms/depth_first_search
 
 nn problems/560_subarray_sum_equals_k
 hl https://leetcode.com/problems/subarray-sum-equals-k
@@ -836,3 +837,17 @@ co $ ../437_path_sum_iii
 cr 560 helps to understand the solution in 437
 co $ paradigms/prefix_sum
 co $ data_structures/hash_table
+
+nn problems/1372_longest_zigzag_path
+ln 1372: Longset ZigZag path in binary tree
+hl https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree
+co $ data_structures/binary_tree
+co $ paradigms/depth_first_search
+co $ leetcode75
+
+nn problems/1161_max_level_sum_binary_tree
+hl https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree
+ln 1161: Maximum level sum of a binary tree
+co $ data_structures/binary_tree
+co $ data_structures/breadth_first_search
+co $ leetcode75
