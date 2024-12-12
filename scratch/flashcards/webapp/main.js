@@ -5,6 +5,7 @@ let btn_yes = document.getElementById("btn_yes");
 let btn_no = document.getElementById("btn_no");
 var card_pos = 0;
 let main = document.getElementById("main");
+let card_name = document.getElementById("card_name");
 
 var flashcards = []
 // let flashcards = [
@@ -28,7 +29,8 @@ function updateCard(pos) {
         let restart = document.createElement('input');
         restart.type = 'button';
         restart.value = 'restart';
-        restart.addEventListener('click', () => {
+        restart.addEventListener('click', async () => {
+            await load_flashcards();
             card_pos = 0;
             console.log(results);
             updateCard(0);
@@ -42,8 +44,10 @@ function updateCard(pos) {
         return;
     }
     spoiler.open = false;
-    question.textContent = flashcards[pos].question
-    answer.innerText = flashcards[pos].answer
+    question.textContent = flashcards[pos].question;
+    answer.innerText = flashcards[pos].answer;
+    card_name.innerText = flashcards[pos].name;
+    console.log(flashcards[pos].name);
 }
 
 btn_yes.addEventListener("click", () => {
@@ -60,11 +64,10 @@ btn_no.addEventListener("click", () => {
     updateCard(card_pos)
 });
 
-
 async function load_flashcards() {
     flashcards = await fetch('http://localhost:8001/v1/get/flashcards')
         .then(response => response.json())
-    console.log(flashcards)
+    //console.log(flashcards)
     updateCard(0)
 }
 

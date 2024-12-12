@@ -48,3 +48,5 @@ now and January.
 Chapter 5
 
 @20:27 Populating graph #read-system-design-interview #dz/system_design_interview/toc/05_metrics_monitoring_and_alert_system
+
+@21:56 Flashcard work #flashcards-web
