@@ -46,3 +46,5 @@ in the previous position. This happens recursively until
 leaves are found.
 
 @14:22 Flashcard-ing #timelog:00:25:59 #flashcards
+
+@16:04 DDIA: chapter 8 summary skimming #read-DDIA #timelog:00:20:45

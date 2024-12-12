@@ -94,6 +94,30 @@ nn 08_trouble_distributed_systems
 ln Chapter 8: the trouble with distribtued systems
 co $ ..
 
+ns +08_trouble_distributed_systems
+nn partial_failures
+ln partial failures
+co $ ..
+co $ ../../../../glossary/partial_failure
+
+ns +partial_failures
+nn lost_delayed_packet
+ln A lost or delayed packet sent over the network
+co $ ..
+
+nn clock_out_of_sync
+ln node's clock out of sync with other nodes
+co $ ..
+
+nn paused_process_considered_dead
+ln A process may pause for a significant amount
+ln of time, be declared dead by other nodes, then
+ln come back to life again
+co $ ..
+
+ns ..
+
+ns ..
 nn 09_consistency_consensus
 ln Chapter 9: Consistency and consensus
 co $ ..
@@ -836,3 +860,21 @@ ln When a transaction attempts to commit, it is checked,
 ln and if it is not serializable, it is aborted.
 co $ ../../toc/2_distributed_data/07_transactions/serializable_transactions
 co $ ..
+
+nn glossary/partial_failure
+ln Partial Failure: in a distributed system, parts of
+ln a system that are broken in some unpredictable way.
+co $ ..
+
+nn glossary/deterministic
+ln Deterministic: Describing a function that always
+ln produces the same output if you give it the
+ln the same input. This means it cannot depend on
+ln random numbers, the time of day, network
+ln communication, or other unpredictable things.
+co $ ..
+
+nn glossary/nondeterministic
+ln Nondetermistic: describing a function that
+ln produces unpredictable output on the same
+ln input.
