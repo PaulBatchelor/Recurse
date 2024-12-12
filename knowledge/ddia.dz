@@ -121,6 +121,72 @@ ns ..
 nn 09_consistency_consensus
 ln Chapter 9: Consistency and consensus
 co $ ..
+co $ ../../../glossary/consensus
+co $ ../../../glossary/consistency
+co $ ../../../glossary/linearizability
+co $ ../../../glossary/causal_consistency
+
+nn 09_consistency_consensus/equivalent_consensus_problems
+ln Consensus problems that are equivalent
+co $ ..
+
+ns +09_consistency_consensus/equivalent_consensus_problems
+
+nn linearizable_compare_and_set_registers
+ln Linearizable Compare-and-set registers
+co $ ..
+co $ ../../../../../glossary/shared_register
+co $ ../../../../../glossary/compare_and_swap
+co ../../../../../tools/ZooKeeper $
+cr Zookeeper plays an important part in providing
+cr an "outsourced" consesus, failure detection,
+cr and membership service that applicatoins can use.
+
+nn atomic_transaction_commit
+ln Atomic transaction Commit
+co $ ..
+
+nn total_order_broadcast
+ln Total Order Broadcast
+co $ ..
+
+nn locks_and_leases
+ln locks and leases
+co $ ..
+
+nn membership_coordination_service
+ln membership/coordination service
+co $ ..
+
+nn uniqueness_constraint
+ln Uniqueness Constraint
+co $ ..
+
+ns ../..
+
+nn 09_consistency_consensus/if_leader_fails
+ln What to do if leader fails
+co $ ..
+
+ns +09_consistency_consensus/if_leader_fails
+
+nn wait_for_recovery
+ln Wait for leader to recover
+co $ ..
+co $ ../../../../../tools/XA_JTA_transaction
+cr Many XA/JTA coordinators choose this option
+
+nn manual_failover
+ln Manually fail over by getting humans to choose a
+ln new leader node and reconfigure the system to
+ln use it.
+co $ ..
+
+nn automatically_choose_new_leader
+ln Automatically choose a new leader
+co $ ..
+
+ns ../..
 
 ns DDIA/toc/3_derived_data
 
@@ -878,3 +944,90 @@ nn glossary/nondeterministic
 ln Nondetermistic: describing a function that
 ln produces unpredictable output on the same
 ln input.
+co $ ../partial_failure
+cr non-determinism in distributed systems is what makes
+cr distributed systems difficult
+
+nn glossary/consistency
+ln Consistency
+co $ ..
+
+nn glossary/consensus
+ln Consensus: a fundamental problem in distributed
+ln computing, concerning getting several nodes to
+ln agree on something (for example, which node should
+ln be the leader for a database cluster).
+co $ ..
+ff What is consensus?
+fb In distributed computing, consensus is the
+fb problem of getting nodes to agree on something.
+
+nn glossary/linearizability
+ln Linearizability: behaving as if there was only
+ln a single copy of data in the system, which is
+ln updated by atomic operations.
+co $ ../consistency
+cr A popular consistency model
+ff What is "linearizability"?
+fb Linearizabilty is a consistency model which behaves
+fb as if there was only a single copy of data in the
+fb system, updated by atomic operations.
+
+nn glossary/causal_consistency
+ln Causal Consistency: a consistency model that
+ln allows for things to be concurrent. This
+ln causes the timeline to contain branching and
+ln merging.
+co $ ../linearizability
+cr CC does not have the coordination overhead of
+cr linearizability, and is less sensitive to network
+cr problems. It is a weaker consitency model to
+cr linearizability
+co $ ../consistency
+
+nn glossary/shared_register
+hl https://en.wikipedia.org/wiki/Shared_register
+ln Shared Register: fundamental type of shared data
+ln structure in distributed systems with two operations:
+ln a read operation, and write operation. This is used
+ln to build shared-memory and message-passing systems.
+co $ ..
+ff What is a shared register?
+fb A fundamental shared data structure in distributed
+fb systems that allows a read/write operation.
+
+nn glossary/compare_and_swap
+hl https://en.wikipedia.org/wiki/Compare-and-swap
+ln Compare_and_swap:
+ln An atomic instruction used in multithreading to 
+ln achieve synchronization. It compares the contents of a 
+ln memory location with a given value and, only if they 
+ln are the same, modifies the contents of that memory 
+ln location to a new given value. This is done as a 
+ln single atomic operation.
+ff What is compare-and-swap?
+fb An atomic instruction used in multithreading to
+fb achieve synchronization. It compares the contents
+fb of a memory location with a value, and will only
+fb modify the conents of that memory location if
+fb the value matches.
+co $ ../shared_register
+cr linearizable compare-and-swap register
+
+nn tools/XA_JTA_transaction
+hl https://en.wikipedia.org/wiki/Jakarta_Transactions
+ln Jakarta Transactions, formerly, Java Transactions API,
+ln enables distributed transactions to be done across
+ln multiple X/Open XA resources in a Java environment
+co $ ..
+
+nn tools/ZooKeeper
+hl https://en.wikipedia.org/wiki/Apache_ZooKeeper
+ln Apache ZooKeeper is an open-source server for 
+ln coordinating distributed systems. It provides a 
+ln hierarchical key-value store for distributed 
+ln configuration, synchronization, and naming registry 
+ln services. Originally part of the Hadoop project but 
+ln now a top-level Apache project.
+td link to MIT distributed systems lecture notes on zookeeper
+co $ ..
