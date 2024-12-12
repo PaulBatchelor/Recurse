@@ -25,6 +25,7 @@ co $ ..
 nn step1/functional_requirements
 ln Functional Requirements
 co $ ..
+co $ ../../../../glossary/functional_requirement
 
 ns +step1/functional_requirements
 
@@ -65,6 +66,7 @@ ns ../..
 nn step1/non_functional_requirements
 ln Non-Functional Requirements
 co $ ..
+co $ ../../../../glossary/non_functional_requirement
 
 ns +step1/non_functional_requirements
 
@@ -446,6 +448,7 @@ co $ ..
 nn step1/func_reqs
 ln functional requirements
 co $ ..
+co $ ../../../../glossary/functional_requirement
 
 nn step1/func_reqs/view_nearby_friends
 ln View nearby friends
@@ -668,12 +671,12 @@ co $ ..
 ns system_design_interview
 
 nn glossary/functional_requirement
+co $ ..
 hl https://en.wikipedia.org/wiki/Functional_requirement
 ln Functional Requirement: defines a function of a
 ln system or component, where a function is described
 ln as a summary/specification/statement of behavior
 ln between inputs and outputs
-co $ ..
 ff What is a functional requirement?
 fb A functional requirement is a requirement of a system
 fb that defines a function of a component, a behavior
@@ -709,6 +712,7 @@ nn references/NFR_examples
 hl https://en.wikipedia.org/wiki/Non-functional_requirement#Examples
 ln Examples of non-functional requirements
 co $ glossary/non_functional_requirement
+co $ ..
 
 nn references
 ln Various references and sources about certain topics.
@@ -728,6 +732,7 @@ ff What is requirements engineering?
 fb The process of definining, documenting, and maintaining
 fb requirements in the engineering design process
 co $ glossary/systems_engineering
+co $ ..
 
 nn glossary/engineering_design_process
 hl https://en.wikipedia.org/wiki/Engineering_design_process
