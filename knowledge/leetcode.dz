@@ -849,5 +849,10 @@ nn problems/1161_max_level_sum_binary_tree
 hl https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree
 ln 1161: Maximum level sum of a binary tree
 co $ data_structures/binary_tree
-co $ data_structures/breadth_first_search
+co $ paradigms/breadth_first_search
 co $ leetcode75
+
+nn problems/700_binary_search_tree
+hl https://leetcode.com/problems/search-in-a-binary-search-tree
+ln 700 Binary Search Tree
+co $ data_structures/binary_search_tree

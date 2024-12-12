@@ -30,3 +30,5 @@ dwell on this too long, this will have to do.
 @12:11 1161 max level sum of binary tree #LC75-review #timelog:00:09:28
 
 @12:24 1161 study #LC75-review #timelog:00:01:28
+
+@12:27 700 Binary Search Tree #timelog:00:04:00
