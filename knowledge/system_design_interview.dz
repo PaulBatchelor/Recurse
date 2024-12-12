@@ -147,6 +147,7 @@ co $ ../../../../glossary/consumer_group
 nn step2/high_level_design
 ln High-Level Design
 co $ ..
+co $ ../../../../glossary/high_level_design
 
 nn step2/high_level_design/producer
 ln Producer
@@ -484,6 +485,7 @@ co $ ..
 nn step2/high_level_design
 ln High level design diagram
 co $ ..
+co $ ../../../../glossary/high_level_design
 
 nn step2/high_level_design/load_balancer
 ln Load Balancer
@@ -646,6 +648,7 @@ co $ ..
 nn step2/high_level_design
 ln High-Level Design
 co $ ..
+co $ ../../../../glossary/high_level_design
 
 nn step2/high_level_design/location_service
 ln Location Service: responsible for recording
