@@ -10,6 +10,6 @@ solutions are submitted to LC.
 
 @read-DDIA read designing data intensive applications
 
-@flashcards-december flashcarding december 2024
+@flashcards flashcarding
 
 @flashcards-web web view for flashcards

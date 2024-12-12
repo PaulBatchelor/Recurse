@@ -44,3 +44,5 @@ instead is update the value of the node to be deleted with
 either the predecessor/successor, then delete the predecessor
 in the previous position. This happens recursively until
 leaves are found.
+
+@14:22 Flashcard-ing #timelog:00:25:59 #flashcards

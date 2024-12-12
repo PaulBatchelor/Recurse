@@ -6,6 +6,7 @@ let btn_no = document.getElementById("btn_no");
 var card_pos = 0;
 let main = document.getElementById("main");
 let card_name = document.getElementById("card_name");
+let card_link = document.getElementById("card_link");
 
 var flashcards = []
 // let flashcards = [
@@ -47,6 +48,10 @@ function updateCard(pos) {
     question.textContent = flashcards[pos].question;
     answer.innerText = flashcards[pos].answer;
     card_name.innerText = flashcards[pos].name;
+    let path = flashcards[pos].name .split("/");
+    card_link.href =
+        "http://localhost:8080/wiki/dz/" +
+        path.slice(0, -1).join("/") + "#" + path[path.length - 1]
     console.log(flashcards[pos].name);
 }
 

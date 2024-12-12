@@ -25,8 +25,8 @@ def generate_flashcard_data():
 
     for card in deck:
         cards.append({
-            "question": card.front,
-            "answer": card.back,
+            "question": " ".join(card.front) if isinstance(card.front, list) else card.front,
+            "answer": " ".join(card.back) if isinstance(card.back, list) else card.back,
             "num_correct": card.num_correct,
             "name": card.name,
         })

@@ -61,6 +61,7 @@ ff What is the identity function?
 fb A function that will return back whatever it is passed in.
 
 nn generic_constraint
+hl https://www.typescriptlang.org/docs/handbook/2/generics.html#generic-constraints
 ln Generic Constraint =function stuff<Type extends foo>(arg: Type)=
 ff what does generic constraint syntax look like?
 fb =function stuff<Type extends foo>(arg: Type)=.
