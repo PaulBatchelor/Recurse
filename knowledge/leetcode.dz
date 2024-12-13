@@ -925,3 +925,10 @@ ln 399: Evaluate division
 co $ leetcode75
 co $ data_structures/graph
 co $ paradigms/depth_first_search
+
+nn problems/1926_nearest_exit_from_entrance_in_maze
+hl https://leetcode.com/problems/nearest-exit-from-entrance-in-maze
+ln 1926: nearest exit from entrance in maze
+co $ leetcode75
+co $ data_structures/graph
+co $ paradigms/breadth_first_search

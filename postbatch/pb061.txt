@@ -15,3 +15,5 @@
 @13:57 399 Evaluate Division #LC75-review #timelog:00:25:12
 
 @15:29 399 Continued #LC75-review #timelog:00:27:49
+
+@16:16 1926 find nearest exit from entrance in maze #timelog:00:18:19
