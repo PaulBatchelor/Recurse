@@ -244,8 +244,11 @@ cr useful for default keyword
 cx leetcode/data_structures/hash_table python/docs/stdtypes/mapping_types/setdefault
 cr useful for defaults
 
-cx rust/iter python/docs/glossary/iterator
+cx rust/iter python/docs/glossary/iterable
 cr same concept
 
 cx leetcode/problems/841_keys_and_rooms python/docs/stdlib/functions/all
 cr editorial solution used an all() on visited bool table to check to see if all nodes traversed
+
+cx leetcode/problems/1466_reorder_routes_to_city_zero python/docs/stdlib/data_types/collection/defaultdict
+cr having a defaultdict with a list was a very useful abstract for building an adjacency list

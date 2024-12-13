@@ -7,3 +7,7 @@
 @12:56 547 Number of provinces #LC75-review #timelog:00:09:14
 
 @13:05 547 Review #LC75-review #timelog:00:02:10
+
+@13:09 1466 Reorder all routes to make all paths lead to the city zero #LC75-review #timelog:00:32:05
+
+@13:46 1466 review #LC75-review #timelog:00:05:00
