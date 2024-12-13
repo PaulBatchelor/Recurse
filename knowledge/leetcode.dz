@@ -833,7 +833,7 @@ co $ paradigms/depth_first_search
 nn problems/560_subarray_sum_equals_k
 hl https://leetcode.com/problems/subarray-sum-equals-k
 ln 560 Subarray Sum Equals K
-co $ ../437_path_sum_iii
+co $ problems/437_path_sum_iii
 cr 560 helps to understand the solution in 437
 co $ paradigms/prefix_sum
 co $ data_structures/hash_table
@@ -894,3 +894,13 @@ fb A tree rotation is an operation on a binary tree
 fb that changes the structure without interfering with
 fb the order of the elements
 co $ data_structures/binary_tree
+
+nn problems/841_keys_and_rooms
+hl https://leetcode.com/problems/keys-and-rooms
+ln 841 Keys and Rooms
+co $ leetcode75
+co $ data_structures/graph
+co $ paradigms/depth_first_search
+
+nn data_structures/graph
+ln Graph

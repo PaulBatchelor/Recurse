@@ -124,3 +124,7 @@ hl https://doc.rust-lang.org/std/string/struct.String.html#method.get
 ln String.get()  can be used to get a slice of a string,
 ln something like =str.get(1..)= is like =s[1:]= in python.
 co $ ..
+
+nn iter
+ln iter
+hl https://doc.rust-lang.org/std/iter/

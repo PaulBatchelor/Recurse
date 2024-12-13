@@ -243,3 +243,9 @@ cr useful for default keyword
 
 cx leetcode/data_structures/hash_table python/docs/stdtypes/mapping_types/setdefault
 cr useful for defaults
+
+cx rust/iter python/docs/glossary/iterator
+cr same concept
+
+cx leetcode/problems/841_keys_and_rooms python/docs/stdlib/functions/all
+cr editorial solution used an all() on visited bool table to check to see if all nodes traversed

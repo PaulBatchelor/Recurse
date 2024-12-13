@@ -17,6 +17,10 @@ nn heapsort_examples
 hl https://docs.python.org/3/library/heapq.html#basic-examples
 ln heapsort examples
 
+nn docs
+hl https://docs.python.org/3/
+ln Python Documentation
+
 nn docs/stdtypes
 hl https://docs.python.org/3/library/stdtypes.html
 ln Standard Types
@@ -317,3 +321,21 @@ nn docs/stdlib/data_types/collection/defaultdict
 hl https://docs.python.org/3/library/collections.html#collections.defaultdict
 ln defaultdict
 co $ ../../../../stdtypes/mapping_types
+
+nn docs/stdlib/functions
+hl https://docs.python.org/3/library/functions.html
+ln Built-in functions
+co $ ..
+
+nn docs/stdlib/functions/all
+hl https://docs.python.org/3/library/functions.html#all
+ln all(iterable): return true if all the elements of the
+ln iterable are true
+co $ ..
+
+nn docs/glossary/iterable
+hl https://docs.python.org/3/glossary.html#term-iterable
+co $ ../../stdlib/functions/all
+cr all() takes in iterable as arg
+ln Iterable: an object capable of return its members
+ln one at a time.
