@@ -194,3 +194,4 @@
 12/13:841:pretty straight ahead DFS
 12/13:547:got it right on first try.
 12/13:1466:got the logic right, but forgot some minor details (easily fixed).
+12/13:399:I came up with something correctly using weighted directed graphs and backtracking. It's good enough.

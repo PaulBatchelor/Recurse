@@ -11,3 +11,7 @@
 @13:09 1466 Reorder all routes to make all paths lead to the city zero #LC75-review #timelog:00:32:05
 
 @13:46 1466 review #LC75-review #timelog:00:05:00
+
+@13:57 399 Evaluate Division #LC75-review #timelog:00:25:12
+
+@15:29 399 Continued #LC75-review #timelog:00:27:49

@@ -918,3 +918,10 @@ ln Reorder routes to make all paths lead to the city zero
 co $ leetcode75
 co $ data_structures/graph
 co $ paradigms/depth_first_search
+
+nn problems/399_evaluate_division
+hl https://leetcode.com/problems/evaluate-division
+ln 399: Evaluate division
+co $ leetcode75
+co $ data_structures/graph
+co $ paradigms/depth_first_search
