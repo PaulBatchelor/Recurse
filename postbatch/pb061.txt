@@ -1,5 +1,9 @@
 @2024-12-13
 
-@08:50 841 keys and rooms #LC75 #timelog:00:08:34
+@08:50 841 keys and rooms #LC75-review #timelog:00:08:34
 
-@09:00 841 research #LC75 #timelog:00:13:06
+@09:00 841 research #LC75-review #timelog:00:13:06
+
+@12:56 547 Number of provinces #LC75-review #timelog:00:09:14
+
+@13:05 547 Review #LC75-review #timelog:00:02:10

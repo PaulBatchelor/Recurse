@@ -192,3 +192,4 @@
 12/12:700:I could have submitted this one no problem but I rushed and had the return values be boolean instead of something/nothing.
 12/12:450:I need to just learn how to delete a node from a BST
 12/13:841:pretty straight ahead DFS
+12/13:547:got it right on first try.

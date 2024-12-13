@@ -904,3 +904,10 @@ co $ paradigms/depth_first_search
 
 nn data_structures/graph
 ln Graph
+
+nn problems/547_number_of_provinces
+hl https://leetcode.com/problems/number-of-provinces/
+ln 547: number of provinces
+co $ leetcode75
+co $ data_structures/graph
+co $ paradigms/depth_first_search
