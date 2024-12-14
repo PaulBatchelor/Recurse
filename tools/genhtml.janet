@@ -299,6 +299,15 @@
         "file reference"
         (generate-file-range-link nd)))
 
+    (if-not
+      (nil? (nd "reference"))
+      (table-keyval
+        "location"
+        (string
+          ((nd "reference") "filename")
+          ":"
+          ((nd "reference") "linum"))))
+
     (print "</table><br>")
 
     (if (any-messages? namespace (nd "name"))

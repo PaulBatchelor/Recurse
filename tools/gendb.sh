@@ -31,6 +31,7 @@ sqlite3 a.db <<EOF
     DROP TABLE IF EXISTS dz_textfiles;
     DROP TABLE IF EXISTS dz_pages;
     DROP TABLE IF EXISTS dz_todo;
+    DROP TABLE IF EXISTS dz_noderefs;
 EOF
 
 LUA="mnolth lua"

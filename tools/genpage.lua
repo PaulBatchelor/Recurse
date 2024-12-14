@@ -415,6 +415,21 @@ function get_comments(db, nodename)
     return comments
 end
 
+function get_noderef(db, nid)
+    local stmt = db:prepare(
+        "SELECT filename, linum FROM dz_noderefs " ..
+        "WHERE node == " .. nid ..
+        " LIMIT 1;"
+    )
+
+    local nr = nil
+    for row in stmt:nrows() do
+        nr = row
+    end
+
+    stmt:finalize()
+    return nr
+end
 
 function generate_node_data(nodes, connections, namespace, db, nid)
     local children = get_children(connections, nid)
@@ -429,6 +444,7 @@ function generate_node_data(nodes, connections, namespace, db, nid)
     local audio = get_audio(db, nid)
     local franges = get_file_ranges(db, nid)
     local comments = get_comments(db, nodes[nid])
+    local noderef = get_noderef(db, nid)
 
     local ns = namespace
     local node = {}
@@ -499,6 +515,7 @@ function generate_node_data(nodes, connections, namespace, db, nid)
     if #comments > 0 then
         node.comments = comments
     end
+    node.reference = noderef
 
     return node, children
 end
