@@ -125,6 +125,9 @@ co $ ../../../glossary/consensus
 co $ ../../../glossary/consistency
 co $ ../../../glossary/linearizability
 co $ ../../../glossary/causal_consistency
+co $ ../../../tools/ZooKeeper
+cr Can provide "outsourced" consensus, failure
+cr detection, and membership service
 
 nn 09_consistency_consensus/equivalent_consensus_problems
 ln Consensus problems that are equivalent
