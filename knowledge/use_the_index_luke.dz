@@ -1,0 +1,7 @@
+ns sql
+
+nn use_the_index_luke
+hl https://use-the-index-luke.com
+ln Use The Index, Luke
+
+ns sql/use_the_index_luke
