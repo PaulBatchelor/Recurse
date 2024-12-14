@@ -125,9 +125,11 @@ co $ ../../../glossary/consensus
 co $ ../../../glossary/consistency
 co $ ../../../glossary/linearizability
 co $ ../../../glossary/causal_consistency
+
 co $ ../../../tools/ZooKeeper
-cr Can provide "outsourced" consensus, failure
-cr detection, and membership service
+cr Zookeeper plays an important part in providing
+cr an "outsourced" consesus, failure detection,
+cr and membership service that applicatoins can use.
 
 nn 09_consistency_consensus/equivalent_consensus_problems
 ln Consensus problems that are equivalent
@@ -140,10 +142,6 @@ ln Linearizable Compare-and-set registers
 co $ ..
 co $ ../../../../../glossary/shared_register
 co $ ../../../../../glossary/compare_and_swap
-co ../../../../../tools/ZooKeeper $
-cr Zookeeper plays an important part in providing
-cr an "outsourced" consesus, failure detection,
-cr and membership service that applicatoins can use.
 
 nn atomic_transaction_commit
 ln Atomic transaction Commit
@@ -192,6 +190,8 @@ co $ ..
 ns ../..
 
 ns DDIA/toc/3_derived_data
+co $ ../../../../../glossary/systems_of_record
+co $ ../../../../../glossary/derived_data_system
 
 nn 10_batch_processing
 ln Chapter 10: Batch Processing
@@ -1034,3 +1034,61 @@ ln services. Originally part of the Hadoop project but
 ln now a top-level Apache project.
 td link to MIT distributed systems lecture notes on zookeeper
 co $ ..
+
+nn glossary/systems_of_record
+ln Systems Of Record: AKA source of truth, holds the
+ln authoritative version of your data. Each fact
+ln is represented exactly once.
+co $ ..
+ff What is are "systems of record"?
+fb Systems of record are systems where there
+fb is one source of truth.
+
+nn glossary/derived_data_system
+co $ ../systems_of_record
+cr vs
+co $ ..
+ln derived data system: system that takes some data
+ln from another system and transforms it in some way
+ff What is a "derived data system"?
+fb A derived data system is one that takes some data
+fb from another system and transforms it in some way.
+
+nn glossary/normalized
+ln normalized: structured in such a way that there is
+ln no redundancy or duplication. In a normalized
+ln database, when some piece of data changes, you
+ln only need to change it in once place, not many
+ln copies in many different places.
+co ../systems_of_record $
+cr systems of record represent each fact exactly once,
+cr meaning the data is usually normalized
+ff What does "normalized" mean in the context of a database?
+fb "Normalized" refers to data structured in a way
+fb that there is no duplication.
+
+nn references
+ln External references
+
+nn references/database_normalization
+hl https://en.wikipedia.org/wiki/Database_normalization
+ln Database Normalization
+co $ glossary/normalized
+co $ ..
+
+nn glossary/denormalize
+ln denormalize: to introduce some amount of redundancy
+ln or duplication in a normalized dataset, typically
+ln in the form of a cache or index, in order to speed
+ln up reads. A denormalized value is a kind of
+ln precomputed query result, similar to a materialized
+ln view.
+co $ ../normalized
+cr introduces some amount of redundancy in a normalized
+cr dataset.
+co $ ..
+ff What does it mean to "denormalize" in the context of data?
+fb To denormalize a dataset is to introduce some amount
+fb of redundancy or duplication in a normalized dataset.
+co $ ../derived_data_system
+cr derived data systems are typically denormalized
