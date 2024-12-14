@@ -932,3 +932,12 @@ ln 1926: nearest exit from entrance in maze
 co $ leetcode75
 co $ data_structures/graph
 co $ paradigms/breadth_first_search
+
+nn problems/215_kth_largest_element
+ln 215: kth largest element in an array
+hl https://leetcode.com/problems/kth-largest-element-in-an-array
+co $ data_structures/priority_queue
+co $ leetcode75
+
+nn data_structures/priority_queue
+ln Priority Queue

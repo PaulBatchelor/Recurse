@@ -252,3 +252,5 @@ cr editorial solution used an all() on visited bool table to check to see if all
 
 cx leetcode/problems/1466_reorder_routes_to_city_zero python/docs/stdlib/data_types/collection/defaultdict
 cr having a defaultdict with a list was a very useful abstract for building an adjacency list
+
+cx leetcode/data_structures/priority_queue python/docs/stdlib/data_types/heapq

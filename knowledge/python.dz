@@ -317,7 +317,7 @@ ln get(key, default=None)
 hl https://docs.python.org/3/library/stdtypes.html#dict.get
 co $ ..
 
-nn docs/stdlib/data_types/collection/defaultdict
+nn docs/stdlib/data_types/collections/defaultdict
 hl https://docs.python.org/3/library/collections.html#collections.defaultdict
 ln defaultdict
 co $ ../../../../stdtypes/mapping_types
@@ -339,3 +339,39 @@ co $ ../../stdlib/functions/all
 cr all() takes in iterable as arg
 ln Iterable: an object capable of return its members
 ln one at a time.
+
+nn docs/stdlib/data_types/heapq
+hl https://docs.python.org/3/library/heapq.html
+ln This module provides an implementation of the heap 
+ln queue algorithm, also known as the priority queue 
+ln algorithm.
+co $ ..
+rm min-heap
+
+ns +docs/stdlib/data_types/heapq
+
+nn heappush
+hl https://docs.python.org/3/library/heapq.html#heapq.heappush
+ln heappush(h, item): push a value onto the heap
+co $ ..
+
+nn heappop
+hl https://docs.python.org/3/library/heapq.html#heapq.heappop
+ln heappop(): pop smallest item from heap
+co $ ..
+
+nn heappushpop
+ln heappushpop(h, val):
+ln Push item on the heap, then pop and return the 
+ln smallest item from the heap. The combined action runs 
+ln more efficiently than heappush() followed by a 
+ln separate call to heappop().
+ff What is heappushpop and why would you use it?
+fb heappushpop pushes an item onto the heap then returns
+fb the smallest item from the heap. The combined action
+fb runs more efficiently than heappush/heappop
+co $ ../heappop
+co $ ../heappush
+co $ ..
+
+ns ../../../..

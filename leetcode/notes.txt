@@ -196,3 +196,4 @@
 12/13:1466:got the logic right, but forgot some minor details (easily fixed).
 12/13:399:I came up with something correctly using weighted directed graphs and backtracking. It's good enough.
 12/13:1926:There's really only one way to do this one, but I probably didn't do it efficiently
+12/13:215:Forgot how to use heapq.

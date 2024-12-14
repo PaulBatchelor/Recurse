@@ -16,4 +16,10 @@
 
 @15:29 399 Continued #LC75-review #timelog:00:27:49
 
-@16:16 1926 find nearest exit from entrance in maze #timelog:00:18:19
+@16:16 1926 find nearest exit from entrance in maze #LC75-review #timelog:00:18:19
+
+@19:25 215 kth largest element in an array #LC75-review #timelog:00:09:06
+
+@19:26 215 review #LC750-review
+
+@19:41 Forgot how to use heapq #dz/leetcode/problems/215_kth_largest_element
