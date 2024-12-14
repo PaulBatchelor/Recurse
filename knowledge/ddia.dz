@@ -197,6 +197,58 @@ nn 10_batch_processing
 ln Chapter 10: Batch Processing
 co $ ..
 
+co $ ../../../glossary/bounded
+cr input data to a distributed batch processing job is
+cr bounded
+ns +10_batch_processing
+co $ ../../../tools/MapReduce
+
+nn unix tools
+ln unix tools (awk, grep, sort, etc)
+co $ ..
+co $ ../../../../tools/MapReduce
+cr the design philosophy of unix tools carried over
+cr into MapReduce
+
+nn problems_solved
+ln Problems that distributed batch processing
+ln frameworks solve
+co $ ..
+
+nn problems_solved/partitioning
+ln Partitioning
+co $ ..
+co $ ../../../../../glossary/partitioning
+
+nn problems_solved/fault_tolerance
+ln fault tolerance
+co $ ..
+co $ ../../../../../glossary/fault_tolerant
+
+ns ..
+
+nn mapreduce_join_algos
+ln mapreduce join algorithms
+co $ ..
+co $ ../../../tools/MapReduce
+co $ ../../../glossary/join
+
+ns +mapreduce_join_algos
+
+nn sort_merge_joins
+ln sort-merge joins
+co $ ..
+
+nn broadcast_hash_joins
+ln broadcast hash joins
+co $ ..
+
+nn partitioned_hash_joins
+ln Partitioned hash joins
+co $ ..
+
+ns ..
+
 nn 11_stream_processing
 ln Chapter 11: Stream Processing
 co $ ..
@@ -286,19 +338,13 @@ co $ ../../glossary/query_language
 co $ ..
 co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
 
-nn tools/MapReduce
-co $ ..
-co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
-co $ ../../glossary/query_language
-ln MapReduce
-
 nn tools/monogdb_aggregration_pipeline
 co $ ..
 co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
 co $ ../../glossary/query_language
 ln MongoDB aggregation pipeline
 
-nn tools/cyper
+nn tools/cypher
 co $ ..
 co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
 co $ ../../glossary/query_language
@@ -1092,3 +1138,63 @@ fb To denormalize a dataset is to introduce some amount
 fb of redundancy or duplication in a normalized dataset.
 co $ ../derived_data_system
 cr derived data systems are typically denormalized
+
+nn tools/MapReduce
+ln MapReduce is a programming model for processing and 
+ln generating big data sets, combining a map procedure 
+ln that filters and sorts data with a reduce method that 
+ln performs summaries, orchestrated by a framework for 
+ln parallel and distributed processing on a cluster. It 
+ln is inspired by functional programming concepts, but 
+ln adapted for big data processing scalability and fault 
+ln tolerance. MapReduce can be implemented in multiple 
+ln programming languages with varying optimizations and 
+ln is part of open-source systems like Apache Hadoop.
+hl https://en.wikipedia.org/wiki/MapReduce
+co $ ..
+co $ ../../toc/1_foundations_of_data_systems/02_data_models_query_languages
+co $ ../../glossary/query_language
+
+nn glossary/fault_tolerant
+ln Fault Tolerant: able to recover automatically
+ln if something goes wrong, such as a crash or network
+ln failure.
+co $ ..
+co $ ../reliability
+ff what does it mean to be "fault tolerant"?
+fb A system that is fault tolerant is able to recover
+fb automatically if something goes wrong.
+
+nn glossary/materialize
+ln Materialize: to perform a computation eagerly, and
+ln write out its result, as opposed to calculating
+ln it on demand when requested.
+co $ ..
+co $ ../denormalize
+cr a denormalized value is similar to a materialized view
+ff What does it mean to "materialize" something?
+fb To materialize is to perform a computation in advance
+fb and write the results. Materialization is the process
+fb used to build a materialized view.
+
+nn references/materialized_view
+hl https://en.wikipedia.org/wiki/Materialized_view
+co $ ../../glossary/materialize
+ln Materialized view: a database object that contains
+ln the results of a query.
+
+nn glossary/join
+ln Join: the 
+ln process of combining rows of tables based on a common 
+ln link or attribute between them. It is used to retrieve 
+ln specific records that have a connection, such as a 
+ln foreign key reference, and is commonly used in queries 
+ln that need to retrieve related data.
+ff What is a join?
+fb A join operation brings together records that have
+fb something in common.
+co $ ..
+
+nn glossary/bounded
+ln Bounded: having some known upper limit or size.
+co $ ..
