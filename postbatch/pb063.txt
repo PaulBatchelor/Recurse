@@ -1,2 +1,6 @@
 @2024-12-15 Sunday, December 15th
 @12:33 2336 smallest number in infinite set #LC75-review #timelog:00:18:00
+
+@13:57 2336 continued #LC75-review #timelog:00:08:00
+
+@14:05 2336 knowledge graphing #LC75-review #timelog:00:04:00

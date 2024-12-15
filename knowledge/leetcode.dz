@@ -941,3 +941,9 @@ co $ leetcode75
 
 nn data_structures/priority_queue
 ln Priority Queue
+
+nn problems/2336_smallest_number_in_infinite_set
+ln 2336: smallest number in infinite set
+hl https://leetcode.com/problems/smallest-number-in-infinite-set
+co $ leetcode75
+co $ data_structures/priority_queue
