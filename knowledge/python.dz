@@ -375,3 +375,9 @@ co $ ../heappush
 co $ ..
 
 ns ../../../..
+
+nn docs/stdlib/zip
+hl https://docs.python.org/3/library/functions.html#zip
+ln zip(): iterates over several objects in parallel,
+ln producing tuples with an item for each one.
+co $ .. 

@@ -4,3 +4,9 @@
 @13:57 2336 continued #LC75-review #timelog:00:08:00
 
 @14:05 2336 knowledge graphing #LC75-review #timelog:00:04:00
+
+@16:02 2542 maximum subsequence score #LC75-review #timelog:01:00:00
+
+@18:41 Do we have to sort the nums2 list? #LC75-review #dz/leetcode/problems/2542_maximum_subsequence_score
+
+@20:01 2462 total cost to hire K workers #LC75-review

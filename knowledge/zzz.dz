@@ -254,3 +254,6 @@ cx leetcode/problems/1466_reorder_routes_to_city_zero python/docs/stdlib/data_ty
 cr having a defaultdict with a list was a very useful abstract for building an adjacency list
 
 cx leetcode/data_structures/priority_queue python/docs/stdlib/data_types/heapq
+
+cx leetcode/problems/2542_maximum_subsequence_score python/stdlib/zip
+cr solution made used of zip to create sorted array
