@@ -54,27 +54,6 @@ function tree_size(h)
     return sz
 end
 
-function gendir_rec(h, levels)
-    levels = levels or {}
-
-    if tree_size(h) == 0 then return end
-
-    os.execute("mkdir data/" .. table.concat(levels, "/"))
-    for name, children in pairs(h) do
-        local indent =""
-        for i=1,#levels do
-            indent = indent .. "*"
-        end
-        --print(indent .. name .. " [" .. table.concat(levels, "/") .. "]")
-        table.insert(levels, name)
-        gendir_rec(children, levels)
-        table.remove(levels)
-    end
-end
-
-function generate_directories(h)
-    gendir_rec(h)
-end
 
 function generate_page_data(db, h, lookup, namespace, pglist, data_files)
     local nodes = {}
@@ -128,11 +107,11 @@ function generate_page_data(db, h, lookup, namespace, pglist, data_files)
     local output = genpage.pagedata(db, nspath, nodes)
     output.subgraphs = subgraphs
 
-    print("writing to " .. filepath)
-    local fp = io.open(filepath, "w")
     local encoded_data = json.encode(output)
-    fp:write(encoded_data)
-    fp:close()
+    print("writing to " .. filepath)
+    -- local fp = io.open(filepath, "w")
+    -- fp:write(encoded_data)
+    -- fp:close()
 
     data_files.keys:write(
         "/" .. nspath ..
@@ -162,8 +141,6 @@ db = sqlite3.open("a.db")
 
 local h, lookup, positions = create_hierarchy(db)
 
-os.execute("rm -rf data")
-generate_directories(h)
 data_files = generate_data_files()
 pglist = generate_page_data(db, h, lookup, nil, nil, data_files)
 data_files.keys:close()
