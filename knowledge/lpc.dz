@@ -1,0 +1,24 @@
+ns dsp
+nn lpc
+ns dsp/lpc
+gr Linear Predictive coding
+
+nn wikipedia
+hl https://en.wikipedia.org/wiki/Linear_predictive_coding
+ln Wikipedia article on LPC
+co $ ..
+
+nn LPC_is_allpole_resonance_modelling
+hl https://ccrma.stanford.edu/~hskim08/lpc/
+ln Linear Predictive Coding is all-pole resonance modelling
+co $ ..
+
+nn lpc_lv2
+hl https://github.com/lewark/lpc.lv2?tab=readme-ov-file
+ln LPC.lv2
+co $ ..
+
+nn rt_lpc
+hl https://soundlab.cs.princeton.edu/software/rt_lpc/
+ln rt_lpc:  rt_lpc is a light-weight application that
+ln performs real-time LPC analysis and synthesis.

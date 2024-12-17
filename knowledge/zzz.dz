@@ -255,5 +255,5 @@ cr having a defaultdict with a list was a very useful abstract for building an a
 
 cx leetcode/data_structures/priority_queue python/docs/stdlib/data_types/heapq
 
-cx leetcode/problems/2542_maximum_subsequence_score python/stdlib/zip
+cx leetcode/problems/2542_maximum_subsequence_score python/docs/stdlib/zip
 cr solution made used of zip to create sorted array

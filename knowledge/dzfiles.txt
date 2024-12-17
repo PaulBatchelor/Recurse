@@ -45,5 +45,6 @@ knowledge/dagzet.dz
 codestudy/dz/excalidraw.dz
 knowledge/vscode.dz
 knowledge/use_the_index_luke.dz
+knowledge/lpc.dz
 knowledge/zzz.dz
 knowledge/zzz_ddia.dz

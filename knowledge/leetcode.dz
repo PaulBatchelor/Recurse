@@ -951,6 +951,5 @@ co $ data_structures/priority_queue
 nn problems/2542_maximum_subsequence_score
 hl https://leetcode.com/problems/maximum-subsequence-score
 ln 2542: maximum subsequence score
-co $ ..
 co $ leetcode75
-co $ data_strucutures/priority_queue
+co $ data_structures/priority_queue
