@@ -1,18 +1,38 @@
+(import tools/dzfetch)
+
+
+(var global-index @{})
+
+(defn load-global-index [keys-file]
+  (set global-index (dzfetch/load-index keys-file))
+)
+
+
 (def css-path
   (if (ww-server?)
     "/css/code.css"
     (string webroot "/css/code.css")))
-
 
 (defn escape-html-tags [str]
 (string/replace-all
   ">" "&gt;"
   (string/replace-all "<" "&lt;" str)))
 
+(defn load-page-data [nodepath data-filepath]
+  (def fp (file/open data-filepath))
+  (def data
+   (json/decode
+    (dzfetch/dzfetch nodepath global-index fp)))
+  # (file/close fp)
+  data
+
+)
+
 (defn generate [data-filepath &opt webroot]
   (default webroot "/wiki")
-  (def fp (file/open data-filepath))
-  (def page-data (json/decode (file/read fp :all)))
+  # (def fp (file/open data-filepath))
+  # (def page-data (json/decode (file/read fp :all)))
+  (def page-data (load-page-data data-filepath "data_contents"))
   (def namespace (page-data "namespace"))
   (def gnodes (page-data "nodes"))
   (def positions (page-data "positions"))
@@ -411,7 +431,8 @@
       (print (string "<h2>Nodes</h2>"))
       (each nd (sort-nodes-by-pos gnodes) (node-card nd namespace))))
 
-  (file/close fp))
+  #(file/close fp)
+)
 
 (defn get-link-rows [db]
  (def query (sqlite3/eval db
@@ -538,3 +559,4 @@
   (print "</div></div>")
   (print "</body>")
   (print "</html>"))
+

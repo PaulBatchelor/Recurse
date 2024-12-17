@@ -75,6 +75,8 @@
 (defn dagzet-page [filepath]
   (genhtml/generate filepath webroot))
 
+(genhtml/load-global-index "data_keys")
+
 (import tools/logparse)
 
 (defn wikiref [name]

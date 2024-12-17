@@ -76,7 +76,7 @@ function generate_directories(h)
     gendir_rec(h)
 end
 
-function generate_page_data(db, h, lookup, namespace, pglist)
+function generate_page_data(db, h, lookup, namespace, pglist, data_files)
     local nodes = {}
     local subgraphs = {}
     namespace = namespace or {}
@@ -86,7 +86,7 @@ function generate_page_data(db, h, lookup, namespace, pglist)
         if nchildren > 0 then
             table.insert(subgraphs, name)
             table.insert(namespace, name)
-            generate_page_data(db, children, lookup, namespace, pglist)
+            generate_page_data(db, children, lookup, namespace, pglist, data_files)
 
             -- subgraph may sometimes be a node
             local fullpath = name
@@ -130,10 +130,32 @@ function generate_page_data(db, h, lookup, namespace, pglist)
 
     print("writing to " .. filepath)
     local fp = io.open(filepath, "w")
-    fp:write(json.encode(output))
+    local encoded_data = json.encode(output)
+    fp:write(encoded_data)
     fp:close()
 
+    data_files.keys:write(
+        "/" .. nspath ..
+        ":" ..
+        data_files.offset ..
+        ":" ..
+        encoded_data:len() ..
+        "\n")
+
+    data_files.contents:write(encoded_data)
+
+    data_files.offset = data_files.offset + encoded_data:len()
+
+
     return pglist
+end
+
+function generate_data_files()
+    local data = {}
+    data.offset = 0
+    data.keys = io.open("data_keys", "w")
+    data.contents = io.open("data_contents", "w")
+    return data
 end
 
 db = sqlite3.open("a.db")
@@ -142,7 +164,10 @@ local h, lookup, positions = create_hierarchy(db)
 
 os.execute("rm -rf data")
 generate_directories(h)
-pglist = generate_page_data(db, h, lookup)
+data_files = generate_data_files()
+pglist = generate_page_data(db, h, lookup, nil, nil, data_files)
+data_files.keys:close()
+data_files.contents:close()
 
 sql = {}
 table.insert(sql, "DELETE FROM wiki WHERE key like 'dz/%';")
@@ -156,16 +181,29 @@ end
 
 wiki_pages = {}
 for _, pg in pairs(pglist) do
+    -- if pg == "" then
+    --     table.insert(wiki_pages,
+    --         "('dz', '".. dzcmdstr("data/index.json") .."')")
+    -- else
+    --     table.insert(wiki_pages,
+    --         string.format("(%s, %s)",
+    --             "'dz/" .. pg .. "'",
+    --             "'" ..
+    --                 dzcmdstr("data/" .. 
+    --                     pg .. "/index.json")
+    --                 ..
+    --             "'"
+    --                 ))
+    -- end
     if pg == "" then
         table.insert(wiki_pages,
-            "('dz', '".. dzcmdstr("data/index.json") .."')")
+            "('dz', '".. dzcmdstr("/") .."')")
     else
         table.insert(wiki_pages,
             string.format("(%s, %s)",
                 "'dz/" .. pg .. "'",
                 "'" ..
-                    dzcmdstr("data/" .. 
-                        pg .. "/index.json")
+                    dzcmdstr("/" ..  pg)
                     ..
                 "'"
                     ))
