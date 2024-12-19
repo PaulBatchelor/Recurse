@@ -977,3 +977,9 @@ hl https://leetcode.com/problems/find-peak-element/
 ln 162: find peak element
 co $ leetcode75
 co $ paradigms/binary_search
+
+nn problems/216_combination_sum_iii
+hl https://leetcode.com/problems/combination-sum-iii
+ln 216: combination sum iii
+co $ paradigms/backtracking
+co $ leetcode75

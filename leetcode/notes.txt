@@ -202,3 +202,4 @@
 12/19:2462:Frankly, there were parts of this my brain had a hard time grokking. I couldn't stitch it all together.
 12/19:2300:Came up with solution, learned about "bisect" from editorial.
 12/19:162:I felt close to getting a binary search solution working. I did do a linear solution, though it could have been cleaner
+12/19:216:got it working eventually, but I had to fiddle with the details.

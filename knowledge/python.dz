@@ -135,6 +135,7 @@ nn docs/stdtypes/list
 ln List
 hl https://docs.python.org/3/library/stdtypes.html#list
 co $ docs/stdtypes
+co $ ..
 
 nn docs/stdtypes/common_sequence_ops
 ln Common sequence operations
