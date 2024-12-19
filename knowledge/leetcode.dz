@@ -297,7 +297,7 @@ ln 875: Koko eating bananas
 hl https://leetcode.com/problems/koko-eating-bananas
 co $ paradigms/binary_search/lower_bound
 co $ paradigms/binary_search
-td Work on LC 875: koko eating bananas
+co $ leetcode75
 
 nn problems/1011_capacity_ship_packages_d_days
 ln 1011: Capacity to ship packages within D days
@@ -975,11 +975,5 @@ co $ paradigms/binary_search
 nn problems/162_find_peak_element
 hl https://leetcode.com/problems/find-peak-element/
 ln 162: find peak element
-co $ leetcode75
-co $ paradigms/binary_search
-
-nn problems/875_koko_eating_bananas
-hl https://leetcode.com/problems/koko-eating-bananas
-ln 875: Koko eating bananas
 co $ leetcode75
 co $ paradigms/binary_search
