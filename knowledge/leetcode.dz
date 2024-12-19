@@ -965,3 +965,15 @@ hl https://leetcode.com/problems/guess-number-higher-or-lower
 ln 374: Guess number lower or higher
 co $ leetcode75
 co $ paradigms/binary_search
+
+nn problems/2300_successful_pairs_potions_spells
+hl https://leetcode.com/problems/successful-pairs-of-spells-and-potions
+ln 2300: successful pairs of potions and spells
+co $ leetcode75
+co $ paradigms/binary_search
+
+nn problems/162_find_peak_element
+hl https://leetcode.com/problems/find-peak-element/
+ln 162: find peak element
+co $ leetcode75
+co $ paradigms/binary_search

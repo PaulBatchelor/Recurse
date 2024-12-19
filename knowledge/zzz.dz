@@ -257,3 +257,10 @@ cx leetcode/data_structures/priority_queue python/docs/stdlib/data_types/heapq
 
 cx leetcode/problems/2542_maximum_subsequence_score python/docs/stdlib/zip
 cr solution made used of zip to create sorted array
+
+cx leetcode/problems/2300_successful_pairs_potions_spells python/docs/stdlib/bisect
+cr used in editorial solution
+
+cx ^ python/docs/stdlib/bisect/bisect_left
+
+cx python/docs/stdlib/bisect leetcode/paradigms/binary_search

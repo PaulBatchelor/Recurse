@@ -381,3 +381,15 @@ hl https://docs.python.org/3/library/functions.html#zip
 ln zip(): iterates over several objects in parallel,
 ln producing tuples with an item for each one.
 co $ .. 
+
+nn docs/stdlib/bisect
+hl https://docs.python.org/3/library/bisect.html
+ln bisect(): array bisection algorithm
+co $ ..
+
+nn docs/stdlib/bisect/bisect_left
+hl https://docs.python.org/3/library/bisect.html#bisect.bisect_left
+ln bisect_left(a, x): locate insertion point for x in a,
+ln if x is present in a, returns an insertion point to the
+ln left of x.
+co $ ..
