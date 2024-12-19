@@ -977,3 +977,9 @@ hl https://leetcode.com/problems/find-peak-element/
 ln 162: find peak element
 co $ leetcode75
 co $ paradigms/binary_search
+
+nn problems/875_koko_eating_bananas
+hl https://leetcode.com/problems/koko-eating-bananas
+ln 875: Koko eating bananas
+co $ leetcode75
+co $ paradigms/binary_search
