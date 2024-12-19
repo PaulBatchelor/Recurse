@@ -20,3 +20,6 @@ position =candidates - 1=. To prevent overlap, the start
 of the tail needs to be at least at index =candidates=,
 so if =len(costs) - candidates= is smaller than that,
 go with candidates.
+
+@11:04 374 Guess number lower or higher #LC75-review #timelog:00:12:00
+I feel so dyslexic with binary search.

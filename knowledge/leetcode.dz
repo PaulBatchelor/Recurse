@@ -958,3 +958,10 @@ nn problems/2462_total_cost_hire_k_workers
 hl https://leetcode.com/problems/total-cost-to-hire-k-workers
 ln 2462: total cost to hire k workers
 co $ data_structures/priority_queue
+co $ leetcode75
+
+nn problems/374_guess_number_lower_higher
+hl https://leetcode.com/problems/guess-number-higher-or-lower
+ln 374: Guess number lower or higher
+co $ leetcode75
+co $ paradigms/binary_search
