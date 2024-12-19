@@ -953,3 +953,8 @@ hl https://leetcode.com/problems/maximum-subsequence-score
 ln 2542: maximum subsequence score
 co $ leetcode75
 co $ data_structures/priority_queue
+
+nn problems/2462_total_cost_hire_k_workers
+hl https://leetcode.com/problems/total-cost-to-hire-k-workers
+ln 2462: total cost to hire k workers
+co $ data_structures/priority_queue

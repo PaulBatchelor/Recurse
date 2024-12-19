@@ -1,0 +1,22 @@
+@2024-12-19 Thursday December 19th
+@10:41 Even more 2462 #LC75-review #timelog:00:18:00
+
+@10:45 Grokking intuition for initial filling of queues #dz/leetcode/problems/2462_total_cost_hire_k_workers
+I've been struggling with a bit of logic here in the
+editorial solution. It has to do with how to initially
+fill up the two queues.
+This is the thing that was tripping me up. There are two
+queues to pop from: the head and the tail.
+---
+The head fills up the first =candidates=, but the tail
+uses =max(candidates, len(costs) - candidates)=. This is
+used to prevent overlap, but my brain is having a hard time
+being convinced of this.
+---
+Most of the time, the starting position of the tail will
+be =len(costs) - candidates)=. The end position of
+the head will *always* be at the
+position =candidates - 1=. To prevent overlap, the start
+of the tail needs to be at least at index =candidates=,
+so if =len(costs) - candidates= is smaller than that,
+go with candidates.

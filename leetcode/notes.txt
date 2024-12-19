@@ -199,3 +199,4 @@
 12/13:215:Forgot how to use heapq.
 12/15:2336:Got it right, but not on the first try. Did not look up any better answers, but I used the data structure.
 12/15:2542:The editorial solution used a sorted array for "efficiency", but I'd like to see a version without this. Mine almost worked, but hit weird edge cases.
+12/19:2462:Frankly, there were parts of this my brain had a hard time grokking. I couldn't stitch it all together.
