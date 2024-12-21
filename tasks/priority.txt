@@ -13,3 +13,5 @@ solutions are submitted to LC.
 @flashcards flashcarding
 
 @flashcards-web web view for flashcards
+
+@dzbrowse-generator create generator for dzbrowse
