@@ -1005,3 +1005,6 @@ co $ paradigms/dynamic_programming/1d
 nn problems/790_domino_tromino_tiling
 ln 790: domino and tromino tiling
 hl https://leetcode.com/problems/domino-and-tromino-tiling
+co $ leetcode75
+co $ paradigms/dynamic_programming
+co $ paradigms/dynamic_programming/1d
