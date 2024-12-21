@@ -18,3 +18,5 @@
 @13:43 more dagzet python stuff: tree time? #timelog:00:10:00 #dzbrowse-generator
 
 @14:26 tree generator continued #dzbrowse-generator #timelog:00:31:00
+
+@16:05 Systems design interview #read-system-design-interview #timelog:00:46:02

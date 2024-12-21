@@ -272,24 +272,37 @@ co $ ..
 
 ns +data_model
 nn data_access_pattern
+ln Data Access Pattern
 co $ ../../../../../glossary/access_pattern
 co $ ..
 
 ns +data_access_pattern
-nn read_heavy
+nn read_spiky
+ln read load is spiky
 co $ ..
 
 nn write_heavy
+ln system under constant heavy write load
 co $ ..
 
 ns ..
 
 nn data_storage_system
+ln Data Storage System
 co $ ..
+co $ ../../../../../references/db_engines_ranking
 
 nn data_storage_system/time_series_database
-
+ln Time Series Database (TSB)
+co $ ../../../../../../glossary/time_series_database
+co $ ../../../../../../tools/influxdb
+cr according to dbrankings, most commonly used TSDB
 ns ..
+co $ ../../../../../../references/db_engines_ranking
+cr DB-engines ranking used to determine which TSDB to use
+co $ ../../../../../../tools/prometheus
+cr according to db-rankings, one of the mostly commonly
+cr used TSDB
 
 nn high_level_design
 co $ ../../../../glossary/high_level_design
@@ -1225,3 +1238,7 @@ ln monitors and graphs numeric time-series data,
 ln particularly computer system performance.
 co $ ..
 co $ ../../glossary/event_monitoring
+
+nn references/db_engines_ranking
+hl https://db-engines.com/en/ranking
+ln DB-Engines ranking
