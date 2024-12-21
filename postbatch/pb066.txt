@@ -20,3 +20,5 @@
 @14:26 tree generator continued #dzbrowse-generator #timelog:00:31:00
 
 @16:05 Systems design interview #read-system-design-interview #timelog:00:46:02
+
+@16:56 flashcards #flashcards #timelog:00:05:00
