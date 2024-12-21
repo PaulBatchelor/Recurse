@@ -994,3 +994,10 @@ co $ paradigms/dynamic_programming/1d
 nn paradigms/dynamic_programming/1d
 ln 1-dimensional dynamic programming
 co $ ..
+
+nn problems/746_min_cost_climbing_stairs
+ln 746: minimum cost of climbing stairs
+hl https://leetcode.com/problems/min-cost-climbing-stairs
+co $ leetcode75
+co $ paradigms/dynamic_programming
+co $ paradigms/dynamic_programming/1d
