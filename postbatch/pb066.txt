@@ -8,3 +8,9 @@
 @08:56 790 Domino and Tromino Tiling #LC75-review #timelog:01:10:00
 
 @10:05 790 editorial #LC75-review #timelog:00:36:00
+
+@11:27 work on python intermediate data format for dagzet #timelog:01:51:00
+
+@12:07 remembering how sqlite3 works in python #dz/python/docs/stdlib/persistence/sqlite3
+
+@12:09 figuring out try/catch style error handling in python #dz/python/docs/reference/try

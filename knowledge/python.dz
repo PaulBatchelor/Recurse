@@ -416,3 +416,86 @@ ln arguments.
 co ../cache $
 cr because it never needs to to evict old values, cache is
 cr smaller and faster than lru_cache with a size limit
+
+nn docs/stdlib/persistence
+hl https://docs.python.org/3/library/persistence.html
+ln Perstence: modules for storing data in a persistent
+ln form on disk.
+
+nn docs/stdlib/persistence/sqlite3
+hl https://docs.python.org/3/library/sqlite3.html
+co $ ..
+ln SQLite3 module
+
+ns +docs/stdlib/persistence/sqlite3
+
+nn connect
+hl https://docs.python.org/3/library/sqlite3.html#sqlite3.connect
+ln connect(): connects an initial database
+co $ ..
+
+nn connection
+hl https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection
+ln Connection() object
+co $ ..
+cr produced from connect() method
+
+nn connection/cursor
+hl https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.cursor
+ln cursor(): creates a cursor object
+co $ ..
+co $ ../../cursor
+cr creates cursor object
+
+nn cursor
+hl https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor
+ln sqlite cursor() object
+co $ ..
+
+nn cursor/execute
+ln execute(): execute a single SQL statement, optionally
+ln binding values using placeholders.
+hl https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.execute
+co $ ..
+
+nn placeholders
+hl https://docs.python.org/3/library/sqlite3.html#sqlite3-placeholders
+ln how to use placeholders to bind values in SQL queries
+co $ ..
+co $ cursor/execute
+cr placeholders can be optionally used in execute()
+
+ns ../../../..
+
+nn docs/reference/try
+hl https://docs.python.org/3/reference/compound_stmts.html#the-try-statement
+ln try caluse
+
+nn docs/reference/try/finally
+hl https://docs.python.org/3/reference/compound_stmts.html#finally-clause
+ln finally
+co $ ..
+
+nn docs/stdlib/netdata
+hl https://docs.python.org/3/library/netdata.html
+ln Internet Data
+co $ ..
+
+nn docs/stdlib/netdata/json
+hl https://docs.python.org/3/library/json.html
+ln JSON decoder/encoder
+co $ ..
+
+ns +docs/stdlib/netdata/json
+
+nn dumps
+hl https://docs.python.org/3/library/json.html#json.dumps
+ln dumps
+co $ ..
+
+nn loads
+hl https://docs.python.org/3/library/json.html#json.loads
+ln loads
+co $ ..
+
+ns ../../../..

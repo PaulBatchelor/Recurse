@@ -268,3 +268,6 @@ cr useful builtin for binary search
 
 cx leetcode/problems/790_domino_tromino_tiling python/docs/stdlib/functools/cache
 cr caching decorator used in top-down approach
+
+cx python/docs/stdlib/persistence DDIA/glossary/durable
+cr persistant on-disk state is used in the context of durability

@@ -90,6 +90,26 @@ cr some of the race condition anomalies, only
 cr serializable isolation protects against all of
 cr these issues.
 
+nn 07_transactions/meaning_of_ACID
+ln The meaning of ACID
+co $ ..
+ns +07_transactions/meaning_of_ACID
+
+nn atomicity
+co $ ..
+
+nn consistency
+co $ ..
+
+nn isolation
+co $ ..
+
+nn durability
+co $ ..
+co $ ../../../../../glossary/durable
+
+ns ../..
+
 nn 08_trouble_distributed_systems
 ln Chapter 8: the trouble with distribtued systems
 co $ ..
@@ -1197,4 +1217,10 @@ co $ ..
 
 nn glossary/bounded
 ln Bounded: having some known upper limit or size.
+co $ ..
+
+nn glossary/durable
+ln Durable: storing data in such a way that you believe
+ln it will not be lost, even if various faults
+ln occur.
 co $ ..
