@@ -4,3 +4,7 @@
 @08:36 1137 Review #LC75-review #timelog:00:04:00
 
 @08:40 746 min cost climbing stairs #LC75-review #timelog:00:12:00
+
+@08:56 790 Domino and Tromino Tiling #LC75-review #timelog:01:10:00
+
+@10:05 790 editorial #LC75-review #timelog:00:36:00

@@ -134,7 +134,6 @@ co $ docs/stdlib/filter
 nn docs/stdtypes/list
 ln List
 hl https://docs.python.org/3/library/stdtypes.html#list
-co $ docs/stdtypes
 co $ ..
 
 nn docs/stdtypes/common_sequence_ops
@@ -394,3 +393,26 @@ ln bisect_left(a, x): locate insertion point for x in a,
 ln if x is present in a, returns an insertion point to the
 ln left of x.
 co $ ..
+
+nn docs/stdlib/functools
+hl https://docs.python.org/3/library/functools.html
+ln functools: Higher-order functions and operations on callable objects
+co $ ..
+
+nn docs/stdlib/functools/cache
+hl https://docs.python.org/3/library/functools.html#functools.cache
+ln cache: Simple lightweight unbounded function cache.
+ln Sometimes called "memoize".
+co $ ..
+
+nn docs/stdlib/functools/lru_cache
+hl https://docs.python.org/3/library/functools.html#functools.lru_cache
+co $ ..
+ln Decorator to wrap a function with a memoizing 
+ln callable that saves up to the maxsize most recent 
+ln calls. It can save time when an expensive or I/O bound 
+ln function is periodically called with the same 
+ln arguments.
+co ../cache $
+cr because it never needs to to evict old values, cache is
+cr smaller and faster than lru_cache with a size limit

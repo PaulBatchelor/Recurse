@@ -264,3 +264,7 @@ cr used in editorial solution
 cx ^ python/docs/stdlib/bisect/bisect_left
 
 cx python/docs/stdlib/bisect leetcode/paradigms/binary_search
+cr useful builtin for binary search
+
+cx leetcode/problems/790_domino_tromino_tiling python/docs/stdlib/functools/cache
+cr caching decorator used in top-down approach
