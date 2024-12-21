@@ -203,3 +203,4 @@
 12/19:2300:Came up with solution, learned about "bisect" from editorial.
 12/19:162:I felt close to getting a binary search solution working. I did do a linear solution, though it could have been cleaner
 12/19:216:got it working eventually, but I had to fiddle with the details.
+12/21:1137:briefly had to recall the structure, which sort of looks like an IIR filter? It has delay.

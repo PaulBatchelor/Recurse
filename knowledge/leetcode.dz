@@ -983,3 +983,14 @@ hl https://leetcode.com/problems/combination-sum-iii
 ln 216: combination sum iii
 co $ paradigms/backtracking
 co $ leetcode75
+
+nn problems/1137_nth_tribonacci_number
+hl https://leetcode.com/problems/n-th-tribonacci-number
+ln 1137: Nth tribonacci number
+co $ paradigms/dynamic_programming
+co $ leetcode75
+co $ paradigms/dynamic_programming/1d
+
+nn paradigms/dynamic_programming/1d
+ln 1-dimensional dynamic programming
+co $ ..
