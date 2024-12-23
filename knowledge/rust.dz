@@ -128,3 +128,26 @@ co $ ..
 nn iter
 ln iter
 hl https://doc.rust-lang.org/std/iter/
+
+nn std/convert/TryFrom
+hl https://doc.rust-lang.org/std/convert/trait.TryFrom.html
+ln TryFrom: Simple and safe type conversions that may 
+ln fail in a controlled way under some circumstances. It 
+ln is the reciprocal of TryInto.
+co $ ..
+co $ ../TryInto
+cr Reciprocal
+
+nn std/convert
+ln convert: traits for conversions between types
+hl https://doc.rust-lang.org/std/convert/index.html
+co $ ..
+
+nn std/convert/TryInto
+hl https://doc.rust-lang.org/std/convert/trait.TryInto.html
+ln TryInto: An attempted conversion that consumes self,
+ln which may or may not be expensive.
+co $ ..
+
+nn std
+ln rust standard library

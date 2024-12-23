@@ -186,7 +186,7 @@ co $ ..
 ns ../..
 
 nn 09_consistency_consensus/if_leader_fails
-ln What to do if leader fails
+ln Actions to take if leader fails
 co $ ..
 
 ns +09_consistency_consensus/if_leader_fails
