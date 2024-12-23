@@ -499,3 +499,18 @@ ln loads
 co $ ..
 
 ns ../../../..
+
+nn docs/stdlib/cli
+hl https://docs.python.org/3/library/cmdlinelibs.html
+ln commandline interface libraries
+co $ ..
+
+nn docs/stdlib/runtime
+hl https://docs.python.org/3/library/python.html
+ln Python runtime services
+co $ ..
+
+nn docs/stdlib/runtime/sys
+hl https://docs.python.org/3/library/sys.html
+co $ ..
+ln sys: system-specific parameters and functions
