@@ -447,6 +447,11 @@ co $ ..
 co $ ../../cursor
 cr creates cursor object
 
+nn connection/close
+hl https://docs.python.org/3/library/sqlite3.html#sqlite3.Connection.close
+ln close(): close the database connection
+co $ ..
+
 nn cursor
 hl https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor
 ln sqlite cursor() object

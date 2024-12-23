@@ -1,0 +1,35 @@
+ns databases
+gr Topics and theory around database and database design
+
+nn duckdb
+hl https://en.wikipedia.org/wiki/DuckDB
+ln DuckDB is an open-source column-oriented relational
+ln database management system (RDBMS).
+
+nn star_schema_benchmark
+ln Star Schema Benchmark (SSB)
+
+nn star_schema_benchmark/star_queries
+co $ ..
+ln Star Queries: contain one large fact table, and
+ln multiple smaller dimensionality tables
+
+nn nested_loop_join
+hl https://en.wikipedia.org/wiki/Nested_loop_join
+ln A nested loop join is a naive algorithm that joins two
+ln relations by using two nested loops. Join operations are
+ln important for database management. 
+
+nn visualizing_nested_loop_joins
+hl https://bertwagner.com/posts/visualizing-nested-loops-joins-and-understanding-their-implications
+ln Visualizing Nested Loops Joins And Understanding
+ln Their Implications
+co $ ../nested_loop_join
+
+nn btree
+hl https://en.wikipedia.org/wiki/B-tree
+ln B-Tree
+
+nn btree/probe
+ln probing a btree
+co $ ..

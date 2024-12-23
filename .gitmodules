@@ -1,3 +1,6 @@
 [submodule "codestudy"]
 	path = codestudy
 	url = git@github.com:PaulBatchelor/codestudy
+[submodule "links"]
+	path = links
+	url = git@git.sr.ht:~pbatch/links

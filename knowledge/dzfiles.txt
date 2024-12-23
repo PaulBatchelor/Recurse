@@ -46,5 +46,10 @@ codestudy/dz/excalidraw.dz
 knowledge/vscode.dz
 knowledge/use_the_index_luke.dz
 knowledge/lpc.dz
+links/links.dz
+knowledge/sqlite.dz
+knowledge/databases.dz
+knowledge/data_structures.dz
 knowledge/zzz.dz
 knowledge/zzz_ddia.dz
+links/zzz.dz

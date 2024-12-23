@@ -271,3 +271,14 @@ cr caching decorator used in top-down approach
 
 cx python/docs/stdlib/persistence DDIA/glossary/durable
 cr persistant on-disk state is used in the context of durability
+
+cx python/docs/stdlib/persistence/sqlite3 sqlite/website
+
+cx DDIA/glossary/fact_table databases/star_schema_benchmark/star_queries
+cr one large fact table
+
+cx DDIA/glossary/dimension_table databases/star_schema_benchmark/star_queries
+cr multiple dimension tables
+
+cx sqlite/query_optimizer_overview/07_joins databases/nested_loop_join
+cr SQLite implements joins as nested loops

@@ -1,0 +1,22 @@
+ns sqlite
+gr topics related to the sqlite database
+
+nn website
+hl https://www.sqlite.org/
+ln SQLIte homepage
+
+nn past_present_future
+hl https://www.vldb.org/pvldb/vol15/p3535-gaffney.pdf
+ln SQLite: past, present, future
+
+nn bytecode_engine
+hl https://www.sqlite.org/opcode.html
+ln The SQLite bytecode engine
+
+nn query_optimizer_overview
+hl https://www.sqlite.org/optoverview.html
+ln the SQLite query optimizer overview
+
+nn query_optimizer_overview/07_joins
+hl https://www.sqlite.org/optoverview.html#joins
+ln Joins

@@ -32,6 +32,8 @@ co $ ..
 nn 03_storage_and_retrieval
 ln Chapter 3: storage and retrieval
 co $ ..
+co ../../../glossary/star_schema $
+co ../../../glossary/fact_table $
 
 nn 04_encoding_evolution
 ln Chapter 4: encoding and evolution
@@ -1224,3 +1226,43 @@ ln Durable: storing data in such a way that you believe
 ln it will not be lost, even if various faults
 ln occur.
 co $ ..
+
+nn glossary/star_schema
+ln star schema: typical formulaic style for how data
+ln warehouses are used
+co $ ../data_warehouse
+
+nn glossary/fact_table
+ln fact table: records measurements or metrics for a
+ln specific event
+co $ ..
+co $ ../star_schema
+co $ ../systems_of_record
+cr fact table is a source of truth, and
+cr therefore a system of record (I think?)
+
+nn references/star_schema
+hl https://en.wikipedia.org/wiki/Star_schema
+ln star_chema (wikipedia)
+co $ ../../glossary/star_schema
+
+nn references/star_schema/fact_tables
+hl https://en.wikipedia.org/wiki/Star_schema#Fact_tables
+co $ ../../../glossary/fact_table
+co $ ..
+
+nn references/star_schema/dimension_tables
+hl https://en.wikipedia.org/wiki/Star_schema#Dimension_tables
+co $ ../fact_tables
+co $ ..
+co $ ../../../glossary/dimension_table
+
+nn glossary/dimension_table
+ln Dimension Table: Dimension tables usually have
+ln a relatively small number of records compared to fact
+ln tables, but each record may have a large number of
+ln attributes to describe the fact data
+co $ ../fact_table
+co $ ..
+co $ ../star_schema
+
