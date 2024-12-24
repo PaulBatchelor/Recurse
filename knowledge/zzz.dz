@@ -282,3 +282,9 @@ cr multiple dimension tables
 
 cx sqlite/query_optimizer_overview/07_joins databases/nested_loop_join
 cr SQLite implements joins as nested loops
+
+cx rust/book/toc/10_generic_types_traits_lifetimes/10_3_validating_references_with_lifetimes/borrow_checker rust/borrow_checker
+
+cx rust/std/collections/hashmap data_structures/hashmap
+
+cx leetcode/data_structures/hash_table data_structures/hashtable

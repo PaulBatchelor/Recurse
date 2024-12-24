@@ -5,3 +5,11 @@ nn bloom_filter
 hl https://en.wikipedia.org/wiki/Bloom_filter
 ln Bloom Filter: a probabalistic data structure used to
 ln test whether an element is a member of a set.
+
+nn hashmap
+ln hashmap
+
+nn hashtable
+ln hashtable
+co $ hashmap
+cr aka

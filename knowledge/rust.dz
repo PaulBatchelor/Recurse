@@ -150,4 +150,31 @@ ln which may or may not be expensive.
 co $ ..
 
 nn std
+hl https://doc.rust-lang.org/std/
 ln rust standard library
+
+nn borrow_checker
+ln the rust borrow checker
+
+nn std/collections
+ln collections
+hl https://doc.rust-lang.org/std/collections/index.html
+co $ ..
+
+nn std/collections/hashmap
+ln hashmap
+co $ ..
+hl https://doc.rust-lang.org/std/collections/hash_map/struct.HashMap.html
+
+nn comprehensive_rust
+hl https://google.github.io/comprehensive-rust/index.html
+ln comprehensive_rust
+
+ns +comprehensive_rust
+ns +09_references
+nn exclusive_reference
+hl https://google.github.io/comprehensive-rust/references/exclusive.html
+ln Exclusive reference
+rm AKA mutable reference?
+ns ..
+ns ..

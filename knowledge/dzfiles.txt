@@ -47,6 +47,7 @@ knowledge/vscode.dz
 knowledge/use_the_index_luke.dz
 knowledge/lpc.dz
 links/links.dz
+links/notes.dz
 knowledge/sqlite.dz
 knowledge/databases.dz
 knowledge/data_structures.dz

@@ -10,3 +10,41 @@ nn aka_interfaces
 ln sometimes known as "interfaces" in other languages
 co $ traits
 cr aka
+
+
+ns rust
+nn book
+hl https://doc.rust-lang.org/book
+ln The Rust Book
+
+ns rust/book
+gr The rust book
+
+nn toc
+ln Table of Contents
+co $ ..
+
+ns +toc
+
+nn 10_generic_types_traits_lifetimes
+ln Chapter 10: Generic Types, Traits, and Lifetimes
+hl https://doc.rust-lang.org/book/ch10-00-generics.html
+co $ ..
+
+ns +10_generic_types_traits_lifetimes
+
+nn 10_3_validating_references_with_lifetimes
+ln 10.3 Validating References with Lifetimes
+hl https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html
+co $ ..
+
+ns +10_3_validating_references_with_lifetimes
+nn borrow_checker
+ln the rust compiler has a borrow checker that compares
+ln scope to determine whether all borrows are valid
+hl https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html#the-borrow-checker
+co $ ..
+
+ns ..
+ns ..
+ns ..

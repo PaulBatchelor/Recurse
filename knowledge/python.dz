@@ -519,3 +519,77 @@ nn docs/stdlib/runtime/sys
 hl https://docs.python.org/3/library/sys.html
 co $ ..
 ln sys: system-specific parameters and functions
+
+nn docs/stdtypes/str/encode
+hl https://docs.python.org/3/library/stdtypes.html#str.encode
+ln str.encode(): return the string encoded to bytes, returns
+ln utf-8 by default.
+co $ docs/stdtypes/bytes
+cr converted to bytes
+co $ ..
+
+nn docs/stdtypes/bytes
+hl https://docs.python.org/3/library/stdtypes.html#bytes-objects
+ln bytes 
+co $ ..
+
+nn docs/reference/data_model
+hl https://docs.python.org/3/reference/index.html
+ln Chapter 3: data model
+co $ ..
+
+nn docs/reference/data_model/special_method_names
+hl https://docs.python.org/3/reference/datamodel.html#special-method-names
+ln Special Method names
+co $ ..
+
+nn docs/reference/data_model/special_method_names/__del__
+hl https://docs.python.org/3/reference/datamodel.html#object.__del__
+ln __del__(): called when instance is about to be destroyed
+
+nn docs/stdlib/internet
+ln Modules for internet protocols
+hl https://docs.python.org/3/library/internet.html
+co $ ..
+
+nn docs/stdlib/internet/socketserver
+hl https://docs.python.org/3/library/socketserver.html
+ln socketserver: module that simplifies the task of writing
+ln network servers.
+co $ ..
+
+ns +docs/stdlib/internet/socketserver
+nn TCPServer
+ln TCPServer(server_address, RequestHandlerClass, bind_and_activate = True)
+hl https://docs.python.org/3/library/socketserver.html#socketserver.TCPServer
+co $ ..
+co $ ../BaseServer
+cr Additional arguments passed to BaseServer class
+
+nn BaseServer
+hl https://docs.python.org/3/library/socketserver.html#socketserver.TCPServer
+ln BaseServer Class
+co $ ..
+
+nn BaseServer/RequestHandlerClass
+hl https://docs.python.org/3/library/socketserver.html#socketserver.BaseServer.RequestHandlerClass
+ln RequestHandlerClass: user-provided request handler class
+co $ ..
+
+ns ../../../..
+
+nn docs/stdlib/internet/http
+hl https://docs.python.org/3/library/http.html
+ln HTTP modules
+co $ ..
+
+nn docs/stdlib/internet/http/server
+hl https://docs.python.org/3/library/http.server.html#module-http.server
+ln HTTP server
+co $ ..
+
+nn docs/stdlib/internet/http/server/SimpleHTTPRequestHandler
+hl https://docs.python.org/3/library/http.server.html#http.server.SimpleHTTPRequestHandler
+ln SimpleHTTPRequestHandler
+co $ ..
+
