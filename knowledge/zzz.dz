@@ -291,3 +291,6 @@ cx leetcode/data_structures/hash_table data_structures/hashtable
 
 cx javascript/await rust/await
 cr same concept
+
+cx hardware/precursor osdev/xous
+cr designed for security-first platforms like precursor

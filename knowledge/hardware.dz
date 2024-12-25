@@ -1,0 +1,13 @@
+ns hardware
+gr hardware
+
+nn precursor
+ln precursor: Mobile, Open Hardware, RISC-V System-on-Chip
+ln (SoC) Development Kit 
+hl https://www.crowdsupply.com/sutajio-kosagi/precursor
+tg riscv
+
+nn precursor/betrusted
+hl https://betrusted.io/
+ln betrusted
+co $ ..

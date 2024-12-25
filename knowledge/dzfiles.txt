@@ -51,6 +51,8 @@ links/notes.dz
 knowledge/sqlite.dz
 knowledge/databases.dz
 knowledge/data_structures.dz
+knowledge/osdev.dz
+knowledge/hardware.dz
 knowledge/zzz.dz
 knowledge/zzz_ddia.dz
 links/zzz.dz

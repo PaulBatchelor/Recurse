@@ -240,3 +240,15 @@ hl https://github.com/rust-lang/polonius
 nn polonius/book
 hl https://rust-lang.github.io/polonius/
 ln The Polonius Book
+
+nn embedded_rust
+ln The embedded rust book
+
+nn embedded_rust/toc
+co $ ..
+nn embedded_rust/toc/01_introduction
+co $ ..
+nn embedded_rust/toc/01_introduction/01_02_no_std
+ln 1.2: A no-std rust environment
+hl https://docs.rust-embedded.org/book/intro/no-std.html
+co $ ..

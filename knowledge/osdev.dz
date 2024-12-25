@@ -1,0 +1,16 @@
+ns osdev
+gr operating system development
+
+nn xous
+hl https://betrusted.io/xous-book/
+ln Xous is a microkernel operating system with processes, 
+ln threads, and messages. It is designed to have an 
+ln extremely small kernel that delegates as much as 
+ln possible to userspace.
+tg rust
+
+nn QNX
+hl https://en.wikipedia.org/wiki/QNX
+ln QNX
+co ../xous $
+cr xous is similar to QNX (according to one source)
