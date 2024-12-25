@@ -593,3 +593,22 @@ hl https://docs.python.org/3/library/http.server.html#http.server.SimpleHTTPRequ
 ln SimpleHTTPRequestHandler
 co $ ..
 
+nn docs/stdlib/os_services
+hl https://docs.python.org/3/library/allos.html
+ln Generic operating system services
+co $ ..
+
+nn docs/stdlib/os_services/os
+hl https://docs.python.org/3/library/os.html
+ln os: miscellaneous operating system services
+co $ ..
+
+nn docs/stdlib/os_services/os/stat
+hl https://docs.python.org/3/library/os.html#os.stat
+ln os.stat(): get the status of a file or a descriptor
+co $ ..
+
+nn docs/stdlib/os_services/os/stat_result
+hl https://docs.python.org/3/library/os.html#os.stat_result
+ln stat_result type
+co $ ../stat

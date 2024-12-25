@@ -47,4 +47,22 @@ co $ ..
 
 ns ..
 ns ..
+
+
+nn 13_funclang_features
+hl https://doc.rust-lang.org/book/ch13-00-functional-features.html
+co $ ..
+ln 13: Functional language features: Iterators and
+ln Closures
+
+ns +13_funclang_features
+
+nn 13_1_closures
+ln 13.1 Closures: Anonymous functions that capture
+ln their environment
+hl https://doc.rust-lang.org/book/ch13-01-closures.html
+co $ ..
+
+ns ..
+
 ns ..

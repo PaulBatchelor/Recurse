@@ -178,3 +178,65 @@ ln Exclusive reference
 rm AKA mutable reference?
 ns ..
 ns ..
+
+nn std/iter
+ln iter
+hl https://doc.rust-lang.org/std/iter/index.html
+co $ ..
+co iter $
+cr older node
+
+nn await
+hl https://doc.rust-lang.org/std/keyword.await.html
+ln await: suspend execution until the result of a Future
+ln is ready
+
+nn async_book
+hl https://rust-lang.github.io/async-book/
+ln The Rust Async Book
+co await $
+cr for more information
+
+nn std/future
+hl https://doc.rust-lang.org/std/future/trait.Future.html
+ln Future: A future represents an asynchronous computatoin
+ln obtained by use of async.
+co $ ..
+co await std/future
+
+nn GATS_stabilization
+hl https://blog.rust-lang.org/2022/10/28/gats-stabilization.html
+ln Rust stabalization of Generic Associated Types in
+ln Rust 1.65
+
+nn std/iter/trait
+hl https://doc.rust-lang.org/std/iter/trait.Iterator.html
+ln iter trait
+co $ ..
+
+nn std/iter/trait/copied
+hl https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.copied
+ln copied: creates an iterator which copies all of
+ln its elements. This is useful when you have an
+ln itnerator over =T=, but need an iterator over
+ln =&T=.
+
+nn std/ops
+hl https://doc.rust-lang.org/std/ops/index.html
+ln Overloadable operators
+co $ ..
+
+nn std/ops/traits/FnMut
+hl https://doc.rust-lang.org/std/ops/trait.FnMut.html
+ln FnMut: version of the call operator that takes
+ln a mutable receiver
+
+nn polonius
+ln Polonius: a core library that models the borrow check
+
+nn polonius/git
+hl https://github.com/rust-lang/polonius
+
+nn polonius/book
+hl https://rust-lang.github.io/polonius/
+ln The Polonius Book
