@@ -92,7 +92,7 @@ tg gfx
 nn pixel_pusher
 hl https://gitlab.com/awjchen/pixelpusher
 ln PixelPusher Game Source Code
-tg gamedev
+tg gamedev code
 rm made by RC alum, shared on graphics meet up june 18, 2024
 
 nn pixel_pusher_trailer
@@ -121,7 +121,7 @@ tg singing acapella
 nn pacman_c_sokol
 ln Pacman single-header file implement in C
 hl https://github.com/floooh/pacman.c
-tg gamedev sokol
+tg gamedev sokol code
 
 nn boston_cream_pie
 ln Boston Cream Pie

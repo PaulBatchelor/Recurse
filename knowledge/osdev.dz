@@ -14,3 +14,13 @@ hl https://en.wikipedia.org/wiki/QNX
 ln QNX
 co ../xous $
 cr xous is similar to QNX (according to one source)
+
+nn duskos
+hl https://duskos.org/
+ln DuskOS: 32-bit forth and big brother to
+ln CollapseOS
+co collapseos $
+cr big brother to collapseos
+
+nn collapseos
+hl http://collapseos.org/
