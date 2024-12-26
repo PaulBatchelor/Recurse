@@ -1,7 +1,7 @@
 @2024-12-11 Hub Day. Macro
 @12:00 Macro Talk
 
-@12:30 Futex term mentioned #dz:sys/futex
+@12:30 Futex term mentioned #dz:systems/futex
 I thought I had a node for that.
 
 @13:10 Planning #timelog:00:45:00

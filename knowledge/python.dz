@@ -612,3 +612,8 @@ nn docs/stdlib/os_services/os/stat_result
 hl https://docs.python.org/3/library/os.html#os.stat_result
 ln stat_result type
 co $ ../stat
+
+nn docs/stdlib/runtime/sys/argv
+ln argv
+hl https://docs.python.org/3/library/sys.html#sys.argv
+co $ ..

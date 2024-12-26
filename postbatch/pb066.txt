@@ -1,4 +1,4 @@
-@2024-12-21 It's snowing!
+@2024-12-21 It is snowing!
 @08:26 1137 nth tribonacci number #LC75-review #timelog:00:10:00
 
 @08:36 1137 Review #LC75-review #timelog:00:04:00
