@@ -3,9 +3,9 @@
 
 @10:28 437 Review #LC75-review #timelog:01:05:42
 
-@10:31 looking at 560 to understand 437 #LC75-review #dz/leetcode/problems/560_subarray_sum_equals_k
+@10:31 looking at 560 to understand 437 #LC75-review #dz:leetcode/problems/560_subarray_sum_equals_k
 
-@11:26 currently tripped on grokking 560 #dz/leetcode/problems/560_subarray_sum_equals_k
+@11:26 currently tripped on grokking 560 #dz:leetcode/problems/560_subarray_sum_equals_k
 The solution in this problem involves using a hashmap
 counter, with this sort of logic:
 ===
@@ -18,7 +18,7 @@ updating. A situation could occur where this hashmap
 entry is tapped more than once, making things
 get counted twice.
 
-@11:33 I think I grok this actually #dz/leetcode/problems/560_subarray_sum_equals_k
+@11:33 I think I grok this actually #dz:leetcode/problems/560_subarray_sum_equals_k
 I think this has to mean you reset to zero at some point,
 so all those elements can get counted again. I can't
 dwell on this too long, this will have to do.
@@ -37,7 +37,7 @@ dwell on this too long, this will have to do.
 
 @13:34 450 Study #LC75-review #timelog:00:37:06
 
-@14:20 Solution here updates node values, but not the reference to the node #dz/leetcode/problems/450_delete_node_BST
+@14:20 Solution here updates node values, but not the reference to the node #dz:leetcode/problems/450_delete_node_BST
 I was initially imagining a solution that involved moving
 the reference to the node itself. What this algorithm does
 instead is update the value of the node to be deleted with

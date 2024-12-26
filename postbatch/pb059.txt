@@ -1,7 +1,7 @@
 @2024-12-11 Hub Day. Macro
 @12:00 Macro Talk
 
-@12:30 Futex term mentioned #dz/sys/futex
+@12:30 Futex term mentioned #dz:sys/futex
 I thought I had a node for that.
 
 @13:10 Planning #timelog:00:45:00
@@ -47,6 +47,6 @@ now and January.
 @20:26 System Design #read-system-design-interview #timelog:01:03:37
 Chapter 5
 
-@20:27 Populating graph #read-system-design-interview #dz/system_design_interview/toc/05_metrics_monitoring_and_alert_system
+@20:27 Populating graph #read-system-design-interview #dz:system_design_interview/toc/05_metrics_monitoring_and_alert_system
 
 @21:56 Flashcard work #flashcards-web

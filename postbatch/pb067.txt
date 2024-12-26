@@ -1,2 +1,2 @@
 @2024-12-22 Met day, First time in Grand Central Station
-@19:14 Zulip chat taught be about the TryFrom trait #dz/rust/std/convert/TryFrom
+@19:14 Zulip chat taught be about the TryFrom trait #dz:rust/std/convert/TryFrom

@@ -22,4 +22,4 @@
 
 @19:26 215 review #LC750-review
 
-@19:41 Forgot how to use heapq #dz/leetcode/problems/215_kth_largest_element #timelog:00:13:00
+@19:41 Forgot how to use heapq #dz:leetcode/problems/215_kth_largest_element #timelog:00:13:00

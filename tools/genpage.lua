@@ -399,7 +399,7 @@ function get_comments(db, nodename)
         "substr(logtags.tag,4) as dznode " ..
         "FROM logtags " ..
         "INNER JOIN logs on logs.rowid = logtags.logid " ..
-        "WHERE tag LIKE 'dz/%'" ..
+        "WHERE tag LIKE 'dz:%'" ..
         "AND dznode IS '" .. nodename .. "' " ..
         "ORDER BY day ASC, time ASC" ..
         ";"

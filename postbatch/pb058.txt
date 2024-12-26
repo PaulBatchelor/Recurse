@@ -1,7 +1,7 @@
 @2024-12-10 Tuesday, December 10th
 @08:43 finish up LC 2095 #LC75-review #timelog:00:18:09
 
-@08:57 fast/slow pointer added to linked paradigm #dz/leetcode/data_structures/linked_list/fast_slow_pointer
+@08:57 fast/slow pointer added to linked paradigm #dz:leetcode/data_structures/linked_list/fast_slow_pointer
 I didn't want to keep referencing @!(dzref "leetcode/references/floyds_algorithm")!@
 for things unrelated to cycle detection, so I made this subnode.
 
@@ -19,7 +19,7 @@ for things unrelated to cycle detection, so I made this subnode.
 
 @13:31 827 research #LC75-review #timelog:00:20:18
 
-@13:36 Looks like my first solution was the approach #LC75-review #dz/leetcode/problems/872_leaf_similar_trees
+@13:36 Looks like my first solution was the approach #LC75-review #dz:leetcode/problems/872_leaf_similar_trees
 The editorial solution has something very slick with
 yield() syntax.
 

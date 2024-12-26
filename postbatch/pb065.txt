@@ -1,7 +1,7 @@
 @2024-12-19 Thursday December 19th
 @10:41 Even more 2462 #LC75-review #timelog:00:18:00
 
-@10:45 Grokking intuition for initial filling of queues #dz/leetcode/problems/2462_total_cost_hire_k_workers
+@10:45 Grokking intuition for initial filling of queues #dz:leetcode/problems/2462_total_cost_hire_k_workers
 I've been struggling with a bit of logic here in the
 editorial solution. It has to do with how to initially
 fill up the two queues.
