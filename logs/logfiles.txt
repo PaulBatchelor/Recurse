@@ -138,3 +138,13 @@ codestudy/logs/excalidraw.log
 postbatch/pb056.txt
 postbatch/pb057.txt
 postbatch/pb058.txt
+postbatch/pb059.txt
+postbatch/pb060.txt
+postbatch/pb061.txt
+postbatch/pb062.txt
+postbatch/pb063.txt
+postbatch/pb064.txt
+postbatch/pb065.txt
+postbatch/pb066.txt
+postbatch/pb067.txt
+postbatch/pb068.txt
