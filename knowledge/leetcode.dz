@@ -1019,6 +1019,7 @@ co $ paradigms/dynamic_programming
 ns +problems/1143_longest_common_subsequence
 
 nn solutions
+co $ ..
 
 ns +solutions
 
