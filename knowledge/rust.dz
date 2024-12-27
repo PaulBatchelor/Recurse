@@ -252,3 +252,40 @@ nn embedded_rust/toc/01_introduction/01_02_no_std
 ln 1.2: A no-std rust environment
 hl https://docs.rust-embedded.org/book/intro/no-std.html
 co $ ..
+
+nn std/slice
+hl https://doc.rust-lang.org/std/slice/index.html
+ln module for the slice primitive
+co $ ..
+
+nn std/slice/primitive
+hl https://doc.rust-lang.org/std/primitive.slice.html
+co $ ..
+
+nn std/env
+hl https://doc.rust-lang.org/std/env/index.html
+ln env: inspection and manipulation of rust environment
+co $ ..
+
+nn std/env/args
+hl https://doc.rust-lang.org/std/env/fn.args.html
+ln args(): returns the argument that this command was
+ln started with (normally passed via the command line)
+co $ ..
+
+nn std/env/structs
+
+nn std/env/structs/args
+hl https://doc.rust-lang.org/std/env/struct.Args.html
+ln args struct
+co $ ..
+
+nn std/iter/skip
+hl https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.skip
+ln skip() the first n elements
+co $ ..
+
+nn std/ops/not
+hl https://doc.rust-lang.org/std/ops/trait.Not.html
+ln Not trait
+co $ ..

@@ -42,12 +42,11 @@ knowledge/system_design_interview.dz
 knowledge/ddia.dz
 knowledge/excalidraw.dz
 knowledge/dagzet.dz
-codestudy/dz/excalidraw.dz
+codestudy/dz/excalidraw/excalidraw.dz codestudy/dz/excalidraw/files.dz
 knowledge/vscode.dz
 knowledge/use_the_index_luke.dz
 knowledge/lpc.dz
-links/links.dz
-links/notes.dz
+links/links.dz links/notes.dz
 knowledge/sqlite.dz
 knowledge/databases.dz
 knowledge/data_structures.dz

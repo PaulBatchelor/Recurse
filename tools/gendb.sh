@@ -51,18 +51,20 @@ function dagzet_util()
 }
 
 function add_to_dagzet() {
-    DZFILE=$1
-    if [ -f $DZFILE ]
-    then
-        # echo $DZFILE
-        # $LUA $DAGZET_LUA $DZFILE #| sqlite3 a.db
-        echo $DZFILE
-        #dagzet_util $DZFILE | sqlite3 a.db
-        dagzet $DZFILE | sqlite3 a.db
-        #$DAGZET $DZFILE | sqlite3 a.db
-    else
-        echo "Warning: $DZFILE does not exist"
-    fi
+    #DZFILE=$1
+    echo $*
+    dagzet $* | sqlite3 a.db
+    # if [ -f $DZFILE ]
+    # then
+    #     # echo $DZFILE
+    #     # $LUA $DAGZET_LUA $DZFILE #| sqlite3 a.db
+    #     echo $DZFILE
+    #     #dagzet_util $DZFILE | sqlite3 a.db
+    #     dagzet $DZFILE | sqlite3 a.db
+    #     #$DAGZET $DZFILE | sqlite3 a.db
+    # else
+    #     echo "Warning: $DZFILE does not exist"
+    # fi
 
 }
 

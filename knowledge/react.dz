@@ -58,21 +58,18 @@ ln State: A Components Memory
 hl https://react.dev/learn/state-a-components-memory
 co $ thinking_in_react
 cr referenced
-td read this
 
 nn your_first_component
 ln Your First Component
 hl https://react.dev/learn/your-first-component
 co $ thinking_in_react
 cr referenced
-td read this
 
 nn passing_props_component
 ln Passing Props to a Component
 hl https://react.dev/learn/passing-props-to-a-component
 co $ thinking_in_react
 cr referenced
-td read this
 
 nn usestate_ref
 ln useState reference
@@ -85,7 +82,6 @@ nn soapnotescribe_audiorecorder
 hl https://github.com/josephrmartinez/soapnotescribe/blob/main/app/components/AudioRecorder.tsx
 ln soapnotescribe: audio recorder
 rm JM's project, mentioned this code in zulip chat
-td study code as a codestudy
 
 nn lua_react
 hl https://github.com/jsdotlua/react-lua

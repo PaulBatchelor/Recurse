@@ -3,7 +3,7 @@ gr topics related to the sqlite database
 
 nn website
 hl https://www.sqlite.org/
-ln SQLIte homepage
+ln SQLite homepage
 
 nn past_present_future
 hl https://www.vldb.org/pvldb/vol15/p3535-gaffney.pdf
@@ -20,3 +20,11 @@ ln the SQLite query optimizer overview
 nn query_optimizer_overview/07_joins
 hl https://www.sqlite.org/optoverview.html#joins
 ln Joins
+
+nn build_your_own
+hl https://app.codecrafters.io/courses/sqlite/overview
+ln Build your own sqlite
+
+nn git
+hl https://github.com/sqlite/sqlite
+ln Official git mirror of SQLite
