@@ -1,0 +1,11 @@
+ns git
+
+nn tasks
+ln some git tasks I run into
+
+nn tasks/change_commit_submodule
+ln how to change commit of submodule:
+ln turns out you can go into the submodule
+ln directory and run "git checout COMMIT"
+ln without any calls to git-submodule
+co $ ..
