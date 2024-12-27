@@ -1008,3 +1008,56 @@ hl https://leetcode.com/problems/domino-and-tromino-tiling
 co $ leetcode75
 co $ paradigms/dynamic_programming
 co $ paradigms/dynamic_programming/1d
+
+nn problems/1143_longest_common_subsequence
+hl https://leetcode.com/problems/longest-common-subsequence
+ln 1143: longest common subsequence
+co $ leetcode75
+co $ paradigms/dynamic_programming/2d
+co $ paradigms/dynamic_programming
+
+ns +problems/1143_longest_common_subsequence
+
+nn solutions
+
+ns +solutions
+
+nn 01_memoization
+nn 02_improved_memoization
+nn 03_dynamic_programming
+nn 04_dynamic_programming_space_optimization
+
+zz solutions
+ns ..
+
+zz problems/1143_longest_common_subsequence
+ns ../..
+
+nn references/longest_common_subsequence
+hl https://en.wikipedia.org/wiki/Longest_common_subsequence
+ln Longest Common Subsequence (Wikipedia)
+co $ problems/1143_longest_common_subsequence
+
+nn paradigms/dynamic_programming/2d
+ln two-dimensional dynamic programming
+co $ ..
+
+nn references/memoization
+hl https://en.wikipedia.org/wiki/Memoization
+ln memoization: adds caching to a function that has 
+ln no side effects
+co $ paradigms/dynamic_programming
+cr in DP, used on recursive functions for top-down
+cr solution that starts with the initial problem,
+cr and recursively calls itself to solve smaller problems
+co $ references/bottom_up_top_down
+cr used in top-down DP problems
+
+nn references/tabulation
+ln tabulation: uses a table to keep track of subproblem
+ln results, and works in a bottom-up manner, solving
+ln the smallest subproblems before the large ones in
+ln an iterative manner.
+co $ paradigms/dynamic_programming
+cr often people use "tabulation" and "dynamic programming"
+cr interchangeably.

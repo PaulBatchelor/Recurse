@@ -305,3 +305,5 @@ Link: @!(dzref "webdev/nextjs/learn_dashboard_app")!@
 First addition, using double-dot notation
 like "ns ../a". Second addition, using '+' to
 append paths to the current namespace, like "ns +b".
+
+@dzbrowse-generator create generator for dzbrowse
