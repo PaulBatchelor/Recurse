@@ -1,0 +1,22 @@
+@2024-12-28
+@10:15 714 Best time to buy/sell stock with transaction fee #LC75-review #timelog:01:04:34
+
+@11:20 714 initial review #LC75-review
+
+@11:22 How far I got with my own intution #dz:leetcode/problems/714_best_time_buy_sell_stock_transaction_free
+I knew it was a 2d dynamic programming problem because it
+told me on LC75. I did not write any code. I spent most
+of my time trying to get the table right.
+---
+You can go bottoms-up to find the max profit. Start
+by looking between two days. It will either be 0 or
+the difference between the two days (minus the fee) if
+it's positive. From there you can build up, gradually
+adding days.
+---
+The thing that's tripping me up is how you start
+accumulating buy/sell pairs. I'm missing that logic
+in my table.
+
+@11:33 I need a small break from this problem I can't read the editorial #dz:leetcode/problems/714_best_time_buy_sell_stock_transaction_free
+will return later today

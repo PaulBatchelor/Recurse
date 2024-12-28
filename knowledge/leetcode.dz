@@ -1062,3 +1062,16 @@ ln an iterative manner.
 co $ paradigms/dynamic_programming
 cr often people use "tabulation" and "dynamic programming"
 cr interchangeably.
+
+nn problems/714_best_time_buy_sell_stock_transaction_free
+hl https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee
+ln 714: Best time to buy/sell stock transaction fee
+co $ leetcode75
+co $ paradigms/dynamic_programming
+co $ paradigms/dynamic_programming/2d
+
+nn references/dynamic_programming_explore
+hl https://leetcode.com/explore/featured/card/dynamic-programming/630/an-introduction-to-dynamic-programming/
+ln dynamic programming explore card
+co $ paradigms/dynamic_programming
+td read explore card
