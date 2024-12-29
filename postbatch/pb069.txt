@@ -1,7 +1,7 @@
 @2024-12-28
 @10:15 714 Best time to buy/sell stock with transaction fee #LC75-review #timelog:01:04:34
 
-@11:20 714 initial review #LC75-review
+@11:20 714 initial review #LC75-review #timelog:00:11:14
 
 @11:22 How far I got with my own intution #dz:leetcode/problems/714_best_time_buy_sell_stock_transaction_free
 I knew it was a 2d dynamic programming problem because it

@@ -43,6 +43,7 @@ knowledge/ddia.dz
 knowledge/excalidraw.dz
 knowledge/dagzet.dz
 codestudy/dz/excalidraw/excalidraw.dz codestudy/dz/excalidraw/files.dz
+codestudy/dz/ripgrep/files.dz
 knowledge/vscode.dz
 knowledge/use_the_index_luke.dz
 knowledge/lpc.dz

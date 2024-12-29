@@ -1070,8 +1070,13 @@ co $ leetcode75
 co $ paradigms/dynamic_programming
 co $ paradigms/dynamic_programming/2d
 
-nn references/dynamic_programming_explore
+nn explore
+ln leetcode explore
+hl https://leetcode.com/explore/
+
+nn explore/dynamic_programming_explore
 hl https://leetcode.com/explore/featured/card/dynamic-programming/630/an-introduction-to-dynamic-programming/
 ln dynamic programming explore card
 co $ paradigms/dynamic_programming
-td read explore card
+td read dynamic programming explore card
+co $ ..
