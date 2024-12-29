@@ -1080,3 +1080,10 @@ ln dynamic programming explore card
 co $ paradigms/dynamic_programming
 td read dynamic programming explore card
 co $ ..
+
+nn problems/136_single_number
+hl https://leetcode.com/problems/single-number/
+co $ problems/137_single_number_2
+cr simlar
+co $ leetcode75
+co $ paradigms/bit_manipulation
