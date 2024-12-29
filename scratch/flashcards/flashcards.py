@@ -74,7 +74,7 @@ class FlashCards:
         ])
 
         res = self.db.execute(query)
-        
+
         # load results into card structure
 
         new_cards = []
@@ -123,7 +123,7 @@ class FlashCards:
 
             # level 3 has 2/11 cards, or ~18%
             math.floor(total_cache_size * (2/11)),
-       
+
             # let it be remainder
             0,
         ]
@@ -147,7 +147,7 @@ class FlashCards:
             print(f"filling cache for level {lvl} ({ncards[lvl]} cards)")
             self.cache[lvl] = self.read_cards_from_disk(ncards[lvl], lvl)
             ncached += len(self.cache[lvl])
-        
+
         if ncached < total_cache_size:
             needed = total_cache_size - ncached
             print(f"Attempting to bucket {needed} more cards")
@@ -238,13 +238,13 @@ class FlashCards:
                     newlevel = (level + i) % 4
                     if len(self.cache[newlevel]) > 0:
                         card = self.cache[newlevel].pop()
-            
+
             # fallback: select card from bucket
             if card is None and len(self.bucket) > 0:
                 card = self.bucket.pop()
-    
+
             deck.append(self.name_to_card(card))
-      
+
         return deck
 
     def present(self, deck):
