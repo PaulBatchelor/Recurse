@@ -4,3 +4,5 @@ I am learnig how to use the threading module in python,
 and getting more familiar with the SimpleHTTPRequestHandler
 class. The KeyboardInterrupt Exception trick was also
 nice to know about, seems to cleanly close the server
+
+@11:00 Light flash-carding #flashcards #timelog:00:10:00

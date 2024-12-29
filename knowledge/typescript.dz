@@ -190,11 +190,22 @@ hl https://www.typescriptlang.org/docs/handbook/2/classes.html#abstract-classes-
 ln An abstract method or abstract field is one that hasn't
 ln had an implementation yet, and much exist inside of an
 ln abstract class
-ff What is abstract typescript?
+ff What is the "abstract" keyword in typescript?
 fb An abstract method or abstract field is one that hasn't
-fb had an implementation yet, and much exist inside of an
+fb had an implementation yet, and must exist inside of an
 fb abstract class
-td Is an abstract class the same as a virtual class in c++?
+
+nn abstract_vs_virtual_methods
+ln Abstract methods force derived classes to override
+ln the method because there is no base implementation.
+ln Virtual methods have a fallback.
+co $ abstract
+cr abstract vs virtual methods
+ff What is the difference between virtual and abstract
+ff methods?
+fb Abstract methods do not have a fallback implementation,
+fb while virtual ones have a default. This means any derived
+fb class must implement an abstract method.
 
 nn declaration_files_wikipedia
 hl https://en.wikipedia.org/wiki/TypeScript#Declaration_files

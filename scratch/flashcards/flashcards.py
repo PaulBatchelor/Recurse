@@ -222,6 +222,7 @@ class FlashCards:
         rd_len = len(rd)
 
         deck = []
+        deck_set = set()
 
         for _ in range(ncards):
             # pick a level 1-4 from distributed RNG
@@ -243,7 +244,11 @@ class FlashCards:
             if card is None and len(self.bucket) > 0:
                 card = self.bucket.pop()
 
-            deck.append(self.name_to_card(card))
+            # quick fix: avoid duplicates, even if it means we
+            # miss a card
+            if card not in deck_set:
+                deck_set.add(card)
+                deck.append(self.name_to_card(card))
 
         return deck
 
