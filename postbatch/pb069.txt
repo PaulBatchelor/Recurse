@@ -19,4 +19,6 @@ accumulating buy/sell pairs. I'm missing that logic
 in my table.
 
 @11:33 I need a small break from this problem I can't read the editorial #dz:leetcode/problems/714_best_time_buy_sell_stock_transaction_free
-will return later today
+will return later today?
+
+@21:05 Examine 714 #LC75-review #timelog:00:10:49
