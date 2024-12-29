@@ -1211,26 +1211,31 @@ zz 0_intro/3_when_to_use
 ns ../..
 
 
-nn 1_stategic_approach
+nn 1_strategic_approach
 co $ ..
 hl https://leetcode.com/explore/featured/card/dynamic-programming/631/strategy-for-solving-dp-problems/
+td read
 
 nn 2_common_patterns
 co $ ..
 hl https://leetcode.com/explore/featured/card/dynamic-programming/632/common-patterns-in-dp-problems/
+td read
 
 nn 3_common_patterns_cont
 co $ ..
 hl https://leetcode.com/explore/featured/card/dynamic-programming/633/common-patterns-continued/
+td read
 
 
 nn 4_paths_in_matrix
 co $ ..
 hl https://leetcode.com/explore/featured/card/dynamic-programming/634/matrix-path-based-dp/
+td read
 
 nn 5_more_practice_problems
 co $ ..
 hl https://leetcode.com/explore/featured/card/dynamic-programming/647/more-practice-problems/
+td read
 
 zz explore/dynamic_programming
 ns ../..
