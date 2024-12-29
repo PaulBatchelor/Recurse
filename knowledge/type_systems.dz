@@ -1,0 +1,117 @@
+ns types
+nn type_theory
+hl https://en.wikipedia.org/wiki/Type_theory
+
+ns types/type_theory
+
+nn polymorphism
+hl https://en.wikipedia.org/wiki/Polymorphism_(computer_science)
+co $ ..
+
+nn polymorphism/subtyping
+hl https://en.wikipedia.org/wiki/Subtyping
+co $ ..
+
+nn polymorphism/subtyping/covariance_contravariance
+hl https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)
+co $ ..
+
+nn polymorphism/parametric
+hl https://en.wikipedia.org/wiki/Parametric_polymorphism
+co $ ..
+
+nn polymorphism/ad_hoc
+hl https://en.wikipedia.org/wiki/Ad_hoc_polymorphism
+co $ ..
+
+ns types/type_systems
+gr type systems, as curated by wikipedia
+
+nn wikipedia
+hl https://en.wikipedia.org/wiki/Type_system
+td populate type system using table of contents
+
+nn general
+ln General Concepts
+
+ns +general
+
+nn type_safety
+hl https://en.wikipedia.org/wiki/Type_safety
+
+nn strong_vs_weak
+hl https://en.wikipedia.org/wiki/Strong_and_weak_typing
+
+zz general
+ns ..
+
+nn major
+ln Major Categories
+
+ns +major
+
+nn static_vs_dynamic
+co $ ..
+ns +static_vs_dynamic
+
+
+nn static
+hl https://en.wikipedia.org/wiki/Type_system#Static_type_checking
+co $ ..
+
+nn dynamic
+hl https://en.wikipedia.org/wiki/Type_system#Dynamic_type_checking_and_runtime_type_information
+co $ ..
+
+zz static_vs_dynamic
+ns ..
+
+nn manifest_vs_inferred
+co $ ..
+
+nn nominal_vs_structural
+co $ ..
+
+nn duck_typing
+co $ ..
+
+zz major
+ns ..
+
+nn minor
+ln Minor Categories
+
+ns +minor
+
+nn abstract
+co $ ..
+
+nn dependent
+co $ ..
+
+nn flow_sensitive
+co $ ..
+
+nn gradual
+co $ ..
+
+nn intersection
+co $ ..
+
+nn latent
+co $ ..
+
+nn refinement
+co $ ..
+
+nn substructural
+co $ ..
+
+nn unique
+co $ ..
+
+nn session
+co $ ..
+
+zz minor
+ns ..

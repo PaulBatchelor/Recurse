@@ -297,3 +297,6 @@ cr designed for security-first platforms like precursor
 
 cx python/docs/glossary/slice rust/std/slice
 cr python: [0:4], rust: [0..4]
+
+cx webdev/typescript/covariance_contravariance types/type_theory/polymorphism/subtyping/covariance_contravariance
+cx webdev/typescript/covariance_contravariance_wiki ^
