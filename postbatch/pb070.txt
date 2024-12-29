@@ -6,3 +6,5 @@ class. The KeyboardInterrupt Exception trick was also
 nice to know about, seems to cleanly close the server
 
 @11:00 Light flash-carding #flashcards #timelog:00:10:00
+
+@12:07 Looking at dynamic programming card #dz:leetcode/explore/dynamic_programming_explore #timelog:01:03:06

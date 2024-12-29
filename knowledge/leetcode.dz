@@ -1074,8 +1074,8 @@ nn explore
 ln leetcode explore
 hl https://leetcode.com/explore/
 
-nn explore/dynamic_programming_explore
-hl https://leetcode.com/explore/featured/card/dynamic-programming/630/an-introduction-to-dynamic-programming/
+nn explore/dynamic_programming
+hl https://leetcode.com/explore/featured/card/dynamic-programming/
 ln dynamic programming explore card
 co $ paradigms/dynamic_programming
 td read dynamic programming explore card
@@ -1087,3 +1087,197 @@ co $ problems/137_single_number_2
 cr simlar
 co $ leetcode75
 co $ paradigms/bit_manipulation
+
+ns +explore/dynamic_programming
+
+nn 0_intro
+co $ ..
+hl https://leetcode.com/explore/featured/card/dynamic-programming/630/an-introduction-to-dynamic-programming/
+
+nn 0_intro/1_what_is
+ln What is dynamic programming?
+hl https://leetcode.com/explore/featured/card/dynamic-programming/630/an-introduction-to-dynamic-programming/4034/
+
+ns +0_intro/1_what_is
+
+co $ ../../../../references/fibbonacci
+cr fibbonacci is a classic example of DP
+
+nn kinds_of_problems
+ln Kinds of problems dynamic programming solves
+co $ ..
+
+nn kinds_of_problems/overlapping_subproblems
+ln Overlapping Subproblems
+co $ ../../../../../../glossary/overlapping_subproblems
+co $ ..
+co $ ../../../../../../paradigms/divide_and_conquer
+cr divide and conquer problems break a problem
+cr into subproblems, but these are not overlapping.
+cr DP and divide and conquer are often mistaken
+cr for one another for this reason.
+
+nn kinds_of_problems/optimal_substructure
+ln Optimal Subtructure
+co $ ../../../../../../glossary/optimal_substructure
+co $ ..
+co $ ../../../../../../paradigms/greedy
+cr greedy problems have optimal substructure, but
+cr the not overlapping subproblems 
+
+zz 0_intro/1_what_is
+ns ../..
+
+nn 0_intro/2_top_down_bottom_up
+hl https://leetcode.com/explore/featured/card/dynamic-programming/630/an-introduction-to-dynamic-programming/4035/
+ln top down vs bottom up
+co $ ..
+
+ns +0_intro/2_top_down_bottom_up
+
+nn top_down
+ln top-down, AKA memoization
+co $ ..
+co $ ../../../../../glossary/memoization
+cr AKA
+co $ ../../../../../glossary/recursion
+cr implemented with recursion, made efficient
+cr with memoization
+
+nn bottoms_up
+ln bottoms-up, AKA tabulation
+co $ ../../../../../glossary/tabulation
+cr AKA
+co $ ..
+
+nn which_is_better
+ln which is better?
+co $ ..
+co bottoms_up $
+co top_down $
+
+nn which_is_better/bottoms_up_faster_runtime
+co $ ..
+ln runtime is usually faster, iteration doesn't
+ln have the overhead top-down has
+
+nn which_is_better/top_down_easier_to_write
+co $ ..
+co top_down $
+ln easier to write: with recursion, ordering
+ln of subproblem does not matter. with tabulation,
+ln there needs to be a logical ordering of
+ln solving subproblems
+
+zz ns 0_intro/2_top_down_bottom_up
+ns ../..
+
+nn 0_intro/3_when_to_use
+ln When to use DP
+hl https://leetcode.com/explore/featured/card/dynamic-programming/630/an-introduction-to-dynamic-programming/4094/
+co $ ..
+
+ns +0_intro/3_when_to_use
+
+nn 1_find_optimum_value
+ln A characteristic that is common in DP problems
+ln is asking for the optimum value (min/max) of
+ln something. For example, the minimum cost
+ln of doing..., the max profit of from ...,
+ln how many ways to..., what is the longest possible...,
+ln is it possible to reach a certain point..
+co $ ../../../../../paradigms/greedy
+cr sometimes a problem in this kind of format is meant to
+cr be solved with a greedy algorithm
+co $ ..
+
+nn 2_future_decisions_depend_on_earlier_ones
+ln A characteristic of DP problems is that
+ln Future decisions depend on eariler ones.
+co $ 1_find_optimum_value
+co $ ../../../../../paradigms/greedy
+cr this characteristic is what makes a greedy algorithm
+cr invalid for a DP problem
+co $ ..
+
+co ../../../../../problems/198_house_robber $
+cr each decision will affect which options are
+cr available to the rubber in the future
+co ../../../../../problems/300_longest_increasing_subsequence $
+td study example problems more carefully
+
+
+zz 0_intro/3_when_to_use
+ns ../..
+
+
+nn 1_stategic_approach
+co $ ..
+hl https://leetcode.com/explore/featured/card/dynamic-programming/631/strategy-for-solving-dp-problems/
+
+nn 2_common_patterns
+co $ ..
+hl https://leetcode.com/explore/featured/card/dynamic-programming/632/common-patterns-in-dp-problems/
+
+nn 3_common_patterns_cont
+co $ ..
+hl https://leetcode.com/explore/featured/card/dynamic-programming/633/common-patterns-continued/
+
+
+nn 4_paths_in_matrix
+co $ ..
+hl https://leetcode.com/explore/featured/card/dynamic-programming/634/matrix-path-based-dp/
+
+nn 5_more_practice_problems
+co $ ..
+hl https://leetcode.com/explore/featured/card/dynamic-programming/647/more-practice-problems/
+
+zz explore/dynamic_programming
+ns ../..
+
+nn glossary
+ln Glossary of Terms
+
+nn references/fibbonacci
+hl https://en.wikipedia.org/wiki/Fibonacci_sequence
+
+nn glossary/overlapping_subproblems
+ln overlapping subproblems: small versions of the original
+ln problem that can be used multiple times.
+co $ ..
+
+nn glossary/optimal_substructure
+ln optimal substructure: an optimal solution
+ln can be formed from optimal solutions to the
+ln overlapping subproblems of the original problem
+
+nn paradigms/divide_and_conquer
+ln divide and conquer
+
+nn glossary/tabulation
+ln Tabulation
+co $ ..
+co references/tabulation $
+
+nn glossary/memoization
+ln Memoization: memoization a result means to store
+ln the result of of a function call, usually in a hashmap
+ln or array, so that when the same call is made again,
+ln we can simply return the memoized result instead of
+ln recalculating the result
+co $ ..
+co references/memoization $
+
+nn glossary/recursion
+ln recursion
+
+nn problems/198_house_robber
+hl https://leetcode.com/problems/house-robber/
+ln 198 house robber
+co $ leetcode75
+co $ paradigms/dynamic_programming/1d
+
+nn problems/300_longest_increasing_subsequence
+hl https://leetcode.com/problems/longest-increasing-subsequence
+ln 300: longest increasing subsequence
+td complete problem
