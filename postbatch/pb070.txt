@@ -1,0 +1,6 @@
+@2024-12-29 Second to last day in NYC for December
+@10:28 Making my flashcards app more convenient to use #dz:python/docs/stdlib/concurrency/threading #dz:python/docs/stdlib/internet/http/server/SimpleHTTPRequestHandler #dz:python/docs/stdlib/exceptions/KeyboardInterrupt
+I am learnig how to use the threading module in python,
+and getting more familiar with the SimpleHTTPRequestHandler
+class. The KeyboardInterrupt Exception trick was also
+nice to know about, seems to cleanly close the server

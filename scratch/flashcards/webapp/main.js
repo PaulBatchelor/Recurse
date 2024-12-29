@@ -50,7 +50,7 @@ function updateCard(pos) {
     card_name.innerText = flashcards[pos].name;
     let path = flashcards[pos].name .split("/");
     card_link.href =
-        "http://localhost:8080/wiki/dz/" +
+        "http://localhost:8080/dz/" +
         path.slice(0, -1).join("/") + "#" + path[path.length - 1]
     console.log(flashcards[pos].name);
 }

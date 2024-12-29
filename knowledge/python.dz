@@ -30,11 +30,11 @@ hl https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str
 
 nn docs/stdtypes/str/isalnum
 hl https://docs.python.org/3/library/stdtypes.html#str.isalnum
-ln str.isalnum(): Return True if all characters in the 
-ln string are alphanumeric and there is at least one 
-ln character, False otherwise. A character c is 
-ln alphanumeric if one of the following returns True: 
-ln c.isalpha(), c.isdecimal(), c.isdigit(), or 
+ln str.isalnum(): Return True if all characters in the
+ln string are alphanumeric and there is at least one
+ln character, False otherwise. A character c is
+ln alphanumeric if one of the following returns True:
+ln c.isalpha(), c.isdecimal(), c.isdigit(), or
 ln c.isnumeric().
 co $ docs/stdtypes/str
 
@@ -47,8 +47,8 @@ co $ docs/stdtypes/str/isalnum
 
 nn docs/stdtypes/str/isalpha
 hl https://docs.python.org/3/library/stdtypes.html#str.isalpha
-ln str.isalpha(): Return True if all characters in the 
-ln string are alphabetic and there is at least one 
+ln str.isalpha(): Return True if all characters in the
+ln string are alphabetic and there is at least one
 ln character, False otherwise.
 co $ docs/stdtypes/str
 
@@ -59,9 +59,9 @@ co $ docs/stdtypes/str/isalpha
 
 nn docs/stdtypes/str/isnumeric
 hl https://docs.python.org/3/library/stdtypes.html#str.isnumeric
-ln str.isalpha(): Return True if all characters in the 
-ln string are alphabetic and there is at least one 
-ln character, False otherwise. 
+ln str.isalpha(): Return True if all characters in the
+ln string are alphabetic and there is at least one
+ln character, False otherwise.
 co $ docs/stdtypes/str
 
 nn flashcards/numeric
@@ -94,10 +94,10 @@ co $ docs/stdtypes/str/upper
 
 nn docs/stdlib/filter
 hl https://docs.python.org/3/library/functions.html#filter
-ln filter(function, iterable): Construct an iterator from those elements 
-ln of iterable for which function is true. iterable may 
-ln be either a sequence, a container which supports 
-ln iteration, or an iterator. 
+ln filter(function, iterable): Construct an iterator from those elements
+ln of iterable for which function is true. iterable may
+ln be either a sequence, a container which supports
+ln iteration, or an iterator.
 co $ docs/stdlib
 
 nn docs/stdlib
@@ -105,11 +105,11 @@ ln Python standard library
 
 nn docs/stdlib/map
 hl https://docs.python.org/3/library/functions.html#map
-ln map(function, iterable, *iterables): Return an 
-ln iterator that applies function to every item of 
-ln iterable, yielding the results. If additional 
-ln iterables arguments are passed, function must take 
-ln that many arguments and is applied to the items from 
+ln map(function, iterable, *iterables): Return an
+ln iterator that applies function to every item of
+ln iterable, yielding the results. If additional
+ln iterables arguments are passed, function must take
+ln that many arguments and is applied to the items from
 ln all iterables in parallel.
 co $ docs/stdlib/filter
 cr map/filter pairing
@@ -125,7 +125,7 @@ co $ docs/reference
 
 nn docs/reference/expressions/lambda
 ln Lambda expressions (sometimes called lambda forms) are
-ln used to create anonymous functions. 
+ln used to create anonymous functions.
 hl https://docs.python.org/3/reference/expressions.html#lambda
 co $ docs/reference/expressions
 co $ docs/stdlib/map
@@ -167,11 +167,11 @@ co $ docs/stdlib/data_types/collections
 
 nn docs/glossary/hashable
 hl https://docs.python.org/3/glossary.html#term-hashable
-ln An object is hashable if it has a hash value which 
-ln never changes during its lifetime (it needs a 
-ln __hash__() method), and can be compared to other 
-ln objects (it needs an __eq__() method). Hashable 
-ln objects which compare equal must have the same hash 
+ln An object is hashable if it has a hash value which
+ln never changes during its lifetime (it needs a
+ln __hash__() method), and can be compared to other
+ln objects (it needs an __eq__() method). Hashable
+ln objects which compare equal must have the same hash
 ln value.
 
 nn docs/stdtypes/set
@@ -238,8 +238,8 @@ co $ ..
 nn docs/stdlib/re/sub
 hl https://docs.python.org/3/library/re.html#re.sub
 ln re.sub(pattern, repl, string, count=0, flags=0):
-ln Return the string obtained by replacing the leftmost 
-ln non-overlapping occurrences of pattern in string by 
+ln Return the string obtained by replacing the leftmost
+ln non-overlapping occurrences of pattern in string by
 ln the replacement repl.
 co $ ..
 
@@ -294,11 +294,11 @@ hl https://docs.python.org/3/glossary.html#term-generator-iterator
 ln Generator Iterator: an object created by a generator.
 co $ docs/glossary/generator
 co $ docs/reference/expressions/yield
-ln Each yield temporarily suspends processing, 
-ln remembering the location execution state (including 
-ln local variables and pending try-statements). When the 
-ln generator iterator resumes, it picks up where it left 
-ln off (in contrast to functions which start fresh on 
+ln Each yield temporarily suspends processing,
+ln remembering the location execution state (including
+ln local variables and pending try-statements). When the
+ln generator iterator resumes, it picks up where it left
+ln off (in contrast to functions which start fresh on
 ln every invocation).
 
 nn docs/stdtypes/mapping_types
@@ -306,8 +306,8 @@ hl https://docs.python.org/3/library/stdtypes.html#mapping-types-dict
 co $ ..
 
 nn docs/stdtypes/mapping_types/setdefault
-ln setdefault: If key is in the dictionary, return its 
-ln value. If not, insert key with a value of default and 
+ln setdefault: If key is in the dictionary, return its
+ln value. If not, insert key with a value of default and
 ln return default. default defaults to None.
 hl https://docs.python.org/3/library/stdtypes.html#dict.setdefault
 co $ ..
@@ -342,8 +342,8 @@ ln one at a time.
 
 nn docs/stdlib/data_types/heapq
 hl https://docs.python.org/3/library/heapq.html
-ln This module provides an implementation of the heap 
-ln queue algorithm, also known as the priority queue 
+ln This module provides an implementation of the heap
+ln queue algorithm, also known as the priority queue
 ln algorithm.
 co $ ..
 rm min-heap
@@ -362,9 +362,9 @@ co $ ..
 
 nn heappushpop
 ln heappushpop(h, val):
-ln Push item on the heap, then pop and return the 
-ln smallest item from the heap. The combined action runs 
-ln more efficiently than heappush() followed by a 
+ln Push item on the heap, then pop and return the
+ln smallest item from the heap. The combined action runs
+ln more efficiently than heappush() followed by a
 ln separate call to heappop().
 ff What is heappushpop and why would you use it?
 fb heappushpop pushes an item onto the heap then returns
@@ -380,7 +380,7 @@ nn docs/stdlib/zip
 hl https://docs.python.org/3/library/functions.html#zip
 ln zip(): iterates over several objects in parallel,
 ln producing tuples with an item for each one.
-co $ .. 
+co $ ..
 
 nn docs/stdlib/bisect
 hl https://docs.python.org/3/library/bisect.html
@@ -408,10 +408,10 @@ co $ ..
 nn docs/stdlib/functools/lru_cache
 hl https://docs.python.org/3/library/functools.html#functools.lru_cache
 co $ ..
-ln Decorator to wrap a function with a memoizing 
-ln callable that saves up to the maxsize most recent 
-ln calls. It can save time when an expensive or I/O bound 
-ln function is periodically called with the same 
+ln Decorator to wrap a function with a memoizing
+ln callable that saves up to the maxsize most recent
+ln calls. It can save time when an expensive or I/O bound
+ln function is periodically called with the same
 ln arguments.
 co ../cache $
 cr because it never needs to to evict old values, cache is
@@ -530,7 +530,7 @@ co $ ..
 
 nn docs/stdtypes/bytes
 hl https://docs.python.org/3/library/stdtypes.html#bytes-objects
-ln bytes 
+ln bytes
 co $ ..
 
 nn docs/reference/data_model
@@ -625,10 +625,10 @@ co $ ..
 nn docs/glossary/slice
 hl https://docs.python.org/3/glossary.html#term-slice
 ln slice: An object usually containing a portion of a
-ln sequence. 
-ln A slice is created using the subscript notation, [] 
-ln with colons between numbers when several are given, 
-ln such as in variable_name[1:3:5]. The bracket 
+ln sequence.
+ln A slice is created using the subscript notation, []
+ln with colons between numbers when several are given,
+ln such as in variable_name[1:3:5]. The bracket
 ln (subscript) notation uses slice objects internally.
 co $ ..
 co $ ../../stdtypes/common_sequence_ops
@@ -637,3 +637,22 @@ nn pyright
 ln pyright: static type checker for python
 hl https://github.com/microsoft/pyright
 
+nn docs/stdlib/concurrency
+ln Modules for concurrent execution of code
+hl https://docs.python.org/3/library/concurrency.html
+co $ ..
+
+nn docs/stdlib/concurrency/threading
+hl https://docs.python.org/3/library/threading.html
+ln Threading: Thread-based parallelism
+co $ ..
+
+nn docs/stdlib/exceptions
+hl https://docs.python.org/3/library/exceptions.html
+ln Built-in Exceptions
+co $ ..
+
+nn docs/stdlib/exceptions/KeyboardInterrupt
+hl https://docs.python.org/3/library/exceptions.html#KeyboardInterrupt
+ln KeyboardInterrupt Exception
+co $ ..

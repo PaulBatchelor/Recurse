@@ -1,7 +1,10 @@
-from http.server import HTTPServer, BaseHTTPRequestHandler
+#!/usr/bin/env python3
+from http.server import HTTPServer, BaseHTTPRequestHandler, SimpleHTTPRequestHandler
 import json
 from flashcards import FlashCards
 from pprint import pprint
+import socketserver
+import threading
 
 def generate_flashcard_data():
     flashcards = FlashCards()
@@ -33,7 +36,7 @@ def generate_flashcard_data():
 
     return cards
 
-class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
+class CustomSimpleHTTPRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         if self.path == '/':
             self.send_response(200)
@@ -59,6 +62,32 @@ class SimpleHTTPRequestHandler(BaseHTTPRequestHandler):
         # Handle POST requests similarly
         pass
 
-server = HTTPServer(('localhost', 8001), SimpleHTTPRequestHandler)
-print('Server running on http://localhost:8001')
-server.serve_forever()
+def run_card_server():
+    server = HTTPServer(('localhost', 8001), CustomSimpleHTTPRequestHandler)
+    print('Server running on http://localhost:8001')
+    server.serve_forever()
+
+class CustomHandler(SimpleHTTPRequestHandler):
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, directory="webapp", **kwargs)
+
+def run_file_server():
+    PORT = 8000
+    with socketserver.TCPServer(("", PORT), CustomHandler) as httpd:
+        print("serving at port", PORT)
+        httpd.serve_forever()
+
+def start_servers():
+    card_server = threading.Thread(target=run_card_server)
+    file_server = threading.Thread(target=run_file_server)
+
+    card_server.start()
+    file_server.start()
+
+    try:
+        card_server.join()
+        file_server.join()
+    except KeyboardInterrupt:
+        print("Shutting down servers...")
+
+start_servers()
