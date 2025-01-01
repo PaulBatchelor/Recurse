@@ -48,3 +48,7 @@ reversed iterables using =reversed=.
 figured out top-down solution by myself.
 
 @15:19 attempt to work out bottoms up solution #dz:leetcode/problems/1143_longest_common_subsequence #timelog:00:06:50
+
+@15:19 dynamic programming explore card #dz:leetcode/problems/221_maximal_square #timelog:00:57:19
+
+@16:25 looking at editorial #dz:leetcode/problems/221_maximal_square #timelog:00:11:46
