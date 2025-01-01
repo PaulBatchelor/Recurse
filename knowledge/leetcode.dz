@@ -1214,7 +1214,60 @@ ns ../..
 nn 1_strategic_approach
 co $ ..
 hl https://leetcode.com/explore/featured/card/dynamic-programming/631/strategy-for-solving-dp-problems/
-td read
+
+ns +1_strategic_approach
+
+nn 1_framework
+co $ ..
+hl https://leetcode.com/explore/featured/card/dynamic-programming/631/strategy-for-solving-dp-problems/4096/
+ln A framework for DP problems
+co ../../../../problems/70_climbing_stairs $
+cr used as a sample problem for applying framework
+
+ns +1_framework
+
+nn state
+ln state: set of variables that can sufficiently describe
+ln a scenario.
+co $ ..
+
+nn state_variables
+ln state variables: variables that describe the state
+co $ ../state
+
+nn 1_store_answer_for_states
+ln A function or data structure that will compute/contain
+ln answer for states
+co $ ..
+co $ ../state
+
+nn 2_recurrance_relation
+ln a recurrance relation to transition between states
+co $ ..
+co $ ../state
+co $ ../../../../../glossary/recurrence_relation
+
+nn 3_base_cases
+co $ ..
+ln base cases, so that our recurrance relation
+ln doesn't go on infinitely.
+
+zz 1_framework
+ns ..
+
+nn 2_examples
+ln Example: House Robber (198), etc
+co problems/198_house_robber $
+co $ ..
+co problems/746_min_cost_climbing_stairs $
+
+ns +2_example_house_robber
+
+zz 2_examples
+ns ..
+
+zz 1_stragetic_approach
+ns ..
 
 nn 2_common_patterns
 co $ ..
@@ -1286,3 +1339,12 @@ nn problems/300_longest_increasing_subsequence
 hl https://leetcode.com/problems/longest-increasing-subsequence
 ln 300: longest increasing subsequence
 td complete problem
+
+nn glossary/recurrence_relation
+ln Recurrance Relation: an equation that
+ln relates different states with eachother.
+co $ ..
+
+nn problems/70_climbing_stairs
+hl https://leetcode.com/problems/climbing-stairs
+ln 70: climbing stairs

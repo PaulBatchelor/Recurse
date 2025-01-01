@@ -1,3 +1,35 @@
+# 2024-12-31: following explore card
+
+class Solution:
+    def rob(self, nums: List[int]) -> int:
+        if len(nums) == 1:
+            return nums[0]
+
+        dp = [0] * len(nums)
+
+        dp[0] = nums[0]
+        dp[1] = max(nums[0], nums[1])
+
+        for i in range(2, len(nums)):
+            dp[i] = max(nums[i] + dp[i - 2], dp[i - 1])
+        return dp[-1]
+    # top-down
+    def rob_topdown(self, nums: List[int]) -> int:
+        def dp(i):
+            if i == 0:
+                return nums[i]
+            if i == 1:
+                return max(nums[1], nums[0])
+
+            if i not in memo:
+                memo[i] = max(nums[i] + dp(i - 2), dp(i - 1))
+            return memo[i]
+
+        memo = {}
+
+        return dp(len(nums) - 1)
+
+
 # 2024-11-12 This one actually works. My previous attempt
 # I did a few months ago doesn't pass all the edge cases.
 # Approach: start with recursive approach, then add

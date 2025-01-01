@@ -1,0 +1,35 @@
+@2024-12-23 Monday, December 23rd
+@08:28 Getting my dagzet stuff working with link curation. #dz:python/docs/stdlib/cli #dz:python/docs/stdlib/runtime/sys/argv
+All I want to do at the moment is get an argument into
+my program ala argc/argv in C. The CLI stuff is a bit
+overkill, but nice to know it's included. sys.argv is what
+I wanted.
+
+@2024-12-26 Boxing Day
+@15:14 Working on a dagzet node validator. #dz:this/node/does/not/exist
+
+@17:26 Some link curation
+
+@2024-12-27
+
+@09:32 1143 longest common subsequence #timelog:00:33:28 #LC75-review
+
+@10:20 1143 study #LC75-review #timelog:00:32:06
+
+@10:34 studying approach 3 #dz:leetcode/1143_longest_common_subsequence/solutions/03_dynamic_programming
+This one is closest to how I was trying to think about
+the problem. It'd be nice to examine the other solutions
+at some point, but diminishing returns.
+
+@10:43 I was pretty close #dz:leetcode/1143_longest_common_subsequence/solutions/03_dynamic_programming
+The key difference was that they populated the table
+in reverse. To the point where I want to revisit my
+unreversed approach
+
+@10:60 I was actually VERY close #dz:leetcode/1143_longest_common_subsequence/solutions/03_dynamic_programming
+The crucial thing I missed was how to handle
+the matches. I didn't grok the diagonal movement
+along the table. If I had fixed on line of code, it
+would have worked
+
+@12:57 714 initially looksie #LC75-review
