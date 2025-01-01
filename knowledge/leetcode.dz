@@ -1359,6 +1359,7 @@ ln Sample multidimensional problems
 co $ ..
 hl https://leetcode.com/explore/featured/card/dynamic-programming/631/strategy-for-solving-dp-problems/4100/
 co ../../../../problems/1770_max_score_multiplication_operations $
+co ../../../../problems/1143_longest_common_subsequence $
 
 ns +5_examples_multidimensional
 
