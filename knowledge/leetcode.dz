@@ -1362,10 +1362,10 @@ co ../../../../problems/1770_max_score_multiplication_operations $
 co ../../../../problems/1143_longest_common_subsequence $
 co ../../../../problems/221_maximal_square $
 
-ns +5_examples_multidimensional
-
-zz 5_examples_multidimensional
-ns ..
+nn 6_time_space_complexity
+ln time and space complexity
+co $ ..
+hl https://leetcode.com/explore/featured/card/dynamic-programming/631/strategy-for-solving-dp-problems/4101/
 
 zz 1_stragetic_approach
 ns ..

@@ -67,3 +67,5 @@ pattern to think about for some "find the max" problems
 @18:20 studying the "better" solution in the editorial #dz:leetcode/problems/221_maximal_square #timelog:00:04:46
 Didn't really grok it, but it's basically a space optimized
 bottoms-up solution.
+
+@18:31 More dynamic programming explore card #dz:leetcode/explore/dynamic_programming/1_strategic_approach#6_time_space_complexity #timelog:00:06:56
