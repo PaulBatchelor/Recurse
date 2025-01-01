@@ -65,8 +65,8 @@ ln Dynamic Programming
 nn references/recurrence_relation
 hl https://en.wikipedia.org/wiki/Recurrence_relation
 ln Recurrence Relation: In mathematics, a recurrence
-ln relation is an equation according to which the n 
-ln nth term of a sequence of numbers is equal 
+ln relation is an equation according to which the n
+ln nth term of a sequence of numbers is equal
 ln to some combination of the previous terms.
 co $ references/optimal_substructure
 cr used to represent optimal substructure
@@ -76,18 +76,18 @@ cr Editorial: "the following recurrence relation holds"
 nn python/lru_cache
 hl https://docs.python.org/3/library/functools.html#functools.lru_cache
 ln lru_cache(): Decorator to wrap a function with a
-ln memoizing callable that saves up to the maxsize most recent calls. 
+ln memoizing callable that saves up to the maxsize most recent calls.
 co $ problems/322_coin_change
 cr used in top-down dynamic programming solution to avoid TLE
 
 nn references/bottom_up_top_down
 hl https://en.wikipedia.org/wiki/Bottom%E2%80%93up_and_top%E2%80%93down_design
-ln Bottom-up and Top-down design: are both strategies of 
-ln information processing and ordering knowledge, used in a 
-ln variety of fields including software, humanistic and 
-ln scientific theories (see systemics), and management and 
-ln organization. In practice they can be seen as a style of 
-ln thinking, teaching, or leadership. 
+ln Bottom-up and Top-down design: are both strategies of
+ln information processing and ordering knowledge, used in a
+ln variety of fields including software, humanistic and
+ln scientific theories (see systemics), and management and
+ln organization. In practice they can be seen as a style of
+ln thinking, teaching, or leadership.
 co $ paradigms/dynamic_programming
 cr Dynamic programming can come in top-down or bottoms-up approaches
 co $ problems/322_coin_change
@@ -238,10 +238,10 @@ co $ paradigms/backtracking
 
 nn references/knapsack_problem
 hl https://en.wikipedia.org/wiki/Knapsack_problem
-ln Knapsack problem: given a set of items, each with a 
-ln weight and a value, determine which items to include in 
-ln the collection so that the total weight is less than or 
-ln equal to a given limit and the total value is as large 
+ln Knapsack problem: given a set of items, each with a
+ln weight and a value, determine which items to include in
+ln the collection so that the total weight is less than or
+ln equal to a given limit and the total value is as large
 ln as possible.
 co $ problems/39_combination_sum
 cr this problem initially reminded me of a knapsack problem,
@@ -256,10 +256,10 @@ fb the total value is as large as possible.
 
 nn references/combinatorial_optimization
 hl https://en.wikipedia.org/wiki/Combinatorial_optimization
-ln Combinatorial optimization is a subfield of mathematical 
-ln optimization that consists of finding an optimal object 
-ln from a finite set of objects,[1] where the set of 
-ln feasible solutions is discrete or can be reduced to a 
+ln Combinatorial optimization is a subfield of mathematical
+ln optimization that consists of finding an optimal object
+ln from a finite set of objects,[1] where the set of
+ln feasible solutions is discrete or can be reduced to a
 ln discrete set.
 co references/knapsack_problem $
 cr knapsack problem is a problem in combinatorial optimization
@@ -500,7 +500,7 @@ hl https://leetcode.com/problems/majority-element
 co $ grind75
 co $ data_structures/hash_table
 cr hash table was most straight forward
-rm lots of weird solutions for this one, but hash map 
+rm lots of weird solutions for this one, but hash map
 
 nn references/boyer_moore_majority_vote_algorithm
 hl https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm
@@ -778,7 +778,7 @@ ln where two pointers are used to traverse through
 ln linked list at two different speeds, one usually 2x
 ln faster. This can be used for things like cycle detection,
 co $ references/floyds_algorithm
-cr Floyd's algorithm for cycle detection is the algorithm 
+cr Floyd's algorithm for cycle detection is the algorithm
 cr most often associated with fast/slow pointers.
 co problems/2095_delete_middle_node $
 co problems/141_linked_list_cycle $
@@ -1045,7 +1045,7 @@ co $ ..
 
 nn references/memoization
 hl https://en.wikipedia.org/wiki/Memoization
-ln memoization: adds caching to a function that has 
+ln memoization: adds caching to a function that has
 ln no side effects
 co $ paradigms/dynamic_programming
 cr in DP, used on recursive functions for top-down
@@ -1097,6 +1097,7 @@ hl https://leetcode.com/explore/featured/card/dynamic-programming/630/an-introdu
 nn 0_intro/1_what_is
 ln What is dynamic programming?
 hl https://leetcode.com/explore/featured/card/dynamic-programming/630/an-introduction-to-dynamic-programming/4034/
+co $ ..
 
 ns +0_intro/1_what_is
 
@@ -1123,7 +1124,7 @@ co $ ../../../../../../glossary/optimal_substructure
 co $ ..
 co $ ../../../../../../paradigms/greedy
 cr greedy problems have optimal substructure, but
-cr the not overlapping subproblems 
+cr the not overlapping subproblems
 
 zz 0_intro/1_what_is
 ns ../..
@@ -1234,6 +1235,7 @@ co $ ..
 nn state_variables
 ln state variables: variables that describe the state
 co $ ../state
+co $ ..
 
 nn 1_store_answer_for_states
 ln A function or data structure that will compute/contain
@@ -1241,15 +1243,15 @@ ln answer for states
 co $ ..
 co $ ../state
 
-nn 2_recurrance_relation
-ln a recurrance relation to transition between states
+nn 2_recurrence_relation
+ln a recurrence relation to transition between states
 co $ ..
 co $ ../state
 co $ ../../../../../glossary/recurrence_relation
 
 nn 3_base_cases
 co $ ..
-ln base cases, so that our recurrance relation
+ln base cases, so that our recurrence relation
 ln doesn't go on infinitely.
 
 zz 1_framework
@@ -1257,13 +1259,110 @@ ns ..
 
 nn 2_examples
 ln Example: House Robber (198), etc
-co problems/198_house_robber $
+co ../../../../problems/198_house_robber $
 co $ ..
-co problems/746_min_cost_climbing_stairs $
+co ../../../../problems/746_min_cost_climbing_stairs $
+co ../../../../problems/1137_nth_tribonacci_number $
+co ../../../../problems/740_delete_and_earn $
 
-ns +2_example_house_robber
+ns +2_examples
 
 zz 2_examples
+ns ..
+
+nn 3_multidimensional
+hl https://leetcode.com/explore/featured/card/dynamic-programming/631/strategy-for-solving-dp-problems/4098/
+ln Multidimensional DP
+co $ ..
+co $ ../../1_strategic_approach/1_framework/state_variables
+cr multidimensional problems are problems that have
+cr more than one state variable
+co ../../../../problems/1659_maximize_grid_happiness $
+cr multidimensional problem that requires 5 dimensions
+
+ns +3_multidimensional
+
+nn 1_index_along_input
+ln index along some input. This is usually used
+ln if an input is given as an array or string.
+co $ ../../2_examples
+cr so far these have been the sole the sole
+cr state variable for all problems looked at
+cr so far
+co $ ..
+
+nn 2_second_index
+ln second index along some input
+co $ ..
+
+nn 3_explicit_numerical_constraints
+ln Explicit numerical constraints in the problem,
+ln ex: "you are only allowed to complete K
+ln transactions" or "you are allowed to break up
+ln K obstacles", etc
+co $ ..
+
+nn 4_variables_describing_state
+ln Variables describing status in a given state.
+ln Ex: "true if currently holding key, false if not",
+ln "currently holding k packages", etc
+co $ ..
+
+nn 5_data_for_visited
+ln some sort of data or bitmask to indicate things like
+ln being "visited" or "used".
+co $ ..
+
+zz 3_multidimensional
+ns ..
+
+nn 4_top_down_to_bottom_up
+hl https://leetcode.com/explore/featured/card/dynamic-programming/631/strategy-for-solving-dp-problems/4099/
+ln Top-down to bottom-up
+co $ ..
+
+ns +4_top_down_to_bottom_up
+
+nn 1_start_with_top_down
+ln start with completed top-down
+co $ ..
+
+nn 2_initialize_array
+ln initialize array dp that is sized according to
+ln state variables
+co $ ..
+
+nn 3_set_base_cases
+ln set the base cases
+co $ ..
+
+nn 4_iterate
+ln iterate over state variables. these should
+ln start iterating from bsae cases
+co $ ..
+
+nn 5_copy_function_logic
+ln Copy the function logic from the top-down solution
+ln into the inner loop of the bottoms-up solution.
+ln dp() changes into dp[]
+co $ ..
+
+nn 6_update_return
+ln update return from dp() to dp[]
+co $ ..
+
+zz 4_top_down_to_bottom_up
+ns ..
+
+nn 5_examples_multidimensional
+ln Sample multidimensional problems
+co $ ..
+hl https://leetcode.com/explore/featured/card/dynamic-programming/631/strategy-for-solving-dp-problems/4100/
+co ../../../../problems/1770_max_score_multiplication_operations $
+
+ns +5_examples_multidimensional
+
+zz 5_examples_multidimensional
 ns ..
 
 zz 1_stragetic_approach
@@ -1348,3 +1447,32 @@ co $ ..
 nn problems/70_climbing_stairs
 hl https://leetcode.com/problems/climbing-stairs
 ln 70: climbing stairs
+co $ paradigms/dynamic_programming
+co $ paradigms/dynamic_programming/1d
+
+nn problems/740_delete_and_earn
+hl https://leetcode.com/problems/delete-and-earn
+ln 740 delete and earn
+co $ paradigms/dynamic_programming
+co $ paradigms/dynamic_programming/1d
+
+ns +problems/740_delete_and_earn
+nn solutions/1_top_down
+nn solutions/2_bottoms_up
+nn solutions/3_bottoms_up_space_optimized
+ns ../..
+
+nn problems/1659_maximize_grid_happiness
+hl https://leetcode.com/problems/maximize-grid-happiness/
+ln 1659: maximize grid happiness
+td do problem
+co $ paradigms/dynamic_programming
+cr multidimensional (5 variables)
+
+nn problems/1770_max_score_multiplication_operations
+hl https://leetcode.com/problems/maximum-score-from-performing-multiplication-operations
+ln 1770: maximum score for multiplication operations
+
+nn problems/146_LRU_cache
+hl python/docs/stdlib/functools#lru_cache
+ln 146: LRU cache

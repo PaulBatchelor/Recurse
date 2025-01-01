@@ -300,3 +300,10 @@ cr python: [0:4], rust: [0..4]
 
 cx webdev/typescript/covariance_contravariance types/type_theory/polymorphism/subtyping/covariance_contravariance
 cx webdev/typescript/covariance_contravariance_wiki ^
+
+cx leetcode/problems/1770_max_score_multiplication_operations python/docs/stdlib/functools/lru_cache
+cr used in top-down implementation, used with a size of 2000
+cr because this particular problem has tight time limits
+
+cx leetcode/problems/146_LRU_cache ^
+cr implements an LRU cache

@@ -9,5 +9,37 @@ nice to know about, seems to cleanly close the server
 
 @12:07 Looking at dynamic programming card #dz:leetcode/explore/dynamic_programming_explore #timelog:01:03:06
 
-@2024-12-31
-@20:20 reading #dz:leetcode/explore/dynamic_programming#1_strategic_approach #timelog:00:56:55
+@2024-12-31 happy new year
+@20:20 reading #dz:leetcode/explore/dynamic_programming/1_strategic_approach #timelog:00:56:55
+
+@2025-01-01 new years day
+@09:53 More climbing stairs again #dz:leetcode/problems/746_min_cost_climbing_stairs #timelog:00:15:00
+I needed to look at the solution. The recurrence relation
+is still a bit fuzzy for me. I'm not grokking the optimal
+substructure.
+
+@10:15 Continued #dz:leetcode/problems/746_min_cost_climbing_stairs #timelog:00:04:40
+Going for both top-down and bottoms up.
+
+@10:22 Onto tribbonacci, top down, bottoms up #dz:leetcode/problems/1137_nth_tribonacci_number #timelog:00:17:55
+
+@10:42 Delete and earn #dz:leetcode/problems/740_delete_and_earn #timelog:00:20:46
+Hints and similar problems tells me it's like house robber,
+so I want to do house robber again.
+
+@11:08 House robber, again #dz:leetcode/problems/198_house_robber #timelog:00:08:24
+I'm trying to grok the pattern. Trying to grok better.
+
+@11:22 Back to delete and earn #dz:leetcode/problems/740_delete_and_earn #timelog:00:11:58
+
+@11:35 looking at editorial #dz:leetcode/problems/740_delete_and_earn #timelog:00:28:38
+
+@12:12 Reading #dz:leetcode/explore/dynamic_programming/1_strategic_approach/3_multidimensional #timelog:00:23:18
+
+@12:45 Examples #dz:leetcode/explore/dynamic_programming/1_strategic_approach/5_examples_multidimensional #timelog:00:33:33
+
+@12:46 1770 was the case study #dz:leetcode/problems/1770_max_score_multiplication_operations
+Implemented top down and bottoms up approach using the
+the case study. Bottoms-up I messed up with some off-by-one
+errors because I turned there awkward range functions into
+reversed iterables using =reversed=.
