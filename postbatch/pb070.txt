@@ -68,4 +68,6 @@ pattern to think about for some "find the max" problems
 Didn't really grok it, but it's basically a space optimized
 bottoms-up solution.
 
-@18:31 More dynamic programming explore card #dz:leetcode/explore/dynamic_programming/1_strategic_approach#6_time_space_complexity #timelog:00:06:56
+@18:31 More dynamic programming explore card #dz:leetcode/explore/dynamic_programming/1_strategic_approach/6_time_space_complexity #timelog:00:06:56
+
+@18:39 Common patterns #dz:leetcode/explore/dynamic_programming/2_common_patterns #timelog:00:45:01

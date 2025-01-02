@@ -1375,6 +1375,22 @@ co $ ..
 hl https://leetcode.com/explore/featured/card/dynamic-programming/632/common-patterns-in-dp-problems/
 td read
 
+ns +2_common_patterns
+
+nn 1_iteration_recurrence_relation
+ln Iteration in the recurrence relation
+hl https://leetcode.com/explore/featured/card/dynamic-programming/632/common-patterns-in-dp-problems/4049/
+co $ ..
+
+nn 2_examples
+hl https://leetcode.com/explore/featured/card/dynamic-programming/632/common-patterns-in-dp-problems/4109/
+ln Examples
+co $ ..
+co ../../../../problems/1335_minimum_difficulty_job_schedule $
+
+zz 2_common_patterns
+ns ..
+
 nn 3_common_patterns_cont
 co $ ..
 hl https://leetcode.com/explore/featured/card/dynamic-programming/633/common-patterns-continued/
@@ -1483,3 +1499,7 @@ nn problems/221_maximal_square
 ln 221 Maximal Square
 co $ paradigms/dynamic_programming
 co $ paradigms/dynamic_programming/2d
+
+nn problems/1335_minimum_difficulty_job_schedule
+hl https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/description/
+ln 1335: minimum difficulty of a job schedule
