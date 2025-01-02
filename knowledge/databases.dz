@@ -33,3 +33,43 @@ ln B-Tree
 nn btree/probe
 ln probing a btree
 co $ ..
+
+nn redis
+hl https://redis.io/
+
+nn valkey
+hl https://valkey.io/
+co $ redis
+cr fork made after license switch
+co $ redis/forks
+
+nn redict
+hl https://redict.io/
+co $ redis
+cr fork made after license switch
+co $ redis/forks
+
+nn redis/forks
+co $ ..
+ln forks of redis made after license switch in march 2024
+
+nn elasticsearch
+hl https://www.elastic.co/elasticsearch
+
+nn dragonfly
+hl https://www.dragonflydb.io/
+ln Dragonfly is a drop-in Redis replacement that cuts costs
+ln and boosts performance.
+co $ redis
+cr drop-in replacement for redis
+
+nn databricks
+hl https://www.databricks.com/
+
+nn snowflake
+hl https://www.snowflake.com/en/
+
+nn limbo
+hl https://turso.tech/blog/introducing-limbo-a-complete-rewrite-of-sqlite-in-rust
+ln Limbo: a complete rewrite of SQLite in Rust
+tg rust sqlite

@@ -28,3 +28,8 @@ ln Build your own sqlite
 nn git
 hl https://github.com/sqlite/sqlite
 ln Official git mirror of SQLite
+
+nn libsql
+hl https://github.com/tursodatabase/libsql
+ln libsql: fork of SQLite that is both open source and
+ln open contributions
