@@ -1511,3 +1511,9 @@ ln 72: edit distance
 co $ paradigms/dynamic_programming/2d
 co $ paradigms/dynamic_programming
 co $ leetcode75
+
+nn problems/338_counting_bits
+hl https://leetcode.com/problems/counting-bits/
+ln 338: Counting bits
+co $ paradigms/bit_manipulation
+co $ leetcode75

@@ -1,5 +1,6 @@
 @2025-01-03
-@08:20 edit distance #dz:leetcode/problems/72_edit_distance #timelog:00:30:00
+@08:20 edit distance #LC75-review #timelog:00:30:00
+@08:50 Morning attempt #dz:leetcode/problems/72_edit_distance
 Got some broken code. I don't think I have the intuition yet.
 I vaguely remember this problem from the algorithms book.
 I was scared of it then. I am scared of it now. I'm trying
@@ -7,3 +8,24 @@ to follow the framework outlined in the dynamic programming
 explore card. I identified the variables (index position),
 and am now trying to implement the top-down version. It's
 not going well.
+
+@09:12 Counting bits #LC75-review
+
+@09:22 Brute force works #dz:leetcode/problems/338_counting_bits #timelog:00:43:35
+
+@09:39 Close to giving up on the O(n) solution #dz:leetcode/problems/338_counting_bits
+My intuition so far: check the LSB. If it's a 0, you are only
+flipping one bit, so it's the previous 1 count plus 1.
+If it is a 1, then more bits get flipped. I have an inkling
+that you can do something with the previous zero LSB number.
+
+@09:48 got linear time working #dz:leetcode/problems/338_counting_bits
+I had the right line of thinking, I just needed to put more
+care into the code: the previous number vs the previous
+number of bits. If the previous number has a 1 LSB,
+it's not a simple +1 like if it were a 0 LSB. The LSB
+for the number flip to 0, so somehow I realized that
+you could look at the shared bits between the last 0 LSB
+(prev - 1), and then add 1 to that. I don't know, I wish
+I could explain this better. I wrote out the binary bits
+and looked for patterns.
