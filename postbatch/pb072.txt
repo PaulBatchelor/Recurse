@@ -1,0 +1,9 @@
+@2025-01-03
+@08:20 edit distance #dz:leetcode/problems/72_edit_distance #timelog:00:30:00
+Got some broken code. I don't think I have the intuition yet.
+I vaguely remember this problem from the algorithms book.
+I was scared of it then. I am scared of it now. I'm trying
+to follow the framework outlined in the dynamic programming
+explore card. I identified the variables (index position),
+and am now trying to implement the top-down version. It's
+not going well.
