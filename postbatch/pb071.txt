@@ -3,4 +3,6 @@
 @09:06 some links reading #timelog:00:38:18
 
 @18:52 dynamic programming explore card #dz:leetcode/problems/1335_minimum_difficulty_job_schedule #timelog:00:24:00
-I'm still grokking 1335. The problem, and the solution.
+I'm still grokking 1335. The problem, and the solution. Even
+with both spelled out for me in the dynamic programming
+explore card, it's still difficult.
