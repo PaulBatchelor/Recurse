@@ -6,3 +6,15 @@
 I'm still grokking 1335. The problem, and the solution. Even
 with both spelled out for me in the dynamic programming
 explore card, it's still difficult.
+
+@20:27 Coin Change #dz:leetcode/problems/322_coin_change #timelog:00:58:48
+
+@21:17 Trying to get the recurrence relation #dz:leetcode/problems/322_coin_change
+I think the state variables are the starting
+coin, and the amount to add up to. I could probably code
+something up and sort of get it, but I'd like to be able to
+notate this in a more mathematical way that shows I actually
+grok this problem.
+
+@21:44 Recurrence relation looks right, code is wrong #dz:leetcode/problems/322_coin_change
+Giving up for tonight

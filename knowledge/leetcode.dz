@@ -1387,6 +1387,7 @@ hl https://leetcode.com/explore/featured/card/dynamic-programming/632/common-pat
 ln Examples
 co $ ..
 co ../../../../problems/1335_minimum_difficulty_job_schedule $
+co ../../../../problems/322_coin_change $
 
 zz 2_common_patterns
 ns ..
@@ -1501,5 +1502,5 @@ co $ paradigms/dynamic_programming
 co $ paradigms/dynamic_programming/2d
 
 nn problems/1335_minimum_difficulty_job_schedule
-hl https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule/description/
+hl https://leetcode.com/problems/minimum-difficulty-of-a-job-schedule
 ln 1335: minimum difficulty of a job schedule
