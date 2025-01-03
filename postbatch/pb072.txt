@@ -29,3 +29,13 @@ you could look at the shared bits between the last 0 LSB
 (prev - 1), and then add 1 to that. I don't know, I wish
 I could explain this better. I wrote out the binary bits
 and looked for patterns.
+
+@10:22 Another attempt at coin change. #dz:leetcode/problems/322_coin_change #timelog:00:39:05
+
+@11:02 I don't think I'm handling edge cases correctly. #dz:leetcode/problems/322_coin_change
+I'm currently trying to implement a top-down solution.
+I think I have the variables correct, and I have established
+a recurrence relation I believe is correct. However, I'm
+running into issues with actually getting edge cases set up.
+
+
