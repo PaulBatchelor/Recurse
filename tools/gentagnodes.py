@@ -5,7 +5,6 @@ con = sqlite3.connect("a.db")
 cur = con.cursor()
 
 
-
 cur.execute("CREATE TABLE IF NOT EXISTS logtagnodes(node INTEGER, logid INTEGER);");
 con.commit()
 
@@ -15,6 +14,10 @@ rows = cur.execute(
         "WHERE",
         "tag LIKE 'nn:%';")
 ))
+
+insert_query = ""
+
+rows = rows.fetchall()
 
 for row in rows:
     logid, tag = row
@@ -29,6 +32,6 @@ for row in rows:
         f"VALUES((SELECT id FROM dz_nodes WHERE name is '{tag}' LIMIT 1),"
         f"{logid});"
     ))
-    cur.execute(insert)
 
+    cur.execute(insert_query)
 con.commit()

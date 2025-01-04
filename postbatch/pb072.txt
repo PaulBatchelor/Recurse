@@ -42,3 +42,6 @@ running into issues with actually getting edge cases set up.
 The tag above =nn:dagzet/comment_node= should create
 a uniquely node named "dagzet/comment_node" and then
 have it be linked to this particular timestamp
+
+@20:39 Trying to integrate comments #nn:dagzet/comment_node_2
+Can we connect these nodes

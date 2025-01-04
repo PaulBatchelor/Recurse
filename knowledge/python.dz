@@ -463,6 +463,11 @@ ln binding values using placeholders.
 hl https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.execute
 co $ ..
 
+nn cursor/fetchall
+hl https://docs.python.org/3/library/sqlite3.html#sqlite3.Cursor.fetchall
+co $ ..
+ln fetchall()
+
 nn placeholders
 hl https://docs.python.org/3/library/sqlite3.html#sqlite3-placeholders
 ln how to use placeholders to bind values in SQL queries
