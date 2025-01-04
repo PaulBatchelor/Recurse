@@ -1,0 +1,31 @@
+@2025-01-04 travel back to NYC from BOS
+@09:33 72 Edit distance #LC75-review #timelog:00:28:07
+
+@10:00 another shot #dz:leetcode/problems/72_edit_distance
+I'm trying to follow the framework again. Here are
+my thoughts on it so far.
+---
+what are the state variables? how are we storing them?
+state variables can be indice substrings of both strings.
+the function dp(i, j) tells us: given substrings w1[0:i] and
+w2[0:j], what are the minimum number of operations required
+transform w1 to w2.
+our first approach will be top-down, so these will parameters
+to a function
+---
+what is the recurrence relation?
+There are 3 operations to consider, plus 1 non-op (match)
+Insert a character: (ac, abc) -> (a[b]c, abc)
+1 point, i + 1, j + 1
+Delete a character: (adbc, abc) -> (a[]bc, abc) and vice versa?
+1 point i + 1, j, or i, j + 1
+(delete seems to be the edge case)
+Replace a character: (axc, abc) -> (a[b]c, abc)
+1 point, i + 1, j + 1
+---
+dp(i, j) = min(insert, delete, remove) + dp(i - 1, j - 1)
+         = min(dp(i + 1, j + 1), min(dp(i + 1, j), dp(i, j + 1))) + dp(i - 1, j - 1)
+---
+I don't like the forward/backward of this
+
+@10:10 cool, re.split seems to be an easy way to split messages up #dz:python/docs/stdlib/re/split

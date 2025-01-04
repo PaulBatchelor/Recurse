@@ -661,3 +661,6 @@ nn docs/stdlib/exceptions/KeyboardInterrupt
 hl https://docs.python.org/3/library/exceptions.html#KeyboardInterrupt
 ln KeyboardInterrupt Exception
 co $ ..
+
+nn docs/stdlib/re/split
+hl https://docs.python.org/3/library/re.html#re.split
