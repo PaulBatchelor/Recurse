@@ -33,3 +33,8 @@ nn libsql
 hl https://github.com/tursodatabase/libsql
 ln libsql: fork of SQLite that is both open source and
 ln open contributions
+
+
+nn file_format
+hl https://www.sqlite.org/fileformat.html
+ln SQLite file format overview

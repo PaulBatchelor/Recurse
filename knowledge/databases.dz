@@ -34,6 +34,12 @@ nn btree/probe
 ln probing a btree
 co $ ..
 
+nn btrees/more_than_i_thought
+hl https://benjamincongdon.me/blog/2021/08/17/B-Trees-More-Than-I-Thought-Id-Want-to-Know/
+td read
+ln B-Trees: more than I thought
+co $ ..
+
 nn redis
 hl https://redis.io/
 
