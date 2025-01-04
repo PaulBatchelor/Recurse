@@ -29,3 +29,6 @@ dp(i, j) = min(insert, delete, remove) + dp(i - 1, j - 1)
 I don't like the forward/backward of this
 
 @10:10 cool, re.split seems to be an easy way to split messages up #dz:python/docs/stdlib/re/split
+
+@10:16 split up log messages in multiline output
+Ah, this will require more work

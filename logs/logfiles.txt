@@ -152,3 +152,4 @@ postbatch/pb069.txt
 postbatch/pb070.txt
 postbatch/pb071.txt
 postbatch/pb072.txt
+postbatch/pb073.txt
