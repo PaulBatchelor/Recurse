@@ -19,3 +19,68 @@ I'm trying to mechanically copy it over from the top-down
 solution that works. I think I am missing something in the
 initialization step. I've worked too long on it today, and
 need to move forward.
+
+@14:15 Improving dzfiles infra on main knowledge graph #dagzet-dzfiles-txt #timelog:00:20:00
+
+@14:37 holding off, this touches too many things #dagzet-dzfiles-txt
+for another time. I have created a task for it.
+
+@14:40 trie explore card #dz:leetcode/explore/trie #timelog:00:45:27
+
+@15:34 677 map sum pairs #dz:problems/677_map_sum_pairs #timelog:00:15:32
+via the leetcode trie explore card
+
+@16:16 Replace Words #dz:leetcode/problems/648_replace_words #timelog:00:12:32
+
+@16:42 Attempting auto-complete search system #dz:leetcode/problems/642_design_search_autocomplete_system
+It's part of the Trie explore card. It's also a "hard",
+which gives me pause. I'm not expecting to solve it all today,
+so I will document my attempts here.
+
+@16:51 Hashtag usage is unclear to me #dz:leetcode/problems/642_design_search_autocomplete_system
+At first I read it as being a sort of null terminator for
+every sentence. But I don't see that. I think it just a
+special mode for nothing.
+
+@16:54 Hashtag usage is clearer to me #dz:leetcode/problems/642_design_search_autocomplete_system
+It seems to be like it's a way to add user submitted inputs
+into the system.
+---
+Wait, input is a single character from a keystroke. '#'
+at the end means: take the characters seen so far and
+find the hot sentences with that matching prefix.
+---
+The state kept track of then would be the last node visited.
+For every key, update the last node visisted. Traverse
+this node, and find the top 3 matches
+
+@16:54 Use a maxheap #dz:leetcode/problems/642_design_search_autocomplete_system
+A maxheap of size 3 could be used to populate the top 3
+matches. How it works is, for the top-level node in trie,
+traverse through children nodes, and add them onto the heap.
+---
+If the nodes have a parent pointer, that can be used to
+backtrack and reproduce the sentence.
+
+@16:54 more thoughts #dz:leetcode/problems/642_design_search_autocomplete_system
+I wondered: is the heap persistant between calls to input()?
+No. Because you are refining the options.
+---
+The '#' operation. Needs to be inserted into the root
+trie, and the count updated by 1. A new sentence may
+or may not share a prefix, so I think keyboard history
+needs to be stored.
+---
+What happens after '#'? new sentence?
+
+
+@16:54 initial logic close #dz:leetcode/problems/642_design_search_autocomplete_system
+Trie structure and heap logic works. but, I forgot
+that I can't push nodes themselves becaues heaps don't
+have a built in comparison (and I need it to sort
+alphabetically). So, the heap needs to push the actual
+sentences as strings.
+---
+In theory, I could figure out a way to enumerate each
+full path of the Trie using DFS. I will return to this,
+after dinner.

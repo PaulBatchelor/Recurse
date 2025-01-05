@@ -1524,3 +1524,32 @@ hl https://leetcode.com/problems/counting-bits/
 ln 338: Counting bits
 co $ paradigms/bit_manipulation
 co $ leetcode75
+
+nn paradigms/trie
+ln Trie
+
+nn references/trie
+hl https://en.wikipedia.org/wiki/Trie
+co $ paradigms/trie
+
+nn glossary/trie
+co $ ..
+
+nn glossary/prefix_tree
+co $ glossary/trie
+cr AKA
+
+nn problems/677_map_sum_pairs
+hl https://leetcode.com/problems/map-sum-pairs
+ln 677: Map Sum Pairs
+co $ paradigms/trie
+
+nn problems/648_replace_words
+hl https://leetcode.com/problems/replace-words
+ln 648: Replace Words
+co $ paradigms/trie
+
+nn problems/642_design_search_autocomplete_system
+hl https://leetcode.com/problems/design-search-autocomplete-system/description/
+ln 642: Design Search Autocomplete System
+co $ paradigms/trie

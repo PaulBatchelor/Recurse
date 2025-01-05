@@ -54,18 +54,6 @@ function add_to_dagzet() {
     #DZFILE=$1
     echo $*
     dagzet $* | sqlite3 a.db
-    # if [ -f $DZFILE ]
-    # then
-    #     # echo $DZFILE
-    #     # $LUA $DAGZET_LUA $DZFILE #| sqlite3 a.db
-    #     echo $DZFILE
-    #     #dagzet_util $DZFILE | sqlite3 a.db
-    #     dagzet $DZFILE | sqlite3 a.db
-    #     #$DAGZET $DZFILE | sqlite3 a.db
-    # else
-    #     echo "Warning: $DZFILE does not exist"
-    # fi
-
 }
 
 function import_code() {
@@ -76,9 +64,24 @@ function import_code() {
         $NAMESPACE dagzet/code/$FILENAME | sqlite3 a.db
 }
 
-while read -r line
-do
-    add_to_dagzet $line
-done < knowledge/dzfiles.txt
+function import_dzfiles() {
+    DZDIR=$1
+    DB=$2
+    # cd $LINE
+    while read -r LINE
+    do
+        if [ -d "$LINE" ]
+        then
+            echo "DIRECTORIES NOT YET IMPLEMENTED"
+            exit 1
+        else
+            echo $LINE
+            dagzet $LINE | sqlite3 $DB
+        fi
+    done < $DZDIR/dzfiles.txt
+    # cd -
+}
+
+import_dzfiles knowledge a.db
 
 trap : 0

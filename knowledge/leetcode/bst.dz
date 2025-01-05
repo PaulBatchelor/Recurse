@@ -1,0 +1,5 @@
+nn explore/BST/01_basic_operations/insert
+hl https://leetcode.com/explore/learn/card/introduction-to-data-structure-binary-search-tree/141/basic-operations-in-a-bst/3155/
+ln insert into binary search tree
+co $ explore/trie/2_basic_operations/insertion
+cr similar
