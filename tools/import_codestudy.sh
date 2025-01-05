@@ -25,3 +25,7 @@ import_code codestudy/hello_ts_react hello_ts_react/index.tsx
 import_code codestudy/tic80 tic80/sound.c
 import_code codestudy/tic80 tic80/tic.c
 import_code codestudy/tic80 tic80/studio.c
+
+import_code codestudy/oed oed/main.c
+
+import_code codestudy/ripgrep/crates/core ripgrep/crates/core/main.rs
