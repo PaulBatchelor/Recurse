@@ -307,3 +307,6 @@ cr because this particular problem has tight time limits
 
 cx leetcode/problems/146_LRU_cache ^
 cr implements an LRU cache
+
+cx TADM/toc/08_dynamic_programming/02_approximate_string_matching leetcode/problems/72_edit_distance
+cr Edit distance problem is a case study in TADM

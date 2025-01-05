@@ -1512,6 +1512,13 @@ co $ paradigms/dynamic_programming/2d
 co $ paradigms/dynamic_programming
 co $ leetcode75
 
+ns +problems/72_edit_distance
+nn solutions/top_down
+nn soltuions/bottoms_up
+td complete solution
+zz problems/72_edit_distance
+ns ../..
+
 nn problems/338_counting_bits
 hl https://leetcode.com/problems/counting-bits/
 ln 338: Counting bits

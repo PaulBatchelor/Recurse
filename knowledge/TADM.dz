@@ -1,0 +1,21 @@
+ns TADM
+gr The Algorithm Design Manual, Second Edition, by Steven
+gr Skiena
+
+nn toc
+td populate
+ns +toc
+
+nn 08_dynamic_programming
+ln Chapter 8: Dynamic Programming
+co $ ..
+
+ns +08_dynamic_programming
+
+nn 02_approximate_string_matching
+
+zz 08_dynamic_programming
+ns ..
+
+zz toc
+ns ..

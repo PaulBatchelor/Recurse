@@ -1,0 +1,21 @@
+@2025-01-05 Hub Day
+@11:56 Getting warmed up
+My laptop ran out of batteries, which was weird. I really
+thought I powered this off. I guess that didn't happen.
+Oops.
+
+@11:58 Troubleshooting this weird variable width issue on leetcode #timelog:00:12:35
+
+@12:12 Another shot at thinking about edit distance #LC75-review #timelog:01:04:53
+
+@12:18 Reading Skiena #dz:leetcode/problems/72_edit_distance
+He has this as a case study
+
+@12:42 Banged out a top-down solution #dz:leetcode/problems/72_edit_distance
+I had to use the Skiena code for reference
+
+@13:10 Bottoms-up solution is a WIP. will need to return later to it. #dz:leetcode/problems/72_edit_distance #dz:leetcode/problems/72_edit_distance/solutions/bottoms_up
+I'm trying to mechanically copy it over from the top-down
+solution that works. I think I am missing something in the
+initialization step. I've worked too long on it today, and
+need to move forward.
