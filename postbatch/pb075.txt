@@ -76,3 +76,10 @@ You still need to check every path.
 Potentially a good candidate for a mini codestudy?
 I want to make it painless to set up new mini code studies,
 so this could be a good start.
+
+@16:28 codestudy scaffolding, and initial words #dz:leetcode/problems/421_max_XOR_two_numbers #timelog:01:42:37
+This ended up taking more time because I'm still setting
+up infrastructure for this codestudy stuff.
+
+@17:21 I need a way to declare ordered nodes in the tree
+The hack right now is to use numbers

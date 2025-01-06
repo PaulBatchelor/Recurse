@@ -45,6 +45,7 @@ knowledge/dagzet.dz
 codestudy/dz/excalidraw/excalidraw.dz codestudy/dz/excalidraw/files.dz
 codestudy/dz/ripgrep/files.dz
 codestudy/dz/oed/main.dz codestudy/dz/oed/files.dz
+codestudy/dz/leetcode/421/main.dz
 knowledge/vscode.dz
 knowledge/use_the_index_luke.dz
 knowledge/lpc.dz
@@ -59,3 +60,4 @@ knowledge/TADM.dz
 knowledge/zzz.dz
 knowledge/zzz_ddia.dz
 links/zzz.dz
+codestudy/zzz.dz
