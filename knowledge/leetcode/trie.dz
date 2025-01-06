@@ -56,6 +56,7 @@ co $ ..
 co ../../../problems/677_map_sum_pairs $
 co ../../../problems/648_replace_words $
 co ../../../problems/642_design_search_autocomplete_system $
+co ../../../problems/211_design_add_and_search_words_data_structure $
 
 nn 4_practical_application_2
 hl https://leetcode.com/explore/learn/card/trie/149/practical-application-ii/
