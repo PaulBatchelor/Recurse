@@ -35,3 +35,44 @@ has the greater XOR.
 
 @12:22 Stopping for now #dz:leetcode/problems/421_max_XOR_two_numbers
 Still grokking the traversal logic, I shall return.
+
+@12:27 79 Word Search DFS approach #dz:leetcode/problems/79_word_search #timelog:00:57:57
+It appears I did this one back in novemeber. I vaguely
+recall struggling.
+
+@12:40 How to backtrack? #dz:leetcode/problems/79_word_search
+There needs to be a way to backtrack if you find a close
+candidate, how do those get returned?
+---
+I'm using an explicit stack, but it might be easier to
+solve with recursion. You can use substrings.
+
+@12:57 Feeling close with this recursive solution, but edgecases are killing me #dz:leetcode/problems/79_word_search
+It's the single-row edge cases that are failing
+
+@13:14 Visited set is local, but now another edge case #dz:leetcode/problems/79_word_search
+
+@13:21 My traversal logic appears to be broken #dz:leetcode/problems/79_word_search
+I'm not keeping track of visited nodes correctly. When a
+new attempt is started, all the other nodes should be visible.
+At the same time, there also needs to be a way to mark
+progress so that the graph has been fully traveresed.
+---
+I will need to think on this. Will return later.
+
+@13:26 Continuing progress #dz:leetcode/problems/421_max_XOR_two_numbers #timelog:00:55:41
+
+@13:38 Building the Trie and then doing some kind of search is still linear #dz:leetcode/problems/421_max_XOR_two_numbers
+I've had it set that the problem must be a traversal
+problem, but maybe it's just a matter of somehow building
+the Trie, then XORing each number with the Trie?
+
+@13:38 Xoring on the tree... is it actually better than brute force? #dz:leetcode/problems/421_max_XOR_two_numbers
+You still need to check every path.
+
+@14:10 Okay enough struggle. Looking at editorial now. #dz:leetcode/problems/421_max_XOR_two_numbers
+
+@14:27 Stopping for now. Brain is not grokking the editorial. #dz:leetcode/problems/421_max_XOR_two_numbers
+Potentially a good candidate for a mini codestudy?
+I want to make it painless to set up new mini code studies,
+so this could be a good start.

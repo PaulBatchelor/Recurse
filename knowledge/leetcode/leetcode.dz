@@ -1577,6 +1577,32 @@ ln 421: Maximum XOR of two numbers in an array
 td solve
 co $ data_structures/trie
 
+ns +problems/421_max_XOR_two_numbers
+
+nn solutions
+ln Solutions involve bitwise prefixes, either i
+ln a hashset or a Trie. The idea is the same:
+ln convert all numbers to binary form, and
+ln construct maximum XOR bit by by, starting
+ln from the leftmost one
+
+ns +solutions
+
+nn hashset
+ln Bitwise prefixes using HashSet
+co ../../../../data_structures/set $
+
+nn trie
+ln Bitwise prefixes using Trie
+co ../../../../data_structures/trie $
+co $ hashset
+cr Trie is faster
+
+ns ..
+
+zz problems/421_max_XOR_two_numbers
+ns ../..
+
 nn problems/79_word_search
 hl https://leetcode.com/problems/word-search
 ln 79: Word Search
