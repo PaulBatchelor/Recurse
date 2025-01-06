@@ -2,7 +2,7 @@ nn explore/trie
 hl https://leetcode.com/explore/learn/card/trie/
 ln Trie Explore Card
 co $ ..
-co $ paradigms/trie
+co $ data_structures/trie
 cr Explore Card for Trie data structure
 
 ns +explore/trie

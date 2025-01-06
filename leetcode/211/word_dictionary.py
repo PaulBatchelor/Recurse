@@ -1,3 +1,60 @@
+# 2025-01-05 Another attempt. I managed to do it without
+# looking up the answer. I glanced at my solution
+# from novemember 2024, and the answer I had seems to 
+# use recursion, while this version I have makes use
+# of an explicit stack
+
+
+class Trie:
+    def __init__(self):
+        self.children = {}
+        self.terminal = False
+
+class WordDictionary:
+    def __init__(self):
+        self.root = Trie()
+
+    def addWord(self, word: str) -> None:
+        node = self.root
+        for c in word:
+            if c not in node.children:
+                node.children[c] = Trie()
+            node = node.children[c]
+        node.terminal = True
+
+    def search(self, word: str) -> bool:
+        stk = []
+        stk.append((self.root, 0))
+        while stk:
+            node, pos = stk.pop()
+            
+            if pos > len(word):
+                return False
+            
+            if pos == len(word):
+                if node.terminal:
+                    return True
+                continue
+            
+            if word[pos] == '.':
+                # wildcard, try paths from all children
+                for child in node.children.values():
+                    stk.append((child, pos + 1))
+                continue
+            
+            if word[pos] not in node.children:
+                continue
+            
+            stk.append((node.children[word[pos]], pos + 1))
+        return False
+        
+
+
+# Your WordDictionary object will be instantiated and called as such:
+# obj = WordDictionary()
+# obj.addWord(word)
+# param_2 = obj.search(word)
+
 # 2024-11-14: This is still wrong. Hash sets are randomized
 # order, sorting them yields an edge case such as '..',
 # where '..' should be any two letter word, but AFAIK,

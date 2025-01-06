@@ -115,3 +115,24 @@ the sentence, and then do a full prefix search to check.
 This could also make the sentence query logic easier too.
 Prefix search could return the last node, which could
 the be traversed.
+
+@19:38 Trying 211 #dz:leetcode/problems/211_design_add_and_search_words_data_structure #timelog:00:34:55
+I did this one before, and recall having a bit of a time
+with it.
+
+@20:21 Breaking at edge cases #dz:leetcode/problems/211_design_add_and_search_words_data_structure
+I think my logic is write: build a trie, and use a stack
+with tuple(position, node) for DFS. When it's a letter,
+you're pushing and popping evenly. When a '.' appears,
+all children are candidates. Some edge cases with
+very long inputs break it.
+
+@20:28 Figured it out #dz:leetcode/problems/211_design_add_and_search_words_data_structure
+My approach, was correct, but I messed up the control flow.
+There was a point where I was breaking out too early
+by returning false, when it should have been a continue.
+"True" happens on the first node with a terminal whose path
+is the length of the word; any valid path can work, so
+this can break early on the first. False only happens
+when the stack is emptied and there are no more nodes
+to traverse, or the path length exceeds the word length.
