@@ -1570,3 +1570,30 @@ hl https://en.wikipedia.org/wiki/Autocomplete
 
 nn references/spell_checker
 hl https://en.wikipedia.org/wiki/Spell_checker
+
+nn problems/421_max_XOR_two_numbers
+hl https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array
+ln 421: Maximum XOR of two numbers in an array
+td solve
+co $ data_structures/trie
+
+nn problems/79_word_search
+hl https://leetcode.com/problems/word-search
+ln 79: Word Search
+co $ data_structures/trie
+td review
+
+nn problems/212_word_search_2
+hl https://leetcode.com/problems/word-search-ii
+ln 212: Word Search 2
+co $ data_structures/trie
+td solve
+
+nn problems/336_palindrome_pairs
+ln 336: Palindrome Pairs
+hl https://leetcode.com/problems/palindrome-pairs
+co $ data_structures/trie
+
+nn references/longest_prefix_match
+hl https://en.wikipedia.org/wiki/Longest_prefix_match
+ln Longest Prefix Match

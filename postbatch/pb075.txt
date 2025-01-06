@@ -1,0 +1,37 @@
+@2025-01-06 Another Hub Day
+@10:40 Curation
+
+@10:45 explore card wrap-up #dz:leetcode/explore/trie/3_practical_application_1 #timelog:00:09:17
+There's actually more structure here to document in DZ.
+
+@10:45 onto practical application 2 #dz:leetcode/explore/trie/4_practical_application_2 #timelog:00:19:09
+
+@11:15 Maximum XOR of two numbers #dz:leetcode/problems/421_max_XOR_two_numbers #timelog:01:02:44
+
+@11:18 Might as well do brute force first #dz:leetcode/problems/421_max_XOR_two_numbers
+
+@11:24 Actually attempting the problem now #dz:leetcode/problems/421_max_XOR_two_numbers
+They say it's a trie data structure problem, so I'm assuming
+you put bits in the trie. Not sure where to go from there
+because XORs keep falling out of my head. Going to pen
+and paper.
+
+@11:40 Drew the tree for first example #dz:leetcode/problems/421_max_XOR_two_numbers
+It turns into some kind of DFS tree traversal problem
+
+@11:56 Intuition Building #dz:leetcode/problems/421_max_XOR_two_numbers
+This turns into a DFS prefix tree (trie) problem. Put
+the numbers in the tree, LSB to MSB, and then traverse to
+find maximum XOR pair.
+---
+For any two numbers with a shared prefix, the total output
+is zero. When the node has two children, that's a XOR
+with a value of =1 << L== where L is the level.
+---
+How do we make this a recursive problem? I have some
+vague intuition that at the start of the tree (None),
+you traverse the children and figure out which one
+has the greater XOR.
+
+@12:22 Stopping for now #dz:leetcode/problems/421_max_XOR_two_numbers
+Still grokking the traversal logic, I shall return.

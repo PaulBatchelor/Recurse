@@ -52,6 +52,7 @@ zz 2_basic_operations
 ns ..
 
 nn 3_practical_application_1
+ln Practical Applications, part 1
 hl https://leetcode.com/explore/learn/card/trie/148/practical-application-i/
 co $ ..
 co ../../../problems/677_map_sum_pairs $
@@ -80,8 +81,29 @@ zz 3_practical_application_1
 ns ..
 
 nn 4_practical_application_2
+ln Practical Applications, part 2
 hl https://leetcode.com/explore/learn/card/trie/149/practical-application-ii/
 co $ ..
+co ../../../problems/421_max_XOR_two_numbers $
+co ../../../problems/79_word_search $
+co ../../../problems/212_word_search_2 $
+co ../../../problems/336_palindrome_pairs $
+co ../../../references/longest_prefix_match $
+cr Other use cases for Trie include IP routing
+
+ns +4_practical_application_2
+
+nn accelerate_dfs
+co $ ..
+co ../../../../problems/79_word_search $
+co ../../../../problems/212_word_search_2 $
+
+nn store_other_data_type
+co $ ..
+co ../../../../problems/421_max_XOR_two_numbers $
+
+zz 4_practical_application_2
+ns ..
 
 zz explore/trie
 ns ../..
