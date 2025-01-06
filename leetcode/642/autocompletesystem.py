@@ -1,3 +1,6 @@
+# 2025-01-05: Did this one while working through the
+# Trie explore card.
+
 class Trie:
     def __init__(self):
         self.children = {}
