@@ -32,7 +32,7 @@ via the leetcode trie explore card
 
 @16:16 Replace Words #dz:leetcode/problems/648_replace_words #timelog:00:12:32
 
-@16:42 Attempting auto-complete search system #dz:leetcode/problems/642_design_search_autocomplete_system
+@16:42 Attempting auto-complete search system #dz:leetcode/problems/642_design_search_autocomplete_system #timelog:01:00:00
 It's part of the Trie explore card. It's also a "hard",
 which gives me pause. I'm not expecting to solve it all today,
 so I will document my attempts here.
@@ -84,3 +84,34 @@ sentences as strings.
 In theory, I could figure out a way to enumerate each
 full path of the Trie using DFS. I will return to this,
 after dinner.
+
+@18:14 continuing the attempt #dz:leetcode/problems/642_design_search_autocomplete_system #timelog:00:38:39
+
+@18:14 heapq isn't behaving as expected #dz:leetcode/problems/642_design_search_autocomplete_system
+It seems to be doing reverse ascii order
+
+@18:40 initial test passes, but it is incomplete #dz:leetcode/problems/642_design_search_autocomplete_system
+Turns out, I need to use a maxheap, and I need to store
+all the values in the heap and not pop to keep a minimum size.
+This is because the insertion order can accidentally remove
+the wrong thing with the same count.
+---
+I have not done anything with '#' yet, so I imagine this
+system will fail.
+
+@18:55 got it accepted! concluding thoughts #dz:leetcode/problems/642_design_search_autocomplete_system #nn:leetcode/problems/642_design_search_autocomplete_system/2025_01_05_thoughts
+The bug that caught up to me was related to the logic involved
+with sentences being made that aren't in the Trie. Once
+there isn't a match, there needs to be a way to ensure
+that the system doesn't continue matching.
+---
+My approach keeps track of the last visted node in the
+Trie. What I needed to was set this to be None so that it
+subsequent inputs wouldn't try searching the node.
+---
+In retrospect, was keeping track of the last node such
+a great move? I wonder if it would just be better to cache
+the sentence, and then do a full prefix search to check.
+This could also make the sentence query logic easier too.
+Prefix search could return the last node, which could
+the be traversed.
