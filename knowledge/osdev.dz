@@ -24,3 +24,9 @@ cr big brother to collapseos
 
 nn collapseos
 hl http://collapseos.org/
+
+nn BOSS
+hl https://github.com/portasynthinca3/boss
+ln BOSS (BEAM-based Operating System with Security) is a 
+ln proof-of-concept operating system written in Erlang 
+ln together with Rust.
