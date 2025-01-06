@@ -1559,3 +1559,8 @@ hl https://leetcode.com/problems/design-add-and-search-words-data-structure/
 ln 211: Design add and search words data structur
 co $ grind75
 co $ data_structures/trie
+
+nn problems/208_implement_trie
+hl https://leetcode.com/problems/implement-trie-prefix-tree
+ln 208: implement trie
+co $ data_structures/trie
