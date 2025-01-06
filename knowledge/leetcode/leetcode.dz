@@ -1564,3 +1564,9 @@ nn problems/208_implement_trie
 hl https://leetcode.com/problems/implement-trie-prefix-tree
 ln 208: implement trie
 co $ data_structures/trie
+
+nn references/autocomplete
+hl https://en.wikipedia.org/wiki/Autocomplete
+
+nn references/spell_checker
+hl https://en.wikipedia.org/wiki/Spell_checker

@@ -154,3 +154,5 @@ postbatch/pb071.txt
 postbatch/pb072.txt
 postbatch/pb073.txt
 codestudy/logs/oed.log
+postbatch/pb074.txt
+postbatch/pb075.txt
