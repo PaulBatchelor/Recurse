@@ -3,7 +3,8 @@
 It's very clunky right now. Will need to make this easier
 at some point.
 
-@14:56 back to wordsearch #dz:leetcode/problems/79_word_search
+@14:56 back to wordsearch
+#! dz leetcode/problems/79_word_search
 
 @15:03 I have reset the code, thinking again about this problem
 #! dz $
