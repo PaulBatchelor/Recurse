@@ -1,0 +1,51 @@
+@2025-01-07 At the hub
+@14:45 settling in, incorporating ripgrep changes into knowledge graph
+It's very clunky right now. Will need to make this easier
+at some point.
+
+@14:56 back to wordsearch #dz:leetcode/problems/79_word_search
+
+@15:03 I have reset the code, thinking again about this problem
+#! dz $
+ 
+@15:10 new approach: multiple DFS instead of just one #timelog:00:54:17
+#! dz $
+This is how I'm thinking about it:
+---
+iterate through grid, and find top-node candidates
+---
+For each top-node, perform DFS to try and find path
+---
+return true on first successful path
+---
+return false otherwise
+
+@15:29 traversal logic broken again
+#! dz $
+This time, on a different edge case. I think my "visited"
+tracking is broken. I'm marking things as visited whenever
+they are traversed, but this causes problems if they need
+to be traversed later. It's the same problem as before.
+---
+visited shold only contain nodes in the currently
+traversed path. once it's no longer being considered
+in the current position of the current path, it should
+be returned somehow.
+
+@15:34 Incredible, the edge cases keep piling up.
+#! dz $
+This problem is frustrating because you can make small
+tweaks to solve one edge case, only to run into another.
+I just moved my "visited" logic a few lines down. It solved
+one edge case, found another.
+
+@15:47 Try recursion instead of using a stack
+#! dz $
+I think it will be easier to implement. I don't think
+I'm getting the stack logic correct.
+
+@15:54 My recursive DFS approach works now!
+#! dz $
+
+@15:59 Now, we try for trie. #nn:leetcode/explore/trie/4_practical_application_2/try_for_trie
+#! dz $
