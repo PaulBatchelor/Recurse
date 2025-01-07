@@ -47,5 +47,47 @@ I'm getting the stack logic correct.
 @15:54 My recursive DFS approach works now!
 #! dz $
 
-@15:59 Now, we try for trie. #nn:leetcode/explore/trie/4_practical_application_2/try_for_trie
+@15:59 Now, we try for trie. #nn:leetcode/explore/trie/4_practical_application_2/try_for_trie #timelog:00:55:52
 #! dz $
+
+@16:14 Trie thoughts so far
+#! dz $
+Okay, they probably want me to build a trie, then see if
+the word is in the Trie
+---
+But, that can't be right. Building a Trie for all the
+possibilities seems enormously expensive
+---
+Trie is about prefixes, so maybe one gets dynamically
+built. So, prefixes of the word.
+---
+The hint here is that this is used to speed up DFS.
+So maybe this is a way to keep track of paths found?
+---
+I don't know how the trie would be able to keep
+track of previously visited.
+
+@16:30 Use Trie as a cache?
+#! dz $
+If you ignore position, you could absolutely build up
+a tree that indicates for each letter, what all the
+directional possibilities are.
+
+@16:48 I think I might have an idea
+#! dz $
+The Trie structure here has depth of the length of
+the word, with each level i corresponding to the letter
+at index i of word. Begin by populating the root node
+of the Trie. The children will be the positions of
+all the nodes with the letter at index 0. Iterate through
+the children of those nodes, and see which of those
+positions can connect to the next letter (repeats are
+okay for now). This happens until there are no more
+letters or children. From there, attempt to find a match
+in the Trie, and check to ensure there are no repeats.
+
+@17:03 And this is where I'll leave it for now. Will implement some other time
+#! dz $
+Ran out of time. But I'll let the idea sit with me for a
+bit. The nice thing about this logging system is that
+it's easier for things to "carry over" into other days.
