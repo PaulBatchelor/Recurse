@@ -156,3 +156,4 @@ postbatch/pb073.txt
 codestudy/logs/oed.log
 postbatch/pb074.txt
 postbatch/pb075.txt
+codestudy/logs/ripgrep.log

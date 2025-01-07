@@ -55,3 +55,4 @@ python3 tools/gentagnodes.py
 # and then add their connections
 
 dagzet knowledge/zzz_logs.dz | sqlite3 a.db
+dagzet codestudy/zzz_logs.dz | sqlite3 a.db

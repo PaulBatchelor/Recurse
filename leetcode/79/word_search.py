@@ -1,3 +1,41 @@
+# 2025-01-07: worked out DFS solution
+class Solution:
+    def exist(self, board: List[List[str]], word: str) -> bool:
+        nrows, ncols = len(board), len(board[0])
+        def dfs(pos, i, visited=set()):
+            row, col = pos
+
+            if board[row][col] != word[i]:
+                return False
+
+            if i == len(word) - 1:
+                return True
+
+            visited.add(pos)
+            for d in ((0, 1), (1, 0), (0, -1), (-1, 0)):
+                nxtrow = row + d[0]
+                nxtcol = col + d[1]
+
+                if nxtrow < 0 or nxtrow >= nrows or nxtcol < 0 or nxtcol >= ncols:
+                    continue
+                
+                nxtpos = (nxtrow, nxtcol)
+                if nxtpos in visited:
+                    continue
+                if dfs(nxtpos, i + 1, visited):
+                    return True
+
+            visited.remove(pos)
+            return False
+        
+        for row in range(nrows):
+            for col in range(ncols):
+                if board[row][col] == word[0]:
+                    if dfs((row, col), 0):
+                        return True
+        
+        return False
+
 class Solution:
     def traverse(self, pos, board, word, visited):
         # if current word pos not equal to target, false
