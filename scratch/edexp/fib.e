@@ -1,0 +1,23 @@
+. define
++ fib-rec
+. n
+-
++ if
++ <
+. n
+. 2
+- n
++ +
++ fib-rec
++ -
+. n
+. 1
+< 2
++ fib-rec
++ -
+. n
+. 2
+< 5
+. display
++ fib-rec
+. 10
