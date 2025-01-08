@@ -1,0 +1,9 @@
+ns things related to scheme
+
+nn stak
+hl https://github.com/raviqqe/stak
+ln The miniature, embeddable R7RS Scheme implementation in Rust
+tg rust scheme
+
+nn stak/embedding_scheme_in_rust
+hl https://raviqqe.com/doc/posts/stak/embedding-scheme-in-rust/
