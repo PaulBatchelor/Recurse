@@ -64,3 +64,37 @@ inline dagzet code for rich metadata and navigation.
 This might be a very write-only language, and it's
 still weird having have the visual representation
 in one place, with the code in another place.
+
+@15:43 Attempts to implement my trie idea #timelog:00:56:42
+#! dz leetcode/problems/79_word_search
+
+@16:06 Works in tests, TLE on edge cases
+#! dz $
+
+@16:14 Finally getting around to adding "typing" to graph
+#! dz python/docs/stdlib/development/typing
+#! dz leetcode/problems/79_word_search
+I'm going to run this thing locally with the
+edge case, and you need to import typings explicitely.
+
+@16:18 The trie is blowing up in size
+#! dz $
+I wonder if there are duplicates here. I bet there are.
+---
+Yup. There are. Going to quickly turn it into a set.
+
+@16:20 Set unblocks the tree complexity, but that wasn't the bottleneck
+#! dz $
+
+@16:39 Time to stop fighting and look up the answer.
+#! dz $
+
+@16:40 The editorial does not implement trie
+#! dz $
+
+@16:41 This is the wrong problem
+#! dz $
+#! dz leetcode/problems/425_word_squares
+The problem is actually word squares. I looked up
+the wrong problem. This has been a tremendous waste
+of time.

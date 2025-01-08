@@ -1606,8 +1606,9 @@ ns ../..
 nn problems/79_word_search
 hl https://leetcode.com/problems/word-search
 ln 79: Word Search
-co $ data_structures/trie
+co $ paradigms/backtracking
 td review
+rm also can be thought of as DFS
 
 nn problems/212_word_search_2
 hl https://leetcode.com/problems/word-search-ii
@@ -1623,3 +1624,8 @@ co $ data_structures/trie
 nn references/longest_prefix_match
 hl https://en.wikipedia.org/wiki/Longest_prefix_match
 ln Longest Prefix Match
+
+nn problems/425_word_squares
+hl https://leetcode.com/problems/word-squares/
+ln 425: Word Squares
+co $ data_structures/trie

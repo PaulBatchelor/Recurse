@@ -102,6 +102,7 @@ co $ docs/stdlib
 
 nn docs/stdlib
 ln Python standard library
+hl https://docs.python.org/3/library/index.html
 
 nn docs/stdlib/map
 hl https://docs.python.org/3/library/functions.html#map
@@ -664,3 +665,13 @@ co $ ..
 
 nn docs/stdlib/re/split
 hl https://docs.python.org/3/library/re.html#re.split
+
+nn docs/stdlib/development
+hl https://docs.python.org/3/library/development.html
+ln development tools
+co $ ..
+
+nn docs/stdlib/development/typing
+hl https://docs.python.org/3/library/typing.html
+ln support for type hints
+co $ ..
