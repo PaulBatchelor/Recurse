@@ -13,27 +13,6 @@ abort()
 
 trap 'abort' 0
 
-set -eo pipefail
-
-sqlite3 a.db <<EOF
-    DROP TABLE IF EXISTS dz_nodes;
-    DROP TABLE IF EXISTS dz_connections;
-    DROP TABLE IF EXISTS dz_connection_remarks;
-    DROP TABLE IF EXISTS dz_lines;
-    DROP TABLE IF EXISTS dz_remarks;
-    DROP TABLE IF EXISTS dz_hyperlinks;
-    DROP TABLE IF EXISTS dz_tags;
-    DROP TABLE IF EXISTS dz_graph_remarks;
-    DROP TABLE IF EXISTS dz_flashcards;
-    DROP TABLE IF EXISTS dz_file_ranges;
-    DROP TABLE IF EXISTS dz_images;
-    DROP TABLE IF EXISTS dz_audio;
-    DROP TABLE IF EXISTS dz_textfiles;
-    DROP TABLE IF EXISTS dz_pages;
-    DROP TABLE IF EXISTS dz_todo;
-    DROP TABLE IF EXISTS dz_noderefs;
-EOF
-
 LUA="mnolth lua"
 GRAPH_DATA_DIR="dagzet/graph"
 DAGZET_LUA="tools/dagzet.lua"
@@ -82,6 +61,30 @@ function import_dzfiles() {
     # cd -
 }
 
-import_dzfiles knowledge a.db
+set -eo pipefail
+
+# sqlite3 a.db <<EOF
+#     DROP TABLE IF EXISTS dz_nodes;
+#     DROP TABLE IF EXISTS dz_connections;
+#     DROP TABLE IF EXISTS dz_connection_remarks;
+#     DROP TABLE IF EXISTS dz_lines;
+#     DROP TABLE IF EXISTS dz_remarks;
+#     DROP TABLE IF EXISTS dz_hyperlinks;
+#     DROP TABLE IF EXISTS dz_tags;
+#     DROP TABLE IF EXISTS dz_graph_remarks;
+#     DROP TABLE IF EXISTS dz_flashcards;
+#     DROP TABLE IF EXISTS dz_file_ranges;
+#     DROP TABLE IF EXISTS dz_images;
+#     DROP TABLE IF EXISTS dz_audio;
+#     DROP TABLE IF EXISTS dz_textfiles;
+#     DROP TABLE IF EXISTS dz_pages;
+#     DROP TABLE IF EXISTS dz_todo;
+#     DROP TABLE IF EXISTS dz_noderefs;
+# EOF
+
+
+# import_dzfiles knowledge a.db
+#../dzbrowse/process.sh knowledge/dzfiles.txt a.db
+../dzbrowse/dzimport.py knowledge/dzfiles.txt a.db
 
 trap : 0

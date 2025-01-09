@@ -405,6 +405,10 @@ function get_comments(db, nodename)
         ";"
     )
 
+    if stmt == nil then
+        error("could not find: " .. db:errmsg())
+    end
+
     local comments = {}
     for row in stmt:nrows() do
         row.title = row.title:gsub("%s*#[%w/_:-]*", "")

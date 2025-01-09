@@ -539,6 +539,12 @@ hl https://docs.python.org/3/library/stdtypes.html#bytes-objects
 ln bytes
 co $ ..
 
+nn docs/stdtypes/bytes/decode
+hl https://docs.python.org/3/library/stdtypes.html#bytes.decode
+ln decode(): decodes to a string
+co $ ../../str
+co $ ../../str/encode
+
 nn docs/reference/data_model
 hl https://docs.python.org/3/reference/index.html
 ln Chapter 3: data model
@@ -675,3 +681,40 @@ nn docs/stdlib/development/typing
 hl https://docs.python.org/3/library/typing.html
 ln support for type hints
 co $ ..
+
+nn docs/stdlib/concurrency/subprocess
+hl https://docs.python.org/3/library/subprocess.html
+ln subprocess: spawn new processes.
+co $ ..
+
+nn docs/stdlib/concurrency/subprocess/run
+hl https://docs.python.org/3/library/subprocess.html#subprocess.run
+ln run()
+co $ ..
+
+nn docs/stdlib/cmdline
+ln command line libs
+hl https://docs.python.org/3/library/cmdlinelibs.html
+co $ ..
+
+nn docs/stdlib/cmdline/optparse
+hl https://docs.python.org/3/library/optparse.html
+co $ ..
+
+nn docs/stdlib/os_services/os/path
+
+nn docs/stdlib/os_services/os/path/dirname
+hl https://docs.python.org/3/library/os.path.html#os.path.dirname
+co $ ..
+
+nn docs/stdlib/os_services/os/path/abspath
+hl https://docs.python.org/3/library/os.path.html#os.path.abspath
+co $ ..
+
+nn docs/stdlib/os_services/os/path/isdir
+hl https://docs.python.org/3/library/os.path.html#os.path.isdir
+co $ ..
+
+nn docs/stdlib/os_services/os/getcwd
+co $ ..
+hl https://docs.python.org/3/library/os.html#os.getcwd

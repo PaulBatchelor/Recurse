@@ -34,3 +34,5 @@ an interface with a grid of 8x8 checkboxes.
 @dagzet-port-commands port remaining commands to dagzet
 The goal is making things compatible with my larger
 dagzet database (using the lua implementation)
+
+@dzfiles-importer make dzfiles importer

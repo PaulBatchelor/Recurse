@@ -14,3 +14,32 @@ I can then add timelogs to specific volumes
 This might actually work already
 
 @10:49 Migrate system design interview to vol2 branch #timelog:00:15:00
+
+@11:07 Try to make better dzfiles importer #dzfiles-importer #timelog:01:47:19
+
+@11:48 Re-remembering subprocess in python #dzfiles-importer
+#! dz pythondocs/stdlib/concurrency/subprocess/run
+Going to make the importer in python
+
+@11:48 bytes.decode() needed to convert to string from stdout in subprocess #dzfiles-importer
+#! dz python/docs/stdlib/concurrency/subprocess/run
+#! dz python/docs/stdtype/bytes/decode
+
+@12:01 considering optparse for a clear flag #dzfiles-importer
+#! dz python/docs/stdlib/cmdline/optparse
+For now, I think I will just clear by default.
+
+@12:10 drop-in replacement seems to work? now, I want something with directories #dzfiles-importer
+When a directory is found instead of a dz file, read the
+file from the dzfiles directory.
+
+@13:06 lots of path troubleshooting. #dzfiles-importer
+#! dz python/docs/stdlib/os_services/os/path
+#! dz python/docs/stdlib/os_services/os/path/dirname
+#! dz python/docs/stdlib/os_services/os/path/abspath
+#! dz python/docs/stdlib/os_services/os/path/isdir
+#! dz python/docs/stdlib/os_services/os/getcwd
+I ended up with a logic that validates and makes sure
+the file for a path exists. If it can't find it the first
+time, it attempts to use a generated prefix.
+The initial results seem to work out.

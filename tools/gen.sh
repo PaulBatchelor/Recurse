@@ -4,14 +4,15 @@ if [[ ! $? -eq 0 ]]
 then
     exit 1
 fi
-./tools/dz_wikigen.sh
+
+# generate logs
+./tools/genlogdb.sh
 if [[ ! $? -eq 0 ]]
 then
     exit 1
 fi
 
-# generate logs
-./tools/genlogdb.sh
+./tools/dz_wikigen.sh
 if [[ ! $? -eq 0 ]]
 then
     exit 1
