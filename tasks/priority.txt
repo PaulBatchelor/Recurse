@@ -15,3 +15,5 @@ solutions are submitted to LC.
 @flashcards-web web view for flashcards
 
 @dagzet-dzfiles-txt Create dzfiles.txt infrastructure
+
+@codestudy General codestudy

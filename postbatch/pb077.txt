@@ -121,3 +121,5 @@ I looked at one of the "wrong" answers of mine, and it does
 work.
 ---
 I'm going to pick this up tomorrow. Switching gears.
+
+@19:08 ripgrep #codestudy #timelog:01:06:17
