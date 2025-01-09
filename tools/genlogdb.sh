@@ -4,9 +4,10 @@ sqlite3 a.db <<EOM
     DROP TABLE IF EXISTS logtags;
 EOM
 
-while read -r line
-do
-    echo $line
-    #./tools/evparse.sh $line | sqlite3 a.db
-    ../dzbrowse/logparse.py $line | sqlite3 a.db
-done < logs/logfiles.txt
+# while read -r line
+# do
+#     echo $line
+#     #./tools/evparse.sh $line | sqlite3 a.db
+#     ../dzbrowse/logparse.py $line | sqlite3 a.db
+# done < logs/logfiles.txt
+../dzbrowse/batchlogs.py logs/logfiles.txt

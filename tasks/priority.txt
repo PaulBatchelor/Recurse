@@ -6,7 +6,7 @@ For each problem on the list, I want to make sure they
 in my dagzet database @!(dzref "leetcode")!@, and that
 solutions are submitted to LC.
 
-@read-system-design-interview Read System Design Interview: An Insiders Guide
+@read-system-design-interview Read System Design Interview: An Insiders Guide (vol 2)
 
 @read-DDIA read designing data intensive applications
 

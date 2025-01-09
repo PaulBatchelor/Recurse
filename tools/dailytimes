@@ -5,7 +5,7 @@ logs.day as day,
 sum(strftime('%s', substr(tag,9)) - strftime('%s', '00:00:00')) as seconds
 FROM logtags
 INNER JOIN logs on logs.rowid = logtags.logid
-WHERE tag LIKE "timelog:%"
+WHERE tag LIKE 'timelog:%'
 GROUP by logs.day)
 SELECT
 day,

@@ -1,7 +1,12 @@
 ns system_design_interview
 gr reading notes: system design interview
 
-ns system_design_interview/toc
+nn 2
+
+ns +2
+gr volume 2
+
+ns +toc
 gr Table of Contents
 
 nn 01_proximity_service
@@ -29,7 +34,7 @@ co $ ..
 nn step1/functional_requirements
 ln Functional Requirements
 co $ ..
-co $ ../../../../glossary/functional_requirement
+co $ ../../../../../glossary/functional_requirement
 
 ns +step1/functional_requirements
 
@@ -70,7 +75,7 @@ ns ../..
 nn step1/non_functional_requirements
 ln Non-Functional Requirements
 co $ ..
-co $ ../../../../glossary/non_functional_requirement
+co $ ../../../../../glossary/non_functional_requirement
 
 ns +step1/non_functional_requirements
 
@@ -106,7 +111,7 @@ nn point_to_point
 ln Point-to-point: a message is sent to a queue
 ln and consumed by one and only one consumer
 co $ ..
-co $ ../../../../../glossary/consumer_group
+co $ ../../../../../../glossary/consumer_group
 cr point-to-point model can be simulated by the
 cr concept of a consumer group
 co $ publish_subscribe
@@ -117,17 +122,17 @@ cr the publish-subscribe model
 nn publish_subscribe
 ln Publish-subscribe
 co $ ..
-co $ ../../../../../glossary/topic
-co $ ../../../../../glossary/publish_subscribe
+co $ ../../../../../../glossary/topic
+co $ ../../../../../../glossary/publish_subscribe
 
 ns ../..
 
 nn step2/topics_partitions_brokers
 ln Topics, Partitions, Brokers
 co $ ..
-co $ ../../../../glossary/partition
+co $ ../../../../../glossary/partition
 cr Used to distribute load for topics.
-co $ ../../../../glossary/broker
+co $ ../../../../../glossary/broker
 cr The distribution of partitions among brokers
 cr is key to scalability
 
@@ -148,12 +153,12 @@ ns ../..
 nn step2/consumer_group
 ln Consumer Group
 co $ ..
-co $ ../../../../glossary/consumer_group
+co $ ../../../../../glossary/consumer_group
 
 nn step2/high_level_design
 ln High-Level Design
 co $ ..
-co $ ../../../../glossary/high_level_design
+co $ ../../../../../glossary/high_level_design
 
 nn step2/high_level_design/producer
 ln Producer
@@ -187,7 +192,7 @@ ns ..
 nn 05_metrics_monitoring_and_alert_system
 zz pg 135-159
 ln Chapter 5: Metrics monitoring and alert system
-co $ ../../glossary/event_monitoring
+co $ ../../../glossary/event_monitoring
 rm pg 135-159
 
 ns +05_metrics_monitoring_and_alert_system
@@ -197,7 +202,7 @@ co $ ..
 ns +step1
 
 nn functional_requirements
-co $ ../../../../glossary/functional_requirement
+co $ ../../../../../glossary/functional_requirement
 co $ ..
 
 ns +functional_requirements
@@ -214,7 +219,7 @@ co $ ..
 ns ..
 
 nn non_functional_requirements
-co $ ../../../../glossary/non_functional_requirement
+co $ ../../../../../glossary/non_functional_requirement
 co $ ..
 
 ns +non_functional_requirements
@@ -272,13 +277,13 @@ co $ ..
 ns ..
 
 nn data_model
-co $ ../../../../glossary/data_model
+co $ ../../../../../glossary/data_model
 co $ ..
 
 ns +data_model
 nn data_access_pattern
 ln Data Access Pattern
-co $ ../../../../../glossary/access_pattern
+co $ ../../../../../../glossary/access_pattern
 co $ ..
 
 ns +data_access_pattern
@@ -295,22 +300,22 @@ ns ..
 nn data_storage_system
 ln Data Storage System
 co $ ..
-co $ ../../../../../references/db_engines_ranking
+co $ ../../../../../../references/db_engines_ranking
 
 nn data_storage_system/time_series_database
 ln Time Series Database (TSB)
-co $ ../../../../../../glossary/time_series_database
-co $ ../../../../../../tools/influxdb
+co $ ../../../../../../../glossary/time_series_database
+co $ ../../../../../../../tools/influxdb
 cr according to dbrankings, most commonly used TSDB
 ns ..
-co $ ../../../../../../references/db_engines_ranking
+co $ ../../../../../../../references/db_engines_ranking
 cr DB-engines ranking used to determine which TSDB to use
-co $ ../../../../../../tools/prometheus
+co $ ../../../../../../../tools/prometheus
 cr according to db-rankings, one of the mostly commonly
 cr used TSDB
 
 nn high_level_design
-co $ ../../../../glossary/high_level_design
+co $ ../../../../../glossary/high_level_design
 co $ ..
 
 
@@ -343,7 +348,7 @@ ln Chapter 13: stock exchange
 
 zz Steps 1 and 2
 
-ns system_design_interview/toc/01_proximity_service
+ns system_design_interview/2/toc/01_proximity_service
 
 nn step1
 ln step 1
@@ -352,7 +357,7 @@ co $ ..
 nn step1/func_reqs
 ln function requirements
 co $ ..
-co $ ../../../../glossary/functional_requirement
+co $ ../../../../../glossary/functional_requirement
 
 nn step1/func_reqs/return_nearby_business
 ln return nearby businesses
@@ -369,7 +374,7 @@ co $ ..
 nn step1/nonfunc_reqs
 ln non-functional requirements
 co $ ..
-co $ ../../../../glossary/non_functional_requirement
+co $ ../../../../../glossary/non_functional_requirement
 
 nn step1/nonfunc_reqs/low_latency
 ln low latency
@@ -390,7 +395,7 @@ co $ ..
 nn step2/api_design
 ln API Design
 co $ ..
-co $ ../../../../glossary/REST
+co $ ../../../../../glossary/REST
 
 nn step2/high_level_design
 ln High level design diagram
@@ -399,7 +404,7 @@ co $ ..
 nn step2/high_level_design/load_balancer
 ln Load Balancer
 co $ ..
-co $ ../../../../../glossary/load_balancing
+co $ ../../../../../../glossary/load_balancing
 
 nn step2/high_level_design/LBS
 ln LBS: location based service
@@ -419,21 +424,21 @@ co ../LBS $
 nn step2/data_model
 ln Data Model
 co $ ..
-co $ ../../../../glossary/data_model
+co $ ../../../../../glossary/data_model
 
 nn step2/data_model/rw_ratio
 ln R/W ratio: high read volume due to search
 ln and viewing details for business. Write volume
 ln is low because adding/removing businesses is
 ln infrequent
-co $ ../../../../../tools/mysql
+co $ ../../../../../../tools/mysql
 cr good fit for read-heavy systems
 
 nn step2/algorithms
 ln Varous algorithms for exploring nearby businesses
 co $ ..
-co $ ../../../../tools/redis/geohash
-co $ ../../../../tools/postgres_postgis
+co $ ../../../../../tools/redis/geohash
+co $ ../../../../../tools/postgres_postgis
 
 nn step2/algorithms/1_two_dimensional_search
 ln Option 1: two-dimensional search
@@ -445,18 +450,18 @@ co $ ..
 
 nn step2/algorithms/3_geohash
 ln Option 3: geohash
-co $ ../../../../../glossary/geohash
+co $ ../../../../../../glossary/geohash
 co $ ..
 
 nn step2/algorithms/4_quadtree
 ln Option 4: quadtree
 co $ ..
-co $ ../../../../../glossary/quadtree
+co $ ../../../../../../glossary/quadtree
 
 nn step2/algorithms/5_google_s2
 ln Google S2
 co $ ..
-co $ ../../../../../tools/s2_geometry
+co $ ../../../../../../tools/s2_geometry
 
 nn step2/api_design/search
 ln API for search
@@ -470,7 +475,7 @@ nn step2/api_design/pagination
 ln API for pagination
 co $ ..
 
-ns system_design_interview/toc/02_nearby_friends
+ns system_design_interview/2/toc/02_nearby_friends
 
 nn step1
 ln step 1
@@ -479,7 +484,7 @@ co $ ..
 nn step1/func_reqs
 ln functional requirements
 co $ ..
-co $ ../../../../glossary/functional_requirement
+co $ ../../../../../glossary/functional_requirement
 
 nn step1/func_reqs/view_nearby_friends
 ln View nearby friends
@@ -519,23 +524,23 @@ co $ ..
 nn step2/high_level_design
 ln High level design diagram
 co $ ..
-co $ ../../../../glossary/high_level_design
+co $ ../../../../../glossary/high_level_design
 
 nn step2/high_level_design/load_balancer
 ln Load Balancer
 co $ ..
-co $ ../../../../../glossary/load_balancing
+co $ ../../../../../../glossary/load_balancing
 
 nn step2/high_level_design/RESTful_API_servers
 ln RESTful API servers
 co $ ..
-co $ ../../../../../glossary/REST
+co $ ../../../../../../glossary/REST
 co ../load_balancer $
 
 nn step2/high_level_design/websocket_servers
 ln WebSocket Servers
 co $ ..
-co $ ../../../../../glossary/websocket
+co $ ../../../../../../glossary/websocket
 
 nn step2/high_level_design/location_cache
 ln Redis location cache
@@ -544,7 +549,7 @@ co ../websocket_servers $
 
 nn step2/high_level_design/redis_pub_sub
 ln Redis Pub/Sub server
-co $ ../../../../../tools/redis/pub_sub
+co $ ../../../../../../tools/redis/pub_sub
 co ../websocket_servers $
 
 nn step2/periodic_location_update
@@ -607,11 +612,11 @@ ln Location history database
 co $ ..
 rm needs a database that handles heavy-write
 rm workload well and can be horizontally scaled
-co $ ../../../../../tools/cassandra
+co $ ../../../../../../tools/cassandra
 cr Cassandra is a suitable candidate for the high write
 cr workload.
 
-ns system_design_interview/toc/03_google_maps
+ns system_design_interview/2/toc/03_google_maps
 
 nn step1
 ln step 1
@@ -670,12 +675,12 @@ co $ ..
 nn step2/map_101
 ln map 101
 co $ ..
-co $ ../../../../glossary/geocoding
-co $ ../../../../glossary/geohash
+co $ ../../../../../glossary/geocoding
+co $ ../../../../../glossary/geohash
 
 nn step2/map_101/road_data_processing_navigation
 ln Road data processing for navigation algorithms
-co $ ../../../../../glossary/A_star_algorithm
+co $ ../../../../../../glossary/A_star_algorithm
 
 nn step2/map_101/positioning_system
 ln Positioning System
@@ -684,7 +689,7 @@ co $ ..
 nn step2/high_level_design
 ln High-Level Design
 co $ ..
-co $ ../../../../glossary/high_level_design
+co $ ../../../../../glossary/high_level_design
 
 nn step2/high_level_design/location_service
 ln Location Service: responsible for recording
@@ -962,7 +967,7 @@ ln typically used for inter-process communication (IPC),
 ln or for inter-thread communication within the same
 ln process.
 co $ ..
-co $ ../../toc/04_distributed_message_queue
+co $ ../../2/toc/04_distributed_message_queue
 
 nn tools/apache_kafka
 hl https://en.wikipedia.org/wiki/Apache_Kafka
@@ -1261,40 +1266,40 @@ ns +concepts/func_reqs
 nn post
 ln post (data)
 co $ ..
-co ../../../toc/01_proximity_service/step1/func_reqs/add_del_update_business $
+co ../../../2/toc/01_proximity_service/step1/func_reqs/add_del_update_business $
 cr add a business
 co ../../../glossary/http_request_methods $
-co ../../../toc/04_distributed_message_queue/step1/functional_requirements/producers_send_messages $
+co ../../../2/toc/04_distributed_message_queue/step1/functional_requirements/producers_send_messages $
 
 nn put
 ln put (data)
 co $ ..
-co ../../../toc/01_proximity_service/step1/func_reqs/add_del_update_business $
+co ../../../2/toc/01_proximity_service/step1/func_reqs/add_del_update_business $
 cr update a business
 co ../../../glossary/http_request_methods $
-co ../../../toc/02_nearby_friends/step1/func_reqs/update_nearby_friend_list  $
+co ../../../2/toc/02_nearby_friends/step1/func_reqs/update_nearby_friend_list  $
 cr update (PUT) nearby friends list
-co ../../../toc/03_google_maps/step1/func_reqs/user_location_update  $
+co ../../../2/toc/03_google_maps/step1/func_reqs/user_location_update  $
 cr update (PUT) user location
 
 nn delete
 ln delete (data)
 co $ ..
-co ../../../toc/01_proximity_service/step1/func_reqs/add_del_update_business $
+co ../../../2/toc/01_proximity_service/step1/func_reqs/add_del_update_business $
 cr delete a business
 co ../../../glossary/http_request_methods $
 
 nn get
 ln get
 co $ ..
-co ../../../toc/01_proximity_service/step1/func_reqs/return_nearby_business $
+co ../../../2/toc/01_proximity_service/step1/func_reqs/return_nearby_business $
 cr return a nearby business
 co ../../../glossary/http_request_methods $
-co ../../../toc/01_proximity_service/step1/func_reqs/view_business $
+co ../../../2/toc/01_proximity_service/step1/func_reqs/view_business $
 cr view (get) a business
-co ../../../toc/02_nearby_friends/step1/func_reqs/view_nearby_friends $
+co ../../../2/toc/02_nearby_friends/step1/func_reqs/view_nearby_friends $
 cr view (GET) nearby friends
-co ../../../toc/04_distributed_message_queue/step1/functional_requirements/consumers_consume_messages $
+co ../../../2/toc/04_distributed_message_queue/step1/functional_requirements/consumers_consume_messages $
 cr Consumers consume (GET) messages
 
 zz -func_reqs
@@ -1308,46 +1313,46 @@ ns +non_func_reqs
 nn low_latency
 ln Low Latency
 co $ ..
-co ../../../toc/01_proximity_service/step1/nonfunc_reqs/low_latency $
-co ../../../toc/02_nearby_friends/step1/nonfunc_reqs/low_latency $
-co ../../../toc/04_distributed_message_queue/step1/non_functional_requirements/high_throughput_or_low_latency $
-co ../../../toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/low_latency $
+co ../../../2/toc/01_proximity_service/step1/nonfunc_reqs/low_latency $
+co ../../../2/toc/02_nearby_friends/step1/nonfunc_reqs/low_latency $
+co ../../../2/toc/04_distributed_message_queue/step1/non_functional_requirements/high_throughput_or_low_latency $
+co ../../../2/toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/low_latency $
 
 nn privacy
 ln privacy
 co $ ..
-co ../../../toc/01_proximity_service/step1/nonfunc_reqs/data_privacy $
+co ../../../2/toc/01_proximity_service/step1/nonfunc_reqs/data_privacy $
 
 nn accuracy
 ln accuracy
 co $ ..
-co ../../../toc/03_google_maps/step1/nonfunc_reqs/highly_accurate $
+co ../../../2/toc/03_google_maps/step1/nonfunc_reqs/highly_accurate $
 
 nn high_throughput
 ln high throughput
 co $ ..
-co ../../../toc/04_distributed_message_queue/step1/non_functional_requirements/high_throughput_or_low_latency $
+co ../../../2/toc/04_distributed_message_queue/step1/non_functional_requirements/high_throughput_or_low_latency $
 
 nn durability
 ln durability
 co $ ..
-co ../../../toc/04_distributed_message_queue/step1/non_functional_requirements/persistent_durable $
+co ../../../2/toc/04_distributed_message_queue/step1/non_functional_requirements/persistent_durable $
 
 nn scalability
 ln scalability
 co $ ..
-co ../../../toc/04_distributed_message_queue/step1/non_functional_requirements/scalable $
-co ../../../toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/scalability $
+co ../../../2/toc/04_distributed_message_queue/step1/non_functional_requirements/scalable $
+co ../../../2/toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/scalability $
 
 nn flexibility
 ln flexibility
 co $ ..
-co ../../../toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/flexibility $
+co ../../../2/toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/flexibility $
 
 nn reliability
 ln reliability
 co $ ..
-co ../../../toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/reliability $
+co ../../../2/toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/reliability $
 
 
 zz -non_func_reqs
@@ -1356,7 +1361,7 @@ ns ..
 nn estimation
 ln back-of-the-envelope estimations
 co $ ..
-co ../../toc/01_proximity_service/step1/nonfunc_reqs/5k_search_qps $
+co ../../2/toc/01_proximity_service/step1/nonfunc_reqs/5k_search_qps $
 
 
 ns +estimation
