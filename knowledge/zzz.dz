@@ -310,3 +310,10 @@ cr implements an LRU cache
 
 cx TADM/toc/08_dynamic_programming/02_approximate_string_matching leetcode/problems/72_edit_distance
 cr Edit distance problem is a case study in TADM
+
+cx DDIA/toc/2_distributed_data/07_transactions/meaning_of_ACID/durability system_design_interview/concepts/non_func_reqs/durability
+
+
+
+cx DDIA/glossary/scalability system_design_interview/concepts/non_func_reqs/scalability
+

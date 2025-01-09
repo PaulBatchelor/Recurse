@@ -123,3 +123,35 @@ work.
 I'm going to pick this up tomorrow. Switching gears.
 
 @19:08 ripgrep #codestudy #timelog:01:06:17
+
+@21:34 How do I grok these? #read-system-design-interview #timelog:00:15:00
+I find that my ability to retain these is quite limited.
+
+@22:01 Review, attempt to find patterns #read-system-design-interview #timelog:01:21:21
+
+@22:12 I need to make it easier to copy links #read-system-design-interview
+I've decided I'm going to start looking at all the functional
+requirements of the first 5 chapters, and begin
+attempting to connect them to larger ideas. My hope
+is that things will converge.
+
+@23:06 I have created a "concepts" graph. concepts are emerging #read-system-design-interview
+#! dz system_design_interview/concepts
+#! dz system_design_interview/concepts/func_reqs
+#! dz system_design_interview/concepts/non_func_reqs
+In particular, I looked at functional and non-functional
+requirements for the first 5 chapters. I'm quite pleased
+that the verbs of many functional requirements can be
+boiled down to CRUD, or http verbs POST, GET, PUT, DELETE.
+Non-functional requirements seem to share many things
+in common, and are more straight forward than
+functional requirements.
+
+@23:21 I have decided that the outlines at the end of each chapter are actually crap #read-system-design-interview
+There's just a lot of inconsistency between what the text
+conveys, and what the outline shows. It doesn't summarize
+all that well. Compare this to DDIA: summaries and
+conclusions are fantastic well scoped.
+---
+Moving forward, I'm just going to read, outline as I go,
+and then review, tying into larger concepts.

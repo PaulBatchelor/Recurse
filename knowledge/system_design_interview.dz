@@ -6,15 +6,19 @@ gr Table of Contents
 
 nn 01_proximity_service
 ln Chapter 1: proximity Service
+rm pg 9-40
 
 nn 02_nearby_friends
 ln Chapter 2: Nearby Friends
+rm pg 43-65
 
 nn 03_google_maps
 ln Chapter 3: Google Maps
+rm pg 67-95
 
 nn 04_distributed_message_queue
 ln Chapter 4: Distribtued Message Queue
+rm pg 97-132
 
 ns +04_distributed_message_queue
 
@@ -33,7 +37,7 @@ nn producers_send_messages
 ln Producers send messages to a message queue
 co $ ..
 
-nn consumers_consume_messges
+nn consumers_consume_messages
 ln Consumers consume messages from message queue
 co $ ..
 co $ producers_send_messages
@@ -184,6 +188,7 @@ nn 05_metrics_monitoring_and_alert_system
 zz pg 135-159
 ln Chapter 5: Metrics monitoring and alert system
 co $ ../../glossary/event_monitoring
+rm pg 135-159
 
 ns +05_metrics_monitoring_and_alert_system
 nn step1
@@ -480,7 +485,7 @@ nn step1/func_reqs/view_nearby_friends
 ln View nearby friends
 co $ ..
 
-nn step1/func_reqs/udpate_nearby_friend_list
+nn step1/func_reqs/update_nearby_friend_list
 ln Update nearby friend list
 co $ ..
 
@@ -640,8 +645,10 @@ nn step1/nonfunc_reqs/smooth_navigation
 ln Smooth navigation
 co $ ..
 
-nn step1/nonfunc_reqs/data_usage
-ln Data Usage
+nn step1/nonfunc_reqs/minimize_data_usage
+ln Client should use as little data and
+ln battery as possible. This is important
+ln for mobile devices
 co $ ..
 
 nn step1/estimation
@@ -1242,3 +1249,123 @@ co $ ../../glossary/event_monitoring
 nn references/db_engines_ranking
 hl https://db-engines.com/en/ranking
 ln DB-Engines ranking
+
+nn concepts
+ln high-level concepts
+
+nn concepts/func_reqs
+ln Functional Requirements
+co $ ..
+
+ns +concepts/func_reqs
+nn post
+ln post (data)
+co $ ..
+co ../../../toc/01_proximity_service/step1/func_reqs/add_del_update_business $
+cr add a business
+co ../../../glossary/http_request_methods $
+co ../../../toc/04_distributed_message_queue/step1/functional_requirements/producers_send_messages $
+
+nn put
+ln put (data)
+co $ ..
+co ../../../toc/01_proximity_service/step1/func_reqs/add_del_update_business $
+cr update a business
+co ../../../glossary/http_request_methods $
+co ../../../toc/02_nearby_friends/step1/func_reqs/update_nearby_friend_list  $
+cr update (PUT) nearby friends list
+co ../../../toc/03_google_maps/step1/func_reqs/user_location_update  $
+cr update (PUT) user location
+
+nn delete
+ln delete (data)
+co $ ..
+co ../../../toc/01_proximity_service/step1/func_reqs/add_del_update_business $
+cr delete a business
+co ../../../glossary/http_request_methods $
+
+nn get
+ln get
+co $ ..
+co ../../../toc/01_proximity_service/step1/func_reqs/return_nearby_business $
+cr return a nearby business
+co ../../../glossary/http_request_methods $
+co ../../../toc/01_proximity_service/step1/func_reqs/view_business $
+cr view (get) a business
+co ../../../toc/02_nearby_friends/step1/func_reqs/view_nearby_friends $
+cr view (GET) nearby friends
+co ../../../toc/04_distributed_message_queue/step1/functional_requirements/consumers_consume_messages $
+cr Consumers consume (GET) messages
+
+zz -func_reqs
+ns ..
+
+nn non_func_reqs
+co $ ..
+ln non-functional requirements
+ns +non_func_reqs
+
+nn low_latency
+ln Low Latency
+co $ ..
+co ../../../toc/01_proximity_service/step1/nonfunc_reqs/low_latency $
+co ../../../toc/02_nearby_friends/step1/nonfunc_reqs/low_latency $
+co ../../../toc/04_distributed_message_queue/step1/non_functional_requirements/high_throughput_or_low_latency $
+co ../../../toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/low_latency $
+
+nn privacy
+ln privacy
+co $ ..
+co ../../../toc/01_proximity_service/step1/nonfunc_reqs/data_privacy $
+
+nn accuracy
+ln accuracy
+co $ ..
+co ../../../toc/03_google_maps/step1/nonfunc_reqs/highly_accurate $
+
+nn high_throughput
+ln high throughput
+co $ ..
+co ../../../toc/04_distributed_message_queue/step1/non_functional_requirements/high_throughput_or_low_latency $
+
+nn durability
+ln durability
+co $ ..
+co ../../../toc/04_distributed_message_queue/step1/non_functional_requirements/persistent_durable $
+
+nn scalability
+ln scalability
+co $ ..
+co ../../../toc/04_distributed_message_queue/step1/non_functional_requirements/scalable $
+co ../../../toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/scalability $
+
+nn flexibility
+ln flexibility
+co $ ..
+co ../../../toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/flexibility $
+
+nn reliability
+ln reliability
+co $ ..
+co ../../../toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/reliability $
+
+
+zz -non_func_reqs
+ns ..
+
+nn estimation
+ln back-of-the-envelope estimations
+co $ ..
+co ../../toc/01_proximity_service/step1/nonfunc_reqs/5k_search_qps $
+
+
+ns +estimation
+
+
+
+zz -estimation
+ns ..
+
+zz -concepts
+ns ..
+

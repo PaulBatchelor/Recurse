@@ -1,0 +1,5 @@
+KEYWORD=$1
+sqlite3 a.db <<EOM
+SELECT name FROM dz_nodes
+WHERE name LIKE '%$KEYWORD%'
+EOM
