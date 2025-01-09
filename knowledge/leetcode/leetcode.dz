@@ -1514,7 +1514,7 @@ co $ leetcode75
 
 ns +problems/72_edit_distance
 nn solutions/top_down
-nn soltuions/bottoms_up
+nn solutions/bottoms_up
 td complete solution
 zz problems/72_edit_distance
 ns ../..

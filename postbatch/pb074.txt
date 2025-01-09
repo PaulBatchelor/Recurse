@@ -27,7 +27,7 @@ for another time. I have created a task for it.
 
 @14:40 trie explore card #dz:leetcode/explore/trie #timelog:00:45:27
 
-@15:34 677 map sum pairs #dz:problems/677_map_sum_pairs #timelog:00:15:32
+@15:34 677 map sum pairs #dz:leetcode/problems/677_map_sum_pairs #timelog:00:15:32
 via the leetcode trie explore card
 
 @16:16 Replace Words #dz:leetcode/problems/648_replace_words #timelog:00:12:32
