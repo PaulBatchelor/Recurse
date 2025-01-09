@@ -20,6 +20,59 @@ rm pg 34
 nn 03_framework
 ln Chapter 3: A framework for system design interviews
 co $ ..
+rm pg 42
+
+nn 04_rate_limiter
+co $ ..
+rm pg 51
+
+nn 05_consistent_hashing
+co $ ..
+rm pg 71
+
+nn 06_key_value_store
+co $ ..
+rm pg 87
+
+nn 07_UUID
+co $ ..
+rm pg 110
+
+nn 08_URL_shortener
+co $ ..
+rm pg 119
+
+nn 09_web_crawler
+co $ ..
+rm pg 132
+
+nn 10_notification
+co $ ..
+rm pg 151
+
+nn 11_newsfeed
+co $ ..
+rm pg 166
+
+nn 12_chat
+co $ ..
+rm pg 178
+
+nn 13_search_autocomplete
+co $ ..
+rm pg 200
+
+nn 14_youtube
+co $ ..
+rm pg 220
+
+nn 15_google_drive
+co $ ..
+rm pg 244
+
+nn 16_learning_continues
+co $ ..
+rm pg 264
 
 zz -toc
 ns ..

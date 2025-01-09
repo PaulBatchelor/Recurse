@@ -56,3 +56,14 @@ Only got to first three.
 Let's see how easy this is to do...
 ---
 New script from sql script: =orphan_comment_nodes=.
+
+@15:03 More TOC mapping #read-system-design-interview #timelog:00:08:06
+#! dz system_design_interview/1/toc
+
+@15:20 Transfer to RM #read-system-design-interview #timelog:00:09:35
+#! dz system_design_interview/1
+
+@15:30 Reading chapter 1 #read-system-design-interview #timelog:00:14:20
+#! dz system_design_interview/1/toc/01_scale_zero_to_millions
+
+@17:02 Correspondences
