@@ -1,0 +1,16 @@
+@2025-01-09 Thursday, January 8th
+@09:06 Some links curation #timelog:00:17:08
+
+@09:24 Migrating some C links to their own subgraph #timelog:00:16:21
+
+@09:47 gah these missing links will be the death of me. tooling up #timelog:00:20:23
+tools/find_missing_nodes.sh created. it works well enough
+
+@10:41 This is actually vol 2, I have found vol 1 #read-system-design-interview
+I think I will have this task for both volumes.
+I can then add timelogs to specific volumes
+
+@10:43 Try to work out multiple timelogs per tag #timelog:00:04:27
+This might actually work already
+
+@10:49 Migrate system design interview to vol2 branch #timelog:00:15:00
