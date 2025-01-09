@@ -1,0 +1,100 @@
+ns c
+gr the C programming language
+
+nn pool_allocator_c
+hl https://8dcc.github.io/programming/pool-allocator.html
+ln Writing a simple pool allocator in C
+tg cprog outlined
+
+ns +pool_allocator_c
+
+nn outline
+td read
+ns +outline
+
+nn 1_intro
+hl https://8dcc.github.io/programming/pool-allocator.html#introduction
+co $ ..
+
+nn 2_initial_implementation
+hl https://8dcc.github.io/programming/pool-allocator.html#writing-the-initial-implementation
+co $ ..
+
+nn 3_reallocation_problems
+hl https://8dcc.github.io/programming/pool-allocator.html#reallocation-problems
+co $ ..
+
+nn 4_second_implementatoin
+hl https://8dcc.github.io/programming/pool-allocator.html#second-implementation-expanding-the-pool
+
+nn 5_valgrind_support
+hl https://8dcc.github.io/programming/pool-allocator.html#adding-valgrind-support
+td read
+
+zz -outline
+ns ..
+
+zz -pool_allocator_c
+ns ..
+
+nn reading_c_decl
+hl http://unixwiz.net/techtips/reading-cdecl.html
+ln Reading C type declarations
+tg cprog
+
+nn xmas_c
+hl https://udel.edu/~mm/xmas/
+ln xmas.c: Winner of the Obfuscated C Code
+ln Contest in 1988.
+rm analysis of the program
+tg cprog obfuscated
+
+nn botlib
+hl https://github.com/antirez/botlib
+ln botlib: C telegram bot framework by antirez
+tg antirez botlib cprog
+
+nn c_xor_cpp
+ln C xor C++ Programming: This document enumerates instances 
+ln where the same source code has different meaning when 
+ln compiled with C and C++ implementations. 
+hl https://docs.google.com/document/d/16B36r0HksR0LqQAGLA1syY CtZvYaVC0hEF2D00ZAd0o/mobilebasic
+tg cprog
+rm ghfuapeqh
+
+nn c_portability_weird_machines
+ln C portability Lessons from Weird Machines. This pops up on 
+ln HN occasionally, and I quite like because it showcases how 
+ln the promise of C portability is kind of an illusion. 
+hl https://begriffs.com/posts/2018-11-15-c-portability.html
+tg cprog
+rm giwhwuoql
+
+nn c99_strict_aliasing
+ln How I think about C99 strict aliasing rules 
+hl https://alanwu.space/post/strict-aliasing/
+tg cprog
+rm ghprloqii
+
+nn c_isnt_proglang_anymore
+hl https://faultlore.com/blah/c-isnt-a-language/
+ln C Isn't A Programming Language Anymore
+tg cprog
+
+nn frama_c
+ln Frama-C is a static analyzer of C code. 
+hl https://frama-c.com/
+tg cprog
+rm gdsjpukrf
+
+nn common_libs_datastructs_c
+ln Common libraries and data structures for C. 
+hl https://github.com/tezc/sc
+tg cprog
+rm grsqaljuu
+
+nn chibicc_uxn
+ln chibicc-uxn: a small C compiler targetting uxn. 
+hl https://github.com/lynn/chibicc
+tg cprog uxn
+rm gwhafauls

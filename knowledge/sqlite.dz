@@ -38,3 +38,13 @@ ln open contributions
 nn file_format
 hl https://www.sqlite.org/fileformat.html
 ln SQLite file format overview
+
+nn explaining_sqlite_vm
+ln Explaining The Virtual Machine. It turns out SQLite has a 
+ln special virtual machine to process SQL statements. This 
+ln blog posts covers a bit about the VM and how the virtual 
+ln machine, and the process of converting statements into 
+ln sqlite bytecode.
+hl https://medium.com/@JasonWyatt/squeezing-performance-from-sqlite-explaining-the-virtual-machine-2550ef6c5db.
+tg sqlite
+rm gujhrwjfq

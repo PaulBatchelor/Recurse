@@ -79,3 +79,9 @@ nn limbo
 hl https://turso.tech/blog/introducing-limbo-a-complete-rewrite-of-sqlite-in-rust
 ln Limbo: a complete rewrite of SQLite in Rust
 tg rust sqlite
+
+nn sparkey
+hl https://github.com/spotify/sparkey
+ln Sparkey is a simple constant key/value
+ln storage library.
+tg database cprog

@@ -59,6 +59,7 @@ knowledge/type_systems.dz
 knowledge/TADM.dz
 knowledge/scheme.dz
 knowledge/edexp_test.dz
+knowledge/c.dz
 knowledge/zzz.dz
 knowledge/zzz_ddia.dz
 links/zzz.dz
