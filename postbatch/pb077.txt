@@ -98,3 +98,26 @@ Yup. There are. Going to quickly turn it into a set.
 The problem is actually word squares. I looked up
 the wrong problem. This has been a tremendous waste
 of time.
+
+@16:49 Getting into word squares #timelog:01:14:14
+#! dz leetcode/problems/425_word_squares
+
+@16:59 DFS first, then Trie
+#! dz leetcode/problems/425_word_squares
+#! dz leetcode/explore/trie/4_practical_application_2
+The card mentions trying to solve with DFS, then
+to attempt it as a Trie problem. So, we will attempt
+to solve as a DFS problem.
+
+@18:01 Tests pass, edge case fixes, more edge cases
+#! dz leetcode/problems/425_word_squares
+
+@18:41 I have misread the instructions
+#! dz leetcode/problems/425_word_squares
+The key thing is that the kth row and column read
+the same string.
+---
+I looked at one of the "wrong" answers of mine, and it does
+work.
+---
+I'm going to pick this up tomorrow. Switching gears.

@@ -1629,3 +1629,7 @@ nn problems/425_word_squares
 hl https://leetcode.com/problems/word-squares/
 ln 425: Word Squares
 co $ data_structures/trie
+
+nn references/word_squares
+hl https://en.wikipedia.org/wiki/Word_square
+co $ problems/425_word_squares
