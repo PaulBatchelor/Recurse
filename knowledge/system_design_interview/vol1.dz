@@ -1,0 +1,26 @@
+ns system_design_interview
+nn 1
+ns +1
+gr volume 1
+
+nn toc
+co $ ..
+ns +toc
+
+nn 01_scale_zero_to_millions
+ln Chapter 1: scale from zero to millions of users
+co $ ..
+rm pg 5
+
+nn 02_back_of_env_estimation
+ln Chapter 2: back of envelope estimation
+co $ ..
+rm pg 34
+
+nn 03_framework
+ln Chapter 3: A framework for system design interviews
+co $ ..
+
+zz -toc
+ns ..
+

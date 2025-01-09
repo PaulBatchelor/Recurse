@@ -43,3 +43,9 @@ I ended up with a logic that validates and makes sure
 the file for a path exists. If it can't find it the first
 time, it attempts to use a generated prefix.
 The initial results seem to work out.
+
+@13:25 Import initial TOC for vol 1 #read-system-design-interview #timelog:00:07:30
+Only got to first three.
+
+@13:32 These first three chapters are what I was missing
+#! dz system_design_interview/1/toc 
