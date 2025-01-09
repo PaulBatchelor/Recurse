@@ -30,3 +30,7 @@ hl https://github.com/portasynthinca3/boss
 ln BOSS (BEAM-based Operating System with Security) is a 
 ln proof-of-concept operating system written in Erlang 
 ln together with Rust.
+
+nn os1klines
+hl https://operating-system-in-1000-lines.vercel.app/en
+ln Operating System in 1,000 Lines
