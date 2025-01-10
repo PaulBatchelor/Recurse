@@ -295,3 +295,8 @@ hl https://leptos.dev/
 ln leptos: A cutting edge Rust framework for the
 ln modern web.
 rm mentioned by SH
+
+nn RTIC
+hl https://rtic.rs/2/book/en/
+ln RTIC: The hardware accelerated Rust
+ln RTOS
