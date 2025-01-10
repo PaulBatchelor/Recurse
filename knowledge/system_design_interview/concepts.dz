@@ -102,6 +102,8 @@ co ../../../2/toc/05_metrics_monitoring_and_alert_system/step1/non_functional_re
 nn availability
 co $ ..
 
+nn robustness
+co $ ..
 
 zz -non_func_reqs
 ns ..

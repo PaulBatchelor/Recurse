@@ -196,12 +196,8 @@ ln shortest paths between nodes in a weighted graph,
 ln which may represent, for example, a road network.
 
 nn glossary/message_queue
-hl https://en.wikipedia.org/wiki/Message_queue
-ln Message Queue: In computer science, message queues
-ln and mailboxes are software-engineering components
-ln typically used for inter-process communication (IPC),
-ln or for inter-thread communication within the same
-ln process.
+ln message queue: a message queue is a durable component,
+ln stored i nmemory, that supports async communication
 co $ ..
 co $ ../../2/toc/04_distributed_message_queue
 
@@ -348,8 +344,10 @@ nn glossary/JSON
 co $ ..
 
 nn glossary/HTTP
+co $ ..
 
 nn glossary/NoSQL
+co $ ..
 
 nn glossary/vertical_scaling
 ln vertical scaling: process of of adding more power (CPU,
@@ -359,6 +357,7 @@ co ../scale_up $
 cr AKA
 
 nn glossary/scale_up
+co $ ..
 
 nn glossary/horizontal_scaling
 ln horizontal scaling: adding more power to your servers
@@ -373,3 +372,20 @@ ln of expensive responses or frequently accessed data
 ln in memory so that subsequent requests are served more
 ln quickly.
 co $ ..
+
+nn glossary/CDN
+co $ ..
+ln CDN (Content Deliver Network): a
+ln network of geographically dispersed servers used
+ln to deliver static content.
+
+nn glossary/dynamic_content_caching
+co $ ..
+ln dynamic content caching: enables caching of HTML pages
+ln that rae based on request path, query strings, cookies,
+ln and request headers.
+
+nn glossary/geoDNS
+co $ ..
+ln geoDNS: a service that allows domain names to be
+ln resolved to IP addresses based on the location of a user

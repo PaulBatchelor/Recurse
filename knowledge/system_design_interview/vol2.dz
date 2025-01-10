@@ -708,12 +708,3 @@ co $ ..
 
 ns system_design_interview
 
-nn references/RFC2616_http_methods
-hl https://datatracker.ietf.org/doc/html/rfc2616#section-9
-ln RFC2616 Section 9: http methods
-co $ glossary/http_request_methods
-cr Relevant section in RFC
-
-nn references/db_engines_ranking
-hl https://db-engines.com/en/ranking
-ln DB-Engines ranking

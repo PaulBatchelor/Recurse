@@ -1,0 +1,27 @@
+ns system_design_interview
+nn references/robustness
+hl https://en.wikipedia.org/wiki/Robustness_(computer_science)
+co $ ../../concepts/non_func_reqs/robustness
+
+nn references/geoDNS
+hl https://en.wikipedia.org/wiki/GeoDNS
+co $ ../../glossary/geoDNS
+
+nn references/RFC2616_http_methods
+hl https://datatracker.ietf.org/doc/html/rfc2616#section-9
+ln RFC2616 Section 9: http methods
+co $ glossary/http_request_methods
+cr Relevant section in RFC
+
+nn references/db_engines_ranking
+hl https://db-engines.com/en/ranking
+ln DB-Engines ranking
+
+nn references/message_queue
+hl https://en.wikipedia.org/wiki/Message_queue
+ln Message Queue: In computer science, message queues
+ln and mailboxes are software-engineering components
+ln typically used for inter-process communication (IPC),
+ln or for inter-thread communication within the same
+ln process.
+co $ ../../glossary/message_queue

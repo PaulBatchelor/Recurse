@@ -127,17 +127,17 @@ cr by replicating across different locations, your
 cr website in operatoin even if a database is offline, as you
 cr can access data stored in another database server
 
-nn +06_database_replication
+ns +06_database_replication
 nn 01_master
 co $ ..
 ln A master database generally only supports write operations
 ln All the data-modifying commands like insert, delete, or
 ln update operation must be sent to the master database.
-co $ ../../../../concepts/func_reqs/post 
+co $ ../../../../../concepts/func_reqs/post 
 cr insert operation must go through master database
-co $ ../../../../concepts/func_reqs/put
+co $ ../../../../../concepts/func_reqs/put
 cr update operation mout go through master database
-co $ ../../../../concepts/func_reqs/delete
+co $ ../../../../../concepts/func_reqs/delete
 cr delete most go through master database
 
 nn 02_slave
@@ -147,7 +147,7 @@ ln reads to writes: thus, the number of slave databases
 ln in a system is usually larger than the number of
 ln master databases
 co $ 01_master
-co $ ../../../../concepts/func_reqs/get
+co $ ../../../../../concepts/func_reqs/get
 cr read is not a data-modifying commands, and can be
 cr sent through a slave
 
@@ -157,15 +157,15 @@ ns ..
 nn 07_cache
 co $ ..
 rm pg 15
-co ../../../glossary/cache $
+co ../../../../glossary/cache $
 
 nn 08_cache_tier
 ln The cache tier is a temporary data store layer, much
 ln faster than the database.
 co $ ..
 rm pg 15
-co ../../../references/multitier_architecture $
-co $ ../../../glossary/distributed_cache
+co ../../../../references/multitier_architecture $
+co $ ../../../../glossary/distributed_cache
 
 ns +08_cache_tier
 nn read_through_cache
@@ -214,30 +214,133 @@ ns ..
 nn 10_CDN
 co $ ..
 rm pg 17
+co ../../../../glossary/CDN $
+co ../../../../glossary/dynamic_content_caching $
+cr beyond scope of this book
 
 nn 11_CDN_considerations
 co $ ..
 rm pg 18
 
+ns +11_CDN_considerations
+
+nn cost
+ln run by third party providers, who charge for data
+ln transfers in and out of CDN. Infrequently accessed
+ln items shouldn't be cached.
+co $ ..
+
+nn cache_expiry
+ln set an appropritae cache expiry. important for time
+ln sensitive content. too long: not fresh. too short:
+ln can cause repeat reloading from origin servers to CDN
+co $ ..
+
+nn fallback
+ln CDN Fallback: consider who website/application copes
+ln with CDN failure.
+co $ ..
+
+nn invalidating_files
+ln Invalidating files: rmove file from the CDN before
+ln it expires, either via the CDN API (invalidate),
+ln or object versioning
+co $ ..
+
+zz -11_CDN_considerations
+ns ..
+
 nn 12_stateless_web_tier
 co $ ..
+co ../../../../references/multitier_architecture $
+cr considering scaling the webtier horizontally
 rm pg 20
+ln Stateless Web Tier: store session data in
+ln a database, moving it out of the web tier.
+co 02_database $
+cr store session data in the persistant storage such
+cr as a relational data base or NoSQL.
 
 nn 13_stateful_architecture
+ln stateful server: remembers client data (state) from
+ln one request to the next.
 co $ ..
 rm pg 20
 
 nn 14_stateless_architecture
+ln stateless server: keeps no state information. HTTP
+ln requests from users can be sent to any web servers,
+ln which fetch state data from a shared data store.
+ln A stateless system is more robust, simpler, and
+ln scalable.
 co $ ..
 rm pg 20
+co 13_stateful_architecture $
+cr unlike stateful server, statless keeps no state info
+co $ ../../../../concepts/non_func_reqs/scalability
+co $ ../../../../concepts/non_func_reqs/robustness
 
 nn 15_data_centers
 co $ ..
 rm pg 23
+co $ ../../../../references/geoDNS
+cr In normal operation, users are geoDNS-routed, or
+cr geo-routed, to the closest data center
+
+ns +15_data_centers
+
+nn technical_challenges
+ln Technical challenges
+co $ ..
+
+ns +technical_challenges
+nn traffic_redirectoin
+co $ ..
+
+nn data_synchronization
+co $ ..
+
+nn test_and_deployment
+co $ ..
+
+zz -technical_challenges
+ns ..
+
+zz -15_data_centers
+ns ..
 
 nn 16_message_queue
 co $ ..
 rm pg 25
+co ../../../../glossary/message_queue $
+co ../../../../2/toc/04_distributed_message_queue $
+
+ns +16_message_queue
+zz -16_message_queue
+
+nn producers_publishers
+ln producers/publishers: input services that create messages
+ln and publish them to queue
+co $ ..
+co ../../../../../glossary/publish_subscribe $
+
+
+nn consumers_subscribers
+ln consumers/subscribers: output services that connect
+ln to the queue and perform actions defined by the messages.
+co $ ..
+co ../../../../../glossary/publish_subscribe $
+co ../../../../../2/toc/04_distributed_message_queue/step2/message_models/publish_subscribe $
+
+
+nn decoupling
+ln Decoupling makes the message queue a preferred
+ln architecture for building a scalable and reliable
+ln application
+co $ ..
+co $ ../../../../../concepts/non_func_reqs/reliability
+co $ ../../../../../concepts/non_func_reqs/scalability
+ns ..
 
 nn 17_logging_metrics_automation
 co $ ..
