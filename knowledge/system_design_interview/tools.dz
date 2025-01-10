@@ -1,0 +1,206 @@
+ns system_design_interview
+
+nn tools/mysql
+hl https://en.wikipedia.org/wiki/MySQL
+ln MySQL: open source relational database management system
+co $ ..
+
+nn tools
+ln various tools and software used
+
+nn tools/s2_geometry
+hl http://s2geometry.io/
+ln Google s2: a library for spherical geometry
+
+nn tools/redis/geohash
+hl https://redis.io/docs/latest/commands/geohash/
+ln Redis Geohash
+
+nn tools/postgres_postgis
+hl https://postgis.net/
+ln PostGIS
+
+nn tools/redis
+ln Redis: Remote Dictionary Server.
+ln Redis is a versatile, in-memory key-value
+ln database storage system
+ln designed for fast data retrieval and manipulation.
+ln It's used as a cache, message broker, and database,
+ln offering low-latency operations and durability.
+hl https://en.wikipedia.org/wiki/Redis
+ff What is Redis?
+fb Redis is an in-memory storage system
+co $ ..
+
+nn tools/redis/pub_sub
+hl https://redis.io/glossary/pub-sub/
+ln Redis Pub/Sub: messaging technology that faciliates
+ln communication between different components in a
+ln distributed system.
+rm Link has thorough explanations of pub/sub and usage
+rm within redis.
+co $ ..
+
+nn tools/cassandra
+hl https://en.wikipedia.org/wiki/Apache_Cassandra
+ln Apache Cassandra is a highly-available, distributed
+ln NoSQL database management system that can handle large
+ln amounts of data across multiple commodity servers,
+ln supporting computer clusters in multiple data centers.
+ln It features asynchronous and masterless replication
+ln and supports low-latency operations for clients.
+
+nn tools/apache_kafka
+hl https://en.wikipedia.org/wiki/Apache_Kafka
+ln Apache Kafka: Apache Kafka is a distributed event
+ln store and stream-processing platform designed for
+ln handling real-time data feeds.
+co $ ..
+co $ ../../glossary/message_queue
+
+nn tools/apache_rocket_mq
+hl https://en.wikipedia.org/wiki/Apache_RocketMQ
+ln RocketMQ is a distributed messaging and streaming
+ln platform with low latency, high performance,
+ln reliability, and scalability. It is the
+ln third-generation distributed messaging middleware
+ln open-sourced by Alibaba in 2012. The platform supports
+ln low-latency, high-performance, reliability, and
+ln flexible scalability, making it suitable for real-time
+ln data processing and high-throughput applications.
+co $ ..
+co $ ../../glossary/message_queue
+
+nn tools/rabbitmq
+hl https://en.wikipedia.org/wiki/RabbitMQ
+ln RabbitMQ is an open-source message-broker software
+ln that implements the Advanced Message Queuing Protocol
+ln (AMQP) and offers a plug-in architecture for support
+ln of Streaming Text Oriented Messaging Protocol (STOMP)
+ln and other protocols. Initially written in Erlang, the
+ln RabbitMQ server is built on the Open Telecom Platform
+ln framework for clustering and failover. Since November
+ln 2020, commercial offerings of RabbitMQ have been
+ln available, including support and enterprise features
+ln from VMware.
+co $ ..
+co $ ../../glossary/message_queue
+
+nn tools/apache_pulsar
+hl https://pulsar.apache.org/
+ln Apache Pulsar
+co $ ..
+co $ ../../glossary/message_queue
+
+nn tools/apache_activemq
+co $ ..
+co $ ../../glossary/message_queue
+hl https://en.wikipedia.org/wiki/Apache_ActiveMQ
+ln Apache ActiveMQ is an open-source Java-based message
+ln broker that supports JMS 1.1 and provides "Enterprise
+ln Features" such as cross-client and server
+ln communication. The broker is equipped with features
+ln like computer clustering, database persistence, and
+ln journaling. Another ActiveMQ project, Artemis, is a
+ln code-named and experimental product that builds upon
+ln ActiveMQ but with a focus on scalability and
+ln reliability.
+
+nn tools/apache_zeromq
+co $ ..
+co $ ../../glossary/message_queue
+hl https://en.wikipedia.org/wiki/ZeroMQ
+ln ZeroMQ is a lightweight, asynchronous messaging
+ln library designed for use in distributed or concurrent
+ln applications. It provides a message queue without a
+ln dedicated broker, and is built on the Berkeley sockets
+ln API, making it easy to integrate with existing
+ln systems. Developed by a community-driven team led by
+ln iMatix, ZeroMQ has bindings for many programming
+ln languages and is trademarked under the name ZeroMQ.
+
+nn tools/datadog
+hl https://en.wikipedia.org/wiki/Datadog
+ln Datadog, Inc. is an American company that provides an
+ln observability service for cloud-scale applications,
+ln providing monitoring of servers, databases, tools, and
+ln services, through a SaaS-based data analytics platform.
+co $ ../../glossary/event_monitoring
+co $ ..
+
+nn tools/influxdb
+hl https://en.wikipedia.org/wiki/InfluxDB
+ln InfluxDB is an open-source time series database for
+ln storing and retrieving time series data, commonly used
+ln in operations monitoring, application metrics, IoT
+ln sensor data, and real-time analytics.
+co $ ../../glossary/event_monitoring
+co $ ..
+
+nn tools/new_relic
+hl https://en.wikipedia.org/wiki/New_Relic
+ln New Relic Inc. is an American software company based
+ln in San Francisco that offers cloud-based software
+ln solutions for websites and mobile apps, as well as
+ln tools for tracking user interactions and service
+ln operator software and hardware performance.
+co $ ..
+co $ ../../glossary/event_monitoring
+
+nn tools/nagios
+hl https://en.wikipedia.org/wiki/Nagios
+ln Nagios is an event monitoring system that offers
+ln monitoring and alerting services for servers,
+ln switches, applications, and services. It alerts users
+ln when issues occur, and then alerts them when the issue
+ln has been resolved.
+co $ ..
+co $ ../../glossary/event_monitoring
+
+nn tools/prometheus
+hl https://en.wikipedia.org/wiki/Prometheus_(software)
+ln Prometheus is a free, open-source software application
+ln used for event monitoring and alerting. It records
+ln metrics in a time-series database and allows for high
+ln dimensionality, with flexible queries and real-time
+ln alerting. Prometheus uses an HTTP pull model and is
+ln written in Go, licensed under the Apache 2 License,
+ln and is a graduated project of the Cloud Native
+ln Computing Foundation.
+co $ ..
+co $ ../../glossary/event_monitoring
+co $ ../../glossary/time_series_database
+
+nn tools/munin
+hl https://en.wikipedia.org/wiki/Munin_(software)
+ln Munin is a free and open-source computer system
+ln monitoring, network monitoring, and infrastructure
+ln monitoring software. It is written in Perl and uses
+ln RRDtool to create graphs, which are accessible through
+ln a web interface. Its goal is to make it easy to
+ln determine what changed today and provide visibility
+ln into capacity and utilization of resources.
+co $ ..
+co $ ../../glossary/event_monitoring
+
+nn tools/grafana
+ln Grafana is a multi-platform open-source analytics and
+ln visualization web application that generates charts,
+ln graphs, and alerts for the web when connected to
+ln supported data sources.
+co $ ..
+co $ ../../glossary/event_monitoring
+
+nn tools/graphite
+hl https://en.wikipedia.org/wiki/Graphite_(software)
+ln Graphite is a free, open-source software tool that
+ln monitors and graphs numeric time-series data,
+ln particularly computer system performance.
+co $ ..
+co $ ../../glossary/event_monitoring
+
+nn tools/postgres
+co $ ..
+
+nn tools/oracle
+co $ ..

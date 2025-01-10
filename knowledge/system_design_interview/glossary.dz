@@ -1,0 +1,375 @@
+ns system_design_interview
+
+nn glossary/functional_requirement
+co $ ..
+hl https://en.wikipedia.org/wiki/Functional_requirement
+ln Functional Requirement: defines a function of a
+ln system or component, where a function is described
+ln as a summary/specification/statement of behavior
+ln between inputs and outputs
+ff What is a functional requirement?
+fb A functional requirement is a requirement of a system
+fb that defines a function of a component, a behavior
+fb between inputs and outputs
+rm Every system here begins with listing the functional
+rm and non-functional requirements
+co $ glossary/systems_engineering
+cr context of
+
+nn glossary
+ln Keywords found while studying this book
+
+nn glossary/systems_engineering
+hl https://en.wikipedia.org/wiki/Systems_engineering
+ln Systems engineering: an interdisciplinary field of
+ln engineering and engineering management that focuses
+ln on how to design, integrate, and manage complex
+ln systems
+
+nn glossary/non_functional_requirement
+hl https://en.wikipedia.org/wiki/Non-functional_requirement
+ln Non-functional requirement (NFR): a requirement that
+ln specifies criteria that can be used to judge the
+ln operation of a system, rather than specific behaviors.
+co $ glossary/functional_requirement
+ff what is non-functional requirement?
+fb A non-functional requirement is a requirement
+fb is used to judge the operation of a system, such
+fb as safety, security, performance, testability, etc.
+co $ ..
+
+nn references/NFR_examples
+hl https://en.wikipedia.org/wiki/Non-functional_requirement#Examples
+ln Examples of non-functional requirements
+co $ glossary/non_functional_requirement
+co $ ..
+
+nn references
+ln Various references and sources about certain topics.
+ln this should ideally link to keywords defined in the
+ln glossary.
+co $ ../glossary
+cr references should attach to keywords in glossary
+
+nn glossary/requirements_engineering
+hl https://en.wikipedia.org/wiki/Requirements_engineering
+co glossary/functional_requirement $
+co glossary/non_functional_requirement $
+ln Requirements Engineering: the process of defining,
+ln documenting, and maintaining requirements in the
+ln engineering design process.
+ff What is requirements engineering?
+fb The process of definining, documenting, and maintaining
+fb requirements in the engineering design process
+co $ glossary/systems_engineering
+co $ ..
+
+nn glossary/engineering_design_process
+hl https://en.wikipedia.org/wiki/Engineering_design_process
+co $ glossary/requirements_engineering
+ln Engineering Design Process, or Engineering Method:
+ln is a common series of steps that engineers use in
+ln creating functional products and processes.
+
+nn glossary/http_request_methods
+hl https://en.wikipedia.org/wiki/HTTP#Request_methods
+ln HTTP Request Methods: "verbs" in the HTTP protocol to
+ln indicate the desired action to be performed on the
+ln desired resource. Examples include GET, POST, PUT,
+ln and DELETE.
+
+nn glossary/REST
+hl https://en.wikipedia.org/wiki/REST
+ln REST: Representational State Transfer, is a software
+ln architectural style that was created to guide the
+ln design and development
+co ../http_request_methods $
+cr REST is commonly associated with HTTP-based APIs
+cr utilizing HTTP methods or "verbs"
+
+nn glossary/data_model
+hl https://en.wikipedia.org/wiki/Data_model
+ln Data Model: an abstract model that organizes data
+ln and standardizes how it relates to real world
+ln entities.
+
+nn glossary/software_architecture
+hl https://en.wikipedia.org/wiki/Software_architecture
+ln Software Architecture: set of structures needed
+ln to reason about a software system and the discipline
+ln of creating such structures and systems.
+
+nn glossary/RDBMS
+ln RDBMS: relational database management system.
+co ../../tools/mysql $
+co $ ..
+
+nn glossary/load_balancing
+hl https://en.wikipedia.org/wiki/Load_balancing_(computing)
+ln Load balancing: the process of distributing a set of
+ln tasks over a set of resources, with the aim of
+ln optimizing response time and avoiding unevenly
+ln overloading some compute nodes while others are left
+ln idle.
+ff What does a load balancer do?
+fb A load balancer is a component in a system that
+fb distributes a set of tasks over a set of resources.
+co $ ..
+
+nn glossary/QPS
+ln QPS: queries per second
+co $ ..
+
+nn glossary/geohash
+hl https://en.wikipedia.org/wiki/Geohash
+ln Geohash: a string of letters and numbers used to
+ln represent a geographic location. It is a simple way to
+ln encode location data and is particularly useful for
+ln pinpointing specific locations.
+co $ ..
+
+nn glossary/quadtree
+hl https://en.wikipedia.org/wiki/Quadtree
+ln quadtree: a tree data structure that partitions
+ln two-dimensional space by recursively subdividing it
+ln into four quadrants or regions. Each node in the tree
+ln has at most four children, and leaf nodes store data.
+co $ ..
+
+nn glossary/websocket
+ln WebSocket: a computer communications protocol, that
+ln allows for two-way, realtime interaction between
+ln a web browser and a server.
+hl https://en.wikipedia.org/wiki/WebSocket
+ff What is a websocket?
+fb A websocket is a computer communications protocol,
+fb that allows for two-way, realtime interaction between
+fb a web browser and a server.
+
+nn glossary/distributed_cache
+ln Distributed Cache: extension of a the traditional
+ln concept of a cache used in a single locale.
+ln A distributed cache may span multiple servers so that
+ln it can grow in size and in transactional capacity.
+co $ ../../tools/redis
+ff What is a distributed cache?
+fb Extending on the concept of a traditional cache in
+fb a single locale, a distributed cache is a cache that
+fb may span multiple servers so that it can grow in size
+fb and capacity.
+fb A distributed cache
+co $ ..
+
+nn glossary/message_broker
+ln Message Broker: an intermediary computer program that
+ln translates messages from one formal messaging protocol
+ln to another, enabling communication between software
+ln applications that use different communications protocols
+co $ ../../tools/redis
+ff what is a message broker?
+fb A message broker is an intermediate program that
+fb granslates messages from one protocol to another.
+co $ ..
+
+nn glossary/publish_subscribe
+hl https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
+ln publish-subscribe: a messaging pattern where publishers
+ln categorize messages into classes that are received
+ln by subscribers.
+
+nn glossary/geocoding
+hl https://en.wikipedia.org/wiki/Address_geocoding
+ln Geocoding: the process of converting addresses to
+ln geographic coordinates
+
+nn glossary/A_star_algorithm
+hl https://en.wikipedia.org/wiki/A*_search_algorithm
+ln A* algorithm: A* (pronounced "A-star") is a graph
+ln traversal and pathfinding algorithm that is used in
+ln many fields of computer science due to its
+ln completeness, optimality, and optimal efficiency
+
+nn glossary/dijkstras_algorithm
+hl https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm
+ln Dijkstra's algorithm is an algorithm for finding the
+ln shortest paths between nodes in a weighted graph,
+ln which may represent, for example, a road network.
+
+nn glossary/message_queue
+hl https://en.wikipedia.org/wiki/Message_queue
+ln Message Queue: In computer science, message queues
+ln and mailboxes are software-engineering components
+ln typically used for inter-process communication (IPC),
+ln or for inter-thread communication within the same
+ln process.
+co $ ..
+co $ ../../2/toc/04_distributed_message_queue
+
+nn glossary/event_streaming_platform
+ln Event Streaming Platform
+td Add more words to "event streaming platform"
+co ../../tools/apache_kafka $
+cr strictly speaking, apache kafka is an event streaming
+cr platform, but the lines blur in features between
+cr event streaming and message queues
+co ../../tools/apache_pulsar $
+cr strictly speaking, apache pulsar is an event streaming
+cr platform, but the lines blur in features between
+cr event streaming and message queues
+co $ ..
+
+nn glossary/topic
+ln Topic: the categories used to organize
+ln messages. Each topic has a name that is unique
+ln across the entire message queue service. Messages
+ln are sent to and read from a specific topic.
+co $ ../publish_subscribe
+cr in the publish/subscribe model, a message is
+cr sent to a topic and received by the consumers
+cr subscribing to this topic.
+co $ ..
+
+nn glossary/partition
+ln Partition
+co $ ..
+
+nn glossary/broker
+ln Broker: the servers that hold partitions.
+co $ ../partition
+co $ ..
+ff What is a broker?
+fb A broker refers to the servers that hold partitions
+
+nn glossary/consumer_group
+ln Consumer Group: a set of consumers, working together
+ln to consume messages from topics.
+co $ ..
+
+nn glossary/event_streaming
+hl https://kafka.apache.org/documentation/#intro_streaming
+ln Event streaming involves capturing and storing
+ln real-time data from various sources, such as
+ln databases, sensors, and mobile devices, in the form of
+ln streams of events. This data is stored durably for
+ln later retrieval and manipulated, processed, and
+ln reacted to in real-time. The event streams can also be
+ln routed to different destinations as needed. The goal
+ln of event streaming is to ensure continuous flow and
+ln interpretation of data, providing the right
+ln information at the right time.
+co $ ..
+co $ ../event_streaming_platform
+
+nn glossary/high_level_design
+hl https://en.wikipedia.org/wiki/High-level_design
+ln High-level Design: (HLD) explains the architecture
+ln that would be used to develop a system
+co $ ..
+
+nn glossary/system_development_lifecycle
+hl https://en.wikipedia.org/wiki/Systems_development_life_cycle
+co $ ..
+co $ ../high_level_design
+ln The systems development life cycle (SDLC) is a
+ln structured process for planning, creating, testing,
+ln and deploying an information system. It involves
+ln stages such as requirement analysis, design,
+ln development and testing, implementation,
+ln documentation, and evaluation. The SDLC concept
+ln applies to various hardware and software
+ln configurations, including systems that consist only of
+ln hardware or software, or a combination of both. In a
+ln mature software development organization, the process
+ln is well-defined and managed, and the focus is on
+ln developing the software in a systematic and
+ln disciplined manner.
+ff What is the systems development life cycle?
+fb The systems development life cycle (SDLC) is a
+fb structured process for creating information systems,
+fb involving stages such as requirement analysis, design,
+fb development and testing, implementation, and
+fb evaluation.
+
+nn glossary/access_pattern
+hl https://docs.aws.amazon.com/prescriptive-guidance/latest/dynamodb-data-modeling/step3.html
+ln access_pattern: defines how the users and the system
+ln access the data to satisfy business needs
+co $ ..
+ff What is an access pattern?
+fb An access pattern defines how the users and the
+fb system access the data to satisfy business needs
+
+nn glossary/event_monitoring
+hl https://en.wikipedia.org/wiki/Event_monitoring
+ln Event monitoring: The process of collecting,
+ln analyzing, and signaling event occurrences to
+ln subscribers, including operating system processes,
+ln active database rules, and human operators, from
+ln arbitrary sources like operating systems, database
+ln management systems, and application software, using a
+ln time series database.
+ff What is event monitoring?
+fb Event monitoring involves collecting, analyzing, and
+fb signaling event occurrences to subscribers from
+fb sources like operating systems, database management
+fb systems, and application software.
+co $ ..
+
+nn glossary/time_series_database
+hl https://en.wikipedia.org/wiki/Time_series_database
+ln Time series database: A software system optimized for
+ln storing and serving time series data through
+ln associated pairs of time(s) and value(s). Time-series
+ln data is often referred to as profiles, curves, traces,
+ln or trends. Early time series databases were used in
+ln industrial applications to store measured values from
+ln sensory equipment, but now are used in support of a
+ln wide range of applications. Time-series data can be
+ln efficiently stored and served using compression
+ln algorithms in various database types, but the design
+ln of time-series databases with time as a key index
+ln differs significantly from relational databases.
+ff What is a time series database?
+fb A time series database is a software system optimized
+fb for storing and serving time series data through
+fb associated pairs of time(s) and value(s). Time-series
+fb data is often referred to as profiles, curves, traces,
+fb or trends.
+co $ ..
+co ../../tools/influxdb $
+
+nn glossary/server_side
+co $ ..
+
+nn glossary/client_side
+co $ ..
+
+nn glossary/JSON
+co $ ..
+
+nn glossary/HTTP
+
+nn glossary/NoSQL
+
+nn glossary/vertical_scaling
+ln vertical scaling: process of of adding more power (CPU,
+ln RAM) to your servers
+co $ ..
+co ../scale_up $
+cr AKA
+
+nn glossary/scale_up
+
+nn glossary/horizontal_scaling
+ln horizontal scaling: adding more power to your servers
+co ../scale_out $
+cr AKA
+
+nn glossary/scale_out
+
+nn glossary/cache
+ln Cache: a temporary storage area that stores the result
+ln of expensive responses or frequently accessed data
+ln in memory so that subsequent requests are served more
+ln quickly.
+co $ ..

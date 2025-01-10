@@ -67,3 +67,6 @@ New script from sql script: =orphan_comment_nodes=.
 #! dz system_design_interview/1/toc/01_scale_zero_to_millions
 
 @17:02 Correspondences #timelog:00:15:27
+
+@17:19 More chapter 1 #read-system-design-interview #timelog:01:32:20
+#! dz system_design_interview/1/toc/01_scale_zero_to_millions

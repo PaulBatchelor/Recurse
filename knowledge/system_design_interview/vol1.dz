@@ -77,3 +77,10 @@ rm pg 264
 zz -toc
 ns ..
 
+ns ..
+nn references/multitier_architecture
+hl https://en.wikipedia.org/wiki/Multitier_architecture
+ln Multi-Tier Architecture: client-server architecture
+ln in which presentation, applicatoin, and data management
+ln are physically separated
+co $ ..

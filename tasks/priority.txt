@@ -18,3 +18,7 @@ solutions are submitted to LC.
 
 @codestudy General codestudy
 
+@dagzet-enumerators use '@' as enum shortcut
+example: nn @a, and @b resolves to '01_a' and '02_b'.
+Unclear if they should be monotonically increasing,
+or have the ability to reset.
