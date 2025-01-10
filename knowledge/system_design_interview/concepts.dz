@@ -1,0 +1,122 @@
+ns system_design_interview
+
+nn concepts
+ln high-level concepts
+
+nn concepts/func_reqs
+ln Functional Requirements
+co $ ..
+
+ns +concepts/func_reqs
+nn post
+ln post (data)
+co $ ..
+co ../../../2/toc/01_proximity_service/step1/func_reqs/add_del_update_business $
+cr add a business
+co ../../../glossary/http_request_methods $
+co ../../../2/toc/04_distributed_message_queue/step1/functional_requirements/producers_send_messages $
+
+nn put
+ln put (data)
+co $ ..
+co ../../../2/toc/01_proximity_service/step1/func_reqs/add_del_update_business $
+cr update a business
+co ../../../glossary/http_request_methods $
+co ../../../2/toc/02_nearby_friends/step1/func_reqs/update_nearby_friend_list  $
+cr update (PUT) nearby friends list
+co ../../../2/toc/03_google_maps/step1/func_reqs/user_location_update  $
+cr update (PUT) user location
+
+nn delete
+ln delete (data)
+co $ ..
+co ../../../2/toc/01_proximity_service/step1/func_reqs/add_del_update_business $
+cr delete a business
+co ../../../glossary/http_request_methods $
+
+nn get
+ln get
+co $ ..
+co ../../../2/toc/01_proximity_service/step1/func_reqs/return_nearby_business $
+cr return a nearby business
+co ../../../glossary/http_request_methods $
+co ../../../2/toc/01_proximity_service/step1/func_reqs/view_business $
+cr view (get) a business
+co ../../../2/toc/02_nearby_friends/step1/func_reqs/view_nearby_friends $
+cr view (GET) nearby friends
+co ../../../2/toc/04_distributed_message_queue/step1/functional_requirements/consumers_consume_messages $
+cr Consumers consume (GET) messages
+
+zz -func_reqs
+ns ..
+
+nn non_func_reqs
+co $ ..
+ln non-functional requirements
+ns +non_func_reqs
+
+nn low_latency
+ln Low Latency
+co $ ..
+co ../../../2/toc/01_proximity_service/step1/nonfunc_reqs/low_latency $
+co ../../../2/toc/02_nearby_friends/step1/nonfunc_reqs/low_latency $
+co ../../../2/toc/04_distributed_message_queue/step1/non_functional_requirements/high_throughput_or_low_latency $
+co ../../../2/toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/low_latency $
+
+nn privacy
+ln privacy
+co $ ..
+co ../../../2/toc/01_proximity_service/step1/nonfunc_reqs/data_privacy $
+
+nn accuracy
+ln accuracy
+co $ ..
+co ../../../2/toc/03_google_maps/step1/nonfunc_reqs/highly_accurate $
+
+nn high_throughput
+ln high throughput
+co $ ..
+co ../../../2/toc/04_distributed_message_queue/step1/non_functional_requirements/high_throughput_or_low_latency $
+
+nn durability
+ln durability
+co $ ..
+co ../../../2/toc/04_distributed_message_queue/step1/non_functional_requirements/persistent_durable $
+
+nn scalability
+ln scalability
+co $ ..
+co ../../../2/toc/04_distributed_message_queue/step1/non_functional_requirements/scalable $
+co ../../../2/toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/scalability $
+
+nn flexibility
+ln flexibility
+co $ ..
+co ../../../2/toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/flexibility $
+
+nn reliability
+ln reliability
+co $ ..
+co ../../../2/toc/05_metrics_monitoring_and_alert_system/step1/non_functional_requirements/reliability $
+
+nn availability
+co $ ..
+
+
+zz -non_func_reqs
+ns ..
+
+nn estimation
+ln back-of-the-envelope estimations
+co $ ..
+co ../../2/toc/01_proximity_service/step1/nonfunc_reqs/5k_search_qps $
+
+
+ns +estimation
+
+
+zz -estimation
+ns ..
+
+zz -concepts
+ns ..

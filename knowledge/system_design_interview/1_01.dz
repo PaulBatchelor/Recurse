@@ -1,0 +1,259 @@
+ns system_design_interview/1/toc/01_scale_zero_to_millions
+gr Chapter 1: Scale From Zero To Millions of Users
+
+nn 01_single_server_setup
+ns +01_single_server_setup
+
+nn 01_request_flow
+co $ ..
+rm pg 6
+
+nn 02_traffic_source
+ln traffic comes from two sources: web application
+ln and mobile applicatoin
+co $ ..
+rm pg 6
+
+nn 02_traffic_source/01_web_application
+co $ ..
+co ../../../../../../glossary/server_side $
+cr uses a combination of server side languages (java, python, etc)
+co ../../../../../../glossary/client_side $
+cr client-side languages (HTML/javascript) for presentation
+
+nn 02_traffic_source/02_mobile_application
+co $ ..
+co ../../../../../../glossary/HTTP $
+cr HTTP procoal is communication between mobile app and
+cr web server
+co ../../../../../../glossary/JSON $
+cr JSON is commonly used API response format to transfer data
+
+zz +01_single_server_setup
+ns ..
+
+nn 02_database
+ln Separate the mobile/data source. One for the web/mobile traffic,
+ln and the other for the database. This allows
+ln them to be scaled independently.
+co $ ..
+co $ ../01_single_server_setup/02_traffic_source
+cr separate the traffic web/mobile traffic (web tier) and database (data tier)
+rm pg 8
+co ../../../../references/multitier_architecture $
+cr separate traffic into web tier and data tier
+
+nn 03_which_databases
+ln Which databased to use? You can choose between relational
+ln and non-relational
+co $ ..
+co ../../../../glossary/RDBMS $
+rm pg 8
+ns +03_which_databases
+
+nn 01_relational
+co ../../../../../glossary/RDBMS $
+cr popular database
+co ../../../../../tools/postgres $
+cr popular database
+co ../../../../../tools/mysql $
+cr popular database
+co ../../../../../tools/oracle $
+cr popular database
+
+nn 02_non_relational
+co ../../../../../glossary/NoSQL $
+cr AKA
+co ../../../../../concepts/non_func_reqs/low_latency $
+cr Application requires super-low latency
+co ../../../../../glossary/JSON $
+cr only need to serialize/deserialize data (JSON/XML/YAML, etc)
+co ../../../../../concepts/non_func_reqs/scalability  $
+cr you need to store a massive amount of data
+
+zz -03_which_databases
+ns ..
+
+nn 04_vertical_vs_horizontal_scaling
+co $ ..
+rm pg 9
+co ../../../../glossary/vertical_scaling $
+co ../../../../glossary/horizontal_scaling $
+ns +04_vertical_vs_horizontal_scaling
+
+nn 01_vertical_scaling
+ln When traffic is low, vertical scaling is a great
+ln option. Simplicity is the main advantage. However,
+ln vertical scaling does not have failover and
+ln redudundancy.
+co $ ..
+co ../../../../../glossary/vertical_scaling $
+
+nn 02_horizontal_scaling
+co $ ..
+ln Horizontal scaling is more desirable for large-scale
+ln applications due to limitations of vertical scaling.
+co $ 01_vertical_scaling
+cr more desirable due to limitatoins of vertical scaling
+co ../../../../../glossary/horizontal_scaling $
+co ../../../../../concepts/non_func_reqs/reliability $
+co ../../../../../concepts/non_func_reqs/high_throughput $
+
+zz -04_vertical_vs_horizontal_scaling
+ns ..
+
+nn 05_load_balancer
+co $ ..
+rm pg 10
+co ../../../../glossary/load_balancing $
+cr a load balancing server evenly distributes
+cr incoming traffic among web servers
+cr that are defined in a load-balanced set.
+co ../../../../concepts/non_func_reqs/availability $
+cr a load balancer with more servers solves no-failover
+cr issue and improved the availability of the web tier.
+co ../../../../references/multitier_architecture $
+cr improved the availability of the web tier
+
+nn 06_database_replication
+ln Database Replication
+co $ ..
+rm pg 12
+co $ ../../../../concepts/non_func_reqs/reliability
+cr If one of your servers is destroyed, data is still preserved
+cr because it is replicated across multiple locations
+co $ ../../../../concepts/non_func_reqs/availability
+cr by replicating across different locations, your
+cr website in operatoin even if a database is offline, as you
+cr can access data stored in another database server
+
+nn +06_database_replication
+nn 01_master
+co $ ..
+ln A master database generally only supports write operations
+ln All the data-modifying commands like insert, delete, or
+ln update operation must be sent to the master database.
+co $ ../../../../concepts/func_reqs/post 
+cr insert operation must go through master database
+co $ ../../../../concepts/func_reqs/put
+cr update operation mout go through master database
+co $ ../../../../concepts/func_reqs/delete
+cr delete most go through master database
+
+nn 02_slave
+co $ ..
+ln Most applicatoins require a much higher ratio of
+ln reads to writes: thus, the number of slave databases
+ln in a system is usually larger than the number of
+ln master databases
+co $ 01_master
+co $ ../../../../concepts/func_reqs/get
+cr read is not a data-modifying commands, and can be
+cr sent through a slave
+
+zz -06_database_replication
+ns ..
+
+nn 07_cache
+co $ ..
+rm pg 15
+co ../../../glossary/cache $
+
+nn 08_cache_tier
+ln The cache tier is a temporary data store layer, much
+ln faster than the database.
+co $ ..
+rm pg 15
+co ../../../references/multitier_architecture $
+co $ ../../../glossary/distributed_cache
+
+ns +08_cache_tier
+nn read_through_cache
+co $ ..
+ln read through cache: on a request, check if cache has
+ln available response. If not, query the database, store
+ln in cache, and send it back to client.
+ns ..
+
+nn 09_cache_considerations
+ln Considerations for using cache
+co $ ..
+rm pg 15
+
+ns +09_cache_considerations
+
+nn frequent_reads_infrequent_modifications
+ln good to use when data is frequently being read but
+ln infrequently being modified.
+co $ ..
+
+nn not_ideal_for_persistance
+co $ ..
+ln A cache is in-memory, so when a cache server restarts,
+ln the data in memory is lost
+
+nn expiration_policy
+co $ ..
+ln Expiration policy: once data is expired, it is removed
+ln from the cache. Too short: data is realoaded too frequently.
+ln Too long: data can become stale.
+
+nn consistency
+ln consistency: keeping data store/cache in sync
+co $ ..
+
+nn mitigating_failiures
+co $ ..
+
+nn eviction_policy
+co $ ..
+
+zz -09_cache_considerations
+ns ..
+
+nn 10_CDN
+co $ ..
+rm pg 17
+
+nn 11_CDN_considerations
+co $ ..
+rm pg 18
+
+nn 12_stateless_web_tier
+co $ ..
+rm pg 20
+
+nn 13_stateful_architecture
+co $ ..
+rm pg 20
+
+nn 14_stateless_architecture
+co $ ..
+rm pg 20
+
+nn 15_data_centers
+co $ ..
+rm pg 23
+
+nn 16_message_queue
+co $ ..
+rm pg 25
+
+nn 17_logging_metrics_automation
+co $ ..
+rm pg 26
+
+nn 18_database_scaling
+co $ ..
+rm pg 28
+
+nn 19_vertical_scaling
+co $ ..
+rm pg 28
+
+nn 20_horizontal_scaling
+co $ ..
+rm pg 28
+
+nn 21_millions_and_beyond
+co $ ..
