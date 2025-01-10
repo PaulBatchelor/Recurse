@@ -8,3 +8,64 @@ I want to do this in order to check on what nodes I was
 looking at last.
 ---
 See: tools/nodelogs.sh
+
+@12:36 revisiting problem as DFS #timelog:00:47:46
+#! dz leetcode/problems/425_word_squares 
+
+@12:50 today's intuition
+#! dz $
+Still doing this as a DFS backtracking problem, where
+one enumerates a candidate combination, validates, and
+breaks early for combos that don't work.
+---
+A word square can be represented as either a set of
+rows or a set of columns. A valid word square must work
+such that row[i]=col[i] for every i from 0 to N, where N
+is the size of the square (1-4).
+---
+Partial candidate solutions are in represented as
+rows.
+---
+To validate the partial candidate, iterate through
+each row. Ensure that the prefix col[i][0:nrows]
+matches row[i]. If not return false.
+
+@13:14 works on solution, but TLE on submission
+#! dz $
+Attempting to memoize with functools
+
+@13:27 I believe my DFS is correct, but too slow, time for Trie?
+#! dz $
+
+@13:43 Working out a possible Trie solution #timelog:01:24:23
+#! dz $
+Create Trie Structure from all the words
+---
+For each word in word list, append all valid
+solutions where first row is word.
+---
+Use the Trie to enumerate possibilities
+
+@13:56 You can gradually build word squares from prefixes
+#! dz $
+For example [ball area lead lady] can be built up
+incrementally: [b], [ba ar], [bal are lea], [ball area lead lady].
+---
+The fact that it's prefixy makes me think I'm
+in the right direction. Trie traversal is still fuzzy.
+
+@14:25 Working through by hand Trie traversal
+@! dz $
+The base example doesn't have multiple possibilities
+for words down the Trie, so I'm extending these
+examples to do that. So, in the example word list
+[area lead wall lady ball], I'm adding "acae" and
+"lada" in order to get another valid word square 
+[ball acae lada lead] to go with [ball area lead lady]
+
+@14:55 I need a break from this
+@! dz $
+I am now trying to move way from drawing the square
+visually as I go, and just using the Trie I drew to
+work out the logic. It's taking some time for things
+to stick. I'm going to switch to other things now.
