@@ -1,0 +1,4 @@
+@2025-01-10
+@09:55 quick oed codestudy #codestudy #timelog:00:20:37
+I just want to get a sense for how large this project is,
+and also do some re-ordering with the new dzfiles system
