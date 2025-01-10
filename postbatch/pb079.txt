@@ -2,3 +2,9 @@
 @09:55 quick oed codestudy #codestudy #timelog:00:20:37
 I just want to get a sense for how large this project is,
 and also do some re-ordering with the new dzfiles system
+
+@12:09 Arrived at the hub. Trying to query logs by node with wildcard #timelog:00:13:59
+I want to do this in order to check on what nodes I was
+looking at last.
+---
+See: tools/nodelogs.sh
