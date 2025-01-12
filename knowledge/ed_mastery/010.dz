@@ -1,0 +1,31 @@
+ns +toc/010_addresses
+
+nn 1_setting
+co $ ..
+rm pg 12
+
+nn 2_finding
+co $ ..
+rm pg 13
+
+nn 3_ranges
+co $ ..
+rm pg 14
+
+nn 4_relative
+rm pg 15
+co $ ..
+
+nn 5_scrolling
+rm pg 16
+
+nn 6_displaying
+rm pg 17
+
+nn 7_viewing_trailing_space
+rm pg 17
+
+nn 8_bookmarks
+rm pg 18
+
+ns ../..

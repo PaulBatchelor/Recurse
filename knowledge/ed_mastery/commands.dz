@@ -1,0 +1,38 @@
+nn commands
+ns +commands
+gr editing commands
+
+nn explain_error
+ln h: explain error
+co $ ..
+
+nn toggle_verbose_errors
+ln H: toggle verbose errors
+co $ ..
+
+nn toggle_prompt
+ln P: toggle prompt on/off
+co $ ..
+
+nn mode_append
+ln a: enter append mode. puts cursor at new line
+ln right after the current line.
+co $ ..
+
+nn mode_insert
+ln i: enter insert mode. inserts text before the
+ln current line.
+co $ ..
+
+nn mode_change
+ln c: choose an existing line, change it.
+
+nn save
+ln w: save file
+co $ ..
+
+nn quit
+ln q: quit
+co $ ..
+
+ns ..

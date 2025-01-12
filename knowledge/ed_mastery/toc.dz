@@ -1,4 +1,4 @@
-ns ed/mastering_ed
+ns ed/ed_mastery
 nn toc
 ns +toc
 
@@ -32,3 +32,6 @@ rm pg 51
 nn 111_scripting
 co $ ..
 rm pg 69
+
+zz -toc
+ns ..
