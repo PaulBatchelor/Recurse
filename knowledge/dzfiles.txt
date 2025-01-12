@@ -60,6 +60,7 @@ knowledge/TADM.dz
 knowledge/scheme.dz
 knowledge/edexp_test.dz
 knowledge/c.dz
+knowledge/ed_mastery
 knowledge/zzz.dz
 knowledge/zzz_ddia.dz
 links/zzz.dz
