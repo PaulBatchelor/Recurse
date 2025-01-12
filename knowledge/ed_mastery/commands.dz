@@ -35,4 +35,73 @@ nn quit
 ln q: quit
 co $ ..
 
+nn print
+ln p: send contents of address to printer
+co $ ..
+
+nn forward_one_line
+ln +: advance address one line. +N forwards
+ln the address N times.
+co $ ..
+
+nn backward_one_line
+ln -: go backwards one line. -N goes backward
+ln N times.
+co $ ..
+
+nn print_address
+ln =: print address. it defaults to last address
+co $ ..
+
+nn current_address
+ln .: represents current address
+co $ ..
+
+nn print_current_address
+ln .=: print current address
+co $ ..
+co print_address $
+co current_address $
+
+nn last_line
+ln $: last line of file
+co $ ..
+
+nn whole_file
+ln , or %: represnts the whole file
+co $ ..
+
+nn current_to_end
+ln ;: represents current address to end of file
+co $ ..
+
+nn relative_address_range
+ln -x,+y: creates relative address range
+co $ ..
+
+nn print_line_at_address
+ln l: prints line at address
+co $ ..
+
+nn scroll
+ln z: scroll. print lines until it fills the terminal.
+ln optionally, add a number to limit how many lines.
+co $ ..
+
+nn print_line_with_address
+ln n: prints line prefixed with address
+co $ ..
+
+nn print_with_symbol_at_EOL
+ln nl: print with '$' symbol at end of line
+co $ ..
+
+nn bookmark_set
+ln ka: set bookmark 'a' to current address.
+co $ ..
+
+nn bookmark_return
+ln 'a: return to bookmark a
+co $ ..
+
 ns ..
