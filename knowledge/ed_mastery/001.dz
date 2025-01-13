@@ -1,19 +1,19 @@
 ns +toc/001_essentials
-nn 1_starting_ed
+nn starting_ed
 co $ ..
 rm pg 5
 
-nn 2_commands_and_modes
+nn commands_and_modes
 co $ ..
 rm pg 6
 co ../../../commands/explain_error $
 co ../../../commands/toggle_verbose_errors $
 co ../../../commands/toggle_prompt $
 
-nn 3_switching_modes
+nn switching_modes
 co $ ..
 rm pg 9
-ns +3_switching_modes
+ns +switching_modes
 
 nn ways_to_insert_mode
 ln Ways to get into insert mode
@@ -37,10 +37,10 @@ co $ ..
 zz -ways_to_insert_mode
 ns ..
 
-zz -3_switching_modes
+zz -switching_modes
 ns ..
 
-nn 4_saving_exiting
+nn saving_exiting
 co $ ..
 rm pg 10
 co ../../../commands/quit $

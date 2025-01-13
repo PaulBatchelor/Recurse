@@ -300,3 +300,115 @@ nn RTIC
 hl https://rtic.rs/2/book/en/
 ln RTIC: The hardware accelerated Rust
 ln RTOS
+
+nn std/str
+hl https://doc.rust-lang.org/std/primitive.str.html
+ln str
+co $ ..
+
+nn std/str/split_whitespace
+hl https://doc.rust-lang.org/std/primitive.str.html#method.split_whitespace
+ln split_whitespace(): split at whitespace
+co $ ..
+co ../../iter/collect $
+cr used with collect() to create vector of split items
+
+nn implementing_iter
+hl https://doc.rust-lang.org/std/iter/index.html#implementing-iterator
+ln implementing iter
+co $ std/iter
+
+nn std/iter/collect
+ln collect(): Transforms an iterator into a collecto
+hl https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.collect
+co $ ..
+
+nn std/vec
+hl https://doc.rust-lang.org/std/vec/struct.Vec.html
+co $ ..
+
+nn std/vec/len
+hl https://doc.rust-lang.org/std/vec/struct.Vec.html#method.len
+ln len() return size of vector
+co $ ..
+
+nn std/vec/is_empty
+co $ ../len
+cr when checking if length is zero, more idiomatic to call
+cr =is_empty()=
+hl https://doc.rust-lang.org/std/vec/struct.Vec.html#method.is_empty
+ln is_empty(): returns true if the vector contains no elements
+
+nn std/result
+hl https://doc.rust-lang.org/std/result/index.html
+ln error handling with the Result type
+co $ ..
+
+nn std/result/is_err
+hl https://doc.rust-lang.org/std/result/enum.Result.html#method.is_err
+ln is_err(): return true if the result is err()
+co $ ..
+
+nn std/result/err
+hl https://doc.rust-lang.org/std/result/enum.Result.html#method.err
+ln Converts from =Result<T,E>= to =Option<E>=.
+co $ ..
+
+nn std/macro
+nn std/macro/matches
+co $ ..
+
+ns +std/collections/hashmap
+nn contains_key
+hl https://doc.rust-lang.org/std/collections/hash_map/struct.HashMap.html#method.contains_key
+ln contains_key(): returns true if the hash map contains
+ln a value for the specified key.
+co $ ..
+
+nn entry
+hl https://doc.rust-lang.org/std/collections/hash_map/struct.HashMap.html#method.entry
+ln entry(): get's the given key's correspdoning entry
+ln in the map for in-place manipulation
+co $ ..
+
+nn entry/or_insert_with
+hl https://doc.rust-lang.org/std/collections/hash_map/enum.Entry.html#method.or_insert_with
+ln or_insert_with(): ensures a value is in the entry
+ln by inserting the result of the default function if empty
+ln and returns a mutable reference to the value in
+ln the entry
+co $ ..
+cr entry().or_insert_with()
+
+nn entry/or_default
+hl https://doc.rust-lang.org/std/collections/hash_map/enum.Entry.html#method.or_default
+ln or_default()
+co $ ../or_insert_with
+
+nn insert
+co $ ..
+hl https://doc.rust-lang.org/std/collections/hash_map/struct.HashMap.html#method.insert
+ln insert: inserts KV in map. Returns old value (or None),
+ln and updates with new value (or creates new value).
+
+nn get
+co $ ..
+hl https://doc.rust-lang.org/std/collections/hash_map/struct.HashMap.html#method.get
+ln get(): Returns a reference to the corresponding key
+
+zz -std/collections/hashmap
+ns ../../..
+
+nn std/str/to_string
+hl https://doc.rust-lang.org/std/primitive.str.html#method.to_string
+ln to_string(): converts a given value to a String
+co $ ..
+
+nn std/option
+hl https://doc.rust-lang.org/stable/std/option/
+co $ ..
+
+nn std/option/as_ref
+hl https://doc.rust-lang.org/stable/std/option/enum.Option.html#method.as_ref
+co $ ..
+ln as_ref(): converts from =&Option<T>= to =Option<&T>=.

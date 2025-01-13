@@ -160,3 +160,5 @@ codestudy/logs/ripgrep.log
 postbatch/pb076.txt
 postbatch/pb077.txt
 postbatch/pb078.txt
+postbatch/pb079.txt
+postbatch/pb080.txt

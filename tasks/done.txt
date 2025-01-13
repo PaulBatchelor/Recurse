@@ -309,3 +309,5 @@ append paths to the current namespace, like "ns +b".
 @dzbrowse-generator create generator for dzbrowse
 
 @edexp-proto prototype of edexp
+
+@dagzet-attributes Add attributes

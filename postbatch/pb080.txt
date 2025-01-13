@@ -1,5 +1,117 @@
-2025-01-11
+@2025-01-11
 @14:53 Arrived at Hub. Emails. #timelog:00:10:13
 
 @15:13 Ed Mastery #read-ed-mastery #timelog:00:53:01
 I've already a chunk of this.
+
+@16:17 Attributes in Dagzet: initial plans #dagzet-attributes
+Attributes would give dagzet the ability to associate
+arbitrary keys (with an optional value) to a particular
+node. For example 'at pg 100' would create an attribute
+'pg' for the current node, with a value of '100'.
+An attribute 'at ol' would set an attribute called
+ol, which could be an annotation saying that child
+nodes have an order to them.
+---
+Motivations: An ability to quickly add arbitrary key
+value pairs, such as page numbers, would be really
+useful. Also, I find myself desiring ways to
+change the default ordering in tree display from
+alphabetical order to insertion or connection
+order. An attribute could help make this sort
+of thing easier.
+
+@16:24 Some initial investigations into tree ordering #dagzet-attributes
+I want to just quickly look at the way I'm doing
+tree generation to see if there's a clear entry point
+into solving this.
+---
+Initial considerations: =create_tree= is how
+the node tree is made. Iteration through nodes is by
+default via a populated list of nodes, sorted in
+alphabetical order. connections are represented in a
+nested hash table =connections[left][right]=. These
+values are just set to be "True" to treat it as
+a set, but one could change this to be the rowid
+from the connections table, which presumably is
+ordered in insert order. One could use this information
+to make a set of nodes in connectoin order. This
+function is =create_connections=.
+---
+The function to modify is =get_children=, which
+is called in =childtree=. The parent node in question
+has an ordered list attribute, get children by connection
+order instead of alphabetically.
+---
+The =get_top_nodes= function may need to be changed
+as well for this to work properly.
+---
+I think this is feasible enough. Getting to work.
+
+@16:45 Create attribute command in dagzet. #dagzet-attributes #timelog:02:06:05
+
+@17:04 populating my knowledge graph with rust bits as I go #dagzet-attributes
+#! dz rust/std/str/split_whitespace
+#! dz rust/implementing_iter
+#! dz rust/std/iter/collect
+#! dz rust/std/vec
+#! dz rust/std/vec/len
+#! dz rust/std/vec/is_empty
+#! dz rust/std/result/is_err
+#! dz rust/std/result/err
+#! dz rust/std/macro/matches
+#! dz rust/std/collections/hashmap/contains_key 
+#! dz rust/std/collections/hashmap/entry 
+#! dz rust/std/collections/hashmap/insert 
+#! dz rust/std/collections/hashmap/entry/or_insert_with 
+#! dz rust/std/collections/hashmap/entry/or_default
+#! dz rust/std/collections/hashmap/get
+#! dz rust/std/option
+#! dz rust/std/option/as_ref
+These are just the methods used to extract args
+and do some basic error checking. There's just
+so much to remember.
+
+@18:22 Test created. Now to export to table. #dagzet-attributes
+
+@18:40 Attempting to implement ordered tree. #dzbrowse-ordered-tree #timelog:01:27:11
+Attributes have been implemented, so now is the time
+to test and see if I can get an ordered list working
+out.
+
+@18:41 Using mastering ed as a test, since that's what I read last. #dzbrowse-ordered-tree #read-ed-mastery
+
+@18:50 get top nodes working in connection order #dzbrowse-ordered-tree
+This should make it so that the nodes will
+be in the expected order when you visit the page.
+
+@19:21 Child nodes are already in insertion order #dzbrowse-ordered-tree
+Child nodes are actually already implicitly ordered
+by insertion order by default. I will need to fix
+those to be alphabetical.
+---
+It's the top-level nodes that are alphabetical.
+---
+Resetting my work and starting over.
+
+@19:45 top-level ordered list check works #dzbrowse-ordered-tree
+Next steps: do the actual ordering. To do this,
+attempt to look at the connections, and find the earliest
+instance of a connection.
+---
+Going to try the first time they are the righthand side
+of a connection, else 0.
+
+@19:57 weewiki sorts child nodes in alphabetical order #dzbrowse-ordered-tree
+So, I'm going to have to see what I'm doing differently
+there.
+---
+Ah, I ignored the treesorter step when porting. I actually
+go in and recursively sort the tree to be in alphabetical
+order. Going to have to return to this.
+
+@20:11 Seems to work on chapter 1 on ed mastery, now chapter 010 #read-ed-mastery #dzbrowse-ordered-tree
+
+@20:13 Works. Cleaning up prints and pushing #dzbrowse-ordered-tree #dzbrowse-treesorter
+I also will need to get children sorted, but that's
+for another day (treesorter needs to be implemented)

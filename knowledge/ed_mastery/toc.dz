@@ -4,34 +4,36 @@ ns +toc
 
 nn 000_introduction
 co $ ..
-rm pg 1
+at pg 1
 
 nn 001_essentials
+at ol
 co $ ..
-rm pg 5
+at pg 5
 
 nn 010_addresses
+at ol
 rm pg 11
 
 nn 011_editing
 co $ ..
-rm pg 19
+at pg 19
 
 nn 100_file_management_shell_escapes
 co $ ..
-rm pg 27
+at pg 27
 
 nn 101_regex_searches
 co $ ..
-rm pg 35
+at pg 35
 
 nn 110_substitution
 co $ ..
-rm pg 51
+at pg 51
 
 nn 111_scripting
 co $ ..
-rm pg 69
+at pg 69
 
 zz -toc
 ns ..

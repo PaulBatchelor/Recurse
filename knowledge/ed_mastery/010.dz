@@ -1,13 +1,13 @@
 ns +toc/010_addresses
 
-nn 1_setting
+nn setting
 co $ ..
 rm pg 12
 co ../../../commands/print $
 co ../../../commands/forward_one_line $
 co ../../../commands/backward_one_line $
 
-nn 2_finding
+nn finding
 co $ ..
 rm pg 13
 co ../../../commands/print_address $
@@ -15,34 +15,34 @@ co ../../../commands/current_address $
 co ../../../commands/print_current_address $
 co ../../../commands/last_line $
 
-nn 3_ranges
+nn ranges
 co $ ..
 rm pg 14
 co ../../../commands/whole_file $
 co ../../../commands/current_to_end $
 
-nn 4_relative
+nn relative
 rm pg 15
 co $ ..
 co ../../../commands/relative_address_range $
 
-nn 5_scrolling
+nn scrolling
 rm pg 16
 co $ ..
 co ../../../commands/print_line_at_address $
 co ../../../commands/scroll $
 
-nn 6_displaying
+nn displaying
 rm pg 17
 co $ ..
 co ../../../commands/print_line_at_address $
 
-nn 7_viewing_trailing_space
+nn viewing_trailing_space
 rm pg 17
 co $ ..
 co ../../../commands/print_with_symbol_at_EOL $
 
-nn 8_bookmarks
+nn bookmarks
 rm pg 18
 co $ ..
 co ../../../commands/bookmark_set $
