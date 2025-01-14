@@ -1,0 +1,158 @@
+ns edexp_test
+
+nn comments
+
+nn structure
+
+gr commentary on structure
+
+nn program
+
+ns +program
+
+nn 07_define
+ln define
+fr proto.e 7
+co $ ../../comments/test_node
+
+co $ ../../structure/fib_rec
+
+co $ ../../generated/output.scm/fib_rec
+
+nn ../comments/test_node
+
+ln this is a test node
+
+co $ ..
+
+nn ../structure/fib_rec
+
+ln top-level entry for fib-rec
+
+co $ ..
+
+co $ ../../generated/output.scm/fib_rec
+
+co 21_fib-rec 07_define
+nn 21_fib-rec
+ln fib-rec
+co $ ../../comments/fib_rec
+
+nn ../comments/fib_rec
+
+ln A recursive definition for producing a fibonacci
+
+ln sum
+
+co $ ..
+
+nn 28_n
+ln n
+co $ 21_fib-rec
+co 31_if 07_define
+nn 31_if
+ln if
+co $ ../../structure/fib_rec/01_conditional
+
+nn ../structure/fib_rec/01_conditional
+
+ln Conditional structure handling base case if n < 2
+
+co $ ..
+
+co 37_< 31_if
+nn 37_<
+ln <
+nn 38_n
+ln n
+co $ 37_<
+nn 39_2
+ln 2
+co $ 37_<
+nn 41_n
+ln n
+co $ 31_if
+co $ ../../structure/fib_rec/01_conditional/01_return_n
+
+nn ../structure/fib_rec/01_conditional/01_return_n
+
+co $ ..
+
+ln Return n if n < 2
+
+co 48_+ 41_n
+nn 48_+
+ln +
+co $ ../../structure/fib_rec/01_conditional/02_add_previous
+
+nn ../structure/fib_rec/01_conditional/02_add_previous
+
+co $ ..
+
+ln Add previous values
+
+co 53_fib-rec 48_+
+nn 53_fib-rec
+ln fib-rec
+co 54_- 53_fib-rec
+nn 54_-
+ln -
+nn 55_n
+ln n
+co $ 54_-
+nn 56_1
+ln 1
+co $ 54_-
+co 58_fib-rec 48_+
+nn 58_fib-rec
+ln fib-rec
+co 59_- 58_fib-rec
+nn 59_-
+ln -
+nn 60_n
+ln n
+co $ 59_-
+nn 61_2
+ln 2
+co $ 59_-
+nn 65_display
+ln display
+fr proto.e 65
+co $ ../../structure/run_test
+
+nn ../structure/run_test
+
+ln Run test and display output
+
+co $ ..
+
+co 70_fib-rec 65_display
+nn 70_fib-rec
+ln fib-rec
+co $ ../../comments/a_small_test
+
+nn ../comments/a_small_test
+
+ln Perform a small test, fib(10)
+
+co $ ..
+
+nn 75_10
+ln 10
+co $ 70_fib-rec
+zz program
+
+ns ..
+
+nn generated/output.scm
+
+fr output.scm
+
+nn generated/output.scm/fib_rec
+
+fr $ 3 6
+
+nn generated/output.scm/display
+
+fr $ 8
+
