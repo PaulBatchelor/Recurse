@@ -1,0 +1,32 @@
+@2025-01-13
+@17:41 Hub arrival Getting settled. #timelog:00:03:31
+
+@17:45 Picking up where I left off.
+#! dz leetcode/problems/425_word_squares 
+
+@17:51 I am looking up the editorial #timelog:00:15:53
+#! dz $
+
+@18:02 debugging: why isn't word squares showing up #timelog:00:25:07
+#! dz python/docs/stdtypes/str/rstrip
+Did some print debugging, it looks like the key has
+a space at the end of it. going to try rstrip()-ing
+things.
+
+@18:18 debugging: this problem actually is a dagzet issue
+#! dz rust/std/str/trim
+dagzet is adding the space. confirmed by querying the
+SQLite database.
+---
+The answer is to use trim().
+
+@18:29 Back to word square editorial
+#! dz leetcode/problems/425_word_squares/editorial
+
+@18:54 going into codestudy #timelog:00:47:52
+#! dz $
+
+@19:41 bulk code import. just gotta do it. #timelog:00:27:41
+
+@18:54 going into codestudy #timelog:00:48:53
+#! dz $

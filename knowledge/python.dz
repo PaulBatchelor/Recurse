@@ -718,3 +718,16 @@ co $ ..
 nn docs/stdlib/os_services/os/getcwd
 co $ ..
 hl https://docs.python.org/3/library/os.html#os.getcwd
+
+nn docs/stdtypes/str/rstrip
+hl https://docs.python.org/3/library/stdtypes.html#str.rstrip
+ln rstrip()
+ln Return a copy of the string with trailing 
+ln characters removed. The chars argument is a 
+ln string specifying the set of characters to be 
+ln removed. If omitted or None, the chars argument 
+ln defaults to removing whitespace.
+co $ ..
+
+nn docs/stdtypes/str/startswith
+hl https://docs.python.org/3/library/stdtypes.html#str.startswith

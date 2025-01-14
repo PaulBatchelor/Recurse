@@ -412,3 +412,8 @@ nn std/option/as_ref
 hl https://doc.rust-lang.org/stable/std/option/enum.Option.html#method.as_ref
 co $ ..
 ln as_ref(): converts from =&Option<T>= to =Option<&T>=.
+
+nn std/str/trim
+hl https://doc.rust-lang.org/std/primitive.str.html#method.trim
+ln trim: returns a string slice with leading and trailing
+ln whitespace removed

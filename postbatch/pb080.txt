@@ -115,3 +115,6 @@ order. Going to have to return to this.
 @20:13 Works. Cleaning up prints and pushing #dzbrowse-ordered-tree #dzbrowse-treesorter
 I also will need to get children sorted, but that's
 for another day (treesorter needs to be implemented)
+
+@20:18 Try to add more to edexp POC #timelog:02:00:00
+Wow I got absorbed. I should have pulled away from this.

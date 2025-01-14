@@ -55,7 +55,7 @@ The fact that it's prefixy makes me think I'm
 in the right direction. Trie traversal is still fuzzy.
 
 @14:25 Working through by hand Trie traversal
-@! dz $
+#! dz $
 The base example doesn't have multiple possibilities
 for words down the Trie, so I'm extending these
 examples to do that. So, in the example word list
@@ -64,11 +64,11 @@ examples to do that. So, in the example word list
 [ball acae lada lead] to go with [ball area lead lady]
 
 @14:55 I need a break from this
-@! dz $
+#! dz $
 I am now trying to move way from drawing the square
 visually as I go, and just using the Trie I drew to
 work out the logic. It's taking some time for things
 to stick. I'm going to switch to other things now.
 
 @15:07 reading #read-system-design-interview #timelog:00:52:40
-@! dz system_design_interview/1/toc/01_scale_zero_to_millions 
+#! dz system_design_interview/1/toc/01_scale_zero_to_millions

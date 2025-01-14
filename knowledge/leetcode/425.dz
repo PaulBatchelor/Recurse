@@ -1,0 +1,22 @@
+ns leetcode/problems/425_word_squares 
+nn editorial
+ns +editorial
+co ../../../references/constraint_programming $
+cr symmetric property of the word squrae could also
+cr be interpretted as the constraint of the problem
+cr (as in constraint programming)
+co $ symmetrical_across_diagonal
+
+nn symmetrical_across_diagonal
+ln for a word square with equal-size row and column, the
+ln resulting letter matrix should be symmetrical across
+ln its diagonal
+
+nn backtracking
+co $ ../../../../paradigms/backtracking
+co ../../../../explore/backtracking/template $
+cr one could follow the code template from the explore card
+cr to implement backtracking
+
+nn backtracking_hashtable
+nn backtracking_trie

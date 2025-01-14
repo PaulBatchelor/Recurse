@@ -36,7 +36,7 @@ knowledge/javascript.dz
 knowledge/typescript.dz
 knowledge/nextjs.dz
 knowledge/css.dz
-knowledge/leetcode/leetcode.dz knowledge/leetcode/trie.dz knowledge/leetcode/bst.dz
+knowledge/leetcode
 knowledge/cryptography.dz
 knowledge/system_design_interview
 knowledge/ddia.dz
@@ -46,6 +46,7 @@ codestudy/dz/excalidraw/excalidraw.dz codestudy/dz/excalidraw/files.dz
 codestudy/dz/ripgrep/files.dz
 codestudy/dz/oed/main.dz codestudy/dz/oed/files.dz
 codestudy/dz/leetcode/421/main.dz
+codestudy/dz/leetcode/425
 knowledge/vscode.dz
 knowledge/use_the_index_luke.dz
 knowledge/lpc.dz
