@@ -29,3 +29,5 @@ import_code codestudy/tic80 tic80/studio.c
 import_code codestudy/oed oed/main.c
 
 import_code codestudy/ripgrep/crates/core ripgrep/crates/core/main.rs
+
+../dzbrowse/batchcode.py codestudy/code/leetcode/425/ codestudy/dz/leetcode/425/codefiles.txt | sqlite3 a.db
