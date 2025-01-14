@@ -10,4 +10,12 @@ instead of "../../../foo". it would be nice to have a
 search built in, like "../?foo/bar" could mean "find the
 first occurance of the pattern "foo bar" in another path.
 
-@12:19 Chapter 2
+@12:19 Outline Chapter 2 #read-system-design-interview #timelog:00:10:53
+
+@12:21 line break mechanic in dzfiles needed at some point #dzbrowse-dzfiles-linebreak
+
+@12:25 I to easily need page numbers. #read-system-design-interview #dzbrowse-attributes
+page numbers are stored in attributes.
+
+@12:29 outlined
+#! dz system_design_interview/1/toc/02_back_of_env_estimation 

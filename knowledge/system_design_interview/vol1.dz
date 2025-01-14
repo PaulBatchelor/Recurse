@@ -16,6 +16,7 @@ nn 02_back_of_env_estimation
 ln Chapter 2: back of envelope estimation
 co $ ..
 rm pg 34
+at ol
 
 nn 03_framework
 ln Chapter 3: A framework for system design interviews

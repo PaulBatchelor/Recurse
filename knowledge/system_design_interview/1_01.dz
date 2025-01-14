@@ -438,9 +438,9 @@ co ../../12_stateless_web_tier $
 
 nn build_redundancy_every_tier
 co $ ..
-co $ ../../06_database_replication
-co $ ../../20_horizontal_scaling
-co $ ../../18_database_scaling
+co ../../06_database_replication $
+co ../../20_horizontal_scaling $
+co ../../18_database_scaling $
 
 nn cache_data
 co $ ..
@@ -458,6 +458,7 @@ co ../../11_CDN_considerations $
 
 nn scale_data_tier_sharding
 co $ ..
+co ../../18_database_scaling $
 
 nn split_tiers_individual_services
 co $ ..

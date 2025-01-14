@@ -1,0 +1,21 @@
+ns system_design_interview/1/toc/02_back_of_env_estimation
+
+nn power_of_two
+co $ ..
+at pg 35
+
+nn latency_numbers
+co $ ..
+at pg 36
+
+nn availability_numbers
+co $ ..
+at pg 38
+
+nn ex_estimate_twitter_QPS_storage
+co $ ..
+at pg 39
+
+nn tips
+co $ ..
+at pg 40
