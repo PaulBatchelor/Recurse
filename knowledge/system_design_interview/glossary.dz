@@ -389,3 +389,19 @@ nn glossary/geoDNS
 co $ ..
 ln geoDNS: a service that allows domain names to be
 ln resolved to IP addresses based on the location of a user
+
+nn glossary/DAU
+ln DAU: daily active users
+co $ ..
+co $ ../KPI
+
+nn glossary/KPI
+ln KPI: key performance indicator, is a kind of performance
+ln measurement.
+co $ ..
+
+nn glossary/sharding
+ln Sharding: separates large databases into smaller, mor eeasily
+ln managed parts called shards. Each shard shsares the same
+ln schema, though the actual data on each shard is unique to
+ln the shard.

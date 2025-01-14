@@ -126,6 +126,7 @@ co $ ../../../../concepts/non_func_reqs/availability
 cr by replicating across different locations, your
 cr website in operatoin even if a database is offline, as you
 cr can access data stored in another database server
+co $ ../../../../concepts/non_func_reqs/redundancy
 
 ns +06_database_replication
 nn 01_master
@@ -345,18 +346,125 @@ ns ..
 nn 17_logging_metrics_automation
 co $ ..
 rm pg 26
+ns +17_logging_metrics_automation
+nn logging
+co $ ..
+
+nn metrics
+co $ ..
+ns +metrics
+
+nn host_level
+ln CPU, Memory, disk I/O, etc
+co $ ..
+
+nn aggregated
+ln performance of database tier, cach tier, etc
+co $ ..
+
+nn key_business
+co $ ..
+ln daily active users, retention, revenue, etc.
+co ../../../../../../glossary/DAU $
+
+zz -metrics
+ns ..
+
+nn automation
+co $ ..
+
+zz -17_logging_metrics_automation
+ns ..
 
 nn 18_database_scaling
 co $ ..
 rm pg 28
+ln There are two approaches for database scaling:
+ln vertical scaling and horizontal scaling
+co ../04_vertical_vs_horizontal_scaling $
 
 nn 19_vertical_scaling
 co $ ..
 rm pg 28
+co $ ../../../../glossary/vertical_scaling
 
 nn 20_horizontal_scaling
 co $ ..
 rm pg 28
+co $ ../../../../glossary/horizontal_scaling
+ln Horizontal scaling, aka sharding, is the practice
+ln of adding more servers.
+
+
+ns +20_horizontal_scaling
+
+nn sharding
+co $ ../../../../../glossary/sharding
+
+nn sharding/sharding_key
+ln sharding key, or partition key: key factor when implenting
+ln a sharding strategy. The goal is to choose a key
+ln that can evenly distribute data.
+co $ ..
+
+nn sharding/resharding
+ln resharding: needed for rapid growth, or uneven data
+ln distribution amongst shards (uneven data distribution).
+co $ ..
+
+nn sharding/celebrity_problem
+ln celebrity problem: AKA hotspot key problem. Excessive
+ln access to a specific shard could cause server overload.
+co $ ..
+
+nn sharding/join_denormalizatoin
+ln Once a database has been sharded across multiple servers,
+ln it is hard to perform join operations across database
+ln shards.
+co $ ..
+
+zz -20_horizontal_scaling
+ns ..
 
 nn 21_millions_and_beyond
 co $ ..
+
+
+ns +21_millions_and_beyond
+
+nn keep_web_tier_stateless
+co $ ..
+co ../../12_stateless_web_tier $
+
+nn build_redundancy_every_tier
+co $ ..
+co $ ../../06_database_replication
+co $ ../../20_horizontal_scaling
+co $ ../../18_database_scaling
+
+nn cache_data
+co $ ..
+co ../../07_cache $
+co ../../08_cache_tier $
+
+nn support_multiple_data_centers
+co $ ..
+co ../../15_data_centers $
+
+nn host_static_assets_CDN
+co $ ..
+co ../../10_CDN $
+co ../../11_CDN_considerations $
+
+nn scale_data_tier_sharding
+co $ ..
+
+nn split_tiers_individual_services
+co $ ..
+
+nn monitor_system_automate
+co $ ..
+co ../../17_logging_metrics_automation $
+
+zz -21_millions_and_beyond
+ns ..

@@ -105,6 +105,9 @@ co $ ..
 nn robustness
 co $ ..
 
+nn redundancy
+co $ ..
+
 zz -non_func_reqs
 ns ..
 

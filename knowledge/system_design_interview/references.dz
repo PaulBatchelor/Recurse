@@ -25,3 +25,12 @@ ln typically used for inter-process communication (IPC),
 ln or for inter-thread communication within the same
 ln process.
 co $ ../../glossary/message_queue
+
+nn references/active_users
+hl https://en.wikipedia.org/wiki/Active_users
+co $ ..
+co $ ../../glossary/DAU
+
+nn references/performance_indicator
+hl https://en.wikipedia.org/wiki/Performance_indicator
+co $ ../../glossary/KPI

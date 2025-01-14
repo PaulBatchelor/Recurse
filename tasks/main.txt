@@ -38,3 +38,6 @@ dagzet database (using the lua implementation)
 @dzfiles-importer make dzfiles importer
 
 @codestudy-autoimporter have a more automated way to handle code code imports
+
+@dagzet-wildcard-path somehow add wildcard path
+

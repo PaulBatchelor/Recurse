@@ -1,0 +1,13 @@
+@2025-01-14 Ridgewood visit, Hub, etc
+@11:34 Back to hub from ridgewood, settling in
+
+@11:36 finish up chapter 1 #read-system-design-interview #timelog:00:41:37
+
+@11:49 Some sort of wildcard path would be nice? #read-system-design-interview #dagzet-wildcard-path
+As I'm taking notes, I'm finding a bottleneck tends to be
+getting the right double dots working. So, "../../../../foo"
+instead of "../../../foo". it would be nice to have a
+search built in, like "../?foo/bar" could mean "find the
+first occurance of the pattern "foo bar" in another path.
+
+@12:19 Chapter 2
