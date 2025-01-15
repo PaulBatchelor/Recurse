@@ -21,3 +21,13 @@ page numbers are stored in attributes.
 #! dz system_design_interview/1/toc/02_back_of_env_estimation
 
 @12:34 leetcode something something
+Okay nevermind I left instead.
+
+@19:32 Backtracking explore outlining?
+
+@19:40 there seems to be a bug with noderefs
+It's not creating references for backtracking.
+
+@19:44 Ah, backtracking is not a card. it's part of recursion.
+
+
