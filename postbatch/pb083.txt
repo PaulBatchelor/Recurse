@@ -9,3 +9,9 @@ not 0-indexed.
 
 @15:35 binary tree outlining #timelog:00:03:41
 #! dz leetcode/explore/binary_tree 
+
+@15:40 hack in some multiline support #dzbrowse-dzfiles-linebreak #timelog:00:08:22
+I added an explicit =+/.= syntax. It looks kinda goofy,
+and a little verbose compared to "\" that you
+typically see, but It's very clear. Plus, it only
+took me 8 minutes to make.

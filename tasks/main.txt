@@ -43,4 +43,4 @@ dagzet database (using the lua implementation)
 
 @dzbrowse-dzfiles-linebreak add line breaks for dzfiles
 
-@dzbrowse-attributes print attributes in dzbrose
+@dzbrowse-attributes print attributes in dzbrowse
