@@ -1633,3 +1633,27 @@ co $ data_structures/trie
 nn references/word_squares
 hl https://en.wikipedia.org/wiki/Word_square
 co $ problems/425_word_squares
+
+nn problems/52_n_queens_2
+hl https://leetcode.com/problems/n-queens-ii/description/
+ln 52: N-Queens ii
+co $ paradigms/backtracking
+td initial attempt
+
+nn problems/489_robot_cleaner
+hl https://leetcode.com/problems/robot-room-cleaner/
+ln 489: robot cleaner
+co $ paradigms/backtracking
+td initial attempt
+
+nn problems/37_sudoku_solver
+hl https://leetcode.com/problems/sudoku-solver
+ln 32: sudoku solver
+co $ paradigms/backtracking
+td initial attempt
+
+nn problems/77_combinations
+hl https://leetcode.com/problems/combinations
+ln 77: combinations
+co $ paradigms/backtracking
+td initial attempt

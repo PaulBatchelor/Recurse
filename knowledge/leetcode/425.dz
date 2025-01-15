@@ -14,7 +14,7 @@ ln its diagonal
 
 nn backtracking
 co $ ../../../../paradigms/backtracking
-co ../../../../explore/backtracking/template $
+co ../../../../explore/recursion2/backtracking/template $
 cr one could follow the code template from the explore card
 cr to implement backtracking
 

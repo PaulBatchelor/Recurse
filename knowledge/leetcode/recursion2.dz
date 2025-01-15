@@ -1,0 +1,24 @@
+ns leetcode/explore
+
+nn recursion2
+hl https://leetcode.com/explore/learn/card/recursion-ii/
+ln recursion ii
+at ol
+co $ ..
+co ../../problems/52_n_queens_2 $
+co ../../problems/489_robot_cleaner $
+
+ns +recursion2
+
+nn backtracking
+at ol
+ns +backtracking
+
+nn article
+hl https://leetcode.com/explore/learn/card/recursion-ii/472/backtracking/2654/
+ln backtracking (article)
+co $ ..
+
+nn template
+hl https://leetcode.com/explore/learn/card/recursion-ii/472/backtracking/2793/
+co $ ..
