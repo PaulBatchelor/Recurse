@@ -1,0 +1,25 @@
+ns leetcode/explore
+
+nn binary_tree
+hl https://leetcode.com/explore/learn/card/data-structure-tree/
+ln Explore: binary tree
+at ol
+
+ns +binary_tree
+
+nn traverse
+ln Traverse a tree
+co $ ..
+hl https://leetcode.com/explore/learn/card/data-structure-tree/134/traverse-a-tree/
+td read/outline
+
+nn solve_problems_recursively
+ln Solve Problems Recursively
+co $ ..
+hl https://leetcode.com/explore/learn/card/data-structure-tree/17/solve-problems-recursively/
+td read/outline
+
+nn conclusion
+hl https://leetcode.com/explore/learn/card/data-structure-tree/133/conclusion/
+co $ ..
+td outline

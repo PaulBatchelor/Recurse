@@ -1,0 +1,11 @@
+@2025-01-15
+@14:34 Settling in at the hub
+
+@14:37 Attempt to isolate this weird template bug, maybe fix it #timelog:00:40:00
+Bug is fixed. Off by one error. IDs in dagzet are 1-indexed,
+not 0-indexed.
+
+@15:19 Back to mapping backtracking (now recursion 2) #timelog:00:14:38
+
+@15:35 binary tree outlining #timelog:00:03:41
+#! dz leetcode/explore/binary_tree 
