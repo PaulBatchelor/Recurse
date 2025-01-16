@@ -8,6 +8,9 @@ function import_code() {
         $NAMESPACE codestudy/code/$FILENAME | sqlite3 a.db
 }
 
+set -e
+set -o pipefail
+
 import_code codestudy/potential potential/plugin.hpp
 import_code codestudy/potential potential/plugin.cpp
 import_code codestudy/potential potential/build.rs
@@ -30,4 +33,4 @@ import_code codestudy/oed oed/main.c
 
 import_code codestudy/ripgrep/crates/core ripgrep/crates/core/main.rs
 
-../dzbrowse/batchcode.py codestudy/dz/leetcode/codefiles.txt | sqlite3 a.db
+../dzbrowse/batchcode.py codestudy/code/leetcode codestudy/dz/leetcode/codefiles.txt | sqlite3 a.db

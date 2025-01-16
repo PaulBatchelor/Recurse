@@ -1,3 +1,5 @@
+set -e 
+set -o pipefail
 # generate dagzet and wiki pages
 ./tools/gendb.sh
 if [[ ! $? -eq 0 ]]

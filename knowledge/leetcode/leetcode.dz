@@ -815,6 +815,7 @@ hl https://leetcode.com/problems/leaf-similar-trees
 ln 872 Leaf Simlar Trees
 co $ data_structures/binary_tree
 co $ leetcode75
+nn problems/872_leaf_similar_trees/solutions/DFS
 
 nn problems/1448_count_good_nodes
 hl https://leetcode.com/problems/count-good-nodes-in-binary-tree/
