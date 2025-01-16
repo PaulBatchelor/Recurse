@@ -731,3 +731,16 @@ co $ ..
 
 nn docs/stdtypes/str/startswith
 hl https://docs.python.org/3/library/stdtypes.html#str.startswith
+
+nn docs/stdlib/markup
+hl https://docs.python.org/3/library/markup.html
+ln structured markup processing tools
+co $ ..
+
+nn docs/stdlib/markup/html
+hl https://docs.python.org/3/library/html.html
+co $ ..
+
+nn docs/stdlib/markup/html/escape
+hl https://docs.python.org/3/library/html.html#html.escape
+co $ ..

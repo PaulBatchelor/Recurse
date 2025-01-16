@@ -48,3 +48,7 @@ ln sqlite bytecode.
 hl https://medium.com/@JasonWyatt/squeezing-performance-from-sqlite-explaining-the-virtual-machine-2550ef6c5db.
 tg sqlite
 rm gujhrwjfq
+
+nn sqljs_httpvfs
+hl https://github.com/phiresky/sql.js-httpvfs
+ln Hosting read-only SQLite databases on static file hosters like Github Pages 

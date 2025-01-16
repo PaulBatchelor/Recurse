@@ -185,3 +185,8 @@ hl https://github.com/chzyer/readline/blob/master/doc/shortcut.md
 rm Recommended to me as a way to become more proficient at
 rm web-based text editors used in interviews. These are
 rm apparently supported by default in most OSX interfaces.
+
+ns IPFS
+nn teatime
+ln https://github.com/bjesus/teatime
+tg IPFS sqlite

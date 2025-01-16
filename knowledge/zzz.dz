@@ -315,3 +315,13 @@ cx DDIA/toc/2_distributed_data/07_transactions/meaning_of_ACID/durability system
 
 cx DDIA/glossary/scalability system_design_interview/concepts/non_func_reqs/scalability
 
+cx webdev/vue/nuxt IPFS/teatime
+cr TeaTime is a Nuxt.js application
+
+cx sqlite/sqljs_httpvfs $
+cr Before a user performs a search in TeaTime, they choose
+cr which database to use and then TeaTime queries the
+cr database using sql.js-httpvfs
+
+cx webdev/IndexedDB $
+cr Cache files in IndexedDB for fast loading
