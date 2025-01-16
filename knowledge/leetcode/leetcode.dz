@@ -577,6 +577,8 @@ ln 104: maximum depth of binary tree
 hl https://leetcode.com/problems/maximum-depth-of-binary-tree
 co $ grind75
 co $ data_structures/binary_tree
+co $ components/max
+co $ components/depth
 
 nn references/tail_call
 hl https://en.wikipedia.org/wiki/Tail_call
@@ -1411,41 +1413,11 @@ td read
 zz explore/dynamic_programming
 ns ../..
 
-nn glossary
-ln Glossary of Terms
-
 nn references/fibbonacci
 hl https://en.wikipedia.org/wiki/Fibonacci_sequence
 
-nn glossary/overlapping_subproblems
-ln overlapping subproblems: small versions of the original
-ln problem that can be used multiple times.
-co $ ..
-
-nn glossary/optimal_substructure
-ln optimal substructure: an optimal solution
-ln can be formed from optimal solutions to the
-ln overlapping subproblems of the original problem
-
 nn paradigms/divide_and_conquer
 ln divide and conquer
-
-nn glossary/tabulation
-ln Tabulation
-co $ ..
-co references/tabulation $
-
-nn glossary/memoization
-ln Memoization: memoization a result means to store
-ln the result of of a function call, usually in a hashmap
-ln or array, so that when the same call is made again,
-ln we can simply return the memoized result instead of
-ln recalculating the result
-co $ ..
-co references/memoization $
-
-nn glossary/recursion
-ln recursion
 
 nn problems/198_house_robber
 hl https://leetcode.com/problems/house-robber/
@@ -1457,11 +1429,6 @@ nn problems/300_longest_increasing_subsequence
 hl https://leetcode.com/problems/longest-increasing-subsequence
 ln 300: longest increasing subsequence
 td complete problem
-
-nn glossary/recurrence_relation
-ln Recurrance Relation: an equation that
-ln relates different states with eachother.
-co $ ..
 
 nn problems/70_climbing_stairs
 hl https://leetcode.com/problems/climbing-stairs
@@ -1531,13 +1498,6 @@ ln Trie
 nn references/trie
 hl https://en.wikipedia.org/wiki/Trie
 co $ data_structures/trie
-
-nn glossary/trie
-co $ ..
-
-nn glossary/prefix_tree
-co $ glossary/trie
-cr AKA
 
 nn problems/677_map_sum_pairs
 hl https://leetcode.com/problems/map-sum-pairs

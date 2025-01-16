@@ -1,0 +1,49 @@
+ns leetcode
+nn glossary
+ln Glossary of Terms
+
+nn glossary/optimal_substructure
+ln optimal substructure: an optimal solution
+ln can be formed from optimal solutions to the
+ln overlapping subproblems of the original problem
+
+nn glossary/tabulation
+ln Tabulation
+co $ ..
+co references/tabulation $
+
+nn glossary/memoization
+ln Memoization: memoization a result means to store
+ln the result of of a function call, usually in a hashmap
+ln or array, so that when the same call is made again,
+ln we can simply return the memoized result instead of
+ln recalculating the result
+co $ ..
+co references/memoization $
+
+nn glossary/recursion
+ln recursion
+
+nn glossary/recurrence_relation
+ln Recurrance Relation: an equation that
+ln relates different states with eachother.
+co $ ..
+
+nn glossary/trie
+co $ ..
+
+nn glossary/prefix_tree
+co $ ../trie
+cr AKA
+
+nn glossary/overlapping_subproblems
+ln overlapping subproblems: small versions of the original
+ln problem that can be used multiple times.
+co $ ..
+
+nn glossary/height_balanced
+co $ ..
+ln Height-balanced: a height balanced binary tree is
+ln a tree in which the depth of the two subtrees of
+ln every node never differs by more than one.
+co $ ../../data_structures/binary_tree
