@@ -1,0 +1,50 @@
+ns +toc/100_file_management_shell_escapes
+gr Chapter 100: File management and shell escapes
+
+nn empty_buffer
+co $ ..
+at pg 27
+co ../../../commands/mode_insert $
+co ../../../commands/current_address $
+co ../../../commands/print_address $
+
+nn default_filename
+co $ ..
+at pg 28
+co ../../../commands/set_filename $
+co ../../../commands/write $
+cr the write command can also set the filename,
+cr if you give it one
+
+nn switching_files
+co $ ..
+at pg 29
+co ../../../commands/edit $
+co ../../../commands/edit_discard_modified $
+
+nn saving_part_of_buffer
+co $ ..
+at pg 30
+co ../../../commands/write $
+
+nn shell_escapes
+co $ ..
+at pg 31
+co ../../../commands/shell_escape $
+
+nn send_to_program
+co $ ..
+ln Use w !command to write to shell escape
+at pg 33
+co $ ../../../commands/shell_escape $
+co $ ../../../commands/write $
+
+nn starting_with_escape
+co $ ..
+ln e !command. with ed, ed !'command x y z' also
+ln works
+at pg 33
+co $ ../../../commands/edit
+co $ ../../../commands/shell_escape
+
+ns ../..

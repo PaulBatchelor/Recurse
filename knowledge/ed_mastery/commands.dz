@@ -31,6 +31,10 @@ nn save
 ln w: save file
 co $ ..
 
+nn write
+co $ ../save
+cr pneumonically easier to remember than "save"
+
 nn quit
 ln q: quit
 co $ ..
@@ -145,6 +149,29 @@ nn append_to_file
 ln [x]W [filename]: append address range x to file
 ln filename.
 co $ ..
+
+nn set_filename
+co $ ..
+ln f [filename]: set filename
+
+nn edit
+co $ ..
+ln e [filename]: edit file filename
+
+nn edit_discard_modified
+co $ ..
+ln E [filename]: edit and discard the currently
+ln modified buffer
+co $ ../edit
+
+nn shell_escape
+ln ! [cmd]: trigger a shell escape and run cmd.
+co $ ..
+
+nn shell_escape_repeat
+ln !!: repeat last shell escape
+co $ ..
+co $ ../shell_escape
 
 ns ..
 
