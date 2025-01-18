@@ -1,4 +1,6 @@
-ns ed/ed_mastery
+ns ed
+nn ed_mastery
+ns +ed_mastery
 nn toc
 ns +toc
 
