@@ -15,3 +15,6 @@ I added an explicit =+/.= syntax. It looks kinda goofy,
 and a little verbose compared to "\" that you
 typically see, but It's very clear. Plus, it only
 took me 8 minutes to make.
+
+@2025-01-18 A small window of hub time
+I'm going to use this time to: outline more of my ed reading.

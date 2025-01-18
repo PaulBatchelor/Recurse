@@ -1,0 +1,52 @@
+ns +toc/011_editing
+gr Chapter 11: Text Editing
+
+nn changing_lines
+at pg 19
+co $ ..
+co ../../../commands/change_line $
+co ../../../commands/print_buffer $
+
+nn inserting_amidst_the_file
+at pg 20
+co $ ..
+co ../../../commands/mode_insert $
+co ../../../commands/mode_append $
+
+nn moving_text
+at pg 20
+co $ ..
+co ../../../commands/move $
+
+nn deleting_lines
+at pg 22
+co $ ..
+co ../../../commands/delete $
+
+nn undo
+at pg 23
+co $ ..
+co ../../../commands/undo $
+
+nn inserting_text_from_files
+co $ ..
+at pg 23
+co ../../../commands/read_from_file $
+
+nn joining_lines
+co $ ..
+at pg 24
+co ../../../commands/join $
+
+nn copying_lines
+co $ ..
+at pg 25
+co ../../../commands/transfer $
+
+nn appending_lines_to_another_files
+co $ ..
+at pg 26
+co ../../../commands/append_to_file $
+
+
+ns ../..
