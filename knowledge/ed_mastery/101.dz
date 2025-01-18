@@ -1,0 +1,86 @@
+ns +toc/101_regex_searches
+gr Chapter 101: Regular Expressions and Searches
+
+nn regex_format
+co $ ..
+at pg 35
+co $ ../../../references/BRE
+cr ed implements basic regular expressions, aka BRE
+at ol
+ln Regex comonly (but not always) appear between
+ln slashes: /re/
+
+ns +regex_format
+
+nn character class: matches itself
+co $ ..
+
+nn wildcard
+ln '.': wildcard matches any character
+co $ ..
+
+nn escaped_character
+ln an escaped character lets you include a character that
+ln has special purpose within regex.
+co $ ..
+
+nn modifiers
+ln modifiers change how the regular expression gets
+ln interpretted.
+co $ ..
+
+ns ..
+
+nn searching
+co $ ..
+at pg 37
+co $ ../../../commands/regex_search_forward
+co $ ../regex_format/modifiers
+ln '//n' works as a search modifier
+co $ ../../../commands/regex_search_globally
+at ol
+
+nn searching/grep
+ln g/re/p: search globally and print the lines. the
+ln 'p' is technically optional, but this is the
+ln origin of "grep".
+co $ ..
+
+nn searching/gren
+ln g/re/n: like grep, but print line numbers
+co $ ..
+co $ ../grep
+
+nn running_commands_on_searches
+co $ ..
+at pg 29
+
+nn interactive_searching
+co $ ..
+at pg 41
+
+nn inverted_matches
+co $ ..
+at pg 43
+
+nn character_classes
+co $ ..
+at pg 43
+
+nn anchors
+co $ ..
+at pg 44
+
+nn inverted_classes
+co $ ..
+at pg 45
+
+nn multiple_matches_wildcards
+co $ ..
+at pg 46
+
+nn commands_searches
+co $ ..
+at pg 50
+
+ns ../..

@@ -173,5 +173,13 @@ ln !!: repeat last shell escape
 co $ ..
 co $ ../shell_escape
 
+nn regex_search_forward
+ln //: search forward in regex
+co $ ..
+
+nn regex_search_globally
+ln g/re/: seach globally with regex
+co $ ..
+
 ns ..
 
