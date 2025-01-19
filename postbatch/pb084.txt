@@ -1,2 +1,48 @@
 @2025-01-19 Moved to ridgewood
-@14:38 Trying to get dzbrowse working again on phone
+@14:38 Trying to get dzbrowse working again on phone #timelog:00:06:36
+
+@14:48 deeper notetaking #timelog:00:16:12
+#! dz leetcode/problems/1448_count_good_nodes 
+
+@14:50 today's intuition
+#! dz $
+We have a property we are measuring, it is called "good nodes".
+---
+We want to count the number of good nodes.
+---
+Property of a good node: int path from root to node, there
+is no node with a value greater than X.
+---
+DFS problem, because we are making paths.
+---
+Root node is always a good node, so the count will be one
+if the root is not null, otherwise 0?
+---
+DFS can be implemented as a recursive function. I'm thinking
+we'll need to keep track of the max value as a local variable
+inside the lexical scope of this function. A counter
+should be in global scope relative to this function. This counter
+is always monotonically increasing.
+---
+The max value is always the max value seen so far in the
+recursive path. Recursion adds an implicit stack and
+keeps track of the max value so far on the path. This
+could probably be done without a stack, but I'm going
+to do this recursively first.
+---
+I used the range limits to set a min val. Note to self:
+-10^4 is -10,000, not -1000. Heh.
+
+@15:05 It works. Can I rework it to use an explicit stack now? #timelog:00:05:29
+#! dz $
+My hunch is that we'd use a tupled stack, with the node,
+and then the max value seen so far. Instead of a built-in
+function, use a while loop that runs until the stack
+is empty. Initialize the stack with the root value, assuming
+it is non-empty.
+---
+Instead of making a call to left/right. Push those onto the
+stack.
+---
+Success. Need to be more mindful of control flow in while
+loop. Don't break or return on empty nodes, just continue.

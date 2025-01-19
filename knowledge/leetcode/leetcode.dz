@@ -823,6 +823,10 @@ ln 1448: Count good nodes
 co $ leetcode75
 co $ data_structures/binary_tree
 co $ paradigms/depth_first_search
+co $ components/count
+cr counting good nodes
+co $ components/path
+cr a good node involves a path from root to node X
 
 nn problems/437_path_sum_iii
 ln 432 path sum ii
