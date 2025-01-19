@@ -1,0 +1,2 @@
+@2025-01-19 Moved to ridgewood
+@14:38 Trying to get dzbrowse working again on phone
