@@ -134,3 +134,7 @@ It might be that I need to use an explicit DFS stack.
 #! dz $
 It seems may have already racked some hours trying to grok
 this one. Going to look at this more closely.
+
+@16:54 Doing a codestudy on this problem #timelog:01:05:29
+#! dz leetcode/problems/560_subarray_sum_equals_k
+#! dz codestudy/leetcode/560/files/editorial.py/subArraySum/initialize_variables 
