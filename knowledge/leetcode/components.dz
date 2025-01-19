@@ -16,3 +16,6 @@ co $ ..
 
 nn path
 co $ ..
+
+nn sum
+co $ ..
