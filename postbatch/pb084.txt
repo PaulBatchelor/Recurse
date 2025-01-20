@@ -138,3 +138,29 @@ this one. Going to look at this more closely.
 @16:54 Doing a codestudy on this problem #timelog:01:05:29
 #! dz leetcode/problems/560_subarray_sum_equals_k
 #! dz codestudy/leetcode/560/files/editorial.py/subArraySum/initialize_variables 
+
+@18:07 integrating codestudy into knowledge graph
+
+@18:08 codestudy for 437 #timelog:00:53:17
+#! dz leetcode/problems/437_path_sum_iii 
+#! dz codestudy/leetcode/437/files/editorial.py
+
+@19:17 attempting 437 again #timelog:00:02:00
+#! dz leetcode/problems/437_path_sum_iii
+That was fast.
+
+@19:18 What was my problem before? #timelog:00:04:15
+#! dz leetcode/problems/437_path_sum_iii
+Initially, I viewed this as DFS problem where in the
+traversal, you would traverse from the current node
+to the end, and then start the process over again
+for the children. One of the issues was that this traversed
+nodes too many times. Another issue was that I think
+it didnt't account for all positive nodes.
+---
+The trick was to see this as a prefix sum problem, similar
+to the problem counting subarrays that sum to a target
+sum.
+---
+My problem was, I had forgotten this prefix sum problem,
+and couldn't connect the dots.
