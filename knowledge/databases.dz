@@ -85,3 +85,8 @@ hl https://github.com/spotify/sparkey
 ln Sparkey is a simple constant key/value
 ln storage library.
 tg database cprog
+
+nn db3k
+hl https://build-your-own.org/blog/20251015_db_in_3000/
+ln Build a Database in 3000 Lines with
+ln 0 Dependencies

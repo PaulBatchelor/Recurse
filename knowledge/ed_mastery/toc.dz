@@ -1,4 +1,6 @@
-ns ed/ed_mastery
+ns ed
+nn ed_mastery
+ns +ed_mastery
 nn toc
 ns +toc
 
@@ -18,14 +20,17 @@ rm pg 11
 nn 011_editing
 co $ ..
 at pg 19
+at ol
 
 nn 100_file_management_shell_escapes
 co $ ..
 at pg 27
+at ol
 
 nn 101_regex_searches
 co $ ..
 at pg 35
+at ol
 
 nn 110_substitution
 co $ ..

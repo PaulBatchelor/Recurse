@@ -10,3 +10,12 @@ co $ ..
 nn depth
 ln depth
 co $ ..
+
+nn count
+co $ ..
+
+nn path
+co $ ..
+
+nn sum
+co $ ..

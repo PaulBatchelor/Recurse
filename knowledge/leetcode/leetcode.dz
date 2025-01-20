@@ -823,6 +823,10 @@ ln 1448: Count good nodes
 co $ leetcode75
 co $ data_structures/binary_tree
 co $ paradigms/depth_first_search
+co $ components/count
+cr counting good nodes
+co $ components/path
+cr a good node involves a path from root to node X
 
 nn problems/437_path_sum_iii
 ln 432 path sum ii
@@ -832,6 +836,13 @@ co $ paradigms/prefix_sum
 cr yes, the solution for 437 uses prefix sum
 co $ leetcode75
 co $ paradigms/depth_first_search
+co $ components/count
+cr count number of paths that meet criteria (sum)
+co $ components/sum
+cr get the sum of values along a given path
+co $ ../1448_count_good_nodes
+cr also a counting problem, but 437 is trickier because
+cr paths don't need to start from the root
 
 nn problems/560_subarray_sum_equals_k
 hl https://leetcode.com/problems/subarray-sum-equals-k

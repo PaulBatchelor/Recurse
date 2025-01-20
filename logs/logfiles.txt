@@ -163,3 +163,7 @@ postbatch/pb078.txt
 postbatch/pb079.txt
 postbatch/pb080.txt
 codestudy/dz/leetcode/leetcode.log
+postbatch/pb081.txt
+postbatch/pb082.txt
+postbatch/pb083.txt
+postbatch/pb084.txt
