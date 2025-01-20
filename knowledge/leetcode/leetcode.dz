@@ -368,6 +368,8 @@ ln 121: Best Time to Sell and Buy Stock
 co $ paradigms/greedy
 cr I'm pretty sure this is a greedy algorithm? ("locally optimal choices")
 co $ grind75
+co $ paradigms/dynamic_programming
+hl https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 
 nn paradigms/greedy
 ln Greedy
@@ -1639,3 +1641,9 @@ hl https://leetcode.com/problems/combinations
 ln 77: combinations
 co $ paradigms/backtracking
 td initial attempt
+
+nn problems/134_gas_station
+hl https://leetcode.com/problems/gas-station
+ln 134: gas station
+co $ paradigms/greedy
+co $ grind75
