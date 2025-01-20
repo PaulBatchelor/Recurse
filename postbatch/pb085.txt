@@ -1,0 +1,166 @@
+@2025-01-19 Moved to ridgewood
+@14:38 Trying to get dzbrowse working again on phone #timelog:00:06:36
+
+@14:48 deeper notetaking #timelog:00:16:12
+#! dz leetcode/problems/1448_count_good_nodes 
+
+@14:50 today's intuition
+#! dz $
+We have a property we are measuring, it is called "good nodes".
+---
+We want to count the number of good nodes.
+---
+Property of a good node: int path from root to node, there
+is no node with a value greater than X.
+---
+DFS problem, because we are making paths.
+---
+Root node is always a good node, so the count will be one
+if the root is not null, otherwise 0?
+---
+DFS can be implemented as a recursive function. I'm thinking
+we'll need to keep track of the max value as a local variable
+inside the lexical scope of this function. A counter
+should be in global scope relative to this function. This counter
+is always monotonically increasing.
+---
+The max value is always the max value seen so far in the
+recursive path. Recursion adds an implicit stack and
+keeps track of the max value so far on the path. This
+could probably be done without a stack, but I'm going
+to do this recursively first.
+---
+I used the range limits to set a min val. Note to self:
+-10^4 is -10,000, not -1000. Heh.
+
+@15:05 It works. Can I rework it to use an explicit stack now? #timelog:00:05:29
+#! dz $
+My hunch is that we'd use a tupled stack, with the node,
+and then the max value seen so far. Instead of a built-in
+function, use a while loop that runs until the stack
+is empty. Initialize the stack with the root value, assuming
+it is non-empty.
+---
+Instead of making a call to left/right. Push those onto the
+stack.
+---
+Success. Need to be more mindful of control flow in while
+loop. Don't break or return on empty nodes, just continue.
+
+@15:13 revisiting #timelog:01:11:28
+#! dz leetcode/problems/437_path_sum_iii
+
+@15:14 today's intuition
+#! dz $
+A problem whose return value involves counting things.
+---
+The criteria is that there is a downwards path (parent->child)
+whose value sums to a target value.
+---
+Tricky part: the starting point can be from anywhere, not
+just the root.
+
+@15:29 idea: work backwards?
+#! dz $
+The big tricky thing is: how to compensate for paths
+whose start point can be anywhere? A few things came to
+mind: keep track of values in queue, sliding window, stack,
+etc. But
+these didn't seem to quite fit. Then I thought: why not
+work backwards. Something something get to the leaf node,
+then backtrack.
+---
+The longest possible path is from a root to a leaf. Because
+there are positive and negative numbers, it's possible
+for the sum to go up and down depending on if you remove
+nodes. Nodes can be removed at both ends.
+---
+This isn't feeling quite right. It might be this needs
+to be more exhaustive.
+
+@15:35 idea: more brute force. start at top then top + 1, etc
+#! dz $
+We know the flow goes top down, so this DFS traversal
+can be done with brute force. Given a node, traverse through
+its underlying tree, and keep track of the paths that
+sum to the target sum. At that point, all possible paths
+with that particular node have been exhausted. Traverse
+again, this time starting with the children. Continue this
+until you reach the leaves.
+---
+Each traversal should keep track of the summation so far.
+Inside the DFS function, first check and see if the current
+summation yields the target. Then, recursively call on
+children, subtracting the nodes value from the target.
+---
+The initial root node (if it exists) will therefore
+have an initial summation of the root value.
+
+@15:47 initial attmpt isn't working
+#! dz $
+
+@15:54 got a bit further, broke on edge case
+#! dz $
+I decided to change my approach slightly. Initially,
+I was using the accumulative sum, running DFS with the
+sum + the node, then subtracting it. This next attempt,
+I set things up so that the DFS would reset the sum,
+starting with the children. While this works for the
+two test cases, I ran into edge cases when I submitted.
+---
+I'm trying to visualize this traversal as "netting all
+the combinations". With this new edge case, I'm netting
+3 instead of 2.
+
+@16:05 My traversal is behaving differently than I intended
+#! dz $
+The current edge case is essentially just a chain of values,
+and it's actually really helpful because you can see
+the traversal patterns.
+---
+What ends up happening is that the recursion somehow
+"kicks off" more traversals than I expected.
+---
+I have a hunch I shouldn't be calling DFS twice.
+
+@16:13 Okay that's not working. Trying to visualize the motion I want
+#! dz $
+It might be that I need to use an explicit DFS stack.
+
+@16:22 Looking at editorial
+#! dz $
+
+@16:24 Prefix Sum solution. I didn't see it before, and I didn't see it then
+#! dz $
+It seems may have already racked some hours trying to grok
+this one. Going to look at this more closely.
+
+@16:54 Doing a codestudy on this problem #timelog:01:05:29
+#! dz leetcode/problems/560_subarray_sum_equals_k
+#! dz codestudy/leetcode/560/files/editorial.py/subArraySum/initialize_variables 
+
+@18:07 integrating codestudy into knowledge graph
+
+@18:08 codestudy for 437 #timelog:00:53:17
+#! dz leetcode/problems/437_path_sum_iii 
+#! dz codestudy/leetcode/437/files/editorial.py
+
+@19:17 attempting 437 again #timelog:00:02:00
+#! dz leetcode/problems/437_path_sum_iii
+That was fast.
+
+@19:18 What was my problem before? #timelog:00:04:15
+#! dz leetcode/problems/437_path_sum_iii
+Initially, I viewed this as DFS problem where in the
+traversal, you would traverse from the current node
+to the end, and then start the process over again
+for the children. One of the issues was that this traversed
+nodes too many times. Another issue was that I think
+it didnt't account for all positive nodes.
+---
+The trick was to see this as a prefix sum problem, similar
+to the problem counting subarrays that sum to a target
+sum.
+---
+My problem was, I had forgotten this prefix sum problem,
+and couldn't connect the dots.

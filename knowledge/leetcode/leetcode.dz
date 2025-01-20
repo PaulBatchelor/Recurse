@@ -858,6 +858,10 @@ hl https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree
 co $ data_structures/binary_tree
 co $ paradigms/depth_first_search
 co $ leetcode75
+co $ components/longest
+cr problem aims to find the longest path
+co $ components/path
+cr problem is about finding paths
 
 nn problems/1161_max_level_sum_binary_tree
 hl https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree

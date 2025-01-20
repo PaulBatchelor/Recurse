@@ -19,3 +19,6 @@ co $ ..
 
 nn sum
 co $ ..
+
+nn longest
+co $ ..
