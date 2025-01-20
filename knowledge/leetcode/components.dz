@@ -22,3 +22,6 @@ co $ ..
 
 nn longest
 co $ ..
+
+nn level
+co $ ..
