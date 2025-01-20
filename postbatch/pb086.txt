@@ -1,0 +1,169 @@
+@2025-01-20
+@11:16 Hub settling, current thoughts
+I'm wondering, does LC have any guides for greedy algorithms?
+Does TADM have greedy algorithms? Any literature? It's sort
+of a vague concept, even though I've done a problem or two.
+Is it important?
+
+@11:22 Revisiting #timelog:00:15:00
+#! dz leetcode/problems/1372_longest_zigzag_path
+
+@11:25 today's intution
+#! dz $
+It's about finding paths. So this is a DFS traversal
+problem.
+---
+It's about finding the longest path. So the answer involves
+keeping track of the longest path found so far.
+---
+Paths can start and end anywhere (not just roots or leaves)
+---
+The novel thing in this problem is the "zig zag" traversal
+pattern, which requires keeping track of direction.
+---
+So, build a DFS algorithm using recursion. Locally,
+this function needs to keep track of direction, and
+the current path size.
+
+@11:35 groking the zigzag logic before I test it
+#! dz $
+I've written out the code for zig-zagging. I want
+to work out how it works.
+---
+This is preorder DFS traversal: process the node,
+then the children. Depending on the direction (was the
+current node the left/right child of the parent), it will
+determine how the children are traversed here.
+---
+For LEFT going RIGHT or
+RIGHT going LEFT: this is a zig zag, so the path continues.
+---
+For LEFT going LEFT for RIGHT going RIGHT: The zigzag stops,
+and a new path begins. So set the length to be 0.
+---
+We'll see how correct that is.
+
+@11:39 Off by one in path, bug I got it right in the end.
+#! dz $
+I started the path length at 0, when it should have been 1
+
+@11:40 dagzetting #timelog:00:06:53
+#! dz $
+
+@11:41 The pattern of storing some value during traversal
+#! dz leetcode/components/count
+#! dz leetcode/components/path
+#! dz leetcode/components/max
+There seems to be a subset of problems that involve
+doing some kind of DFS traversal, and getting an aggregate
+scalar value from this, like a count, or a max, or a sum.
+---
+It's DFS because these are problems that involve tracing
+paths from a tree.
+---
+The easiest approach to do DFS is using recursion. In
+Python, you can define functions inside of functions
+which is very convient, as it captures lexical scope.
+I can essentially have something like a "maxcount" variable
+as a global that all calls to the recursive function make.
+---
+DFS recursion always makes two calls to left/right children.
+It's cleaner to break out of the function early if the
+node is null. Any more recursive calls, and this might
+be a problem (this was a problem with 437 the pathsum iii, where
+my first approach involved doing two sets of child traversals)
+
+@11:49 Revisiting #timelog:00:25:35
+#! dz leetcode/problems/1161_max_level_sum_binary_tree
+
+@11:50 Today's intuition
+#! dz $
+"level sum" makes me think this is BFS.
+---
+Max sum, so keep track of max sum. BUT the problem
+wants to return the level, not the max sum. So the level
+will need to be kept track of in addition to the max.
+---
+They want the smallest level where the sum is max. What
+that means is if there are two levels that share the max
+sum, take the smallest. In BFS, traversal starts from
+small to large, so only update levels if the max is greater.
+---
+Level starts at 1, not 0
+
+@11:56 Plan of attack
+#! dz $
+BFS, so use a queue data structure. The queue should be
+a tuple containing the current level, and the node.
+(we can also do double queues as well, but nested stuff
+is a bit wrinkly for my cognition, trying this out)
+---
+Pop nodes off the queue, and add children to the stack,
+incrementing the level by 1.
+---
+Keep a running total of the current sum. When the queue
+pops a node with a higher level (always higher), update
+the maxsum and level.
+
+@12:06 seems to be off by one, why?
+#! dz $
+Ah, I was setting the max level to be the recently
+popped level, not the current level
+
+@12:08 Oops, I have hit an edge case
+#! dz $
+
+@12:11 My code is not processing the last level
+#! dz $
+Okay, the fix was moving the point when to skip empty
+nodes. I was skipping before checking for new levels,
+and I should check for new levels before skipping. Levels
+are always going to be in order using a queue, even if
+the child node is empty. You just skip it before trying
+to add to the sum.
+
+@12:26 I'd like to revisit this one
+#! dz leetcode/problems/134_gas_station
+I remember trying to wrap my head around the solution.
+
+@13:00 Call with Macro
+
+@14:10 Revisiting/studying #timelog:00:50:38
+#! dz leetcode/problems/134_gas_station
+
+@14:21 Today's intuition
+#! dz leetcode/problems/134_gas_station
+Geez. I remember having a hard time getting the word
+problem right for this one.
+---
+Working out the working loop for example 1, you can
+begin to see a pattern: at stop i, the cost is cost[i]
+and the gas is gas[(i + 1) % N], of which the difference
+is the gas you get and the cost, so gas[(i + 1) % N] - cost[i],
+or cost[i] + gas[(i + 1) % N].
+---
+When you work these differences out, you see that the only
+correct solution happens to be the only positive value.
+---
+Going to take a look at the one with no possible answer now
+
+@14:40 I'm pretty stumped, editorial time
+#! dz $
+I can't understand how this was supposed to be a single-pass
+problem.
+
+@14:42 editorial notes
+Net change from going from station i to i + 1: gas[i] - cost[i]
+---
+Let gain[i] = gas[i] - cost[i], where gain[i] is the net
+change in amount of gas in our tank from moving from i to
+i + 1.
+---
+If tank goes below zero, the route cannot be finished.
+---
+There can only be one valid solution, which is key
+to solving this problem
+
+@15:07 There is a lot of explanation for such a small amount of code
+#! dz $
+I feel like I need to revisit this later.
