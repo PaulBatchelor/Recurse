@@ -167,3 +167,15 @@ to solving this problem
 @15:07 There is a lot of explanation for such a small amount of code
 #! dz $
 I feel like I need to revisit this later.
+
+@17:35 Mirrors Isle code study #timelog:00:50:44
+#! dz codestudy/mirror_isles
+
+@18:47 Mirrors Isle: I'm seeing an example of an eyeball follow the player around, and now I want nethack
+now I want to check out nethack again, and study the
+source code. I started peaking at it once.
+
+@19:10 took some fiddling with sysconf, but nethack builds now
+
+@19:10 more mirrors isle codestudy #timelog:00:30:10
+#! dz codestudy/mirror_isles
