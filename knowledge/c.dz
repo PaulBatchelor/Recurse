@@ -98,3 +98,8 @@ ln chibicc-uxn: a small C compiler targetting uxn.
 hl https://github.com/lynn/chibicc
 tg cprog uxn
 rm gwhafauls
+
+nn quick_hash_dynamic_arrays
+hl https://nullprogram.com/blog/2025/01/19/
+ln Examples of quick hash tables and
+ln dynamic arrays in C
