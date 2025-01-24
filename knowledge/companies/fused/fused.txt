@@ -2,3 +2,6 @@
 
 @16:04 Outling fused.io docs
 #! dz companies/fused/docs
+
+@16:06 starting with the concepts
+#! dz companies/fused/docs/core_concepts

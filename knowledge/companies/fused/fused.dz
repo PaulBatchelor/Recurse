@@ -52,10 +52,63 @@ ns +core_concepts
 nn why_udfs
 hl https://docs.fused.io/core-concepts/why/
 co $ ..
+co ../../../references/parquet $
+cr file format that UDFs can read
+co ../../../references/geoJSON $
+cr file format that UDFs can read
 
 nn write_udfs
 hl https://docs.fused.io/core-concepts/write/
 co $ ..
+at ol
+
+ns +write_udfs
+
+nn function_declaration
+hl https://docs.fused.io/core-concepts/write/#function-declaration
+co $ ..
+
+nn decorator
+hl https://docs.fused.io/core-concepts/write/#fusedcache-decorator
+co $ ..
+
+nn typed_parameters
+hl https://docs.fused.io/core-concepts/write/#typed-parameters
+co $ ..
+
+nn cache_decorator
+hl https://docs.fused.io/core-concepts/write/#fusedcache-decorator
+co $ ..
+ln optionally cache parts of the function
+
+nn utils_module
+hl https://docs.fused.io/core-concepts/write/#utils-module
+co $ ..
+ln Import utility modules to keep your code organized
+
+nn return_object
+hl https://docs.fused.io/core-concepts/write/#return-object
+co $ ..
+ln return a vector table or raster
+
+nn return_object/table
+co $ ..
+co ../../../../../references/shapely_geometry $
+
+nn return_object/array
+co $ ..
+co ../../../../../references/xarray/DataSet $
+co ../../../../../references/xarray/DataArray $
+
+nn save_udfs
+hl https://docs.fused.io/core-concepts/write/#save-udfs
+co $ ..
+ln save the UDF
+
+
+zz -write_udfs
+ns ..
+
 
 nn data_ingestion
 hl https://docs.fused.io/core-concepts/data_ingestion/

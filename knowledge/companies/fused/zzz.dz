@@ -1,0 +1,26 @@
+cx databases/UDF companies/fused/docs/core_concepts/why_udfs 
+cr My guess is that the term "UDF" is borrowed from
+cr a database context of UDFs, since this is
+cr a very data intensive company
+
+cx webdev/webapi/endpoints ^
+cr UDFs are Python functions that can be called from
+cr anywhere to apply a specific operation to data.
+
+cx companies/fused/references/virtual_datasets ^
+
+cx databases/view companies/fused/references/virtual_datasets
+cr UDFS can be used as virtual datasets, similar
+cr to databse views, to deliver data behind and
+cr HTTP endpoint
+
+cx python/PEP_3107_function_annotations companies/fused/docs/core_concepts/write_udfs/typed_parameters 
+
+cx python/pydata/pandas/DataFrame companies/fused/docs/core_concepts/write_udfs/return_object/table
+cx python/pydata/pandas/Series ^
+cx python/pydata/geopandas/GeoDataFrame ^
+cx python/pydata/geopandas/GeoSeries ^
+
+cx python/pydata/numpy/ndarray companies/fused/docs/core_concepts/write_udfs/return_object/array
+
+cx python/docs/stdlib/os_services/io/BytesIO ^

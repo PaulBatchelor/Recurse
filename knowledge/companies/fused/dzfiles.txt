@@ -1,2 +1,6 @@
-fused.dz
+fused.dz refs.dz
 ../../python.dz
+../../databases.dz
+../../webdev.dz
+../../pydata.dz
+zzz.dz

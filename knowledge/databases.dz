@@ -90,3 +90,23 @@ nn db3k
 hl https://build-your-own.org/blog/20251015_db_in_3000/
 ln Build a Database in 3000 Lines with
 ln 0 Dependencies
+
+nn UDF
+hl https://en.wikipedia.org/wiki/User-defined_function#Databases
+ln User-Defined Functions (in the context of databases)
+
+nn view
+hl https://en.wikipedia.org/wiki/View_(SQL)
+ln In a database, a view is the result set
+ln of a stored query that presents a limited
+ln perspective of the database to a user. This
+ln pre-established query command is kept in the
+ln data dictionary. Unlike ordinary base tables in
+ln a relational database, a view does not form part
+ln of the physical schema: as a result set, it is a
+ln virtual table computed or collated dynamically
+ln from data in the database when access to that
+ln view is requested. Changes applied to the data in
+ln a relevant underlying table are reflected in the
+ln data shown in subsequent invocations of the view.
+

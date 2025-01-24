@@ -1,0 +1,48 @@
+ns companies/fused
+nn references
+ns +references
+
+nn virtual_datasets
+hl https://docs.h5py.org/en/stable/vds.html#what-are-virtual-datasets
+co $ ..
+ln Virtual datasets allow a number of real datasets to be
+ln mapped together into a single, sliceable dataset via an
+ln interface layer.
+
+nn parquet
+hl https://en.wikipedia.org/wiki/Apache_Parquet
+co $ ..
+ln Apache Parquet is a free and open-source
+ln column-oriented data storage format in the Apache
+ln Hadoop ecosystem. It is similar to RCFile and
+ln ORC, the other columnar-storage file formats in
+ln Hadoop, and is compatible with most of the data
+ln processing frameworks around Hadoop. It provides
+ln efficient data compression and encoding schemes
+ln with enhanced performance to handle complex data
+ln in bulk.
+
+nn geoJSON
+hl https://en.wikipedia.org/wiki/GeoJSON
+co $ ..
+ln GeoJSON is an open standard format designed
+ln for representing simple geographical features,
+ln along with their non-spatial attributes. It is
+ln based on the JSON format.
+
+nn shapely_geometry
+hl https://shapely.readthedocs.io/en/2.0.4/geometry.html
+co $ ..
+
+nn xarray
+hl https://docs.xarray.dev/en/stable/index.html#
+co $ ..
+
+nn xarray/DataSet
+hl https://docs.xarray.dev/en/stable/generated/xarray.Dataset.html
+co $ ..
+
+nn xarray/DataArray
+hl https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html
+co $ ..
+

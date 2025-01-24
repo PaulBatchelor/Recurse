@@ -744,3 +744,17 @@ co $ ..
 nn docs/stdlib/markup/html/escape
 hl https://docs.python.org/3/library/html.html#html.escape
 co $ ..
+
+nn PEP_3107_function_annotations
+hl https://peps.python.org/pep-3107/
+ln PEP 3107 Function Annotations
+
+nn docs/stdlib/os_services/io
+hl https://docs.python.org/3/library/io.html
+co $ ..
+ln io: Core tools for working with streams
+
+nn docs/stdlib/os_services/io/BytesIO
+hl https://docs.python.org/3/library/io.html#io.BytesIO
+co $ ..
+

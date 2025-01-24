@@ -1,0 +1,36 @@
+ns python/pydata
+nn pandas
+ns +pandas
+
+nn DataFrame
+hl https://pandas.pydata.org/docs/reference/frame.html
+co $ ..
+
+nn Series
+hl https://pandas.pydata.org/docs/reference/series.html
+co $ ..
+
+ns ..
+
+nn geopandas
+ns +geopandas
+
+nn GeoDataFrame
+hl https://geopandas.org/en/stable/docs/reference/geodataframe.html
+co $ ..
+co $ ../../pandas/DataFrame
+
+nn GeoSeries
+hl https://geopandas.org/en/stable/docs/reference/geoseries.html
+co $ ..
+co $ ../../pandas/Series
+
+ns ..
+
+nn numpy
+ns +numpy
+
+nn ndarray
+hl https://numpy.org/doc/2.1/reference/arrays.ndarray.html
+co $ ..
+ln n-dimensional array

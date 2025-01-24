@@ -514,3 +514,16 @@ hl https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
 ln IndexedDB is a low-level API for client-side storage of
 ln significant amounts of structured data, including
 ln files/blobs.
+
+nn webapi
+hl https://en.wikipedia.org/wiki/Web_API
+
+ns +webapi
+
+nn endpoints
+hl https://en.wikipedia.org/wiki/Web_API#Endpoints
+co $ ..
+
+zz -webapi
+ns ..
+
