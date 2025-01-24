@@ -193,3 +193,7 @@ source code. I started peaking at it once.
 @15:38 Hub settling.
 
 @15:39 Fused company research #timelog:02:09:56
+
+@18:18 figuring out how to generate a minimal epub #timelog:00:09:27
+I think I want to be able to produce things I can
+read while I'm in transit.
