@@ -46,3 +46,73 @@ nn xarray/DataArray
 hl https://docs.xarray.dev/en/stable/generated/xarray.DataArray.html
 co $ ..
 
+nn stlite
+hl https://github.com/whitphx/stlite
+co $ ..
+ln Serverless Streamlit Running Entirely in Your
+ln Browser
+
+nn streamlit
+hl https://streamlit.io/
+co $ ..
+co $ ../stlite
+ln Streamlit turns data scripts into shareable
+ln web apps in minutes.  All in pure Python. No
+ln front‑end experience required.
+
+
+nn pyodide
+hl https://pyodide.org/en/stable/
+co $ ..
+co $ ../stlite
+cr This project is to make it run completely on
+cr web browsers with the power of Pyodide, WebAssembly
+cr (Wasm)-ported Python.
+
+nn micropip
+hl https://pypi.org/project/micropip/
+co $ ..
+
+nn pydeck
+hl https://deckgl.readthedocs.io/en/latest/index.html
+co $ ..
+ln High-scale spatial rendering in Python, powered
+ln by deck.gl.
+co deckgl $
+
+
+nn pydeck/TileLayer
+hl https://deckgl.readthedocs.io/en/latest/layer.html
+co $ ..
+
+nn deckgl
+hl https://deck.gl/
+co $ ..
+ln deck.gl is a GPU-powered framework for visual
+ln exploratory data analysis of large datasets.
+
+nn streamlit_folium
+hl https://folium.streamlit.app/
+co $ ..
+ln streamlit-folium integrates two great open-source
+ln projects in the Python ecosystem: Streamlit
+ln and Folium!
+co streamlit $
+co folium $
+
+nn folium
+hl https://python-visualization.github.io/folium/latest/
+co $ ..
+ln Folium builds on the data wrangling strengths of
+ln the Python ecosystem and the mapping strengths
+ln of the Leaflet.js library. Manipulate your data
+ln in Python, then visualize it in a Leaflet map
+ln via Folium.
+co leaflet $
+
+nn leaflet
+hl https://leafletjs.com/
+co $ ..
+ln an open-source JavaScript library for
+ln mobile-friendly interactive maps
+

@@ -156,6 +156,56 @@ co $ ..
 nn app_builder
 hl https://docs.fused.io/workbench/app-builder/
 co $ ..
+at ol
+
+
+ns +app_builder
+
+nn overview
+hl https://docs.fused.io/workbench/app-builder/app-overview/
+co $ ..
+ln The App Builder is an IDE to transform User
+ln Defined Functions (UDFs) into interactive,
+ln shareable apps.
+co ../../../../references/stlite $
+cr the App Builder enables users
+cr to build and run apps with serverless Streamlit,
+cr an open source framework to deliver dynamic data
+cr apps with just a few lines of Python.
+
+co ../../../../references/micropip $
+cr You may also choose to install dependencies at
+cr runtime to reduce start-up time. Use micropip
+cr to install packages at runtime.
+
+nn overview/dependencies
+hl https://docs.fused.io/workbench/app-builder/app-overview/#dependencies
+co $ ..
+co ../../../../../references/micropip $
+cr You may also choose to install dependencies at
+cr runtime to reduce start-up time. Use micropip
+cr to install packages at runtime.
+
+nn add_map
+hl https://docs.fused.io/workbench/app-builder/app-map/
+co $ ..
+
+nn add_map/pydeck
+hl https://docs.fused.io/workbench/app-builder/app-map/#pydeck
+co $ ..
+co ../../../../../references/pydeck/TileLayer $
+
+nn add_map/folium
+hl https://docs.fused.io/workbench/app-builder/app-map/#folium
+co $ ..
+ln Create a streamlit-folium TileLayer that calls
+ln a UDF HTTP endpoint.
+co ../../../../../references/streamlit_folium $
+
+
+zz -app_builder
+ns ..
+
 
 nn file_explorer
 hl https://docs.fused.io/workbench/file-explorer/

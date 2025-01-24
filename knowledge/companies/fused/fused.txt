@@ -5,3 +5,54 @@
 
 @16:06 starting with the concepts
 #! dz companies/fused/docs/core_concepts
+
+@17:14 Shifting my focus towards the app builder
+#! dz companies/fused/docs/workbench/app_builder 
+This is the thing that was mentioned to me, so I'm going
+to focus on this.
+---
+Note: at the time of writing, it was in beta
+
+@17:25 micropip used to reduce startup time
+#! dz companies/fused/references/micropip 
+#! dz companies/fused/docs/workbench/app_builder/overview 
+#! dz companies/fused/docs/workbench/app_builder/overview/dependencies
+From the reference: "You may also choose to install dependencies at runtime
+to reduce start-up time. Use micropip to install packages
+at runtime".
+---
+One thing that was mentioned explicitely was reducing
+start-up time. So, I can infer from this that they are
+probably referring to the initial warm-up time of python.
+---
+I suppose the trade-off is the app becomes more snappy
+at start-up, but the extra load time is added when you
+perform an operation? Is is overall faster, or has the
+time been moved?
+
+@17:43 Understanding streamlit-folium
+#! dz companies/fused/references/folium
+#! dz companies/fused/references/streamlit_folium
+#! dz companies/fused/references/streamlit
+#! dz companies/fused/docs/workbench/app_builder/add_map
+My brain is currently trying to wrap my head around
+many layers of abstraction in the python eco system.
+---
+The high level question is "what is streamlit-folium,
+and how does it relate to fused?".
+---
+Fused wants you to build and rapidly prototype data
+visualizations as apps.
+---
+To make webapps in python, a thing called streamlit is
+used. Streamlit turns python functions into webapps via
+pyodide and stlite (serverless UDF functions).
+---
+Folium is a python library that connects with a popular
+JS library called leaflet. Leaflet is used to make mobile
+friendly interactive maps. With folium, data manipulation
+can happen with Python, and then presented using leaflet js.
+---
+Therefore, we can say that streamlit-folium is a specialized
+utility for embedding map rendering in a webapp, if all
+you want to do is write python code.
