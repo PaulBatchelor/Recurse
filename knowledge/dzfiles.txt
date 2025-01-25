@@ -62,7 +62,6 @@ knowledge/edexp_test.dz
 knowledge/c.dz
 knowledge/ed_mastery
 knowledge/vue.dz
-knowledge/zzz.dz
-knowledge/zzz_ddia.dz
-links/zzz.dz
-codestudy/zzz.dz
+knowledge/companies/fused
+knowledge/pydata.dz
+knowledge/zzz
