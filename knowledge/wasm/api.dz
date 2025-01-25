@@ -1,0 +1,18 @@
+ns webdev/wasm
+
+nn API
+hl https://developer.mozilla.org/en-US/docs/WebAssembly/JavaScript_interface
+at ol
+
+ns +API
+
+nn instantiate
+hl https://developer.mozilla.org/en-US/docs/WebAssembly/JavaScript_interface
+co $ ..
+ln The WebAssembly.instantiate() function allows you
+ln to compile and instantiate WebAssembly code.
+
+zz -API
+ns ..
+
+

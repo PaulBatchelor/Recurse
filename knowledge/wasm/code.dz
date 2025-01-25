@@ -1,0 +1,88 @@
+ns codestudy/compiler_tweet
+nn compiler_tweet.js
+at ol
+fr codestudy/compiler_tweet/compiler_tweet.js
+
+ns +compiler_tweet.js
+
+nn initial
+fr $ 2 5
+co $ ..
+
+nn how_to_use
+fr $ 9
+co $ ..
+
+nn format
+fr $ 13 22
+co $ ..
+
+nn undo_assignment_expression
+fr $ 26 37
+co $ ..
+
+nn undo_assignment_expression/changed_lines
+ln these are the lines changed from the previous iteration
+fr $ 27 30
+co $ ..
+co ../../format $
+cr changed lines
+
+nn undo_variable_tricks
+fr $ 41 52
+co $ ..
+
+nn undo_variable_tricks/changed_lines
+fr $ 42 45
+co $ ..
+
+nn add_all_zeros_back
+fr $ 56 67
+co $ ..
+
+nn add_all_zeros_back/changed_lines
+co $ ..
+fr $ 63 64
+
+nn remove_4_bytes_len_definition
+fr $ 71 82
+co $ ..
+
+nn write_split_as_function_call
+fr $ 86 97
+co $ ..
+
+nn write_ternary_as_if_statement
+co $ ..
+fr $ 101 116
+
+nn remove_number_check_with_coercion
+co $ ..
+fr $ 120 136
+
+nn undo_minus_one_trick
+fr $ 140 156
+co $ ..
+
+nn undo_minus_one_trick/changed_line
+co $ ..
+fr $ 146
+
+nn remove_indexOf_trick_completely
+co $ ..
+fr $ 160 183
+
+nn remove_indexOf_trick_completely/nullish_coalescing_op
+fr $ 173
+co ../../../../../webdev/wasm/compiler_tweet/references/nullish_coalescing_op $
+co $ ..
+
+nn name_exported_function
+fr $ 187 210
+
+nn bytes_in_array
+fr $ 213 266
+
+zz -compiler_tweet.js
+ns ..
+

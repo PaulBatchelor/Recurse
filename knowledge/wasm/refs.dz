@@ -1,0 +1,61 @@
+ns webdev/wasm/compiler_tweet
+nn references
+ns +references
+
+nn assignment
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Assignment
+co $ ..
+
+nn typed_arrays
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Typed_arrays
+co $ ..
+
+nn tagged_template
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals#tagged_templates
+co $ ..
+ln A more advanced form of template literals are
+ln tagged templates.
+
+nn template_literals
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+co $ ..
+ln Template literals are literals delimited with
+ln backtick (`) characters, allowing for multi-line
+ln strings, string interpolation with embedded
+ln expressions, and special constructs called tagged
+ln templates.
+
+nn string_prototype_split_separator
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split#separator
+co $ ..
+
+nn ternary_operator
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
+co $ ..
+
+nn popcount
+hl https://developer.mozilla.org/en-US/docs/WebAssembly/Reference/Numeric/Population_count
+co $ ..
+
+nn nullish_coalescing_op
+hl https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
+co $ ..
+ln The nullish coalescing (??) operator is a logical
+ln operator that returns its right-hand side operand
+ln when its left-hand side operand is null or
+ln undefined, and otherwise returns its left-hand
+ln side operand.
+
+nn LEB128
+hl https://en.wikipedia.org/wiki/LEB128
+co $ ..
+ln LEB128 or Little Endian Base 128 is a
+ln variable-length code compression used to store
+ln arbitrarily large integers in a small number of
+ln bytes.
+
+nn spec
+hl https://www.w3.org/TR/2019/REC-wasm-core-1-20191205/
+co $ ..
+
+ns ..

@@ -1,0 +1,82 @@
+ns webdev/wasm/compiler_tweet
+
+nn introduction
+co $ ..
+co ../../API/instantiate $
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/initial $
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/how_to_use $
+
+nn format
+co $ ..
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/format $
+
+nn remove_assignment_expression
+co $ ..
+co ../references/assignment $
+cr The first trick to undo is the assignment
+cr expression.
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/undo_assignment_expression $
+
+nn undo_variable_tricks
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/undo_variable_tricks $
+co $ ..
+
+nn add_missing_zeros
+co ../references/typed_arrays $
+cr "This works because Typed Arrays coerce all array
+cr items to numbers, and an “empty item” will be
+cr converted to 0"
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/add_all_zeros_back $
+co $ ..
+
+nn remove_extra_4_bytes
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/remove_4_bytes_len_definition $
+co $ ..
+
+nn remove_string_template_literal
+ln The next trick to undo is code.split` `.
+co $ ..
+co ../references/tagged_template $
+co ../references/template_literals $
+co ../references/string_prototype_split_separator $
+cr All values that are not undefined or objects with
+cr a [Symbol.split]() method are coerced to strings.
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/write_split_as_function_call $
+
+nn remove_ternary_operator
+co $ ..
+co ../references/ternary_operator $
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/write_ternary_as_if_statement $
+
+nn remove_number_check_coercion
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/remove_number_check_with_coercion $
+co $ ..
+
+nn remove_indexOf_neg_one_trick
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/undo_minus_one_trick $
+co $ ..
+co ../references/popcount $
+cr Now it will evaluate to 106 + -1 which will map to
+cr bytecode 105 which is the popcnt instruction.
+
+nn remove_indexOf_trick
+co $ ..
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/remove_indexOf_trick_completely $
+
+nn remove_empty_export_name
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/name_exported_function $
+co $ ..
+
+nn implicit_design_decisions
+co $ ..
+co ../references/LEB128 $
+
+nn trick_almost_worked
+co $ ..
+
+nn explaining_numbers_in_array
+co $ ..
+co ../../../../codestudy/compiler_tweet/compiler_tweet.js/bytes_in_array $
+
+nn conclusion
+co $ ..

@@ -18,7 +18,7 @@ codestudy/dz/potential.dz
 knowledge/rusty_bikes.dz
 knowledge/sokol.dz
 knowledge/pixelart.dz
-knowledge/wasm.dz
+knowledge/wasm
 knowledge/react.dz
 knowledge/tic80.dz
 knowledge/pipewire.dz
