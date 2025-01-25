@@ -33,6 +33,7 @@ ns +compiling
 
 nn minimum_viable_compiler
 co $ ..
+at ol
 
 nn writing_compiler_with_ohm
 co $ ..

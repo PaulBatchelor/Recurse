@@ -1,0 +1,29 @@
+ns +toc/compiling/minimum_viable_compiler
+nn you_will_learn
+co $ ..
+
+nn getting_started
+co $ ..
+at ol
+
+ns +getting_started
+
+nn raw_bytes_to_meaningful_fragments
+co $ ..
+
+nn refactor
+co $ ..
+
+zz -getting_started
+ns ..
+
+nn doing_nothing_but_with_empty_function
+co $ ..
+
+nn section_basics
+co $ ..
+
+nn exports
+co $ ..
+
+ns ../../..

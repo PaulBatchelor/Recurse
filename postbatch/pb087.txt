@@ -14,5 +14,5 @@ I should check this out (maybe for SQLite codestudy?)
 @17:21 About the code #read-wasm-ground-up #timelog:00:10:00
 #! dz webdev/wasm/ground_up/toc/start/about_the_code
 
-@17:32 minimum viable code #read-wasm-ground-up
+@17:32 minimum viable code #read-wasm-ground-up #timelog:00:18:52
 #! dz webdev/wasm/ground_up/toc/compiling/minimum_viable_compiler 
