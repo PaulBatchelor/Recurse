@@ -1,0 +1,45 @@
+ns webdev/wasm/ground_up
+nn references
+ns +references
+
+nn java_bytecode
+hl https://en.wikipedia.org/wiki/Java_bytecode
+co $ ..
+
+nn figma
+hl https://www.figma.com/
+co $ ..
+
+nn spec
+hl https://www.w3.org/TR/wasm-core-1/
+co ../../../compiler_tweet/references/spec $
+cr same
+td merge
+co $ ..
+
+
+nn wasm_js_interface
+hl https://www.w3.org/TR/wasm-js-api-1/
+co $ ..
+
+nn wasm_web_api
+hl https://www.w3.org/TR/wasm-web-api/
+co $ ..
+
+nn WASI
+hl https://wasi.dev/
+co $ ..
+ln The WebAssembly System Interface (WASI) is a group
+ln of standards-track API specifications for software
+ln compiled to the W3C WebAssembly (Wasm) standard.
+
+nn ohm
+hl https://ohmjs.org/
+co $ ..
+ln Ohm is a parsing toolkit consisting of a library
+ln and a domain-specific language. You can use it to
+ln parse custom file formats or quickly build
+ln parsers, interpreters, and compilers for
+ln programming languages.
+
+ns ..

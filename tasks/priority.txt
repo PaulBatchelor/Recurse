@@ -28,3 +28,5 @@ or have the ability to reset.
 @dzbrowse-ordered-tree add ordered tree to dzbrowse
 
 @dzbrowse-treesorter Implement treesorter in dzbrowse
+
+@read-wasm-ground-up read "webassembly from the ground up"

@@ -1,0 +1,8 @@
+nn glossary
+ns +glossary
+
+nn bytecode
+ln bytecode: portable, low-level code
+co $ ..
+
+ns ..

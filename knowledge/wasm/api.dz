@@ -12,6 +12,13 @@ co $ ..
 ln The WebAssembly.instantiate() function allows you
 ln to compile and instantiate WebAssembly code.
 
+nn instantiateStreaming
+hl https://developer.mozilla.org/en-US/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static
+co $ ..
+ln The WebAssembly.instantiateStreaming() static
+ln method compiles and instantiates a WebAssembly
+ln module directly from a streamed underlying source.
+
 zz -API
 ns ..
 

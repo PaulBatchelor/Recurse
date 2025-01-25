@@ -1,0 +1,86 @@
+ns +toc/start/introduction
+
+nn what_is_wasm
+co $ ..
+co ../../../../references/java_bytecode $
+
+nn why_big_deal
+co $ ..
+
+ns +why_big_deal
+
+nn safe
+co $ ..
+
+nn fast
+co $ ..
+
+nn portable
+co $ ..
+
+nn compact
+co $ ..
+
+zz -why_big_deal
+ns ..
+
+nn day_in_life
+co $ ..
+co ../../../../references/figma $
+cr well-known application that uses wasm
+
+nn day_in_life/js_glue_code
+co $ ..
+at ol
+
+ns +day_in_life/js_glue_code
+
+nn fetch
+co $ ..
+
+nn instantiateStreaming
+co $ ..
+co ../../../../../../../API/instantiateStreaming $
+
+nn call_exported_function
+co $ ..
+
+zz -day_in_life/js_glue_code
+ns ../..
+
+nn lay_of_land
+co $ ..
+co ../../../../references/spec $
+co ../../../../references/wasm_js_interface $
+cr browsers implement this
+co ../../../../references/wasm_web_api $
+cr browsers implement this
+co ../../../../references/WASI $
+cr API for non-browser runtimes
+
+ns +lay_of_land
+
+nn execution
+co $ ..
+
+nn binary_format
+co $ ..
+
+nn validation_format
+co $ ..
+
+nn textual_format
+rm aka WAT
+co $ ..
+
+zz -lay_of_land
+ns ..
+
+nn about_this_book
+co $ ..
+co ../../../../references/ohm $
+cr since this book is not about parsing, the compiler
+cr is built with ohm
+
+zz -toc/introduction
+ns ../..
