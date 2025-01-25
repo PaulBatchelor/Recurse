@@ -1,5 +1,5 @@
 +
 wasm.dz compiler_tweet.dz api.dz code.dz refs.dz
 ground_up/main.dz ground_up/refs.dz ground_up/glossary.dz
-ground_up/intro.dz
+ground_up/intro.dz ground_up/about_the_code.dz
 .

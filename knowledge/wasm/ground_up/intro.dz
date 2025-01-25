@@ -82,5 +82,5 @@ co ../../../../references/ohm $
 cr since this book is not about parsing, the compiler
 cr is built with ohm
 
-zz -toc/introduction
-ns ../..
+zz -toc/start/introduction
+ns ../../..

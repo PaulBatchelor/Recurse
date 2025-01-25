@@ -3,7 +3,16 @@ Where did my stopwatch go.
 @14:18 webassembly in a tweet #timelog:01:22:59
 
 @16:08 initial outlining #read-wasm-ground-up #timelog:00:37:45
+#! dz webdev/wasm/ground_up
+#! dz webdev/wasm/ground_up/toc
+#! dz webdev/wasm/ground_up/toc/start/introduction
 
 @17:15 Trying out flamegraph
 Suggested that if I'm interested in performance,
 I should check this out (maybe for SQLite codestudy?)
+
+@17:21 About the code #read-wasm-ground-up #timelog:00:10:00
+#! dz webdev/wasm/ground_up/toc/start/about_the_code
+
+@17:32 minimum viable code #read-wasm-ground-up
+#! dz webdev/wasm/ground_up/toc/compiling/minimum_viable_compiler 
