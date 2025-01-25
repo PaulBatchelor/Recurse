@@ -2,4 +2,8 @@
 Where did my stopwatch go.
 @14:18 webassembly in a tweet #timelog:01:22:59
 
-@16:08 initial outlining #read-wasm-ground-up
+@16:08 initial outlining #read-wasm-ground-up #timelog:00:37:45
+
+@17:15 Trying out flamegraph
+Suggested that if I'm interested in performance,
+I should check this out (maybe for SQLite codestudy?)
