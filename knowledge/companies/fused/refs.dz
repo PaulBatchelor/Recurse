@@ -21,6 +21,7 @@ ln processing frameworks around Hadoop. It provides
 ln efficient data compression and encoding schemes
 ln with enhanced performance to handle complex data
 ln in bulk.
+rm pronounced "par-kay"
 
 nn geoJSON
 hl https://en.wikipedia.org/wiki/GeoJSON
@@ -60,7 +61,6 @@ ln Streamlit turns data scripts into shareable
 ln web apps in minutes.  All in pure Python. No
 ln front‑end experience required.
 
-
 nn pyodide
 hl https://pyodide.org/en/stable/
 co $ ..
@@ -79,7 +79,6 @@ co $ ..
 ln High-scale spatial rendering in Python, powered
 ln by deck.gl.
 co deckgl $
-
 
 nn pydeck/TileLayer
 hl https://deckgl.readthedocs.io/en/latest/layer.html
@@ -116,3 +115,33 @@ co $ ..
 ln an open-source JavaScript library for
 ln mobile-friendly interactive maps
 
+nn data_ingestion
+hl https://www.ibm.com/think/topics/data-ingestion
+co $ ..
+ln Data ingestion is the process of collecting and
+ln importing data files from various sources into a
+ln database for storage, processing and analysis.
+
+nn GeoParquet
+hl https://geoparquet.org/
+co $ ..
+ln GeoParquet is an encoding for how to store
+ln geospatial vector data (point, lines, polygons) in
+ln Apache Parquet, a popular columnar storage format
+ln for tabular data.
+
+nn what_is_cloud_optimized_geotiff
+hl https://guide.cloudnativegeo.org/cloud-optimized-geotiffs/intro.html
+co $ ..
+ln What is a Cloud-Optimized GeoTIFF?
+hl https://cogeo.org/
+co cloud_optimized_geotiff $
+
+nn cloud_optimized_geotiff
+co $ ..
+ln Cloud-Optimized GeoTIFFs
+hl https://cogeo.org/
+
+nn time_magic_command
+hl https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-time
+co $ ..

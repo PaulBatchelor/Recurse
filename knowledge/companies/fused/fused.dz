@@ -109,14 +109,65 @@ ln save the UDF
 zz -write_udfs
 ns ..
 
-
 nn data_ingestion
 hl https://docs.fused.io/core-concepts/data_ingestion/
 co $ ..
 
+ns +data_ingestion
+co ../../../references/data_ingestion $
+
+nn why_we_need_ingestion
+hl https://docs.fused.io/core-concepts/data_ingestion/why-ingestion/
+co $ ..
+co ../../../../data/noaa $
+co ../../../../references/parquet $
+cr reading CSV data from NOAA, but converted to parquet
+co ../../../../references/GeoParquet $
+cr reading from fused-ingested geoparquet
+co ../../run_udfs/large_udf_run $
+cr Ingestion jobs are quite memory hungry, so run this
+cr on a remote machine using ingestion.run_remote()
+co ../../../../references/time_magic_command $
+cr used for benchmarks
+
+nn ingest_your_own_data
+co $ ..
+
+nn file_formats
+
+ns +file_formats
+
+nn rasters
+co $ ..
+co ../../../../../references/what_is_cloud_optimized_geotiff $
+cr for images (rasters), CO geotiffs are recommended
+
+nn vectors
+co ../../../../../references/GeoParquet $
+cr To handle vector (table) data such as pandas DataFrames or
+cr geopandas GeoDataFrames we recommend using
+cr GeoParquet files.
+
+zz -file_formats
+ns ..
+
+
+
+zz -data_ingestion
+ns ..
+
 nn run_udfs
 hl https://docs.fused.io/core-concepts/run-udfs/
 co $ ..
+
+ns +run_udfs
+
+nn large_udf_run
+hl https://docs.fused.io/core-concepts/run-udfs/run_large/
+co $ ..
+
+zz -run_udfs
+ns ..
 
 nn map_tile_file
 hl https://docs.fused.io/core-concepts/filetile/
@@ -253,6 +304,5 @@ co $ ..
 
 zz -docs
 ns ..
-
 
 ns ../..

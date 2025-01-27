@@ -1,0 +1,15 @@
+@2025-01-27
+@13:23 fused research #timelog:00:46:29
+Currently trying to run some of their public examples in
+jupyter notebook. Never used jupyter notebooks, so this
+might be interesting
+
+@13:52 Well, I managed to get jupyter notebooks installed. fused auth errors?
+Auth error?
+
+@13:55 Ah, the in-browser workbench version works
+
+@14:08 getting into the data ingestion section of docs
+
+@14:40 outlining data ingestion #timelog:00:34:08
+#! dz companies/fused/docs/core_concepts/data_ingestion
