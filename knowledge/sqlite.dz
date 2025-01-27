@@ -51,4 +51,9 @@ rm gujhrwjfq
 
 nn sqljs_httpvfs
 hl https://github.com/phiresky/sql.js-httpvfs
-ln Hosting read-only SQLite databases on static file hosters like Github Pages 
+ln Hosting read-only SQLite databases on static file hosters like Github Pages
+
+nn sqlean
+hl https://github.com/nalgeon/sqlean
+ln sqlean: The ultimate set of SQLite
+ln extensions
