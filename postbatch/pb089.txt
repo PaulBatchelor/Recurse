@@ -1,0 +1,23 @@
+@2025-01-29
+@10:40 codestudy setup for sqlite
+
+@10:45 sqlite codestudy: openDatabase #timelog:00:57:43
+dz $ codestudy/sqlite/files/main.c/openDatabase
+
+@11:51 sqlite codestudy: openDatabse second pass #timelog:01:01:17
+dz $ codestudy/sqlite/files/main.c/openDatabase
+
+@12:53 exploring fzf-vim #explore-fzf-vim #timelog:00:30:00
+I need a way to more quickly navigate between files in vim.
+I've heard about people using this, and it makes sense.
+My tabbed-based approach really isn't feeling good. I think
+making better use of buffers and pushing/popping stuff
+in the jump list is going to prove to be more efficient.
+
+@12:59 fzf-vim seems to be an alpine package, how to use? #explore-fzf-vim
+
+@13:24 :FZF seems to be good enough for me from the alpine package #explore-fzf-vim
+
+@14:54 Tokio initial exploration #timelog:00:12:00
+
+@15:10 Tokio initial tutorial #timelog:02:07:52

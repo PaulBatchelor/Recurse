@@ -1,0 +1,36 @@
+ns rust/tokio/tutorial
+
+nn references
+ns +references
+
+nn mini_redis
+hl https://github.com/tokio-rs/mini-redis
+co $ ..
+
+nn green_threads
+hl https://en.wikipedia.org/wiki/Green_thread
+co $ ..
+ln In computer programming, a green thread is a
+ln thread that is scheduled by a runtime library
+ln or virtual machine (VM) instead of natively by
+ln the underlying operating system (OS).
+
+nn async_await
+hl https://en.wikipedia.org/wiki/Async/await
+co $ ..
+ln In computer programming, the async/await pattern
+ln is a syntactic feature of many programming
+ln languages that allows an asynchronous,
+ln non-blocking function to be structured in a way
+ln similar to an ordinary synchronous function.
+
+nn rust_misconceptions_static
+hl https://github.com/pretzelhammer/rust-blog/blob/master/posts/common-rust-lifetime-misconceptions.md#2-if-t-static-then-t-must-be-valid-for-the-entire-program
+co $ ..
+
+nn send_and_sync
+hl https://doc.rust-lang.org/nomicon/send-and-sync.html
+co $ ..
+
+ns ..
+ns ../../..

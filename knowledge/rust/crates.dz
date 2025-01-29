@@ -31,3 +31,6 @@ rm what I wanted: libxm manually ported to Rust.
 nn anyhow
 hl https://crates.io/crates/anyhow
 ln anyhow: flexible concrete Error type built on std::error::Error
+
+nn rayon
+hl https://docs.rs/rayon/latest/rayon/

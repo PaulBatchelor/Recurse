@@ -1,0 +1,125 @@
+ns rust/tokio
+nn docs
+hl https://docs.rs/tokio/1.43.0/tokio/index.html
+ns +docs
+
+nn attribute_macros
+hl https://docs.rs/tokio/1.43.0/tokio/index.html#attributes
+co $ ..
+
+ns +attribute_macros
+
+nn main
+hl https://docs.rs/tokio/1.43.0/tokio/attr.main.html
+co $ ..
+
+zz -attribute_macros
+ns ..
+
+nn modules
+hl https://docs.rs/tokio/1.43.0/tokio/index.html#modules
+co $ ..
+
+ns +modules
+
+nn runtime
+hl https://docs.rs/tokio/1.43.0/tokio/runtime/index.html
+co $ ..
+ns +runtime
+
+nn structs
+hl https://docs.rs/tokio/1.43.0/tokio/runtime/index.html#structs
+co $ ..
+
+ns +structs
+
+nn runtime
+hl https://docs.rs/tokio/1.43.0/tokio/runtime/struct.Runtime.html
+co $ ..
+
+nn runtime/methods
+co $ ..
+
+nn runtime/methods/block_on
+hl https://docs.rs/tokio/1.43.0/tokio/runtime/struct.Runtime.html#method.block_on
+co $ ..
+ln Runs a future to completion on the Tokio
+ln runtime. This is the runtime's entry point.
+
+zz -structs
+ns ..
+
+zz -runtime
+ns ..
+
+nn net
+hl https://docs.rs/tokio/1.43.0/tokio/net/index.html
+co $ ..
+
+ns +net
+
+nn structs
+ns +structs
+
+nn TcpListener
+hl https://docs.rs/tokio/1.43.0/tokio/net/struct.TcpListener.html
+co $ ..
+
+nn TcpListener/methods
+co $ ..
+
+ns +TcpListener/methods
+nn bind
+hl https://docs.rs/tokio/1.43.0/tokio/net/struct.TcpListener.html#method.bind
+co $ ..
+ln Creates a new TcpListener, which will be bound
+ln to the specified address.
+
+nn accept
+hl https://docs.rs/tokio/1.43.0/tokio/net/struct.TcpListener.html#method.accept
+co $ ..
+ln Accepts a new incoming connection from this
+ln listener.
+
+zz -TcpListener/methods
+ns ../..
+
+nn TcpStream
+hl https://docs.rs/tokio/1.43.0/tokio/net/struct.TcpStream.html
+co $ ..
+
+zz -structs
+ns ..
+
+
+zz -net
+ns ..
+
+nn task
+hl https://docs.rs/tokio/1.43.0/tokio/task/index.html
+co $ ..
+
+nn task/functions
+co $ ..
+
+nn task/functions/spawn
+hl https://docs.rs/tokio/1.43.0/tokio/task/fn.spawn.html
+co $ ..
+ln Spawns a new asynchronous task, returning a
+ln JoinHandle for it.
+co ../../structs/JoinHandle $
+cr returns JoinHandle
+
+nn task/structs
+co $ ..
+
+nn task/structs/JoinHandle
+hl https://docs.rs/tokio/1.43.0/tokio/task/struct.JoinHandle.html
+co $ ..
+
+
+zz -modules
+ns ..
+
+ns ..
+ns ../..

@@ -417,3 +417,33 @@ nn std/str/trim
 hl https://doc.rust-lang.org/std/primitive.str.html#method.trim
 ln trim: returns a string slice with leading and trailing
 ln whitespace removed
+
+nn std/keywords
+co $ ..
+
+nn std/keywords/move
+hl https://doc.rust-lang.org/std/keyword.move.html
+ln move converts any variables captured by reference
+ln or mutable reference to variables captured
+ln by value.
+co $ ..
+
+nn std/sync
+hl https://doc.rust-lang.org/std/sync/index.html
+co $ ..
+
+nn std/sync/arc
+hl https://doc.rust-lang.org/std/sync/struct.Arc.html
+co $ ..
+cr A thread-safe reference-counting
+cr pointer. 'Arc' stands for 'Atomically
+cr Reference Counted'.
+
+nn std/marker
+co $ ..
+
+nn std/marker/send
+hl https://doc.rust-lang.org/std/marker/trait.Send.html
+co $ ..
+ln Types that can be transferred across thread
+ln boundaries.

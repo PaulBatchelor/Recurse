@@ -30,3 +30,6 @@ or have the ability to reset.
 @dzbrowse-treesorter Implement treesorter in dzbrowse
 
 @read-wasm-ground-up read "webassembly from the ground up"
+
+@tokio-tutorial do tokio tutorial
+link: [[https://tokio.rs/tokio/tutorial]]

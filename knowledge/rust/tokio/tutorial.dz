@@ -1,0 +1,90 @@
+ns rust/tokio
+nn tutorial
+hl https://tokio.rs/tokio/tutorial
+at ol
+
+ns +tutorial
+
+nn overview
+co ../../../crates/rayon $
+cr for speeding up CPU-bound computations by running them
+cr in parallel, use Rayon instead of Tokio
+
+nn setup
+hl https://tokio.rs/tokio/tutorial/setup
+co $ ..
+co ../references/mini_redis $
+cr mini redis will be what the project tutorial builds
+
+nn hello_tokio
+hl https://tokio.rs/tokio/tutorial/hello-tokio
+co $ ..
+co ../../docs/attribute_macros/main $
+co ../references/green_threads $
+cr compile-time green threading
+co ../../docs/modules/runtime $
+cr However, asynchronous functions must be executed
+cr by a runtime.
+co ../../glossary/runtime $
+co ../references/async_await $
+co ../../docs/modules/runtime/structs/runtime/methods/block_on $
+
+nn spawning
+hl https://tokio.rs/tokio/tutorial/spawning
+at ol
+co $ ..
+
+ns +spawning
+nn accepting_sockets
+co $ ..
+co ../../../docs/modules/net/structs/TcpListener $
+co ../../../docs/modules/net/structs/TcpListener/methods/bind $
+co ../../../docs/modules/net/structs/TcpListener/methods/accept $
+co ../../../docs/modules/net/structs/TcpStream $
+
+nn concurrency
+co $ ..
+
+ns +concurrency
+
+nn tasks
+co $ ..
+co ../../../../docs/modules/task/functions/spawn $
+co ../../../../docs/modules/task/structs/JoinHandle $
+
+nn static_bound
+co $ ..
+co ../../../references/rust_misconceptions_static $
+cr It is a common misconception that 'static
+cr always means "lives forever", but this is not
+cr the case. Just because a value is 'static does
+cr not mean that you have a memory leak.
+co ../../../../../std/keywords/move $
+cr Changing line 7 to task::spawn(async move {
+cr will instruct the compiler to move v into the
+cr spawned task. Now, the task owns all of its data,
+cr making it 'static.
+co ../../../../../std/sync/arc $
+cr If a single piece of data must be accessible
+cr from more than one task concurrently, then it
+cr must be shared using synchronization primitives
+cr such as Arc.
+
+nn send_bound
+co $ ..
+co ../../../references/send_and_sync $
+co ../../../../../std/marker/send $
+
+zz -concurrency
+ns ..
+
+
+zz -spawning
+ns ..
+
+
+zz -tutorial
+ns ..
+
+zz -rust/tokio
+ns ../../
