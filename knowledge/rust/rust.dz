@@ -447,3 +447,9 @@ hl https://doc.rust-lang.org/std/marker/trait.Send.html
 co $ ..
 ln Types that can be transferred across thread
 ln boundaries.
+
+nn std/collections/btreemap
+hl https://doc.rust-lang.org/std/collections/btree_map/struct.BTreeMap.html
+co $ ..
+ln An ordered map based on a B-Tree.
+

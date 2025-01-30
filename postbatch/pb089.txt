@@ -23,3 +23,39 @@ in the jump list is going to prove to be more efficient.
 @15:10 Tokio initial tutorial #timelog:02:07:52 #tokio-tutorial
 
 @18:09 ripgrep codestudy #timelog:00:07:23
+
+@2025-01-30 Ridgewood WFH.
+
+@13:50 Try to figure out better shorthand for connections #timelog:00:26:59
+The biggest bottleneck I think right now is getting local
+connections right using ".." syntax.
+
+@14:18 Initial work for '?' operator #dagzet-suffix-match #timelog:01:54:41
+The '?suf' operator will resolve a path with suffix 'suf'.
+It will find the first path that matches this.
+---
+Initially, I wanted this to find the closest match relative
+to the path, but it's going to be much simpler and easier
+to reason about if it just attempts to find the first
+match from the root.
+
+@14:34 learned about BTreeMap thank to claude #dagzet-suffix-match
+#! dz rust/std/collections/btreemap
+This seems to be the right data structure need to make
+this path search work correctly.
+
+@14:36 first match might not work, if path is ambiguous, it should crash #dagzet-suffix-match
+first match is tricky because it means it could silently
+make different connections when new nodes are added or the
+graph is introduced to a larger graph. If I have a node
+"a/b/c" with a match pattern of "?/b/c", and I introduce a new
+node "x/b/c", the node becomes ambiguous. Any nodes in
+the "x" namespace using "?b/c" could accidentally resolve
+to "a/b/c" in the larger graph.
+
+@14:58 I keep getting caught up with how to organize code in rust and it is so annoying #dagzet-suffix-match
+I just want to add a file to this project.
+
+@15:04 ah, main.rs is the entry point
+that's how I'm supposed to grok project structure. lib.rs
+if it's a library.
