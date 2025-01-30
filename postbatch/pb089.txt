@@ -18,6 +18,8 @@ in the jump list is going to prove to be more efficient.
 
 @13:24 :FZF seems to be good enough for me from the alpine package #explore-fzf-vim
 
-@14:54 Tokio initial exploration #timelog:00:12:00
+@14:54 Tokio initial exploration #timelog:00:12:00 #tokio-tutorial
 
-@15:10 Tokio initial tutorial #timelog:02:07:52
+@15:10 Tokio initial tutorial #timelog:02:07:52 #tokio-tutorial
+
+@18:09 ripgrep codestudy #timelog:00:07:23
