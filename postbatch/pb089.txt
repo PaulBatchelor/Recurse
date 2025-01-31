@@ -59,3 +59,69 @@ I just want to add a file to this project.
 @15:04 ah, main.rs is the entry point
 that's how I'm supposed to grok project structure. lib.rs
 if it's a library.
+
+@2025-01-31
+
+@12:02 Arrival at the hub
+Figuring out what to do now
+
+@12:04 continuing with suffix matching #dagzet-suffix-match #timelog:02:32:42
+
+@12:08 refreshing myself with how connections are made/checked #dagzet-suffix-match
+Suffix resolving is tricky, because it depends on knowing
+about the node ahead of time. In dagzet, the node creation 
+order does not matter.
+---
+My current thinking is that nodes using the suffix
+shorthand will get stored as-is, and then resolved later.
+The name resolution would update the connections table
+in-place, and happen right before checking for unknown nodes.
+
+@12:15 setting up tests #dagzet-suffix-match
+Okay, really just one test to get started.
+
+@12:24 making sure '?' is being recognized. #dagzet-suffix-match
+If it is seen, don't append the namespace.
+---
+I realize that this means that this will mean that
+no namespaces can start with '?' without funny things
+happening. I will deal with that... later.
+
+@12:32 More upcoming issues: checks for previous connections
+Resolving a connection at the very end also means there's
+a potential situation where multiple connections can
+sneak in.
+
+@12:43 startswith, useful for checking '?' with str? #dagzet-suffix-match
+#! dz rust/std/str/starts_with
+
+@12:45 Okay, moving forward #dagzet-suffix-match
+It now fails in a way that I expect (no namespace)
+
+@13:06 initial basic test works #dagzet-suffix-match
+Error handling isn't great, but I can get back to that
+
+@13:07 onto checking duplicate names #dagzet-suffix-match
+
+@13:40 running into borrow checker erros with duplicate name lookup #dagzet-suffix-match
+The way I was hoping to do it was that I'd resolve the connection,
+and then check and see if that connection already exists.
+But, this checker is complaining because I'm iterating through
+the connections *and* using those same connections to see
+if there is a connection yet.
+---
+Think I need to refactor "already_connected" to use an
+adjacency list.
+
+@13:49 Building out test adjacency list. #dagzet-suffix-match
+Quickly, I will see if this works by building this adjacency
+list on demand and seeing if the problem goes away.
+
+@14:13 adjacent list hack seems to work. #dagzet-suffix-match
+Now elaborating on tests.
+
+@14:21 going to try a quick refactoring for hashmap in 15 minutes, then pull out #dagzet-suffix-match
+Okay, this is not working. Leaving in the janky solution
+for now. Must move on.
+
+@14:41 hooked up notation to CLI #dagzet-suffix-match

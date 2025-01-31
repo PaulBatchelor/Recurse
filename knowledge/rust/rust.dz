@@ -453,3 +453,8 @@ hl https://doc.rust-lang.org/std/collections/btree_map/struct.BTreeMap.html
 co $ ..
 ln An ordered map based on a B-Tree.
 
+nn std/str/starts_with
+hl https://doc.rust-lang.org/std/primitive.str.html#method.starts_with
+co $ ..
+ln Returns true if the given pattern matches a
+ln prefix of this string slice.
