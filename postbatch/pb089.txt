@@ -125,3 +125,30 @@ Okay, this is not working. Leaving in the janky solution
 for now. Must move on.
 
 @14:41 hooked up notation to CLI #dagzet-suffix-match
+
+@18:40 checking out vis again #timelog:00:15:00
+
+@18:57 Jumping back into tokio #tokio-tutorial #timelog:01:49:47
+
+@19:36 std::sync::mutex vs tokio::sync::mutex?
+#! dz rust/tokio/tutorial/shared_state/initialize_hashmap
+I can't say I really understand the difference between
+a standard library mutex and a tokio mutex.
+---
+Docs state that a tokio thread "does not block", and
+designed to be "held across all .await points". I'm not
+sure how a mutex can't be blocking, and I don't know what
+the verb "hold" means.
+
+@19:44 slightly more clarification in article
+#! dz $
+" An async mutex is a mutex that is locked across calls to
+.await.".
+---
+So it locks (vs blocking?)
+
+@19:48 It seems like my understanding of blocking is vaguer than I thought
+#! dz rust/tokio/tutorial/references/blocking
+#! dz rust/tokio/tutorial/shared_state/initialize_hashmap
+A non-blocking mutex is puzzling to me. There's also the
+concept of a lock, that isn't a block.

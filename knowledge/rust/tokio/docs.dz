@@ -46,6 +46,18 @@ co $ ..
 ln Runs a future to completion on the Tokio
 ln runtime. This is the runtime's entry point.
 
+nn builder
+ln Builds Tokio Runtime with custom configuration
+ln values.
+hl https://docs.rs/tokio/1.43.0/tokio/runtime/struct.Builder.html
+co $ ..
+
+nn builder/methods
+co $ ..
+nn builder/methods/new_current_thread
+hl https://docs.rs/tokio/1.43.0/tokio/runtime/struct.Builder.html#method.new_current_thread
+co $ ..
+
 zz -structs
 ns ..
 
@@ -117,6 +129,23 @@ nn task/structs/JoinHandle
 hl https://docs.rs/tokio/1.43.0/tokio/task/struct.JoinHandle.html
 co $ ..
 
+nn sync
+hl https://docs.rs/tokio/1.43.0/tokio/sync/index.html
+co $ ..
+
+nn sync/structs
+co $ ..
+
+nn sync/structs/mutex
+hl https://docs.rs/tokio/1.43.0/tokio/sync/struct.Mutex.html
+co $ ..
+ln An asynchronous Mutex-like type.
+ln This type acts similarly to std::sync::Mutex,
+ln with two major differences: lock is an async
+ln method so does not block, and the lock guard is
+ln designed to be held across .await points.
+co $ ?rust/std/sync/mutex
+co ?tokio/tutorial/references/blocking $
 
 zz -modules
 ns ..

@@ -32,5 +32,27 @@ nn send_and_sync
 hl https://doc.rust-lang.org/nomicon/send-and-sync.html
 co $ ..
 
+nn blocking
+hl https://en.wikipedia.org/wiki/Blocking_(computing)
+co $ ..
+ln In computing, a process that is blocked is
+ln waiting for some event, such as a resource
+ln becoming available or the completion of an I/O
+ln operation.[1]
+
+nn shared_mutable_state_rust
+hl https://draft.ryhl.io/blog/shared-mutable-state/
+co $ ..
+
+nn resource_contention
+hl https://en.wikipedia.org/wiki/Resource_contention
+co $ ..
+ln In computer science, resource contention is a
+ln conflict over access to a shared resource such as
+ln random access memory, disk storage, cache memory,
+ln internal buses or external network devices.
+co ?runtime/structs/builder/methods/new_current_thread $
+
 ns ..
 ns ../../..
+

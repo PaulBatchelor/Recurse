@@ -34,3 +34,15 @@ ln anyhow: flexible concrete Error type built on std::error::Error
 
 nn rayon
 hl https://docs.rs/rayon/latest/rayon/
+
+nn bytes
+hl https://docs.rs/bytes/1.9.0/bytes/struct.Bytes.html
+
+nn dashmap
+hl https://docs.rs/dashmap/latest/dashmap/
+
+nn leapfrog
+hl https://docs.rs/leapfrog/latest/leapfrog/
+
+nn flurry
+hl https://docs.rs/flurry/latest/flurry/

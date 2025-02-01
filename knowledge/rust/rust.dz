@@ -458,3 +458,7 @@ hl https://doc.rust-lang.org/std/primitive.str.html#method.starts_with
 co $ ..
 ln Returns true if the given pattern matches a
 ln prefix of this string slice.
+
+nn std/sync/mutex
+hl https://doc.rust-lang.org/std/sync/struct.Mutex.html
+co $ ..

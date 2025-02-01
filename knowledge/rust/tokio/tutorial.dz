@@ -49,22 +49,22 @@ ns +concurrency
 
 nn tasks
 co $ ..
-co ../../../../docs/modules/task/functions/spawn $
-co ../../../../docs/modules/task/structs/JoinHandle $
+co ?docs/modules/task/functions/spawn $
+co ?docs/modules/task/structs/JoinHandle $
 
 nn static_bound
 co $ ..
-co ../../../references/rust_misconceptions_static $
+co ?references/rust_misconceptions_static $
 cr It is a common misconception that 'static
 cr always means "lives forever", but this is not
 cr the case. Just because a value is 'static does
 cr not mean that you have a memory leak.
-co ../../../../../std/keywords/move $
+co ?std/keywords/move $
 cr Changing line 7 to task::spawn(async move {
 cr will instruct the compiler to move v into the
 cr spawned task. Now, the task owns all of its data,
 cr making it 'static.
-co ../../../../../std/sync/arc $
+co ?std/sync/arc $
 cr If a single piece of data must be accessible
 cr from more than one task concurrently, then it
 cr must be shared using synchronization primitives
@@ -72,16 +72,128 @@ cr such as Arc.
 
 nn send_bound
 co $ ..
-co ../../../references/send_and_sync $
-co ../../../../../std/marker/send $
+co ?references/send_and_sync $
+co ?std/marker/send $
 
 zz -concurrency
 ns ..
 
+nn store_values
+co $ .. 
 
 zz -spawning
 ns ..
 
+nn shared_state
+hl https://tokio.rs/tokio/tutorial/shared-state
+co $ ..
+at ol
+
+ns +shared_state
+
+nn strategies
+co $ ..
+
+ns +strategies
+
+nn mutex
+co $ ..
+ln guard shared state with mutex
+
+nn spawn_task_message_passing
+co $ ..
+ln spawn task to manage state. use message passing
+ln to operate on it
+
+zz -strategies
+ns ..
+
+nn add_bytes_dep
+co $ ..
+co ?crates/bytes $
+cr The biggest feature it adds over Vec<u8>
+cr is shallow cloning. In other words, calling
+cr clone() on a Bytes instance does not copy the
+cr underlying data. Instead, a Bytes instance is
+cr a reference-counted handle to some underlying
+cr data. The Bytes type is roughly an Arc<Vec<u8>>
+cr but with some added capabilities.
+
+nn initialize_hashmap
+co $ ..
+co ?tokio/docs/modules/sync/structs/mutex $
+
+nn update_process
+co $ ..
+
+nn holding_mutex_across_await
+co $ ..
+co ../../spawning/concurrency/send_bound $
+cr Note that the error discussed here is also
+cr discussed in the Send bound section from the
+cr spawning chapter.
+at ol
+
+ns +holding_mutex_across_await
+
+nn restructure_dont_hold_lock_across_await
+co $ ..
+ln Restructure your code to not hold the lock across an .await
+rm This pattern guarantees that you won't run into
+rm the Send error, because the mutex guard does not
+rm appear anywhere in an async function. It also
+rm protects you from deadlocks, when using crates
+rm whose MutexGuard implements Send.
+co ?tutorial/references/shared_mutable_state_rust $
+cr more detailed example
+
+nn spawn_task_message_passing
+ln Spawn a task to manage the state and use message passing to operate on it
+co $ ..
+co ?strategies/spawn_task_message_passing $
+
+nn tokio_async_mutex
+ln Use Tokio's asynchronous mutex.
+rm The primary feature of the Tokio mutex is that
+rm it can be held across an .await without any issues. 
+rm That said, an asynchronous mutex is more
+rm expensive than an ordinary mutex, and it is
+rm typically better to use one of the two other
+rm approaches.
+co ?modules/sync/structs/mutex $
+cr The current_thread runtime flavor is a
+cr lightweight, single-threaded runtime. It is a
+cr good choice when only spawning a few tasks and
+cr opening a handful of sockets. For example, this
+cr option works well when providing a synchronous
+cr API bridge on top of an asynchronous client
+cr library.
+
+zz -holding_mutex_across_await
+ns ..
+
+nn task_threads_contention
+co $ ..
+co ?tutorial/references/resource_contention $
+
+ns +task_threads_contention
+
+nn mutex_sharding
+co ?crates/dashmap $
+cr The dashmap crate provides an implementation of
+cr a more sophisticated sharded hash map.
+co ?crates/flurry $
+cr concurrent hashmap, port of Java's ConcurrentHashmap
+cr data structure
+co ?crates/leapfrog $
+cr concurrent hashmap
+
+zz -task_threads_contention
+ns ..
+
+
+zz -shared_state
+ns ..
 
 zz -tutorial
 ns ..
