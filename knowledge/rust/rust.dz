@@ -462,3 +462,7 @@ ln prefix of this string slice.
 nn std/sync/mutex
 hl https://doc.rust-lang.org/std/sync/struct.Mutex.html
 co $ ..
+
+nn std/keywords/enum
+hl https://doc.rust-lang.org/std/keyword.enum.html
+co $ ..

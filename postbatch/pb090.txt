@@ -1,1 +1,57 @@
 @2025-02-01 Ridgewood WFH
+@14:20 continuing with tokio tutorial #tokio-tutorial #timelog:01:56:36
+
+@14:37 implementation loosely described, are we supposed to implement #tokio-tutorial
+#! dz rust/tokio/tutorial/shared_state/task_threads_contention/mutex_sharding
+It doesn't really say where to get the hash() function.
+This might be more illustrative than actually something
+you'd implement.
+
+@15:05 producer/consumer pattern
+#! dz rust/tokio/docs/modules/sync/modules
+There are 4 channel types here, defined in terms
+of producer/consumer relationship. A producer/consumer
+can be multi or single.
+---
+For clarity: a "producer" is something that
+sends values. A "consumer" is something that
+receives those values. producer: send. Consumer:
+receive.
+---
+Single producer, single consumer: oneshot
+---
+Multi producer, single consumer: mpsc
+---
+Single producer, multi consumer: ???
+---
+multi producer, multi consumer: broadcast and
+watch. The difference is: in watch, receivers only
+see the most recent value. Meanwhile, with broadcast,
+receivers see every value.
+
+@15:37 spending more time than I care to admit on this #tokio-tutorial
+#! dz rust/tokio/tutorial/channels/create_channel
+#! dz rust/std/keywords/enum
+I really don't fully understand what "variants" are in
+the context of enums, but I can get the context clues and
+sort of nod my head.
+---
+From the wiki page: variants are related to sum types.
+Values of a sum type are typically grouped into several
+classes, called variants.
+
+@15:51 what is tx? what is rx? #tokio-tutorial
+#! dz rust/tokio/docs/modules/sync/modules/mpsc/functions/channel
+#! dz rust/tokio/tutorial/channels/create_channel
+The docs say that =channel()= returns a sender and receiver.
+"rx" corresponds to receive. But what does "tx" mean?
+
+@16:07 grokking oneshot a little bit better now #tokio-tutorial
+#! dz rust/tokio/docs/modules/sync/modules/oneshot
+#! dz rust/tokio/tutorial/channels/receive_responses
+I think I was mixing up messages with active listeners,
+similar to how I think about pubsub models.
+---
+In the case of oneshot, it is a very clear cut case of
+of a single "message goes in, message comes out" sort
+of transaction.

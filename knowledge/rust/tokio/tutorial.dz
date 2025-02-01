@@ -2,6 +2,7 @@ ns rust/tokio
 nn tutorial
 hl https://tokio.rs/tokio/tutorial
 at ol
+co ?tutorial/references/tutorial_code $
 
 ns +tutorial
 
@@ -187,12 +188,117 @@ cr concurrent hashmap, port of Java's ConcurrentHashmap
 cr data structure
 co ?crates/leapfrog $
 cr concurrent hashmap
+co $ ..
 
 zz -task_threads_contention
 ns ..
 
 
 zz -shared_state
+ns ..
+
+nn channels
+hl https://tokio.rs/tokio/tutorial/channels
+co $ ..
+co ?tutorial/references/in_flight_request $
+cr We could use tokio::sync::Mutex, but that would
+cr only allow a single in-flight request.
+co ?tutorial/references/pipelining $
+cr If the client implements pipelining, an async
+cr mutex results in underutilizing the connection.
+co ?docs/modules/sync/structs/mutex $
+cr We could use tokio::sync::Mutex, but that would
+cr only allow a single in-flight request.
+co ?rust/std/sync/mutex $
+cr We cannot use std::sync::Mutex as .await would
+cr need to be called with the lock held.
+
+
+ns +channels
+
+nn message_passing
+co $ ..
+ln The answer is to use message passing. The pattern
+ln involves spawning a dedicated task to manage
+ln the client resource. Any task that wishes to
+ln issue a request sends a message to the client
+ln task. The client task issues the request on
+ln behalf of the sender, and the response is sent
+ln back to the sender.
+co ?tokio/docs/modules/sync $
+co ?crates/async_channel $
+cr If you need a multi-producer multi-consumer
+cr channel where only one consumer sees each
+cr message, you can use the async-channel crate.
+
+nn tokio_channel_primitives
+co $ ..
+
+ns +tokio_channel_primitives
+
+nn mpsc
+hl https://docs.rs/tokio/1/tokio/sync/mpsc/index.html
+co $ ..
+ln multi-producer, single-consumer channel. Many
+ln values can be sent.
+co ?sync/modules/mpsc $
+
+nn oneshot
+hl https://docs.rs/tokio/1/tokio/sync/oneshot/index.html
+co $ ..
+ln single-producer, single consumer channel. A
+ln single value can be sent.
+co ?sync/modules/oneshot $
+
+nn broadcast
+hl https://docs.rs/tokio/1/tokio/sync/broadcast/index.html
+co $ ..
+ln multi-producer, multi-consumer. Many values can
+ln be sent. Each receiver sees every value.
+co ?sync/modules/broadcast $
+
+nn watch
+hl https://docs.rs/tokio/1/tokio/sync/watch/index.html
+co $ ..
+ln multi-producer, multi-consumer. Many values can
+ln be sent, but no history is kept. Receivers only
+ln see the most recent value.
+co ?sync/modules/watch $
+
+zz -tokio_channel_primitives
+ns ..
+
+nn define_message_type
+co $ ..
+co ?rust/std/keywords/enum $
+cr To model this, we first define a Command enum
+cr and include a variant for each command type.
+
+nn create_channel
+co $ ..
+co ?sync/modules/mpsc $
+cr In the main function, an mpsc channel is created.
+co ?sync/modules/mpsc/functions/channel $
+cr channel with buffer size of 32 created
+co ?task/functions/spawn $
+
+nn spawn_manager_task
+co $ ..
+co ?task/functions/spawn $
+
+nn receive_responses
+co $ ..
+co ?sync/modules/oneshot $
+cr The oneshot channel is a single-producer,
+cr single-consumer channel optimized for sending a
+cr single value. In our case, the single value is
+cr the response.
+
+nn backpressure_bounded_channels
+co $ ..
+
+
+zz -channels
 ns ..
 
 zz -tutorial

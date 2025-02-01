@@ -46,3 +46,6 @@ hl https://docs.rs/leapfrog/latest/leapfrog/
 
 nn flurry
 hl https://docs.rs/flurry/latest/flurry/
+
+nn async_channel
+hl https://docs.rs/async-channel/latest/async_channel/

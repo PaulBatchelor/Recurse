@@ -53,6 +53,30 @@ ln random access memory, disk storage, cache memory,
 ln internal buses or external network devices.
 co ?runtime/structs/builder/methods/new_current_thread $
 
+nn in_flight_request
+hl https://stackoverflow.com/questions/48524418/what-does-in-flight-request-mean-for-a-web-browser
+co $ ..
+ln An in-flight request is a request that has been
+ln started but not yet completed, a.k.a. a request
+ln in progress.
+
+nn pipelining
+hl https://redis.io/docs/latest/develop/use/pipelining/
+co $ ..
+ln Redis pipelining is a technique for improving
+ln performance by issuing multiple commands at
+ln once without waiting for the response to each
+ln individual command. Pipelining is supported by
+ln most Redis clients. This document describes the
+ln problem that pipelining is designed to solve
+ln and how pipelining works in Redis.
+
+nn tutorial_code
+hl https://github.com/tokio-rs/website/tree/master/tutorial-code
+co $ ..
+ln tutorial code on gh
+
+
 ns ..
 ns ../../..
 

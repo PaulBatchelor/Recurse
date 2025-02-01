@@ -24,6 +24,15 @@ nn polymorphism/ad_hoc
 hl https://en.wikipedia.org/wiki/Ad_hoc_polymorphism
 co $ ..
 
+nn algebraic_data_type
+hl https://en.wikipedia.org/wiki/Algebraic_data_type
+co $ ..
+
+nn algebraic_data_type/variant
+co $ ..
+ln The values of a sum type are typically grouped
+ln into several classes, called variants
+
 ns types/type_systems
 gr type systems, as curated by wikipedia
 

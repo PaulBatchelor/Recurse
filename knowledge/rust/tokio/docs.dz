@@ -147,6 +147,42 @@ ln designed to be held across .await points.
 co $ ?rust/std/sync/mutex
 co ?tokio/tutorial/references/blocking $
 
+nn sync/modules
+co $ ..
+
+ns +sync/modules
+
+
+nn broadcast
+hl https://docs.rs/tokio/1/tokio/sync/broadcast/index.html
+co $ ..
+
+nn oneshot
+hl https://docs.rs/tokio/1/tokio/sync/oneshot/index.html
+co $ ..
+
+nn watch
+hl https://docs.rs/tokio/1/tokio/sync/watch/index.html
+co $ ..
+
+nn mpsc
+hl https://docs.rs/tokio/1/tokio/sync/mpsc/index.html
+co $ ..
+
+nn mpsc/functions
+co $ ..
+nn mpsc/functions/channel
+hl https://docs.rs/tokio/1.43.0/tokio/sync/mpsc/fn.channel.html
+co $ ..
+ln Creates a bounded mpsc channel for communicating
+ln between asynchronous tasks with backpressure.
+
+
+zz -sync/modules
+ns ../..
+
+
+
 zz -modules
 ns ..
 

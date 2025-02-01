@@ -1,0 +1,4 @@
+cx types/type_theory/algebraic_data_type rust/std/keywords/enum
+cr What Rust calls enums are more commonly known
+cr as Algebraic Data Types if you're coming from
+cr a functional programming background.
