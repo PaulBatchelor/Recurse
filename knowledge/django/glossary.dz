@@ -1,0 +1,11 @@
+ns webdev/django
+nn glossary
+ns +glossary
+
+nn model
+co $ ..
+ln A model is the single, definitive source of
+ln information about your data. It contains the
+ln essential fields and behaviors of the data
+ln you’re storing. Generally, each model maps to
+ln a single database table.

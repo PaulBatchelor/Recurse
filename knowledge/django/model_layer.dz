@@ -1,0 +1,15 @@
+ns webdev/django/docs/model_layer
+
+co ?django/glossary/model ?docs/model_layer/models/intro
+
+ns +models/intro
+
+nn using_models
+hl https://docs.djangoproject.com/en/5.1/topics/db/models/#using-models
+co $ ..
+
+nn fields
+hl https://docs.djangoproject.com/en/5.1/topics/db/models/#fields
+co $ ..
+
+ns ../..
