@@ -9,6 +9,179 @@ ns +docs
 nn model_layer
 hl https://docs.djangoproject.com/en/5.1/#the-model-layer
 co $ ..
+at ol 
+
+ns +model_layer
+
+nn models
+co $ ..
+at ol
+
+ns +models
+
+nn intro
+hl https://docs.djangoproject.com/en/5.1/topics/db/models/
+co $ ..
+
+nn field_types
+hl https://docs.djangoproject.com/en/5.1/ref/models/fields/
+co $ ..
+
+nn indexes
+hl https://docs.djangoproject.com/en/5.1/ref/models/indexes/
+co $ ..
+
+nn meta_options
+hl https://docs.djangoproject.com/en/5.1/ref/models/options/
+co $ ..
+
+nn model_cases
+hl https://docs.djangoproject.com/en/5.1/ref/models/class/
+co $ ..
+
+zz -models
+ns ..
+
+nn query_sets
+co $ ..
+at ol 
+
+ns +query_sets
+
+nn making_queries
+hl https://docs.djangoproject.com/en/5.1/topics/db/queries/
+co $ ..
+
+nn QuerySet_method_references
+hl https://docs.djangoproject.com/en/5.1/ref/models/querysets/
+co $ ..
+
+nn lookup_expressions
+hl https://docs.djangoproject.com/en/5.1/ref/models/lookups/
+co $ ..
+
+zz -query_sets
+ns ..
+
+nn model_instances
+co $ ..
+at ol
+
+ns +model_instances
+
+nn instance_methods
+hl https://docs.djangoproject.com/en/5.1/ref/models/instances/
+co $ ..
+
+nn accessing_related_objects
+hl https://docs.djangoproject.com/en/5.1/ref/models/relations/
+co $ ..
+
+nn intro_to_migrations
+hl https://docs.djangoproject.com/en/5.1/topics/migrations/
+co $ ..
+
+nn ops_references
+hl https://docs.djangoproject.com/en/5.1/ref/migration-operations/
+co $ ..
+
+nn schema_editor
+hl https://docs.djangoproject.com/en/5.1/ref/schema-editor/
+co $ ..
+
+nn writing_migrations
+hl https://docs.djangoproject.com/en/5.1/howto/writing-migrations/
+co $ ..
+
+zz -model_instances
+ns ..
+
+nn advanced
+co $ ..
+at ol
+
+ns +advanced
+
+nn managers
+hl https://docs.djangoproject.com/en/5.1/topics/db/managers/
+co $ ..
+
+nn raw_SQL
+hl https://docs.djangoproject.com/en/5.1/topics/db/sql/
+co $ ..
+
+nn transactions
+hl https://docs.djangoproject.com/en/5.1/topics/db/transactions/
+co $ ..
+
+nn aggregation
+hl https://docs.djangoproject.com/en/5.1/topics/db/aggregation/
+co $ ..
+
+nn search
+hl https://docs.djangoproject.com/en/5.1/topics/db/search/
+co $ ..
+
+nn custom_fields
+hl https://docs.djangoproject.com/en/5.1/howto/custom-model-fields/
+co $ ..
+
+nn multiple_databases
+hl https://docs.djangoproject.com/en/5.1/topics/db/multi-db/
+co $ ..
+
+nn custom_lookups
+hl https://docs.djangoproject.com/en/5.1/howto/custom-lookups/
+co $ ..
+
+nn query_expressions
+hl https://docs.djangoproject.com/en/5.1/ref/models/expressions/
+co $ ..
+
+nn conditional_expressoins
+hl https://docs.djangoproject.com/en/5.1/ref/models/conditional-expressions/
+co $ ..
+
+nn database_functions
+hl https://docs.djangoproject.com/en/5.1/ref/models/database-functions/
+co $ ..
+
+zz -advanced
+ns ..
+
+nn other
+co $ ..
+at ol
+
+ns +other
+
+nn supported_databases
+hl https://docs.djangoproject.com/en/5.1/ref/databases/
+co $ ..
+
+nn legacy_databases
+hl https://docs.djangoproject.com/en/5.1/howto/legacy-databases/
+co $ ..
+
+nn proving_initial_data
+hl https://docs.djangoproject.com/en/5.1/howto/initial-data/
+co $ ..
+
+nn optimize_database_access
+hl https://docs.djangoproject.com/en/5.1/topics/db/optimization/
+co $ ..
+
+nn postgres_specific_features
+hl https://docs.djangoproject.com/en/5.1/ref/contrib/postgres/
+co $ ..
+
+zz -other
+ns ..
+
+
+zz -model_layer
+ns ..
+
 
 nn view_layer
 hl https://docs.djangoproject.com/en/5.1/#the-view-layer
