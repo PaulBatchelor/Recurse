@@ -1,0 +1,204 @@
+ns webdev/django
+nn docs
+hl https://docs.djangoproject.com/en/5.1/
+co $ ..
+at ol
+
+ns +docs
+
+nn model_layer
+hl https://docs.djangoproject.com/en/5.1/#the-model-layer
+co $ ..
+
+nn view_layer
+hl https://docs.djangoproject.com/en/5.1/#the-view-layer
+co $ ..
+at ol
+
+ns +view_layer
+
+nn basics
+co $ ..
+at ol
+
+ns +basics
+
+nn URLconfs
+hl https://docs.djangoproject.com/en/5.1/topics/http/urls/
+co $ ..
+
+nn view_functions
+hl https://docs.djangoproject.com/en/5.1/topics/http/views/
+co $ ..
+
+nn shortcuts
+hl https://docs.djangoproject.com/en/5.1/topics/http/shortcuts/
+co $ ..
+
+nn decorators
+hl https://docs.djangoproject.com/en/5.1/topics/http/decorators/
+co $ ..
+
+nn async_support
+hl https://docs.djangoproject.com/en/5.1/topics/async/
+co $ ..
+
+zz -basics
+ns ..
+
+nn reference
+co $ ..
+at ol
+
+ns +reference
+
+nn built_in_views
+hl https://docs.djangoproject.com/en/5.1/ref/views/
+co $ ..
+
+nn request_response_objects
+hl https://docs.djangoproject.com/en/5.1/ref/request-response/
+co $ ..
+
+nn TemplateResponse_objects
+hl https://docs.djangoproject.com/en/5.1/ref/template-response/
+co $ ..
+
+zz -reference
+ns ..
+
+nn file_uploads
+co $ ..
+at ol
+
+ns +file_uploads
+
+nn overview
+hl https://docs.djangoproject.com/en/5.1/topics/http/file-uploads/
+co $ ..
+
+nn file_objects
+hl https://docs.djangoproject.com/en/5.1/ref/files/file/
+co $ ..
+
+nn storage_api
+hl https://docs.djangoproject.com/en/5.1/ref/files/storage/
+co $ ..
+
+nn managing_files
+hl https://docs.djangoproject.com/en/5.1/topics/files/
+co $ ..
+
+nn custom_storage
+hl https://docs.djangoproject.com/en/5.1/howto/custom-file-storage/
+co $ ..
+
+zz -file_uploads
+ns ..
+
+nn class_based_views
+co $ ..
+
+ns +class_based_views
+
+nn overview
+hl https://docs.djangoproject.com/en/5.1/topics/class-based-views/
+co $ ..
+
+nn built_in_display_views
+hl https://docs.djangoproject.com/en/5.1/topics/class-based-views/generic-display/
+co $ ..
+
+nn built_in_editing_view
+hl https://docs.djangoproject.com/en/5.1/topics/class-based-views/generic-editing/
+co $ ..
+
+nn using_mixins
+hl https://docs.djangoproject.com/en/5.1/topics/class-based-views/mixins/
+co $ ..
+
+nn API_references
+hl https://docs.djangoproject.com/en/5.1/ref/class-based-views/
+co $ ..
+
+nn flattened_index
+hl https://docs.djangoproject.com/en/5.1/ref/class-based-views/flattened-index/
+co $ ..
+
+zz -class_based_views
+ns ..
+
+nn advanced
+co $ ..
+
+ns +advanced
+
+nn generating_CSV
+hl https://docs.djangoproject.com/en/5.1/howto/outputting-csv/
+co $ ..
+
+nn generating_PDF
+hl https://docs.djangoproject.com/en/5.1/howto/outputting-pdf/
+co $ ..
+
+zz -advanced
+ns ..
+
+nn middleware
+co $ ..
+at ol
+
+ns +middleware
+
+nn overview
+hl https://docs.djangoproject.com/en/5.1/topics/http/middleware/
+co $ ..
+
+nn built_in_middleware_classes
+hl https://docs.djangoproject.com/en/5.1/ref/middleware/
+co $ ..
+
+zz -middleware
+ns ..
+
+zz -view_layer
+ns ..
+
+nn template_layer
+hl https://docs.djangoproject.com/en/5.1/#the-template-layer
+co $ ..
+
+nn forms
+hl https://docs.djangoproject.com/en/5.1/#forms
+co $ ..
+
+nn dev_process
+hl https://docs.djangoproject.com/en/5.1/#the-development-process
+co $ ..
+
+nn admin
+hl https://docs.djangoproject.com/en/5.1/#the-admin
+co $ ..
+
+nn security
+hl https://docs.djangoproject.com/en/5.1/#security
+co $ ..
+
+nn internalization_localization
+hl https://docs.djangoproject.com/en/5.1/#internationalization-and-localization
+co $ ..
+
+nn performance_optimization
+hl https://docs.djangoproject.com/en/5.1/#performance-and-optimization
+co $ ..
+
+nn webapp_tools
+hl https://docs.djangoproject.com/en/5.1/#common-web-application-tools
+co $ ..
+
+nn other_core_functionalities
+hl https://docs.djangoproject.com/en/5.1/#other-core-functionalities
+co $ ..
+
+ns ../../..
+

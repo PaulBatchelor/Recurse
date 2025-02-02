@@ -1,0 +1,48 @@
+ns webdev/django
+nn tutorial
+at ol
+hl https://docs.djangoproject.com/en/5.1/intro/
+
+ns +tutorial
+
+nn django_at_a_glance
+hl https://docs.djangoproject.com/en/5.1/intro/overview/
+co $ ..
+
+nn quick_install
+hl https://docs.djangoproject.com/en/5.1/intro/install/
+co $ ..
+
+nn p1
+hl https://docs.djangoproject.com/en/5.1/intro/tutorial01/
+co $ ..
+
+nn p2
+hl https://docs.djangoproject.com/en/5.1/intro/tutorial02/
+co $ ..
+
+nn p3
+hl https://docs.djangoproject.com/en/5.1/intro/tutorial03/
+co $ ..
+
+nn p4
+hl https://docs.djangoproject.com/en/5.1/intro/tutorial04/
+co $ ..
+
+nn p5
+hl https://docs.djangoproject.com/en/5.1/intro/tutorial05/
+co $ ..
+
+nn p6
+hl https://docs.djangoproject.com/en/5.1/intro/tutorial06/
+co $ ..
+
+nn p7
+hl https://docs.djangoproject.com/en/5.1/intro/tutorial07/
+co $ ..
+
+nn p8
+hl https://docs.djangoproject.com/en/5.1/intro/tutorial08/
+co $ ..
+
+ns ../../..
