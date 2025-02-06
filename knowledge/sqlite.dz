@@ -57,3 +57,16 @@ nn sqlean
 hl https://github.com/nalgeon/sqlean
 ln sqlean: The ultimate set of SQLite
 ln extensions
+nn strict_tables
+hl https://www.sqlite.org/stricttables.html
+
+nn foreign_key
+hl https://www.sqlite.org/foreignkeys.html
+nn indexes_on_expressions
+hl https://www.sqlite.org/expridx.html
+nn explain_query_plan
+hl https://www.sqlite.org/eqp.html
+nn analyze
+hl https://www.sqlite.org/lang_analyze.html
+nn pragma_statements
+hl https://www.sqlite.org/pragma.html#
