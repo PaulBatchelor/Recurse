@@ -69,4 +69,8 @@ hl https://www.sqlite.org/eqp.html
 nn analyze
 hl https://www.sqlite.org/lang_analyze.html
 nn pragma_statements
-hl https://www.sqlite.org/pragma.html#
+hl https://www.sqlite.org/pragma.html
+
+nn sqlite_page_explorer
+hl https://github.com/QuadrupleA/sqlite-page-explorer
+tg sqlite lua
