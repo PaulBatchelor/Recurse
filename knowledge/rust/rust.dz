@@ -466,3 +466,7 @@ co $ ..
 nn std/keywords/enum
 hl https://doc.rust-lang.org/std/keyword.enum.html
 co $ ..
+
+nn update_codebase_rust_2024
+hl https://codeandbitters.com/rust-2024-upgrade/
+ln Updating a large codebase to Rust 2024
