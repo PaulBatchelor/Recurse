@@ -55,3 +55,17 @@ similar to how I think about pubsub models.
 In the case of oneshot, it is a very clear cut case of
 of a single "message goes in, message comes out" sort
 of transaction.
+
+@2025-02-09 At the hub
+It has been a week.
+@12:54 Anki card exploration #dagzet-anki-card
+
+@13:05 Sample program works. #dagzet-anki-card
+
+@13:06 Attempting to a simple dagzet flashcard exported #dagzet-anki-card
+
+@13:49 It works! Making initial strides to make a batch deck builder
+I'd like to able to generate separate decks with different
+prefixes, and to have this information be read from a textfile
+
+@14:05 It works. Initial full deck export added to phone
