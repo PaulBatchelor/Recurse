@@ -58,7 +58,7 @@ of transaction.
 
 @2025-02-09 At the hub
 It has been a week.
-@12:54 Anki card exploration #dagzet-anki-card
+@12:54 Anki card exploration #dagzet-anki-card #timelog:01:07:38
 
 @13:05 Sample program works. #dagzet-anki-card
 
@@ -69,3 +69,5 @@ I'd like to able to generate separate decks with different
 prefixes, and to have this information be read from a textfile
 
 @14:05 It works. Initial full deck export added to phone
+
+@14:18 Food
