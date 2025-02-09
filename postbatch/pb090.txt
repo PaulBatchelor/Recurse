@@ -71,3 +71,11 @@ prefixes, and to have this information be read from a textfile
 @14:05 It works. Initial full deck export added to phone
 
 @14:18 Food
+
+@15:26 Begin knowledge graph migration #timelog:00:24:55
+
+@15:59 jimsh investigation: can you add new functions from C? #timelog:00:30:39
+You can, but the bootstrapped amalgamation is a little
+dense. Might not be worth pursuing right now.
+---
+Shared object loaded does not work with jimsh0
